@@ -1,6 +1,6 @@
 const config = {
-    nom: "Introduction à la programmation (TIM)",
-    description: "Site de référence du cours Z03 - Introduction à la programmation Web",
+    nom: "Introduction à la programmation web",
+    description: "Site de référence du cours Z03 - Introduction à la programmation web",
     nomUrl: "z03"
 }
 
