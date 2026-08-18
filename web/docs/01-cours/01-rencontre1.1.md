@@ -1,6 +1,6 @@
 ---
 title: Cours 1 - Atelier
-description: Atelier sur l'environnement technologique en TIM
+description: Atelier sur l'environnement technologique du cours Z03
 ---
 
 # Cours 1 - Atelier
@@ -38,7 +38,7 @@ Léa est une plateforme accessible via Omnivox pour accéder aux notes de cours,
 
 ## 👥 Introduction à Teams
 
-Teams est une plateforme plus conviviale pour communiquer avec ses enseignants. (Comparé à Mio, qui ressemble plus à un système de courriels) En TIM, chaque cours est représenté par une **équipe Teams** où les notes de cours (et parfois les devoirs) seront disponibles.
+Teams est une plateforme plus conviviale pour communiquer avec ses enseignants. (Comparé à Mio, qui ressemble plus à un système de courriels) Dans le cours Z03, une **équipe Teams** peut être utilisée pour accéder aux notes de cours, aux communications et parfois aux devoirs.
 
 ⚗ Démo générale :
 
@@ -100,7 +100,6 @@ Moodle est une plateforme utilisée par certain(s) enseignant(e)s pour administr
 * Brève visite de la page de la formation en informatique. (Accès aux vidéos et aux exercices)
 
 Joindre le Moodle : [https://edm.moodle.decclic.qc.ca/course/view.php?id=7029](https://edm.moodle.decclic.qc.ca/course/view.php?id=7029)
-(Le code secret est `TIM`)
 
 🧪 Activité :
 
