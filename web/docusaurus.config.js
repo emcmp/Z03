@@ -7,18 +7,25 @@ const siteConfig = require("./config");
 const lightCodeTheme = themes.vsLight;
 const darkCodeTheme = themes.vsDark;
 
+const isPersonalPreview = process.env.GITHUB_REPOSITORY === "emcmp/Z03";
+const repositoryOwner = isPersonalPreview ? "emcmp" : "departement-info-cem";
+const repositoryName = isPersonalPreview ? "Z03" : siteConfig.nomUrl;
+const repositoryUrl = `https://github.com/${repositoryOwner}/${repositoryName}`;
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: siteConfig.nom,
   tagline: siteConfig.description,
-  url: "https://info.cegepmontpetit.ca/",
-  baseUrl: `/${siteConfig.nomUrl}/`,
+  url: isPersonalPreview
+    ? "https://emcmp.github.io"
+    : "https://info.cegepmontpetit.ca",
+  baseUrl: isPersonalPreview ? "/Z03/" : `/${siteConfig.nomUrl}/`,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
 
-  organizationName: "departement-info-cem",
-  projectName: siteConfig.nomUrl,
+  organizationName: repositoryOwner,
+  projectName: repositoryName,
   deploymentBranch: "gh-pages",
   trailingSlash: false,
 
@@ -41,7 +48,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
-          editUrl: `https://github.com/departement-info-cem/${siteConfig.nomUrl}/tree/main/web`,
+          editUrl: `${repositoryUrl}/tree/main/web`,
         },
         theme: {
           customCss: [require.resolve("./src/css/custom.css")],
@@ -74,10 +81,10 @@ const config = {
             label: "Cours",
           },
           {
-            type:"docSidebar",
-            position:"left",
-            sidebarId:"labos",
-            label:"Laboratoires"
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "labos",
+            label: "Laboratoires",
           },
           {
             type: "docSidebar",
@@ -95,7 +102,7 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: `https://github.com/departement-info-cem/${siteConfig.nomUrl}`,
+                href: repositoryUrl,
               },
             ],
           },
