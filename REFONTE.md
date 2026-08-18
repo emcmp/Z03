@@ -4,11 +4,11 @@ Ce document conserve le contexte durable et les décisions de la refonte. Il ser
 
 ## Contexte
 
-Z03 est une introduction à la programmation Web offerte comme cours optionnel. Les étudiants n'ont pas nécessairement de formation préalable en informatique ni d'expérience en programmation.
+Z03 est le cours **Introduction à la programmation web**, offert comme cours optionnel. Les étudiants n'ont pas nécessairement de formation préalable en informatique ni d'expérience en programmation.
 
-Le nouveau site Docusaurus est issu du matériel du cours 905 - Introduction à la programmation (TIM). Le 905 constitue une bonne base pour plusieurs notions de programmation JavaScript, mais il suppose que les étudiants connaissent déjà HTML et CSS.
+Le nouveau site Docusaurus est issu du matériel du cours 905 - Introduction à la programmation. Le 905 constitue une bonne base pour plusieurs notions de programmation JavaScript, mais il suppose que les étudiants connaissent déjà HTML et CSS.
 
-Z03 doit donc adapter cette base plutôt que la reprendre telle quelle.
+Z03 doit donc adapter cette base plutôt que la reprendre telle quelle. Z03 est un cours autonome et ne doit pas être présenté comme étant lié à un programme de techniques multimédias.
 
 ## Objectifs de la refonte
 
@@ -63,6 +63,8 @@ La configuration Docusaurus doit rester portable afin que la même source puisse
 - Utiliser le site du 905 comme base Docusaurus de la refonte.
 - Effectuer le travail courant dans `emcmp/Z03`.
 - Conserver `departement-info-cem/z03` comme cible de publication officielle.
+- Utiliser partout l'identité **Z03 - Introduction à la programmation web**.
+- Retirer toute référence à l'acronyme ou à l'identité du programme multimédia d'origine; Z03 est un cours à option autonome.
 - Ajouter au cours les fondations HTML et CSS qui ne peuvent pas être supposées acquises.
 - Conserver une partie du contenu JavaScript du 905, en l'adaptant au niveau du public Z03.
 - Limiter pour l'instant la séquence héritée aux cours 0 à 15; retirer les cours 16 à 30, qui dépassent le temps disponible dans Z03.
