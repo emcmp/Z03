@@ -86,12 +86,6 @@ const config = {
             sidebarId: "labos",
             label: "Laboratoires",
           },
-          {
-            type: "docSidebar",
-            position: "left",
-            sidebarId: "tp",
-            label: "Travaux Pratiques",
-          },
         ],
       },
       footer: {

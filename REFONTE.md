@@ -18,7 +18,7 @@ Z03 doit donc adapter cette base plutôt que la reprendre telle quelle.
 - conserver et adapter les parties pertinentes du 905 sur la programmation et JavaScript;
 - faire du site Docusaurus la référence principale du cours plutôt que de dépendre surtout de présentations PowerPoint;
 - favoriser des exemples concrets et une pratique régulière;
-- maintenir une progression cohérente entre cours, laboratoires et travaux pratiques.
+- maintenir une progression cohérente entre cours, laboratoires et futurs travaux pratiques.
 
 ## Principes pédagogiques
 
@@ -31,11 +31,12 @@ Z03 doit donc adapter cette base plutôt que la reprendre telle quelle.
 
 ## Architecture de contenu actuelle
 
-Le matériel hérité est organisé ainsi :
+Le matériel conservé est organisé ainsi :
 
 - `web/docs/01-cours/` : rencontres de cours;
-- `web/docs/02-labos/` : laboratoires;
-- `web/docs/03-tp/` : travaux pratiques.
+- `web/docs/02-labos/` : laboratoires.
+
+Les anciens travaux pratiques du 905 ont été retirés. Une nouvelle section de travaux pratiques pourra être créée plus tard avec du matériel conçu spécifiquement pour Z03.
 
 Cette structure peut évoluer pendant la refonte. Les changements majeurs d'organisation devraient être décidés explicitement avant de renommer ou déplacer beaucoup de fichiers.
 
@@ -65,6 +66,7 @@ La configuration Docusaurus doit rester portable afin que la même source puisse
 - Ajouter au cours les fondations HTML et CSS qui ne peuvent pas être supposées acquises.
 - Conserver une partie du contenu JavaScript du 905, en l'adaptant au niveau du public Z03.
 - Limiter pour l'instant la séquence héritée aux cours 0 à 15; retirer les cours 16 à 30, qui dépassent le temps disponible dans Z03.
+- Retirer tous les travaux pratiques hérités du 905 ainsi que leur entrée de navigation; les futurs TP seront conçus spécifiquement pour Z03.
 - Valider le site avec un build Docusaurus avant de considérer un changement terminé.
 - Utiliser des fichiers `AGENTS.md` pour partager le contexte et les conventions avec Codex.
 

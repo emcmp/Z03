@@ -16,9 +16,10 @@ La logique de `docusaurus.config.js` permet au même code de fonctionner dans le
 
 - `docs/01-cours/` : rencontres et notes de cours
 - `docs/02-labos/` : laboratoires
-- `docs/03-tp/` : travaux pratiques
 - `docs/accueil.md` : accueil du site
 - `sidebars.js` : navigation
+
+Les anciens travaux pratiques hérités du 905 ont été retirés volontairement. Ne pas recréer ni réintroduire `docs/03-tp/` ou son contenu sans demande explicite. Les futurs travaux pratiques seront conçus spécifiquement pour Z03.
 
 Avant de renommer ou déplacer un document, vérifier ses références dans la navigation, les liens Markdown et la configuration Docusaurus.
 
