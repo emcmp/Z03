@@ -1,8 +1,8 @@
-# Z03 - Introduction à la programmation Web
+# Z03 - Introduction à la programmation web
 
-Dépôt de travail pour la refonte du cours Z03 du CÉGEP Édouard-Montpetit.
+Dépôt de travail pour la refonte du cours Z03 - Introduction à la programmation web du CÉGEP Édouard-Montpetit.
 
-Le site est construit avec [Docusaurus](https://docusaurus.io/) et provient initialement du matériel du cours 905 - Introduction à la programmation (TIM). La refonte adapte cette base pour un public qui ne possède pas nécessairement d'expérience préalable en informatique, HTML ou CSS.
+Le site est construit avec [Docusaurus](https://docusaurus.io/) et provient initialement du matériel du cours 905 - Introduction à la programmation. La refonte adapte cette base pour un cours à option qui ne possède aucun lien avec un programme de techniques multimédias et qui s'adresse à un public ne possédant pas nécessairement d'expérience préalable en informatique, HTML ou CSS.
 
 Voir [`REFONTE.md`](./REFONTE.md) pour le contexte pédagogique, les objectifs et les décisions structurantes.
 
@@ -16,7 +16,7 @@ Z03/
 ├── .github/workflows/     # Déploiement GitHub Pages
 └── web/
     ├── AGENTS.md          # Consignes Codex propres à Docusaurus
-    ├── docs/              # Cours, laboratoires et TP
+    ├── docs/              # Cours et laboratoires
     ├── src/               # Composantes et styles
     ├── static/            # Ressources statiques
     ├── package.json       # Projet Docusaurus
