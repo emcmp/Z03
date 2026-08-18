@@ -64,6 +64,7 @@ La configuration Docusaurus doit rester portable afin que la même source puisse
 - Conserver `departement-info-cem/z03` comme cible de publication officielle.
 - Ajouter au cours les fondations HTML et CSS qui ne peuvent pas être supposées acquises.
 - Conserver une partie du contenu JavaScript du 905, en l'adaptant au niveau du public Z03.
+- Limiter pour l'instant la séquence héritée aux cours 0 à 15; retirer les cours 16 à 30, qui dépassent le temps disponible dans Z03.
 - Valider le site avec un build Docusaurus avant de considérer un changement terminé.
 - Utiliser des fichiers `AGENTS.md` pour partager le contexte et les conventions avec Codex.
 
