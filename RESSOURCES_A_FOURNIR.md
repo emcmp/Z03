@@ -16,6 +16,34 @@ Lorsqu'une page de cours, un exercice ou un Projet Web a besoin d'une nouvelle r
 
 Ne jamais laisser une dépendance implicite du type « image fournie en classe » sans entrée correspondante dans cette liste.
 
+## Convention pour les téléchargements étudiants
+
+Lorsqu'un fichier doit être téléchargé par l'étudiant, la page doit le signaler de façon très visible avec un encadré portant le libellé **📥 Fichier à télécharger**.
+
+Le bloc doit contenir au minimum :
+
+- un lien direct vers le fichier;
+- le nom exact du fichier à obtenir;
+- une courte indication sur l'endroit où le placer lorsque cela est important pour l'exercice.
+
+Modèle à utiliser dans les pages Docusaurus :
+
+```md
+:::info 📥 Fichier à télécharger
+**[Télécharger `nom-du-fichier.png`](pathname:///files/rencontreN/nom-du-fichier.png)**
+
+Enregistrez le fichier à l'endroit indiqué dans l'exercice.
+:::
+```
+
+Ne pas afficher cet encadré tant que le fichier n'existe pas réellement dans `web/static/files/`.
+
+### Format des nouvelles images
+
+Pour les **nouvelles images préparées spécialement pour les exercices**, utiliser **PNG par défaut** (`.png`), sauf lorsqu'un autre format a une raison pédagogique ou technique claire.
+
+Les ressources existantes n'ont pas besoin d'être converties simplement pour uniformiser leur extension. L'image `chat.jpg` de la rencontre 2 reste donc en JPEG.
+
 ## Convention de dossiers
 
 Les ressources sont regroupées par rencontre.
@@ -98,7 +126,7 @@ Les dossiers n'ont pas besoin d'être créés tant qu'ils ne contiennent aucune 
 
 | Ressource | Emplacement prévu | Utilisation | État |
 |---|---|---|---|
-| Image de chat pour l'exercice guidé | `web/static/files/rencontre2/chat.jpg` | Fichier prêt à télécharger pour pratiquer `images/chat.jpg` et `../images/chat.jpg`, sans perdre du temps à chercher une image pendant le cours. | **À produire** |
+| Image de chat pour l'exercice guidé | `web/static/files/rencontre2/chat.jpg` | Fichier à télécharger pour pratiquer `images/chat.jpg` et `../images/chat.jpg`, sans perdre du temps à chercher une image pendant le cours. | **À intégrer** — le fichier a été ajouté localement par l'enseignant, mais n'est pas encore visible sur `main`. |
 
 ### Contraintes pour `chat.jpg`
 
@@ -108,7 +136,7 @@ Les dossiers n'ont pas besoin d'être créés tant qu'ils ne contiennent aucune 
 - image dont l'utilisation dans le cours est permise;
 - dimensions raisonnables pour éviter un téléchargement inutilement lourd.
 
-Une fois le fichier ajouté, modifier l'exercice guidé de la rencontre 2 afin que l'étudiant puisse **le télécharger directement depuis la page**.
+Dès que le fichier est visible dans `web/static/files/rencontre2/chat.jpg`, modifier l'exercice guidé de la rencontre 2 afin d'ajouter un encadré **📥 Fichier à télécharger** avec un lien direct vers l'image, puis passer son état à **Prêt**.
 
 # Rencontres suivantes
 
