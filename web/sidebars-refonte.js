@@ -10,6 +10,11 @@ const sidebars = {
     },
     {
       type: "doc",
+      id: "PLAN_SITE_EVOLUTIF",
+      label: "Plan du site évolutif",
+    },
+    {
+      type: "doc",
       id: "COMPETENCES_HTML_CSS",
       label: "Compétences HTML/CSS",
     },
