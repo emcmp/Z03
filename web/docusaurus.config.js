@@ -19,6 +19,7 @@ const repositoryUrl = `https://github.com/${repositoryOwner}/${repositoryName}`;
 // englobe aussi web/docs et ferait compiler chaque page MDX deux fois.
 const refonteDocuments = [
   "REFONTE.md",
+  "PLAN_SITE_EVOLUTIF.md",
   "COMPETENCES_HTML_CSS.md",
   "EVALUATION.md",
   "MIGRATION_LABORATOIRES_CODEX.md",
@@ -97,6 +98,7 @@ const config = {
         routeBasePath: "refonte",
         include: [
           "REFONTE.md",
+          "PLAN_SITE_EVOLUTIF.md",
           "COMPETENCES_HTML_CSS.md",
           "EVALUATION.md",
           "MIGRATION_LABORATOIRES_CODEX.md",
@@ -176,7 +178,7 @@ const config = {
       metadata: [
         {
           name: "keywords",
-          content: `${siteConfig.nom}, ${siteConfig.description}, informatique, technique, cégep, cegep, édouard-montpetit, edouard-montpetit, édouard montpetit, edouard montpetit`,
+          content: `${siteConfig.nom}, ${siteConfig.description}, informatique, technique, cégep, cegep, édouard-montpetit, edouard-montpetit, édouard montpetit, edouard-montpetit`,
         },
       ],
     }),
