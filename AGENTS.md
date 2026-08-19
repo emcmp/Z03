@@ -10,6 +10,8 @@ Lire `REFONTE.md` avant toute tâche qui touche la structure pédagogique, l'ord
 
 Lire et mettre à jour `SUIVI_CONTENU.md` avant toute tâche qui déplace, fusionne, supprime ou renumérote une rencontre. Les laboratoires et fichiers d'exercices associés doivent être migrés avec le contenu de cours.
 
+Lire `EVALUATION.md` avant toute tâche qui ajoute, retire ou modifie une compétence évaluée, sa pondération, son moment de validation ou la portée de l'évaluation sommative finale.
+
 ## Structure du dépôt
 
 - `web/` : application Docusaurus et véritable racine technique du site.
@@ -19,6 +21,7 @@ Lire et mettre à jour `SUIVI_CONTENU.md` avant toute tâche qui déplace, fusio
 - `.github/workflows/` : déploiement GitHub Pages.
 - `REFONTE.md` : objectifs et décisions de la refonte.
 - `SUIVI_CONTENU.md` : cartographie des rencontres, notions, laboratoires et migrations de contenu.
+- `EVALUATION.md` : stratégie d'évaluation progressive par compétences et contraintes de pondération.
 
 Les instructions plus spécifiques de `web/AGENTS.md` s'appliquent à tout ce qui se trouve sous `web/`.
 
@@ -47,6 +50,7 @@ Les scripts racine délèguent leurs commandes au projet situé dans `web/`.
 7. Garder les textes destinés aux étudiants en français clair, concret et accessible.
 8. Lorsque plusieurs solutions sont possibles, privilégier la solution la plus simple à expliquer et à maintenir.
 9. Une fusion de rencontres implique aussi l'inventaire et la migration de leurs laboratoires, archives et autres fichiers d'exercices. Ne pas supprimer une source d'exercices avant d'avoir vérifié sa migration et consigné le changement dans `SUIVI_CONTENU.md`.
+10. Une notion déclarée facultative ou « pour aller plus loin » ne doit pas devenir implicitement évaluée. Vérifier `EVALUATION.md` avant d'ajouter un critère ou une exigence à un exercice.
 
 ## Validation
 
