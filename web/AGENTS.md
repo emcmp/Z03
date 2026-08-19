@@ -23,6 +23,17 @@ Les anciens travaux pratiques hérités du 905 ont été retirés volontairement
 
 Avant de renommer ou déplacer un document, vérifier ses références dans la navigation, les liens Markdown et la configuration Docusaurus.
 
+### Migration des laboratoires
+
+Avant toute modification importante de `docs/02-labos/` ou des fichiers `static/files/420905_lab*`, lire **`../MIGRATION_LABORATOIRES_CODEX.md`**.
+
+Ce document contient le mapping entre les anciens laboratoires et la nouvelle séquence des rencontres. En particulier :
+
+- les rencontres 1 à 5 utilisent un site Web évolutif plutôt que des laboratoires HTML/CSS séparés;
+- l'ancien laboratoire 2 sur les variables doit être migré vers la rencontre 6;
+- certains anciens laboratoires doivent être fusionnés ou scindés plutôt que déplacés en bloc;
+- les archives historiques doivent être conservées jusqu'à ce que leur contenu ait été inventorié et la migration validée.
+
 ## Style pédagogique
 
 Le public cible est débutant en programmation Web.
