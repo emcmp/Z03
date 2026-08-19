@@ -7,6 +7,11 @@ const sidebars = {
       type: "category",
       label: "Rencontre 1 — Environnement et HTML",
       items: [
+        {
+          type: "doc",
+          id: "cours/rencontre1-environnement",
+          label: "Préambule — Environnement de travail",
+        },
         { type: "doc", id: "cours/rencontre1", label: "Cours — Premiers pas en HTML" },
         {
           type: "doc",
