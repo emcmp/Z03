@@ -59,6 +59,9 @@ Des prompts prêts à copier sont conservés plus bas dans ce document.
 
 ## À terminer maintenant
 
+- remplacer l'onglet principal **Fonctionnement** par **Bien débuter**;
+- regrouper sous **Bien débuter** la page **Fonctionnement du cours** et une nouvelle page **Accès au poste et compte réseau**;
+- corriger la couverture de la rencontre 1 afin que le préambule réutilise provisoirement les captures utiles du PowerPoint **Environnement de travail**;
 - cohérence finale de la rencontre 2;
 - rencontre 3 complète : cours, exercice guidé, Projet Web — Étape 3;
 - rencontre 4 complète : cours, exercice guidé, Projet Web — Étape 4;
@@ -70,15 +73,17 @@ Des prompts prêts à copier sont conservés plus bas dans ce document.
 
 ## Gelé pour cette passe
 
-Sauf problème bloquant découvert pendant la lecture transversale :
+À l'exception du **correctif ciblé sur l'environnement de travail** décrit dans la phase BD/R1 ci-dessous :
 
-- ne pas refaire une nouvelle passe de finition sur la rencontre 1;
+- ne pas refaire une nouvelle passe générale de finition sur la rencontre 1;
 - ne pas commencer la refonte détaillée de JavaScript à partir de la rencontre 6;
 - ne pas réorganiser les laboratoires de programmation;
 - ne pas finaliser la pondération détaillée des compétences;
-- ne pas moderniser toutes les captures provisoires déjà utilisables;
+- ne pas moderniser toutes les captures historiques avant le premier cours;
 - ne pas faire de nouveau ménage général du dépôt;
 - ne pas introduire de CSS avancé dans le noyau obligatoire.
+
+Les anciennes captures suffisamment claires peuvent être utilisées **provisoirement maintenant**, puis remplacées plus tard par des versions actuelles en conservant les mêmes noms de fichiers.
 
 # États utilisés
 
@@ -91,29 +96,31 @@ Sauf problème bloquant découvert pendant la lecture transversale :
 | `Prêt à réviser` | L'implémentation est complète, mais une lecture pédagogique de l'ensemble reste souhaitable. |
 | `Terminé` | La tâche a été vérifiée et ne nécessite plus d'action dans cette passe. |
 
-# État de départ
+# État de départ révisé
 
-| Rencontre | Cours | Exercice guidé | Projet Web | Navigation | État global |
-|---|---|---|---|---|---|
-| **1** | détaillé | présent | Étape 1 présente | structurée | **Prêt à réviser** — ne pas retravailler maintenant sauf problème transversal |
-| **2** | détaillé | présent, avec `chat.jpg` téléchargeable | Étape 2 présente | structurée | **Prêt à réviser** — faire une passe de cohérence après R3–R5 |
-| **3** | squelette seulement | absent | absent | entrée simple | **À faire** |
-| **4** | squelette seulement | absent | absent | entrée simple | **À faire** |
-| **5** | squelette seulement | absent | absent | entrée simple | **À faire** |
+| Élément | État actuel | État global |
+|---|---|---|
+| **Bien débuter** | `Fonctionnement` existe comme onglet direct; aucune page locale dédiée au compte réseau | **À faire** |
+| **Rencontre 1** | cours, exercice et Projet Web présents; VS Code illustré; le préambule contient le texte sur dossiers/extensions/ZIP mais les captures historiques Windows/ZIP du PowerPoint ne sont pas actuellement intégrées | **À faire — correctif ciblé** |
+| **Rencontre 2** | cours détaillé, exercice avec `chat.jpg`, Étape 2 présente, navigation structurée | **Prêt à réviser** |
+| **Rencontre 3** | squelette seulement | **À faire** |
+| **Rencontre 4** | squelette seulement | **À faire** |
+| **Rencontre 5** | squelette seulement | **À faire** |
 
 # Ordre d'implémentation
 
-L'ordre retenu est :
+L'ordre retenu est maintenant :
 
+0. **Phase BD/R1 — Bien débuter + correctif environnement de la rencontre 1**;
 1. **Rencontre 3 complète**;
 2. **Rencontre 4 complète**;
 3. **Rencontre 5 complète**;
 4. **relecture rapide de la rencontre 2** à la lumière de ce qui suit;
 5. **lecture transversale des rencontres 1 à 5**;
-6. ajustements de poids seulement si la lecture transversale montre un déséquilibre;
+6. ajustements de poids seulement si cette lecture montre un déséquilibre;
 7. build final et mise à jour des suivis.
 
-On évite donc de perfectionner chaque rencontre isolément avant de pouvoir voir la progression entière.
+La phase 0 doit rester courte : elle vise la préparation immédiate du premier cours, pas une nouvelle refonte complète de R1.
 
 # Définition de « rencontre prête à réviser »
 
@@ -131,6 +138,105 @@ Une rencontre 3, 4 ou 5 n'atteint le statut `Prêt à réviser` que si :
 - `npm run build` réussit, ou le blocage est documenté précisément.
 
 # Tâches d'implémentation
+
+## Phase BD/R1 — Bien débuter et environnement du premier cours
+
+Cette phase est prioritaire parce qu'elle touche directement ce que les étudiants voient et utilisent dès le premier cours.
+
+### BD-01 — Remplacer l'onglet « Fonctionnement » par « Bien débuter »
+
+**État : À faire**
+
+Objectif de navigation : avoir un onglet principal **Bien débuter** contenant au minimum :
+
+1. **Fonctionnement du cours**;
+2. **Accès au poste et compte réseau**.
+
+Implémentation technique préférée :
+
+- conserver pour l'instant `web/docs/fonctionnement-du-cours.md` à son emplacement actuel afin d'éviter un déplacement inutile avant le cours;
+- créer un sidebar `bienDebuter` dans `web/sidebars.js`;
+- remplacer dans `web/docusaurus.config.js` l'item direct `Fonctionnement` par un item `docSidebar` nommé **Bien débuter**;
+- préserver le slug actuel `/fonctionnement` de la page existante.
+
+Un ménage physique des fichiers pourra être fait plus tard si nécessaire.
+
+### BD-02 — Créer « Accès au poste et compte réseau »
+
+**État : À faire**  
+**Dépend de : BD-01**
+
+Créer une page étudiante courte qui aide un étudiant à savoir quoi faire avant de pouvoir travailler sur un poste du Cégep.
+
+Source institutionnelle de référence :
+
+`https://techno.cegepmontpetit.ca/compte-reseau/`
+
+La page locale doit expliquer simplement :
+
+- à quoi sert le compte réseau dans le contexte du cours;
+- qu'il sert notamment à accéder aux ordinateurs du Cégep et aux services institutionnels;
+- où trouver la procédure officielle de première activation / gestion du mot de passe;
+- quoi faire si le compte est verrouillé ou si l'accès ne fonctionne pas;
+- qu'un étudiant qui n'arrive pas à ouvrir sa session doit régler ce problème avant les activités nécessitant VS Code et les fichiers du cours.
+
+Éviter de recopier inutilement des détails institutionnels susceptibles de changer, par exemple une liste précise de critères de mot de passe. Préférer une courte explication et un lien clair vers la page officielle.
+
+### BD-03 — Auditer le PowerPoint « Environnement de travail » contre le préambule actuel
+
+**État : À faire**
+
+Constat au 2026-08-19 : le préambule actuel reprend plusieurs **idées** du PowerPoint, mais pas l'ensemble de sa couverture visuelle. Le dossier `web/static/img/rencontre1/` contient actuellement les quatre captures VS Code, mais pas les captures Windows/ZIP prévues à partir du PowerPoint.
+
+Le contrôle doit vérifier explicitement la couverture suivante du PowerPoint historique :
+
+- avertissement sur les fichiers laissés sur les ordinateurs du Cégep;
+- arborescence de dossiers et notion de hiérarchie;
+- racine / disques / supports;
+- création d'un dossier;
+- extensions de fichiers;
+- affichage des extensions dans Windows;
+- principe d'une archive ZIP;
+- compression d'un dossier;
+- résultat de la compression et vérification du contenu de l'archive;
+- décompression / extraction;
+- **avertissement final : ne jamais travailler directement dans l'archive ZIP; travailler dans le dossier extrait**.
+
+Pour chaque point, indiquer : `présent dans le texte`, `illustré`, `à intégrer` ou `non retenu`.
+
+### BD-04 — Réintégrer les captures historiques utiles comme ressources provisoires
+
+**État : À faire**  
+**Dépend de : BD-03**
+
+Réutiliser immédiatement les captures du PowerPoint lorsqu'elles rendent la procédure plus claire, même si leur interface est ancienne.
+
+Règles :
+
+- copier les captures retenues sous `web/static/img/rencontre1/` avec des noms stables et explicites;
+- insérer les images aux sections pertinentes de `01-rencontre1-environnement.md`;
+- ajouter au besoin une courte mention indiquant que l'interface peut différer légèrement;
+- conserver un avertissement très visible sur l'extraction du ZIP avant de travailler;
+- ne pas exiger une recapture moderne avant le premier cours;
+- marquer ces images `Provisoire intégré` dans `RESSOURCES_A_FOURNIR.md`;
+- permettre leur remplacement futur fichier pour fichier sans devoir réécrire la page.
+
+La partie ZIP doit montrer **les deux opérations** lorsqu'elles sont utiles : compresser et extraire/décompresser. L'accent pédagogique principal demeure sur le fait de travailler dans le dossier extrait, jamais dans l'archive.
+
+### BD-05 — Validation technique de la phase Bien débuter / R1
+
+**État : À faire**  
+**Dépend de : BD-01 à BD-04**
+
+- vérifier la navigation **Bien débuter**;
+- vérifier les liens vers les deux pages;
+- vérifier le lien institutionnel du compte réseau;
+- vérifier que toutes les images du préambule existent réellement;
+- vérifier les textes alternatifs des images;
+- exécuter `npm run build`;
+- mettre à jour ce plan et `RESSOURCES_A_FOURNIR.md`.
+
+---
 
 ## Phase R3 — Introduction à CSS
 
@@ -156,8 +262,6 @@ Source principale : `web/docs/01-cours/00-introduction-css.md`.
 À compresser ou présenter comme contexte : CSS intraligne/interne, `<span>`, détails de cascade.
 
 À ne pas faire glisser vers cette rencontre : modèle en boîte détaillé, Flexbox, positionnement.
-
-**Point de reprise attendu :** noter dans cette section si une notion change de rencontre avant de rédiger R3-02.
 
 ### R3-02 — Rédiger le cours canonique
 
@@ -344,6 +448,7 @@ Déplacer, compresser ou rendre facultative une notion seulement si la lecture t
 **État : À faire**  
 **Dépend de : REV-03**
 
+- vérifier l'onglet **Bien débuter**;
 - vérifier les catégories de navigation 1 à 5;
 - vérifier les liens Cours → Exercice → Projet Web;
 - vérifier les téléchargements et ressources statiques;
@@ -367,8 +472,6 @@ Prompt à envoyer à Codex :
 
 **État : Disponible, non délégué**
 
-À utiliser après R3, R4 ou R5 si une vérification mécanique devient utile.
-
 Prompt à adapter puis envoyer à Codex :
 
 > Travaille dans `emcmp/Z03`. Lis `AGENTS.md`, `web/AGENTS.md` et `refonte/PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`. La rencontre N vient d'être rédigée. Ne réécris pas le contenu pédagogique. Vérifie uniquement : liens Markdown/MDX, chemins vers les images et fichiers statiques, cohérence des IDs Docusaurus, ordre de la catégorie dans `web/sidebars.js`, fichiers référencés inexistants et liens cassés évidents. Exécute `npm run build` depuis la racine. Corrige seulement les erreurs techniques non ambiguës. Mets à jour dans le plan la tâche technique correspondante si elle est réellement terminée, puis donne le commit et le résultat du build.
@@ -380,6 +483,16 @@ Prompt à adapter puis envoyer à Codex :
 Prompt à envoyer lorsque REV-03 est terminé :
 
 > Travaille dans `emcmp/Z03`. Lis `AGENTS.md`, `web/AGENTS.md` et `refonte/PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`. Fais un contrôle technique final des rencontres 1 à 5 sans modifier leurs choix pédagogiques : navigation, liens entre cours/exercices/Projet Web, liens de téléchargement, assets statiques, IDs/slugs et build Docusaurus. Signale séparément les problèmes qui nécessitent une décision pédagogique au lieu de les corriger toi-même. Exécute `npm run build` et `git diff --check`. Corrige les erreurs purement techniques et fournis le commit final ainsi qu'un bref rapport.
+
+## CODEX-04 — Contrôle technique de « Bien débuter » et des assets R1
+
+**État : Disponible, non délégué**
+
+À utiliser **après** l'implémentation BD-01 à BD-04 si une seconde vérification technique est utile.
+
+Prompt à envoyer à Codex :
+
+> Travaille dans `emcmp/Z03`. Lis `AGENTS.md`, `web/AGENTS.md` et `refonte/PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`. Ne change aucune décision pédagogique. Vérifie uniquement la phase BD/R1 déjà implémentée : sidebar et onglet `Bien débuter`, IDs des pages `Fonctionnement du cours` et `Accès au poste et compte réseau`, lien institutionnel vers `https://techno.cegepmontpetit.ca/compte-reseau/`, existence de toutes les images référencées par `web/docs/01-cours/01-rencontre1-environnement.md`, textes alternatifs, doublons ou mauvais chemins dans `web/static/img/rencontre1/`. Exécute `npm run build` et `git diff --check`. Corrige seulement les erreurs techniques non ambiguës et donne le commit ainsi qu'un bref rapport.
 
 # Protocole de reprise après interruption
 
@@ -396,10 +509,17 @@ Si une tâche a été interrompue sans mise à jour de statut, inspecter les der
 
 # Point de reprise actuel
 
-**Aucune implémentation de R3–R5 ne doit commencer avant que ce plan soit enregistré dans le dépôt.**
+Le plan révisé est maintenant enregistré avant l'implémentation.
 
-Une fois le présent plan versionné, la prochaine tâche normale est :
+La prochaine tâche normale est :
 
-> **R3-01 — Délimiter le contenu de cours de la rencontre 3.**
+> **BD-01 — Remplacer l'onglet « Fonctionnement » par « Bien débuter ».**
 
-Codex n'est pas nécessaire pour commencer R3-01.
+Puis :
+
+> **BD-02 — Créer la page « Accès au poste et compte réseau ».**  
+> **BD-03 / BD-04 — Réconcilier le PowerPoint Environnement de travail avec le préambule et réintégrer ses captures utiles.**
+
+Après cette phase ciblée du premier cours, reprendre avec **R3-01 — Délimiter le contenu de cours de la rencontre 3**.
+
+Codex n'est pas nécessaire pour BD-01 à BD-04; le GPT-concepteur garde ces choix. `CODEX-04` demeure disponible comme contrôle technique après coup.
