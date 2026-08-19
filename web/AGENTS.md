@@ -14,12 +14,20 @@ La logique de `docusaurus.config.js` permet au même code de fonctionner dans le
 
 ## Organisation du contenu
 
-- `docs/01-cours/` : rencontres et notes de cours
-- `docs/02-labos/` : laboratoires
-- `docs/accueil.md` : accueil du site
-- `sidebars.js` : navigation
+- `docs/01-cours/` : **théorie** et notes de cours des rencontres;
+- `docs/02-labos/` : laboratoires de programmation;
+- `docs/03-projet-web/` : **pratique progressive HTML/CSS des rencontres 1 à 5**;
+- `docs/accueil.md` : accueil du site;
+- `sidebars.js` : navigation.
 
-Les anciens travaux pratiques hérités du 905 ont été retirés volontairement. Ne pas recréer ni réintroduire `docs/03-tp/` ou son contenu sans demande explicite. Les futurs travaux pratiques seront conçus spécifiquement pour Z03.
+Pour les rencontres 1 à 5, garder une séparation pédagogique claire :
+
+- la théorie HTML/CSS reste sous **Cours**;
+- les consignes pour construire le site Web évolutif restent sous **Projet Web**;
+- ne pas fusionner ces deux contenus dans une seule très longue page;
+- une page de théorie peut faire un lien vers l'étape pratique correspondante et inversement.
+
+Les anciens travaux pratiques hérités du 905 ont été retirés volontairement. Ne pas recréer ni réintroduire `docs/03-tp/` ou son contenu sans demande explicite. `docs/03-projet-web/` est différent : il contient le projet Web évolutif propre à Z03 et remplace les exercices HTML/CSS séparés ainsi que l'ancien TP1 comme activité pratique des rencontres 1 à 5.
 
 Avant de renommer ou déplacer un document, vérifier ses références dans la navigation, les liens Markdown et la configuration Docusaurus.
 
