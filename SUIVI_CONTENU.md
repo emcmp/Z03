@@ -40,6 +40,15 @@ Consulter également `EVALUATION.md` lorsqu'un changement de contenu modifie une
 | 14 | Classes et attributs | Classes, attributs, élément HTML en variable | Labo 14 → `420905_lab14.zip` | Probablement à intégrer au bloc DOM | Extraire le labo 14 et répartir les exercices avec les notions DOM correspondantes. |
 | 15 | Tableaux d'éléments HTML | `querySelectorAll`, collections d'éléments, boucles | Labo 15 → `420905_lab15.zip` | Matière à déplacer plus tôt; rencontre 15 réservée à l'examen | Extraire le labo 15 et rattacher les exercices à la future rencontre DOM + tableaux/boucles. |
 
+## Nouvelles sources HTML / CSS
+
+| Source | Contenu principal | Utilisation prévue | État |
+|---|---|---|---|
+| `R01-Introduction-HTML-Markdown/cours.md` | structure HTML, balises, attributs, titres, paragraphes, listes, images, chemins relatifs, navigation, commentaires, validation W3C | Source principale pour la future rencontre HTML et pour les premières compétences évaluées | Importée; à intégrer dans `web/docs` |
+| `R02-Introduction-CSS-Markdown/cours.md` | syntaxe CSS, feuille externe, sélecteurs, classes/id, cascade simple, conteneurs, couleurs, bordures, texte et typographie | Source principale pour le CSS minimal; conserver seulement le noyau évalué et déplacer le surplus en contenu facultatif au besoin | Importée; à intégrer dans `web/docs` |
+
+Les dossiers `R01-Introduction-HTML-Markdown/` et `R02-Introduction-CSS-Markdown/` sont pour l'instant des **sources de migration** à la racine du dépôt. Ils ne font pas encore partie de la navigation Docusaurus tant que leur contenu n'est pas déplacé/adapté sous `web/docs/`.
+
 ## Contraintes de calendrier confirmées
 
 - Le cours comporte 15 rencontres.
@@ -111,3 +120,4 @@ Cette section guide les choix de réduction. Les éléments marqués « couper /
 | 2026-08-18 | Première priorisation des notions à simplifier ou couper | Cours 4, 6, 11 à 15 principalement | Labos correspondants à vérifier avant suppression | Analyse en cours |
 | 2026-08-18 | Adoption d'une stratégie d'évaluation progressive par compétences | Future séquence complète | Exercices à rattacher aux compétences lors de la migration | Décidé |
 | 2026-08-18 | CSS complexe retiré du noyau évalué | Futures rencontres CSS | Nouveaux exercices HTML/CSS à concevoir | Décidé |
+| 2026-08-18 | Import des sources éditoriales HTML et CSS | `R01-Introduction-HTML-Markdown/`, `R02-Introduction-CSS-Markdown/` | Exercices HTML/CSS à concevoir/rattacher | Sources disponibles; intégration Docusaurus à faire |
