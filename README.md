@@ -4,24 +4,39 @@ Dépôt de travail pour la refonte du cours Z03 - Introduction à la programmati
 
 Le site est construit avec [Docusaurus](https://docusaurus.io/) et provient initialement du matériel du cours 905 - Introduction à la programmation. La refonte adapte cette base pour un cours à option qui ne possède aucun lien avec un programme de techniques multimédias et qui s'adresse à un public ne possédant pas nécessairement d'expérience préalable en informatique, HTML ou CSS.
 
-Voir [`REFONTE.md`](./REFONTE.md) pour le contexte pédagogique, les objectifs et les décisions structurantes.
+Voir [`refonte/REFONTE.md`](./refonte/REFONTE.md) pour le contexte pédagogique, les objectifs et les décisions structurantes.
 
 ## Structure
 
 ```text
 Z03/
-├── AGENTS.md              # Consignes générales pour Codex
-├── REFONTE.md             # Contexte et décisions pédagogiques
+├── AGENTS.md              # Consignes générales pour Codex et les agents
+├── README.md              # Point d'entrée du dépôt
 ├── package.json           # Commandes pratiques à partir de la racine
+├── package-lock.json
 ├── .github/workflows/     # Déploiement GitHub Pages
+├── refonte/               # Planification et suivi internes de la refonte
+│   ├── REFONTE.md
+│   ├── PLAN_SITE_EVOLUTIF.md
+│   ├── COMPETENCES_HTML_CSS.md
+│   ├── EVALUATION.md
+│   ├── MIGRATION_LABORATOIRES_CODEX.md
+│   ├── RESSOURCES_A_FOURNIR.md
+│   └── SUIVI_CONTENU.md
+├── sources/               # Sources historiques / éditoriales de migration
+│   ├── R01-Introduction-HTML-Markdown/
+│   ├── R02-Introduction-CSS-Markdown/
+│   └── R03-Modele-Boites-Positionnement-Markdown/
 └── web/
     ├── AGENTS.md          # Consignes Codex propres à Docusaurus
-    ├── docs/              # Cours et laboratoires
+    ├── docs/              # Contenu pédagogique du site
     ├── src/               # Composantes et styles
     ├── static/            # Ressources statiques
     ├── package.json       # Projet Docusaurus
     └── docusaurus.config.js
 ```
+
+Les dossiers sous `sources/` sont conservés pour la traçabilité de la refonte. Le contenu pédagogique actif se trouve sous `web/docs/`.
 
 ## Prérequis
 
@@ -77,7 +92,7 @@ Ouvrir la racine du dépôt comme projet local dans Codex.
 
 Codex lit automatiquement les fichiers `AGENTS.md` présents dans l'arborescence. Le fichier racine fournit le contexte global du projet et `web/AGENTS.md` ajoute les règles propres au site Docusaurus et au contenu pédagogique.
 
-Pour les changements pédagogiques ou les réorganisations du cours, consulter également `REFONTE.md`.
+Pour les changements pédagogiques ou les réorganisations du cours, consulter également `refonte/REFONTE.md` et les autres documents du dossier `refonte/`.
 
 ## Dépôts et publication
 

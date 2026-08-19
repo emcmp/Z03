@@ -14,9 +14,9 @@ const repositoryOwner = isPersonalPreview ? "emcmp" : "departement-info-cem";
 const repositoryName = isPersonalPreview ? "Z03" : siteConfig.nomUrl;
 const repositoryUrl = `https://github.com/${repositoryOwner}/${repositoryName}`;
 
-// Les documents de refonte vivent à la racine du dépôt. Docusaurus ne doit
-// toutefois pas utiliser cette racine comme dossier de contenu, puisqu'elle
-// englobe aussi web/docs et ferait compiler chaque page MDX deux fois.
+// Les documents internes de refonte vivent dans ../refonte. Docusaurus en
+// copie une sélection dans un dossier généré afin de les publier sans faire
+// compiler le reste du dépôt comme contenu de documentation.
 const refonteDocuments = [
   "REFONTE.md",
   "PLAN_SITE_EVOLUTIF.md",
@@ -26,7 +26,7 @@ const refonteDocuments = [
   "RESSOURCES_A_FOURNIR.md",
   "SUIVI_CONTENU.md",
 ];
-const refonteSourceDirectory = path.resolve(__dirname, "..");
+const refonteSourceDirectory = path.resolve(__dirname, "../refonte");
 const refonteContentDirectory = path.resolve(__dirname, ".refonte-docs");
 
 fs.mkdirSync(refonteContentDirectory, { recursive: true });

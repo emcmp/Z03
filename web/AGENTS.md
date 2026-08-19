@@ -33,7 +33,7 @@ Avant de renommer ou déplacer un document, vérifier ses références dans la n
 
 ### Migration des laboratoires
 
-Avant toute modification importante de `docs/02-labos/` ou des fichiers `static/files/420905_lab*`, lire **`../MIGRATION_LABORATOIRES_CODEX.md`**.
+Avant toute modification importante de `docs/02-labos/` ou des fichiers `static/files/420905_lab*`, lire **`../refonte/MIGRATION_LABORATOIRES_CODEX.md`**.
 
 Ce document contient le mapping entre les anciens laboratoires et la nouvelle séquence des rencontres. En particulier :
 
@@ -74,7 +74,7 @@ Pour les exemples de code :
 
 ### Ressources pédagogiques à préparer
 
-Lire **`../RESSOURCES_A_FOURNIR.md`** lorsqu'une rencontre nécessite une capture d'écran, une image, un ZIP, un fichier de départ ou toute autre ressource que l'étudiant doit voir ou télécharger.
+Lire **`../refonte/RESSOURCES_A_FOURNIR.md`** lorsqu'une rencontre nécessite une capture d'écran, une image, un ZIP, un fichier de départ ou toute autre ressource que l'étudiant doit voir ou télécharger.
 
 Convention :
 
@@ -84,7 +84,7 @@ Convention :
 
 Si une nouvelle page suppose une ressource qui n'existe pas encore :
 
-1. inscrire immédiatement la ressource dans `RESSOURCES_A_FOURNIR.md`;
+1. inscrire immédiatement la ressource dans `../refonte/RESSOURCES_A_FOURNIR.md`;
 2. définir son nom de fichier et son emplacement prévus;
 3. décrire exactement ce qu'elle doit contenir ou montrer;
 4. ne pas créer de lien étudiant vers une ressource absente;

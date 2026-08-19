@@ -6,22 +6,23 @@ Ce dépôt est le dépôt de travail personnel pour la refonte du cours Z03, une
 
 Le site actuel provient d'une copie du cours 905. Le 905 suppose déjà des acquis en HTML et CSS; Z03 ne doit pas faire cette hypothèse. La refonte doit donc introduire progressivement HTML, CSS et JavaScript, tout en réduisant la surcharge de contenu.
 
-Lire `REFONTE.md` avant toute tâche qui touche la structure pédagogique, l'ordre des notions, le niveau de difficulté ou le contenu destiné aux étudiants.
+Lire `refonte/REFONTE.md` avant toute tâche qui touche la structure pédagogique, l'ordre des notions, le niveau de difficulté ou le contenu destiné aux étudiants.
 
-Lire et mettre à jour `SUIVI_CONTENU.md` avant toute tâche qui déplace, fusionne, supprime ou renumérote une rencontre. Les laboratoires et fichiers d'exercices associés doivent être migrés avec le contenu de cours.
+Lire et mettre à jour `refonte/SUIVI_CONTENU.md` avant toute tâche qui déplace, fusionne, supprime ou renumérote une rencontre. Les laboratoires et fichiers d'exercices associés doivent être migrés avec le contenu de cours.
 
-Lire `EVALUATION.md` avant toute tâche qui ajoute, retire ou modifie une compétence évaluée, sa pondération, son moment de validation ou la portée de l'évaluation sommative finale.
+Lire `refonte/EVALUATION.md` avant toute tâche qui ajoute, retire ou modifie une compétence évaluée, sa pondération, son moment de validation ou la portée de l'évaluation sommative finale.
 
 ## Structure du dépôt
 
+- `AGENTS.md` : consignes générales pour les agents et Codex à l'échelle du dépôt.
+- `README.md` : point d'entrée humain du projet.
+- `refonte/` : documents internes de planification, d'évaluation, de suivi et de migration.
+- `sources/` : sources historiques ou éditoriales conservées pour la migration et la traçabilité; ce ne sont pas les pages actives du site.
 - `web/` : application Docusaurus et véritable racine technique du site.
 - `web/docs/` : contenu pédagogique visible par les étudiants.
 - `web/static/` : ressources statiques.
 - `web/src/` : composantes et styles Docusaurus.
 - `.github/workflows/` : déploiement GitHub Pages.
-- `REFONTE.md` : objectifs et décisions de la refonte.
-- `SUIVI_CONTENU.md` : cartographie des rencontres, notions, laboratoires et migrations de contenu.
-- `EVALUATION.md` : stratégie d'évaluation progressive par compétences et contraintes de pondération.
 
 Les instructions plus spécifiques de `web/AGENTS.md` s'appliquent à tout ce qui se trouve sous `web/`.
 
@@ -49,8 +50,9 @@ Les scripts racine délèguent leurs commandes au projet situé dans `web/`.
 6. Ne pas réécrire l'historique Git et ne pas forcer de push.
 7. Garder les textes destinés aux étudiants en français clair, concret et accessible.
 8. Lorsque plusieurs solutions sont possibles, privilégier la solution la plus simple à expliquer et à maintenir.
-9. Une fusion de rencontres implique aussi l'inventaire et la migration de leurs laboratoires, archives et autres fichiers d'exercices. Ne pas supprimer une source d'exercices avant d'avoir vérifié sa migration et consigné le changement dans `SUIVI_CONTENU.md`.
-10. Une notion déclarée facultative ou « pour aller plus loin » ne doit pas devenir implicitement évaluée. Vérifier `EVALUATION.md` avant d'ajouter un critère ou une exigence à un exercice.
+9. Une fusion de rencontres implique aussi l'inventaire et la migration de leurs laboratoires, archives et autres fichiers d'exercices. Ne pas supprimer une source d'exercices avant d'avoir vérifié sa migration et consigné le changement dans `refonte/SUIVI_CONTENU.md`.
+10. Une notion déclarée facultative ou « pour aller plus loin » ne doit pas devenir implicitement évaluée. Vérifier `refonte/EVALUATION.md` avant d'ajouter un critère ou une exigence à un exercice.
+11. Les dossiers sous `sources/` sont des sources de migration à préserver. Ne pas les traiter comme du contenu étudiant actif et ne pas les supprimer sans décision explicite documentée.
 
 ## Validation
 

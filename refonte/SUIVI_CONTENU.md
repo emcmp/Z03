@@ -53,7 +53,7 @@ Consulter également :
 | `web/docs/01-cours/00-introduction-css.md` | syntaxe CSS, feuille externe, sélecteurs, classes/id, cascade simple, conteneurs, couleurs, bordures, texte et typographie | Source principale de la rencontre 3 et d'une partie des compétences WEB-05 à WEB-07 | Intégrée au site; mapping détaillé dans `COMPETENCES_HTML_CSS.md` |
 | Future documentation modèle en boîte / disposition | `margin`, `padding`, modèle en boîte, dimensions simples, Flexbox simple | Rencontres 4 et 5; compétences WEB-07 et WEB-08 | À identifier / réorganiser à partir du matériel existant |
 
-Les anciennes sources de migration `R01-Introduction-HTML-Markdown/` et `R02-Introduction-CSS-Markdown/` restent utiles pour la traçabilité, mais les pages de référence actives sont maintenant sous `web/docs/01-cours/`.
+Les anciennes sources de migration `sources/R01-Introduction-HTML-Markdown/`, `sources/R02-Introduction-CSS-Markdown/` et `sources/R03-Modele-Boites-Positionnement-Markdown/` restent utiles pour la traçabilité, mais les pages de référence actives sont maintenant sous `web/docs/01-cours/`.
 
 ## Séquence confirmée pour les rencontres 1 à 6
 
@@ -159,6 +159,7 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 - L'évaluation progressive par compétences devient le modèle privilégié pour obtenir des notes avant l'examen final sans accumuler de grosses corrections simultanées.
 - L'environnement de travail de la rencontre 1 est séparé de la théorie HTML dans un préambule distinct.
 - Toute ressource à fournir aux étudiants doit être inscrite dans `RESSOURCES_A_FOURNIR.md` avant qu'une page en dépende.
+- Les documents internes de refonte sont regroupés sous `refonte/` et les sources historiques/importées sous `sources/`.
 
 ## Décisions / hypothèses en cours
 
@@ -186,3 +187,4 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 | 2026-08-18 | Huit compétences HTML/CSS regroupées en quatre moments de validation | `EVALUATION.md`, `COMPETENCES_HTML_CSS.md` | À rattacher | Décidé |
 | 2026-08-18 | Classification `À maîtriser` / `Bonne pratique` / `Pour aller plus loin` adoptée | Documentation HTML/CSS | À appliquer lors de la réorganisation | Décidé |
 | 2026-08-19 | Préambule Environnement séparé du cours HTML et suivi des ressources créé | Ancien Atelier, PowerPoint Environnement de travail, rencontre 1 actuelle | Captures Windows/VS Code à fournir; `chat.jpg` de la rencontre 2 ajouté au suivi | En cours |
+| 2026-08-19 | Nettoyage de la racine du dépôt : documents internes regroupés sous `refonte/`, sources R01–R03 sous `sources/` | Documents de refonte et sources éditoriales | Aucun contenu supprimé | Effectué |
