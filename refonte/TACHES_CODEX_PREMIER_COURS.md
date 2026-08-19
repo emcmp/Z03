@@ -1,6 +1,6 @@
 # Tâches Codex — préparation du premier cours Z03
 
-**Statut : actif**  
+**Statut : lot CODEX-BD terminé**
 **Portée : préparation immédiate du premier cours et vérifications techniques des rencontres 1 à 5**  
 **Document maître pédagogique : `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`**
 
@@ -43,7 +43,9 @@ Le premier travail de Codex est donc de **réconcilier les statuts documentés a
 
 ## CODEX-BD-00 — Réconcilier l'état réel et le plan
 
-**État : À faire**
+**État : Terminé**
+
+**Résultat :** BD-01 et BD-02 du plan ont été confirmés puis marqués terminés. L'onglet **Bien débuter**, son sidebar et les deux pages attendues sont présents.
 
 ### Objectif
 
@@ -72,7 +74,9 @@ Ne pas réécrire le contenu pédagogique simplement pour uniformiser le style.
 
 ## CODEX-BD-01 — Auditer l'ancien Atelier
 
-**État : À faire**
+**État : Terminé**
+
+**Résultat :** les destinations actuelles de compte réseau, 2FA, Teams/Mio et OneDrive sont documentées dans le plan et le suivi des ressources. L'autodiagnostic demeure `À décider`; la formation d'équipes n'est pas reprise.
 
 ### Source
 
@@ -105,7 +109,9 @@ Ne pas supprimer `01-rencontre1.1.md` : il demeure une source historique pendant
 
 ## CODEX-BD-02 — Localiser et auditer le PowerPoint « Environnement de travail »
 
-**État : À faire**
+**État : Terminé**
+
+**Résultat :** source retrouvée dans `P:/Projects/_CEGEP/Z03-Local/R01/Environnement de travail.pptx`; les 12 diapositives, leur texte et leurs 20 médias utiles ont été inspectés. Le tableau d'audit est consigné dans le plan principal.
 
 ### Pourquoi Codex local
 
@@ -140,8 +146,10 @@ Vérifier au minimum :
 
 ## CODEX-BD-03 — Extraire et nommer les captures historiques utiles
 
-**État : À faire**  
+**État : Terminé**
 **Dépend de : CODEX-BD-02**
+
+**Résultat :** six captures source ont été copiées sans recompression dans `web/static/img/rencontre1/` avec des noms stables.
 
 ### Destination
 
@@ -175,8 +183,10 @@ Conserver les proportions des captures. Éviter les recompressions destructives 
 
 ## CODEX-BD-04 — Intégrer les captures dans le préambule
 
-**État : À faire**  
+**État : Terminé**
 **Dépend de : CODEX-BD-03**
+
+**Résultat :** les six captures sont placées aux sections Racine, Création de dossier, Extensions et ZIP. L'admonition `:::danger` demeure en place et porte le message prioritaire d'extraction.
 
 ### Fichier principal
 
@@ -206,8 +216,10 @@ Ne pas modifier la progression HTML de la rencontre 1.
 
 ## CODEX-BD-05 — Mettre à jour le suivi des ressources
 
-**État : À faire**  
+**État : Terminé**
 **Dépend de : CODEX-BD-03/04**
+
+**Résultat :** les six ressources sont marquées **Provisoire intégré** avec leur chemin, leur fonction et la possibilité d'un remplacement moderne sous le même nom. L'autodiagnostic demeure `À décider`.
 
 Fichier : `refonte/RESSOURCES_A_FOURNIR.md`.
 
@@ -226,8 +238,10 @@ Garder l'autodiagnostic comme `À décider`.
 
 ## CODEX-BD-06 — Vérification locale Docusaurus et visuelle
 
-**État : À faire**  
+**État : Terminé**
 **Dépend de : CODEX-BD-00 à 05**
+
+**Résultat :** `npm run build` réussit. Le build statique contient Bien débuter, Fonctionnement, Compte réseau, le préambule et le passage au cours HTML. Les dix images référencées existent, possèdent un texte alternatif et conservent leurs dimensions intrinsèques. Les trois liens institutionnels répondent HTTP 200. Le navigateur automatisé n'était pas disponible; les PNG ont été inspectés individuellement à pleine taille et le HTML généré a été contrôlé.
 
 ### Vérifications obligatoires
 
@@ -314,8 +328,6 @@ Codex doit travailler de façon à ne pas perdre les changements de l'utilisateu
 
 Si le dépôt local contient déjà des changements non reliés, ne pas les inclure dans le commit.
 
-# Point de reprise initial
+# Point de reprise après le lot CODEX-BD
 
-Commencer par **CODEX-BD-00**.
-
-Le premier objectif n'est pas de rédiger R3 : il est de terminer proprement la phase **Bien débuter / Environnement de travail**, puis de rendre au GPT-concepteur un dépôt propre et documenté afin qu'il puisse poursuivre la conception de R3 à R5.
+Les tâches **CODEX-BD-00 à CODEX-BD-06 sont terminées**. Le GPT-concepteur peut reprendre à **R3-01** dans le plan principal. L'autodiagnostic informatique demeure `À décider`; aucune autre décision pédagogique n'est attendue de Codex pour ce lot.

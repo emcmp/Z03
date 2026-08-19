@@ -74,11 +74,15 @@ La **racine** est le point de départ d'une arborescence ou d'un projet.
 
 Dans Windows, vous pouvez partir de **Ce PC**, puis accéder à vos disques, à une clé USB ou à votre espace OneDrive.
 
+![Dans Ce PC, Windows présente les disques et les autres supports disponibles](../../static/img/rencontre1/windows-ce-pc-disques.png)
+
 Dans un projet Web, on parlera aussi du **dossier racine du projet** : c'est le dossier qui contient l'ensemble des fichiers du site.
 
 ## 3. Créer et nommer des dossiers
 
 Pour créer un dossier dans Windows, placez-vous d'abord à l'endroit où vous voulez le créer, puis utilisez la commande permettant de créer un **nouveau dossier**.
+
+![Créer un dossier à partir du menu contextuel de l’Explorateur Windows](../../static/img/rencontre1/windows-creer-dossier.png)
 
 Pour le cours, privilégiez des noms simples :
 
@@ -133,6 +137,12 @@ est un fichier texte.
 Windows peut masquer les extensions connues. Activez l'option **Extensions de noms de fichiers** dans l'Explorateur afin de toujours voir le vrai nom des fichiers avec lesquels vous travaillez.
 :::
 
+![Afficher les extensions de noms de fichiers dans l’Explorateur Windows](../../static/img/rencontre1/windows-afficher-extensions.png)
+
+:::info L'apparence peut varier
+Les captures Windows de ce préambule proviennent d'une version antérieure de Windows et de 7-Zip. Les menus peuvent être légèrement différents sur votre poste, mais les actions à repérer demeurent les mêmes.
+:::
+
 ## 5. Les fichiers ZIP
 
 Un fichier `.zip` est une **archive** qui regroupe plusieurs fichiers ou dossiers dans un seul fichier.
@@ -148,15 +158,21 @@ Lorsque vous téléchargez une archive ZIP pour un exercice ou un laboratoire :
 3. choisissez le dossier où le contenu doit être extrait;
 4. ouvrez ensuite **le dossier extrait** dans VS Code.
 
+![Extraire le contenu d’une archive ZIP avec la commande d’extraction de 7-Zip](../../static/img/rencontre1/windows-extraire-zip.png)
+
 :::danger Ne travaillez pas directement dans une archive
 Si vous voyez le contenu d'un ZIP dans une interface d'archive, ne commencez pas à modifier les fichiers à cet endroit.
 
 Extrayez d'abord l'archive. Vous éviterez ainsi des fichiers qui semblent enregistrés mais qui ne se trouvent pas là où vous pensez.
+
+![Avertissement montrant l’interface d’une archive dans laquelle il ne faut pas travailler](../../static/img/rencontre1/windows-ne-pas-travailler-dans-zip.png)
 :::
 
 ### Compresser un dossier
 
 La compression fait l'opération inverse : elle crée une archive ZIP contenant une copie des fichiers sélectionnés.
+
+![Compresser des fichiers dans une archive ZIP avec le menu contextuel de 7-Zip](../../static/img/rencontre1/windows-compresser-zip.png)
 
 Vous n'aurez pas nécessairement besoin de compresser un projet à chaque rencontre, mais cette opération pourra être utile lorsqu'un projet complet doit être transmis ou conservé.
 
@@ -170,7 +186,7 @@ Le principe le plus important est le suivant :
 Votre projet existe dans un vrai dossier de Windows ou de OneDrive. VS Code vous permet simplement **d'ouvrir ce dossier et de modifier les fichiers qui s'y trouvent**.
 :::
 
-Les captures ci-dessous peuvent différer légèrement de votre version de Windows ou de VS Code. Ce qui compte est de reconnaître **le dossier du projet** et l'action qui permet de l'ouvrir dans VS Code.
+Ce qui compte est de reconnaître **le dossier du projet** et l'action qui permet de l'ouvrir dans VS Code.
 
 ### Méthode 1 — Ouvrir le dossier depuis Windows
 

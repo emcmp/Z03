@@ -100,8 +100,8 @@ Les dossiers n'ont pas besoin d'être créés tant qu'ils ne contiennent aucune 
 
 | Source | Utilité | État / décision |
 |---|---|---|
-| Ancien PowerPoint **Environnement de travail** (12 diapositives) | Arborescence, création de dossiers, extensions, affichage des extensions, compression/décompression ZIP | **Source reçue**. Le contenu a alimenté le nouveau préambule. Plusieurs captures montrent un ancien Windows et 7-Zip : les utiliser comme référence, mais privilégier des captures actuelles. |
-| `web/docs/01-cours/01-rencontre1.1.md` — ancien **Cours 1 - Atelier** | Connexion aux postes, 2FA, Teams, stockage infonuagique, ancien autodiagnostic | **Source historique conservée**. Les éléments durables sur le stockage ont été repris; Teams et l'autodiagnostic doivent être confirmés avant réintégration. |
+| Ancien PowerPoint **Environnement de travail** (12 diapositives) | Arborescence, création de dossiers, extensions, affichage des extensions, compression/décompression ZIP | **Source reçue et auditée**. Six captures Windows/7-Zip sont maintenant intégrées provisoirement au préambule; elles pourront être remplacées plus tard en conservant leurs noms stables. |
+| `web/docs/01-cours/01-rencontre1.1.md` — ancien **Cours 1 - Atelier** | Connexion aux postes, 2FA, Teams, stockage infonuagique, ancien autodiagnostic | **Source historique conservée et auditée**. Compte/2FA ont leur page, Teams/Mio sont dans Fonctionnement, OneDrive remplace Google Drive et l'autodiagnostic demeure à décider. |
 | `web/static/img/atelier/VSCODE/` — quatre captures VS Code | Ouverture d'un dossier depuis Windows, démarrage de VS Code et résultat après ouverture du projet | **Réutilisées** dans le préambule. Les fichiers originaux sont conservés et des copies aux noms stables sont placées dans `web/static/img/rencontre1/`. |
 | `web/static/img/atelier/leaEtudiant.png` | Ancienne capture associée à l'atelier | **À décider**. Ne pas l'utiliser automatiquement tant que son rôle dans la nouvelle rencontre n'est pas confirmé. |
 
@@ -109,8 +109,12 @@ Les dossiers n'ont pas besoin d'être créés tant qu'ils ne contiennent aucune 
 
 | Ressource | Emplacement | Utilisation | État |
 |---|---|---|---|
-| Afficher les extensions dans Windows | `web/static/img/rencontre1/windows-afficher-extensions.png` | Montrer l'option **Extensions de noms de fichiers** dans un Explorateur Windows actuel. | **À fournir** |
-| Extraire une archive ZIP | `web/static/img/rencontre1/windows-extraire-zip.png` | Montrer clairement l'action **Extraire tout** ou son équivalent. | **À fournir** |
+| Repérer Ce PC et les disques | `web/static/img/rencontre1/windows-ce-pc-disques.png` | Montrer le point de départ de l'arborescence et les supports disponibles. | **Provisoire intégré** — extrait du PowerPoint historique; remplacement moderne facultatif en conservant ce nom. |
+| Créer un dossier dans Windows | `web/static/img/rencontre1/windows-creer-dossier.png` | Montrer le clic droit puis **Nouveau → Dossier** dans l'Explorateur. | **Provisoire intégré** — extrait du PowerPoint historique; remplacement moderne facultatif en conservant ce nom. |
+| Afficher les extensions dans Windows | `web/static/img/rencontre1/windows-afficher-extensions.png` | Montrer l'option **Extensions de noms de fichiers** dans l'Explorateur Windows. | **Provisoire intégré** — extrait du PowerPoint historique; remplacement moderne facultatif en conservant ce nom. |
+| Compresser des fichiers dans un ZIP | `web/static/img/rencontre1/windows-compresser-zip.png` | Montrer la sélection et la commande de compression avec 7-Zip. | **Provisoire intégré** — extrait du PowerPoint historique; remplacement moderne facultatif en conservant ce nom. |
+| Extraire une archive ZIP | `web/static/img/rencontre1/windows-extraire-zip.png` | Montrer clairement une commande d'extraction de l'archive. | **Provisoire intégré** — extrait du PowerPoint historique; remplacement moderne facultatif en conservant ce nom. |
+| Ne pas travailler dans le ZIP | `web/static/img/rencontre1/windows-ne-pas-travailler-dans-zip.png` | Renforcer visuellement l'avertissement d'extraire l'archive avant de modifier ses fichiers. | **Provisoire intégré** — extrait du PowerPoint historique; remplacement moderne facultatif en conservant ce nom. |
 | Clic droit sur le dossier du projet | `web/static/img/rencontre1/vscode-clic-droit-dossier.png` | Montrer l'ouverture du dossier avec VS Code directement depuis l'Explorateur Windows. | **Provisoire intégré** — repris de `web/static/img/atelier/VSCODE/VsCode-right-click-open.png`; remplacement moderne facultatif. |
 | Clic droit depuis l'intérieur du dossier | `web/static/img/rencontre1/vscode-clic-droit-dans-dossier.png` | Montrer une deuxième façon de lancer VS Code lorsque le dossier est déjà ouvert dans Windows. | **Provisoire intégré** — repris de `web/static/img/atelier/VSCODE/VsCode-inside-folder-right-click-open.png`; remplacement moderne facultatif. |
 | Démarrage de VS Code | `web/static/img/rencontre1/vscode-demarrage.png` | Montrer la fenêtre de VS Code au démarrage avant l'ouverture du projet. | **Provisoire intégré** — repris de `web/static/img/atelier/VSCODE/vsCode-opened.png`; remplacement moderne facultatif. |
@@ -122,9 +126,11 @@ Les quatre captures VS Code sont maintenant **suffisantes pour enseigner la proc
 
 | Élément de l'ancien atelier | Question | État |
 |---|---|---|
-| Teams | Est-ce encore la plateforme réellement utilisée pour les communications ou certaines remises dans Z03? | **À décider** |
+| Teams | Les règles de communication doivent-elles être reprises depuis l'ancien Atelier? | **Décidé** — Teams et Mio sont déjà traités dans `web/docs/fonctionnement-du-cours.md`; aucune nouvelle page Atelier. |
 | Test autodiagnostic informatique | Est-ce que le formulaire existe encore et est-il encore utile dans la nouvelle formule du cours? | **À décider** |
-| Liens compte réseau / double authentification | Doivent-ils être affichés directement dans le préambule étudiant ou simplement présentés en classe? | **À décider** |
+| Liens compte réseau / double authentification | Où les étudiants doivent-ils les retrouver? | **Décidé** — liens publiés dans `web/docs/acces-poste-compte-reseau.md`, sous **Bien débuter**. |
+| Google Drive | Faut-il restaurer l'ancien contenu de l'Atelier? | **Non retenu** — OneDrive est le stockage de référence dans le préambule actuel. |
+| Formation d'équipes de 2 | Faut-il reprendre l'activité historique? | **Non retenu pour cette passe**. |
 
 # Rencontre 2 — HTML, fichiers et navigation
 

@@ -100,8 +100,8 @@ Les anciennes captures suffisamment claires peuvent être utilisées **provisoir
 
 | Élément | État actuel | État global |
 |---|---|---|
-| **Bien débuter** | `Fonctionnement` existe comme onglet direct; aucune page locale dédiée au compte réseau | **À faire** |
-| **Rencontre 1** | cours, exercice et Projet Web présents; VS Code illustré; le préambule contient le texte sur dossiers/extensions/ZIP mais les captures historiques Windows/ZIP du PowerPoint ne sont pas actuellement intégrées | **À faire — correctif ciblé** |
+| **Bien débuter** | onglet et sidebar fonctionnels; Fonctionnement du cours et Accès au poste et compte réseau sont présents | **Terminé** |
+| **Rencontre 1** | cours, exercice et Projet Web présents; VS Code illustré; captures Windows/ZIP historiques sélectionnées, intégrées et validées | **Terminé — correctif ciblé** |
 | **Rencontre 2** | cours détaillé, exercice avec `chat.jpg`, Étape 2 présente, navigation structurée | **Prêt à réviser** |
 | **Rencontre 3** | squelette seulement | **À faire** |
 | **Rencontre 4** | squelette seulement | **À faire** |
@@ -145,7 +145,7 @@ Cette phase est prioritaire parce qu'elle touche directement ce que les étudian
 
 ### BD-01 — Remplacer l'onglet « Fonctionnement » par « Bien débuter »
 
-**État : À faire**
+**État : Terminé**
 
 Objectif de navigation : avoir un onglet principal **Bien débuter** contenant au minimum :
 
@@ -163,7 +163,7 @@ Un ménage physique des fichiers pourra être fait plus tard si nécessaire.
 
 ### BD-02 — Créer « Accès au poste et compte réseau »
 
-**État : À faire**  
+**État : Terminé**
 **Dépend de : BD-01**
 
 Créer une page étudiante courte qui aide un étudiant à savoir quoi faire avant de pouvoir travailler sur un poste du Cégep.
@@ -182,9 +182,18 @@ La page locale doit expliquer simplement :
 
 Éviter de recopier inutilement des détails institutionnels susceptibles de changer, par exemple une liste précise de critères de mot de passe. Préférer une courte explication et un lien clair vers la page officielle.
 
+#### Réconciliation de l'ancien Atelier — 2026-08-19
+
+- le compte réseau et la 2FA aboutissent dans `web/docs/acces-poste-compte-reseau.md`;
+- les consignes Teams et Mio sont déjà couvertes dans `web/docs/fonctionnement-du-cours.md`;
+- OneDrive remplace l'ancien usage de Google Drive dans le préambule Environnement de travail;
+- la formation d'équipes n'est pas réintroduite dans cette passe;
+- l'autodiagnostic informatique demeure **À décider** dans le suivi des ressources;
+- `web/docs/01-cours/01-rencontre1.1.md` est conservé comme source historique.
+
 ### BD-03 — Auditer le PowerPoint « Environnement de travail » contre le préambule actuel
 
-**État : À faire**
+**État : Terminé**
 
 Constat au 2026-08-19 : le préambule actuel reprend plusieurs **idées** du PowerPoint, mais pas l'ensemble de sa couverture visuelle. Le dossier `web/static/img/rencontre1/` contient actuellement les quatre captures VS Code, mais pas les captures Windows/ZIP prévues à partir du PowerPoint.
 
@@ -204,9 +213,28 @@ Le contrôle doit vérifier explicitement la couverture suivante du PowerPoint h
 
 Pour chaque point, indiquer : `présent dans le texte`, `illustré`, `à intégrer` ou `non retenu`.
 
+#### Audit du PowerPoint — 2026-08-19
+
+Source retrouvée : `P:/Projects/_CEGEP/Z03-Local/R01/Environnement de travail.pptx` — 12 diapositives inspectées.
+
+| Notion vérifiée | Couverture de la source | Résultat dans le préambule |
+|---|---|---|
+| Fichiers laissés sur les postes du Cégep | texte de la diapositive 2 | **Présent dans le texte** |
+| Arborescence et hiérarchie | texte et captures de la diapositive 3 | **Présent dans le texte**; capture détaillée non retenue |
+| Racine, Ce PC, disques et supports | texte et capture de la diapositive 4 | **Illustré — intégré** |
+| Création d'un dossier | texte et captures de la diapositive 5 | **Illustré — intégré** |
+| Fichiers et extensions | texte et capture de la diapositive 6 | **Présent dans le texte**; capture de liste non retenue |
+| Affichage des extensions | texte et captures de la diapositive 7 | **Illustré — intégré** |
+| Principe d'une archive ZIP | texte et schéma de la diapositive 8 | **Présent dans le texte**; schéma non retenu |
+| Compression d'un dossier | captures de la diapositive 9 | **Illustré — intégré** |
+| ZIP créé et contenu de l'archive | captures de la diapositive 10 | **Illustré dans la source**; non retenu pour éviter une galerie redondante |
+| Extraction / décompression | captures de la diapositive 11 | **Illustré — intégré** |
+| Résultat après extraction | capture de la diapositive 11 | **Illustré dans la source**; non retenu, puisque le texte et l'action d'extraction suffisent |
+| Ne jamais travailler dans le ZIP | texte et capture de la diapositive 12 | **Illustré — intégré** dans l'admonition `:::danger` |
+
 ### BD-04 — Réintégrer les captures historiques utiles comme ressources provisoires
 
-**État : À faire**  
+**État : Terminé**
 **Dépend de : BD-03**
 
 Réutiliser immédiatement les captures du PowerPoint lorsqu'elles rendent la procédure plus claire, même si leur interface est ancienne.
@@ -225,7 +253,7 @@ La partie ZIP doit montrer **les deux opérations** lorsqu'elles sont utiles : c
 
 ### BD-05 — Validation technique de la phase Bien débuter / R1
 
-**État : À faire**  
+**État : Terminé**
 **Dépend de : BD-01 à BD-04**
 
 - vérifier la navigation **Bien débuter**;
@@ -235,6 +263,8 @@ La partie ZIP doit montrer **les deux opérations** lorsqu'elles sont utiles : c
 - vérifier les textes alternatifs des images;
 - exécuter `npm run build`;
 - mettre à jour ce plan et `RESSOURCES_A_FOURNIR.md`.
+
+**Résultat du 2026-08-19 :** navigation et pages générées vérifiées dans le build statique; dix images du préambule présentes avec un texte alternatif et leurs dimensions intrinsèques; liens Compte réseau, 2FA et aide technologique vérifiés avec un statut HTTP 200; `npm run build` réussi. La connexion au navigateur automatisé était indisponible, donc le contrôle visuel a été complété par inspection à pleine taille des PNG et du HTML généré.
 
 ---
 
@@ -509,17 +539,10 @@ Si une tâche a été interrompue sans mise à jour de statut, inspecter les der
 
 # Point de reprise actuel
 
-Le plan révisé est maintenant enregistré avant l'implémentation.
+La phase ciblée **Bien débuter / Environnement de travail** est terminée et validée. L'ancien Atelier demeure une source historique; l'autodiagnostic informatique reste la seule décision pédagogique ouverte de ce lot.
 
-La prochaine tâche normale est :
+La prochaine tâche normale revient au GPT-concepteur :
 
-> **BD-01 — Remplacer l'onglet « Fonctionnement » par « Bien débuter ».**
+> **R3-01 — Délimiter le contenu de cours de la rencontre 3.**
 
-Puis :
-
-> **BD-02 — Créer la page « Accès au poste et compte réseau ».**  
-> **BD-03 / BD-04 — Réconcilier le PowerPoint Environnement de travail avec le préambule et réintégrer ses captures utiles.**
-
-Après cette phase ciblée du premier cours, reprendre avec **R3-01 — Délimiter le contenu de cours de la rencontre 3**.
-
-Codex n'est pas nécessaire pour BD-01 à BD-04; le GPT-concepteur garde ces choix. `CODEX-04` demeure disponible comme contrôle technique après coup.
+Codex pourra ensuite reprendre avec un contrôle technique borné lorsque la rencontre 3 aura été rédigée.
