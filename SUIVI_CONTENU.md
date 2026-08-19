@@ -18,7 +18,10 @@ Pour chaque fusion ou déplacement :
 
 L'aide-mémoire `web/docs/01-cours/00-rencontre0.0.md` est une ressource de référence et ne compte pas parmi les 15 rencontres.
 
-Consulter également `EVALUATION.md` lorsqu'un changement de contenu modifie une compétence évaluée, son moment de validation ou la portée de l'examen final.
+Consulter également :
+
+- `EVALUATION.md` pour le modèle général de validation;
+- `COMPETENCES_HTML_CSS.md` pour la cartographie détaillée des rencontres 1 à 5, les huit compétences HTML/CSS et les trois niveaux d'attente.
 
 ## Structure actuelle et sources d'exercices
 
@@ -44,50 +47,100 @@ Consulter également `EVALUATION.md` lorsqu'un changement de contenu modifie une
 
 | Source | Contenu principal | Utilisation prévue | État |
 |---|---|---|---|
-| `R01-Introduction-HTML-Markdown/cours.md` | structure HTML, balises, attributs, titres, paragraphes, listes, images, chemins relatifs, navigation, commentaires, validation W3C | Source principale pour la future rencontre HTML et pour les premières compétences évaluées | Importée; à intégrer dans `web/docs` |
-| `R02-Introduction-CSS-Markdown/cours.md` | syntaxe CSS, feuille externe, sélecteurs, classes/id, cascade simple, conteneurs, couleurs, bordures, texte et typographie | Source principale pour le CSS minimal; conserver seulement le noyau évalué et déplacer le surplus en contenu facultatif au besoin | Importée; à intégrer dans `web/docs` |
+| `web/docs/01-cours/00-introduction-html.md` | structure HTML, balises, attributs, titres, paragraphes, listes, images, chemins relatifs, navigation, commentaires, validation W3C | Source principale des rencontres 1 et 2 et des compétences WEB-01 à WEB-04 | Intégrée au site; mapping détaillé dans `COMPETENCES_HTML_CSS.md` |
+| `web/docs/01-cours/00-introduction-css.md` | syntaxe CSS, feuille externe, sélecteurs, classes/id, cascade simple, conteneurs, couleurs, bordures, texte et typographie | Source principale de la rencontre 3 et d'une partie des compétences WEB-05 à WEB-07 | Intégrée au site; mapping détaillé dans `COMPETENCES_HTML_CSS.md` |
+| Future documentation modèle en boîte / disposition | `margin`, `padding`, modèle en boîte, dimensions simples, Flexbox simple | Rencontres 4 et 5; compétences WEB-07 et WEB-08 | À identifier / réorganiser à partir du matériel existant |
 
-Les dossiers `R01-Introduction-HTML-Markdown/` et `R02-Introduction-CSS-Markdown/` sont pour l'instant des **sources de migration** à la racine du dépôt. Ils ne font pas encore partie de la navigation Docusaurus tant que leur contenu n'est pas déplacé/adapté sous `web/docs/`.
+Les anciennes sources de migration `R01-Introduction-HTML-Markdown/` et `R02-Introduction-CSS-Markdown/` restent utiles pour la traçabilité, mais les pages de référence actives sont maintenant sous `web/docs/01-cours/`.
+
+## Séquence confirmée pour les rencontres 1 à 6
+
+| Rencontre | Noyau de matière | Validation |
+|---|---|---|
+| **1** | environnement de travail, fichiers/dossiers, VS Code, navigateur, première page, structure et contenu HTML de base | aucune sommative prévue |
+| **2** | organisation du projet, images, chemins relatifs, pages multiples, liens et navigation | Validation A — WEB-01/02; Validation B — WEB-03/04 selon l'avancement |
+| **3** | syntaxe CSS, feuille externe, chemins CSS, sélecteurs, classes, propriétés visuelles | début Validation C — WEB-05/06 |
+| **4** | consolidation CSS, bordures, dimensions simples, `margin`, `padding`, modèle en boîte | Validation C; début Validation D — WEB-07/08 |
+| **5** | Flexbox simple, navigation horizontale, intégration, pratique et correction | Validation D et reprises |
+| **6** | début de la programmation JavaScript | reprises HTML/CSS seulement au besoin; aucune nouvelle matière HTML/CSS essentielle |
+
+## Niveaux d'attente pour le contenu
+
+Toute réorganisation des pages HTML/CSS doit classifier les notions selon trois niveaux.
+
+### À maîtriser
+
+Noyau du cours. Peut contribuer directement à une compétence évaluée et être réinvesti dans l'examen final.
+
+### Bonne pratique
+
+Enseignée, montrée et recommandée, mais son absence ne fait pas échouer une compétence à elle seule.
+
+Exemples : éléments sémantiques `header`, `nav`, `main`, `footer`; texte alternatif pertinent; indentation; commentaires; validation W3C; compréhension simple de la cascade.
+
+### Pour aller plus loin
+
+Facultatif et non évalué. Doit être clairement identifié sur le site par un libellé textuel en plus du traitement visuel.
+
+Exemples : détails `inline`/`inline-block`, `overflow`, positionnement, Flexbox avancé, Grid, animations et transitions.
 
 ## Contraintes de calendrier confirmées
 
 - Le cours comporte 15 rencontres.
 - Toute matière essentielle doit être terminée au plus tard à la rencontre 13.
-- La **rencontre 14 est un buffer** : rattrapage, travail sur un TP, pratique, révision ou absorption d'une interruption. Aucune nouvelle notion essentielle ne doit dépendre de cette rencontre.
+- La **rencontre 14 est un buffer** : rattrapage, travail, pratique, révision ou absorption d'une interruption. Aucune nouvelle notion essentielle ne doit dépendre de cette rencontre.
 - La rencontre 15 est réservée à l'évaluation sommative.
 - Le formatif ne nécessite pas forcément une rencontre complète et peut devenir une activité à faire hors classe.
+- HTML/CSS est enseigné comme noyau aux rencontres 1 à 5 seulement.
+- JavaScript commence à la rencontre 6.
 
 ## Contraintes d'évaluation confirmées
 
 - Une seule évaluation sommative formelle est prévue à la rencontre 15.
 - L'évaluation doit commencer tôt dans la session sous forme de validations progressives de compétences observables.
 - Au moins **15 % de la note doit avoir été évalué au plus tard à la rencontre 6**.
-- Les validations doivent pouvoir être réalisées en classe par petites unités plutôt que dépendre d'une seule remise de gros TP.
-- Les compétences non maîtrisées lors d'une première tentative devraient pouvoir être représentées lorsque la logistique le permet.
-- Les notions déclarées facultatives ou « pour aller plus loin » ne doivent pas faire partie des critères obligatoires ni de l'examen final.
-- Le détail de cette stratégie est maintenu dans `EVALUATION.md`.
+- Le bloc HTML/CSS peut représenter **environ 30 %** de la note finale comme hypothèse de travail, puisqu'il remplace l'ancien TP1 et une partie de l'ancien premier examen.
+- Les huit compétences HTML/CSS sont regroupées en quatre moments de validation afin de limiter la charge avec un groupe d'environ 24 étudiants.
+- Les validations doivent pouvoir être réalisées en classe pendant les périodes de travail.
+- Les compétences non maîtrisées lors d'une première tentative peuvent être représentées lorsque la logistique le permet.
+- Les notions déclarées `Bonne pratique` ne doivent pas provoquer à elles seules l'échec d'une compétence.
+- Les notions `Pour aller plus loin` ne doivent faire partie ni des critères obligatoires ni de l'examen final.
 
 ## Priorisation proposée de la matière héritée
 
-Cette section guide les choix de réduction. Les éléments marqués « couper / optionnel » ne sont pas encore supprimés tant que leur migration et leurs exercices n'ont pas été traités.
-
-| Bloc hérité | À garder comme essentiel | À compresser | À couper ou rendre optionnel |
+| Bloc hérité | À maîtriser | Bonne pratique / à compresser | Pour aller plus loin / retirer du noyau |
 |---|---|---|---|
-| Environnement de travail | dossiers/fichiers, extensions, OneDrive, ZIP, ouvrir un projet dans VS Code et le navigateur | quelques bonnes pratiques d'organisation | outils avancés de gestion de fichiers non requis |
-| HTML | structure du document, titres/paragraphes/listes, liens, images, attributs utiles, chemins relatifs, navigation | sémantique supplémentaire si utile | éléments HTML rarement utilisés dans les exercices |
-| CSS | liaison de la feuille CSS, sélecteurs/classes, propriétés visuelles de base, `margin`/`padding`, `display` dans des cas simples | dimensions et mise en page légère | détails `inline`/`inline-block`, positionnement, mises en page complexes, Flexbox/Grid avancés, animations |
+| Environnement de travail | dossiers/fichiers, extensions, ouvrir un projet dans VS Code et le navigateur, organisation des ressources | OneDrive/ZIP selon les besoins concrets du cours | outils avancés de gestion de fichiers non requis |
+| HTML | structure du document, éléments/attributs, titres/paragraphes/listes, images, liens, chemins relatifs, navigation | `header`, `nav`, `main`, `footer`, `alt`, commentaires, validation W3C, sémantique simple | éléments HTML rarement utilisés et nuances sémantiques avancées |
+| CSS — base | liaison externe, syntaxe d'une règle, sélecteurs d'élément et de classe, propriétés visuelles de base | `id`, cascade simple, `<span>`, détails contextuels CSS intraligne/interne | théorie détaillée de spécificité |
+| CSS — espace/disposition | `margin`, `padding`, modèle en boîte, dimensions simples, `display:flex` simple, `gap` | `border-radius`, `justify-content`/`align-items` selon les exercices | détails `inline`/`inline-block`, `overflow`, positionnement, Flexbox avancé, Grid, animations |
 | Variables / chaînes | variables, affectation, nombres, chaînes, opérateurs simples, template strings | opérateurs d'affectation secondaires | détails de priorité des opérateurs au-delà du nécessaire |
 | Conditions | booléens, comparaisons, `if`, `else`, `else if`, `&&`, `||` | exemples complexes d'opérateurs logiques | opérateur `!` et tableau complet de priorité des opérateurs |
 | Fonctions | déclaration, appel, paramètres simples | plusieurs paramètres, `return` présenté brièvement | approfondissement des valeurs de retour, exemples sophistiqués si le temps manque |
 | Portée des variables | comprendre qu'une variable déclarée dans une fonction est locale | mentionner les globales seulement lorsqu'un état doit être partagé | convention systématique du préfixe `g` et théorie détaillée sur les globales |
-| Événements | `click`, `addEventListener`, fonction appelée par un événement | un second événement seulement si utile à un exercice | catalogue `mouseover` / `mouseout` si non requis par un TP |
-| Styles via DOM | modifier une propriété simple; surtout utiliser des classes CSS avec `classList` | quelques propriétés `.style` utiles | mémoriser une longue liste de propriétés CSS en JavaScript |
+| Événements | `click`, `addEventListener`, fonction appelée par un événement | un second événement seulement si utile à un exercice | catalogue `mouseover` / `mouseout` si non requis |
+| Styles via DOM | surtout utiliser des classes CSS avec `classList`; modifier une propriété simple lorsque pertinent | quelques propriétés `.style` utiles | mémoriser une longue liste de propriétés CSS en JavaScript |
 | Classes DOM | `classList.add`, `remove`, `toggle` | `contains` | cas avancés non nécessaires |
 | Attributs DOM | lire/modifier un attribut concret lorsque requis (`src`, `alt`, etc.) | présentation courte intégrée au DOM | rencontre complète consacrée aux attributs |
 | Boucles | comprendre la répétition et savoir parcourir une séquence | choisir une forme principale de boucle pour le cours | `do...while`, conditions de boucle complexes, débogueur avancé |
-| Tableaux | création, index, `length`, parcours; `push` si utile | modification simple d'un élément | `pop`, `splice` et opérations de gestion avancées si non nécessaires |
-| Plusieurs éléments DOM | `querySelectorAll` et parcours de plusieurs éléments | intégrer cette notion au bloc tableaux/boucles/DOM | en faire une rencontre complète indépendante |
-| Débogage | lire la console, tester souvent, reconnaître les erreurs courantes | pratiquer le débogage dans tous les cours | consacrer une grosse section autonome au débogueur |
+| Tableaux | création, index, `length`, parcours; `push` si utile | modification simple d'un élément | `pop`, `splice` et opérations avancées si non nécessaires |
+| Plusieurs éléments DOM | `querySelectorAll` et parcours de plusieurs éléments | intégrer au bloc tableaux/boucles/DOM | rencontre complète indépendante |
+| Débogage | lire la console, tester souvent, reconnaître les erreurs courantes | pratiquer le débogage dans tous les cours | grosse section autonome au débogueur |
+
+## Mapping des exercices HTML/CSS — prochaine étape
+
+Le mapping détaillé des notions existe maintenant dans `COMPETENCES_HTML_CSS.md`, mais les exercices HTML/CSS n'y sont pas encore rattachés.
+
+Pour chaque exercice existant, relever :
+
+1. sa source actuelle;
+2. les notions couvertes;
+3. la ou les compétences concernées;
+4. la rencontre cible entre 1 et 5;
+5. la décision : `conserver`, `déplacer`, `alléger` ou `retirer`;
+6. les portions qui deviennent `Pour aller plus loin`.
+
+Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà pour une notion essentielle**. Retirer ou simplifier les portions devenues facultatives plutôt que reconstruire le matériel au complet.
 
 ## Décisions confirmées
 
@@ -95,19 +148,23 @@ Cette section guide les choix de réduction. Les éléments marqués « couper /
 - Toute fusion de contenu doit inclure explicitement la migration des exercices associés.
 - La rencontre 14 doit rester disponible comme buffer et séance de travail/rattrapage.
 - La rencontre 15 est l'évaluation sommative.
-- Le CSS évalué doit rester minimal; les notions de mise en page plus complexes peuvent être conservées comme contenu facultatif clairement identifié.
+- HTML/CSS occupe les rencontres 1 à 5, avec JavaScript dès la rencontre 6.
+- Huit compétences HTML/CSS sont retenues et regroupées en quatre moments de validation.
+- Les notions du matériel sont classées selon `À maîtriser`, `Bonne pratique` et `Pour aller plus loin`.
+- Les éléments sémantiques comme `header`, `nav`, `main` et `footer` sont des bonnes pratiques enseignées plutôt que des compétences bloquantes.
+- Flexbox simple remplace l'accent sur `inline-block` comme outil de disposition introductif.
+- `overflow`, le positionnement et les détails avancés de mise en page sont sortis du noyau obligatoire.
 - L'évaluation progressive par compétences devient le modèle privilégié pour obtenir des notes avant l'examen final sans accumuler de grosses corrections simultanées.
 
 ## Décisions / hypothèses en cours
 
+- La pondération HTML/CSS est envisagée autour de 30 %, mais la répartition exacte entre WEB-01 à WEB-08 reste à établir avec la pondération des premières compétences JavaScript.
 - Fusionner les anciens cours 5 (Booléens et conditions) et 6 (Opérateurs logiques) en une seule rencontre est considéré réaliste.
 - Si cette fusion est retenue, `420905_lab5.zip` et `420905_lab6.zip` devront être extraits, comparés et recomposés en un ensemble cohérent d'exercices.
-- Les quatre premières rencontres de la future séquence devraient introduire l'environnement de travail, HTML et CSS avant le JavaScript; la répartition exacte reste à confirmer.
 - Les paramètres de fonctions sont considérés plus importants que l'approfondissement des valeurs de retour.
 - Pour les boucles, `do...while` est un bon candidat à supprimer.
 - Pour les tableaux, `pop()` et `splice()` sont de bons candidats à supprimer si aucun exercice essentiel n'en dépend.
 - Le DOM devrait privilégier l'application/retrait de classes CSS plutôt qu'une longue liste de styles écrits directement en JavaScript.
-- Une petite application locale de suivi des compétences pour l'enseignant est envisagée afin d'enregistrer rapidement les validations en classe.
 
 ## Journal des migrations
 
@@ -119,5 +176,8 @@ Cette section guide les choix de réduction. Les éléments marqués « couper /
 | 2026-08-18 | Rencontre 14 réservée comme buffer / travail / rattrapage | Future rencontre 14 | À déterminer | Décidé |
 | 2026-08-18 | Première priorisation des notions à simplifier ou couper | Cours 4, 6, 11 à 15 principalement | Labos correspondants à vérifier avant suppression | Analyse en cours |
 | 2026-08-18 | Adoption d'une stratégie d'évaluation progressive par compétences | Future séquence complète | Exercices à rattacher aux compétences lors de la migration | Décidé |
-| 2026-08-18 | CSS complexe retiré du noyau évalué | Futures rencontres CSS | Nouveaux exercices HTML/CSS à concevoir | Décidé |
-| 2026-08-18 | Import des sources éditoriales HTML et CSS | `R01-Introduction-HTML-Markdown/`, `R02-Introduction-CSS-Markdown/` | Exercices HTML/CSS à concevoir/rattacher | Sources disponibles; intégration Docusaurus à faire |
+| 2026-08-18 | CSS complexe retiré du noyau évalué | Futures rencontres CSS | Nouveaux exercices HTML/CSS à concevoir/rattacher | Décidé |
+| 2026-08-18 | Import des sources éditoriales HTML et CSS | Sources R01/R02 puis pages `web/docs/01-cours/00-introduction-*` | Exercices HTML/CSS à rattacher | Intégré au site |
+| 2026-08-18 | Séquence HTML/CSS fixée aux rencontres 1–5; JavaScript dès 6 | Documentation HTML/CSS | Mapping d'exercices à compléter | Décidé |
+| 2026-08-18 | Huit compétences HTML/CSS regroupées en quatre moments de validation | `EVALUATION.md`, `COMPETENCES_HTML_CSS.md` | À rattacher | Décidé |
+| 2026-08-18 | Classification `À maîtriser` / `Bonne pratique` / `Pour aller plus loin` adoptée | Documentation HTML/CSS | À appliquer lors de la réorganisation | Décidé |
