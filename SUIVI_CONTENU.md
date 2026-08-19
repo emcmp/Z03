@@ -38,19 +38,49 @@ L'aide-mémoire `web/docs/01-cours/00-rencontre0.0.md` est une ressource de réf
 | 14 | Classes et attributs | Classes, attributs, élément HTML en variable | Labo 14 → `420905_lab14.zip` | Probablement à intégrer au bloc DOM | Extraire le labo 14 et répartir les exercices avec les notions DOM correspondantes. |
 | 15 | Tableaux d'éléments HTML | `querySelectorAll`, collections d'éléments, boucles | Labo 15 → `420905_lab15.zip` | Matière à déplacer plus tôt; rencontre 15 réservée à l'examen | Extraire le labo 15 et rattacher les exercices à la future rencontre DOM + tableaux/boucles. |
 
-## Décisions confirmées
+## Contraintes de calendrier confirmées
 
 - Le cours comporte 15 rencontres.
+- Toute matière essentielle doit être terminée au plus tard à la rencontre 13.
+- La **rencontre 14 est un buffer** : rattrapage, travail sur un TP, pratique, révision ou absorption d'une interruption. Aucune nouvelle notion essentielle ne doit dépendre de cette rencontre.
 - La rencontre 15 est réservée à l'évaluation sommative.
-- Les anciens TP du 905 ont été retirés et ne sont pas des sources à préserver.
 - Le formatif ne nécessite pas forcément une rencontre complète et peut devenir une activité à faire hors classe.
+
+## Priorisation proposée de la matière héritée
+
+Cette section guide les choix de réduction. Les éléments marqués « couper / optionnel » ne sont pas encore supprimés tant que leur migration et leurs exercices n'ont pas été traités.
+
+| Bloc hérité | À garder comme essentiel | À compresser | À couper ou rendre optionnel |
+|---|---|---|---|
+| Variables / chaînes | variables, affectation, nombres, chaînes, opérateurs simples, template strings | opérateurs d'affectation secondaires | détails de priorité des opérateurs au-delà du nécessaire |
+| Conditions | booléens, comparaisons, `if`, `else`, `else if`, `&&`, `||` | exemples complexes d'opérateurs logiques | opérateur `!` et tableau complet de priorité des opérateurs |
+| Fonctions | déclaration, appel, paramètres simples | plusieurs paramètres, `return` présenté brièvement | approfondissement des valeurs de retour, exemples sophistiqués si le temps manque |
+| Portée des variables | comprendre qu'une variable déclarée dans une fonction est locale | mentionner les globales seulement lorsqu'un état doit être partagé | convention systématique du préfixe `g` et théorie détaillée sur les globales |
+| Événements | `click`, `addEventListener`, fonction appelée par un événement | un second événement seulement si utile à un exercice | catalogue `mouseover` / `mouseout` si non requis par un TP |
+| Styles via DOM | modifier une propriété simple; surtout utiliser des classes CSS avec `classList` | quelques propriétés `.style` utiles | mémoriser une longue liste de propriétés CSS en JavaScript |
+| Classes DOM | `classList.add`, `remove`, `toggle` | `contains` | cas avancés non nécessaires |
+| Attributs DOM | lire/modifier un attribut concret lorsque requis (`src`, `alt`, etc.) | présentation courte intégrée au DOM | rencontre complète consacrée aux attributs |
+| Boucles | comprendre la répétition et savoir parcourir une séquence | choisir une forme principale de boucle pour le cours | `do...while`, conditions de boucle complexes, débogueur avancé |
+| Tableaux | création, index, `length`, parcours; `push` si utile | modification simple d'un élément | `pop`, `splice` et opérations de gestion avancées si non nécessaires |
+| Plusieurs éléments DOM | `querySelectorAll` et parcours de plusieurs éléments | intégrer cette notion au bloc tableaux/boucles/DOM | en faire une rencontre complète indépendante |
+| Débogage | lire la console, tester souvent, reconnaître les erreurs courantes | pratiquer le débogage dans tous les cours | consacrer une grosse section autonome au débogueur |
+
+## Décisions confirmées
+
+- Les anciens TP du 905 ont été retirés et ne sont pas des sources à préserver.
 - Toute fusion de contenu doit inclure explicitement la migration des exercices associés.
+- La rencontre 14 doit rester disponible comme buffer et séance de travail/rattrapage.
+- La rencontre 15 est l'évaluation sommative.
 
 ## Décisions / hypothèses en cours
 
 - Fusionner les anciens cours 5 (Booléens et conditions) et 6 (Opérateurs logiques) en une seule rencontre est considéré réaliste.
 - Si cette fusion est retenue, `420905_lab5.zip` et `420905_lab6.zip` devront être extraits, comparés et recomposés en un ensemble cohérent d'exercices.
 - Les quatre premières rencontres de la future séquence devraient introduire l'environnement de travail, HTML et CSS avant le JavaScript; la répartition exacte reste à confirmer.
+- Les paramètres de fonctions sont considérés plus importants que l'approfondissement des valeurs de retour.
+- Pour les boucles, `do...while` est un bon candidat à supprimer.
+- Pour les tableaux, `pop()` et `splice()` sont de bons candidats à supprimer si aucun exercice essentiel n'en dépend.
+- Le DOM devrait privilégier l'application/retrait de classes CSS plutôt qu'une longue liste de styles écrits directement en JavaScript.
 
 ## Journal des migrations
 
@@ -59,3 +89,5 @@ L'aide-mémoire `web/docs/01-cours/00-rencontre0.0.md` est une ressource de réf
 | 2026-08-18 | Création du registre de suivi | Cours 1 à 15 | Labos 2–6 et 11–15 inventoriés | En cours |
 | 2026-08-18 | Sommative fixée à la rencontre 15 | Ancien cours 10 | Aucun labo | Décidé |
 | 2026-08-18 | Fusion booléens + opérateurs logiques envisagée | Anciens cours 5 et 6 | `420905_lab5.zip`, `420905_lab6.zip` | À réaliser lors de la réorganisation |
+| 2026-08-18 | Rencontre 14 réservée comme buffer / travail / rattrapage | Future rencontre 14 | À déterminer | Décidé |
+| 2026-08-18 | Première priorisation des notions à simplifier ou couper | Cours 4, 6, 11 à 15 principalement | Labos correspondants à vérifier avant suppression | Analyse en cours |
