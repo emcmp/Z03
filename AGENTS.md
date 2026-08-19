@@ -8,6 +8,8 @@ Le site actuel provient d'une copie du cours 905. Le 905 suppose déjà des acqu
 
 Lire `REFONTE.md` avant toute tâche qui touche la structure pédagogique, l'ordre des notions, le niveau de difficulté ou le contenu destiné aux étudiants.
 
+Lire et mettre à jour `SUIVI_CONTENU.md` avant toute tâche qui déplace, fusionne, supprime ou renumérote une rencontre. Les laboratoires et fichiers d'exercices associés doivent être migrés avec le contenu de cours.
+
 ## Structure du dépôt
 
 - `web/` : application Docusaurus et véritable racine technique du site.
@@ -16,6 +18,7 @@ Lire `REFONTE.md` avant toute tâche qui touche la structure pédagogique, l'ord
 - `web/src/` : composantes et styles Docusaurus.
 - `.github/workflows/` : déploiement GitHub Pages.
 - `REFONTE.md` : objectifs et décisions de la refonte.
+- `SUIVI_CONTENU.md` : cartographie des rencontres, notions, laboratoires et migrations de contenu.
 
 Les instructions plus spécifiques de `web/AGENTS.md` s'appliquent à tout ce qui se trouve sous `web/`.
 
@@ -43,6 +46,7 @@ Les scripts racine délèguent leurs commandes au projet situé dans `web/`.
 6. Ne pas réécrire l'historique Git et ne pas forcer de push.
 7. Garder les textes destinés aux étudiants en français clair, concret et accessible.
 8. Lorsque plusieurs solutions sont possibles, privilégier la solution la plus simple à expliquer et à maintenir.
+9. Une fusion de rencontres implique aussi l'inventaire et la migration de leurs laboratoires, archives et autres fichiers d'exercices. Ne pas supprimer une source d'exercices avant d'avoir vérifié sa migration et consigné le changement dans `SUIVI_CONTENU.md`.
 
 ## Validation
 
