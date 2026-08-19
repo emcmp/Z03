@@ -18,6 +18,8 @@ Pour chaque fusion ou déplacement :
 
 L'aide-mémoire `web/docs/01-cours/00-rencontre0.0.md` est une ressource de référence et ne compte pas parmi les 15 rencontres.
 
+Consulter également `EVALUATION.md` lorsqu'un changement de contenu modifie une compétence évaluée, son moment de validation ou la portée de l'examen final.
+
 ## Structure actuelle et sources d'exercices
 
 | Cours actuel | Titre / sujet actuel | Notions principales | Exercices / source actuelle | Destination ou décision | Actions de migration |
@@ -46,12 +48,25 @@ L'aide-mémoire `web/docs/01-cours/00-rencontre0.0.md` est une ressource de réf
 - La rencontre 15 est réservée à l'évaluation sommative.
 - Le formatif ne nécessite pas forcément une rencontre complète et peut devenir une activité à faire hors classe.
 
+## Contraintes d'évaluation confirmées
+
+- Une seule évaluation sommative formelle est prévue à la rencontre 15.
+- L'évaluation doit commencer tôt dans la session sous forme de validations progressives de compétences observables.
+- Au moins **15 % de la note doit avoir été évalué au plus tard à la rencontre 6**.
+- Les validations doivent pouvoir être réalisées en classe par petites unités plutôt que dépendre d'une seule remise de gros TP.
+- Les compétences non maîtrisées lors d'une première tentative devraient pouvoir être représentées lorsque la logistique le permet.
+- Les notions déclarées facultatives ou « pour aller plus loin » ne doivent pas faire partie des critères obligatoires ni de l'examen final.
+- Le détail de cette stratégie est maintenu dans `EVALUATION.md`.
+
 ## Priorisation proposée de la matière héritée
 
 Cette section guide les choix de réduction. Les éléments marqués « couper / optionnel » ne sont pas encore supprimés tant que leur migration et leurs exercices n'ont pas été traités.
 
 | Bloc hérité | À garder comme essentiel | À compresser | À couper ou rendre optionnel |
 |---|---|---|---|
+| Environnement de travail | dossiers/fichiers, extensions, OneDrive, ZIP, ouvrir un projet dans VS Code et le navigateur | quelques bonnes pratiques d'organisation | outils avancés de gestion de fichiers non requis |
+| HTML | structure du document, titres/paragraphes/listes, liens, images, attributs utiles, chemins relatifs, navigation | sémantique supplémentaire si utile | éléments HTML rarement utilisés dans les exercices |
+| CSS | liaison de la feuille CSS, sélecteurs/classes, propriétés visuelles de base, `margin`/`padding`, `display` dans des cas simples | dimensions et mise en page légère | détails `inline`/`inline-block`, positionnement, mises en page complexes, Flexbox/Grid avancés, animations |
 | Variables / chaînes | variables, affectation, nombres, chaînes, opérateurs simples, template strings | opérateurs d'affectation secondaires | détails de priorité des opérateurs au-delà du nécessaire |
 | Conditions | booléens, comparaisons, `if`, `else`, `else if`, `&&`, `||` | exemples complexes d'opérateurs logiques | opérateur `!` et tableau complet de priorité des opérateurs |
 | Fonctions | déclaration, appel, paramètres simples | plusieurs paramètres, `return` présenté brièvement | approfondissement des valeurs de retour, exemples sophistiqués si le temps manque |
@@ -71,6 +86,8 @@ Cette section guide les choix de réduction. Les éléments marqués « couper /
 - Toute fusion de contenu doit inclure explicitement la migration des exercices associés.
 - La rencontre 14 doit rester disponible comme buffer et séance de travail/rattrapage.
 - La rencontre 15 est l'évaluation sommative.
+- Le CSS évalué doit rester minimal; les notions de mise en page plus complexes peuvent être conservées comme contenu facultatif clairement identifié.
+- L'évaluation progressive par compétences devient le modèle privilégié pour obtenir des notes avant l'examen final sans accumuler de grosses corrections simultanées.
 
 ## Décisions / hypothèses en cours
 
@@ -81,6 +98,7 @@ Cette section guide les choix de réduction. Les éléments marqués « couper /
 - Pour les boucles, `do...while` est un bon candidat à supprimer.
 - Pour les tableaux, `pop()` et `splice()` sont de bons candidats à supprimer si aucun exercice essentiel n'en dépend.
 - Le DOM devrait privilégier l'application/retrait de classes CSS plutôt qu'une longue liste de styles écrits directement en JavaScript.
+- Une petite application locale de suivi des compétences pour l'enseignant est envisagée afin d'enregistrer rapidement les validations en classe.
 
 ## Journal des migrations
 
@@ -91,3 +109,5 @@ Cette section guide les choix de réduction. Les éléments marqués « couper /
 | 2026-08-18 | Fusion booléens + opérateurs logiques envisagée | Anciens cours 5 et 6 | `420905_lab5.zip`, `420905_lab6.zip` | À réaliser lors de la réorganisation |
 | 2026-08-18 | Rencontre 14 réservée comme buffer / travail / rattrapage | Future rencontre 14 | À déterminer | Décidé |
 | 2026-08-18 | Première priorisation des notions à simplifier ou couper | Cours 4, 6, 11 à 15 principalement | Labos correspondants à vérifier avant suppression | Analyse en cours |
+| 2026-08-18 | Adoption d'une stratégie d'évaluation progressive par compétences | Future séquence complète | Exercices à rattacher aux compétences lors de la migration | Décidé |
+| 2026-08-18 | CSS complexe retiré du noyau évalué | Futures rencontres CSS | Nouveaux exercices HTML/CSS à concevoir | Décidé |
