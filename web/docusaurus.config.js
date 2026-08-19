@@ -147,6 +147,12 @@ const config = {
           {
             type: "docSidebar",
             position: "left",
+            sidebarId: "dansAutobus",
+            label: "Dans l'autobus",
+          },
+          {
+            type: "docSidebar",
+            position: "left",
             sidebarId: "labos",
             label: "Laboratoires",
           },
