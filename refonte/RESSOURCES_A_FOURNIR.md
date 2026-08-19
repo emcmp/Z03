@@ -126,7 +126,7 @@ Les dossiers n'ont pas besoin d'être créés tant qu'ils ne contiennent aucune 
 
 | Ressource | Emplacement prévu | Utilisation | État |
 |---|---|---|---|
-| Image de chat pour l'exercice guidé | `web/static/files/rencontre2/chat.jpg` | Fichier à télécharger pour pratiquer `images/chat.jpg` et `../images/chat.jpg`, sans perdre du temps à chercher une image pendant le cours. | **À intégrer** — le fichier a été ajouté localement par l'enseignant, mais n'est pas encore visible sur `main`. |
+| Image de chat pour l'exercice guidé | `web/static/files/rencontre2/chat.jpg` | Fichier à télécharger pour pratiquer `images/chat.jpg` et `../images/chat.jpg`, sans perdre du temps à chercher une image pendant le cours. | **Prêt** — fichier présent sur `main` et lien direct ajouté à l'exercice guidé. |
 
 ### Contraintes pour `chat.jpg`
 
@@ -136,7 +136,7 @@ Les dossiers n'ont pas besoin d'être créés tant qu'ils ne contiennent aucune 
 - image dont l'utilisation dans le cours est permise;
 - dimensions raisonnables pour éviter un téléchargement inutilement lourd.
 
-Dès que le fichier est visible dans `web/static/files/rencontre2/chat.jpg`, modifier l'exercice guidé de la rencontre 2 afin d'ajouter un encadré **📥 Fichier à télécharger** avec un lien direct vers l'image, puis passer son état à **Prêt**.
+L'exercice guidé de la rencontre 2 contient maintenant un encadré **📥 Fichier à télécharger** avec un lien direct vers `chat.jpg` et l'instruction de le placer dans le dossier `images`.
 
 # Rencontres suivantes
 
