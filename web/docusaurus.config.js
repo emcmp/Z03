@@ -4,7 +4,7 @@ import { themes } from "prism-react-renderer";
 
 const siteConfig = require("./config");
 
-const lightCodeTheme = themes.vsLight;
+const lightCodeTheme = themes.vsDark;
 const darkCodeTheme = themes.vsDark;
 
 const isPersonalPreview = process.env.GITHUB_REPOSITORY === "emcmp/Z03";
