@@ -128,7 +128,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "cours/rencontre1",
+            docId: "cours/rencontre1-environnement",
             position: "left",
             label: "Cours",
           },
