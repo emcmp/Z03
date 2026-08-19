@@ -21,6 +21,7 @@ const refonteDocuments = [
   "REFONTE.md",
   "COMPETENCES_HTML_CSS.md",
   "EVALUATION.md",
+  "MIGRATION_LABORATOIRES_CODEX.md",
   "SUIVI_CONTENU.md",
 ];
 const refonteSourceDirectory = path.resolve(__dirname, "..");
@@ -98,6 +99,7 @@ const config = {
           "REFONTE.md",
           "COMPETENCES_HTML_CSS.md",
           "EVALUATION.md",
+          "MIGRATION_LABORATOIRES_CODEX.md",
           "SUIVI_CONTENU.md",
         ],
         sidebarPath: require.resolve("./sidebars-refonte.js"),
