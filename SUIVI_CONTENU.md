@@ -21,13 +21,14 @@ L'aide-mémoire `web/docs/01-cours/00-rencontre0.0.md` est une ressource de réf
 Consulter également :
 
 - `EVALUATION.md` pour le modèle général de validation;
-- `COMPETENCES_HTML_CSS.md` pour la cartographie détaillée des rencontres 1 à 5, les huit compétences HTML/CSS et les trois niveaux d'attente.
+- `COMPETENCES_HTML_CSS.md` pour la cartographie détaillée des rencontres 1 à 5, les huit compétences HTML/CSS et les trois niveaux d'attente;
+- `RESSOURCES_A_FOURNIR.md` pour les captures d'écran, images et fichiers à préparer avant chaque rencontre.
 
 ## Structure actuelle et sources d'exercices
 
 | Cours actuel | Titre / sujet actuel | Notions principales | Exercices / source actuelle | Destination ou décision | Actions de migration |
 |---|---|---|---|---|---|
-| 1 | Atelier | Environnement technologique | Aucun laboratoire numéroté associé | À réécrire pour Z03 | Intégrer OneDrive, système de fichiers, dossiers, extensions, zipper/dézipper, VS Code et navigateur. |
+| 1 | Atelier / environnement technologique | stockage, système de fichiers, dossiers, extensions, ZIP, outils du cours | Ancien `01-rencontre1.1.md`; PowerPoint historique **Environnement de travail** fourni pendant la refonte; aucun laboratoire numéroté associé | **Intégré comme préambule distinct de la théorie HTML** | Nouveau `01-rencontre1-environnement.md`; OneDrive, arborescence, extensions, ZIP, VS Code et navigateur intégrés. Ancien atelier conservé comme source. Captures modernes et ressources manquantes suivies dans `RESSOURCES_A_FOURNIR.md`. |
 | 2 | Variables et affectation | Variables, affectation, nombres, opérateurs, chaînes, concaténation | Labo 2 → `420905_lab2.docx` | À déplacer dans la future séquence JavaScript | Conserver et réévaluer les exercices lors du déplacement. |
 | 3 | DOM et fonctions | `querySelector`, `textContent`, VS Code, fonctions | Labo 3 → `420905_lab3.zip` | Probablement à éclater entre fonctions et DOM | Extraire le labo 3 et identifier quels exercices relèvent des fonctions et lesquels relèvent du DOM. |
 | 4 | Événements et styles | Variables globales/locales, événements, styles DOM | Labo 4 → `420905_lab4.zip` | À réorganiser dans le bloc DOM / événements | Extraire le labo 4 et répartir les exercices selon la nouvelle progression. |
@@ -47,6 +48,7 @@ Consulter également :
 
 | Source | Contenu principal | Utilisation prévue | État |
 |---|---|---|---|
+| `web/docs/01-cours/01-rencontre1-environnement.md` | stockage, fichiers/dossiers, extensions, ZIP, VS Code, navigateur | Préambule opérationnel de la rencontre 1, séparé de la théorie HTML | **Page canonique créée**; captures modernes à intégrer selon `RESSOURCES_A_FOURNIR.md` |
 | `web/docs/01-cours/00-introduction-html.md` | structure HTML, balises, attributs, titres, paragraphes, listes, images, chemins relatifs, navigation, commentaires, validation W3C | Source principale des rencontres 1 et 2 et des compétences WEB-01 à WEB-04 | Intégrée au site; mapping détaillé dans `COMPETENCES_HTML_CSS.md` |
 | `web/docs/01-cours/00-introduction-css.md` | syntaxe CSS, feuille externe, sélecteurs, classes/id, cascade simple, conteneurs, couleurs, bordures, texte et typographie | Source principale de la rencontre 3 et d'une partie des compétences WEB-05 à WEB-07 | Intégrée au site; mapping détaillé dans `COMPETENCES_HTML_CSS.md` |
 | Future documentation modèle en boîte / disposition | `margin`, `padding`, modèle en boîte, dimensions simples, Flexbox simple | Rencontres 4 et 5; compétences WEB-07 et WEB-08 | À identifier / réorganiser à partir du matériel existant |
@@ -57,7 +59,7 @@ Les anciennes sources de migration `R01-Introduction-HTML-Markdown/` et `R02-Int
 
 | Rencontre | Noyau de matière | Validation |
 |---|---|---|
-| **1** | environnement de travail, fichiers/dossiers, VS Code, navigateur, première page, structure et contenu HTML de base | aucune sommative prévue |
+| **1** | préambule environnement de travail, fichiers/dossiers, VS Code, navigateur; puis première page, structure et contenu HTML de base | aucune sommative prévue |
 | **2** | organisation du projet, images, chemins relatifs, pages multiples, liens et navigation | Validation A — WEB-01/02; Validation B — WEB-03/04 selon l'avancement |
 | **3** | syntaxe CSS, feuille externe, chemins CSS, sélecteurs, classes, propriétés visuelles | début Validation C — WEB-05/06 |
 | **4** | consolidation CSS, bordures, dimensions simples, `margin`, `padding`, modèle en boîte | Validation C; début Validation D — WEB-07/08 |
@@ -155,6 +157,8 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 - Flexbox simple remplace l'accent sur `inline-block` comme outil de disposition introductif.
 - `overflow`, le positionnement et les détails avancés de mise en page sont sortis du noyau obligatoire.
 - L'évaluation progressive par compétences devient le modèle privilégié pour obtenir des notes avant l'examen final sans accumuler de grosses corrections simultanées.
+- L'environnement de travail de la rencontre 1 est séparé de la théorie HTML dans un préambule distinct.
+- Toute ressource à fournir aux étudiants doit être inscrite dans `RESSOURCES_A_FOURNIR.md` avant qu'une page en dépende.
 
 ## Décisions / hypothèses en cours
 
@@ -181,3 +185,4 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 | 2026-08-18 | Séquence HTML/CSS fixée aux rencontres 1–5; JavaScript dès 6 | Documentation HTML/CSS | Mapping d'exercices à compléter | Décidé |
 | 2026-08-18 | Huit compétences HTML/CSS regroupées en quatre moments de validation | `EVALUATION.md`, `COMPETENCES_HTML_CSS.md` | À rattacher | Décidé |
 | 2026-08-18 | Classification `À maîtriser` / `Bonne pratique` / `Pour aller plus loin` adoptée | Documentation HTML/CSS | À appliquer lors de la réorganisation | Décidé |
+| 2026-08-19 | Préambule Environnement séparé du cours HTML et suivi des ressources créé | Ancien Atelier, PowerPoint Environnement de travail, rencontre 1 actuelle | Captures Windows/VS Code à fournir; `chat.jpg` de la rencontre 2 ajouté au suivi | En cours |
