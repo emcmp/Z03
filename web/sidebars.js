@@ -2,6 +2,18 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
+  bienDebuter: [
+    {
+      type: "doc",
+      id: "fonctionnement-du-cours",
+      label: "Fonctionnement du cours",
+    },
+    {
+      type: "doc",
+      id: "acces-poste-compte-reseau",
+      label: "Accès au poste et compte réseau",
+    },
+  ],
   docs: [
     {
       type: "category",
