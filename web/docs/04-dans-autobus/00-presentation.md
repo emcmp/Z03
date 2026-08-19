@@ -19,4 +19,10 @@ Avant de commencer à écrire du HTML ou du CSS, cette capsule montre les quelqu
 
 La capsule comprend déjà une présentation offerte en **PDF** et en **PowerPoint**. La vidéo sera ajoutée lorsqu'elle sera prête.
 
+### [Capsule 02 — Pourquoi une feuille CSS externe?](./02-feuille-css-externe.md)
+
+Cette capsule montre pourquoi plusieurs pages HTML gagnent à partager une même feuille `styles.css`. Elle met l'accent sur la séparation entre structure et présentation, la réutilisation des styles et l'avantage de pouvoir modifier l'apparence commune du site à un seul endroit.
+
+La présentation est offerte en **PDF** et en **PowerPoint**. La vidéo sera ajoutée lorsqu'elle sera prête.
+
 D'autres capsules courtes viendront ensuite accompagner les notions HTML, CSS et JavaScript du cours.
