@@ -30,6 +30,11 @@ const sidebars = {
     },
     {
       type: "doc",
+      id: "RESSOURCES_A_FOURNIR",
+      label: "Ressources à fournir",
+    },
+    {
+      type: "doc",
       id: "SUIVI_CONTENU",
       label: "Suivi du contenu",
     },
