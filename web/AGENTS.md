@@ -79,7 +79,8 @@ Lire **`../RESSOURCES_A_FOURNIR.md`** lorsqu'une rencontre nécessite une captur
 Convention :
 
 - captures et illustrations de la documentation : `static/img/rencontreN/`;
-- fichiers à télécharger ou manipuler : `static/files/rencontreN/`.
+- fichiers à télécharger ou manipuler : `static/files/rencontreN/`;
+- pour une nouvelle image préparée spécialement pour un exercice, privilégier **PNG** par défaut, sauf raison claire d'utiliser un autre format.
 
 Si une nouvelle page suppose une ressource qui n'existe pas encore :
 
@@ -89,7 +90,23 @@ Si une nouvelle page suppose une ressource qui n'existe pas encore :
 4. ne pas créer de lien étudiant vers une ressource absente;
 5. intégrer le fichier et mettre le suivi à jour lorsqu'il est fourni.
 
-Ne jamais laisser une consigne vague du type **« utilisez le fichier fourni par l'enseignant »** sans entrée correspondante dans le suivi des ressources.
+Lorsqu'un fichier doit être téléchargé par l'étudiant, le rendre immédiatement reconnaissable dans la page avec un encadré Docusaurus intitulé **`📥 Fichier à télécharger`**. Cet encadré doit contenir :
+
+- un lien direct vers le fichier;
+- son nom exact;
+- une courte indication sur l'endroit où l'enregistrer ou le placer lorsque cela compte pour l'exercice.
+
+Pour un fichier dans `static/files/rencontreN/`, utiliser une référence compatible avec le `baseUrl`, par exemple :
+
+```md
+:::info 📥 Fichier à télécharger
+**[Télécharger `nom-du-fichier.png`](pathname:///files/rencontreN/nom-du-fichier.png)**
+
+Enregistrez le fichier à l'endroit indiqué dans l'exercice.
+:::
+```
+
+Ne jamais laisser une consigne vague du type **« utilisez le fichier fourni par l'enseignant »** sans entrée correspondante dans le suivi des ressources et, une fois le fichier disponible, sans lien direct dans la page étudiante.
 
 ## Configuration
 
