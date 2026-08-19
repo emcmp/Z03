@@ -1,6 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 import { themes } from "prism-react-renderer";
+import fs from "node:fs";
+import path from "node:path";
 
 const siteConfig = require("./config");
 
@@ -11,6 +13,32 @@ const isPersonalPreview = process.env.GITHUB_REPOSITORY === "emcmp/Z03";
 const repositoryOwner = isPersonalPreview ? "emcmp" : "departement-info-cem";
 const repositoryName = isPersonalPreview ? "Z03" : siteConfig.nomUrl;
 const repositoryUrl = `https://github.com/${repositoryOwner}/${repositoryName}`;
+
+// Les documents de refonte vivent à la racine du dépôt. Docusaurus ne doit
+// toutefois pas utiliser cette racine comme dossier de contenu, puisqu'elle
+// englobe aussi web/docs et ferait compiler chaque page MDX deux fois.
+const refonteDocuments = [
+  "REFONTE.md",
+  "COMPETENCES_HTML_CSS.md",
+  "EVALUATION.md",
+  "SUIVI_CONTENU.md",
+];
+const refonteSourceDirectory = path.resolve(__dirname, "..");
+const refonteContentDirectory = path.resolve(__dirname, ".refonte-docs");
+
+fs.mkdirSync(refonteContentDirectory, { recursive: true });
+for (const document of refonteDocuments) {
+  const source = path.join(refonteSourceDirectory, document);
+  const destination = path.join(refonteContentDirectory, document);
+  const sourceContent = fs.readFileSync(source);
+  const destinationContent = fs.existsSync(destination)
+    ? fs.readFileSync(destination)
+    : null;
+
+  if (!destinationContent || !sourceContent.equals(destinationContent)) {
+    fs.writeFileSync(destination, sourceContent);
+  }
+}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -64,7 +92,7 @@ const config = {
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
         id: "refonte",
-        path: "..",
+        path: ".refonte-docs",
         routeBasePath: "refonte",
         include: [
           "REFONTE.md",
