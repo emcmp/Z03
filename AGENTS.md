@@ -12,6 +12,20 @@ Lire et mettre à jour `refonte/SUIVI_CONTENU.md` avant toute tâche qui déplac
 
 Lire `refonte/EVALUATION.md` avant toute tâche qui ajoute, retire ou modifie une compétence évaluée, sa pondération, son moment de validation ou la portée de l'évaluation sommative finale.
 
+## Planification et reprise du travail
+
+Pour toute refonte pédagogique importante, toute séquence qui touche plusieurs pages ou tout chantier qui risque de s'étendre sur plusieurs sessions :
+
+1. **documenter un plan d'implémentation avant de commencer les modifications**;
+2. découper le travail en tâches avec états explicites (`À faire`, `En cours`, `Bloqué`, `Délégué à Codex`, `Prêt à réviser`, `Terminé`);
+3. noter les dépendances, les fichiers visés et la définition de « terminé »;
+4. mettre le plan à jour après chaque lot cohérent de changements afin qu'un autre agent puisse reprendre sans reconstruire le contexte;
+5. lorsqu'une tâche est déléguée à Codex, documenter un prompt borné et éviter qu'un autre agent refasse la même tâche en parallèle.
+
+Pour la finalisation actuelle du bloc HTML/CSS des rencontres 1 à 5, lire **`refonte/PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`** avant toute implémentation ou vérification associée à ces rencontres.
+
+Le GPT-concepteur demeure responsable des décisions pédagogiques. Codex doit surtout recevoir des tâches techniques, mécaniques ou de vérification dont la portée est explicitement définie dans la documentation.
+
 ## Structure du dépôt
 
 - `AGENTS.md` : consignes générales pour les agents et Codex à l'échelle du dépôt.
