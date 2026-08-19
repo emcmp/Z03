@@ -72,6 +72,25 @@ Pour les exemples de code :
 - ne pas modifier `build/` directement : il est généré;
 - ne pas modifier `node_modules/`.
 
+### Ressources pédagogiques à préparer
+
+Lire **`../RESSOURCES_A_FOURNIR.md`** lorsqu'une rencontre nécessite une capture d'écran, une image, un ZIP, un fichier de départ ou toute autre ressource que l'étudiant doit voir ou télécharger.
+
+Convention :
+
+- captures et illustrations de la documentation : `static/img/rencontreN/`;
+- fichiers à télécharger ou manipuler : `static/files/rencontreN/`.
+
+Si une nouvelle page suppose une ressource qui n'existe pas encore :
+
+1. inscrire immédiatement la ressource dans `RESSOURCES_A_FOURNIR.md`;
+2. définir son nom de fichier et son emplacement prévus;
+3. décrire exactement ce qu'elle doit contenir ou montrer;
+4. ne pas créer de lien étudiant vers une ressource absente;
+5. intégrer le fichier et mettre le suivi à jour lorsqu'il est fourni.
+
+Ne jamais laisser une consigne vague du type **« utilisez le fichier fourni par l'enseignant »** sans entrée correspondante dans le suivi des ressources.
+
 ## Configuration
 
 Les éléments suivants doivent rester portables entre le dépôt personnel et le dépôt officiel :
