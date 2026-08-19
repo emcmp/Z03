@@ -133,6 +133,12 @@ const config = {
           {
             type: "docSidebar",
             position: "left",
+            sidebarId: "projetWeb",
+            label: "Projet Web",
+          },
+          {
+            type: "docSidebar",
+            position: "left",
             sidebarId: "labos",
             label: "Laboratoires",
           },
