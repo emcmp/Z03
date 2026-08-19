@@ -128,6 +128,12 @@ const config = {
         items: [
           {
             type: "doc",
+            docId: "fonctionnement-du-cours",
+            position: "left",
+            label: "Fonctionnement",
+          },
+          {
+            type: "doc",
             docId: "cours/rencontre1-environnement",
             position: "left",
             label: "Cours",
