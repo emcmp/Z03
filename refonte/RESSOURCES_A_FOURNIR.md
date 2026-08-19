@@ -90,6 +90,7 @@ Les dossiers n'ont pas besoin d'être créés tant qu'ils ne contiennent aucune 
 - **À produire** : la ressource est définie, mais elle doit être créée ou capturée.
 - **À fournir** : la ressource doit être fournie par l'enseignant.
 - **À intégrer** : le fichier existe, mais il n'est pas encore placé ou référencé dans le site.
+- **Provisoire intégré** : une ressource existante est déjà utilisée dans le cours, mais pourra être remplacée plus tard par une version plus récente sans changer la structure de la page.
 - **Prêt** : le fichier est dans le dépôt et la page qui l'utilise est prête.
 - **Non retenu** : la ressource a été examinée et ne sera pas utilisée.
 
@@ -101,16 +102,21 @@ Les dossiers n'ont pas besoin d'être créés tant qu'ils ne contiennent aucune 
 |---|---|---|
 | Ancien PowerPoint **Environnement de travail** (12 diapositives) | Arborescence, création de dossiers, extensions, affichage des extensions, compression/décompression ZIP | **Source reçue**. Le contenu a alimenté le nouveau préambule. Plusieurs captures montrent un ancien Windows et 7-Zip : les utiliser comme référence, mais privilégier des captures actuelles. |
 | `web/docs/01-cours/01-rencontre1.1.md` — ancien **Cours 1 - Atelier** | Connexion aux postes, 2FA, Teams, stockage infonuagique, ancien autodiagnostic | **Source historique conservée**. Les éléments durables sur le stockage ont été repris; Teams et l'autodiagnostic doivent être confirmés avant réintégration. |
+| `web/static/img/atelier/VSCODE/` — quatre captures VS Code | Ouverture d'un dossier depuis Windows, démarrage de VS Code et résultat après ouverture du projet | **Réutilisées** dans le préambule. Les fichiers originaux sont conservés et des copies aux noms stables sont placées dans `web/static/img/rencontre1/`. |
 | `web/static/img/atelier/leaEtudiant.png` | Ancienne capture associée à l'atelier | **À décider**. Ne pas l'utiliser automatiquement tant que son rôle dans la nouvelle rencontre n'est pas confirmé. |
 
-## Captures à produire
+## Captures de la rencontre 1
 
-| Ressource | Emplacement prévu | Ce que la capture doit montrer | État |
+| Ressource | Emplacement | Utilisation | État |
 |---|---|---|---|
-| Afficher les extensions dans Windows | `web/static/img/rencontre1/windows-afficher-extensions.png` | Explorateur Windows actuel avec l'option **Extensions de noms de fichiers** clairement visible; aucune donnée personnelle. | **À fournir** |
-| Extraire une archive ZIP | `web/static/img/rencontre1/windows-extraire-zip.png` | Interface Windows actuelle montrant clairement l'action **Extraire tout** ou son équivalent; éviter de dépendre de 7-Zip si ce n'est pas requis au cégep. | **À fournir** |
-| Ouvrir un dossier dans VS Code | `web/static/img/rencontre1/vscode-ouvrir-dossier.png` | VS Code actuel avec **Fichier → Ouvrir le dossier** visible; aucune information personnelle. | **À fournir** |
-| Explorateur VS Code d'un petit projet | `web/static/img/rencontre1/vscode-explorateur-projet.png` | VS Code avec un dossier `mon-site` ouvert et `index.html` visible dans l'Explorateur de gauche. | **À fournir** |
+| Afficher les extensions dans Windows | `web/static/img/rencontre1/windows-afficher-extensions.png` | Montrer l'option **Extensions de noms de fichiers** dans un Explorateur Windows actuel. | **À fournir** |
+| Extraire une archive ZIP | `web/static/img/rencontre1/windows-extraire-zip.png` | Montrer clairement l'action **Extraire tout** ou son équivalent. | **À fournir** |
+| Clic droit sur le dossier du projet | `web/static/img/rencontre1/vscode-clic-droit-dossier.png` | Montrer l'ouverture du dossier avec VS Code directement depuis l'Explorateur Windows. | **Provisoire intégré** — repris de `web/static/img/atelier/VSCODE/VsCode-right-click-open.png`; remplacement moderne facultatif. |
+| Clic droit depuis l'intérieur du dossier | `web/static/img/rencontre1/vscode-clic-droit-dans-dossier.png` | Montrer une deuxième façon de lancer VS Code lorsque le dossier est déjà ouvert dans Windows. | **Provisoire intégré** — repris de `web/static/img/atelier/VSCODE/VsCode-inside-folder-right-click-open.png`; remplacement moderne facultatif. |
+| Démarrage de VS Code | `web/static/img/rencontre1/vscode-demarrage.png` | Montrer la fenêtre de VS Code au démarrage avant l'ouverture du projet. | **Provisoire intégré** — repris de `web/static/img/atelier/VSCODE/vsCode-opened.png`; remplacement moderne facultatif. |
+| Dossier ouvert dans VS Code | `web/static/img/rencontre1/vscode-dossier-ouvert.png` | Montrer le projet après son ouverture et aider à repérer l'Explorateur de VS Code. | **Provisoire intégré** — repris de `web/static/img/atelier/VSCODE/vsCode-opened2.png`; remplacement moderne facultatif. |
+
+Les quatre captures VS Code sont maintenant **suffisantes pour enseigner la procédure**. Une future mise à jour visuelle peut simplement remplacer les fichiers de `web/static/img/rencontre1/` en conservant les mêmes noms.
 
 ## Décisions à confirmer
 

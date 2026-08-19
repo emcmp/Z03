@@ -170,7 +170,27 @@ Le principe le plus important est le suivant :
 Votre projet existe dans un vrai dossier de Windows ou de OneDrive. VS Code vous permet simplement **d'ouvrir ce dossier et de modifier les fichiers qui s'y trouvent**.
 :::
 
-### Ouvrir le dossier complet
+Les captures ci-dessous peuvent différer légèrement de votre version de Windows ou de VS Code. Ce qui compte est de reconnaître **le dossier du projet** et l'action qui permet de l'ouvrir dans VS Code.
+
+### Méthode 1 — Ouvrir le dossier depuis Windows
+
+La façon la plus directe est de repérer le dossier du projet dans l'Explorateur de fichiers de Windows, puis de faire un **clic droit sur le dossier** et de choisir la commande qui l'ouvre avec VS Code.
+
+![Ouvrir un dossier avec VS Code à partir du menu contextuel de Windows](../../static/img/rencontre1/vscode-clic-droit-dossier.png)
+
+Si vous êtes déjà **à l'intérieur du dossier**, vous pouvez aussi utiliser le clic droit dans le dossier et choisir l'ouverture avec VS Code.
+
+![Ouvrir VS Code depuis l'intérieur d'un dossier](../../static/img/rencontre1/vscode-clic-droit-dans-dossier.png)
+
+:::tip Le bon réflexe
+Ouvrez le **dossier du projet**, pas seulement un fichier comme `index.html`. Cela permet à VS Code de voir toute l'arborescence du site : pages, images, feuilles CSS et fichiers JavaScript.
+:::
+
+### Méthode 2 — Ouvrir le dossier depuis VS Code
+
+Vous pouvez aussi démarrer VS Code normalement.
+
+![Fenêtre de VS Code après le démarrage](../../static/img/rencontre1/vscode-demarrage.png)
 
 Dans VS Code :
 
@@ -178,7 +198,11 @@ Dans VS Code :
 2. sélectionnez le dossier sur lequel vous voulez travailler;
 3. vérifiez que son contenu apparaît dans l'**Explorateur** à gauche de la fenêtre.
 
-Par exemple, si vous ouvrez `mon-site`, l'Explorateur pourrait afficher :
+Une fois le dossier ouvert, vous devez pouvoir reconnaître le nom du projet et ses fichiers dans l'Explorateur de VS Code.
+
+![Projet ouvert dans l'Explorateur de VS Code](../../static/img/rencontre1/vscode-dossier-ouvert.png)
+
+Par exemple, pour un petit projet nommé `mon-site`, on pourrait avoir :
 
 ```text
 MON-SITE
@@ -192,7 +216,7 @@ Lorsque vous créez un fichier dans l'Explorateur de VS Code, ce fichier est ré
 Si vous créez `index.html`, vous devriez donc aussi pouvoir le retrouver avec l'Explorateur de fichiers de Windows.
 
 :::tip Bonne pratique
-Ouvrez toujours le **dossier du projet** dans VS Code plutôt qu'un fichier isolé. Dès qu'un projet contient plusieurs pages, images ou feuilles de styles, vous devez voir l'ensemble de son arborescence.
+Avant de commencer à coder, regardez toujours le nom du dossier affiché dans l'Explorateur de VS Code. Vous saurez ainsi immédiatement **dans quel projet** vous êtes en train de travailler.
 :::
 
 ## 7. VS Code et le navigateur ont deux rôles différents
@@ -225,8 +249,8 @@ Vérifiez que vous pouvez faire chacune de ces actions :
 - [ ] voir les extensions de fichiers dans Windows;
 - [ ] reconnaître un fichier `.html`, `.jpg`, `.zip` ou `.txt`;
 - [ ] extraire une archive ZIP avant d'utiliser son contenu;
-- [ ] ouvrir un dossier complet dans VS Code;
-- [ ] repérer ce dossier dans l'Explorateur de VS Code;
+- [ ] ouvrir un dossier complet dans VS Code depuis Windows ou depuis VS Code;
+- [ ] repérer le nom du projet dans l'Explorateur de VS Code;
 - [ ] créer et enregistrer un fichier;
 - [ ] retrouver le même fichier dans Windows;
 - [ ] ouvrir une page HTML dans un navigateur et l'actualiser.
