@@ -20,6 +20,11 @@ const sidebars = {
     },
     {
       type: "doc",
+      id: "MIGRATION_LABORATOIRES_CODEX",
+      label: "Migration des laboratoires",
+    },
+    {
+      type: "doc",
       id: "SUIVI_CONTENU",
       label: "Suivi du contenu",
     },
