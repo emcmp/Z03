@@ -1,0 +1,1142 @@
+===== DIAPOSITIVE 1 =====
+Modèle en boîtes 
+et positionnement
+Rencontre #3
+[Médias : image15.png]
+
+===== DIAPOSITIVE 2 =====
+Menu du jour
+Les boîtes
+Modèle de boîtes CSS
+Types 
+de boîtes
+Le positionnement
+Static / Relative
+Absolute / Fixed
+Quelques nouvelles règles CSS
+Interlude sur les pseudo-classes et sélecteurs complexes
+Quelques nouvelles règles CSS
+Priorité en CSS 
+(╯°□°）╯︵ ┻━┻
+Pseudo-éléments
+Attributs
+[Médias : image16.png]
+
+===== DIAPOSITIVE 3 =====
+Les boîtes
+Des boîtes ? Où ça ?
+En mettant une couleur de fond aux éléments, on voit la « 
+boîte
+ » dans laquelle ils se trouvent.
+Notons que la boîte du 
+div
+ est partiellement cachée par le 
+h2
+ et les 
+p
+.
+[Médias : image17.png, image18.png]
+
+===== DIAPOSITIVE 4 =====
+Modèle de boîtes
+Voici le modèle de boîte 
+CSS
+ :
+Margin
+, 
+Border
+, 
+Padding
+, 
+Height
+ et 
+Width
+ sont des propriétés qui peuvent être manipulées pour toutes* les boîtes.
+*Presque toutes
+[Médias : image19.png]
+
+===== DIAPOSITIVE 5 =====
+Modèle de boîtes
+Testons toutes ces propriétés !
+Voici notre 
+page de base
+. Les boîtes prennent toute la 
+largeur
+
+de la page et ne prennent que la 
+hauteur
+ nécessaire pour afficher leur 
+contenu
+. (Du texte)
+[Médias : image20.png, image21.png, image22.png]
+
+===== DIAPOSITIVE 6 =====
+Modèle de boîtes
+
+Width
+ et 
+Height
+ :
+Peuvent 
+entre autre 
+être définies en 
+pourcentage
+ (%) et en 
+pixels
+. (px)
+Si on utilise un pourcentage 
+n
+, la boîte prendra 
+n%
+ de la largeur de la boîte 
+parent
+ !
+[Médias : image23.png, image24.png]
+
+===== DIAPOSITIVE 7 =====
+Modèle de boîtes
+
+Border
+ :
+On doit préciser … son 
+style
+, sa 
+couleur
+ et sa 
+largeur
+.
+On peut également le faire avec une seule règle 
+combinée
+ :
+border-style
+ :
+• none
+• dotted
+• dashed
+• solid
+• double
+• …
+border-color
+ :
+• blue
+• #54b22a
+• rgba(4, 142, 331, 0.6)
+• …
+border-width
+ :
+• 5px
+• 1em
+• thick
+• thin
+• …
+border
+: solid blue 5px; 
+
+===== DIAPOSITIVE 8 =====
+Modèle de boîtes
+
+Border
+ : 
+On remarque qu’il ne reste plus d’espace entre les deux boîtes …
+[Médias : image25.png, image26.png]
+
+===== DIAPOSITIVE 9 =====
+Modèle de boîtes
+
+Border
+ : 
+On peut préciser les 
+styles
+ / 
+couleurs
+ / 
+largeurs
+ de bordure pour chacun des 4 côtés !
+On peut préciser les 
+styles
+ / 
+couleurs
+ / 
+largeurs
+ des 4 côtés en même temps : 
+border-top-style 
+: solid;
+border-bottom-style 
+: dotted;
+border-left-style 
+: solid;
+border-right-style 
+: dashed;
+border-width
+:10px 5px 2px 20px;
+border-color 
+: blue;
+border-top-color 
+: red;
+L’ordre est 
+: Haut Droite Bas Gauche
+[Médias : image27.png, image28.png, image29.png]
+
+===== DIAPOSITIVE 10 =====
+Modèle de boîtes
+
+Margin
+ :
+Permet de créer des 
+marges externes 
+au-delà des bordures :
+La largeur peut être en 
+pixels
+, 
+em
+, etc.
+• La distance entre les boîtes est de 
+40
+ pixels. C’est-à-dire 
+10
+ + 
+30
+ en raison des marges des 2 boîtes.
+• La première boîte a des marges de tous les côtés, alors que la deuxième n’en a qu’une au-dessus.
+[Médias : image30.png, image31.png]
+
+===== DIAPOSITIVE 11 =====
+Modèle de boîtes
+
+Margin
+ :
+Permet de créer des 
+marges externes 
+au-delà des bordures :
+Encore une fois, on peut préciser la largeur de chaque côté :
+Qui est l’équivalent de …
+L’ordre est 
+: Haut Droite Bas Gauche
+On peut choisir une marge identique pour les 4 côtés :
+[Médias : image29.png, image32.png, image33.png]
+
+===== DIAPOSITIVE 12 =====
+Modèle de boîtes
+
+Padding
+ :
+Permet de créer des 
+marges internes
+ pour espacer le 
+contenu
+ des 
+bordures
+.
+La largeur peut être en pixels, em, etc.
+• Dans la première boîte, on a un padding de 30 pixels de 
+chaque côté
+.
+• Dans la deuxième boîte, on a 30 pixels en 
+haut
+, 0 à 
+gauche
+ et à 
+droite
+, 10 pixels en 
+bas
+.
+• Les règles 
+padding-top
+,
+padding-left
+, 
+padding-right
+ et 
+padding-bottom
+ existent également.
+L’ordre est 
+: Haut Droite Bas Gauche
+[Médias : image29.png, image34.png, image35.png]
+
+===== DIAPOSITIVE 13 =====
+Modèle de boîtes
+Voici le modèle de boîte 
+CSS
+ :
+Attention ! 
+La largeur totale 
+occupée
+ par une boîte correspond à …
+width + padding-left + padding-right + border-left + border-right + margin-left + margin-right
+[Médias : image19.png]
+
+===== DIAPOSITIVE 14 =====
+Modèle de boîtes
+Quelle est la 
+hauteur
+ occupée par la boîte ?! (Aucun 
+margin
+)
+L’ordre est 
+: Haut Droite Bas Gauche
+[Médias : image29.png, image36.png, image37.png]
+
+===== DIAPOSITIVE 15 =====
+Modèle de boîtes
+Quelle est la 
+hauteur
+ occupée par la boîte ?! (Aucun 
+margin
+)
+→
+
+200
+ + 
+30
+ * 
+2
+ + 
+10
+ + 
+20
+ = 
+290
+ pixels
+L’ordre est 
+: Haut Droite Bas Gauche
+x 2 côtés
+[Médias : image29.png, image36.png, image37.png]
+
+===== DIAPOSITIVE 16 =====
+Types de boîtes
+Il y a plusieurs types de boîtes…
+Inline
+Block
+Inline-block
+None
+…
+En HTML / CSS, chaque élément correspond à un 
+type de boîte 
+précis
+.
+[Médias : image38.jpg, image39.png]
+
+===== DIAPOSITIVE 17 =====
+Types de boîtes
+
+Inline
+Éléments « Inline » par défaut : 
+span
+, 
+a
+, 
+img
+, 
+strong
+, 
+em
+, etc.
+Ils ne génèrent pas de 
+sauts de ligne
+S’il y a suffisamment d’espace, ils resteront sur la même ligne que l’élément précédent.
+On 
+ne peut pas 
+spécifier leur 
+width
+ et leur 
+height
+ : ils prennent uniquement l’espace nécessaire. (On 
+peut
+, mais ça ne fera rien)
+Ci-dessous, l’exemple de 
+<span>
+La règle 
+height
+ n’a pas d’effets …
+[Médias : image40.png, image41.png, image42.png]
+
+===== DIAPOSITIVE 18 =====
+Types de boîtes
+
+Block
+Éléments « Block » par défaut : 
+div
+, 
+h1-h6
+, 
+p
+, 
+header
+, 
+main
+, 
+footer
+, etc.
+Ils génèrent un 
+saut de ligne 
+et seront 
+seuls
+ sur leur ligne.
+On 
+peut 
+spécifier leur 
+width
+ et leur 
+height
+ : ils prennent l’espace alloué.
+Si on ne spécifie pas de taille : Ils prennent toute la 
+largeur
+ disponible, mais seulement la 
+hauteur
+ nécessaire.
+Ici, on a l’exemple de 
+<p>
+[Médias : image43.png, image44.png, image45.png]
+
+===== DIAPOSITIVE 19 =====
+Types de boîtes
+
+Inline-Block
+Éléments « Inline-Block » par défaut : 
+Aucun…
+Ils ne génèrent pas de 
+sauts de ligne
+S’il y a suffisamment d’espace, ils resteront sur la même ligne que l’élément précédent.
+On 
+peut 
+spécifier leur 
+width
+ et leur 
+height
+ : ils prennent l’espace alloué.
+Si on ne spécifie pas de taille : Ils prennent que la 
+largeur
+ nécessaire et seulement la 
+hauteur
+ nécessaire.
+[Médias : image46.png, image47.png, image48.png]
+
+===== DIAPOSITIVE 20 =====
+Types de boîtes
+
+None
+Éléments « None » par défaut : 
+Aucun…
+Ils ne sont pas affichés.
+[Médias : image49.png, image50.png, image51.png]
+
+===== DIAPOSITIVE 21 =====
+Types de boîtes
+
+Propriété
+ display
+Permet de changer le type de boîte d’un élément.
+Options
+ : block, inline, inline-block, none, etc.
+Ici, le 
+span
+, qui est 
+inline
+ par défaut, est plutôt devenu 
+block
+.
+[Médias : image52.png, image53.png, image54.png]
+
+===== DIAPOSITIVE 22 =====
+Types de boîtes
+Comment rendre ce menu de navigation horizontal avec CSS ?
+??
+[Médias : image55.png, image56.png, image57.png, image58.png]
+
+===== DIAPOSITIVE 23 =====
+Types de boîtes
+Comment rendre ce menu de navigation horizontal avec CSS ?
+Option 1
+ : inline-block
+Option 2
+ : inline
+[Médias : image58.png, image59.png, image60.png, image61.png]
+
+===== DIAPOSITIVE 24 =====
+Types de boîtes
+Propriété 
+overflow
+ :
+Quand ça ne rentre
+pas… qu’est-ce qu’on
+fait ?
+
+scroll
+ :
+Met 2 barres de défilement DANS la boîte.
+
+hidden
+ :
+Cache le texte qui dépasse.
+
+auto
+ :
+Met 1 ou 2 barres de défilement lorsque nécessaire.
+
+visible
+ : (défaut)
+Ça DÉBORDE !
+[Médias : image62.png, image63.png]
+
+===== DIAPOSITIVE 25 =====
+Types de boîtes
+Propriété 
+overflow
+ :
+Les propriétés 
+overflow-x
+ et 
+overflow-y
+ existent également et peuvent avoir les mêmes valeurs. (
+scroll
+, 
+hidden
+, 
+auto
+, 
+visible
+) Cela dit, elles permettent de décrire le comportement séparément pour le contenu qui déborde 
+horizontalement
+ (x) et 
+verticalement
+. (y)
+
+===== DIAPOSITIVE 26 =====
+Le positionnement
+Pour le moment… les éléments 
+se positionnent 
+en suivant le flot du code HTML.
+Et quand un élément est 
+inline
+ / 
+inline
+-block
+, il se mettra sur la même ligne que l’élément précédent si c’est possible.
+[Médias : image64.png, image65.png, image66.png]
+
+===== DIAPOSITIVE 27 =====
+Le positionnement
+Propriété 
+position
+Plusieurs valeurs sont possibles :
+static
+relative
+fixed
+absolute
+…
+Propriété 
+z-index
+Pour déterminer la priorité d’affichage / la profondeur si des éléments partagent le même espace.
+
+===== DIAPOSITIVE 28 =====
+Le positionnement
+ position : 
+static
+Par défaut
+. Les éléments se positionnent en suivant le flot normal de la page.
+Ici, on observe rien de particulier pour le positionnement
+de la boîte rose, qui est « static ». (Comme c’est la valeur
+par défaut… spécifier la règle est inutile)
+[Médias : image67.png, image68.png]
+
+===== DIAPOSITIVE 29 =====
+Le positionnement
+ position : 
+relative
+L’élément est à sa position normale dans le flot de la page… mais on peut désormais lui appliquer les propriétés 
+left
+, 
+right
+, 
+top 
+et / ou 
+bottom
+ pour le déplacer à partir de cette position normale.
+On remarque que le carré rose a été déplacé à 
+20 pixels
+ du 
+haut
+ et de la 
+gauche
+ de sa position normale.
+Les éléments suivants dans le flot normal ne tenteront pas de prendre la place laissée par l’élément « 
+relative
+ ».
+[Médias : image69.png, image70.png, image71.png]
+
+===== DIAPOSITIVE 30 =====
+Le positionnement
+ position : 
+fixed
+L’élément quitte le flot normal de la page. Il est toujours situé au même endroit dans le 
+viewport
+, 
+même si on défile la page
+. Par défaut, il sera dans le coin supérieur gauche. On peut le déplacer avec les règles 
+top
+, 
+left
+, 
+right
+ et / ou 
+bottom
+.
+Comme le carré rose ne fait pas partie du flot normal, les autres éléments peuvent « prendre » sa place en haut à gauche.
+[Médias : image72.png, image73.png, image74.png]
+
+===== DIAPOSITIVE 31 =====
+Le positionnement
+ position : 
+fixed
+L’élément quitte le flot normal de la page. Il est toujours situé au même endroit dans le 
+viewport
+, 
+même si on défile la page
+. Par défaut, il sera dans le coin supérieur gauche. On peut le déplacer avec les règles 
+top
+, 
+left
+, 
+right
+ et / ou 
+bottom
+.
+Si on place notre carré rose en haut à gauche, il va partager l’espace avec les autres carrés.
+[Médias : image74.png, image75.png, image76.png]
+
+===== DIAPOSITIVE 32 =====
+Le positionnement
+ position : 
+absolute
+Semblable à 
+fixed
+, mais plutôt que d’être positionné relativement au 
+viewport
+, l’élément se positionne relativement à son 
+parent
+ (s’il en a un) à condition que ce parent ne soit pas « 
+static
+ ».
+S’il n’en a pas, il agira comme un élément « 
+fixed
+ » et sera relatif au 
+viewport
+.
+Ici, notre carré rose s’est mis à 
+0 pixels 
+du 
+bas
+ et de la 
+droite
+ de son parent… qui est le carré rouge.
+[Médias : image77.png, image78.png, image79.png]
+
+===== DIAPOSITIVE 33 =====
+Le positionnement
+ position : 
+absolute
+Semblable à 
+fixed
+, mais plutôt que d’être positionné relativement au 
+viewport
+, l’élément se positionne relativement à son 
+parent
+ (s’il en a un) à condition que ce parent ne soit pas « 
+static
+ ».
+S’il n’en a pas, il agira comme un élément « 
+fixed
+ » et sera relatif au 
+viewport
+.
+Le carré rouge est redevenu « static » (car on a retiré la règle 
+position : relative
+)
+Le carré rose est maintenant relatif au 
+viewport
+ … même si dans le code HTML il est « dans » le 
+div
+ rouge.
+[Médias : image77.png, image80.png, image81.png]
+
+===== DIAPOSITIVE 34 =====
+Le positionnement
+Propriété 
+z-index
+ :
+Quand deux éléments partagent le même espace dans la page… lequel est affiché par-dessus l’autre ?
+Par défaut un élément est à 
+z-index: 
+0
+On peut le « reculer » avec 
+z-index : -1
+On peut « l’avancer » avec 
+z-index : 1
+
+-1
+ et 
+1
+ sont des exemples. On peut aller 
+plus loin.
+(ง︡'-'︠)ง
+[Médias : image82.png, image83.png, image84.png]
+
+===== DIAPOSITIVE 35 =====
+Le positionnement
+Associez à chaque bloc le type de 
+position
+ qui explique le plus 
+simplement
+ son positionnement. (static, fixed, absolute, relative)
+[Médias : image85.png]
+
+===== DIAPOSITIVE 36 =====
+Le positionnement
+Associez à chaque bloc le type de 
+position
+ qui explique le plus 
+simplement
+ son positionnement. (static, fixed, absolute, relative)
+[Médias : image85.png, image86.png, image87.png]
+
+===== DIAPOSITIVE 37 =====
+Pseudo-classes
+Ce sont des classes qui définissent l’
+état
+ d’un 
+élément
+.
+Nous allons en aborder deux :
+:hover
+:active
+Pour utiliser une 
+pseudo-classe
+, on crée généralement un sélecteur de la forme :
+
+élément
+:
+pseudo-classe
+
+===== DIAPOSITIVE 38 =====
+Pseudo-classes
+Pseudo-classe 
+:hover
+Permet d’appliquer des règles à un élément 
+survolé
+ par le curseur.
+[Médias : image88.png, image89.png, image90.png, image91.png]
+
+===== DIAPOSITIVE 39 =====
+Pseudo-classes
+Pseudo-classe 
+:active
+Permet d’appliquer des règles à un élément sur lequel on est en train de 
+cliquer
+. (Clic enfoncé actuellement)
+[Médias : image92.png, image93.png, image94.png, image95.png]
+
+===== DIAPOSITIVE 40 =====
+Sélecteurs complexes
+Pour le moment, nous avons vu les sélecteurs suivants :
+Élément (ex : 
+p
+)
+Classe (ex : 
+.ma_classe
+)
+ID (ex : 
+#mon_id
+)
+Pseudo-classe (ex : 
+:hover
+)
+Voyons maintenant de nouvelles techniques de sélection :
+Sélecteur avec « 
+espace
+ » (descendant)
+Sélecteur avec 
+>
+ (enfant)
+Sélecteur avec 
+,
+ (combinaison)
+
+===== DIAPOSITIVE 41 =====
+Sélecteurs complexes
+Sélecteur « 
+espace
+ » (Descendant)
+Exemple : 
+div p
+Ne sélectionne que les 
+p
+ qui sont à l’intérieur d’un 
+div
+. (Que ce soit son parent direct ou indirect)
+Ci-dessous, seul le 
+p
+ dans le 
+div
+ a une 
+bordure
+.
+[Médias : image96.png, image97.png, image98.png]
+
+===== DIAPOSITIVE 42 =====
+Sélecteurs complexes
+Sélecteur > (Enfant)
+Exemple : 
+div > p
+Ne sélectionne que les 
+p
+ qui sont les enfants immédiats d’un 
+div
+. 
+Ici, seul le 
+p
+ directement 
+enfant
+ du 
+div
+ (donc pas celui dans le 
+main
+) a obtenu une 
+bordure
+.
+[Médias : image100.png, image101.png, image99.png]
+
+===== DIAPOSITIVE 43 =====
+Sélecteurs complexes
+Sélecteur , (Combinaison)
+Exemple : 
+h1, h2, p
+Sélectionne tous les éléments séparés par des virgules
+Ici, tous les éléments 
+h1
+, 
+h2
+ et 
+p
+ de la page obtiennent le style.
+[Médias : image102.png, image103.png, image104.png]
+
+===== DIAPOSITIVE 44 =====
+Sélecteurs complexes
+Essayez de prédire quels éléments seront affectés par ce style, puis testez dans Visual Studio Code pour avoir la réponse.
+Insérez le style dans le 
+head
+ (avec 
+<style>
+) et insérez le code HTML dans le 
+body
+[Médias : image105.png, image106.png]
+
+===== DIAPOSITIVE 45 =====
+Sélecteurs complexes
+Essayez de prédire quels éléments seront affectés par ce style,      puis testez dans Visual Studio Code pour avoir la réponse.
+(lorsque survolé seulement)
+[Médias : image105.png, image106.png, image107.png]
+
+===== DIAPOSITIVE 46 =====
+Quelques règles CSS
+Abordons quelques nouvelles règles CSS pour s’
+a
+m
+u
+s
+e
+r
+ un peu avec les boîtes.
+max-width, min-width, min-height et max-height
+cursor
+opacity
+box-shadow
+transition
+
+===== DIAPOSITIVE 47 =====
+Quelques règles CSS
+Règles 
+max-width
+,
+
+min-width
+,
+
+max-height
+
+et
+
+min-height 
+:
+
+max-width
+ / 
+max-height
+ : Permet de préciser une 
+largeur
+/
+hauteur
+
+maximale
+ si une boîte a 
+trop 
+de contenu en 
+largeur
+/
+hauteur
+.
+
+min-width
+ / 
+min-height
+ : Permet de préciser une 
+largeur
+/
+hauteur
+
+minimale
+ si une boîte n’a 
+pas assez 
+de contenu en 
+largeur
+/
+hauteur
+.
+Fonctionne mieux avec un élément 
+inline-block
+. Avec un élément 
+block
+, 
+max-width
+ correspondront à la largeur 
+effective
+… mais 
+max-height
+ / 
+min-height
+ fonctionneront tel que mentionné ci-dessus.
+Boîte jaune
+ : Contenu trop peu large / haut : 
+min-width
+ et 
+min-height
+ sont appliqués.
+Boîte bleue 
+: Contenu assez large / haut… mais pas assez pour appliquer max-width et max-height.
+Boîte rouge 
+: Contenu trop grand : 
+max-width
+ et 
+max-height
+ sont appliqués.
+[Médias : image108.png, image109.png]
+
+===== DIAPOSITIVE 48 =====
+Quelques règles CSS
+Règle 
+cursor
+ :
+Permet de modifier l’apparence du curseur au survol d’un élément.
+Liste des valeurs possibles ici : 
+https://www.w3schools.com/cssref/pr_class_cursor.asp
+[Médias : image110.png, image111.png]
+
+===== DIAPOSITIVE 49 =====
+Quelques règles CSS
+Règle 
+opacity
+ :
+Change l’
+opacité
+ d’un élément.
+Par exemple, ici, au survol du 
+div
+, l’
+opacité
+ de tout le 
+div
+ et son contenu passe à 
+50%
+, ce qui laisse entrevoir l’image de fond.
+[Médias : image112.png, image113.png, image114.png]
+
+===== DIAPOSITIVE 50 =====
+Quelques règles CSS
+Règle 
+box-shadow
+ :
+Permet d’ajouter une « 
+ombre
+ » derrière un élément.
+[Médias : image115.png, image116.png]
+
+===== DIAPOSITIVE 51 =====
+Quelques règles CSS
+Règle 
+box-shadow
+ :
+Permet d’ajouter une « 
+ombre
+ » derrière un élément.
+Les valeurs peuvent être plutôt sophistiquées…
+box-shadow
+ : 
+décalage-horizontal
+
+décalage-vertical
+
+flou
+
+diffusion
+
+couleur
+Seuls le décalage horizontal et le décalage vertical sont obligatoires.
+[Médias : image117.png, image118.png]
+
+===== DIAPOSITIVE 52 =====
+Quelques règles CSS
+Règle 
+transition
+ :
+Permet de créer des animations lors d’un changement de propriétés CSS.
+Fonctionnement :
+
+transition
+ : 
+propriété
+ temps, 
+propriété
+ temps, 
+propriété
+ temps, … ;
+[Médias : image119.png, image120.png, image121.png, image122.png, image123.png, image124.png, image125.png]
+
+===== DIAPOSITIVE 53 =====
+Priorité en CSS
+Au premier cours, nous avions vu la règle sommaire suivante pour la priorité des règles en CSS :
+
+CSS intraligne
+ > 
+ID
+ > 
+Classe
+ > 
+Sélecteur élément
+Le CSS intraligne ayant la plus grande priorité et les sélecteurs éléments ayant la plus faible.
+La réalité… est bien plus 
+effrayante
+.
+
+CSS intraligne
+ > 
+ID
+ > 
+Classe, attributs, pseudo-classes
+ > 
+Éléments, pseudo-éléments
+Nous allons découvrir ce que « 
+attributs
+ » et « 
+pseudo-éléments
+ » veulent dire.
+En cas d’égalité : la « 
+dernière
+ » règle gagne.
+CSS externe VS CSS interne (dans <style>) : le 
+dernier 
+gagne.
+
+===== DIAPOSITIVE 54 =====
+Priorité en CSS
+
+CSS intraligne
+ > 
+ID
+ > 
+Classe, 
+attributs
+, pseudo-classes
+ > 
+Éléments, pseudo-éléments
+C’est quoi un 
+sélecteur attribut
+ ?
+Syntaxe : sélecteur[attribut="valeur"]
+Exemple : 
+a
+[target="blank"]
+Sélectionne seulement les éléments 
+<a>
+ s’ils ont l’attribut 
+target
+ avec la valeur 
+blank
+.
+https://www.w3schools.com/css/css_attribute_selectors.asp
+[Médias : image126.png, image127.png, image128.png]
+
+===== DIAPOSITIVE 55 =====
+Priorité en CSS
+
+CSS intraligne
+ > 
+ID
+ > 
+Classe, 
+attributs
+, pseudo-classes
+ > 
+Éléments, pseudo-éléments
+C’est quoi un 
+sélecteur attribut
+ ?
+Syntaxe : sélecteur[attribut] 
+(Une autre forme possible !)
+Exemple : 
+a
+[class]
+Sélectionne seulement les éléments 
+<a>
+ s’ils ont une 
+classe
+. On ne soucie pas de la valeur de l’attribut.
+https://www.w3schools.com/css/css_attribute_selectors.asp
+[Médias : image128.png, image129.png, image130.png]
+
+===== DIAPOSITIVE 56 =====
+Priorité en CSS
+
+CSS intraligne
+ > 
+ID
+ > 
+Classe, attributs, pseudo-classes
+ > 
+Éléments, 
+pseudo-éléments
+C’est quoi un 
+sélecteur pseudo-élément
+ ?
+Syntaxe : sélecteur::pseudo-element
+Exemple : 
+p
+::first-letter
+https://www.w3schools.com/css/css_pseudo_elements.asp
+[Médias : image131.png, image132.png, image133.png]
+
+===== DIAPOSITIVE 57 =====
+Priorité en CSS
+ « En cas d’égalité, la 
+dernière règle
+ gagne »
+[Médias : image134.png, image135.png, image136.png, image137.png, image138.png, image139.png]
+
+===== DIAPOSITIVE 58 =====
+Priorité en CSS
+ « CSS interne VS CSS externe : 
+CSS dernier gagne
+ »
+Cas 1 : interne avant externe
+Cas 2 : externe avant interne
+[Médias : image140.png, image141.png, image142.png, image143.png, image144.png]
+
