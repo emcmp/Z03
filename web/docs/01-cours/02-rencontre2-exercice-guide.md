@@ -28,7 +28,11 @@ exercice-rencontre2/
     └── infos.html
 ```
 
-Utilisez l'image fournie par l'enseignant ou une petite image de votre choix et placez-la dans `images/` sous le nom `chat.jpg`.
+:::info 📥 Fichier à télécharger
+**[Télécharger `chat.jpg`](pathname:///files/rencontre2/chat.jpg)**
+
+Enregistrez le fichier dans le dossier `images` de l'exercice et gardez le nom exact `chat.jpg`.
+:::
 
 :::warning Le fichier doit vraiment être dans le projet
 Ne laissez pas l'image dans Téléchargements ou sur le Bureau. Le fichier doit se trouver dans le dossier `images` de l'exercice.
