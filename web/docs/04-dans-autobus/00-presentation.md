@@ -13,16 +13,10 @@ Ces capsules ne remplacent pas les rencontres de cours ni les exercices. Elles s
 
 ## Capsules
 
-Les premières capsules seront ajoutées ici au fur et à mesure de leur production.
+### [Capsule 01 — Ouvrir un projet et se repérer dans VS Code](./01-vscode.md)
 
-### À venir — Ouvrir un projet et se repérer dans VS Code
+Avant de commencer à écrire du HTML ou du CSS, cette capsule montre les quelques repères essentiels dans Visual Studio Code : ouvrir le dossier complet d'un projet, retrouver les fichiers et dossiers dans l'Explorateur, en créer de nouveaux et ouvrir un fichier dans l'éditeur pour modifier son code.
 
-Cette capsule montrera comment :
-
-- ouvrir le dossier d'un projet dans Visual Studio Code;
-- retrouver les fichiers et les dossiers dans l'Explorateur;
-- créer un nouveau fichier;
-- créer un nouveau dossier;
-- ouvrir un fichier et modifier son code dans l'éditeur.
+La capsule comprend déjà une présentation offerte en **PDF** et en **PowerPoint**. La vidéo sera ajoutée lorsqu'elle sera prête.
 
 D'autres capsules courtes viendront ensuite accompagner les notions HTML, CSS et JavaScript du cours.
