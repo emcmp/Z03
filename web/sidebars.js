@@ -20,7 +20,27 @@ const sidebars = {
         },
       ],
     },
-    { type: "doc", id: "cours/rencontre2", label: "Rencontre 2 — HTML, fichiers et navigation" },
+    {
+      type: "category",
+      label: "Rencontre 2 — HTML, fichiers et navigation",
+      items: [
+        {
+          type: "doc",
+          id: "cours/rencontre2",
+          label: "Cours — Images, chemins et navigation",
+        },
+        {
+          type: "doc",
+          id: "cours/rencontre2-exercice-guide",
+          label: "Exercice guidé — Chemins et navigation",
+        },
+        {
+          type: "ref",
+          id: "projet-web/rencontre2",
+          label: "Projet Web — Étape 2",
+        },
+      ],
+    },
     { type: "doc", id: "cours/rencontre3", label: "Rencontre 3 — Introduction à CSS" },
     { type: "doc", id: "cours/rencontre4", label: "Rencontre 4 — Modèle en boîte et espacements" },
     { type: "doc", id: "cours/rencontre5", label: "Rencontre 5 — Flexbox simple et intégration" },
