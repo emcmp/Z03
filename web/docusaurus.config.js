@@ -127,10 +127,10 @@ const config = {
         },
         items: [
           {
-            type: "doc",
-            docId: "fonctionnement-du-cours",
+            type: "docSidebar",
             position: "left",
-            label: "Fonctionnement",
+            sidebarId: "bienDebuter",
+            label: "Bien débuter",
           },
           {
             type: "doc",
