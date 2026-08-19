@@ -3,7 +3,23 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   docs: [
-    { type: "doc", id: "cours/rencontre1", label: "Rencontre 1 — Environnement et HTML" },
+    {
+      type: "category",
+      label: "Rencontre 1 — Environnement et HTML",
+      items: [
+        { type: "doc", id: "cours/rencontre1", label: "Cours — Premiers pas en HTML" },
+        {
+          type: "doc",
+          id: "cours/rencontre1-exercice-guide",
+          label: "Exercice guidé — Première page",
+        },
+        {
+          type: "ref",
+          id: "projet-web/rencontre1",
+          label: "Projet Web — Étape 1",
+        },
+      ],
+    },
     { type: "doc", id: "cours/rencontre2", label: "Rencontre 2 — HTML, fichiers et navigation" },
     { type: "doc", id: "cours/rencontre3", label: "Rencontre 3 — Introduction à CSS" },
     { type: "doc", id: "cours/rencontre4", label: "Rencontre 4 — Modèle en boîte et espacements" },

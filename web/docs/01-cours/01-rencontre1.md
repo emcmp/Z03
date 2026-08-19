@@ -19,15 +19,13 @@ Le but n'est pas encore de produire un site complet ni de travailler son apparen
 - créer et enregistrer un fichier `index.html`;
 - ouvrir cette page dans un navigateur et l'actualiser après une modification;
 - reconnaître les principales parties d'un document HTML;
-- expliquer simplement ce qu'est une balise HTML;
+- expliquer simplement ce qu'est un élément HTML;
 - utiliser des titres, des paragraphes et des listes pour structurer du contenu;
 - imbriquer correctement des éléments HTML simples.
 
----
+## 1. Préparer son espace de travail
 
-# 1. Préparer son espace de travail
-
-## Où conserver vos fichiers
+### Où conserver vos fichiers
 
 Les fichiers enregistrés seulement sur un poste du cégep peuvent être perdus lorsque vous changez de poste ou fermez votre session.
 
@@ -46,20 +44,12 @@ Le dossier `mon-site` sera le **dossier racine** de votre projet Web.
 :::tip Bonne pratique
 Pour les noms de fichiers et de dossiers Web, privilégiez des noms courts, sans espace et sans accent.
 
-Par exemple :
-
-```text
-mon-site
-mes-jeux
-voyage-japon
-```
+Par exemple : `mon-site`, `mes-jeux` ou `voyage-japon`.
 :::
 
-## Les extensions de fichiers
+### Les extensions de fichiers
 
 L'extension indique le type d'un fichier.
-
-Quelques extensions que nous utiliserons dans le cours :
 
 ```text
 .html    page Web
@@ -70,11 +60,7 @@ Quelques extensions que nous utiliserons dans le cours :
 .zip     archive contenant plusieurs fichiers
 ```
 
-Aujourd'hui, nous commençons avec un fichier HTML :
-
-```text
-index.html
-```
+Aujourd'hui, nous commençons avec un fichier HTML nommé `index.html`.
 
 :::warning Vérifiez le vrai nom du fichier
 Un fichier nommé `index.html.txt` n'est pas une page HTML.
@@ -82,15 +68,11 @@ Un fichier nommé `index.html.txt` n'est pas une page HTML.
 Si Windows masque les extensions, activez leur affichage afin de toujours voir le nom complet de vos fichiers.
 :::
 
-## À propos des fichiers ZIP
+### À propos des fichiers ZIP
 
-Une archive `.zip` sert à transporter plusieurs fichiers ensemble.
+Une archive `.zip` sert à transporter plusieurs fichiers ensemble. Lorsqu'un laboratoire ou un exemple vous est fourni en ZIP, **extrayez d'abord son contenu** dans un dossier avant de travailler dessus dans VS Code.
 
-Lorsqu'un laboratoire ou un exemple vous est fourni en ZIP, **extrayez d'abord son contenu** dans un dossier avant de travailler dessus dans VS Code.
-
----
-
-# 2. Ouvrir un projet dans VS Code
+## 2. Ouvrir un projet dans VS Code
 
 Créez votre dossier `mon-site`, puis ouvrez **le dossier complet** dans VS Code.
 
@@ -112,50 +94,7 @@ mon-site/
 Ouvrez le dossier du projet dans VS Code plutôt qu'un fichier isolé. Vous verrez ainsi tous les fichiers du site au même endroit.
 :::
 
----
-
-# 3. Une première page HTML
-
-Ajoutez le code suivant dans `index.html` :
-
-```html
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma première page</title>
-  </head>
-  <body>
-    <h1>Bienvenue sur ma page</h1>
-    <p>Je viens de créer ma première page Web.</p>
-  </body>
-</html>
-```
-
-Enregistrez le fichier, puis ouvrez `index.html` dans votre navigateur.
-
-Le navigateur interprète le HTML et affiche le titre et le paragraphe. Il ne montre pas les balises elles-mêmes.
-
-## Le cycle de travail
-
-Pendant le cours, vous répéterez très souvent le même cycle :
-
-```text
-modifier le code
-      ↓
-enregistrer
-      ↓
-actualiser le navigateur
-      ↓
-observer le résultat
-```
-
-Essayez-le immédiatement : changez le texte du `<h1>`, enregistrez le fichier, puis actualisez la page dans le navigateur.
-
----
-
-# 4. Comprendre les éléments HTML
+## 3. Comprendre les éléments HTML
 
 Un document HTML est composé d'**éléments**. La plupart des éléments possèdent :
 
@@ -173,7 +112,7 @@ Dans cet exemple :
 - `Ceci est un paragraphe.` est son contenu;
 - `</p>` ferme l'élément.
 
-## Les attributs
+### Les attributs
 
 Une balise ouvrante peut contenir des **attributs**. Un attribut donne une information supplémentaire sur l'élément.
 
@@ -183,7 +122,7 @@ Une balise ouvrante peut contenir des **attributs**. Un attribut donne une infor
 
 Ici, l'attribut `class` possède la valeur `introduction`. Nous utiliserons davantage les classes lorsque nous commencerons CSS.
 
-## Quelques éléments sans balise fermante
+### Quelques éléments sans balise fermante
 
 Certains éléments ne contiennent pas de texte et n'ont pas de balise fermante. C'est notamment le cas de :
 
@@ -194,9 +133,7 @@ Certains éléments ne contiennent pas de texte et n'ont pas de balise fermante.
 
 Nous verrons l'élément `<img>` et les chemins vers les images à la prochaine rencontre.
 
----
-
-# 5. Imbriquer les éléments correctement
+## 4. Imbriquer les éléments correctement
 
 Un élément peut en contenir un autre. On parle alors d'**imbrication**.
 
@@ -224,45 +161,44 @@ Le code suivant est incorrect, parce que les balises se croisent :
 L'indentation aide à voir la structure et à repérer plus facilement une balise mal placée.
 :::
 
----
+## 5. La structure d'un document HTML
 
-# 6. La structure d'un document HTML
-
-Chaque partie du document joue un rôle précis.
-
-## `<!doctype html>`
-
-Cette déclaration indique au navigateur qu'il doit interpréter le document comme du HTML moderne. Elle apparaît tout au début du fichier.
-
-## `<html>`
-
-L'élément `<html>` contient tout le document, sauf la déclaration `<!doctype html>`. L'attribut `lang="fr"` indique que le contenu est en français.
-
-## `<head>`
-
-L'élément `<head>` contient des informations sur la page qui ne font pas partie du contenu principal affiché :
+Une page HTML complète possède une structure générale semblable à celle-ci :
 
 ```html
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Titre affiché dans l'onglet</title>
-</head>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma première page</title>
+  </head>
+  <body>
+    <h1>Bienvenue sur ma page</h1>
+    <p>Je viens de créer ma première page Web.</p>
+  </body>
+</html>
 ```
+
+### `<!doctype html>` et `<html>`
+
+`<!doctype html>` indique au navigateur qu'il doit interpréter le document comme du HTML moderne. L'élément `<html>` contient ensuite tout le document; `lang="fr"` indique que son contenu est en français.
+
+### `<head>`
+
+Le `<head>` contient des informations sur la page qui ne font pas partie du contenu principal affiché :
 
 - `charset="UTF-8"` permet d'utiliser correctement les caractères accentués;
 - `viewport` adapte l'affichage à la largeur de l'appareil;
 - `<title>` détermine le texte affiché dans l'onglet du navigateur.
 
-## `<body>`
+### `<body>`
 
-L'élément `<body>` contient ce que la personne voit dans la page : titres, paragraphes, listes et, plus tard, images et liens.
+Le `<body>` contient ce que la personne voit dans la page : titres, paragraphes, listes et, plus tard, images et liens.
 
----
+## 6. Structurer le contenu visible
 
-# 7. Structurer le contenu visible
-
-## Les titres
+### Les titres
 
 HTML propose six niveaux de titres, de `<h1>` à `<h6>`.
 
@@ -274,16 +210,14 @@ HTML propose six niveaux de titres, de `<h1>` à `<h6>`.
 
 Le niveau indique la place du titre dans la structure du document. On choisit donc un niveau pour son sens, et non simplement pour obtenir une taille de caractères particulière.
 
-## Les paragraphes
-
-L'élément `<p>` représente un paragraphe :
+### Les paragraphes
 
 ```html
 <p>Voici mon premier paragraphe.</p>
 <p>Voici un deuxième paragraphe.</p>
 ```
 
-## Les listes
+### Les listes
 
 Une liste non ordonnée utilise `<ul>` et `<li>` :
 
@@ -295,17 +229,9 @@ Une liste non ordonnée utilise `<ul>` et `<li>` :
 </ul>
 ```
 
-Une liste ordonnée utilise `<ol>` lorsque l'ordre des éléments est important :
+Une liste ordonnée utilise `<ol>` lorsque l'ordre des éléments est important.
 
-```html
-<ol>
-  <li>Choisir un jeu</li>
-  <li>Lire les règles</li>
-  <li>Commencer la partie</li>
-</ol>
-```
-
-## Mettre l'accent sur un passage
+### Mettre l'accent sur un passage
 
 ```html
 <p>
@@ -320,16 +246,20 @@ Concentrez-vous sur la capacité de choisir un élément HTML qui correspond au 
 Vous n'avez pas à mémoriser une longue liste de balises.
 :::
 
----
+## 7. Passer de la théorie à la pratique
 
-# Mise en pratique
+Nous allons maintenant construire une première page ensemble, étape par étape :
 
-La théorie de cette rencontre est appliquée dans une page séparée, comme un laboratoire :
+**[Exercice guidé — Construire une première page HTML](./01-rencontre1-exercice-guide.md)**
 
-**[Projet Web — Étape 1 : démarrer votre site](../03-projet-web/01-rencontre1.md)**
+Après cet exercice, vous appliquerez la même méthode à votre propre site :
 
-Aucune validation sommative n'est prévue à la rencontre 1. Cette première étape prépare surtout les compétences **WEB-01** et **WEB-02**, qui commenceront à être validées à la rencontre 2.
+**[Projet Web — Étape 1 : première version de votre site](../03-projet-web/01-rencontre1.md)**
+
+Si vous voulez voir la vue d'ensemble avant de commencer, consultez aussi la **[présentation du Projet Web](../03-projet-web/00-presentation.md)**.
+
+Aucune validation sommative n'est prévue à la rencontre 1. Cette première rencontre prépare surtout les compétences **WEB-01** et **WEB-02**, qui commenceront à être validées à la rencontre 2.
 
 :::note Pour aller plus loin — non évalué
-Si vous souhaitez explorer davantage HTML après avoir terminé l'étape pratique, vous pouvez consulter des éléments supplémentaires dans la documentation d'introduction. Ils ne deviennent pas automatiquement des exigences évaluées.
+Si vous terminez rapidement, enrichissez le contenu de votre page ou refaites une petite partie sans regarder l'exemple. N'essayez pas encore de prendre de l'avance avec CSS ou une mise en page complexe.
 :::
