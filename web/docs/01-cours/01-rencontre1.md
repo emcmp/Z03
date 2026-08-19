@@ -1,100 +1,29 @@
 ---
-title: Rencontre 1 - Environnement et première page Web
-description: Prendre en main les fichiers, VS Code et le navigateur, puis découvrir les bases de HTML.
+title: Rencontre 1 - Premiers pas en HTML
+description: Découvrir les éléments HTML, l'imbrication, la structure d'un document et les premiers contenus visibles.
 ---
 
-# Rencontre 1 - Environnement et première page Web
+# Rencontre 1 - Premiers pas en HTML
 
-Aujourd'hui, vous allez apprendre à travailler avec les fichiers d'un projet Web et découvrir comment une page HTML est structurée.
+Avant de commencer cette partie, assurez-vous d'avoir complété le **[Préambule — Environnement de travail](./01-rencontre1-environnement.md)**.
 
-Le but n'est pas encore de produire un site complet ni de travailler son apparence. Vous devez surtout être capable de **retrouver vos fichiers, modifier votre code et voir le résultat dans le navigateur**.
+Votre environnement étant prêt, nous pouvons maintenant nous concentrer sur HTML.
+
+HTML est le langage qui décrit la **structure et le sens du contenu** d'une page Web. Pour cette première rencontre, nous allons apprendre à reconnaître ses principaux éléments et à construire une page simple que nous comprenons entièrement.
 
 ## Objectifs de la rencontre
 
-À la fin de la rencontre, vous devriez être capable de :
+À la fin de cette partie, vous devriez être capable de :
 
-- créer et retrouver un dossier de projet;
-- reconnaître une extension de fichier comme `.html`;
-- ouvrir un dossier dans VS Code;
-- créer et enregistrer un fichier `index.html`;
-- ouvrir cette page dans un navigateur et l'actualiser après une modification;
-- reconnaître les principales parties d'un document HTML;
 - expliquer simplement ce qu'est un élément HTML;
+- reconnaître une balise ouvrante, un contenu et une balise fermante;
+- reconnaître un attribut simple;
+- imbriquer correctement des éléments HTML;
+- reconnaître les principales parties d'un document HTML;
 - utiliser des titres, des paragraphes et des listes pour structurer du contenu;
-- imbriquer correctement des éléments HTML simples.
+- créer une page HTML complète et l'observer dans le navigateur.
 
-## 1. Préparer son espace de travail
-
-### Où conserver vos fichiers
-
-Les fichiers enregistrés seulement sur un poste du cégep peuvent être perdus lorsque vous changez de poste ou fermez votre session.
-
-Conservez donc le dossier du cours dans l'espace **OneDrive** utilisé pour vos travaux scolaires.
-
-Une organisation simple pourrait ressembler à ceci :
-
-```text
-OneDrive/
-└── Z03/
-    └── mon-site/
-```
-
-Le dossier `mon-site` sera le **dossier racine** de votre projet Web.
-
-:::tip Bonne pratique
-Pour les noms de fichiers et de dossiers Web, privilégiez des noms courts, sans espace et sans accent.
-
-Par exemple : `mon-site`, `mes-jeux` ou `voyage-japon`.
-:::
-
-### Les extensions de fichiers
-
-L'extension indique le type d'un fichier.
-
-```text
-.html    page Web
-.css     feuille de styles
-.js      code JavaScript
-.jpg     image
-.png     image
-.zip     archive contenant plusieurs fichiers
-```
-
-Aujourd'hui, nous commençons avec un fichier HTML nommé `index.html`.
-
-:::warning Vérifiez le vrai nom du fichier
-Un fichier nommé `index.html.txt` n'est pas une page HTML.
-
-Si Windows masque les extensions, activez leur affichage afin de toujours voir le nom complet de vos fichiers.
-:::
-
-### À propos des fichiers ZIP
-
-Une archive `.zip` sert à transporter plusieurs fichiers ensemble. Lorsqu'un laboratoire ou un exemple vous est fourni en ZIP, **extrayez d'abord son contenu** dans un dossier avant de travailler dessus dans VS Code.
-
-## 2. Ouvrir un projet dans VS Code
-
-Créez votre dossier `mon-site`, puis ouvrez **le dossier complet** dans VS Code.
-
-Dans VS Code :
-
-1. choisissez **Fichier → Ouvrir le dossier**;
-2. sélectionnez `mon-site`;
-3. créez un nouveau fichier nommé `index.html`;
-4. enregistrez-le.
-
-Vous devriez voir quelque chose comme ceci dans l'explorateur de VS Code :
-
-```text
-mon-site/
-└── index.html
-```
-
-:::tip Bonne pratique
-Ouvrez le dossier du projet dans VS Code plutôt qu'un fichier isolé. Vous verrez ainsi tous les fichiers du site au même endroit.
-:::
-
-## 3. Comprendre les éléments HTML
+## 1. Comprendre les éléments HTML
 
 Un document HTML est composé d'**éléments**. La plupart des éléments possèdent :
 
@@ -131,9 +60,9 @@ Certains éléments ne contiennent pas de texte et n'ont pas de balise fermante.
 <hr>
 ```
 
-Nous verrons l'élément `<img>` et les chemins vers les images à la prochaine rencontre.
+Nous verrons l'élément `<img>` et les chemins vers les images à la rencontre 2.
 
-## 4. Imbriquer les éléments correctement
+## 2. Imbriquer les éléments correctement
 
 Un élément peut en contenir un autre. On parle alors d'**imbrication**.
 
@@ -161,7 +90,7 @@ Le code suivant est incorrect, parce que les balises se croisent :
 L'indentation aide à voir la structure et à repérer plus facilement une balise mal placée.
 :::
 
-## 5. La structure d'un document HTML
+## 3. La structure d'un document HTML
 
 Une page HTML complète possède une structure générale semblable à celle-ci :
 
@@ -196,7 +125,11 @@ Le `<head>` contient des informations sur la page qui ne font pas partie du cont
 
 Le `<body>` contient ce que la personne voit dans la page : titres, paragraphes, listes et, plus tard, images et liens.
 
-## 6. Structurer le contenu visible
+:::info À maîtriser
+Vous n'avez pas besoin de réciter cette structure de mémoire dès aujourd'hui. Vous devez surtout être capable d'en reconnaître les grandes parties et de savoir où placer le contenu visible.
+:::
+
+## 4. Structurer le contenu visible
 
 ### Les titres
 
@@ -246,7 +179,7 @@ Concentrez-vous sur la capacité de choisir un élément HTML qui correspond au 
 Vous n'avez pas à mémoriser une longue liste de balises.
 :::
 
-## 7. Passer de la théorie à la pratique
+## 5. Passer de la théorie à la pratique
 
 Nous allons maintenant construire une première page ensemble, étape par étape :
 
