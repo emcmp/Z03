@@ -31,14 +31,27 @@ Z03 doit donc adapter cette base plutôt que la reprendre telle quelle. Z03 est 
 
 ## Architecture de contenu actuelle
 
-Le matériel conservé est organisé ainsi :
+Le matériel actif est organisé ainsi :
 
-- `web/docs/01-cours/` : rencontres de cours;
-- `web/docs/02-labos/` : laboratoires.
+- `web/docs/01-cours/` : théorie, préambules et exercices guidés associés aux rencontres;
+- `web/docs/02-labos/` : laboratoires de programmation;
+- `web/docs/03-projet-web/` : Projet Web évolutif des rencontres 1 à 5;
+- `refonte/` : plans, suivi, évaluation et documentation interne de la refonte;
+- `sources/` : sources historiques ou éditoriales conservées pour la migration.
 
-Les anciens travaux pratiques du 905 ont été retirés. Une nouvelle section de travaux pratiques pourra être créée plus tard avec du matériel conçu spécifiquement pour Z03.
+Les anciens travaux pratiques du 905 ont été retirés. Pour les rencontres 1 à 5, le **Projet Web évolutif** remplace le modèle d'exercices HTML/CSS séparés + ancien TP1 comme activité pratique continue.
 
 Cette structure peut évoluer pendant la refonte. Les changements majeurs d'organisation devraient être décidés explicitement avant de renommer ou déplacer beaucoup de fichiers.
+
+## Planification opérationnelle
+
+Les décisions pédagogiques de haut niveau ne suffisent pas à suivre un chantier qui s'étend sur plusieurs sessions. Pour les travaux importants, un **plan d'implémentation versionné** doit être créé avant de commencer les modifications.
+
+Le plan actif pour finaliser le bloc HTML/CSS est :
+
+- `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` — état, ordre des tâches, points de reprise et tâches optionnelles pour Codex.
+
+Ce plan doit être mis à jour après chaque lot cohérent de travail afin qu'une interruption ou un changement d'agent ne fasse pas perdre l'état réel du chantier.
 
 ## Déploiement et dépôts
 
@@ -71,6 +84,14 @@ La configuration Docusaurus doit rester portable afin que la même source puisse
 - Retirer tous les travaux pratiques hérités du 905 ainsi que leur entrée de navigation; les futurs TP seront conçus spécifiquement pour Z03.
 - Valider le site avec un build Docusaurus avant de considérer un changement terminé.
 - Utiliser des fichiers `AGENTS.md` pour partager le contexte et les conventions avec Codex.
+
+### 2026-08-19
+
+- Finaliser d'abord la progression complète des rencontres 1 à 5 avant de poursuivre la refonte détaillée de JavaScript.
+- Conserver le GPT-concepteur comme responsable principal des décisions pédagogiques et de la rédaction.
+- Utiliser Codex surtout pour des tâches techniques, mécaniques ou de vérification dont la portée est explicitement documentée.
+- Documenter les chantiers importants avec un plan d'implémentation à états explicites avant de commencer les modifications, afin de rendre le travail reprenable après interruption.
+- Utiliser `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` comme plan opérationnel actif pour terminer le bloc HTML/CSS.
 
 ## Questions à trancher pendant la refonte
 
