@@ -57,7 +57,25 @@ const config = {
     ],
   ],
 
-  plugins: [require.resolve("./plugins/docs-metadata")],
+  plugins: [
+    require.resolve("./plugins/docs-metadata"),
+    [
+      "@docusaurus/plugin-content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: "refonte",
+        path: "..",
+        routeBasePath: "refonte",
+        include: [
+          "REFONTE.md",
+          "COMPETENCES_HTML_CSS.md",
+          "EVALUATION.md",
+          "SUIVI_CONTENU.md",
+        ],
+        sidebarPath: require.resolve("./sidebars-refonte.js"),
+      }),
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -85,6 +103,13 @@ const config = {
             position: "left",
             sidebarId: "labos",
             label: "Laboratoires",
+          },
+          {
+            type: "docSidebar",
+            position: "left",
+            sidebarId: "refonte",
+            docsPluginId: "refonte",
+            label: "Refonte",
           },
         ],
       },
