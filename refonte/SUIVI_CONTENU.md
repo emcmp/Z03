@@ -22,13 +22,14 @@ Consulter également :
 
 - `EVALUATION.md` pour le modèle général de validation;
 - `COMPETENCES_HTML_CSS.md` pour la cartographie détaillée des rencontres 1 à 5, les huit compétences HTML/CSS et les trois niveaux d'attente;
-- `RESSOURCES_A_FOURNIR.md` pour les captures d'écran, images et fichiers à préparer avant chaque rencontre.
+- `RESSOURCES_A_FOURNIR.md` pour les captures d'écran, images et fichiers à préparer avant chaque rencontre;
+- `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` pour l'ordre opérationnel, les états de tâches et les points de reprise du chantier HTML/CSS actuel.
 
 ## Structure actuelle et sources d'exercices
 
 | Cours actuel | Titre / sujet actuel | Notions principales | Exercices / source actuelle | Destination ou décision | Actions de migration |
 |---|---|---|---|---|---|
-| 1 | Atelier / environnement technologique | stockage, système de fichiers, dossiers, extensions, ZIP, outils du cours | Ancien `01-rencontre1.1.md`; PowerPoint historique **Environnement de travail** fourni pendant la refonte; aucun laboratoire numéroté associé | **Intégré comme préambule distinct de la théorie HTML** | Nouveau `01-rencontre1-environnement.md`; OneDrive, arborescence, extensions, ZIP, VS Code et navigateur intégrés. Ancien atelier conservé comme source. Captures modernes et ressources manquantes suivies dans `RESSOURCES_A_FOURNIR.md`. |
+| 1 | Atelier / environnement technologique | stockage, système de fichiers, dossiers, extensions, ZIP, outils du cours | Ancien `01-rencontre1.1.md`; PowerPoint historique **Environnement de travail** fourni pendant la refonte; aucun laboratoire numéroté associé | **Intégré comme préambule distinct de la théorie HTML** | Nouveau `01-rencontre1-environnement.md`; OneDrive, arborescence, extensions, ZIP, VS Code et navigateur intégrés. Ancien atelier conservé comme source. Des captures historiques/provisoires sont déjà intégrées; les remplacements modernes éventuels restent suivis dans `RESSOURCES_A_FOURNIR.md`. |
 | 2 | Variables et affectation | Variables, affectation, nombres, opérateurs, chaînes, concaténation | Labo 2 → `420905_lab2.docx` | À déplacer dans la future séquence JavaScript | Conserver et réévaluer les exercices lors du déplacement. |
 | 3 | DOM et fonctions | `querySelector`, `textContent`, VS Code, fonctions | Labo 3 → `420905_lab3.zip` | Probablement à éclater entre fonctions et DOM | Extraire le labo 3 et identifier quels exercices relèvent des fonctions et lesquels relèvent du DOM. |
 | 4 | Événements et styles | Variables globales/locales, événements, styles DOM | Labo 4 → `420905_lab4.zip` | À réorganiser dans le bloc DOM / événements | Extraire le labo 4 et répartir les exercices selon la nouvelle progression. |
@@ -48,10 +49,10 @@ Consulter également :
 
 | Source | Contenu principal | Utilisation prévue | État |
 |---|---|---|---|
-| `web/docs/01-cours/01-rencontre1-environnement.md` | stockage, fichiers/dossiers, extensions, ZIP, VS Code, navigateur | Préambule opérationnel de la rencontre 1, séparé de la théorie HTML | **Page canonique créée**; captures modernes à intégrer selon `RESSOURCES_A_FOURNIR.md` |
+| `web/docs/01-cours/01-rencontre1-environnement.md` | stockage, fichiers/dossiers, extensions, ZIP, VS Code, navigateur | Préambule opérationnel de la rencontre 1, séparé de la théorie HTML | **Page canonique créée**; captures historiques/provisoires intégrées, remplacements modernes facultatifs suivis dans `RESSOURCES_A_FOURNIR.md` |
 | `web/docs/01-cours/00-introduction-html.md` | structure HTML, balises, attributs, titres, paragraphes, listes, images, chemins relatifs, navigation, commentaires, validation W3C | Source principale des rencontres 1 et 2 et des compétences WEB-01 à WEB-04 | Intégrée au site; mapping détaillé dans `COMPETENCES_HTML_CSS.md` |
-| `web/docs/01-cours/00-introduction-css.md` | syntaxe CSS, feuille externe, sélecteurs, classes/id, cascade simple, conteneurs, couleurs, bordures, texte et typographie | Source principale de la rencontre 3 et d'une partie des compétences WEB-05 à WEB-07 | Intégrée au site; mapping détaillé dans `COMPETENCES_HTML_CSS.md` |
-| Future documentation modèle en boîte / disposition | `margin`, `padding`, modèle en boîte, dimensions simples, Flexbox simple | Rencontres 4 et 5; compétences WEB-07 et WEB-08 | À identifier / réorganiser à partir du matériel existant |
+| `web/docs/01-cours/00-introduction-css.md` | syntaxe CSS, feuille externe, sélecteurs, classes/id, cascade simple, conteneurs, couleurs, bordures, texte et typographie | Source principale de la rencontre 3 et d'une partie des compétences WEB-05 à WEB-07 | Intégrée au site; à condenser dans la page canonique R3 selon `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` |
+| `web/docs/01-cours/00-modele-boites-positionnement.md` | modèle en boîte, dimensions, affichage, débordement, positionnement et effets | Source à alléger fortement pour la rencontre 4; certaines notions alimenteront la disposition simple de la rencontre 5 | **Source disponible**; garder `margin`, `padding`, bordures et dimensions simples dans le noyau, déplacer le reste vers `Pour aller plus loin` ou hors du bloc obligatoire |
 
 Les anciennes sources de migration `sources/R01-Introduction-HTML-Markdown/`, `sources/R02-Introduction-CSS-Markdown/` et `sources/R03-Modele-Boites-Positionnement-Markdown/` restent utiles pour la traçabilité, mais les pages de référence actives sont maintenant sous `web/docs/01-cours/`.
 
@@ -160,6 +161,8 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 - L'environnement de travail de la rencontre 1 est séparé de la théorie HTML dans un préambule distinct.
 - Toute ressource à fournir aux étudiants doit être inscrite dans `RESSOURCES_A_FOURNIR.md` avant qu'une page en dépende.
 - Les documents internes de refonte sont regroupés sous `refonte/` et les sources historiques/importées sous `sources/`.
+- Les chantiers pédagogiques importants doivent être précédés d'un plan d'implémentation versionné et mis à jour pendant le travail.
+- La finalisation des rencontres 1 à 5 précède la poursuite de la refonte détaillée de JavaScript; le plan actif est `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`.
 
 ## Décisions / hypothèses en cours
 
@@ -188,3 +191,4 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 | 2026-08-18 | Classification `À maîtriser` / `Bonne pratique` / `Pour aller plus loin` adoptée | Documentation HTML/CSS | À appliquer lors de la réorganisation | Décidé |
 | 2026-08-19 | Préambule Environnement séparé du cours HTML et suivi des ressources créé | Ancien Atelier, PowerPoint Environnement de travail, rencontre 1 actuelle | Captures Windows/VS Code à fournir; `chat.jpg` de la rencontre 2 ajouté au suivi | En cours |
 | 2026-08-19 | Nettoyage de la racine du dépôt : documents internes regroupés sous `refonte/`, sources R01–R03 sous `sources/` | Documents de refonte et sources éditoriales | Aucun contenu supprimé | Effectué |
+| 2026-08-19 | Création du plan d'implémentation reprenable pour finaliser les rencontres 1 à 5 avant la suite de JavaScript | `PLAN_SITE_EVOLUTIF.md`, `COMPETENCES_HTML_CSS.md`, pages R1–R5 actuelles | R3–R5 à compléter; R2 à relire après leur implémentation | Planifié |
