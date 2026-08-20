@@ -76,7 +76,7 @@ Ne pas réécrire le contenu pédagogique simplement pour uniformiser le style.
 
 **État : Terminé**
 
-**Résultat :** les destinations actuelles de compte réseau, 2FA, Teams/Mio et OneDrive sont documentées dans le plan et le suivi des ressources. L'autodiagnostic demeure `À décider`; la formation d'équipes n'est pas reprise.
+**Résultat :** les destinations actuelles de compte réseau, 2FA, Teams/Mio et OneDrive sont documentées dans le plan et le suivi des ressources. L'autodiagnostic n'est pas retenu dans la nouvelle formule; la formation d'équipes n'est pas reprise.
 
 ### Source
 
@@ -91,7 +91,7 @@ L'ancien Atelier contient plusieurs éléments. Les décisions pour cette passe 
 - **Teams** : ne pas créer une nouvelle page Atelier. Les règles de communication Teams/Mio sont déjà dans `web/docs/fonctionnement-du-cours.md`. Signaler seulement un élément vraiment utile qui manquerait encore.
 - **Google Drive** : ne pas restaurer. Le cours actuel utilise **OneDrive** comme stockage de référence dans le préambule.
 - **Formation d'équipes de 2** : ne pas réintégrer dans la documentation principale pour cette passe.
-- **Autodiagnostic informatique** : ne pas publier ni remettre le formulaire dans la navigation sans confirmation de l'enseignant. Conserver comme élément `À décider` dans le suivi.
+- **Autodiagnostic informatique** : **non retenu**. Ne pas publier ni remettre le formulaire dans la navigation; le conserver uniquement dans la source historique de l'ancien Atelier.
 
 ### Travail demandé
 
@@ -219,7 +219,7 @@ Ne pas modifier la progression HTML de la rencontre 1.
 **État : Terminé**
 **Dépend de : CODEX-BD-03/04**
 
-**Résultat :** les six ressources sont marquées **Provisoire intégré** avec leur chemin, leur fonction et la possibilité d'un remplacement moderne sous le même nom. L'autodiagnostic demeure `À décider`.
+**Résultat :** les six ressources sont marquées **Provisoire intégré** avec leur chemin, leur fonction et la possibilité d'un remplacement moderne sous le même nom. L'autodiagnostic est marqué **Non retenu**.
 
 Fichier : `refonte/RESSOURCES_A_FOURNIR.md`.
 
@@ -232,7 +232,7 @@ Pour chaque capture intégrée :
 
 Mettre à jour les anciennes lignes `À fournir` pour éviter qu'elles donnent l'impression que les ressources manquent encore.
 
-Garder l'autodiagnostic comme `À décider`.
+Conserver l'autodiagnostic comme **Non retenu**, sans le réintroduire dans le parcours étudiant.
 
 ---
 
@@ -330,4 +330,4 @@ Si le dépôt local contient déjà des changements non reliés, ne pas les incl
 
 # Point de reprise après le lot CODEX-BD
 
-Les tâches **CODEX-BD-00 à CODEX-BD-06 sont terminées**. Le GPT-concepteur peut reprendre à **R3-01** dans le plan principal. L'autodiagnostic informatique demeure `À décider`; aucune autre décision pédagogique n'est attendue de Codex pour ce lot.
+Les tâches **CODEX-BD-00 à CODEX-BD-06 sont terminées**. Le GPT-concepteur peut reprendre à **R3-01** dans le plan principal. L'autodiagnostic informatique n'est pas retenu dans la nouvelle formule; aucune décision pédagogique du lot Bien débuter ne reste ouverte pour Codex.
