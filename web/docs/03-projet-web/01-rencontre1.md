@@ -118,16 +118,16 @@ Avant de terminer, vérifiez que :
 
 Si un de ces points ne fonctionne pas, demandez de l'aide avant la prochaine rencontre.
 
-## Compétences préparées
+## Badges de compétence préparés
 
-Il n'y a **aucune validation sommative** à la rencontre 1.
+Il n'y a **aucune validation sommative** à la rencontre 1, mais vous commencez déjà à préparer vos premiers badges :
 
-Cette étape prépare principalement :
-
-- **WEB-01 — Organiser un projet Web et utiliser les chemins**;
-- **WEB-02 — Construire une page HTML correctement structurée**.
+- 🗂️ **WEB-01 — Organiser un projet Web et utiliser les chemins**;
+- 🧱 **WEB-02 — Construire une page HTML correctement structurée**.
 
 Ces compétences commenceront à être observées plus formellement à la rencontre 2, lorsque votre projet contiendra plusieurs fichiers et ressources.
+
+👉 Consultez **[Projet Web — Évaluation](./00-evaluation.md)** pour voir votre collection complète de badges, les critères et le calendrier des validations.
 
 :::note Pour aller plus loin — non évalué
 Si vous terminez rapidement, enrichissez le **contenu** de votre page : ajoutez une section, une liste ou une sous-section supplémentaire et vérifiez que la structure reste logique.
