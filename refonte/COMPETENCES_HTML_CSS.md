@@ -100,8 +100,8 @@ Les huit compétences sont regroupées en **quatre moments de validation princip
 
 | Moment | Période cible | Compétences observées | Intention |
 |---|---|---|---|
-| **Validation A — Structure HTML** | Rencontre 2 | **WEB-01**, **WEB-02** | Vérifier l'organisation du projet, les chemins et la structure générale des pages. |
-| **Validation B — Contenu et navigation** | Rencontre 2 ou début de la rencontre 3 | **WEB-03**, **WEB-04** | Vérifier que l'étudiant sait construire du contenu et relier plusieurs pages correctement. |
+| **Validation A — Structure HTML** | Rencontre 2 — priorité opérationnelle | **WEB-01**, **WEB-02** | Vérifier l'organisation du projet, les chemins et la structure générale des pages. |
+| **Validation B — Contenu et navigation** | Rencontre 2 et début de la rencontre 3 | **WEB-03**, **WEB-04** | Vérifier que l'étudiant sait construire du contenu et relier plusieurs pages correctement. |
 | **Validation C — CSS de base** | Rencontres 3–4 | **WEB-05**, **WEB-06** | Vérifier la feuille externe, les chemins CSS et l'utilisation des sélecteurs/classes. |
 | **Validation D — Mise en forme et disposition** | Rencontres 4–5 | **WEB-07**, **WEB-08** | Vérifier la mise en forme, le modèle en boîte, les espacements et une disposition simple. |
 
@@ -114,13 +114,23 @@ WEB-06 — Sélecteurs              À revoir
 
 Une compétence `À revoir` peut être représentée plus tard. La reprise d'une compétence HTML/CSS après la rencontre 5 ne doit pas retarder le début de JavaScript pour le groupe.
 
+## Priorités opérationnelles R2–R3
+
+- En rencontre 2, la **Validation A** est prioritaire.
+- La **Validation B** peut commencer avec les étudiants prêts en R2 et se poursuivre au début de R3.
+- Les périodes cibles sont des fenêtres de validation, pas des échéances obligeant tout le groupe à terminer en même temps.
+- Le groupe peut commencer CSS même si certaines Validation B restent à faire ou à revoir.
+- La **Validation C** commence avec les étudiants prêts pendant R3–R4; elle ne dépend pas de la fermeture administrative de toutes les Validation B du groupe.
+
+Cette clarification ne change pas la définition des compétences ni la portée des quatre validations.
+
 # Séquence de matière proposée
 
 | Rencontre | Noyau de matière | Validation possible |
 |---|---|---|
 | **1** | environnement de travail, fichiers/dossiers, VS Code, navigateur, première page, structure HTML, contenu de base | aucune validation sommative prévue |
-| **2** | organisation du projet, images, chemins relatifs, plusieurs pages, liens et navigation | Validations A et B |
-| **3** | syntaxe CSS, feuille externe, chemins vers CSS, sélecteurs, classes et propriétés visuelles | début de la validation C |
+| **2** | organisation du projet, images, chemins relatifs, plusieurs pages, liens et navigation | **Validation A prioritaire; Validation B peut débuter** |
+| **3** | syntaxe CSS, reconnaissance du CSS intraligne/interne, feuille externe, chemins vers CSS, sélecteurs, classes et propriétés visuelles | **fin possible de B + début de C** |
 | **4** | consolidation CSS, bordures, dimensions simples, `margin`, `padding`, modèle en boîte | validation C et début de D |
 | **5** | Flexbox simple, navigation horizontale, intégration, pratique et correction | validation D et reprises |
 | **6** | début de la programmation JavaScript | reprises HTML/CSS seulement au besoin, sans nouvelle matière essentielle |
@@ -179,6 +189,16 @@ Documentation de référence : `web/docs/01-cours/00-introduction-css.md`.
 | **8. Aligner et décorer le texte** | `text-align`, `text-decoration` | À maîtriser comme famille d'outils; pas de décompte | WEB-07 | À rattacher |
 | **9. Modifier la typographie** | `font-family`, `font-style`, `font-size`, introduction à `rem` | À maîtriser comme famille d'outils; pas de décompte | WEB-07 | À rattacher |
 | **10. Exemple complet** | intégration des notions précédentes | Synthèse, pas une nouvelle notion | WEB-05 à WEB-07 | À rattacher |
+
+### Intention de la progression intraligne → interne → externe
+
+Le CSS intraligne et le CSS interne doivent être **montrés pour être reconnus**, idéalement avec le même petit exemple que la feuille externe. Ils ne deviennent pas des méthodes à pratiquer dans le Projet Web et ne sont pas des critères de WEB-05.
+
+La comparaison doit surtout faire comprendre la maintenance :
+
+- intraligne : répétition au niveau des éléments et mélange HTML/CSS;
+- interne : centralisation dans une page, mais répétition entre plusieurs pages;
+- externe : une feuille peut servir à plusieurs pages et permet une modification centralisée.
 
 # Mapping CSS — modèle en boîte et disposition simple
 

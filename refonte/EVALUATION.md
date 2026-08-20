@@ -66,14 +66,28 @@ Les compétences détaillées et le mapping complet des notions se trouvent dans
 
 | Moment | Période cible | Compétences |
 |---|---|---|
-| **Validation A — Structure HTML** | Rencontre 2 | WEB-01, WEB-02 |
-| **Validation B — Contenu et navigation** | Rencontre 2 ou début de la rencontre 3 | WEB-03, WEB-04 |
+| **Validation A — Structure HTML** | Rencontre 2 — priorité opérationnelle | WEB-01, WEB-02 |
+| **Validation B — Contenu et navigation** | Rencontre 2 et début de la rencontre 3 | WEB-03, WEB-04 |
 | **Validation C — CSS de base** | Rencontres 3–4 | WEB-05, WEB-06 |
 | **Validation D — Mise en forme et disposition** | Rencontres 4–5 | WEB-07, WEB-08 |
 
 Ainsi, huit compétences ne produisent pas huit entrevues distinctes par étudiant. Le modèle vise quatre passages principaux, répartis pendant les périodes de travail.
 
 La capacité de diagnostiquer et corriger sert de méthode de validation plutôt que de compétence autonome. Par exemple, l'enseignant peut demander de réparer un chemin relatif, de cibler plusieurs éléments avec une classe ou d'ajuster un `padding`.
+
+### Ordre opérationnel autour des rencontres 2 et 3
+
+Les périodes indiquées ci-dessus sont des **fenêtres de disponibilité et de priorité**, pas des échéances obligeant tout le groupe à terminer une validation au même moment.
+
+Pour éviter de surcharger la rencontre 2 :
+
+1. la **Validation A** est la priorité de la rencontre 2;
+2. la **Validation B** peut commencer en rencontre 2 avec les étudiants prêts, puis se poursuivre au début de la rencontre 3;
+3. il n'est pas nécessaire que toute la Validation B du groupe soit terminée avant d'introduire CSS;
+4. la **Validation C** peut commencer avec les étudiants prêts pendant les rencontres 3–4;
+5. les reprises restent possibles plus tard sans retarder la progression générale du groupe.
+
+Cette organisation ne change ni les compétences, ni le nombre de moments de validation, ni leur portée. Elle vise seulement à rendre le fonctionnement réaliste pendant une période de trois heures avec plusieurs étudiants à accompagner.
 
 ## Niveaux d'attente dans le matériel
 
@@ -179,6 +193,7 @@ La conception de l'application est traitée séparément du présent document p�
 - Les rencontres 3, 4 et 5 servent principalement à CSS.
 - La programmation JavaScript commence à la rencontre 6.
 - Le bloc HTML/CSS comprend huit compétences regroupées en quatre moments de validation.
+- La Validation A est prioritaire en rencontre 2; la Validation B peut commencer en rencontre 2 et se poursuivre au début de la rencontre 3.
 - Le bloc HTML/CSS peut représenter environ 30 % de la note finale, sous réserve de la pondération globale à finaliser.
 - Le contenu pédagogique est classé en `À maîtriser`, `Bonne pratique` ou `Pour aller plus loin`.
 - Les notions « Pour aller plus loin » ne font pas partie des validations obligatoires ni de l'examen final.
