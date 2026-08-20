@@ -17,12 +17,12 @@ Ces capsules ne remplacent pas les rencontres de cours ni les exercices. Elles s
 
 Avant de commencer à écrire du HTML ou du CSS, cette capsule montre les quelques repères essentiels dans Visual Studio Code : ouvrir le dossier complet d'un projet, retrouver les fichiers et dossiers dans l'Explorateur, en créer de nouveaux et ouvrir un fichier dans l'éditeur pour modifier son code.
 
-La capsule comprend déjà une présentation offerte en **PDF** et en **PowerPoint**. La vidéo sera ajoutée lorsqu'elle sera prête.
+La capsule comprend une présentation offerte en **PDF** et en **PowerPoint**.
 
 ### [Capsule 02 — Pourquoi une feuille CSS externe?](./02-feuille-css-externe.md)
 
 Cette capsule montre pourquoi plusieurs pages HTML gagnent à partager une même feuille `styles.css`. Elle met l'accent sur la séparation entre structure et présentation, la réutilisation des styles et l'avantage de pouvoir modifier l'apparence commune du site à un seul endroit.
 
-La présentation est offerte en **PDF** et en **PowerPoint**. La vidéo sera ajoutée lorsqu'elle sera prête.
+La présentation est offerte en **PDF** et en **PowerPoint**.
 
 D'autres capsules courtes viendront ensuite accompagner les notions HTML, CSS et JavaScript du cours.
