@@ -34,7 +34,7 @@ Une même feuille de styles peut être utilisée par plusieurs pages. Elle perme
 Voici un paragraphe HTML auquel on applique directement une couleur :
 
 <ExampleFrame
-  src="examples/rencontre3/premier-style/index.html"
+  src="examples/rencontre3/premier-style/"
   title="Rendu du premier paragraphe coloré avec CSS"
   html={premierStyleHtml}
 />
@@ -334,7 +334,7 @@ Ces éléments peuvent recevoir des classes et des styles exactement comme un `<
 La propriété `color` modifie la couleur du texte. `background-color` modifie la couleur de fond.
 
 <ExampleFrame
-  src="examples/rencontre3/couleurs/index.html"
+  src="examples/rencontre3/couleurs/"
   title="Rendu de couleurs de texte et d’arrière-plan"
   html={couleursHtml}
   css={couleursCss}
