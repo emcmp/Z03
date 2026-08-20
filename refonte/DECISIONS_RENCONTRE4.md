@@ -1,7 +1,7 @@
 # Décisions de conception — Rencontre 4
 
 **Date : 2026-08-19**  
-**Statut : R4-01 terminé; R4-02 à R4-05 à implémenter**  
+**Statut : R4-01 à R4-04 implémentés; R4-05 en attente de validation technique locale**  
 **Plan maître : `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`**
 
 Ce document consigne le résultat de **R4-01 — Extraire le noyau utile du matériel existant** avant la rédaction de la rencontre 4.
@@ -87,24 +87,26 @@ Reporter ou classer hors noyau :
 - `box-shadow`;
 - transitions et animations.
 
-La disposition horizontale sera faite avec **Flexbox simple à R5**, pas avec `inline-block`.
+La disposition horizontale est faite avec **Flexbox simple à R5**, pas avec `inline-block`.
 
-## Exercice guidé prévu
+## Exercice guidé
 
-Créer `04-rencontre4-exercice-guide.md` autour d'une petite carte ou fiche.
+Implémenté dans `web/docs/01-cours/04-rencontre4-exercice-guide.md` autour de petites cartes empilées.
 
-Objectifs pratiques :
+L'exercice fait pratiquer :
 
 1. rendre les limites de la boîte visibles avec un arrière-plan et une bordure;
 2. ajouter du `padding` et constater que l'espace apparaît **à l'intérieur**;
 3. ajouter de la `margin` et constater que l'espace apparaît **à l'extérieur**;
-4. comparer plusieurs blocs empilés;
+4. comparer plusieurs blocs;
 5. modifier volontairement padding vs margin pour diagnostiquer le bon choix;
 6. expérimenter une largeur simple sans faire des dimensions le sujet principal.
 
 Aucune ressource externe n'est nécessaire.
 
-## Projet Web — Étape 4 prévue
+## Projet Web — Étape 4
+
+Implémenté dans `web/docs/03-projet-web/04-rencontre4.md`.
 
 L'étudiant continue le même site et sa même feuille `css/styles.css`.
 
@@ -128,21 +130,40 @@ R4 permet :
   - WEB-07 — Mettre en forme une interface avec CSS;
   - WEB-08 — Organiser l'espace et la disposition des éléments.
 
-À R4, WEB-08 porte surtout sur le modèle en boîte et les espacements. Flexbox sera ajouté à R5 avant la finalisation de la Validation D.
+À R4, WEB-08 porte surtout sur le modèle en boîte et les espacements. Flexbox est ajouté à R5 avant la finalisation de la Validation D.
 
 ## Ressources
 
-Les schémas et captures déjà présents sous `web/static/img/cours-modele-boites-positionnement/` peuvent être réutilisés. Les plus utiles sont notamment :
+Le cours réutilise des schémas déjà présents sous `web/static/img/cours-modele-boites-positionnement/`, notamment :
 
 - `modele-de-boite-css.png`;
 - `marges-et-remplissage.png`;
 - `boites-rendues-visibles.png`;
-- `dimensions-totales-boite.png` si une explication de dimension le justifie.
+- `dimensions-totales-boite.png`.
 
 Aucune nouvelle ressource n'est bloquante.
 
+## Implémentation réalisée
+
+Les éléments suivants sont maintenant présents sur `main` :
+
+- `web/docs/01-cours/04-rencontre4.md` — cours canonique complet;
+- `web/docs/01-cours/04-rencontre4-exercice-guide.md` — exercice guidé;
+- `web/docs/03-projet-web/04-rencontre4.md` — Projet Web, étape 4;
+- `web/sidebars.js` — rencontre 4 structurée en Cours / Exercice guidé / Projet Web.
+
+## Validation technique requise
+
+La validation locale doit vérifier avec R3 et R5 :
+
+1. `npm run build`;
+2. les IDs de `web/sidebars.js`;
+3. les liens entre cours, exercice et Projet Web;
+4. l'existence des images réutilisées;
+5. le rendu des exemples et admonitions.
+
+Cette vérification peut être réalisée par Codex local sans modifier les choix pédagogiques.
+
 ## Point de reprise
 
-Le prochain travail est :
-
-> **R4-02 — Rédiger `web/docs/01-cours/04-rencontre4.md` selon les décisions ci-dessus.**
+La conception R4 est terminée. Après validation technique du bloc R3–R5, la prochaine étape est la **relecture transversale R1 → R5**, en commençant par la charge réelle de R2 puis l'équilibre des cinq rencontres.
