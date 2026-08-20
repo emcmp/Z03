@@ -1,7 +1,7 @@
 # Plan d'ajustements — rencontres 1 à 5 après revue
 
 **Date : 2026-08-19**  
-**Statut : actif — AJ-01 et AJ-02 terminés; AJ-03 modifié, validation technique en attente**  
+**Statut : actif — AJ-01 à AJ-03 terminés; prochain point de reprise AJ-04**  
 **Branche de travail : `agent/ajustements-r1-r5`**
 
 Ce plan transforme les conclusions de `REVUE_TRANSVERSALE_R1_R5.md` et les décisions de l'enseignant en tâches d'ajustement bornées. Il complète `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` et devient le point de reprise opérationnel pour la phase **REV-03 — Ajustements de poids**.
@@ -168,7 +168,7 @@ Validation technique effectuée après le lot :
 
 ## AJ-03 — Propager le nouveau minimum R2 dans les exemples R3–R5
 
-**État : En cours — contenu modifié; validation technique requise avant `Terminé`**  
+**État : Terminé**  
 **Dépend de : AJ-02**
 
 Les arborescences de R3, R4 et R5 ne doivent plus laisser croire que `sujet.html` **et** `apropos.html` sont deux fichiers obligatoires pour tous les étudiants.
@@ -184,7 +184,18 @@ Résultat du lot AJ-03 :
 - l'exemple de navigation obligatoire de l'étape 5 utilise `Accueil` + `Mon sujet`, avec les liens supplémentaires laissés aux étudiants qui ont enrichi leur site;
 - les pages de cours R3 à R5 ne sont pas modifiées dans ce lot.
 
-Avant de marquer AJ-03 `Terminé`, exécuter le build Docusaurus et vérifier que les trois pages rendent correctement.
+Validation technique effectuée après le lot :
+
+- branche `agent/ajustements-r1-r5` au commit `5f911682ea6bad4f7be49f6068243399a8d61861`;
+- `npm run build` réussi, sans erreur Docusaurus; seulement des avertissements non bloquants de dépréciation et de données navigateur anciennes;
+- `git diff --check` réussi;
+- pages Projet Web R3, R4 et R5 servies en HTTP 200;
+- liens vers les cours et exercices guidés présents, avec les six destinations vérifiées en HTTP 200;
+- chaque arborescence présente une seule page secondaire comme minimum requis;
+- aucune occurrence de `apropos.html` dans ces trois pages;
+- validation HTTP/HTML effectuée sans Browser automatisé;
+- serveur local arrêté après validation;
+- `git status --short` final vide.
 
 ## AJ-04 — Améliorer la progression intraligne → interne → externe en R3
 
@@ -343,9 +354,9 @@ AJ-01 documentation / validations       Terminé
   ↓
 AJ-02 R2 minimum                        Terminé
   ↓
-AJ-03 propagation R3–R5                En cours — build requis
+AJ-03 propagation R3–R5                Terminé
   ↓
-AJ-04 progression CSS R3
+AJ-04 progression CSS R3               Prochain
   ↓
 AJ-05 audit visuel
   ↓
@@ -362,4 +373,4 @@ AJ-08 peut être réalisé en parallèle du travail visuel s'il n'y a pas de con
 
 # Point de reprise actuel
 
-> **AJ-03 — les trois pages Projet Web R3 à R5 ont été harmonisées avec le nouveau minimum R2. Avant de passer à AJ-04, valider le build et le rendu de ces pages, puis marquer AJ-03 `Terminé`.**
+> **AJ-04 — améliorer la progression CSS de la rencontre 3 en montrant brièvement intraligne → interne → externe avec un même besoin visuel et une justification concrète de la feuille externe.**
