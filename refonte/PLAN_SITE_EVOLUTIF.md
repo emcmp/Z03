@@ -390,9 +390,9 @@ Ces éléments ne doivent pas être nécessaires pour obtenir la pleine maîtris
 
 # Pondération
 
-Le bloc HTML/CSS peut représenter **environ 30 %** de la note finale comme hypothèse de travail.
+Le bloc HTML/CSS des rencontres 1 à 5 représente **30 % de la note finale**.
 
-La valeur exacte par compétence reste à confirmer. L'augmentation de la pondération ne doit pas augmenter artificiellement le nombre d'interactions d'évaluation : les huit compétences restent regroupées dans quatre moments principaux.
+La valeur exacte par compétence reste à détailler. Cette répartition future ne doit pas augmenter artificiellement le nombre d'interactions d'évaluation : les huit compétences restent regroupées dans quatre moments principaux.
 
 # Structure future des pages étudiantes
 
