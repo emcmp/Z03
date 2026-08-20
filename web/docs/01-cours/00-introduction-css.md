@@ -6,6 +6,10 @@ slug: /cours/introduction-css
 sidebar_position: -1
 ---
 
+import premierStyleHtml from '!!raw-loader!../../static/examples/rencontre3/premier-style/index.html';
+import couleursHtml from '!!raw-loader!../../static/examples/rencontre3/couleurs/index.html';
+import couleursCss from '!!raw-loader!../../static/examples/rencontre3/couleurs/styles.css';
+
 # Introduction à CSS
 
 HTML décrit la structure d’une page Web. CSS contrôle son apparence : couleurs, dimensions, bordures, alignement, espacements et typographie.
@@ -29,11 +33,11 @@ Une même feuille de styles peut être utilisée par plusieurs pages. Elle perme
 
 Voici un paragraphe HTML auquel on applique directement une couleur :
 
-```html
-<p style="color: violet;">Un paragraphe violet.</p>
-```
-
-![Un premier paragraphe coloré avec CSS](../../static/img/cours-introduction-css/premier-style-css.png)
+<ExampleFrame
+  src="examples/rencontre3/premier-style/index.html"
+  title="Rendu du premier paragraphe coloré avec CSS"
+  html={premierStyleHtml}
+/>
 
 La portion `color: violet;` est du CSS :
 
@@ -329,18 +333,12 @@ Ces éléments peuvent recevoir des classes et des styles exactement comme un `<
 
 La propriété `color` modifie la couleur du texte. `background-color` modifie la couleur de fond.
 
-```css
-h1 {
-  color: mediumturquoise;
-}
-
-.message {
-  color: darkslateblue;
-  background-color: mistyrose;
-}
-```
-
-![Exemple de couleurs de texte et d’arrière-plan](../../static/img/cours-introduction-css/couleurs-rendu.png)
+<ExampleFrame
+  src="examples/rencontre3/couleurs/index.html"
+  title="Rendu de couleurs de texte et d’arrière-plan"
+  html={couleursHtml}
+  css={couleursCss}
+/>
 
 Une couleur peut être exprimée par un nom ou un code hexadécimal :
 

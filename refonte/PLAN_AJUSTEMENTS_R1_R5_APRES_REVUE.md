@@ -1,7 +1,7 @@
 # Plan d'ajustements — rencontres 1 à 5 après revue
 
 **Date : 2026-08-19**  
-**Statut : actif — AJ-01 à AJ-05 terminés; prochain point de reprise AJ-06 (POC ExampleFrame)**  
+**Statut : actif — AJ-01 à AJ-05 terminés; AJ-06 POC implémenté, validation technique et visuelle en attente**  
 **Branche de travail : `agent/ajustements-r1-r5`**
 
 Ce plan transforme les conclusions de `REVUE_TRANSVERSALE_R1_R5.md` et les décisions de l'enseignant en tâches d'ajustement bornées. Il complète `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` et devient le point de reprise opérationnel pour la phase **REV-03 — Ajustements de poids**.
@@ -298,7 +298,7 @@ Candidats prioritaires pour un aperçu vivant après le POC : `selecteur-classe-
 
 ## AJ-06 — POC ExampleFrame : aperçus HTML/CSS vivants
 
-**État : À faire — prochain point de reprise**  
+**État : En cours — POC implémenté; validation technique et visuelle requise**  
 **Responsable privilégié : Codex local**  
 **Dépend de : AJ-05**
 
@@ -337,6 +337,16 @@ Le POC est retenu seulement si :
 - la hauteur s'ajuste sans couper le contenu ni créer un grand espace inutile;
 - la page reste lisible sur une largeur étroite raisonnable;
 - une vérification **visuelle réelle** confirme les deux rendus; une compilation seule ne suffit pas.
+
+### Résultat du lot AJ-06 avant validation
+
+- le composant global `ExampleFrame` est ajouté sous `web/src/components/ExampleFrame/` et enregistré dans `web/src/theme/MDXComponents.js`;
+- `ExampleFrame` résout l'URL de l'iframe avec `useBaseUrl`, utilise `sandbox="allow-same-origin"` et ajuste sa hauteur avec `ResizeObserver` entre des bornes configurables;
+- les deux exemples autonomes sont ajoutés sous `web/static/examples/rencontre3/`;
+- `00-introduction-css.md` lit ces mêmes fichiers avec `raw-loader` pour afficher le code exact qui est aussi rendu dans l'iframe;
+- `raw-loader` était déjà présent dans les dépendances du projet; aucune nouvelle dépendance n'est ajoutée;
+- les anciens PNG demeurent physiquement dans le dépôt et aucune migration supplémentaire de R3/R4 n'est faite;
+- le build, `git diff --check` et la vérification visuelle réelle restent à exécuter avant de marquer AJ-06 `Terminé`.
 
 Si le Browser automatisé de Codex demeure indisponible, documenter cette limite et effectuer la vérification visuelle avec le navigateur local disponible plutôt que de déclarer le POC réussi sur le seul build.
 
@@ -398,7 +408,7 @@ AJ-04 progression CSS R3               Terminé
   ↓
 AJ-05 audit visuel                     Terminé
   ↓
-AJ-06 POC ExampleFrame                 Prochain
+AJ-06 POC ExampleFrame                 En cours — validation requise
   ↓
 AJ-07 décision / migration ciblée
   ↓
@@ -411,4 +421,4 @@ AJ-08 peut être réalisé en parallèle du travail visuel s'il n'y a pas de con
 
 # Point de reprise actuel
 
-> **AJ-06 — implémenter un POC ExampleFrame strictement borné à deux exemples de `00-introduction-css.md`, valider le build et le rendu réel, puis arrêter avant toute migration supplémentaire.**
+> **AJ-06 — le POC ExampleFrame est implémenté sur deux exemples de `00-introduction-css.md`. Valider maintenant le build, `git diff --check`, le `baseUrl`, l'isolation, la hauteur et le rendu réel, puis arrêter avant toute migration supplémentaire.**

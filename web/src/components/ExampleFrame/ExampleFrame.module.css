@@ -1,0 +1,27 @@
+.exampleFrame {
+  margin: 1rem 0 1.5rem;
+}
+
+.codeStack > :global(.theme-code-block) + :global(.theme-code-block) {
+  margin-top: 1rem;
+}
+
+.previewBlock {
+  margin-top: 1rem;
+}
+
+.previewLabel {
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.previewFrame {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: white;
+  transition: height 120ms ease-out;
+}
