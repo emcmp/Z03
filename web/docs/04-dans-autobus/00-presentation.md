@@ -25,4 +25,16 @@ Cette capsule montre pourquoi plusieurs pages HTML gagnent à partager une même
 
 La présentation est offerte en **PDF** et en **PowerPoint**.
 
+### [Capsule 03 — Comment CSS sait quoi modifier?](./03-selecteurs-css.md)
+
+Cette capsule présente le rôle des **sélecteurs CSS** et compare trois façons de cibler les éléments d'une page : une balise comme `p`, une classe comme `.important` et un identifiant comme `#titre-principal`.
+
+La présentation est offerte en **PDF** et en **PowerPoint**.
+
+### [Capsule 04 — Comprendre Flexbox et gap](./04-flexbox-gap.md)
+
+Cette capsule introduit le modèle mental de Flexbox : trouver le parent des éléments à organiser, lui appliquer `display: flex`, puis utiliser `gap` pour contrôler l'espace entre ses enfants. Elle présente aussi simplement `justify-content` et `align-items`.
+
+La présentation est offerte en **PDF** et en **PowerPoint**.
+
 D'autres capsules courtes viendront ensuite accompagner les notions HTML, CSS et JavaScript du cours.
