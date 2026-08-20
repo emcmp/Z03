@@ -5,26 +5,519 @@ description: Relier une feuille CSS externe, utiliser des sélecteurs et commenc
 
 # Rencontre 3 - Introduction à CSS
 
-:::warning Refonte en cours
-Cette page devient la page canonique de la rencontre 3. Le contenu détaillé sera progressivement déplacé ici.
+Aux rencontres 1 et 2, vous avez surtout travaillé la **structure et le contenu** avec HTML. À partir d'aujourd'hui, CSS va vous permettre de contrôler l'**apparence** de ces mêmes pages.
+
+Le but n'est pas d'apprendre toutes les possibilités de CSS en une seule rencontre. Nous allons commencer par une base très importante : **une feuille CSS externe partagée par plusieurs pages**.
+
+## Objectifs de la rencontre
+
+À la fin de la rencontre, vous devriez être capable de :
+
+- expliquer le rôle de CSS par rapport à HTML;
+- reconnaître la syntaxe d'une règle CSS;
+- créer un fichier `css/styles.css`;
+- relier une page HTML à une feuille CSS externe avec `<link>`;
+- utiliser le bon chemin vers CSS depuis la racine ou depuis un sous-dossier;
+- utiliser un sélecteur d'élément;
+- créer et réutiliser une classe CSS;
+- reconnaître un sélecteur d'identifiant;
+- comprendre un conflit CSS simple entre une règle générale et une classe;
+- appliquer quelques propriétés visuelles simples;
+- diagnostiquer une page qui ne reçoit pas sa feuille CSS.
+
+## 1. HTML et CSS ont deux rôles différents
+
+HTML décrit **ce que contient la page** et comment son contenu est structuré.
+
+Par exemple :
+
+```html
+<h1>Mon site</h1>
+<p>Bienvenue sur ma page.</p>
+```
+
+CSS décrit **à quoi ces éléments ressemblent**.
+
+Par exemple :
+
+```css
+h1 {
+  color: darkblue;
+}
+```
+
+Le navigateur combine les deux :
+
+```text
+HTML = structure et contenu
+CSS  = présentation
+```
+
+:::info À maîtriser
+CSS ne remplace pas HTML. Une page Web utilise généralement HTML pour construire le contenu et CSS pour le mettre en forme.
 :::
 
-## Objectifs
+## 2. Pourquoi utiliser une feuille CSS externe?
 
-- reconnaître la syntaxe d'une règle CSS;
-- relier une feuille `styles.css` externe aux pages HTML;
-- réinvestir les chemins relatifs pour charger la feuille CSS;
-- utiliser des sélecteurs d'élément et surtout des classes;
-- appliquer des propriétés visuelles simples : couleurs, arrière-plans, typographie, alignement et bordures.
+Il existe plusieurs façons d'ajouter du CSS à une page. Dans ce cours, nous allons privilégier **une feuille CSS externe**.
 
-## Travail sur le site évolutif
+Supposons que votre site possède trois pages :
 
-L'étudiant crée la feuille CSS de son site, la relie à ses pages et commence à définir une apparence cohérente.
+```text
+mon-site/
+├── index.html
+├── css/
+│   └── styles.css
+└── pages/
+    ├── sujet.html
+    └── apropos.html
+```
+
+Les trois pages peuvent charger le même fichier `styles.css`.
+
+Cela permet de :
+
+- garder HTML centré sur la structure et le contenu;
+- éviter de répéter les mêmes styles dans chaque page;
+- conserver une apparence cohérente;
+- modifier plusieurs pages en changeant un seul fichier CSS.
+
+![Exemple de feuille CSS externe](../../static/img/cours-introduction-css/fichier-css-externe.png)
+
+:::tip Méthode recommandée
+Une feuille externe est particulièrement utile dès qu'un site possède plusieurs pages. C'est la méthode que nous utiliserons dans le Projet Web.
+:::
+
+### Deux formes que vous pourriez rencontrer
+
+Vous pourriez voir du CSS directement dans un attribut :
+
+```html
+<p style="color: red;">Un paragraphe rouge.</p>
+```
+
+ou dans un élément `<style>` placé dans `<head>`.
+
+Ces formes existent, mais nous ne les utiliserons pas comme méthode principale. Notre objectif est de conserver les styles dans un fichier séparé.
+
+## 3. Comprendre la syntaxe d'une règle CSS
+
+Voici une règle CSS :
+
+```css
+p {
+  color: navy;
+}
+```
+
+On peut la décomposer ainsi :
+
+```text
+p              → sélecteur
+color          → propriété
+navy           → valeur
+color: navy;   → déclaration
+```
+
+Une règle suit donc cette forme :
+
+```css
+selecteur {
+  propriete: valeur;
+}
+```
+
+Plusieurs déclarations peuvent être placées dans la même règle :
+
+```css
+p {
+  color: navy;
+  font-size: 1.1rem;
+  font-family: Arial, sans-serif;
+}
+```
+
+:::info À maîtriser
+Retenez surtout quatre mots : **sélecteur, propriété, valeur, déclaration**.
+:::
+
+## 4. Créer et relier `styles.css`
+
+Dans votre projet, créez :
+
+```text
+css/
+└── styles.css
+```
+
+Pour qu'une page HTML utilise cette feuille, ajoutez un élément `<link>` dans son `<head>`.
+
+Depuis `index.html` :
+
+```html
+<link rel="stylesheet" href="css/styles.css">
+```
+
+![Élément link reliant la page à la feuille CSS](../../static/img/cours-introduction-css/lier-feuille-css.png)
+
+### Le chemin dépend encore du fichier HTML actuel
+
+Vous avez déjà rencontré cette idée avec les images et les liens à la rencontre 2.
+
+Depuis :
+
+```text
+mon-site/index.html
+```
+
+le chemin est :
+
+```html
+<link rel="stylesheet" href="css/styles.css">
+```
+
+Mais depuis :
+
+```text
+mon-site/pages/sujet.html
+```
+
+il faut d'abord remonter vers le dossier du projet :
+
+```html
+<link rel="stylesheet" href="../css/styles.css">
+```
+
+:::warning Même feuille, chemins différents
+Le fichier CSS ne change pas. C'est le point de départ qui change.
+
+Depuis `index.html` : `css/styles.css`  
+Depuis `pages/sujet.html` : `../css/styles.css`
+:::
+
+## 5. Les sélecteurs indiquent quoi modifier
+
+Le **sélecteur** indique quels éléments HTML recevront les déclarations d'une règle.
+
+### Sélecteur d'élément
+
+Le nom d'un élément HTML cible tous les éléments de ce type.
+
+```css
+h1 {
+  color: darkblue;
+}
+
+p {
+  color: #37474f;
+}
+```
+
+![Règles utilisant des sélecteurs d'éléments](../../static/img/cours-introduction-css/selecteur-element.png)
+
+La première règle vise les `<h1>`. La deuxième vise les `<p>`.
+
+:::info À maîtriser
+Un sélecteur d'élément est utile lorsqu'un style doit s'appliquer de façon générale à un type d'élément.
+:::
+
+## 6. Les classes permettent de cibler un rôle particulier
+
+Une **classe** permet de sélectionner seulement certains éléments.
+
+Dans HTML :
+
+```html
+<p class="mise-en-valeur">Information importante.</p>
+```
+
+Dans CSS :
+
+```css
+.mise-en-valeur {
+  color: darkred;
+  font-weight: bold;
+}
+```
+
+Le point devant `.mise-en-valeur` signifie que le sélecteur vise une classe.
+
+:::info À maîtriser
+Dans HTML :
+
+```html
+class="mise-en-valeur"
+```
+
+Dans CSS :
+
+```css
+.mise-en-valeur
+```
+
+Le point appartient au sélecteur CSS. Il ne fait pas partie du nom écrit dans l'attribut `class`.
+:::
+
+Une même classe peut être utilisée plusieurs fois :
+
+```html
+<p class="mise-en-valeur">Première information.</p>
+<p>Paragraphe ordinaire.</p>
+<p class="mise-en-valeur">Deuxième information.</p>
+```
+
+![Rendu d'un paragraphe ciblé par une classe](../../static/img/cours-introduction-css/selecteur-classe-rendu.png)
+
+:::tip Bonne pratique — nommer une classe selon son rôle
+Préférez un nom comme :
+
+```text
+mise-en-valeur
+introduction
+avertissement
+```
+
+à un nom comme `texte-rouge`.
+
+Le rôle du contenu peut rester le même même si vous changez plus tard sa couleur.
+:::
+
+## 7. Et les identifiants `id`?
+
+Vous pourriez aussi rencontrer un identifiant :
+
+```html
+<p id="message-principal">Bienvenue.</p>
+```
+
+En CSS, un identifiant est ciblé avec `#` :
+
+```css
+#message-principal {
+  color: darkgreen;
+}
+```
+
+Un `id` doit être unique dans une page.
+
+Pour les styles que vous voulez réutiliser, une **classe** est généralement plus appropriée.
+
+:::tip Bonne pratique
+Vous devez reconnaître `id` et `#id`, mais vous n'avez pas à multiplier les identifiants pour mettre votre site en forme.
+:::
+
+## 8. Quand plusieurs règles visent le même élément
+
+Un même élément peut être visé par plusieurs règles.
+
+HTML :
+
+```html
+<p class="mise-en-valeur">Attention!</p>
+```
+
+CSS :
+
+```css
+p {
+  color: #37474f;
+}
+
+.mise-en-valeur {
+  color: darkred;
+}
+```
+
+Le paragraphe avec la classe devient rouge : la règle de classe est plus précise que la règle générale qui vise tous les paragraphes.
+
+C'est une première idée de la **cascade CSS**.
+
+:::info À retenir pour aujourd'hui
+Vous n'avez pas à mémoriser toute la théorie de priorité CSS.
+
+Pour les cas simples :
+
+- une classe peut remplacer une règle générale sur un type d'élément;
+- lorsque deux règles comparables se contredisent, leur ordre peut aussi avoir un effet;
+- si le résultat vous surprend, cherchez quelles règles ciblent le même élément.
+:::
+
+## 9. Quelques propriétés visuelles utiles
+
+Nous allons volontairement utiliser seulement un petit ensemble de propriétés aujourd'hui.
+
+### Couleur du texte et arrière-plan
+
+```css
+h1 {
+  color: #245a86;
+}
+
+.mise-en-valeur {
+  color: #7a1f1f;
+  background-color: #f7eaea;
+}
+```
+
+![Exemple de couleurs de texte et d'arrière-plan](../../static/img/cours-introduction-css/couleurs-rendu.png)
+
+Vous pouvez utiliser un nom de couleur ou un code hexadécimal comme `#245a86`.
+
+### Typographie
+
+```css
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+```
+
+`rem` est une unité relative à la taille de référence du texte du document. Pour aujourd'hui, retenez simplement que `2rem` produit environ deux fois cette taille de référence.
+
+Vous pouvez aussi rencontrer :
+
+```css
+.mise-en-valeur {
+  font-weight: bold;
+}
+
+.citation {
+  font-style: italic;
+}
+```
+
+### Alignement du texte
+
+```css
+h1 {
+  text-align: center;
+}
+```
+
+### Bordure simple
+
+```css
+.mise-en-valeur {
+  border: 2px solid #b45b5b;
+}
+```
+
+La propriété `border` réunit ici :
+
+```text
+2px       → épaisseur
+solid     → style de trait
+#b45b5b   → couleur
+```
+
+![Exemple d'une bordure CSS](../../static/img/cours-introduction-css/bordure-rendu.png)
+
+À la rencontre 4, nous verrons plus précisément comment la bordure s'insère dans le **modèle en boîte** avec `padding` et `margin`.
+
+## 10. Exemple complet
+
+### Structure
+
+```text
+mon-site/
+├── index.html
+└── css/
+    └── styles.css
+```
+
+### `index.html`
+
+```html
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon site</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Mon site</h1>
+    </header>
+
+    <main>
+      <h2>Bienvenue</h2>
+      <p>Voici une première page mise en forme avec CSS.</p>
+      <p class="mise-en-valeur">Cette information reçoit un style particulier.</p>
+    </main>
+  </body>
+</html>
+```
+
+### `css/styles.css`
+
+```css
+body {
+  font-family: Arial, sans-serif;
+  color: #263238;
+}
+
+h1 {
+  color: #245a86;
+  text-align: center;
+}
+
+.mise-en-valeur {
+  color: #7a1f1f;
+  background-color: #f7eaea;
+  font-weight: bold;
+  border: 2px solid #b45b5b;
+}
+```
+
+## 11. Quand une page ne semble pas recevoir CSS
+
+Avant de changer vos règles au hasard, vérifiez :
+
+1. avez-vous enregistré `styles.css`?
+2. avez-vous enregistré la page HTML?
+3. le nom du fichier est-il exactement `styles.css`?
+4. le fichier se trouve-t-il réellement dans `css/`?
+5. le chemin dans `href` part-il du bon fichier HTML?
+6. avez-vous actualisé la bonne page dans le navigateur?
+
+:::tip Réflexe de débogage
+Si `index.html` est stylé mais qu'une page sous `pages/` ne l'est pas, vérifiez d'abord si vous avez oublié `../` dans le chemin vers CSS.
+:::
+
+## À retenir
+
+- HTML structure le contenu; CSS contrôle sa présentation.
+- Une feuille CSS externe évite de répéter les mêmes styles dans chaque page.
+- Une règle CSS contient un sélecteur et des déclarations.
+- Le chemin vers `styles.css` se lit à partir du fichier HTML actuel.
+- Un sélecteur d'élément vise un type d'élément.
+- Une classe peut être réutilisée et constitue l'outil principal pour cibler un rôle particulier.
+- `id` doit être reconnu, mais une classe convient mieux lorsqu'un style doit être réutilisé.
+- Une classe peut remplacer une règle plus générale dans un conflit simple.
+- Quelques propriétés suffisent déjà pour donner une identité visuelle au site.
+
+## Pratique guidée
+
+Avant de modifier votre Projet Web, faites l'exercice avec deux petites pages et une feuille CSS commune :
+
+**[Exercice guidé — Première feuille CSS](./03-rencontre3-exercice-guide.md)**
+
+## Projet Web
+
+Vous pourrez ensuite reprendre le site commencé aux rencontres 1 et 2 :
+
+**[Projet Web — Étape 3](../03-projet-web/03-rencontre3.md)**
 
 ## Validation disponible
 
-Début de la **Validation C** : WEB-05 — feuille CSS externe; WEB-06 — sélecteurs.
+À partir de cette rencontre, vous pouvez commencer la **Validation C** :
 
-## Source actuelle à intégrer
+- **WEB-05 — Associer correctement une feuille CSS externe**;
+- **WEB-06 — Cibler les éléments avec des sélecteurs appropriés**.
 
-- [Introduction à CSS](./00-introduction-css.md)
+Les propriétés visuelles pratiquent aussi la mise en forme, mais le modèle en boîte et la disposition seront développés aux rencontres 4 et 5.
