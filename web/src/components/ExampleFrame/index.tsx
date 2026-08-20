@@ -53,18 +53,30 @@ export default function ExampleFrame({
     setFrameHeight(clamp(contentHeight + 2, minHeight, maxHeight));
   }, [height, minHeight, maxHeight]);
 
+  const handleDocumentClick = useCallback((event: Event) => {
+    const target = event.target as HTMLElement | null;
+
+    if (!target?.closest?.("a[href]")) {
+      return;
+    }
+
+    observerRef.current?.disconnect();
+    observerRef.current = null;
+  }, []);
+
   const handleLoad = useCallback(() => {
     observerRef.current?.disconnect();
     observerRef.current = null;
 
-    measureHeight();
-
-    if (height !== undefined || typeof ResizeObserver === "undefined") {
+    const document = iframeRef.current?.contentDocument;
+    if (!document?.documentElement) {
       return;
     }
 
-    const document = iframeRef.current?.contentDocument;
-    if (!document?.documentElement) {
+    document.addEventListener("click", handleDocumentClick, { capture: true });
+    measureHeight();
+
+    if (height !== undefined || typeof ResizeObserver === "undefined") {
       return;
     }
 
@@ -76,7 +88,7 @@ export default function ExampleFrame({
     }
 
     observerRef.current = observer;
-  }, [height, measureHeight]);
+  }, [handleDocumentClick, height, measureHeight]);
 
   useEffect(() => {
     return () => observerRef.current?.disconnect();
