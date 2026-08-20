@@ -1,7 +1,7 @@
 # Plan d'ajustements — rencontres 1 à 5 après revue
 
 **Date : 2026-08-19**  
-**Statut : actif — AJ-01 à AJ-03 terminés; prochain point de reprise AJ-04**  
+**Statut : actif — AJ-01 à AJ-03 terminés; AJ-04 modifié, validation technique en attente**  
 **Branche de travail : `agent/ajustements-r1-r5`**
 
 Ce plan transforme les conclusions de `REVUE_TRANSVERSALE_R1_R5.md` et les décisions de l'enseignant en tâches d'ajustement bornées. Il complète `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` et devient le point de reprise opérationnel pour la phase **REV-03 — Ajustements de poids**.
@@ -199,7 +199,7 @@ Validation technique effectuée après le lot :
 
 ## AJ-04 — Améliorer la progression intraligne → interne → externe en R3
 
-**État : À faire**  
+**État : En cours — contenu modifié; validation technique requise avant `Terminé`**  
 **Dépend de : AJ-01**
 
 Fichier principal : `web/docs/01-cours/03-rencontre3.md`.
@@ -235,6 +235,18 @@ Ajouter une comparaison courte centrée sur la maintenance :
 - externe : un seul fichier peut servir à plusieurs pages; méthode privilégiée du Projet Web.
 
 Ne pas demander aux étudiants d'utiliser intraligne/interne dans le Projet Web et ne pas les ajouter à WEB-05.
+
+Résultat du lot AJ-04 :
+
+- seule la page `web/docs/01-cours/03-rencontre3.md` est modifiée côté étudiant;
+- les objectifs mentionnent maintenant la reconnaissance des trois formes et la raison de privilégier la feuille externe;
+- un même paragraphe en `darkred` montre successivement CSS intraligne, CSS interne et CSS externe;
+- la comparaison est centrée sur la répétition dans les éléments, puis entre les pages, puis sur la modification centralisée dans `styles.css`;
+- la feuille CSS externe demeure explicitement la méthode du Projet Web et la notion à maîtriser pour WEB-05;
+- l'exercice guidé, le Projet Web, les compétences et les images ne sont pas modifiés dans ce lot;
+- l'audit code ↔ rendu reste réservé à AJ-05.
+
+Avant de marquer AJ-04 `Terminé`, exécuter le build Docusaurus et vérifier que la page R3 rend correctement.
 
 ## AJ-05 — Audit code ↔ rendu visuel R3/R4
 
@@ -356,7 +368,7 @@ AJ-02 R2 minimum                        Terminé
   ↓
 AJ-03 propagation R3–R5                Terminé
   ↓
-AJ-04 progression CSS R3               Prochain
+AJ-04 progression CSS R3               En cours — build requis
   ↓
 AJ-05 audit visuel
   ↓
@@ -373,4 +385,4 @@ AJ-08 peut être réalisé en parallèle du travail visuel s'il n'y a pas de con
 
 # Point de reprise actuel
 
-> **AJ-04 — améliorer la progression CSS de la rencontre 3 en montrant brièvement intraligne → interne → externe avec un même besoin visuel et une justification concrète de la feuille externe.**
+> **AJ-04 — la progression intraligne → interne → externe est rédigée dans le cours R3. Avant de passer à AJ-05, valider le build et le rendu de la page, puis marquer AJ-04 `Terminé`.**

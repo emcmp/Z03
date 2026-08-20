@@ -15,6 +15,7 @@ Le but n'est pas d'apprendre toutes les possibilités de CSS en une seule rencon
 
 - expliquer le rôle de CSS par rapport à HTML;
 - reconnaître la syntaxe d'une règle CSS;
+- reconnaître les trois façons courantes d'ajouter du CSS et expliquer pourquoi nous privilégions la feuille externe;
 - créer un fichier `css/styles.css`;
 - relier une page HTML à une feuille CSS externe avec `<link>`;
 - utiliser le bon chemin vers CSS depuis la racine ou depuis un sous-dossier;
@@ -57,48 +58,78 @@ CSS  = présentation
 CSS ne remplace pas HTML. Une page Web utilise généralement HTML pour construire le contenu et CSS pour le mettre en forme.
 :::
 
-## 2. Pourquoi utiliser une feuille CSS externe?
+## 2. Trois façons d'ajouter le même style
 
-Il existe plusieurs façons d'ajouter du CSS à une page. Dans ce cours, nous allons privilégier **une feuille CSS externe**.
+Il existe plusieurs façons d'ajouter du CSS. Pour bien voir la différence, utilisons toujours le même besoin : **afficher un paragraphe en `darkred`**.
 
-Supposons que votre site possède trois pages :
+### CSS intraligne
 
-```text
-mon-site/
-├── index.html
-├── css/
-│   └── styles.css
-└── pages/
-    ├── sujet.html
-    └── apropos.html
+On peut écrire le CSS directement dans l'élément HTML avec l'attribut `style` :
+
+```html
+<p style="color: darkred;">Un paragraphe important.</p>
 ```
 
-Les trois pages peuvent charger le même fichier `styles.css`.
+Cette forme est facile à reconnaître parce que le CSS est placé directement dans la balise.
 
-Cela permet de :
+Mais si cinq paragraphes doivent avoir la même apparence, il faut répéter le même `style` cinq fois. HTML et CSS se retrouvent aussi mélangés dans les mêmes lignes.
 
-- garder HTML centré sur la structure et le contenu;
-- éviter de répéter les mêmes styles dans chaque page;
-- conserver une apparence cohérente;
-- modifier plusieurs pages en changeant un seul fichier CSS.
+### CSS interne
+
+On peut plutôt regrouper les règles dans un élément `<style>` placé dans `<head>` :
+
+```html
+<head>
+  <meta charset="UTF-8">
+  <title>Ma page</title>
+
+  <style>
+    p {
+      color: darkred;
+    }
+  </style>
+</head>
+```
+
+Le paragraphe peut alors rester simple :
+
+```html
+<p>Un paragraphe important.</p>
+```
+
+Cette méthode évite de répéter `style="..."` sur chaque paragraphe de **cette page**.
+
+Le problème apparaît lorsque plusieurs pages doivent utiliser les mêmes règles : il faut recopier le contenu de `<style>` dans chaque fichier HTML et penser à modifier toutes les copies plus tard.
+
+### CSS externe
+
+On peut enfin placer la règle dans un fichier séparé, par exemple `css/styles.css` :
+
+```css
+p {
+  color: darkred;
+}
+```
+
+Puis la page HTML charge cette feuille avec `<link>` :
+
+```html
+<link rel="stylesheet" href="css/styles.css">
+```
 
 ![Exemple de feuille CSS externe](../../static/img/cours-introduction-css/fichier-css-externe.png)
 
-:::tip Méthode recommandée
-Une feuille externe est particulièrement utile dès qu'un site possède plusieurs pages. C'est la méthode que nous utiliserons dans le Projet Web.
-:::
+Une deuxième page peut charger **le même fichier** au lieu de recopier la règle. Une modification dans `styles.css` peut donc mettre à jour plusieurs pages à la fois.
 
-### Deux formes que vous pourriez rencontrer
-
-Vous pourriez voir du CSS directement dans un attribut :
-
-```html
-<p style="color: red;">Un paragraphe rouge.</p>
+```text
+intraligne → la règle se répète dans les éléments
+interne    → la règle est regroupée, mais seulement dans une page
+externe    → un même fichier peut servir à plusieurs pages
 ```
 
-ou dans un élément `<style>` placé dans `<head>`.
-
-Ces formes existent, mais nous ne les utiliserons pas comme méthode principale. Notre objectif est de conserver les styles dans un fichier séparé.
+:::tip Méthode recommandée
+Vous devez savoir reconnaître les trois formes, mais le **Projet Web utilise une feuille CSS externe**. C'est la méthode à maîtriser pour garder les styles séparés du contenu et faciliter les modifications sur plusieurs pages.
+:::
 
 ## 3. Comprendre la syntaxe d'une règle CSS
 
@@ -492,7 +523,8 @@ Si `index.html` est stylé mais qu'une page sous `pages/` ne l'est pas, vérifie
 ## À retenir
 
 - HTML structure le contenu; CSS contrôle sa présentation.
-- Une feuille CSS externe évite de répéter les mêmes styles dans chaque page.
+- Le CSS peut être intraligne, interne ou externe; dans le Projet Web, nous utilisons une feuille externe partagée.
+- Une feuille CSS externe évite de répéter les mêmes styles dans chaque page et permet une modification centralisée.
 - Une règle CSS contient un sélecteur et des déclarations.
 - Le chemin vers `styles.css` se lit à partir du fichier HTML actuel.
 - Un sélecteur d'élément vise un type d'élément.
