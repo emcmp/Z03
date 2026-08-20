@@ -10,6 +10,25 @@ Pendant les cinq premières rencontres, votre Projet Web sert à démontrer prog
 
 L'ensemble de ces validations représente **30 % de la note finale du cours**.
 
+## Votre collection de badges
+
+Chaque compétence possède un **badge visuel**. Quand une compétence est validée, vous pouvez considérer son badge comme **acquis**.
+
+| Badge | Compétence |
+| --- | --- |
+| 🗂️ | **WEB-01 — Organiser un projet Web et utiliser les chemins** |
+| 🧱 | **WEB-02 — Construire une page HTML correctement structurée** |
+| ✍️ | **WEB-03 — Structurer et enrichir le contenu HTML** |
+| 🔗 | **WEB-04 — Relier plusieurs pages dans une navigation fonctionnelle** |
+| 🔌 | **WEB-05 — Associer correctement une feuille CSS externe** |
+| 🎯 | **WEB-06 — Cibler les éléments avec des sélecteurs appropriés** |
+| 🎨 | **WEB-07 — Mettre en forme une interface avec CSS** |
+| 📐 | **WEB-08 — Organiser l'espace et la disposition des éléments** |
+
+:::tip Objectif : compléter votre collection
+Les badges servent de repère visuel pour suivre votre progression. Le nom officiel de la compétence et son code **WEB-xx** demeurent toujours la référence pour l'évaluation.
+:::
+
 :::info Pas de grosse remise unique
 Vous n'attendez pas la fin du bloc HTML/CSS pour remettre un site complet. Les compétences sont plutôt validées progressivement pendant les périodes de travail, lorsque vous êtes prêt à les démontrer.
 :::
@@ -18,9 +37,9 @@ Vous n'attendez pas la fin du bloc HTML/CSS pour remettre un site complet. Les c
 
 Chaque compétence peut avoir l'un des trois états suivants :
 
-- **À faire** : la compétence n'a pas encore été présentée;
+- **À faire** : le badge n'a pas encore été présenté;
 - **À revoir** : une tentative a eu lieu, mais certains éléments doivent encore être travaillés;
-- **Validée** : la maîtrise observée est suffisante.
+- **Validée** : la maîtrise observée est suffisante et le badge est acquis.
 
 Lorsque vous pensez être prêt :
 
@@ -36,12 +55,12 @@ Une compétence indiquée **À revoir** pourra être présentée de nouveau lors
 
 Les huit compétences sont regroupées en **quatre moments de validation**. Les périodes indiquées sont des fenêtres de validation : elles ne signifient pas que toute la classe doit terminer exactement au même moment.
 
-| Validation | Période cible | Compétences | Ce qui est principalement observé |
+| Validation | Période cible | Badges / compétences | Ce qui est principalement observé |
 | --- | --- | --- | --- |
-| **A — Structure HTML** | **Rencontre 2** | WEB-01 et WEB-02 | Organisation du projet, chemins et structure générale des pages |
-| **B — Contenu et navigation** | **Rencontre 2 et début de la rencontre 3** | WEB-03 et WEB-04 | Contenu HTML, plusieurs pages et navigation fonctionnelle |
-| **C — CSS de base** | **Rencontres 3–4** | WEB-05 et WEB-06 | Feuille CSS externe, chemins, sélecteurs et classes |
-| **D — Mise en forme et disposition** | **Rencontres 4–5** | WEB-07 et WEB-08 | Mise en forme, modèle en boîte, espacements et disposition simple |
+| **A — Structure HTML** | **Rencontre 2** | 🗂️ WEB-01 et 🧱 WEB-02 | Organisation du projet, chemins et structure générale des pages |
+| **B — Contenu et navigation** | **Rencontre 2 et début de la rencontre 3** | ✍️ WEB-03 et 🔗 WEB-04 | Contenu HTML, plusieurs pages et navigation fonctionnelle |
+| **C — CSS de base** | **Rencontres 3–4** | 🔌 WEB-05 et 🎯 WEB-06 | Feuille CSS externe, chemins, sélecteurs et classes |
+| **D — Mise en forme et disposition** | **Rencontres 4–5** | 🎨 WEB-07 et 📐 WEB-08 | Mise en forme, modèle en boîte, espacements et disposition simple |
 
 :::tip Progression du groupe
 Le cours continue même si une compétence est encore **À revoir**. Par exemple, le groupe peut commencer CSS pendant que certaines validations HTML restent à compléter.
@@ -52,7 +71,7 @@ Le cours continue même si une compétence est encore **À revoir**. Par exemple
 Ouvrez une compétence pour voir ce qu'elle englobe et ce que vous devriez vérifier avant de demander sa validation.
 
 <details>
-<summary><strong>WEB-01 — Organiser un projet Web et utiliser les chemins</strong></summary>
+<summary><strong>🗂️ WEB-01 — Organiser un projet Web et utiliser les chemins</strong></summary>
 
 ### Ce que cette compétence englobe
 
@@ -71,7 +90,7 @@ Ouvrez une compétence pour voir ce qu'elle englobe et ce que vous devriez véri
 </details>
 
 <details>
-<summary><strong>WEB-02 — Construire une page HTML correctement structurée</strong></summary>
+<summary><strong>🧱 WEB-02 — Construire une page HTML correctement structurée</strong></summary>
 
 ### Ce que cette compétence englobe
 
@@ -95,7 +114,7 @@ Valider votre HTML et garder une indentation lisible sont d'excellentes façons 
 </details>
 
 <details>
-<summary><strong>WEB-03 — Structurer et enrichir le contenu HTML</strong></summary>
+<summary><strong>✍️ WEB-03 — Structurer et enrichir le contenu HTML</strong></summary>
 
 ### Ce que cette compétence englobe
 
@@ -118,7 +137,7 @@ Les éléments comme `header`, `nav`, `main` et `footer`, ainsi qu'un texte alte
 </details>
 
 <details>
-<summary><strong>WEB-04 — Relier plusieurs pages dans une navigation fonctionnelle</strong></summary>
+<summary><strong>🔗 WEB-04 — Relier plusieurs pages dans une navigation fonctionnelle</strong></summary>
 
 ### Ce que cette compétence englobe
 
@@ -141,7 +160,7 @@ Utiliser un élément `nav` pour regrouper une navigation importante est recomma
 </details>
 
 <details>
-<summary><strong>WEB-05 — Associer correctement une feuille CSS externe</strong></summary>
+<summary><strong>🔌 WEB-05 — Associer correctement une feuille CSS externe</strong></summary>
 
 ### Ce que cette compétence englobe
 
@@ -160,7 +179,7 @@ Utiliser un élément `nav` pour regrouper une navigation importante est recomma
 </details>
 
 <details>
-<summary><strong>WEB-06 — Cibler les éléments avec des sélecteurs appropriés</strong></summary>
+<summary><strong>🎯 WEB-06 — Cibler les éléments avec des sélecteurs appropriés</strong></summary>
 
 ### Ce que cette compétence englobe
 
@@ -183,7 +202,7 @@ Les identifiants `id` et la cascade CSS doivent être compris lorsqu'ils apparai
 </details>
 
 <details>
-<summary><strong>WEB-07 — Mettre en forme une interface avec CSS</strong></summary>
+<summary><strong>🎨 WEB-07 — Mettre en forme une interface avec CSS</strong></summary>
 
 ### Ce que cette compétence englobe
 
@@ -206,7 +225,7 @@ Il n'est pas nécessaire d'avoir un nombre précis de couleurs, de polices, de b
 </details>
 
 <details>
-<summary><strong>WEB-08 — Organiser l'espace et la disposition des éléments</strong></summary>
+<summary><strong>📐 WEB-08 — Organiser l'espace et la disposition des éléments</strong></summary>
 
 ### Ce que cette compétence englobe
 
@@ -233,6 +252,7 @@ Il n'est pas nécessaire d'avoir un nombre précis de couleurs, de polices, de b
 
 Avant de demander une validation, faites ce dernier contrôle rapide :
 
+- [ ] J'ai identifié le ou les badges que je veux faire valider.
 - [ ] J'ai relu la checklist des compétences que je veux présenter.
 - [ ] Mon site s'ouvre et la partie que je veux montrer fonctionne dans le navigateur.
 - [ ] Je sais où se trouvent les fichiers et les lignes de code que je veux présenter.
