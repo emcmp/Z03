@@ -25,9 +25,10 @@ mon-site/
 ├── images/
 │   └── ...
 └── pages/
-    ├── sujet.html
-    └── apropos.html
+    └── sujet.html
 ```
+
+Si votre site contient une ou plusieurs pages secondaires supplémentaires, conservez-les. Le minimum exigé reste une page sous `pages/`.
 
 Ne créez pas une deuxième feuille CSS pour cette rencontre.
 

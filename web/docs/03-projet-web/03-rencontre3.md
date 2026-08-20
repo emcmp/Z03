@@ -23,12 +23,12 @@ Votre projet ressemble probablement à ceci :
 mon-site/
 ├── index.html
 ├── images/
-│   ├── image1.jpg
-│   └── image2.jpg
+│   └── image1.jpg
 └── pages/
-    ├── sujet.html
-    └── apropos.html
+    └── sujet.html
 ```
+
+Si vous avez ajouté une deuxième page secondaire à la rencontre 2, conservez-la. Une seule page sous `pages/` suffit toutefois pour poursuivre le Projet Web.
 
 Ne recommencez pas un nouveau site.
 
@@ -47,11 +47,9 @@ mon-site/
 ├── css/
 │   └── styles.css
 ├── images/
-│   ├── image1.jpg
-│   └── image2.jpg
+│   └── image1.jpg
 └── pages/
-    ├── sujet.html
-    └── apropos.html
+    └── sujet.html
 ```
 
 ## 2. Créer `css/styles.css`
@@ -93,7 +91,7 @@ Si rien ne change, vérifiez d'abord le chemin et le nom du fichier.
 
 Une page située dans `pages/` doit d'abord remonter d'un dossier.
 
-Dans `pages/sujet.html` et `pages/apropos.html`, ajoutez :
+Dans chaque page située sous `pages/`, ajoutez :
 
 ```html
 <link rel="stylesheet" href="../css/styles.css">

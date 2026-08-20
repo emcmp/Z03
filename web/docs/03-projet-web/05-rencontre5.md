@@ -32,9 +32,10 @@ mon-site/
 ├── images/
 │   └── ...
 └── pages/
-    ├── sujet.html
-    └── apropos.html
+    └── sujet.html
 ```
+
+Si votre site contient une ou plusieurs pages secondaires supplémentaires, conservez-les. Le minimum exigé reste une page sous `pages/`.
 
 Ne créez pas un nouveau site et ne créez pas une nouvelle feuille CSS pour Flexbox.
 
@@ -42,7 +43,7 @@ Tout continue dans votre projet actuel.
 
 ## 2. Utiliser Flexbox pour la navigation
 
-Votre navigation possède déjà plusieurs liens.
+Votre navigation possède déjà des liens.
 
 Par exemple :
 
@@ -50,9 +51,10 @@ Par exemple :
 <nav class="navigation">
   <a href="index.html">Accueil</a>
   <a href="pages/sujet.html">Mon sujet</a>
-  <a href="pages/apropos.html">À propos</a>
 </nav>
 ```
+
+Si vous avez ajouté une autre page facultative, conservez aussi son lien dans votre navigation.
 
 Dans `styles.css`, vous pouvez organiser les liens ainsi :
 
