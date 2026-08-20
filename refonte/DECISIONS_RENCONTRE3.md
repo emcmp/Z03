@@ -1,7 +1,8 @@
 # Décisions de conception — Rencontre 3
 
 **Date : 2026-08-19**  
-**Statut : R3-01 à R3-04 implémentés; R3-05 en attente de validation technique locale**  
+**Statut : R3-01 à R3-05 terminés; rencontre prête à réviser**
+
 **Plan maître : `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`**
 
 Ce document consigne le résultat de **R3-01 — Délimiter le contenu de cours** avant la rédaction de la rencontre 3. Il permet de reprendre le travail sans redécider la portée pédagogique si l'implémentation est interrompue.
@@ -181,26 +182,19 @@ Les éléments suivants sont maintenant présents sur `main` :
 - `web/docs/03-projet-web/03-rencontre3.md` — Projet Web, étape 3;
 - `web/sidebars.js` — rencontre 3 structurée en Cours / Exercice guidé / Projet Web.
 
-## Validation technique requise
+## Validation technique réalisée
 
-La tentative de build depuis l'environnement du GPT-concepteur n'a pas pu démarrer parce que le conteneur ne pouvait pas résoudre `github.com` pour cloner le dépôt. Ce n'est pas un échec Docusaurus constaté : le build n'a simplement pas pu être exécuté dans cet environnement.
+Validation locale réussie le 2026-08-19 :
 
-Une validation locale doit donc vérifier :
-
-1. `npm run build`;
-2. `git diff --check` si le contrôle est fait avant un nouveau commit local;
-3. les IDs de `web/sidebars.js`;
-4. les liens Cours → Exercice guidé → Projet Web;
-5. l'existence des images réutilisées sous `web/static/img/cours-introduction-css/`;
-6. le rendu des blocs de code et admonitions;
-7. la cohérence des chemins `css/styles.css` / `../css/styles.css`.
-
-Cette vérification est une bonne tâche pour Codex local et ne doit pas modifier les choix pédagogiques.
+- `npm run build` réussit après nettoyage du cache généré Docusaurus;
+- `git diff --check` réussit;
+- les IDs de `web/sidebars.js` et les liens Cours → Exercice guidé → Projet Web sont résolus;
+- les six images utilisées sous `web/static/img/cours-introduction-css/` existent, sont lisibles et répondent en HTTP 200;
+- les blocs de code et admonitions sont présents dans le HTML généré;
+- les trois routes R3 répondent en HTTP 200 sans marqueur de page 404.
 
 ## Point de reprise
 
-Si la validation technique de R3 réussit, la prochaine tâche pédagogique est :
+La prochaine tâche pédagogique est :
 
-> **R4-01 — Extraire et fixer le noyau du modèle en boîte pour la rencontre 4.**
-
-Si la validation révèle un problème purement technique, le corriger sans modifier la portée pédagogique de R3, puis mettre à jour le plan maître et `SUIVI_CONTENU.md`.
+> **REV-01 — Relecture ciblée de R2**, puis **REV-02 — Lecture transversale R1 → R5**.

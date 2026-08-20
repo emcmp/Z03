@@ -1,6 +1,7 @@
 # Tâches Codex — validation technique des rencontres 3 à 5
 
-**Statut : prêt à déléguer**  
+**Statut : terminé**
+
 **Date : 2026-08-19**  
 **Responsabilité pédagogique : GPT-concepteur**
 
@@ -45,7 +46,9 @@ Le conteneur du GPT-concepteur n'a pas pu lancer le build parce qu'il ne pouvait
 
 # CODEX-R3R5-01 — Synchroniser et inspecter l'état local
 
-**État : À faire**
+**État : Terminé**
+
+**Résultat :** `main` est propre au point de départ et synchronisé avec `origin/main` (`0` commit en avance, `0` commit en retard). Aucun changement utilisateur n'a été écrasé.
 
 1. Lire `AGENTS.md`, `web/AGENTS.md`, `refonte/PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` et le présent fichier.
 2. Vérifier :
@@ -61,7 +64,9 @@ git log --oneline -12
 
 # CODEX-R3R5-02 — Vérifier les fichiers et les liens
 
-**État : À faire**
+**État : Terminé**
+
+**Résultat :** les neuf pages existent; les neuf IDs du sidebar correspondent aux IDs Docusaurus dérivés des chemins et sont confirmés par le build; les parcours Cours → Exercice guidé → Projet Web et les retours Projet Web → Cours / Exercice sont résolus; les étapes 3, 4 et 5 portent respectivement les positions 4, 5 et 6; aucun lien local des neuf pages ne vise un fichier absent.
 
 Vérifier mécaniquement :
 
@@ -76,7 +81,9 @@ Ne pas changer le contenu pédagogique sauf correction technique non ambiguë d'
 
 # CODEX-R3R5-03 — Vérifier les assets
 
-**État : À faire**
+**État : Terminé**
+
+**Résultat :** les six images utilisées par R3 et les quatre images utilisées par R4 existent dans les répertoires attendus, sont des PNG lisibles et ont toutes un texte alternatif non vide. R5 ne référence aucune nouvelle image obligatoire.
 
 Pour R3, confirmer l'existence des images référencées sous :
 
@@ -96,7 +103,9 @@ Si une image référencée n'existe pas :
 
 # CODEX-R3R5-04 — Build et contrôle visuel
 
-**État : À faire**
+**État : Terminé**
+
+**Résultat :** après `npm run clear` pour retirer un cache Docusaurus incohérent, `npm run build` réussit. `git diff --check` réussit. Le serveur statique a rendu les neuf routes avec un statut HTTP 200; les titres, admonitions, blocs de code, liens, images et l'ordre du sidebar Projet Web sont présents dans le HTML généré. L'automatisation du navigateur intégrée a refusé la connexion; le contrôle a donc été complété par l'inspection du HTML rendu, des réponses HTTP et d'images représentatives à pleine taille.
 
 Depuis la racine :
 
@@ -131,8 +140,11 @@ Ne pas juger ou réécrire le poids pédagogique à ce stade.
 
 # CODEX-R3R5-05 — Réconcilier la documentation de suivi
 
-**État : À faire**  
+**État : Terminé**
+
 **Dépend de : build réussi**
+
+**Résultat :** le plan marque R3-01 à R5-05 terminés et les trois rencontres prêtes à réviser; `SUIVI_CONTENU.md` consigne les migrations et conserve les sources historiques; les trois fichiers de décisions consignent le build et les contrôles réussis. Le point de reprise est REV-01, puis REV-02.
 
 Mettre à jour `refonte/PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` avec l'état réel :
 
@@ -154,7 +166,7 @@ Mettre à jour les trois fichiers de décisions si nécessaire pour remplacer «
 
 # CODEX-R3R5-06 — Rapport final
 
-**État : À faire**
+**État : Terminé**
 
 Fournir :
 

@@ -103,9 +103,9 @@ Les anciennes captures suffisamment claires peuvent être utilisées **provisoir
 | **Bien débuter** | onglet et sidebar fonctionnels; Fonctionnement du cours et Accès au poste et compte réseau sont présents | **Terminé** |
 | **Rencontre 1** | cours, exercice et Projet Web présents; VS Code illustré; captures Windows/ZIP historiques sélectionnées, intégrées et validées | **Terminé — correctif ciblé** |
 | **Rencontre 2** | cours détaillé, exercice avec `chat.jpg`, Étape 2 présente, navigation structurée | **Prêt à réviser** |
-| **Rencontre 3** | squelette seulement | **À faire** |
-| **Rencontre 4** | squelette seulement | **À faire** |
-| **Rencontre 5** | squelette seulement | **À faire** |
+| **Rencontre 3** | cours, exercice guidé, Projet Web — Étape 3, assets et navigation validés techniquement | **Prêt à réviser** |
+| **Rencontre 4** | cours, exercice guidé, Projet Web — Étape 4, assets et navigation validés techniquement | **Prêt à réviser** |
+| **Rencontre 5** | cours, exercice guidé, Projet Web — Étape 5 et navigation validés techniquement | **Prêt à réviser** |
 
 # Ordre d'implémentation
 
@@ -272,7 +272,7 @@ La partie ZIP doit montrer **les deux opérations** lorsqu'elles sont utiles : c
 
 ### R3-01 — Délimiter le contenu de cours
 
-**État : À faire**
+**État : Terminé**
 
 Source principale : `web/docs/01-cours/00-introduction-css.md`.
 
@@ -295,14 +295,16 @@ Source principale : `web/docs/01-cours/00-introduction-css.md`.
 
 ### R3-02 — Rédiger le cours canonique
 
-**État : À faire**  
+**État : Terminé**
+
 **Dépend de : R3-01**
 
 Transformer `web/docs/01-cours/03-rencontre3.md` en véritable page étudiante de rencontre 3 en réutilisant et simplifiant le matériel pertinent de `00-introduction-css.md`.
 
 ### R3-03 — Créer l'exercice guidé CSS
 
-**État : À faire**  
+**État : Terminé**
+
 **Dépend de : R3-02**
 
 Créer un petit exercice guidé distinct du Projet Web permettant de pratiquer : feuille externe, chemin CSS, sélecteur d'élément, classe et quelques propriétés visuelles.
@@ -311,7 +313,8 @@ L'exercice doit être assez court pour laisser du temps au Projet Web.
 
 ### R3-04 — Créer Projet Web — Étape 3
 
-**État : À faire**  
+**État : Terminé**
+
 **Dépend de : R3-02 et R3-03**
 
 Poursuivre le site des étapes 1 et 2 : création de `css/styles.css`, liaison depuis toutes les pages, première identité visuelle cohérente, utilisation volontaire de classes.
@@ -320,7 +323,8 @@ Validation visée : début de **Validation C — WEB-05 / WEB-06**.
 
 ### R3-05 — Navigation, ressources et validation technique
 
-**État : À faire**  
+**État : Terminé**
+
 **Dépend de : R3-02 à R3-04**
 
 - transformer la rencontre 3 dans `web/sidebars.js` en catégorie Cours / Exercice guidé / Projet Web;
@@ -335,7 +339,7 @@ Validation visée : début de **Validation C — WEB-05 / WEB-06**.
 
 ### R4-01 — Extraire le noyau utile du matériel existant
 
-**État : À faire**
+**État : Terminé**
 
 Source principale : `web/docs/01-cours/00-modele-boites-positionnement.md`.
 
@@ -358,21 +362,24 @@ Source principale : `web/docs/01-cours/00-modele-boites-positionnement.md`.
 
 ### R4-02 — Rédiger le cours canonique
 
-**État : À faire**  
+**État : Terminé**
+
 **Dépend de : R4-01**
 
 Transformer `web/docs/01-cours/04-rencontre4.md` en véritable page étudiante centrée sur le modèle en boîte et les espacements.
 
 ### R4-03 — Créer l'exercice guidé « carte / bloc »
 
-**État : À faire**  
+**État : Terminé**
+
 **Dépend de : R4-02**
 
 Créer un exercice très visuel où l'étudiant manipule `padding`, `border`, `margin` et une dimension simple afin de comprendre la différence entre espace intérieur et extérieur.
 
 ### R4-04 — Créer Projet Web — Étape 4
 
-**État : À faire**  
+**État : Terminé**
+
 **Dépend de : R4-02 et R4-03**
 
 Faire améliorer des sections du site en blocs lisibles avec espacements volontaires, sans imposer un design uniforme à tous les sujets.
@@ -381,7 +388,8 @@ Validations visées : fin possible de **Validation C** et début de **Validation
 
 ### R4-05 — Navigation, ressources et validation technique
 
-**État : À faire**  
+**État : Terminé**
+
 **Dépend de : R4-02 à R4-04**
 
 Même contrôle de sortie que R3-05.
@@ -392,7 +400,7 @@ Même contrôle de sortie que R3-05.
 
 ### R5-01 — Définir le Flexbox minimal
 
-**État : À faire**
+**État : Terminé**
 
 Noyau prévu :
 
@@ -406,21 +414,24 @@ Ne pas rendre obligatoires : Flexbox avancé, Grid, positionnement, animations, 
 
 ### R5-02 — Rédiger le cours canonique
 
-**État : À faire**  
+**État : Terminé**
+
 **Dépend de : R5-01**
 
 Transformer `web/docs/01-cours/05-rencontre5.md` en page complète avec exemples très simples de disposition.
 
 ### R5-03 — Créer l'exercice guidé Flexbox
 
-**État : À faire**  
+**État : Terminé**
+
 **Dépend de : R5-02**
 
 Pratiquer une navigation horizontale et un petit groupe de blocs. L'objectif est de comprendre l'idée parent flex → enfants disposés, pas de couvrir Flexbox exhaustivement.
 
 ### R5-04 — Créer Projet Web — Étape 5
 
-**État : À faire**  
+**État : Terminé**
+
 **Dépend de : R5-02 et R5-03**
 
 Améliorer au moins une disposition utile dans le site, harmoniser les pages et consacrer le reste du temps à la correction et aux validations.
@@ -429,7 +440,8 @@ Validation visée : finalisation de **Validation D — WEB-07 / WEB-08** et repr
 
 ### R5-05 — Navigation, ressources et validation technique
 
-**État : À faire**  
+**État : Terminé**
+
 **Dépend de : R5-02 à R5-04**
 
 Même contrôle de sortie que R3-05.
@@ -539,10 +551,8 @@ Si une tâche a été interrompue sans mise à jour de statut, inspecter les der
 
 # Point de reprise actuel
 
-La phase ciblée **Bien débuter / Environnement de travail** est terminée et validée. L'ancien Atelier demeure une source historique; l'autodiagnostic informatique reste la seule décision pédagogique ouverte de ce lot.
+La phase ciblée **Bien débuter / Environnement de travail** est terminée et validée. Les rencontres 3, 4 et 5 sont implémentées et techniquement validées : les neuf pages, leurs IDs, leurs liens, leurs assets et l'ordre du Projet Web sont cohérents; `npm run build` et `git diff --check` réussissent. L'ancien Atelier et les pages sources `00-*` demeurent des sources historiques; l'autodiagnostic informatique reste la seule décision pédagogique ouverte du lot Bien débuter.
 
 La prochaine tâche normale revient au GPT-concepteur :
 
-> **R3-01 — Délimiter le contenu de cours de la rencontre 3.**
-
-Codex pourra ensuite reprendre avec un contrôle technique borné lorsque la rencontre 3 aura été rédigée.
+> **REV-01 — Relecture ciblée de la rencontre 2**, puis **REV-02 — Lecture transversale R1 → R5**.

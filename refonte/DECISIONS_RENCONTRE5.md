@@ -1,7 +1,8 @@
 # Décisions de conception — Rencontre 5
 
 **Date : 2026-08-19**  
-**Statut : R5-01 à R5-04 implémentés; R5-05 en attente de validation technique locale**  
+**Statut : R5-01 à R5-05 terminés; rencontre prête à réviser**
+
 **Plan maître : `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`**
 
 Ce document consigne le résultat de **R5-01 — Définir le Flexbox minimal** avant la rédaction de la rencontre 5.
@@ -149,17 +150,15 @@ Les éléments suivants sont maintenant présents sur `main` :
 - `web/docs/03-projet-web/05-rencontre5.md` — Projet Web, étape 5;
 - `web/sidebars.js` — rencontre 5 structurée en Cours / Exercice guidé / Projet Web.
 
-## Validation technique requise
+## Validation technique réalisée
 
-La validation locale doit vérifier avec R3 et R4 :
+Validation locale réussie le 2026-08-19 :
 
-1. `npm run build`;
-2. les IDs de navigation;
-3. les liens entre cours, exercice et Projet Web;
-4. les blocs de code Flexbox;
-5. que les pages R3–R5 ne contiennent pas de liens ou assets absents.
-
-Cette vérification peut être réalisée par Codex local sans modifier les choix pédagogiques.
+- `npm run build` et `git diff --check` réussissent;
+- les IDs de navigation et les liens entre cours, exercice et Projet Web sont résolus;
+- les blocs de code Flexbox et les admonitions sont présents dans le HTML généré;
+- les trois routes R5 répondent en HTTP 200 sans marqueur de page 404;
+- aucune page R3–R5 ne pointe vers un lien local ou un asset absent.
 
 ## Point de reprise
 

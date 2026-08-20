@@ -1,7 +1,8 @@
 # Décisions de conception — Rencontre 4
 
 **Date : 2026-08-19**  
-**Statut : R4-01 à R4-04 implémentés; R4-05 en attente de validation technique locale**  
+**Statut : R4-01 à R4-05 terminés; rencontre prête à réviser**
+
 **Plan maître : `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`**
 
 Ce document consigne le résultat de **R4-01 — Extraire le noyau utile du matériel existant** avant la rédaction de la rencontre 4.
@@ -152,17 +153,15 @@ Les éléments suivants sont maintenant présents sur `main` :
 - `web/docs/03-projet-web/04-rencontre4.md` — Projet Web, étape 4;
 - `web/sidebars.js` — rencontre 4 structurée en Cours / Exercice guidé / Projet Web.
 
-## Validation technique requise
+## Validation technique réalisée
 
-La validation locale doit vérifier avec R3 et R5 :
+Validation locale réussie le 2026-08-19 :
 
-1. `npm run build`;
-2. les IDs de `web/sidebars.js`;
-3. les liens entre cours, exercice et Projet Web;
-4. l'existence des images réutilisées;
-5. le rendu des exemples et admonitions.
-
-Cette vérification peut être réalisée par Codex local sans modifier les choix pédagogiques.
+- `npm run build` et `git diff --check` réussissent;
+- les IDs de `web/sidebars.js` et les liens entre cours, exercice et Projet Web sont résolus;
+- les quatre images utilisées sous `web/static/img/cours-modele-boites-positionnement/` existent, sont lisibles et répondent en HTTP 200;
+- les exemples de code et admonitions sont présents dans le HTML généré;
+- les trois routes R4 répondent en HTTP 200 sans marqueur de page 404.
 
 ## Point de reprise
 
