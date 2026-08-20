@@ -1,7 +1,7 @@
 # Décisions de conception — Rencontre 5
 
 **Date : 2026-08-19**  
-**Statut : R5-01 terminé; R5-02 à R5-05 à implémenter**  
+**Statut : R5-01 à R5-04 implémentés; R5-05 en attente de validation technique locale**  
 **Plan maître : `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`**
 
 Ce document consigne le résultat de **R5-01 — Définir le Flexbox minimal** avant la rédaction de la rencontre 5.
@@ -19,7 +19,7 @@ La rencontre ne doit donc pas devenir un grand chapitre Flexbox. Elle doit fourn
 
 ## Modèle mental principal
 
-Flexbox doit être présenté avec une idée simple :
+Flexbox est présenté avec une idée simple :
 
 > On applique `display: flex` au **parent** pour organiser ses **enfants directs**.
 
@@ -57,63 +57,65 @@ La navigation est le premier cas concret parce qu'elle réutilise directement le
 
 ### `justify-content`
 
-Montrer seulement quelques valeurs utiles :
+Le cours montre seulement quelques valeurs utiles :
 
 - `flex-start` comme comportement de départ conceptuel;
 - `center`;
 - `space-between` lorsqu'un besoin réel le justifie.
 
-Ne pas faire mémoriser toutes les valeurs.
+Aucune mémorisation exhaustive n'est demandée.
 
 ### `align-items`
 
-Présenter comme contrôle de l'alignement sur l'autre axe et montrer surtout :
+La propriété est présentée comme contrôle de l'alignement sur l'autre axe avec surtout :
 
-- `center` dans un exemple simple;
-- éventuellement `flex-start` pour comparer.
+- `center`;
+- `flex-start` pour comparer.
 
-Ne pas transformer R5 en théorie détaillée des axes.
+R5 ne devient pas un chapitre détaillé sur les axes Flexbox.
 
 ## Contenu volontairement hors noyau
 
-Ne pas rendre obligatoires :
+Ne sont pas rendus obligatoires :
 
 - `flex-direction` comme chapitre;
 - `flex-wrap`;
 - `flex-grow`, `flex-shrink`, `flex-basis`;
 - propriété abrégée `flex`;
 - `order`;
-- alignement individuel avec `align-self`;
+- `align-self`;
 - Flexbox imbriqué complexe;
 - Grid;
 - positionnement;
 - animations et transitions.
 
-`flex-wrap` peut être mentionné **Pour aller plus loin — non évalué** si un étudiant veut éviter qu'une navigation déborde sur un petit écran.
+`flex-wrap` est seulement mentionné **Pour aller plus loin — non évalué**.
 
-## Exercice guidé prévu
+## Exercice guidé
 
-Créer `05-rencontre5-exercice-guide.md` avec deux situations simples :
+Implémenté dans `web/docs/01-cours/05-rencontre5-exercice-guide.md` avec deux situations :
 
 1. transformer une navigation en conteneur flex et utiliser `gap`;
 2. placer quelques cartes côte à côte avec un parent `.cartes`.
 
-L'exercice doit faire verbaliser :
+L'exercice fait verbaliser :
 
 - quel élément est le parent flex;
 - quels éléments sont les enfants directs;
 - où `gap` crée l'espace;
 - ce qui se passe si `display: flex` est appliqué au mauvais élément.
 
-`justify-content` et `align-items` sont expérimentés avec une ou deux valeurs, sans catalogue exhaustif.
+`justify-content` et `align-items` sont expérimentés avec quelques valeurs seulement.
 
-## Projet Web — Étape 5 prévue
+## Projet Web — Étape 5
 
-Le projet doit privilégier **l'intégration plutôt que l'ajout de nouvelles fonctionnalités**.
+Implémenté dans `web/docs/03-projet-web/05-rencontre5.md`.
+
+Le projet privilégie **l'intégration plutôt que l'ajout de nouvelles fonctionnalités**.
 
 L'étudiant doit :
 
-- utiliser Flexbox dans au moins une situation utile, idéalement la navigation;
+- utiliser Flexbox dans une situation utile, idéalement la navigation;
 - utiliser `gap` pour gérer l'espacement des enfants flex;
 - utiliser `justify-content` ou `align-items` seulement si cela améliore réellement la disposition;
 - vérifier toutes les pages et leurs chemins;
@@ -121,7 +123,7 @@ L'étudiant doit :
 - harmoniser l'apparence générale sans rendre tous les sites identiques;
 - se préparer aux validations restantes.
 
-Aucun nombre précis de conteneurs flex n'est exigé. Une utilisation comprise et pertinente vaut mieux que plusieurs Flexbox ajoutés artificiellement.
+Aucun nombre précis de conteneurs flex n'est exigé.
 
 ## Validation
 
@@ -134,12 +136,33 @@ Après R5, aucune nouvelle notion HTML/CSS essentielle n'est prévue. JavaScript
 
 ## Ressources
 
-Aucune ressource externe n'est requise pour comprendre le noyau. Les exemples de code et un petit schéma textuel parent/enfants sont suffisants pour cette passe.
+Aucune ressource externe n'est requise pour comprendre le noyau. Les exemples de code et les schémas textuels parent/enfants suffisent pour cette passe.
 
-Une illustration Flexbox dédiée pourrait être ajoutée plus tard si elle améliore réellement la compréhension, mais elle ne doit pas bloquer le premier cours ni la finalisation R1–R5.
+Une illustration Flexbox dédiée pourra être ajoutée plus tard si elle apporte une vraie valeur pédagogique, mais elle n'est pas bloquante.
+
+## Implémentation réalisée
+
+Les éléments suivants sont maintenant présents sur `main` :
+
+- `web/docs/01-cours/05-rencontre5.md` — cours canonique complet;
+- `web/docs/01-cours/05-rencontre5-exercice-guide.md` — exercice guidé;
+- `web/docs/03-projet-web/05-rencontre5.md` — Projet Web, étape 5;
+- `web/sidebars.js` — rencontre 5 structurée en Cours / Exercice guidé / Projet Web.
+
+## Validation technique requise
+
+La validation locale doit vérifier avec R3 et R4 :
+
+1. `npm run build`;
+2. les IDs de navigation;
+3. les liens entre cours, exercice et Projet Web;
+4. les blocs de code Flexbox;
+5. que les pages R3–R5 ne contiennent pas de liens ou assets absents.
+
+Cette vérification peut être réalisée par Codex local sans modifier les choix pédagogiques.
 
 ## Point de reprise
 
-Le prochain travail est :
+Après validation technique du bloc R3–R5, le prochain travail pédagogique est :
 
-> **R5-02 — Rédiger `web/docs/01-cours/05-rencontre5.md` selon les décisions ci-dessus.**
+> **REV-01 puis REV-02 — relire R2 et ensuite la progression complète R1 → R5 pour juger le poids réel de chaque rencontre.**
