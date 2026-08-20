@@ -1,6 +1,6 @@
 ---
 title: Liens utiles
-description: Ressources utiles pour le cours de programmation Web : validation HTML, références HTML/CSS/JavaScript et générateurs CSS.
+description: "Ressources utiles pour le cours de programmation Web : validation HTML, références HTML/CSS/JavaScript et générateurs CSS."
 ---
 
 # Liens utiles
