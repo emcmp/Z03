@@ -100,7 +100,27 @@ const sidebars = {
         },
       ],
     },
-    { type: "doc", id: "cours/rencontre5", label: "Rencontre 5 — Flexbox simple et intégration" },
+    {
+      type: "category",
+      label: "Rencontre 5 — Flexbox simple et intégration",
+      items: [
+        {
+          type: "doc",
+          id: "cours/rencontre5",
+          label: "Cours — Flexbox simple et intégration",
+        },
+        {
+          type: "doc",
+          id: "cours/rencontre5-exercice-guide",
+          label: "Exercice guidé — Flexbox simple",
+        },
+        {
+          type: "ref",
+          id: "projet-web/rencontre5",
+          label: "Projet Web — Étape 5",
+        },
+      ],
+    },
     { type: "doc", id: "cours/rencontre6", label: "Rencontre 6 — Variables et JavaScript" },
     { type: "doc", id: "cours/rencontre7", label: "Rencontre 7 — Conditions et logique" },
     { type: "doc", id: "cours/rencontre8", label: "Rencontre 8 — Fonctions" },
