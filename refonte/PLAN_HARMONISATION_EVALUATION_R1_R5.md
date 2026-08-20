@@ -1,7 +1,7 @@
 # Plan d'harmonisation — évaluation et correctifs R1 à R5
 
 **Date : 2026-08-20**  
-**Statut : en cours**  
+**Statut : prêt pour validation locale**  
 **Branche : `agent/harmonisation-evaluation-r1-r5`**
 
 Ce lot part de `main` après le nettoyage des anciennes branches de travail. Il vise à harmoniser les décisions déjà prises autour de l'évaluation HTML/CSS et à terminer quelques correctifs bornés des rencontres 1 à 5 avant de reprendre les travaux visuels du Projet Web.
@@ -17,24 +17,30 @@ Ce lot part de `main` après le nettoyage des anciennes branches de travail. Il 
 
 ## HARM-01 — Officialiser la pondération de 30 %
 
-**État : En cours**
+**État : Fait**
 
-Harmoniser au minimum :
+Références harmonisées :
 
-- `refonte/EVALUATION.md` — **fait**;
+- `refonte/EVALUATION.md`;
 - `refonte/COMPETENCES_HTML_CSS.md`;
 - `refonte/SUIVI_CONTENU.md`;
 - `refonte/PLAN_SITE_EVOLUTIF.md`;
 - `web/docs/03-projet-web/00-presentation.md` — déjà cohérent;
 - `web/docs/03-projet-web/00-evaluation.md` — déjà cohérent.
 
-Résultat attendu : aucune de ces références ne présente encore le 30 % comme une hypothèse à confirmer.
+Résultat : le bloc HTML/CSS R1–R5 est présenté comme représentant **30 % de la note finale**. Seule la répartition exacte entre WEB-01 et WEB-08 reste à détailler ultérieurement; elle ne remet pas en question le total de 30 % ni les quatre moments de validation.
 
 ## HARM-02 — Retirer l'autodiagnostic des suivis actifs
 
-**État : À faire**
+**État : Fait**
 
-Retirer les mentions qui laissent croire que l'autodiagnostic informatique doit encore être décidé ou réintroduit. Conserver les sources historiques sans remettre l'activité dans le parcours étudiant.
+L'autodiagnostic informatique est maintenant explicitement **non retenu** dans :
+
+- `refonte/RESSOURCES_A_FOURNIR.md`;
+- `refonte/PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`;
+- `refonte/TACHES_CODEX_PREMIER_COURS.md`.
+
+La source historique `web/docs/01-cours/01-rencontre1.1.md` est conservée sans remettre l'activité dans le parcours étudiant.
 
 ## HARM-03 — Corriger l'exercice R5
 
@@ -44,35 +50,51 @@ Dans `web/docs/01-cours/05-rencontre5-exercice-guide.md`, le lien `href="#contac
 
 ## HARM-04 — Revue de cohérence R1 à R5
 
-**État : À faire**
+**État : Fait**
 
-Vérifier notamment :
+Constats de la revue :
 
-- cohérence du minimum R2 avec les plans internes;
-- calendrier A–D identique entre les documents internes et les pages étudiantes;
-- distinction claire entre notion obligatoire, bonne pratique et contenu non évalué;
-- absence de nouvelle exigence mécanique ajoutée implicitement aux compétences;
-- cohérence entre la pondération de 30 % et le langage étudiant.
-
-Corriger uniquement les incohérences non ambiguës déjà tranchées dans les plans existants.
+- R1 prépare WEB-01/02 sans validation sommative;
+- R2 garde comme minimum une seule page secondaire sous `pages/`; la page supplémentaire reste facultative;
+- la Validation A est prioritaire en R2 et la Validation B peut se poursuivre au début de R3;
+- la Validation C reste disponible en R3–R4 et la Validation D en R4–R5;
+- les pages étudiantes distinguent les notions à maîtriser, les bonnes pratiques et les contenus `Pour aller plus loin — non évalué`;
+- les contraintes de pratique ne sont pas transformées en décomptes mécaniques pour la validation;
+- les pages étudiantes d'évaluation et de présentation annoncent bien le total de 30 %;
+- aucun autre correctif étudiant non ambigu n'a été nécessaire dans cette passe.
 
 ## HARM-05 — Validation finale
 
-**État : À faire**
+**État : Bloqué uniquement par la validation locale**
 
-- comparer la branche à `main`;
-- rechercher les anciennes formulations (`hypothèse de travail`, pondération à confirmer, autodiagnostic à décider, `#contact` sans cible);
-- exécuter `npm run build` et `git diff --check` dans un environnement local capable de cloner/exécuter le dépôt;
-- signaler séparément toute décision pédagogique encore réellement ouverte;
-- ne créer ni PR ni déploiement sans demande explicite.
+Vérifications terminées :
+
+- comparaison de `agent/harmonisation-evaluation-r1-r5` avec `main` : branche en avance, sans retard, changements limités au lot HARM;
+- recherche ciblée des anciennes formulations actives : aucune hypothèse de 30 % ne subsiste dans les références harmonisées;
+- l'autodiagnostic n'est plus présenté comme une décision ouverte dans les suivis actifs;
+- `#contact` ne subsiste plus dans l'exercice R5 corrigé;
+- aucun statut CI n'est publié pour le dernier commit de la branche;
+- aucune PR ni aucun déploiement n'a été créé.
+
+Vérifications restant à exécuter dans un checkout local fonctionnel :
+
+```bash
+npm run build
+git diff --check
+```
+
+L'environnement d'exécution utilisé pour ce lot ne résout pas `github.com`; il ne peut donc pas cloner le dépôt ni exécuter ces deux commandes sur l'état actuel de la branche. Les réussites de build antérieures au lot HARM ne sont pas considérées comme une validation de ces changements.
+
+Aucune décision pédagogique supplémentaire n'est ouverte dans le périmètre HARM. La répartition détaillée des 30 % entre WEB-01 et WEB-08 demeure volontairement un travail ultérieur.
 
 ## Journal de reprise — 2026-08-20
 
-- HARM-03 corrigé sur la branche.
-- HARM-01 commencé dans `refonte/EVALUATION.md` : le total de 30 % est maintenant présenté comme une décision et seule la répartition par compétence reste à détailler.
-- Les pages étudiantes `00-presentation.md` et `00-evaluation.md` indiquaient déjà 30 % de façon définitive.
-- L'environnement d'exécution courant ne peut pas résoudre `github.com` pour cloner le dépôt; `npm run build` et `git diff --check` restent donc à exécuter dans un environnement local fonctionnel avant HARM-05.
+- HARM-01 terminé : pondération de 30 % harmonisée dans les références internes; les deux pages étudiantes étaient déjà cohérentes.
+- HARM-02 terminé : autodiagnostic retiré des décisions actives et conservé seulement comme élément historique.
+- HARM-03 terminé : lien `#contact` sans cible retiré de l'exercice R5.
+- HARM-04 terminé : calendrier A–D, minimum R2, niveaux d'attente et langage d'évaluation vérifiés de R1 à R5.
+- HARM-05 terminé côté inspection distante; validation locale `npm run build` + `git diff --check` encore requise.
 
 # Point de reprise
 
-> **HARM-01 — terminer l'officialisation de 30 % dans `COMPETENCES_HTML_CSS.md`, `SUIVI_CONTENU.md` et `PLAN_SITE_EVOLUTIF.md`, puis HARM-02 avant la revue transversale HARM-04.**
+> **Exécuter `npm run build` puis `git diff --check` dans un checkout local de `agent/harmonisation-evaluation-r1-r5`. Si les deux commandes réussissent, marquer HARM-05 `Fait`, fermer ce lot et reprendre le chantier suivant sans étendre rétroactivement sa portée.**
