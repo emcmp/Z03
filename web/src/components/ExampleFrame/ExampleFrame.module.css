@@ -10,18 +10,47 @@
   margin-top: 1rem;
 }
 
-.previewLabel {
-  margin-bottom: 0.35rem;
-  font-size: 0.85rem;
-  font-weight: 700;
+.browserWindow {
+  overflow: hidden;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: white;
+}
+
+.browserBar {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 2rem;
+  padding: 0 0.75rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-color-emphasis-100);
+}
+
+.browserDots {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 0.3rem;
+}
+
+.browserDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--ifm-color-emphasis-400);
+}
+
+.browserTitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1;
   color: var(--ifm-color-emphasis-700);
 }
 
 .previewFrame {
   display: block;
   width: 100%;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: var(--ifm-global-radius);
+  border: 0;
   background: white;
   transition: height 120ms ease-out;
 }

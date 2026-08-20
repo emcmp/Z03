@@ -1,7 +1,7 @@
 # Plan d'ajustements — rencontres 1 à 5 après revue
 
 **Date : 2026-08-19**  
-**Statut : actif — AJ-01 à AJ-05 terminés; AJ-06 POC implémenté, validation technique et visuelle en attente**  
+**Statut : actif — AJ-01 à AJ-06 terminés; AJ-07 en cours (finition visuelle avant adoption et migration ciblée)**  
 **Branche de travail : `agent/ajustements-r1-r5`**
 
 Ce plan transforme les conclusions de `REVUE_TRANSVERSALE_R1_R5.md` et les décisions de l'enseignant en tâches d'ajustement bornées. Il complète `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` et devient le point de reprise opérationnel pour la phase **REV-03 — Ajustements de poids**.
@@ -298,7 +298,7 @@ Candidats prioritaires pour un aperçu vivant après le POC : `selecteur-classe-
 
 ## AJ-06 — POC ExampleFrame : aperçus HTML/CSS vivants
 
-**État : En cours — POC implémenté; validation technique et visuelle requise**  
+**État : Terminé**  
 **Responsable privilégié : Codex local**  
 **Dépend de : AJ-05**
 
@@ -345,27 +345,49 @@ Le POC est retenu seulement si :
 - les deux exemples autonomes sont ajoutés sous `web/static/examples/rencontre3/`;
 - `00-introduction-css.md` lit ces mêmes fichiers avec `raw-loader` pour afficher le code exact qui est aussi rendu dans l'iframe;
 - `raw-loader` était déjà présent dans les dépendances du projet; aucune nouvelle dépendance n'est ajoutée;
-- les anciens PNG demeurent physiquement dans le dépôt et aucune migration supplémentaire de R3/R4 n'est faite;
-- le build, `git diff --check` et la vérification visuelle réelle restent à exécuter avant de marquer AJ-06 `Terminé`.
+- les anciens PNG demeurent physiquement dans le dépôt et aucune migration supplémentaire de R3/R4 n'est faite.
 
-Si le Browser automatisé de Codex demeure indisponible, documenter cette limite et effectuer la vérification visuelle avec le navigateur local disponible plutôt que de déclarer le POC réussi sur le seul build.
+### Validation finale AJ-06
 
-Après le POC, **arrêter et présenter le résultat**. Aucune migration en masse n'est autorisée implicitement.
+- `npm run build` réussit et les fichiers copiés sous `web/build/examples/` correspondent byte pour byte aux sources statiques vérifiées;
+- `git diff --check` réussit et le worktree reste propre après validation;
+- avec `docusaurus start`, les deux `preview.html` et `couleurs/styles.css` répondent en HTTP 200 sans perdre le `baseUrl` ni l'extension `.html`;
+- `couleurs/preview.html` charge réellement sa feuille `styles.css` relative sans 404;
+- `raw-loader` lit exactement les mêmes fichiers que ceux rendus dans les iframes;
+- une validation visuelle réelle avec le Browser intégré de Codex confirme le paragraphe violet, le titre `mediumturquoise`, le message `darkslateblue` sur fond `mistyrose`, l'isolation CSS, l'absence de contenu coupé et une hauteur correcte;
+- à environ 420 px de largeur, la page demeure lisible, les iframes restent visibles et les blocs de code conservent leur défilement horizontal interne;
+- aucune erreur console liée aux `ExampleFrame`, aux iframes ou aux ressources n'est relevée;
+- `docusaurus serve` n'est pas retenu pour valider les HTML autonomes du POC, puisque son mécanisme de clean URLs réécrit les chemins `.html` dans ce contexte;
+- le seul point perfectible relevé est visuel : la séparation entre le code Docusaurus et le rendu navigateur est encore trop discrète pour un débutant. Cette finition est transférée à AJ-07 et ne remet pas en cause la réussite technique du POC.
+
+Conclusion : l'architecture `ExampleFrame` est retenue comme base pour une migration ciblée, après une petite finition visuelle et une nouvelle validation Browser.
 
 ## AJ-07 — Décider de l'adoption et de la migration ciblée
 
-**État : À faire seulement après AJ-06**
+**État : En cours — finition visuelle de `ExampleFrame` avant adoption et migration ciblée**
 
 AJ-07 remplace l'idée de construire par défaut un outil batch de captures PNG.
 
-Après revue du POC ExampleFrame :
+### Première sous-étape — renforcer la distinction code ↔ rendu
 
-- si le composant est simple, portable et visuellement satisfaisant, décider explicitement quels rendus exacts de l'audit AJ-05 seront migrés;
+Avant toute migration vers le cours canonique R3 :
+
+- remplacer le simple libellé `Rendu` par une petite barre intégrée au cadre avec le texte **Aperçu dans le navigateur**;
+- ajouter trois petits indicateurs neutres et discrets pour évoquer une fenêtre de navigateur, sans reproduire Chrome ni afficher une fausse barre d'adresse;
+- appliquer la bordure et les coins arrondis à l'ensemble `barre + iframe`, tout en gardant l'intérieur de l'iframe blanc;
+- ne pas modifier la logique de hauteur, le sandbox, les fichiers `preview.html`, les dépendances ou les blocs de code;
+- vérifier cette finition avec Browser en largeur normale et autour de 420 px avant de la considérer comme adoptée;
+- ne migrer aucun autre rendu R3/R4 dans le même lot que cette finition visuelle.
+
+Après validation de cette finition :
+
+- décider explicitement quels rendus exacts de l'audit AJ-05 seront migrés;
 - commencer par quelques cas à forte valeur pédagogique plutôt que convertir toute la documentation;
 - conserver les schémas et illustrations générales lorsqu'ils communiquent mieux une idée qu'un rendu HTML vivant;
 - retirer une vieille capture redondante plutôt que la reproduire lorsque le code seul suffit;
 - ne pas supprimer les PNG du POC avant la décision d'adoption;
-- si ExampleFrame n'est pas satisfaisant, revenir à une génération PNG ciblée; ne construire un outil batch que si un besoin récurrent est démontré et après décision explicite.
+- la page `web/docs/01-cours/00-introduction-css.md` demeure un banc d'essai hors navigation; après migration ciblée vers le cours canonique `03-rencontre3.md`, décider de son retrait ou de son archivage afin de ne pas conserver deux cours concurrents sur l'introduction à CSS;
+- si ExampleFrame n'est finalement pas satisfaisant, revenir à une génération PNG ciblée; ne construire un outil batch que si un besoin récurrent est démontré et après décision explicite.
 
 Aucune migration massive, aucun nouvel outil permanent et aucune nouvelle dépendance ne doivent être introduits automatiquement dans AJ-07.
 
@@ -408,9 +430,9 @@ AJ-04 progression CSS R3               Terminé
   ↓
 AJ-05 audit visuel                     Terminé
   ↓
-AJ-06 POC ExampleFrame                 En cours — validation requise
+AJ-06 POC ExampleFrame                 Terminé
   ↓
-AJ-07 décision / migration ciblée
+AJ-07 finition visuelle / migration    En cours
   ↓
 AJ-08 nettoyage R5
   ↓
@@ -421,4 +443,4 @@ AJ-08 peut être réalisé en parallèle du travail visuel s'il n'y a pas de con
 
 # Point de reprise actuel
 
-> **AJ-06 — le POC ExampleFrame est implémenté sur deux exemples de `00-introduction-css.md`. Valider maintenant le build, `git diff --check`, le `baseUrl`, l'isolation, la hauteur et le rendu réel, puis arrêter avant toute migration supplémentaire.**
+> **AJ-07 — valider la nouvelle barre « Aperçu dans le navigateur » sur les deux exemples POC avec Browser, en largeur normale et étroite. Si la finition est satisfaisante, décider ensuite quels rendus du cours canonique R3/R4 migrer; ne pas lancer de migration massive.**

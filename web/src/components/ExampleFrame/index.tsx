@@ -100,17 +100,26 @@ export default function ExampleFrame({
       </div>
 
       <div className={styles.previewBlock}>
-        <div className={styles.previewLabel}>Rendu</div>
-        <iframe
-          ref={iframeRef}
-          className={styles.previewFrame}
-          src={resolvedSrc}
-          title={title}
-          sandbox="allow-same-origin"
-          loading="lazy"
-          onLoad={handleLoad}
-          style={{ height: `${frameHeight}px` }}
-        />
+        <div className={styles.browserWindow}>
+          <div className={styles.browserBar}>
+            <div className={styles.browserDots} aria-hidden="true">
+              <span className={styles.browserDot} />
+              <span className={styles.browserDot} />
+              <span className={styles.browserDot} />
+            </div>
+            <div className={styles.browserTitle}>Aperçu dans le navigateur</div>
+          </div>
+          <iframe
+            ref={iframeRef}
+            className={styles.previewFrame}
+            src={resolvedSrc}
+            title={title}
+            sandbox="allow-same-origin"
+            loading="lazy"
+            onLoad={handleLoad}
+            style={{ height: `${frameHeight}px` }}
+          />
+        </div>
       </div>
     </div>
   );
