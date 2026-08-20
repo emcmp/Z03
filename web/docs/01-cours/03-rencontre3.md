@@ -247,8 +247,6 @@ p {
 }
 ```
 
-![Règles utilisant des sélecteurs d'éléments](../../static/img/cours-introduction-css/selecteur-element.png)
-
 La première règle vise les `<h1>`. La deuxième vise les `<p>`.
 
 :::info À maîtriser

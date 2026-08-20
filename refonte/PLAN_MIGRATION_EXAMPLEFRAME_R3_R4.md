@@ -16,7 +16,7 @@ Ce plan poursuit AJ-07 après la validation du POC `ExampleFrame`. Le but est de
 
 ## MIG-01 — Rencontre 3 : classe et couleurs
 
-**État : En cours**
+**État : Prêt à réviser**
 
 Fichiers visés :
 
@@ -32,7 +32,9 @@ Changements :
 - remplacer `couleurs-rendu.png` par un `ExampleFrame` correspondant exactement aux couleurs hexadécimales montrées dans R3;
 - retirer de R3 la capture `lier-feuille-css.png`, devenue redondante avec le bloc `<link>` adjacent;
 - conserver `fichier-css-externe.png` comme illustration générale;
-- ne pas toucher encore à `selecteur-element.png` ni `bordure-rendu.png`.
+- retirer de R3 `selecteur-element.png`, devenu redondant avec le bloc de code et l’explication textuelle;
+- renforcer l’entête visuel centralisé de `ExampleFrame` afin que l’aperçu soit plus facile à distinguer du contenu normal de la page;
+- conserver pour une prochaine passe l’évaluation de `bordure-rendu.png`.
 
 Définition de terminé :
 
@@ -46,13 +48,15 @@ Définition de terminé :
 
 **État : À faire après revue de MIG-01**
 
-Évaluer `selecteur-element.png` et `bordure-rendu.png`. Ne les convertir que si le rendu vivant apporte une information pédagogique réelle sans alourdir la page.
+L’image `selecteur-element.png` a été retirée de R3 sans être supprimée physiquement, puisqu’elle reste utilisée par une page source historique.
+
+Prochaine cible possible : `bordure-rendu.png`. Ne la convertir que si le rendu vivant apporte une information pédagogique réelle sans alourdir la page.
 
 ## MIG-03 — Rencontre 4 : boîtes visibles
 
 **État : À faire après R3**
 
-Candidat prioritaire : `boites-rendues-visibles.png`.
+Prochaine cible possible : `boites-rendues-visibles.png`.
 
 Conserver pour l’instant les schémas conceptuels du modèle en boîte, notamment `modele-de-boite-css.png` et `dimensions-totales-boite.png`.
 
