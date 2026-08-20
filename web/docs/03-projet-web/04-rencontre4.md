@@ -224,23 +224,29 @@ Avant de demander une validation, vérifiez que :
 
 Cette checklist sert à vous préparer. La validation porte sur votre compréhension, pas sur un nombre précis de cartes, de marges ou de bordures.
 
-## Validations disponibles
+## Badges disponibles pour validation
+
+Consultez **[Projet Web — Évaluation](./00-evaluation.md)** pour les checklists détaillées et l'état de votre collection de badges.
 
 ### Validation C — CSS de base
 
 Si elle n'est pas encore terminée, vous pouvez présenter :
 
-- **WEB-05 — Associer correctement une feuille CSS externe**;
-- **WEB-06 — Cibler les éléments avec des sélecteurs appropriés**.
+- 🔌 **WEB-05 — Associer correctement une feuille CSS externe**;
+- 🎯 **WEB-06 — Cibler les éléments avec des sélecteurs appropriés**.
 
 ### Validation D — Mise en forme et disposition
 
 Vous pouvez aussi commencer à démontrer :
 
-- **WEB-07 — Mettre en forme une interface avec CSS**;
-- **WEB-08 — Organiser l'espace et la disposition des éléments**.
+- 🎨 **WEB-07 — Mettre en forme une interface avec CSS**;
+- 📐 **WEB-08 — Organiser l'espace et la disposition des éléments**.
 
-À cette rencontre, WEB-08 est surtout observée à travers le modèle en boîte et les espacements. Flexbox simple sera ajouté à la rencontre 5.
+À cette rencontre, 📐 WEB-08 est surtout observée à travers le modèle en boîte et les espacements. Flexbox simple sera ajouté à la rencontre 5.
+
+:::tip Collection de badges
+Il n'est pas nécessaire d'acquérir tous les badges le même jour. Les compétences **À revoir** peuvent être présentées de nouveau lorsque vous êtes prêt.
+:::
 
 :::note Pour aller plus loin — non évalué
 Si votre site est déjà clair et que vous avez du temps, vous pouvez expérimenter avec :
@@ -257,7 +263,3 @@ box-sizing: border-box
 
 Ces éléments ne sont pas nécessaires pour réussir la validation.
 :::
-
-## Prochaine étape
-
-À la rencontre 5, vous utiliserez **Flexbox simple** pour organiser certains éléments côte à côte, notamment la navigation, puis vous consacrerez du temps à l'intégration et aux corrections.
