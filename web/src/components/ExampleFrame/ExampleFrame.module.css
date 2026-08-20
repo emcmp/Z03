@@ -1,4 +1,8 @@
 .exampleFrame {
+  --example-frame-border: var(--ifm-color-emphasis-300);
+  --example-frame-header-background: #334155;
+  --example-frame-header-foreground: #f8fafc;
+  --example-frame-dot: #cbd5e1;
   margin: 1rem 0 1.5rem;
 }
 
@@ -12,9 +16,10 @@
 
 .browserWindow {
   overflow: hidden;
-  border: 1px solid var(--ifm-color-emphasis-300);
+  border: 1px solid var(--example-frame-border);
   border-radius: var(--ifm-global-radius);
   background: white;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 8%);
 }
 
 .browserBar {
@@ -23,8 +28,8 @@
   gap: 0.65rem;
   min-height: 2rem;
   padding: 0 0.75rem;
-  border-bottom: 1px solid var(--ifm-color-emphasis-300);
-  background: var(--ifm-color-emphasis-100);
+  border-bottom: 1px solid var(--example-frame-border);
+  background: var(--example-frame-header-background);
 }
 
 .browserDots {
@@ -37,14 +42,15 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background: var(--ifm-color-emphasis-400);
+  background: var(--example-frame-dot);
+  opacity: 0.75;
 }
 
 .browserTitle {
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1;
-  color: var(--ifm-color-emphasis-700);
+  color: var(--example-frame-header-foreground);
 }
 
 .previewFrame {

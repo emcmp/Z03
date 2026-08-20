@@ -3,6 +3,11 @@ title: Rencontre 3 - Introduction à CSS
 description: Relier une feuille CSS externe, utiliser des sélecteurs et commencer la mise en forme du site.
 ---
 
+import classeHtml from '!!raw-loader!../../static/examples/rencontre3/classe-mise-en-valeur/preview.html';
+import classeCss from '!!raw-loader!../../static/examples/rencontre3/classe-mise-en-valeur/styles.css';
+import couleursR3Html from '!!raw-loader!../../static/examples/rencontre3/couleurs-r3/preview.html';
+import couleursR3Css from '!!raw-loader!../../static/examples/rencontre3/couleurs-r3/styles.css';
+
 # Rencontre 3 - Introduction à CSS
 
 Aux rencontres 1 et 2, vous avez surtout travaillé la **structure et le contenu** avec HTML. À partir d'aujourd'hui, CSS va vous permettre de contrôler l'**apparence** de ces mêmes pages.
@@ -189,8 +194,6 @@ Depuis `index.html` :
 <link rel="stylesheet" href="css/styles.css">
 ```
 
-![Élément link reliant la page à la feuille CSS](../../static/img/cours-introduction-css/lier-feuille-css.png)
-
 ### Le chemin dépend encore du fichier HTML actuel
 
 Vous avez déjà rencontré cette idée avec les images et les liens à la rencontre 2.
@@ -244,8 +247,6 @@ p {
 }
 ```
 
-![Règles utilisant des sélecteurs d'éléments](../../static/img/cours-introduction-css/selecteur-element.png)
-
 La première règle vise les `<h1>`. La deuxième vise les `<p>`.
 
 :::info À maîtriser
@@ -289,15 +290,14 @@ Dans CSS :
 Le point appartient au sélecteur CSS. Il ne fait pas partie du nom écrit dans l'attribut `class`.
 :::
 
-Une même classe peut être utilisée plusieurs fois :
+Une même classe peut être utilisée plusieurs fois. Voici le code et le résultat produits par les mêmes sources :
 
-```html
-<p class="mise-en-valeur">Première information.</p>
-<p>Paragraphe ordinaire.</p>
-<p class="mise-en-valeur">Deuxième information.</p>
-```
-
-![Rendu d'un paragraphe ciblé par une classe](../../static/img/cours-introduction-css/selecteur-classe-rendu.png)
+<ExampleFrame
+  src="examples/rencontre3/classe-mise-en-valeur/preview.html"
+  title="Rendu de paragraphes utilisant la classe mise-en-valeur"
+  html={classeHtml}
+  css={classeCss}
+/>
 
 :::tip Bonne pratique — nommer une classe selon son rôle
 Préférez un nom comme :
@@ -379,18 +379,14 @@ Nous allons volontairement utiliser seulement un petit ensemble de propriétés 
 
 ### Couleur du texte et arrière-plan
 
-```css
-h1 {
-  color: #245a86;
-}
+Voici un exemple où les couleurs montrées dans le code sont exactement celles du rendu :
 
-.mise-en-valeur {
-  color: #7a1f1f;
-  background-color: #f7eaea;
-}
-```
-
-![Exemple de couleurs de texte et d'arrière-plan](../../static/img/cours-introduction-css/couleurs-rendu.png)
+<ExampleFrame
+  src="examples/rencontre3/couleurs-r3/preview.html"
+  title="Rendu des couleurs de texte et d'arrière-plan de la rencontre 3"
+  html={couleursR3Html}
+  css={couleursR3Css}
+/>
 
 Vous pouvez utiliser un nom de couleur ou un code hexadécimal comme `#245a86`.
 
