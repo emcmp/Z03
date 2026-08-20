@@ -3,6 +3,8 @@ title: Rencontre 2 - HTML, fichiers et navigation
 description: Organiser le projet, utiliser les chemins relatifs, ajouter des images locales et relier plusieurs pages HTML.
 ---
 
+import r2MiniSiteHtml from '!!raw-loader!../../static/examples/rencontre2/exercice-final/source.html';
+
 # Rencontre 2 - HTML, fichiers et navigation
 
 À la rencontre 1, vous avez créé une première page HTML. Aujourd'hui, cette page va devenir un **petit site composé de plusieurs fichiers**.
@@ -266,6 +268,15 @@ Pourquoi?
 - `../index.html` remonte vers le dossier parent;
 - `sujet.html` est dans le même dossier que la page actuelle;
 - `apropos.html` est aussi dans le même dossier.
+
+Voici un petit site complet où vous pouvez cliquer sur **Informations**, observer l'image, puis revenir à l'accueil :
+
+<ExampleFrame
+  src="examples/rencontre2/exercice-final/preview.html"
+  title="Mini-site de deux pages avec image et navigation"
+  html={r2MiniSiteHtml}
+  minHeight={260}
+/>
 
 :::tip Bonne pratique
 L'élément `<nav>` décrit un groupe de liens de navigation importants. Nous l'utiliserons dans les exemples du cours.
