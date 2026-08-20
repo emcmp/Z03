@@ -79,7 +79,27 @@ const sidebars = {
         },
       ],
     },
-    { type: "doc", id: "cours/rencontre4", label: "Rencontre 4 — Modèle en boîte et espacements" },
+    {
+      type: "category",
+      label: "Rencontre 4 — Modèle en boîte et espacements",
+      items: [
+        {
+          type: "doc",
+          id: "cours/rencontre4",
+          label: "Cours — Modèle en boîte et espacements",
+        },
+        {
+          type: "doc",
+          id: "cours/rencontre4-exercice-guide",
+          label: "Exercice guidé — Comprendre le modèle en boîte",
+        },
+        {
+          type: "ref",
+          id: "projet-web/rencontre4",
+          label: "Projet Web — Étape 4",
+        },
+      ],
+    },
     { type: "doc", id: "cours/rencontre5", label: "Rencontre 5 — Flexbox simple et intégration" },
     { type: "doc", id: "cours/rencontre6", label: "Rencontre 6 — Variables et JavaScript" },
     { type: "doc", id: "cours/rencontre7", label: "Rencontre 7 — Conditions et logique" },
