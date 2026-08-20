@@ -1,6 +1,6 @@
 ---
 title: Projet Web - Présentation
-description: Comprendre le projet Web évolutif, son fonctionnement et les grandes étapes à venir.
+description: Comprendre le projet Web évolutif, son fonctionnement, les compétences travaillées et les grandes étapes à venir.
 sidebar_position: 1
 ---
 
@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Pendant le cours Z03, vous construirez un **petit site Web qui évoluera progressivement**. Au lieu de recommencer un nouvel exercice complet chaque fois, vous garderez le même projet et vous l'améliorerez à mesure que de nouvelles notions seront introduites.
 
-Le projet sert d'abord de contexte de pratique. Il fournit aussi des preuves concrètes lorsque certaines compétences sont validées en classe.
+Le projet sert d'abord de contexte de pratique. Il pourra aussi fournir des preuves concrètes lorsque certaines compétences seront validées en classe.
 
 ## Le principe du projet
 
@@ -17,7 +17,7 @@ Vous partez d'une page HTML très simple. Au fil des rencontres, votre site gagn
 Pendant les rencontres 1 à 5, le projet sert principalement à apprendre **HTML et CSS**. Plus tard dans la session, le même site pourra aussi être réutilisé lorsque JavaScript et le DOM seront introduits.
 
 :::info Important
-Le projet n'est pas un gros travail remis une seule fois à la fin. Vous le construisez progressivement et certaines compétences sont validées pendant vos périodes de travail.
+Le projet n'est pas un gros travail remis une seule fois à la fin. Les compétences sont plutôt observées progressivement pendant que vous travaillez.
 :::
 
 ## Choisir un sujet
@@ -63,9 +63,15 @@ Le bloc HTML/CSS est évalué progressivement à l'aide de **huit compétences**
 
 L'ensemble de ces validations représente **30 % de la note finale du cours**.
 
+Votre progression est représentée par une petite collection de **huit badges de compétence** :
+
+**🗂️ 🧱 ✍️ 🔗 🔌 🎯 🎨 📐**
+
+Un badge est acquis lorsque la compétence correspondante est **Validée**.
+
 La page **[Projet Web — Évaluation](./00-evaluation.md)** contient :
 
-- les huit compétences;
+- les huit badges et les compétences correspondantes;
 - le calendrier des validations;
 - ce que chaque compétence englobe;
 - une checklist pour chacune;
