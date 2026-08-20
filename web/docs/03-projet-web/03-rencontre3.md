@@ -238,12 +238,14 @@ Avant de demander une validation, vérifiez que :
 
 La validation porte sur votre compréhension et votre capacité à intervenir dans le code. Elle ne consiste pas à compter le nombre de propriétés ou de classes.
 
-## Validation C — CSS de base
+## Badges disponibles — Validation C
 
-La Validation C porte sur :
+À cette étape, vous pouvez commencer à acquérir les badges CSS suivants :
 
-- **WEB-05 — Associer correctement une feuille CSS externe**;
-- **WEB-06 — Cibler les éléments avec des sélecteurs appropriés**.
+- 🔌 **WEB-05 — Associer correctement une feuille CSS externe**;
+- 🎯 **WEB-06 — Cibler les éléments avec des sélecteurs appropriés**.
+
+Consultez **[Projet Web — Évaluation](./00-evaluation.md)** pour voir les checklists détaillées de ces badges et le calendrier complet.
 
 L'enseignant peut, par exemple, vous demander :
 
@@ -254,6 +256,10 @@ L'enseignant peut, par exemple, vous demander :
 - d'expliquer pourquoi une classe remplace une règle plus générale.
 
 Vous n'êtes pas obligé de faire valider les deux compétences au même moment. Une compétence `À revoir` pourra être représentée plus tard.
+
+:::tip Collection de badges
+Si les badges ✍️ WEB-03 ou 🔗 WEB-04 ne sont pas encore acquis, vous pouvez aussi terminer leur validation au début de cette rencontre.
+:::
 
 :::note Pour aller plus loin — non évalué
 Si votre feuille CSS fonctionne partout et que vous êtes prêt pour la validation, vous pouvez :
