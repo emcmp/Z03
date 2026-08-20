@@ -34,10 +34,6 @@ La présentation est offerte en deux formats. Utilisez le PDF pour la consulter 
 
 :::
 
-## Vidéo
-
-La capsule vidéo viendra compléter cette page lorsqu'elle sera prête.
-
 :::tip À retenir
 Dans Visual Studio Code, pensez d'abord au **dossier du projet**. Une fois ce dossier ouvert, l'Explorateur vous permet de voir son organisation, puis l'éditeur vous permet de travailler dans le fichier sélectionné.
 :::
