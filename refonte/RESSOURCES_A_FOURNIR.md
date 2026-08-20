@@ -101,7 +101,7 @@ Les dossiers n'ont pas besoin d'être créés tant qu'ils ne contiennent aucune 
 | Source | Utilité | État / décision |
 |---|---|---|
 | Ancien PowerPoint **Environnement de travail** (12 diapositives) | Arborescence, création de dossiers, extensions, affichage des extensions, compression/décompression ZIP | **Source reçue et auditée**. Six captures Windows/7-Zip sont maintenant intégrées provisoirement au préambule; elles pourront être remplacées plus tard en conservant leurs noms stables. |
-| `web/docs/01-cours/01-rencontre1.1.md` — ancien **Cours 1 - Atelier** | Connexion aux postes, 2FA, Teams, stockage infonuagique, ancien autodiagnostic | **Source historique conservée et auditée**. Compte/2FA ont leur page, Teams/Mio sont dans Fonctionnement, OneDrive remplace Google Drive et l'autodiagnostic demeure à décider. |
+| `web/docs/01-cours/01-rencontre1.1.md` — ancien **Cours 1 - Atelier** | Connexion aux postes, 2FA, Teams, stockage infonuagique, ancien autodiagnostic | **Source historique conservée et auditée**. Compte/2FA ont leur page, Teams/Mio sont dans Fonctionnement, OneDrive remplace Google Drive et l'autodiagnostic n'est pas retenu dans la nouvelle formule. |
 | `web/static/img/atelier/VSCODE/` — quatre captures VS Code | Ouverture d'un dossier depuis Windows, démarrage de VS Code et résultat après ouverture du projet | **Réutilisées** dans le préambule. Les fichiers originaux sont conservés et des copies aux noms stables sont placées dans `web/static/img/rencontre1/`. |
 | `web/static/img/atelier/leaEtudiant.png` | Ancienne capture associée à l'atelier | **À décider**. Ne pas l'utiliser automatiquement tant que son rôle dans la nouvelle rencontre n'est pas confirmé. |
 
@@ -122,12 +122,12 @@ Les dossiers n'ont pas besoin d'être créés tant qu'ils ne contiennent aucune 
 
 Les quatre captures VS Code sont maintenant **suffisantes pour enseigner la procédure**. Une future mise à jour visuelle peut simplement remplacer les fichiers de `web/static/img/rencontre1/` en conservant les mêmes noms.
 
-## Décisions à confirmer
+## Décisions de l'ancien atelier
 
-| Élément de l'ancien atelier | Question | État |
+| Élément de l'ancien atelier | Décision | État |
 |---|---|---|
 | Teams | Les règles de communication doivent-elles être reprises depuis l'ancien Atelier? | **Décidé** — Teams et Mio sont déjà traités dans `web/docs/fonctionnement-du-cours.md`; aucune nouvelle page Atelier. |
-| Test autodiagnostic informatique | Est-ce que le formulaire existe encore et est-il encore utile dans la nouvelle formule du cours? | **À décider** |
+| Test autodiagnostic informatique | Ne pas réintroduire le formulaire dans la nouvelle formule du cours. | **Non retenu** — l'activité reste uniquement dans la source historique de l'ancien Atelier. |
 | Liens compte réseau / double authentification | Où les étudiants doivent-ils les retrouver? | **Décidé** — liens publiés dans `web/docs/acces-poste-compte-reseau.md`, sous **Bien débuter**. |
 | Google Drive | Faut-il restaurer l'ancien contenu de l'Atelier? | **Non retenu** — OneDrive est le stockage de référence dans le préambule actuel. |
 | Formation d'équipes de 2 | Faut-il reprendre l'activité historique? | **Non retenu pour cette passe**. |
