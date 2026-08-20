@@ -18,6 +18,11 @@ const sidebars = {
       id: "caracteres-utiles-clavier",
       label: "Caractères utiles au clavier",
     },
+    {
+      type: "doc",
+      id: "liens-utiles",
+      label: "Liens utiles",
+    },
   ],
   docs: [
     {
