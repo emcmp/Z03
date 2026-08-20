@@ -3,6 +3,8 @@ title: Exercice guidé - Images, chemins et navigation
 description: Construire ensemble un petit site de deux pages pour pratiquer les chemins relatifs, les images locales et les liens.
 ---
 
+import r2ExerciceFinalHtml from '!!raw-loader!../../static/examples/rencontre2/exercice-final/source.html';
+
 # Exercice guidé - Images, chemins et navigation
 
 Cet exercice se fait **ensemble en classe** avant de modifier votre propre Projet Web.
@@ -173,6 +175,15 @@ Le lien vers `infos.html` n'a pas besoin de dossier dans son chemin, puisque le 
 :::tip Bonne pratique
 `<nav>` est un bon élément pour regrouper les liens de navigation importants d'un site. Nous l'utiliserons dans nos exemples, sans en faire une compétence évaluée séparément.
 :::
+
+Voici le résultat final du mini-site. Utilisez les liens dans le faux navigateur pour faire l'aller-retour entre les deux pages :
+
+<ExampleFrame
+  src="examples/rencontre2/exercice-final/preview.html"
+  title="Résultat final de l'exercice guidé de la rencontre 2"
+  html={r2ExerciceFinalHtml}
+  minHeight={260}
+/>
 
 ## 8. Tester comme un développeur
 
