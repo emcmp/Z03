@@ -34,10 +34,6 @@ La présentation est offerte en deux formats. Utilisez le PDF pour la consulter 
 
 :::
 
-## Vidéo
-
-La capsule vidéo viendra compléter cette page lorsqu'elle sera prête.
-
 :::tip À retenir
 Plusieurs pages HTML peuvent être reliées au même fichier `styles.css`. Cela permet de garder une apparence cohérente et de modifier les styles communs à un seul endroit.
 :::
