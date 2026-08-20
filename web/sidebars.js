@@ -21,6 +21,11 @@ const sidebars = {
   ],
   docs: [
     {
+      type: "doc",
+      id: "cours/aide-memoire-html-css",
+      label: "Aide-mémoire — HTML/CSS",
+    },
+    {
       type: "category",
       label: "Rencontre 1 — Environnement et HTML",
       items: [
