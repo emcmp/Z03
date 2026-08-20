@@ -231,11 +231,9 @@ Les notions suivantes peuvent rester disponibles sur le site, mais doivent être
 
 # Pondération
 
-La pondération exacte des huit compétences reste à confirmer.
+Le bloc HTML/CSS des rencontres 1 à 5 représente **30 % de la note finale**.
 
-Comme hypothèse de travail, le bloc HTML/CSS peut représenter **jusqu'à environ 30 %** de la note finale, puisqu'il remplace non seulement l'ancien TP1 de 15 %, mais aussi une partie de l'ancienne première évaluation qui reprenait HTML/CSS en plus des premières notions de programmation.
-
-La pondération ne doit pas obliger à créer davantage de moments de validation : les huit compétences peuvent conserver leurs quatre moments de validation même si leur valeur totale augmente.
+La pondération exacte entre les huit compétences WEB-01 à WEB-08 reste à détailler. Cette répartition future ne doit ni modifier le total de 30 %, ni créer davantage de moments de validation : les huit compétences conservent leurs quatre moments principaux.
 
 # Prochaine étape — mapping des exercices
 
