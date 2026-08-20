@@ -3,6 +3,8 @@ title: Exercice guidé - Construire une première page HTML
 description: Construire ensemble une page HTML complète, la tester et corriger quelques erreurs fréquentes.
 ---
 
+import r1ExerciceFinalHtml from '!!raw-loader!../../static/examples/rencontre1/exercice-final/preview.html';
+
 # Exercice guidé - Construire une première page HTML
 
 Cet exercice se fait **ensemble en classe**. Le but est de pratiquer le cycle de travail avant de commencer votre propre site.
@@ -85,6 +87,14 @@ Ajoutez une liste de trois éléments :
   <li>Observer le résultat dans le navigateur</li>
 </ul>
 ```
+
+À ce stade, votre page devrait ressembler à ceci dans le navigateur :
+
+<ExampleFrame
+  src="examples/rencontre1/exercice-final/preview.html"
+  title="Rendu attendu après les premières étapes de l'exercice guidé"
+  html={r1ExerciceFinalHtml}
+/>
 
 ### Mettre l'accent sur un mot
 
