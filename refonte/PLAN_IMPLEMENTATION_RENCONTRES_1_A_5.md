@@ -1,7 +1,7 @@
 # Plan d'implémentation — finalisation des rencontres 1 à 5
 
 **Statut du plan : actif**  
-**Dernière mise à jour : 2026-08-19**
+**Dernière mise à jour : 2026-08-20**
 
 Ce document est le **plan opérationnel de travail** pour terminer le bloc HTML/CSS des rencontres 1 à 5 avant de poursuivre la refonte de la programmation.
 
@@ -188,7 +188,7 @@ La page locale doit expliquer simplement :
 - les consignes Teams et Mio sont déjà couvertes dans `web/docs/fonctionnement-du-cours.md`;
 - OneDrive remplace l'ancien usage de Google Drive dans le préambule Environnement de travail;
 - la formation d'équipes n'est pas réintroduite dans cette passe;
-- l'autodiagnostic informatique demeure **À décider** dans le suivi des ressources;
+- l'autodiagnostic informatique n'est **pas retenu** dans la nouvelle formule et demeure uniquement dans la source historique de l'ancien Atelier;
 - `web/docs/01-cours/01-rencontre1.1.md` est conservé comme source historique.
 
 ### BD-03 — Auditer le PowerPoint « Environnement de travail » contre le préambule actuel
@@ -397,7 +397,6 @@ Même contrôle de sortie que R3-05.
 ---
 
 ## Phase R5 — Flexbox simple et intégration
-
 ### R5-01 — Définir le Flexbox minimal
 
 **État : Terminé**
@@ -551,7 +550,7 @@ Si une tâche a été interrompue sans mise à jour de statut, inspecter les der
 
 # Point de reprise actuel
 
-La phase ciblée **Bien débuter / Environnement de travail** est terminée et validée. Les rencontres 3, 4 et 5 sont implémentées et techniquement validées : les neuf pages, leurs IDs, leurs liens, leurs assets et l'ordre du Projet Web sont cohérents; `npm run build` et `git diff --check` réussissent. L'ancien Atelier et les pages sources `00-*` demeurent des sources historiques; l'autodiagnostic informatique reste la seule décision pédagogique ouverte du lot Bien débuter.
+La phase ciblée **Bien débuter / Environnement de travail** est terminée et validée. Les rencontres 3, 4 et 5 sont implémentées et techniquement validées : les neuf pages, leurs IDs, leurs liens, leurs assets et l'ordre du Projet Web sont cohérents; `npm run build` et `git diff --check` réussissent. L'ancien Atelier et les pages sources `00-*` demeurent des sources historiques; l'autodiagnostic informatique n'est pas retenu dans la nouvelle formule et ne constitue plus une décision pédagogique ouverte.
 
 La prochaine tâche normale revient au GPT-concepteur :
 
