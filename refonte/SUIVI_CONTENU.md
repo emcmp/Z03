@@ -103,7 +103,7 @@ Exemples : détails `inline`/`inline-block`, `overflow`, positionnement, Flexbox
 - Une seule évaluation sommative formelle est prévue à la rencontre 15.
 - L'évaluation doit commencer tôt dans la session sous forme de validations progressives de compétences observables.
 - Au moins **15 % de la note doit avoir été évalué au plus tard à la rencontre 6**.
-- Le bloc HTML/CSS peut représenter **environ 30 %** de la note finale comme hypothèse de travail, puisqu'il remplace l'ancien TP1 et une partie de l'ancien premier examen.
+- Le bloc HTML/CSS des rencontres 1 à 5 représente **30 % de la note finale**.
 - Les huit compétences HTML/CSS sont regroupées en quatre moments de validation afin de limiter la charge avec un groupe d'environ 24 étudiants.
 - Les validations doivent pouvoir être réalisées en classe pendant les périodes de travail.
 - Les compétences non maîtrisées lors d'une première tentative peuvent être représentées lorsque la logistique le permet.
@@ -167,7 +167,7 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 
 ## Décisions / hypothèses en cours
 
-- La pondération HTML/CSS est envisagée autour de 30 %, mais la répartition exacte entre WEB-01 à WEB-08 reste à établir avec la pondération des premières compétences JavaScript.
+- La pondération HTML/CSS est fixée à **30 %**; seule la répartition exacte entre WEB-01 à WEB-08 reste à établir avec la pondération des premières compétences JavaScript.
 - Fusionner les anciens cours 5 (Booléens et conditions) et 6 (Opérateurs logiques) en une seule rencontre est considéré réaliste.
 - Si cette fusion est retenue, `420905_lab5.zip` et `420905_lab6.zip` devront être extraits, comparés et recomposés en un ensemble cohérent d'exercices.
 - Les paramètres de fonctions sont considérés plus importants que l'approfondissement des valeurs de retour.
@@ -196,3 +196,4 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 | 2026-08-19 | Création et validation technique de la rencontre 3 : cours canonique, exercice guidé et Projet Web — Étape 3 | `00-introduction-css.md`, `03-rencontre3.md`, `03-rencontre3-exercice-guide.md`, `03-projet-web/03-rencontre3.md` | Exercice guidé — Première feuille CSS | Prêt à réviser; source historique conservée |
 | 2026-08-19 | Création et validation technique de la rencontre 4 : cours canonique, exercice guidé et Projet Web — Étape 4 | `00-modele-boites-positionnement.md`, `04-rencontre4.md`, `04-rencontre4-exercice-guide.md`, `03-projet-web/04-rencontre4.md` | Exercice guidé — Comprendre le modèle en boîte | Prêt à réviser; source historique conservée |
 | 2026-08-19 | Création et validation technique de la rencontre 5 : cours canonique, exercice guidé et Projet Web — Étape 5 | Nouvelle synthèse Flexbox ciblée, `05-rencontre5.md`, `05-rencontre5-exercice-guide.md`, `03-projet-web/05-rencontre5.md` | Exercice guidé — Flexbox simple | Prêt à réviser |
+| 2026-08-20 | Pondération HTML/CSS harmonisée à 30 % sans changer les huit compétences ni les quatre moments de validation | `EVALUATION.md`, `COMPETENCES_HTML_CSS.md`, `PLAN_SITE_EVOLUTIF.md`, pages étudiantes du Projet Web | Aucun exercice modifié par cette décision | Décidé |
