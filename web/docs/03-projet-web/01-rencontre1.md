@@ -4,6 +4,8 @@ description: Créer la première page de votre site personnel en appliquant la s
 sidebar_position: 2
 ---
 
+import r1ProjetExempleHtml from '!!raw-loader!../../static/examples/rencontre1/projet-exemple/preview.html';
+
 # Projet Web — Étape 1
 
 Cette activité est la **mise en pratique personnelle de la rencontre 1**. Vous allez créer la première version du site que vous ferez évoluer pendant les prochaines rencontres.
@@ -75,6 +77,14 @@ Votre page devrait contenir :
 - du contenu réel lié à votre sujet.
 
 Vous pouvez utiliser `<strong>` ou `<em>` lorsqu'ils ont un sens dans votre contenu.
+
+Voici un exemple du **niveau de simplicité attendu** à cette étape. Votre sujet et votre contenu seront différents :
+
+<ExampleFrame
+  src="examples/rencontre1/projet-exemple/preview.html"
+  title="Exemple de première version simple d'un Projet Web"
+  html={r1ProjetExempleHtml}
+/>
 
 :::info À maîtriser
 Le but n'est pas d'accumuler des balises. Vous devez être capable de choisir des éléments qui correspondent au rôle du contenu et de les imbriquer correctement.
