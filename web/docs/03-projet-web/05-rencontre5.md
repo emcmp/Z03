@@ -214,12 +214,14 @@ Avant de considérer cette étape terminée :
 
 Cette liste sert à préparer les validations. Elle ne représente pas un décompte automatique de points.
 
-## Validation D — Mise en forme et disposition
+## Badge final du bloc HTML/CSS — Validation D
 
-La Validation D porte sur :
+La Validation D porte sur les deux derniers badges du bloc :
 
-- **WEB-07 — Mettre en forme une interface avec CSS**;
-- **WEB-08 — Organiser l'espace et la disposition des éléments**.
+- 🎨 **WEB-07 — Mettre en forme une interface avec CSS**;
+- 📐 **WEB-08 — Organiser l'espace et la disposition des éléments**.
+
+Consultez **[Projet Web — Évaluation](./00-evaluation.md)** pour revoir les checklists détaillées avant d'appeler votre enseignant.
 
 L'enseignant peut vous demander, par exemple :
 
@@ -234,14 +236,18 @@ L'enseignant peut vous demander, par exemple :
 
 Si une compétence précédente est encore `À revoir`, cette rencontre laisse du temps pour la représenter lorsque la logistique le permet.
 
-Cela peut inclure :
+Votre collection complète est :
 
-- Validation A — WEB-01 / WEB-02;
-- Validation B — WEB-03 / WEB-04;
-- Validation C — WEB-05 / WEB-06;
-- Validation D — WEB-07 / WEB-08.
+- 🗂️ WEB-01 / 🧱 WEB-02;
+- ✍️ WEB-03 / 🔗 WEB-04;
+- 🔌 WEB-05 / 🎯 WEB-06;
+- 🎨 WEB-07 / 📐 WEB-08.
 
 Une reprise ne doit pas empêcher le groupe de commencer JavaScript à la rencontre 6.
+
+:::tip Collection complète
+Quand les huit compétences sont **Validées**, vos huit badges HTML/CSS sont acquis. L'objectif n'est pas d'avoir le site le plus complexe, mais de pouvoir expliquer et modifier ce que vous avez construit.
+:::
 
 :::note Pour aller plus loin — non évalué
 Si votre site fonctionne bien et que vos validations sont prêtes, vous pouvez explorer une amélioration facultative, par exemple :
