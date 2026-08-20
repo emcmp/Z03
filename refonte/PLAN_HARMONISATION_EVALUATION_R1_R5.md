@@ -21,12 +21,12 @@ Ce lot part de `main` après le nettoyage des anciennes branches de travail. Il 
 
 Harmoniser au minimum :
 
-- `refonte/EVALUATION.md`;
+- `refonte/EVALUATION.md` — **fait**;
 - `refonte/COMPETENCES_HTML_CSS.md`;
 - `refonte/SUIVI_CONTENU.md`;
 - `refonte/PLAN_SITE_EVOLUTIF.md`;
-- `web/docs/03-projet-web/00-presentation.md`;
-- `web/docs/03-projet-web/00-evaluation.md`.
+- `web/docs/03-projet-web/00-presentation.md` — déjà cohérent;
+- `web/docs/03-projet-web/00-evaluation.md` — déjà cohérent.
 
 Résultat attendu : aucune de ces références ne présente encore le 30 % comme une hypothèse à confirmer.
 
@@ -38,9 +38,9 @@ Retirer les mentions qui laissent croire que l'autodiagnostic informatique doit 
 
 ## HARM-03 — Corriger l'exercice R5
 
-**État : À faire**
+**État : Fait**
 
-Dans `web/docs/01-cours/05-rencontre5-exercice-guide.md`, corriger le lien `href="#contact"` sans cible. Ne pas ajouter une section Contact uniquement pour satisfaire l'ancien lien et ne pas transformer l'exercice Flexbox en leçon sur les ancres.
+Dans `web/docs/01-cours/05-rencontre5-exercice-guide.md`, le lien `href="#contact"` sans cible a été retiré sans ajouter de section Contact ni transformer l'exercice Flexbox en leçon sur les ancres.
 
 ## HARM-04 — Revue de cohérence R1 à R5
 
@@ -66,6 +66,13 @@ Corriger uniquement les incohérences non ambiguës déjà tranchées dans les p
 - signaler séparément toute décision pédagogique encore réellement ouverte;
 - ne créer ni PR ni déploiement sans demande explicite.
 
+## Journal de reprise — 2026-08-20
+
+- HARM-03 corrigé sur la branche.
+- HARM-01 commencé dans `refonte/EVALUATION.md` : le total de 30 % est maintenant présenté comme une décision et seule la répartition par compétence reste à détailler.
+- Les pages étudiantes `00-presentation.md` et `00-evaluation.md` indiquaient déjà 30 % de façon définitive.
+- L'environnement d'exécution courant ne peut pas résoudre `github.com` pour cloner le dépôt; `npm run build` et `git diff --check` restent donc à exécuter dans un environnement local fonctionnel avant HARM-05.
+
 # Point de reprise
 
-> **HARM-01 — officialiser 30 % partout, puis HARM-02 et HARM-03 avant la revue transversale HARM-04.**
+> **HARM-01 — terminer l'officialisation de 30 % dans `COMPETENCES_HTML_CSS.md`, `SUIVI_CONTENU.md` et `PLAN_SITE_EVOLUTIF.md`, puis HARM-02 avant la revue transversale HARM-04.**
