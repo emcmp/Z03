@@ -58,7 +58,27 @@ const sidebars = {
         },
       ],
     },
-    { type: "doc", id: "cours/rencontre3", label: "Rencontre 3 — Introduction à CSS" },
+    {
+      type: "category",
+      label: "Rencontre 3 — Introduction à CSS",
+      items: [
+        {
+          type: "doc",
+          id: "cours/rencontre3",
+          label: "Cours — Introduction à CSS",
+        },
+        {
+          type: "doc",
+          id: "cours/rencontre3-exercice-guide",
+          label: "Exercice guidé — Première feuille CSS",
+        },
+        {
+          type: "ref",
+          id: "projet-web/rencontre3",
+          label: "Projet Web — Étape 3",
+        },
+      ],
+    },
     { type: "doc", id: "cours/rencontre4", label: "Rencontre 4 — Modèle en boîte et espacements" },
     { type: "doc", id: "cours/rencontre5", label: "Rencontre 5 — Flexbox simple et intégration" },
     { type: "doc", id: "cours/rencontre6", label: "Rencontre 6 — Variables et JavaScript" },
