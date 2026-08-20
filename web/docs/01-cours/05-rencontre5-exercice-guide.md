@@ -44,7 +44,6 @@ Dans `index.html` :
     <nav class="navigation">
       <a href="#">Accueil</a>
       <a href="#activites">Activités</a>
-      <a href="#contact">Contact</a>
     </nav>
 
     <main>
@@ -109,7 +108,7 @@ Ici :
 
 ```text
 parent flex     → nav.navigation
-enfants directs → les trois liens <a>
+enfants directs → les liens <a>
 ```
 
 :::info À maîtriser
