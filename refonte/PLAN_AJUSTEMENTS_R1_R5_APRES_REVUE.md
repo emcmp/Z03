@@ -1,7 +1,7 @@
 # Plan d'ajustements — rencontres 1 à 5 après revue
 
 **Date : 2026-08-19**  
-**Statut : actif — AJ-01 à AJ-04 terminés; prochain point de reprise AJ-05**  
+**Statut : actif — AJ-01 à AJ-05 terminés; prochain point de reprise AJ-06 (POC ExampleFrame)**  
 **Branche de travail : `agent/ajustements-r1-r5`**
 
 Ce plan transforme les conclusions de `REVUE_TRANSVERSALE_R1_R5.md` et les décisions de l'enseignant en tâches d'ajustement bornées. Il complète `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` et devient le point de reprise opérationnel pour la phase **REV-03 — Ajustements de poids**.
@@ -257,7 +257,7 @@ Validation technique effectuée après le lot :
 
 ## AJ-05 — Audit code ↔ rendu visuel R3/R4
 
-**État : À faire**  
+**État : Terminé**  
 **Dépend de : AJ-04 pour R3**
 
 Pour chaque image qui prétend illustrer un snippet ou un résultat CSS :
@@ -268,77 +268,96 @@ Pour chaque image qui prétend illustrer un snippet ou un résultat CSS :
 4. ne jamais modifier le snippet pédagogique seulement pour faire correspondre une ancienne capture si le snippet actuel est meilleur;
 5. inscrire les nouvelles captures nécessaires dans `RESSOURCES_A_FOURNIR.md` avant leur intégration.
 
-## AJ-06 — Spike Codex : génération directe des rendus CSS
+### Résultat de l'audit
 
-**État : À faire — à déléguer lorsque AJ-04 est rédigé**  
-**Responsable privilégié : Codex local**
+L'audit compare les snippets actuellement montrés dans les cours R3/R4 aux exemples historiques qui utilisaient les mêmes fichiers PNG. Lorsque le snippet canonique a changé de texte, de sélecteur, de couleur ou de structure, l'ancien rendu ne peut plus être considéré comme le résultat exact du code actuel.
 
-But : déterminer si Codex peut produire de façon fiable les captures exactes sans créer d'outil permanent.
+| Rencontre | Ressource | Classement | Décision |
+|---|---|---|---|
+| R3 | `fichier-css-externe.png` | **Illustration générale — pas un rendu exact** | Conserver comme illustration du principe d'une feuille externe; ne pas la présenter comme rendu du paragraphe `darkred`. |
+| R3 | `lier-feuille-css.png` | **À régénérer** | L'ancien exemple est associé à `href="styles.css"` alors que R3 montre maintenant `href="css/styles.css"`; envisager plutôt de retirer cette capture redondante avec le bloc de code. |
+| R3 | `selecteur-element.png` | **À régénérer** | L'ancien exemple `p` bleu + `h1` à `2.5rem` ne correspond plus au snippet actuel `h1` darkblue + `p` `#37474f`. |
+| R3 | `selecteur-classe-rendu.png` | **À régénérer** | L'ancien `.important` / `firebrick` ne correspond plus à `.mise-en-valeur` / `darkred` ni au contenu actuel. |
+| R3 | `couleurs-rendu.png` | **À régénérer** | L'ancien jeu `mediumturquoise` / `darkslateblue` / `mistyrose` ne correspond plus aux couleurs hexadécimales actuelles. |
+| R3 | `bordure-rendu.png` | **À régénérer** | L'ancien `.encadre` avec bordure `orchid` ne correspond plus à `.mise-en-valeur` avec `#b45b5b`. |
+| R4 | `boites-rendues-visibles.png` | **À régénérer** | L'ancien exemple `h1` mediumpurple + `p` lavender ne correspond plus à `.carte` avec fond bleu pâle et bordure bleue. |
+| R4 | `modele-de-boite-css.png` | **Illustration générale — pas un rendu exact** | Conserver comme schéma conceptuel `contenu → padding → border → margin`. |
+| R4 | `marges-et-remplissage.png` | **Illustration générale — pas un rendu exact** | Conserver seulement comme comparaison conceptuelle; ne pas l'associer à des valeurs précises du snippet actuel. |
+| R4 | `dimensions-totales-boite.png` | **Illustration générale — pas un rendu exact** | Conserver pour expliquer la composition de la largeur totale, sans la présenter comme rendu exact de `width: 320px`. |
 
-Codex devra essayer en priorité :
+Constats complémentaires :
 
-- créer une petite page HTML temporaire à partir du snippet canonique;
-- la charger localement dans un navigateur via ses outils disponibles / MCP;
-- utiliser un viewport stable;
-- prendre une capture PNG nette;
-- comparer visuellement la capture au snippet;
-- produire plusieurs captures dans une même passe si le mécanisme est fiable.
+- les exercices guidés R3 et R4 reposent directement sur l'expérimentation dans le navigateur et ne contiennent pas de captures de rendu à corriger;
+- aucune nouvelle capture n'est demandée dans ce lot et `RESSOURCES_A_FOURNIR.md` reste donc inchangé;
+- aucun PNG n'est supprimé ou remplacé pendant AJ-05;
+- le contrôle effectué ici est un audit de cohérence entre code canonique, usage historique et rôle pédagogique des images; aucune inspection pixel par pixel des binaires n'est revendiquée;
+- pour les images classées **Illustration générale**, cette limite est acceptable puisqu'elles ne doivent plus être présentées comme le résultat exact d'un snippet;
+- pour les images classées **À régénérer**, privilégier d'abord un aperçu HTML/CSS vivant lorsque cela réduit le risque de dérive entre code et rendu.
 
-Les fichiers temporaires ne doivent pas devenir du contenu étudiant. Les PNG retenus seront ensuite copiés vers les chemins conventionnels sous `web/static/img/rencontreN/`.
+Candidats prioritaires pour un aperçu vivant après le POC : `selecteur-classe-rendu.png`, `couleurs-rendu.png` et `boites-rendues-visibles.png`. `lier-feuille-css.png` peut probablement être retiré plutôt que reproduit, puisque le code adjacent communique déjà l'information.
 
-### Critère de succès du spike
+## AJ-06 — POC ExampleFrame : aperçus HTML/CSS vivants
 
-Le flux direct Codex est retenu s'il peut :
+**État : À faire — prochain point de reprise**  
+**Responsable privilégié : Codex local**  
+**Dépend de : AJ-05**
 
-- reproduire les mêmes dimensions de viewport;
-- charger des fichiers locaux sans manipulation fragile;
-- produire des PNG sans barres/outils parasites;
-- répéter l'opération sur plusieurs exemples;
-- permettre une vérification simple code ↔ rendu.
+But : vérifier, sur un périmètre volontairement minuscule, qu'un rendu HTML/CSS vivant intégré à Docusaurus est plus fiable et plus utile qu'une capture PNG lorsqu'il prétend montrer le résultat exact d'un snippet.
 
-## AJ-07 — Solution de repli : petit outil batch de rendus
+### Portée stricte du POC
 
-**État : À faire seulement si AJ-06 est insuffisant**
+Implémenter seulement deux aperçus dans `web/docs/01-cours/00-introduction-css.md` :
 
-Ne pas construire cet outil par défaut. Le créer seulement si les captures constituent un besoin récurrent et que le navigateur/MCP de Codex est trop fragile ou trop manuel.
+1. le paragraphe intraligne violet actuellement associé à `premier-style-css.png`;
+2. l'exemple `color` / `background-color` actuellement associé à `couleurs-rendu.png`.
 
-### Concept envisagé
+Ne pas migrer automatiquement les rendus du cours R3/R4 pendant ce POC et ne supprimer aucun PNG existant.
 
-Un utilitaire simple pourrait fonctionner ainsi :
+### Architecture proposée
 
-```text
-tools/css-render/
-├── examples/
-│   ├── r3-premier-style/
-│   │   ├── index.html
-│   │   └── styles.css
-│   ├── r3-classe/
-│   │   ├── index.html
-│   │   └── styles.css
-│   └── ...
-└── script de génération
-```
+- exemples autonomes sous `web/static/examples/rencontre3/<slug>/`;
+- composant global `web/src/components/ExampleFrame/`;
+- enregistrement du composant dans `web/src/theme/MDXComponents.js`;
+- chemins compatibles avec le `baseUrl`, sans URL codée en dur vers un dépôt;
+- isolation du rendu dans un `iframe`;
+- `sandbox="allow-same-origin"`, sans scripts dans les exemples;
+- hauteur automatique par accès same-origin et `ResizeObserver`, avec bornes raisonnables; permettre une hauteur explicite si nécessaire;
+- réutiliser les mêmes sources pour afficher le code et produire le rendu afin d'éviter la dérive code ↔ aperçu; le hand-off technique prévoit `raw-loader` pour cette lecture de source;
+- aucune dépendance ou plateforme externe : pas de Sandpack, CodeSandbox, iframe-resizer, éditeur interactif, manifeste ou serveur supplémentaire.
 
-Le script :
+### Critères de succès
 
-1. découvre les exemples;
-2. ouvre chaque `index.html` dans un navigateur automatisé;
-3. utilise un viewport fixe;
-4. attend la fin du chargement;
-5. génère un PNG déterministe;
-6. écrit les rendus retenus sous `web/static/img/rencontreN/` ou dans un dossier temporaire de validation avant copie.
+Le POC est retenu seulement si :
 
-Technologie possible : Playwright/Chromium ou outil déjà présent dans l'environnement. **Ne pas ajouter de dépendance au dépôt avant décision explicite.**
+- `npm run build` réussit;
+- `git diff --check` réussit;
+- les deux aperçus fonctionnent avec le `baseUrl` du dépôt;
+- le code montré et le rendu proviennent bien de la même source canonique;
+- le contenu de l'iframe reste isolé du CSS Docusaurus;
+- la hauteur s'ajuste sans couper le contenu ni créer un grand espace inutile;
+- la page reste lisible sur une largeur étroite raisonnable;
+- une vérification **visuelle réelle** confirme les deux rendus; une compilation seule ne suffit pas.
 
-### Exigences si l'outil est construit
+Si le Browser automatisé de Codex demeure indisponible, documenter cette limite et effectuer la vérification visuelle avec le navigateur local disponible plutôt que de déclarer le POC réussi sur le seul build.
 
-- commande batch simple;
-- aucun accès Internet nécessaire pour les exemples;
-- aucun contenu généré dans `web/build/` commité;
-- exemples minimaux et explicites;
-- possibilité de régénérer une capture après modification d'un snippet;
-- documentation du lien entre l'exemple source et le PNG produit;
-- sortie stable et reproductible.
+Après le POC, **arrêter et présenter le résultat**. Aucune migration en masse n'est autorisée implicitement.
+
+## AJ-07 — Décider de l'adoption et de la migration ciblée
+
+**État : À faire seulement après AJ-06**
+
+AJ-07 remplace l'idée de construire par défaut un outil batch de captures PNG.
+
+Après revue du POC ExampleFrame :
+
+- si le composant est simple, portable et visuellement satisfaisant, décider explicitement quels rendus exacts de l'audit AJ-05 seront migrés;
+- commencer par quelques cas à forte valeur pédagogique plutôt que convertir toute la documentation;
+- conserver les schémas et illustrations générales lorsqu'ils communiquent mieux une idée qu'un rendu HTML vivant;
+- retirer une vieille capture redondante plutôt que la reproduire lorsque le code seul suffit;
+- ne pas supprimer les PNG du POC avant la décision d'adoption;
+- si ExampleFrame n'est pas satisfaisant, revenir à une génération PNG ciblée; ne construire un outil batch que si un besoin récurrent est démontré et après décision explicite.
+
+Aucune migration massive, aucun nouvel outil permanent et aucune nouvelle dépendance ne doivent être introduits automatiquement dans AJ-07.
 
 ## AJ-08 — Nettoyer R5
 
@@ -357,13 +376,13 @@ Technologie possible : Playwright/Chromium ou outil déjà présent dans l'envir
 Après les modifications réelles :
 
 - mettre `SUIVI_CONTENU.md` à jour pour les changements de portée;
-- mettre `RESSOURCES_A_FOURNIR.md` à jour pour les rendus ajoutés/régénérés;
+- mettre `RESSOURCES_A_FOURNIR.md` à jour pour les rendus ajoutés, retirés ou remplacés;
 - revérifier `EVALUATION.md` et `COMPETENCES_HTML_CSS.md`;
 - exécuter `npm run build`;
 - exécuter `git diff --check`;
 - vérifier visuellement R2, R3, R4 et R5;
 - confirmer que R3 montre correctement intraligne/interne/externe sans changer la compétence évaluée;
-- confirmer que toute capture présentée comme résultat exact correspond au code adjacent;
+- confirmer que tout rendu présenté comme résultat exact — PNG ou aperçu vivant — correspond au code canonique associé;
 - remettre le plan principal et `SUIVI_CONTENU.md` à l'état final.
 
 # Ordre recommandé
@@ -377,11 +396,11 @@ AJ-03 propagation R3–R5                Terminé
   ↓
 AJ-04 progression CSS R3               Terminé
   ↓
-AJ-05 audit visuel                     Prochain
+AJ-05 audit visuel                     Terminé
   ↓
-AJ-06 spike Codex
+AJ-06 POC ExampleFrame                 Prochain
   ↓
-AJ-07 outil batch seulement si nécessaire
+AJ-07 décision / migration ciblée
   ↓
 AJ-08 nettoyage R5
   ↓
@@ -392,4 +411,4 @@ AJ-08 peut être réalisé en parallèle du travail visuel s'il n'y a pas de con
 
 # Point de reprise actuel
 
-> **AJ-05 — auditer les rendus visuels de R3/R4 contre le code canonique, classer chaque image et identifier précisément ce qui doit être régénéré avant toute intégration.**
+> **AJ-06 — implémenter un POC ExampleFrame strictement borné à deux exemples de `00-introduction-css.md`, valider le build et le rendu réel, puis arrêter avant toute migration supplémentaire.**
