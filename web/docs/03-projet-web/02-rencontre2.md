@@ -1,6 +1,6 @@
 ---
 title: Étape 2 - Transformer votre page en petit site
-description: Organiser les ressources, ajouter des images locales et relier plusieurs pages avec des chemins relatifs.
+description: Organiser les ressources, ajouter une image locale et relier plusieurs pages avec des chemins relatifs.
 sidebar_position: 3
 ---
 
@@ -30,20 +30,18 @@ Pour cette étape, nous allons utiliser volontairement deux sous-dossiers :
 - `pages` pour les pages secondaires;
 - `images` pour les images du site.
 
-Créez une structure comparable à celle-ci :
+Le minimum demandé ressemble à ceci :
 
 ```text
 mon-site/
 ├── index.html
 ├── images/
-│   ├── image1.jpg
-│   └── image2.jpg
+│   └── image1.jpg
 └── pages/
-    ├── sujet.html
-    └── apropos.html
+    └── sujet.html
 ```
 
-Les noms `sujet.html` et `apropos.html` sont des exemples. Choisissez des noms qui correspondent à votre sujet.
+Le nom `sujet.html` est un exemple. Choisissez un nom qui correspond à votre sujet.
 
 :::info À maîtriser
 Vous devez être capable de retrouver un fichier dans cette structure et de construire un chemin relatif à partir du fichier HTML dans lequel vous écrivez le code.
@@ -53,23 +51,22 @@ Vous devez être capable de retrouver un fichier dans cette structure et de cons
 Utilisez des noms de fichiers courts, sans espace et sans accent, par exemple `jeux-video.html`, `mes-recettes.html` ou `equipe.html`.
 :::
 
-## 3. Créer deux pages secondaires
+## 3. Créer une page secondaire
 
-Créez vos deux nouvelles pages dans le dossier `pages`.
+Créez une nouvelle page dans le dossier `pages`.
 
-Chaque page doit posséder une structure HTML complète et un contenu qui a une fonction reconnaissable dans votre site.
+Votre page secondaire doit posséder une structure HTML complète et un contenu qui a une fonction reconnaissable dans votre site.
 
 Par exemple :
 
 - `index.html` : présenter le sujet;
-- `pages/sujet.html` : développer un aspect du sujet;
-- `pages/apropos.html` : présenter l'auteur du site, le projet ou une autre information pertinente.
+- `pages/sujet.html` : développer un aspect du sujet.
 
 Vous n'avez pas besoin d'écrire beaucoup de texte. Utilisez les éléments HTML vus en classe de façon logique : titres, paragraphes, listes et autres éléments pertinents.
 
-## 4. Ajouter des images locales
+## 4. Ajouter une image locale
 
-Placez vos images dans le dossier `images` au lieu de les laisser dans Téléchargements ou sur le Bureau.
+Placez au moins une image dans le dossier `images` au lieu de la laisser dans Téléchargements ou sur le Bureau.
 
 Depuis `index.html`, une image peut être utilisée ainsi :
 
@@ -83,7 +80,7 @@ Depuis une page placée dans `pages`, le chemin doit d'abord remonter au dossier
 <img src="../images/image1.jpg" alt="Description de l'image">
 ```
 
-Faites l'essai dans les deux situations afin de voir la différence entre `images/...` et `../images/...`.
+Utilisez l'image dans les deux situations afin de voir la différence entre `images/...` et `../images/...`.
 
 :::tip Bonne pratique — texte alternatif
 L'attribut `alt` devrait transmettre l'information importante de l'image. Évitez un texte comme `image1.jpg`; décrivez plutôt ce que l'image apporte à la page.
@@ -91,7 +88,7 @@ L'attribut `alt` devrait transmettre l'information importante de l'image. Évite
 
 ## 5. Construire la navigation
 
-Votre navigation doit permettre d'aller d'une page à l'autre et de revenir à l'accueil.
+Votre navigation doit permettre d'aller vers la page secondaire et de revenir à l'accueil.
 
 Comme les fichiers ne sont pas tous dans le même dossier, **le chemin des liens n'est pas identique sur toutes les pages**.
 
@@ -103,7 +100,6 @@ Depuis la racine du projet, il faut entrer dans le dossier `pages` :
 <nav>
   <a href="index.html">Accueil</a>
   <a href="pages/sujet.html">Mon sujet</a>
-  <a href="pages/apropos.html">À propos</a>
 </nav>
 ```
 
@@ -115,11 +111,10 @@ Depuis `pages/sujet.html`, il faut utiliser `../` pour revenir au dossier parent
 <nav>
   <a href="../index.html">Accueil</a>
   <a href="sujet.html">Mon sujet</a>
-  <a href="apropos.html">À propos</a>
 </nav>
 ```
 
-Adaptez les noms de fichiers et les textes des liens à votre propre site.
+Adaptez le nom du fichier et le texte du lien à votre propre site.
 
 :::tip Bonne pratique
 L'élément `<nav>` est recommandé pour regrouper les liens qui servent à la navigation principale du site. Son utilisation exacte n'est pas une compétence évaluée séparément.
@@ -129,12 +124,12 @@ L'élément `<nav>` est recommandé pour regrouper les liens qui servent à la n
 
 Ne testez pas seulement la page d'accueil.
 
-Ouvrez chacune de vos pages dans le navigateur et vérifiez :
+Ouvrez les deux pages dans le navigateur et vérifiez :
 
-1. que les images apparaissent;
-2. que chaque lien mène au bon endroit;
-3. que vous pouvez revenir à l'accueil;
-4. que vous pouvez passer d'une page secondaire à l'autre;
+1. que l'image apparaît depuis `index.html`;
+2. que la même image apparaît depuis la page sous `pages/`;
+3. que le lien vers la page secondaire fonctionne;
+4. que vous pouvez revenir à l'accueil;
 5. que les noms de fichiers dans le code correspondent exactement aux vrais noms des fichiers.
 
 Si une image ou un lien ne fonctionne pas, partez du fichier HTML actuel et posez-vous la question : **où dois-je aller à partir d'ici pour atteindre le fichier voulu?**
@@ -149,11 +144,11 @@ Avant de demander une validation, assurez-vous que :
 
 - [ ] vous travaillez toujours dans le projet commencé à la rencontre 1;
 - [ ] `index.html` se trouve à la racine du projet;
-- [ ] vos pages secondaires se trouvent dans `pages/`;
-- [ ] vos images locales se trouvent dans `images/`;
-- [ ] vos pages possèdent une structure HTML complète;
+- [ ] votre page secondaire se trouve dans `pages/`;
+- [ ] au moins une image locale se trouve dans `images/`;
+- [ ] vos deux pages possèdent une structure HTML complète;
 - [ ] vos pages contiennent du contenu réel et organisé;
-- [ ] les images s'affichent depuis la page d'accueil et depuis une page secondaire;
+- [ ] la même image peut être chargée depuis la page d'accueil et depuis la page secondaire;
 - [ ] la navigation fonctionne dans les deux directions;
 - [ ] vous comprenez pourquoi certains chemins commencent par `../`;
 - [ ] vous avez corrigé les erreurs HTML évidentes, avec le validateur W3C au besoin.
@@ -166,6 +161,8 @@ Cette checklist sert à vous préparer. La validation ne consiste pas à compter
 
 ### Validation A — Structure HTML
 
+La **Validation A est prioritaire pendant la rencontre 2**.
+
 L'enseignant peut observer :
 
 - **WEB-01 — Organiser un projet Web et utiliser les chemins**;
@@ -175,7 +172,9 @@ Il peut par exemple vous demander de montrer où se trouve une image, d'explique
 
 ### Validation B — Contenu et navigation
 
-L'enseignant peut aussi observer :
+La Validation B peut aussi commencer à cette rencontre avec les étudiants prêts. **Elle peut se poursuivre au début de la rencontre 3**; tout le groupe n'a pas besoin de la terminer aujourd'hui.
+
+L'enseignant peut observer :
 
 - **WEB-03 — Structurer et enrichir le contenu HTML**;
 - **WEB-04 — Relier plusieurs pages dans une navigation fonctionnelle**.
@@ -187,10 +186,12 @@ Une même courte interaction peut permettre d'observer plusieurs compétences. U
 :::note Pour aller plus loin — non évalué
 Si votre site fonctionne bien et que vos validations sont prêtes, vous pouvez :
 
-- ajouter une autre page pertinente;
+- ajouter une deuxième page secondaire pertinente dans `pages/`;
 - ajouter un lien vers un site externe utile;
 - enrichir le contenu d'une page;
 - ajouter d'autres images locales en vérifiant soigneusement leurs chemins.
+
+Si vous ajoutez une deuxième page, profitez-en pour vérifier la navigation entre plusieurs fichiers du dossier `pages`.
 
 Ne commencez pas encore CSS : la feuille de styles externe sera introduite à la rencontre 3.
 :::

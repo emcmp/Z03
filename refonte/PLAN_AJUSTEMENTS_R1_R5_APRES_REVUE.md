@@ -1,7 +1,7 @@
 # Plan d'ajustements — rencontres 1 à 5 après revue
 
 **Date : 2026-08-19**  
-**Statut : actif — AJ-01 terminé; aucune page étudiante modifiée dans ce lot**  
+**Statut : actif — AJ-01 terminé; AJ-02 modifié, validation technique en attente**  
 **Branche de travail : `agent/ajustements-r1-r5`**
 
 Ce plan transforme les conclusions de `REVUE_TRANSVERSALE_R1_R5.md` et les décisions de l'enseignant en tâches d'ajustement bornées. Il complète `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` et devient le point de reprise opérationnel pour la phase **REV-03 — Ajustements de poids**.
@@ -129,7 +129,7 @@ Résultat :
 
 ## AJ-02 — Alléger le Projet Web de la rencontre 2
 
-**État : À faire**  
+**État : En cours — contenu modifié; validation technique requise avant `Terminé`**  
 **Dépend de : AJ-01**
 
 Fichiers principaux :
@@ -145,6 +145,17 @@ Résultat attendu :
 - navigation aller-retour fonctionnelle;
 - deuxième page secondaire clairement facultative;
 - aucune baisse des exigences conceptuelles des Validations A/B.
+
+Résultat du lot AJ-02 :
+
+- seule la page `web/docs/03-projet-web/02-rencontre2.md` a été modifiée côté étudiant;
+- le minimum est maintenant `index.html` + une page secondaire + une image locale;
+- la navigation obligatoire est réduite à un aller-retour entre l'accueil et la page secondaire;
+- la deuxième page secondaire est déplacée dans `Pour aller plus loin — non évalué`;
+- la page rappelle que la Validation A est prioritaire en R2 et que la Validation B peut se poursuivre au début de R3;
+- le cours R2 et l'exercice guidé ne sont pas modifiés dans ce lot.
+
+Avant de marquer AJ-02 `Terminé`, exécuter le build Docusaurus et vérifier que la page rend correctement.
 
 ## AJ-03 — Propager le nouveau minimum R2 dans les exemples R3–R5
 
@@ -310,7 +321,7 @@ Après les modifications réelles :
 ```text
 AJ-01 documentation / validations       Terminé
   ↓
-AJ-02 R2 minimum                        Prochain
+AJ-02 R2 minimum                        En cours — build requis
   ↓
 AJ-03 propagation R3–R5
   ↓
@@ -331,4 +342,4 @@ AJ-08 peut être réalisé en parallèle du travail visuel s'il n'y a pas de con
 
 # Point de reprise actuel
 
-> **AJ-02 — alléger le Projet Web de la rencontre 2. Aucune modification sous `web/` n'a encore été faite dans ce nouveau lot.**
+> **AJ-02 — le Projet Web R2 a été allégé dans un seul fichier étudiant. Avant de passer à AJ-03, valider le rendu et le build Docusaurus, puis marquer AJ-02 `Terminé`.**
