@@ -3,6 +3,8 @@ title: Rencontre 1 - Premiers pas en HTML
 description: Découvrir les éléments HTML, l'imbrication, la structure d'un document et les premiers contenus visibles.
 ---
 
+import r1PageCompleteHtml from '!!raw-loader!../../static/examples/rencontre1/page-complete/preview.html';
+
 # Rencontre 1 - Premiers pas en HTML
 
 Avant de commencer cette partie, assurez-vous d'avoir complété le **[Préambule — Environnement de travail](./01-rencontre1-environnement.md)**.
@@ -108,6 +110,14 @@ Une page HTML complète possède une structure générale semblable à celle-ci 
   </body>
 </html>
 ```
+
+Voici ce que ce document produit réellement dans un navigateur, sans CSS :
+
+<ExampleFrame
+  src="examples/rencontre1/page-complete/preview.html"
+  title="Rendu d'une première page HTML complète"
+  html={r1PageCompleteHtml}
+/>
 
 ### `<!doctype html>` et `<html>`
 
