@@ -1,6 +1,6 @@
 ---
 title: Projet Web - Présentation
-description: Comprendre le projet Web évolutif, son fonctionnement, les compétences travaillées et les grandes étapes à venir.
+description: Comprendre le projet Web évolutif, son fonctionnement et les grandes étapes à venir.
 sidebar_position: 1
 ---
 
@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Pendant le cours Z03, vous construirez un **petit site Web qui évoluera progressivement**. Au lieu de recommencer un nouvel exercice complet chaque fois, vous garderez le même projet et vous l'améliorerez à mesure que de nouvelles notions seront introduites.
 
-Le projet sert d'abord de contexte de pratique. Il pourra aussi fournir des preuves concrètes lorsque certaines compétences seront validées en classe.
+Le projet sert d'abord de contexte de pratique. Il fournit aussi des preuves concrètes lorsque certaines compétences sont validées en classe.
 
 ## Le principe du projet
 
@@ -17,7 +17,7 @@ Vous partez d'une page HTML très simple. Au fil des rencontres, votre site gagn
 Pendant les rencontres 1 à 5, le projet sert principalement à apprendre **HTML et CSS**. Plus tard dans la session, le même site pourra aussi être réutilisé lorsque JavaScript et le DOM seront introduits.
 
 :::info Important
-Le projet n'est pas un gros travail remis une seule fois à la fin. Les compétences sont plutôt observées progressivement pendant que vous travaillez.
+Le projet n'est pas un gros travail remis une seule fois à la fin. Vous le construisez progressivement et certaines compétences sont validées pendant vos périodes de travail.
 :::
 
 ## Choisir un sujet
@@ -57,59 +57,22 @@ Choisissez surtout quelque chose qui vous permettra de produire facilement quelq
 
 Chaque étape possède sa propre page de consignes. Vous n'avez donc pas besoin de tout faire dès le départ.
 
-## Les compétences HTML et CSS
+## Évaluation des compétences
 
-Le bloc HTML/CSS est organisé autour de huit compétences :
+Le bloc HTML/CSS est évalué progressivement à l'aide de **huit compétences**, regroupées en quatre moments de validation pendant les rencontres 2 à 5.
 
-| Code | Compétence |
-| --- | --- |
-| **WEB-01** | Organiser un projet Web et utiliser les chemins |
-| **WEB-02** | Construire une page HTML correctement structurée |
-| **WEB-03** | Structurer et enrichir le contenu HTML |
-| **WEB-04** | Relier plusieurs pages dans une navigation fonctionnelle |
-| **WEB-05** | Associer correctement une feuille CSS externe |
-| **WEB-06** | Cibler les éléments avec des sélecteurs appropriés |
-| **WEB-07** | Mettre en forme une interface avec CSS |
-| **WEB-08** | Organiser l'espace et la disposition des éléments |
+L'ensemble de ces validations représente **30 % de la note finale du cours**.
 
-Ces compétences sont regroupées en quelques moments de validation afin que vous puissiez les démontrer pendant vos périodes de travail.
+La page **[Projet Web — Évaluation](./00-evaluation.md)** contient :
 
-:::info À maîtriser
-Les consignes marquées **À maîtriser** font partie du noyau attendu du cours et peuvent contribuer à une validation.
-:::
+- les huit compétences;
+- le calendrier des validations;
+- ce que chaque compétence englobe;
+- une checklist pour chacune;
+- la marche à suivre avant de demander une validation à votre enseignant.
 
-:::tip Bonne pratique
-Les éléments marqués **Bonne pratique** sont enseignés et recommandés, mais leur absence ne fait pas échouer une compétence à elle seule.
-:::
-
-:::note Pour aller plus loin — non évalué
-Les sections **Pour aller plus loin** sont facultatives. Elles permettent d'explorer davantage sans ajouter d'exigence à l'évaluation.
-:::
-
-## Checklist globale du projet
-
-Cette liste représente la **direction générale** du projet. Elle ne doit surtout pas être complétée à la première rencontre.
-
-### Structure et contenu HTML
-
-- [ ] le projet est rangé dans un dossier facile à retrouver;
-- [ ] la page principale se nomme `index.html`;
-- [ ] les pages possèdent une structure HTML complète;
-- [ ] les titres, paragraphes et listes correspondent au rôle du contenu;
-- [ ] les fichiers et ressources sont organisés clairement;
-- [ ] les liens et chemins relatifs fonctionnent;
-- [ ] plusieurs pages peuvent être parcourues avec une navigation.
-
-### Mise en forme CSS
-
-- [ ] une feuille CSS externe est reliée correctement;
-- [ ] les éléments sont ciblés avec des sélecteurs appropriés;
-- [ ] les couleurs, textes et bordures sont utilisés volontairement;
-- [ ] les espacements avec `margin` et `padding` sont compris et ajustés;
-- [ ] une disposition simple avec Flexbox est utilisée lorsque cela convient.
-
-:::tip Bonne pratique
-Votre site n'a pas besoin d'être spectaculaire. Un site simple, clair et que vous comprenez vaut mieux qu'un résultat complexe construit avec du code que vous ne pourriez pas expliquer.
+:::tip À consulter régulièrement
+Avant de demander une validation, ouvrez la page **Projet Web — Évaluation** et utilisez la checklist de la compétence concernée pour vérifier que vous êtes prêt à la présenter.
 :::
 
 ## Comment travailler sur le projet
