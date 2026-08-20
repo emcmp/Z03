@@ -38,6 +38,66 @@ Le but n'est pas de tout mémoriser. Utilisez cette page pour retrouver une synt
 | `<body>` | Contient ce qui est visible dans la page. |
 | `<link>` | Relie la page à une feuille CSS externe. |
 
+## Deux raccourcis VS Code très pratiques
+
+### Générer la structure HTML avec Emmet
+
+Dans un fichier `.html` vide, tapez :
+
+```text
+html:5
+```
+
+Choisissez ensuite la suggestion **Emmet Abbreviation** et appuyez sur `Entrée` (ou `Tab` selon votre configuration). VS Code génère automatiquement la structure de base d'un document HTML.
+
+:::warning Vérifiez la langue et le titre
+Emmet peut générer `lang="en"` par défaut. Pour une page en français, remplacez-le par :
+
+```html
+<html lang="fr">
+```
+
+Pensez aussi à remplacer le `<title>` généré par un titre qui décrit réellement votre page.
+:::
+
+### Réindenter et reformater le document
+
+Si votre code fonctionne, mais que l'indentation est devenue difficile à lire, utilisez **Format Document** :
+
+```text
+Shift + Alt + F
+```
+
+Sur Windows, ce raccourci reformate le document et remet généralement l'indentation en ordre.
+
+Avant :
+
+```html
+<main>
+<section>
+<h2>Mon sujet</h2>
+<p>Un paragraphe.</p>
+</section>
+</main>
+```
+
+Après `Shift + Alt + F` :
+
+```html
+<main>
+  <section>
+    <h2>Mon sujet</h2>
+    <p>Un paragraphe.</p>
+  </section>
+</main>
+```
+
+:::tip Réflexe utile
+Une indentation claire aide à voir quels éléments sont à l'intérieur des autres et à repérer plus rapidement une balise mal fermée.
+
+Sur macOS, le raccourci équivalent est généralement `Shift + Option + F`.
+:::
+
 ## Balises HTML courantes
 
 | Besoin | Exemple |
