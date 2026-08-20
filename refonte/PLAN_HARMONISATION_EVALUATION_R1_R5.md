@@ -1,10 +1,10 @@
 # Plan d'harmonisation — évaluation et correctifs R1 à R5
 
 **Date : 2026-08-20**  
-**Statut : prêt pour validation locale**  
-**Branche : `agent/harmonisation-evaluation-r1-r5`**
+**Statut : lot HARM fusionné; SUITE-01 implémenté, validation locale requise**  
+**Branche active : `agent/aide-memoire-html-css`**
 
-Ce lot part de `main` après le nettoyage des anciennes branches de travail. Il vise à harmoniser les décisions déjà prises autour de l'évaluation HTML/CSS et à terminer quelques correctifs bornés des rencontres 1 à 5 avant de reprendre les travaux visuels du Projet Web.
+Ce document a d'abord servi à harmoniser les décisions autour de l'évaluation HTML/CSS et à terminer quelques correctifs bornés des rencontres 1 à 5. Le lot HARM est maintenant fusionné dans `main`; la suite documentée ici porte sur les petits chantiers complémentaires du bloc HTML/CSS.
 
 ## Décisions de départ
 
@@ -65,56 +65,57 @@ Constats de la revue :
 
 ## HARM-05 — Validation finale
 
-**État : Bloqué uniquement par la validation locale**
+**État : Fait**
 
-Vérifications terminées :
+Vérifications et fermeture :
 
-- comparaison de `agent/harmonisation-evaluation-r1-r5` avec `main` : branche en avance, sans retard, changements limités au lot HARM;
-- recherche ciblée des anciennes formulations actives : aucune hypothèse de 30 % ne subsiste dans les références harmonisées;
+- comparaison de `agent/harmonisation-evaluation-r1-r5` avec `main` effectuée avant fusion : branche en avance, sans retard, changements limités au lot HARM;
+- recherche ciblée des anciennes formulations actives terminée;
 - l'autodiagnostic n'est plus présenté comme une décision ouverte dans les suivis actifs;
 - `#contact` ne subsiste plus dans l'exercice R5 corrigé;
-- aucun statut CI n'est publié pour le dernier commit de la branche;
-- aucune PR ni aucun déploiement n'a été créé.
+- la validation locale du lot a été confirmée par l'utilisateur;
+- `agent/harmonisation-evaluation-r1-r5` a été fusionnée dans `main` en fast-forward le 2026-08-20;
+- aucune PR ni aucun déploiement n'a été créé pour cette fusion.
 
-Vérifications restant à exécuter dans un checkout local fonctionnel :
+Aucune décision pédagogique supplémentaire n'est ouverte dans le périmètre HARM. La répartition détaillée des 30 % entre WEB-01 et WEB-08 demeure volontairement un travail ultérieur.
+
+## SUITE-01 — Créer un aide-mémoire HTML/CSS
+
+**État : Implémenté — validation locale à faire**
+
+Créer une page étudiante distincte qui regroupe de façon **très compacte** les principaux éléments HTML et CSS utiles pendant les rencontres 1 à 5.
+
+Référence de format existante : `web/docs/01-cours/00-rencontre0.0.md`, l'ancien aide-mémoire surtout orienté JavaScript. Le nouveau document HTML/CSS reprend l'idée d'un accès rapide à la syntaxe et aux exemples, sans devenir une nouvelle page de théorie complète.
+
+Implémentation :
+
+- nouvelle page `web/docs/01-cours/00-aide-memoire-html-css.md`;
+- premier élément du menu **Cours**, avant la rencontre 1, avec le libellé **Aide-mémoire — HTML/CSS**;
+- structure minimale HTML et principales balises utilisées dans R1–R5;
+- attributs courants et chemins relatifs, avec un rappel visuel de `../`;
+- liaison d'une feuille CSS externe depuis la racine et depuis un sous-dossier;
+- syntaxe d'une règle CSS, sélecteurs d'élément, classes et rappel sur `id`;
+- propriétés visuelles courantes;
+- modèle en boîte et Flexbox minimal;
+- exemple fréquent de `background-image` depuis `css/styles.css` vers `images/`, incluant `url("../images/...")`, `background-size: cover`, `background-position: center` et `background-repeat: no-repeat`;
+- petits ajouts utiles clairement séparés du noyau évalué;
+- aucun changement apporté au contenu ou à la navigation **Dans l'autobus**, afin de laisser ce chantier évoluer en parallèle.
+
+Principes conservés :
+
+- privilégier tableaux, blocs de code très courts et exemples immédiatement copiables;
+- éviter les longues explications déjà présentes dans les pages de cours;
+- couvrir au minimum tout le vocabulaire HTML/CSS réellement rencontré dans R1–R5;
+- ne pas transformer les exemples supplémentaires en nouvelles exigences de validation.
+
+Validation restante sur `agent/aide-memoire-html-css` :
 
 ```bash
 npm run build
 git diff --check
 ```
 
-L'environnement d'exécution utilisé pour ce lot ne résout pas `github.com`; il ne peut donc pas cloner le dépôt ni exécuter ces deux commandes sur l'état actuel de la branche. Les réussites de build antérieures au lot HARM ne sont pas considérées comme une validation de ces changements.
-
-Aucune décision pédagogique supplémentaire n'est ouverte dans le périmètre HARM. La répartition détaillée des 30 % entre WEB-01 et WEB-08 demeure volontairement un travail ultérieur.
-
-## SUITE-01 — Créer un aide-mémoire HTML/CSS
-
-**État : À faire après la fermeture du lot HARM**
-
-Créer une page étudiante distincte qui regroupe de façon **très compacte** les principaux éléments HTML et CSS utiles pendant les rencontres 1 à 5.
-
-Référence de format existante : `web/docs/01-cours/00-rencontre0.0.md`, l'ancien aide-mémoire surtout orienté JavaScript. Le nouveau document HTML/CSS doit reprendre l'idée d'un accès rapide à la syntaxe et aux exemples, sans devenir une nouvelle page de théorie complète.
-
-Portée souhaitée :
-
-- structure minimale d'un document HTML;
-- balises de contenu réellement utilisées dans le cours : titres, paragraphes, listes, liens, images et conteneurs courants;
-- attributs et chemins utiles, avec exemples courts;
-- liaison d'une feuille CSS externe;
-- syntaxe d'une règle CSS;
-- sélecteurs d'élément, classes et rappel simple sur `id`;
-- propriétés visuelles courantes vues dans le cours;
-- modèle en boîte : `padding`, `border`, `margin` et dimensions simples;
-- Flexbox minimal : parent, enfants directs, `display: flex`, `gap` et quelques alignements simples;
-- quelques exemples CSS supplémentaires utiles peuvent être inclus comme référence, à condition de distinguer clairement ce qui dépasse le noyau évalué.
-
-Principes :
-
-- privilégier tableaux, blocs de code très courts et exemples immédiatement copiables;
-- éviter les longues explications déjà présentes dans les pages de cours;
-- couvrir au minimum tout le vocabulaire HTML/CSS réellement rencontré dans R1–R5;
-- ne pas transformer les exemples supplémentaires en nouvelles exigences de validation;
-- décider au moment de l'implémentation de son emplacement exact dans la navigation étudiante.
+Vérifier aussi visuellement que l'aide-mémoire est bien le premier item du menu Cours et que les blocs de code/tableaux restent lisibles sur la page.
 
 ## Journal de reprise — 2026-08-20
 
@@ -122,9 +123,9 @@ Principes :
 - HARM-02 terminé : autodiagnostic retiré des décisions actives et conservé seulement comme élément historique.
 - HARM-03 terminé : lien `#contact` sans cible retiré de l'exercice R5.
 - HARM-04 terminé : calendrier A–D, minimum R2, niveaux d'attente et langage d'évaluation vérifiés de R1 à R5.
-- HARM-05 terminé côté inspection distante; validation locale `npm run build` + `git diff --check` encore requise.
-- SUITE-01 ajouté : prévoir un aide-mémoire HTML/CSS compact, distinct de l'aide-mémoire JavaScript existant.
+- HARM-05 fermé après confirmation de la validation locale et fusion fast-forward dans `main`.
+- SUITE-01 ajouté puis implémenté sur `agent/aide-memoire-html-css` : page compacte, navigation en premier item, chemins CSS/images et arrière-plan inclus.
 
 # Point de reprise
 
-> **Exécuter `npm run build` puis `git diff --check` dans un checkout local de `agent/harmonisation-evaluation-r1-r5`. Si les deux commandes réussissent, marquer HARM-05 `Fait`, fermer ce lot, puis conserver SUITE-01 dans la liste des prochains chantiers : aide-mémoire HTML/CSS compact pour les étudiants.**
+> **Sur `agent/aide-memoire-html-css`, exécuter `npm run build` puis `git diff --check`, vérifier rapidement le rendu de l'aide-mémoire et sa position en premier dans le menu Cours. Si tout est vert, SUITE-01 est prêt à fusionner sans toucher au chantier parallèle des capsules Dans l'autobus.**
