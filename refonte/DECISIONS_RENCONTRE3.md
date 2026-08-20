@@ -1,7 +1,7 @@
 # Décisions de conception — Rencontre 3
 
 **Date : 2026-08-19**  
-**Statut : R3-01 terminé; R3-02 à R3-05 à implémenter**  
+**Statut : R3-01 à R3-04 implémentés; R3-05 en attente de validation technique locale**  
 **Plan maître : `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`**
 
 Ce document consigne le résultat de **R3-01 — Délimiter le contenu de cours** avant la rédaction de la rencontre 3. Il permet de reprendre le travail sans redécider la portée pédagogique si l'implémentation est interrompue.
@@ -109,9 +109,9 @@ R3 réutilise principalement les éléments HTML déjà présents (`header`, `na
 - `<div>` pourra être introduit plus naturellement en R4 lorsqu'on travaillera des blocs et le modèle en boîte;
 - `<span>` reste un outil ponctuel / facultatif et n'est pas requis dans l'exercice guidé ni dans l'étape 3 du Projet Web.
 
-## Exercice guidé prévu
+## Exercice guidé
 
-Créer `03-rencontre3-exercice-guide.md` autour d'un petit projet de deux pages :
+Implémenté dans `web/docs/01-cours/03-rencontre3-exercice-guide.md` autour de :
 
 ```text
 exercice-rencontre3/
@@ -122,18 +122,20 @@ exercice-rencontre3/
     └── infos.html
 ```
 
-L'exercice doit faire pratiquer :
+L'exercice fait pratiquer :
 
 - deux chemins différents vers la même feuille CSS;
 - un sélecteur d'élément;
 - une classe réutilisable;
 - quelques propriétés visuelles;
 - un conflit simple règle générale / classe;
-- un diagnostic volontaire d'une page non stylée ou d'un mauvais chemin.
+- un diagnostic volontaire d'une page non stylée à cause d'un mauvais chemin.
 
-Le HTML de départ doit rester simple afin que l'effort cognitif porte sur CSS.
+Le HTML de départ reste simple afin que l'effort cognitif porte sur CSS.
 
-## Projet Web — Étape 3 prévue
+## Projet Web — Étape 3
+
+Implémenté dans `web/docs/03-projet-web/03-rencontre3.md`.
 
 Le site de l'étudiant devient :
 
@@ -155,7 +157,7 @@ L'étudiant :
 - crée `css/styles.css`;
 - relie toutes les pages avec le bon chemin;
 - définit quelques styles généraux cohérents;
-- choisit au moins un rôle visuel qui mérite une classe réutilisable, sans imposer un nombre mécanique de classes;
+- choisit un rôle visuel qui mérite une classe réutilisable, sans imposer un nombre mécanique de classes;
 - vérifie que la feuille agit sur la page racine et les pages sous `pages/`;
 - garde les espacements avancés et la disposition pour R4 et R5.
 
@@ -168,12 +170,37 @@ WEB-07 est pratiquée visuellement, mais la Validation D reste prévue surtout p
 
 ## Ressources
 
-Aucune nouvelle ressource n'est bloquante pour R3. Les captures déjà présentes sous `web/static/img/cours-introduction-css/` peuvent être réutilisées dans le cours canonique lorsque leur valeur pédagogique est claire.
+Aucune nouvelle ressource n'est bloquante pour R3. La page canonique réutilise quelques captures déjà présentes sous `web/static/img/cours-introduction-css/`.
+
+## Implémentation réalisée
+
+Les éléments suivants sont maintenant présents sur `main` :
+
+- `web/docs/01-cours/03-rencontre3.md` — cours canonique complet;
+- `web/docs/01-cours/03-rencontre3-exercice-guide.md` — exercice guidé;
+- `web/docs/03-projet-web/03-rencontre3.md` — Projet Web, étape 3;
+- `web/sidebars.js` — rencontre 3 structurée en Cours / Exercice guidé / Projet Web.
+
+## Validation technique requise
+
+La tentative de build depuis l'environnement du GPT-concepteur n'a pas pu démarrer parce que le conteneur ne pouvait pas résoudre `github.com` pour cloner le dépôt. Ce n'est pas un échec Docusaurus constaté : le build n'a simplement pas pu être exécuté dans cet environnement.
+
+Une validation locale doit donc vérifier :
+
+1. `npm run build`;
+2. `git diff --check` si le contrôle est fait avant un nouveau commit local;
+3. les IDs de `web/sidebars.js`;
+4. les liens Cours → Exercice guidé → Projet Web;
+5. l'existence des images réutilisées sous `web/static/img/cours-introduction-css/`;
+6. le rendu des blocs de code et admonitions;
+7. la cohérence des chemins `css/styles.css` / `../css/styles.css`.
+
+Cette vérification est une bonne tâche pour Codex local et ne doit pas modifier les choix pédagogiques.
 
 ## Point de reprise
 
-Le prochain travail est :
+Si la validation technique de R3 réussit, la prochaine tâche pédagogique est :
 
-> **R3-02 — Rédiger `web/docs/01-cours/03-rencontre3.md` selon les décisions ci-dessus.**
+> **R4-01 — Extraire et fixer le noyau du modèle en boîte pour la rencontre 4.**
 
-Ensuite : R3-03 exercice guidé, R3-04 Projet Web — Étape 3, puis R3-05 navigation et validation technique.
+Si la validation révèle un problème purement technique, le corriger sans modifier la portée pédagogique de R3, puis mettre à jour le plan maître et `SUIVI_CONTENU.md`.
