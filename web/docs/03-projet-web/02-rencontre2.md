@@ -4,6 +4,8 @@ description: Organiser les ressources, ajouter une image locale et relier plusie
 sidebar_position: 3
 ---
 
+import r2ProjetExempleHtml from '!!raw-loader!../../static/examples/rencontre2/exercice-final/source.html';
+
 # Projet Web — Étape 2
 
 Cette activité est la **mise en pratique personnelle de la rencontre 2**. Vous partez du site commencé à la rencontre 1 et vous le transformez en un petit site composé de plusieurs pages.
@@ -119,6 +121,15 @@ Adaptez le nom du fichier et le texte du lien à votre propre site.
 :::tip Bonne pratique
 L'élément `<nav>` est recommandé pour regrouper les liens qui servent à la navigation principale du site. Son utilisation exacte n'est pas une compétence évaluée séparément.
 :::
+
+Voici un **exemple de niveau attendu** pour cette étape : une page d'accueil, une image locale et une navigation vers une page secondaire. Votre sujet, vos textes et vos noms de fichiers seront différents.
+
+<ExampleFrame
+  src="examples/rencontre2/exercice-final/preview.html"
+  title="Exemple de petit site attendu au Projet Web de la rencontre 2"
+  html={r2ProjetExempleHtml}
+  minHeight={260}
+/>
 
 ## 6. Tester tous les chemins
 
