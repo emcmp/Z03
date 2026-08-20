@@ -61,7 +61,7 @@ Chaque étape possède sa propre page de consignes. Vous n'avez donc pas besoin 
 
 Le bloc HTML/CSS est évalué progressivement à l'aide de **huit compétences**, regroupées en quatre moments de validation pendant les rencontres 2 à 5.
 
-Ces validations comptent dans la note finale du cours. **La pondération exacte du bloc HTML/CSS sera confirmée lorsque la pondération globale du cours sera finalisée.**
+L'ensemble de ces validations représente **30 % de la note finale du cours**.
 
 Votre progression est représentée par une petite collection de **huit badges de compétence** :
 

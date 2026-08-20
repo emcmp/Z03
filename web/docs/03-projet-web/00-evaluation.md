@@ -8,7 +8,7 @@ sidebar_position: 1.5
 
 Pendant les cinq premières rencontres, votre Projet Web sert à démontrer progressivement votre maîtrise de **huit compétences en HTML et CSS**.
 
-Ces validations comptent dans la note finale du cours. **La pondération exacte du bloc HTML/CSS sera confirmée lorsque la pondération globale du cours sera finalisée.**
+L'ensemble de ces validations représente **30 % de la note finale du cours**.
 
 ## Votre collection de badges
 
