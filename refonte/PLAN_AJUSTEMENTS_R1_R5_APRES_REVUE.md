@@ -1,7 +1,7 @@
 # Plan d'ajustements — rencontres 1 à 5 après revue
 
 **Date : 2026-08-19**  
-**Statut : actif — AJ-01 à AJ-03 terminés; AJ-04 modifié, validation technique en attente**  
+**Statut : actif — AJ-01 à AJ-04 terminés; prochain point de reprise AJ-05**  
 **Branche de travail : `agent/ajustements-r1-r5`**
 
 Ce plan transforme les conclusions de `REVUE_TRANSVERSALE_R1_R5.md` et les décisions de l'enseignant en tâches d'ajustement bornées. Il complète `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` et devient le point de reprise opérationnel pour la phase **REV-03 — Ajustements de poids**.
@@ -199,7 +199,7 @@ Validation technique effectuée après le lot :
 
 ## AJ-04 — Améliorer la progression intraligne → interne → externe en R3
 
-**État : En cours — contenu modifié; validation technique requise avant `Terminé`**  
+**État : Terminé**  
 **Dépend de : AJ-01**
 
 Fichier principal : `web/docs/01-cours/03-rencontre3.md`.
@@ -246,7 +246,14 @@ Résultat du lot AJ-04 :
 - l'exercice guidé, le Projet Web, les compétences et les images ne sont pas modifiés dans ce lot;
 - l'audit code ↔ rendu reste réservé à AJ-05.
 
-Avant de marquer AJ-04 `Terminé`, exécuter le build Docusaurus et vérifier que la page R3 rend correctement.
+Validation technique effectuée après le lot :
+
+- branche `agent/ajustements-r1-r5` au commit `4a2250574855eacf8fce2069e0bf61e66804a95c`;
+- `git pull --ff-only` effectué par fast-forward avant validation;
+- `npm run build` réussi, sans erreur Docusaurus;
+- `git diff --check` réussi;
+- `git status --short` final vide;
+- aucun fichier modifié par la validation.
 
 ## AJ-05 — Audit code ↔ rendu visuel R3/R4
 
@@ -368,9 +375,9 @@ AJ-02 R2 minimum                        Terminé
   ↓
 AJ-03 propagation R3–R5                Terminé
   ↓
-AJ-04 progression CSS R3               En cours — build requis
+AJ-04 progression CSS R3               Terminé
   ↓
-AJ-05 audit visuel
+AJ-05 audit visuel                     Prochain
   ↓
 AJ-06 spike Codex
   ↓
@@ -385,4 +392,4 @@ AJ-08 peut être réalisé en parallèle du travail visuel s'il n'y a pas de con
 
 # Point de reprise actuel
 
-> **AJ-04 — la progression intraligne → interne → externe est rédigée dans le cours R3. Avant de passer à AJ-05, valider le build et le rendu de la page, puis marquer AJ-04 `Terminé`.**
+> **AJ-05 — auditer les rendus visuels de R3/R4 contre le code canonique, classer chaque image et identifier précisément ce qui doit être régénéré avant toute intégration.**
