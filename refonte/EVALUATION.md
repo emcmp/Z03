@@ -1,6 +1,6 @@
 # Évaluation progressive des compétences — Z03
 
-Ce document décrit la stratégie d'évaluation envisagée pour Z03. Il doit évoluer avec la séquence de cours et rester cohérent avec `SUIVI_CONTENU.md` et `COMPETENCES_HTML_CSS.md`.
+Ce document décrit la stratégie d'évaluation retenue pour Z03. Il doit évoluer avec la séquence de cours et rester cohérent avec `SUIVI_CONTENU.md` et `COMPETENCES_HTML_CSS.md`.
 
 ## Intention
 
@@ -124,15 +124,17 @@ Exemples CSS :
 
 Le site doit utiliser un repère visuel et textuel clair pour distinguer ces catégories. La couleur seule ne doit pas servir d'indication.
 
-## Pondération — cadre de travail
+## Pondération
 
 La pondération finale doit respecter les règles institutionnelles applicables.
 
-Le bloc HTML/CSS peut maintenant être envisagé autour de **30 %** de la note finale. Cette valeur est une hypothèse de travail : le nouveau modèle remplace l'ancien TP1 de 15 %, mais doit aussi récupérer une partie de l'ancienne première évaluation qui reprenait HTML/CSS en plus des premières notions de programmation.
+Le bloc HTML/CSS des rencontres 1 à 5 représente **30 % de la note finale**.
+
+Cette pondération couvre les huit compétences **WEB-01 à WEB-08**, regroupées dans les quatre moments de validation A à D. Elle remplace l'ancien TP1 de 15 % et reprend aussi une partie du poids auparavant associé à une première évaluation qui combinait HTML/CSS et premières notions de programmation.
 
 La hausse de la pondération ne doit pas augmenter mécaniquement le nombre de moments de validation. Les huit compétences HTML/CSS demeurent regroupées en quatre moments principaux.
 
-La pondération exacte par compétence reste à déterminer après inventaire des exercices et clarification du poids des premières compétences JavaScript.
+La pondération exacte par compétence pourra être détaillée séparément sans modifier le total de 30 % ni créer davantage de moments de validation.
 
 ## Projet fil rouge
 
@@ -194,7 +196,8 @@ La conception de l'application est traitée séparément du présent document p�
 - La programmation JavaScript commence à la rencontre 6.
 - Le bloc HTML/CSS comprend huit compétences regroupées en quatre moments de validation.
 - La Validation A est prioritaire en rencontre 2; la Validation B peut commencer en rencontre 2 et se poursuivre au début de la rencontre 3.
-- Le bloc HTML/CSS peut représenter environ 30 % de la note finale, sous réserve de la pondération globale à finaliser.
+- Le bloc HTML/CSS représente **30 % de la note finale**.
+- La pondération exacte par compétence pourra être détaillée ultérieurement sans modifier ce total.
 - Le contenu pédagogique est classé en `À maîtriser`, `Bonne pratique` ou `Pour aller plus loin`.
 - Les notions « Pour aller plus loin » ne font pas partie des validations obligatoires ni de l'examen final.
 - La rencontre 14 demeure un buffer sans nouvelle matière essentielle.
