@@ -155,33 +155,33 @@ Avant de demander une validation, assurez-vous que :
 
 Cette checklist sert à vous préparer. La validation ne consiste pas à compter mécaniquement le nombre de pages, d'images ou de balises.
 
-## Validations disponibles
+## Badges disponibles pour validation
 
-À partir de cette rencontre, les premières validations HTML deviennent disponibles.
+À partir de cette rencontre, vos premiers badges HTML deviennent disponibles. Consultez **[Projet Web — Évaluation](./00-evaluation.md)** pour la checklist détaillée de chaque compétence.
 
 ### Validation A — Structure HTML
 
 La **Validation A est prioritaire pendant la rencontre 2**.
 
-L'enseignant peut observer :
+- 🗂️ **WEB-01 — Organiser un projet Web et utiliser les chemins**;
+- 🧱 **WEB-02 — Construire une page HTML correctement structurée**.
 
-- **WEB-01 — Organiser un projet Web et utiliser les chemins**;
-- **WEB-02 — Construire une page HTML correctement structurée**.
-
-Il peut par exemple vous demander de montrer où se trouve une image, d'expliquer un chemin ou de corriger un chemin devant lui.
+L'enseignant peut par exemple vous demander de montrer où se trouve une image, d'expliquer un chemin ou de corriger un chemin devant lui.
 
 ### Validation B — Contenu et navigation
 
 La Validation B peut aussi commencer à cette rencontre avec les étudiants prêts. **Elle peut se poursuivre au début de la rencontre 3**; tout le groupe n'a pas besoin de la terminer aujourd'hui.
 
-L'enseignant peut observer :
+- ✍️ **WEB-03 — Structurer et enrichir le contenu HTML**;
+- 🔗 **WEB-04 — Relier plusieurs pages dans une navigation fonctionnelle**.
 
-- **WEB-03 — Structurer et enrichir le contenu HTML**;
-- **WEB-04 — Relier plusieurs pages dans une navigation fonctionnelle**.
-
-Il peut par exemple vous demander d'ajouter un lien, de modifier la destination d'un lien ou d'expliquer comment revenir d'une page secondaire vers l'accueil.
+L'enseignant peut par exemple vous demander d'ajouter un lien, de modifier la destination d'un lien ou d'expliquer comment revenir d'une page secondaire vers l'accueil.
 
 Une même courte interaction peut permettre d'observer plusieurs compétences. Une compétence qui demande encore du travail pourra être représentée plus tard.
+
+:::tip Collection de badges
+Une compétence **Validée** signifie que son badge est acquis. Une compétence **À revoir** reste disponible : corrigez les éléments demandés et présentez-la de nouveau lorsque vous êtes prêt.
+:::
 
 :::note Pour aller plus loin — non évalué
 Si votre site fonctionne bien et que vos validations sont prêtes, vous pouvez :
