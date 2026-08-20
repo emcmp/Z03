@@ -14,7 +14,6 @@ Voici des ressources et des liens qui pourront vous être utiles pendant la sess
 ## Apprendre et consulter des références
 
 - **[W3Schools](https://www.w3schools.com/)** — site de formation et de référence pour HTML, CSS, JavaScript, jQuery et plusieurs autres technologies Web. Le site est en anglais par défaut, mais la langue peut être changée.
-- **[Tuto Web Design](https://tutowebdesign.com/)** — site francophone proposant des ressources sur HTML, CSS, JavaScript et Bootstrap.
 
 ## Caractères spéciaux en HTML
 
