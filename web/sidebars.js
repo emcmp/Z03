@@ -13,6 +13,11 @@ const sidebars = {
       id: "acces-poste-compte-reseau",
       label: "Accès au poste et compte réseau",
     },
+    {
+      type: "doc",
+      id: "caracteres-utiles-clavier",
+      label: "Caractères utiles au clavier",
+    },
   ],
   docs: [
     {
