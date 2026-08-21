@@ -73,16 +73,31 @@ Placez au moins une image dans le dossier `images` au lieu de la laisser dans T�
 Depuis `index.html`, une image peut être utilisée ainsi :
 
 ```html
-<img src="images/image1.jpg" alt="Description de l'image">
+<img src="images/image1.jpg" alt="Description de l'image" width="400">
 ```
 
 Depuis une page placée dans `pages`, le chemin doit d'abord remonter au dossier du projet :
 
 ```html
-<img src="../images/image1.jpg" alt="Description de l'image">
+<img src="../images/image1.jpg" alt="Description de l'image" width="400">
 ```
 
 Utilisez l'image dans les deux situations afin de voir la différence entre `images/...` et `../images/...`.
+
+### Choisir des dimensions raisonnables
+
+Vous pouvez utiliser `width` et `height` pour préciser les dimensions affichées d'une image :
+
+```html
+<img
+  src="images/image1.jpg"
+  alt="Description de l'image"
+  width="400"
+  height="300"
+>
+```
+
+Les valeurs exactes dépendent de votre image. Si vous utilisez les deux attributs, conservez les proportions de l'image pour éviter de l'étirer ou de l'écraser. Si vous n'êtes pas certain de la hauteur appropriée, une seule dimension comme `width` suffit pour le moment.
 
 :::tip Bonne pratique — texte alternatif
 L'attribut `alt` devrait transmettre l'information importante de l'image. Évitez un texte comme `image1.jpg`; décrivez plutôt ce que l'image apporte à la page.
@@ -118,6 +133,26 @@ Depuis `pages/sujet.html`, il faut utiliser `../` pour revenir au dossier parent
 
 Adaptez le nom du fichier et le texte du lien à votre propre site.
 
+### Ajouter un lien vers une section de la page d'accueil
+
+Choisissez une section déjà présente dans `index.html` et donnez-lui un `id` clair. Par exemple :
+
+```html
+<h2 id="galerie">Galerie</h2>
+```
+
+Ajoutez ensuite un lien qui mène directement à cette section :
+
+```html
+<a href="#galerie">Voir la galerie</a>
+```
+
+Le nom `galerie` est seulement un exemple. Utilisez un identifiant qui correspond réellement au contenu de votre page.
+
+:::info À maîtriser
+Le lien et la cible doivent correspondre : `href="#galerie"` mène à l'élément dont `id="galerie"`.
+:::
+
 :::tip Bonne pratique
 L'élément `<nav>` est recommandé pour regrouper les liens qui servent à la navigation principale du site. Son utilisation exacte n'est pas une compétence évaluée séparément.
 :::
@@ -141,7 +176,8 @@ Ouvrez les deux pages dans le navigateur et vérifiez :
 2. que la même image apparaît depuis la page sous `pages/`;
 3. que le lien vers la page secondaire fonctionne;
 4. que vous pouvez revenir à l'accueil;
-5. que les noms de fichiers dans le code correspondent exactement aux vrais noms des fichiers.
+5. que votre lien vers une section de `index.html` mène bien au bon `id`;
+6. que les noms de fichiers dans le code correspondent exactement aux vrais noms des fichiers.
 
 Si une image ou un lien ne fonctionne pas, partez du fichier HTML actuel et posez-vous la question : **où dois-je aller à partir d'ici pour atteindre le fichier voulu?**
 
@@ -160,11 +196,13 @@ Avant de demander une validation, assurez-vous que :
 - [ ] vos deux pages possèdent une structure HTML complète;
 - [ ] vos pages contiennent du contenu réel et organisé;
 - [ ] la même image peut être chargée depuis la page d'accueil et depuis la page secondaire;
+- [ ] vous reconnaissez `width` et `height` et vous évitez de déformer vos images;
 - [ ] la navigation fonctionne dans les deux directions;
+- [ ] vous avez un lien simple vers une section de votre page d'accueil avec `href="#..."` et `id="..."`;
 - [ ] vous comprenez pourquoi certains chemins commencent par `../`;
 - [ ] vous avez corrigé les erreurs HTML évidentes, avec le validateur W3C au besoin.
 
-Cette checklist sert à vous préparer. La validation ne consiste pas à compter mécaniquement le nombre de pages, d'images ou de balises.
+Cette checklist sert à vous préparer. La validation ne consiste pas à compter mécaniquement le nombre de pages, d'images, de dimensions, de liens ou de balises.
 
 ## Badges disponibles pour validation
 
