@@ -15,6 +15,11 @@ const sidebars = {
     },
     {
       type: "doc",
+      id: "STRATEGIE_DEPOTS_ET_MISE_EN_PRODUCTION",
+      label: "Dépôts et mise en production",
+    },
+    {
+      type: "doc",
       id: "PLAN_SITE_EVOLUTIF",
       label: "Plan du site évolutif",
     },
