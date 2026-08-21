@@ -54,6 +54,23 @@ Depuis la racine du dépôt :
 
 Les scripts racine délèguent leurs commandes au projet situé dans `web/`.
 
+## Dépôts et autorisation de production
+
+- `emcmp/Z03` est la source de vérité; son remote local doit être `origin`.
+- `departement-info-cem/z03` est la production; son remote local doit être `cegep`.
+- Le développement et la prévisualisation utilisent normalement `origin`. Ne jamais configurer un push implicite vers les deux dépôts.
+- Une préparation crée au plus un candidat officiel `publication/candidat-YYYY-MM-DD-<sha-court>` et ne modifie jamais `cegep/main`.
+- Seule la phrase exacte **« GO production du candidat en attente »** autorise la promotion du candidat déjà préparé vers `cegep/main`.
+- **« Annule le candidat de production en attente »** annule le candidat sans publier. **« Remplace le candidat de production par la version personnelle actuelle »** invalide explicitement l'ancien candidat avant d'en préparer un nouveau.
+- Ne jamais déduire une autorisation de production d'une demande de synchronisation, de validation, de préparation, de correction ou de déploiement de la prévisualisation.
+- Codex retrouve et consigne lui-même les SHA. Le workflow normal ne demande pas à l'utilisateur de copier un SHA.
+- Refuser toute production si le worktree est sale, si les remotes ne sont pas exactement ceux attendus, si le candidat actif n'est pas unique ou inchangé, si les validations échouent, ou si `cegep/main` ne peut pas avancer rapidement vers le candidat.
+- Ne jamais utiliser de force push, remplacer silencieusement un candidat, publier la tête courante à la place du candidat, ni fusionner par squash dans le dépôt officiel.
+- Ne jamais écrire un secret, un jeton d'accès ou un identifiant dans le dépôt, un script versionné, un rapport ou une documentation.
+- Après une production autorisée, vérifier le SHA distant, GitHub Actions et le site officiel, puis consigner le résultat.
+
+La procédure détaillée, l'alignement initial et les contrôles obligatoires sont dans `refonte/STRATEGIE_DEPOTS_ET_MISE_EN_PRODUCTION.md`.
+
 ## Règles de travail
 
 1. Faire des changements ciblés. Ne pas réécrire en masse le contenu hérité du 905 sans demande explicite.

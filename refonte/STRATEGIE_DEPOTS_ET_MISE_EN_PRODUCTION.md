@@ -1,416 +1,296 @@
 # Stratégie des dépôts et mise en production
 
-**Statut : plan de référence avant automatisation avec Codex**  
-**Dépôt de développement : `emcmp/Z03`**  
-**Dépôt officiel : `departement-info-cem/z03`**
+**Statut : protocole cible; alignement initial non encore autorisé**
+
+**Source de vérité : `emcmp/Z03`**
+
+**Production : `departement-info-cem/z03`**
 
 ## Objectif
 
-Conserver un seul dossier de travail local et un seul historique de développement, tout en séparant clairement :
+Conserver un seul historique de développement et promouvoir vers la production exactement la version approuvée, sans copie manuelle, sans force push et sans demander à l'utilisateur de manipuler un SHA.
 
-- la refonte et la prévisualisation personnelle;
-- la publication officielle du matériel du Cégep;
-- les opérations manuelles initiales;
-- la future automatisation sécuritaire confiée à Codex.
+```text
+développement
+→ preview personnelle
+→ candidat unique et immuable
+→ validation du candidat
+→ GO humain explicite
+→ avance rapide de la production
+→ vérification et journal d'audit
+```
 
-Les copies manuelles entre deux dossiers locaux doivent disparaître une fois les deux dépôts correctement alignés.
-
-## Architecture cible
-
-Un même dépôt Git local utilise deux dépôts distants :
+## Architecture à deux remotes
 
 ```text
 Dossier local Z03
 │
 ├── origin  → https://github.com/emcmp/Z03.git
-│             développement, PR, prévisualisation personnelle
+│             source de vérité, développement et preview
 │
 └── cegep   → https://github.com/departement-info-cem/z03.git
-              publication officielle
+              candidats et production officielle
 ```
 
-Le dépôt personnel demeure la destination par défaut. La publication au Cégep doit toujours être une action explicite.
-
-La configuration Docusaurus détecte le dépôt dans lequel le build s'exécute. Le même commit peut donc produire :
-
-```text
-emcmp/Z03
-→ https://emcmp.github.io/Z03/
-
-departement-info-cem/z03
-→ https://info.cegepmontpetit.ca/z03/
-```
-
-## Principes de sécurité
-
-1. Ne plus copier manuellement les fichiers entre deux dossiers.
-2. Ne pas configurer un seul `git push` pour publier automatiquement dans les deux dépôts.
-3. Garder `origin` comme destination normale de développement.
-4. Ne publier au Cégep qu'une version déjà fusionnée, testée et approuvée.
-5. Ne jamais publier directement une branche de travail comme version officielle.
-6. Ne pas exclure `.github/` lors de la synchronisation : le workflow de déploiement fait partie du projet.
-7. Ne pas utiliser `git push --force` pour l'alignement initial.
-8. Conserver une branche d'archive du dépôt officiel avant de remplacer son historique actif.
-9. Vérifier le SHA exact publié et conserver un moyen de revenir à la version précédente.
-10. Ne jamais enregistrer un jeton GitHub dans le dépôt, un script versionné ou un fichier Markdown.
-
-# Phase 1 — Terminer et nettoyer le dépôt personnel
-
-Avant toute synchronisation officielle :
-
-- [ ] terminer la révision courante;
-- [ ] fusionner les PR approuvées dans `emcmp/Z03/main`;
-- [ ] vérifier qu'aucune branche utile ne contient encore des changements non fusionnés;
-- [ ] supprimer ou archiver les branches devenues inutiles;
-- [ ] vérifier que le dossier local est propre;
-- [ ] vérifier que `main` correspond exactement à `origin/main`;
-- [ ] exécuter le typecheck et le build;
-- [ ] vérifier le déploiement personnel.
-
-Commandes de contrôle :
-
-```powershell
-git status --short
-git switch main
-git pull --ff-only origin main
-git fetch origin --prune
-git branch -vv
-npm run typecheck
-npm run build
-```
-
-Résultat attendu :
-
-```text
-- aucune modification locale;
-- aucune PR nécessaire encore en attente pour la publication;
-- main à jour avec origin/main;
-- build réussi;
-- site personnel validé.
-```
-
-# Phase 2 — Ajouter le dépôt officiel comme deuxième remote
-
-Dans le dossier local actuel de `emcmp/Z03` :
-
-```powershell
-git remote -v
-git remote add cegep https://github.com/departement-info-cem/z03.git
-git fetch cegep --prune
-git remote -v
-```
-
-Résultat attendu :
-
-```text
-origin  https://github.com/emcmp/Z03.git
-cegep   https://github.com/departement-info-cem/z03.git
-```
-
-Pour conserver le dépôt personnel comme destination implicite :
+`origin` reste la destination implicite :
 
 ```powershell
 git config remote.pushDefault origin
 git branch --set-upstream-to=origin/main main
 ```
 
-Ainsi :
+Ne jamais ajouter plusieurs URL de push à `origin`. Toute écriture vers le dépôt officiel doit nommer explicitement `cegep`.
+
+## Invariants de sécurité
+
+1. `emcmp/Z03` est la source de vérité.
+2. Le dépôt officiel ne sert pas au développement courant.
+3. Préparer un candidat n'autorise pas sa publication.
+4. Seule la phrase exacte **« GO production du candidat en attente »** autorise une production.
+5. Aucun force push n'est permis vers le dépôt officiel.
+6. Un worktree sale arrête la préparation et la publication.
+7. Un typecheck ou un build en échec arrête l'opération.
+8. Les URL fetch et push des remotes doivent correspondre exactement aux deux dépôts attendus.
+9. Il ne peut exister qu'un candidat actif sous `publication/candidat-*`.
+10. Une évolution de `origin/main` ne remplace jamais silencieusement un candidat.
+11. Une publication promeut le candidat préparé, jamais la version la plus récente par défaut.
+12. `cegep/main` doit pouvoir avancer rapidement vers le candidat; sinon l'opération s'arrête.
+13. GitHub Actions et le site officiel sont vérifiés après la production.
+14. Codex trouve les SHA lui-même et les consigne pour l'audit.
+15. La production ne doit pas dépendre d'un squash, d'un rebase ou d'un commit de fusion qui changerait l'identité du candidat.
+16. Aucun secret, jeton d'accès ou identifiant ne doit être écrit dans le dépôt ou dans un script versionné.
+
+## Commandes humaines
+
+### Synchroniser et vérifier la preview
+
+> Synchronise Z03 et vérifie la version personnelle. Ne touche pas à la production.
+
+Cette commande autorise les opérations normales sur `origin`, mais aucune écriture vers `cegep`.
+
+### Préparer un candidat
+
+> Prépare un candidat de production à partir de la version personnelle actuelle. Ne publie rien.
+
+Cette commande autorise la création d'une seule branche candidate dans le dépôt officiel. Elle n'autorise jamais une modification de `cegep/main`.
+
+### Publier le candidat
+
+> GO production du candidat en attente.
+
+Cette phrase autorise seulement la promotion du candidat actif déjà préparé et revalidé. Elle n'autorise pas la publication d'un nouveau SHA.
+
+### Annuler le candidat
+
+> Annule le candidat de production en attente.
+
+Le candidat est déplacé hors de l'espace actif, par exemple vers `publication/annule-...`, afin de préserver sa trace sans publier.
+
+### Remplacer le candidat
+
+> Remplace le candidat de production par la version personnelle actuelle.
+
+L'ancien candidat est d'abord invalidé explicitement. La nouvelle version passe ensuite tous les contrôles de préparation. Si la nouvelle préparation échoue, aucune production n'a lieu.
+
+## Contrôles communs obligatoires
+
+Avant toute préparation ou production :
 
 ```powershell
-git push
-```
-
-continue de pousser vers le dépôt personnel. La publication officielle exige une commande contenant explicitement `cegep`.
-
-# Phase 3 — Vérifier si les historiques sont déjà compatibles
-
-Après :
-
-```powershell
+git status --porcelain=v1
+git branch --show-current
+git remote get-url origin
+git remote get-url --push origin
+git remote get-url cegep
+git remote get-url --push cegep
 git fetch origin --prune
 git fetch cegep --prune
 ```
 
-examiner les deux historiques :
-
-```powershell
-git log --oneline --decorate --graph --all -n 40
-```
-
-Tester si le dépôt officiel peut avancer directement vers la version personnelle :
-
-```powershell
-git merge-base --is-ancestor cegep/main main
-$LASTEXITCODE
-```
-
-Interprétation :
+Valeurs exigées :
 
 ```text
-0 → cegep/main est un ancêtre de main; un push rapide devrait être possible.
-1 → les historiques ont divergé ou sont indépendants; faire l'alignement initial non destructif.
+origin fetch/push : https://github.com/emcmp/Z03.git
+cegep fetch/push  : https://github.com/departement-info-cem/z03.git
+branche locale    : main, pour une préparation
+worktree          : propre
 ```
 
-## Cas A — Avance rapide possible
+Validations du contenu :
 
 ```powershell
-git push cegep main:main
-```
-
-Aucun remplacement d'historique n'est nécessaire.
-
-## Cas B — Historiques divergents ou indépendants
-
-Ne pas forcer le push. Conserver d'abord l'ancien historique officiel.
-
-### Méthode non destructive recommandée
-
-Dans GitHub, sur `departement-info-cem/z03` :
-
-1. ouvrir **Settings → Branches**;
-2. renommer la branche actuelle `main` en :
-
-```text
-archive-avant-synchronisation-2026
-```
-
-3. confirmer que cette branche contient toujours les anciens commits et essais de déploiement;
-4. dans le dépôt local, actualiser les références :
-
-```powershell
-git fetch cegep --prune
-```
-
-5. créer une nouvelle branche officielle `main` à partir du `main` personnel validé :
-
-```powershell
-git switch main
-git pull --ff-only origin main
-git push cegep main:main
-```
-
-6. dans GitHub, remettre la nouvelle branche `main` comme branche par défaut;
-7. conserver la branche `archive-avant-synchronisation-2026` jusqu'à ce que plusieurs publications officielles aient été validées.
-
-Cette méthode évite un `force push` et conserve l'ancien état du dépôt officiel.
-
-# Phase 4 — Publication manuelle normale après l'alignement
-
-## Développement et prévisualisation
-
-```powershell
-git push origin main
-```
-
-Le dépôt personnel reste le lieu normal de travail, de PR et de prévisualisation.
-
-## Contrôle avant production
-
-```powershell
-git status --short
-git switch main
-git pull --ff-only origin main
-git fetch cegep --prune
+npm run setup
 npm run typecheck
 npm run build
-git rev-parse HEAD
-git log -1 --oneline
+npm --prefix web run build:refonte
 ```
 
-Vérifier :
+Le build Refonte est un contrôle interne. Il ne change pas le contenu publié par le workflow étudiant normal.
 
-- [ ] le dossier est propre;
-- [ ] la branche courante est `main`;
-- [ ] `main` est à jour avec `origin/main`;
-- [ ] le typecheck réussit;
-- [ ] le build réussit;
-- [ ] le SHA affiché est bien celui qui doit être publié;
-- [ ] le site personnel correspondant a été vérifié.
+## Préparation d'un candidat
 
-## Publication officielle directe
+Le futur script `scripts/deploiement/preparer-candidat.ps1` devra :
+
+1. exécuter tous les contrôles communs;
+2. confirmer que `main`, `HEAD` et `origin/main` désignent le même commit;
+3. confirmer que le workflow de preview de ce SHA a réussi;
+4. refuser de continuer si une branche `publication/candidat-*` existe déjà sur `cegep`;
+5. calculer lui-même le SHA complet et son préfixe court;
+6. exécuter le typecheck et les deux builds;
+7. créer `publication/candidat-YYYY-MM-DD-<sha-court>` directement au SHA complet;
+8. relire la référence distante et confirmer qu'elle pointe encore vers ce SHA;
+9. rapporter le nom du candidat et le SHA sans modifier `cegep/main`.
+
+La branche candidate constitue le registre distant du candidat en attente. Le SHA est encodé dans son nom et vérifié contre sa cible réelle. Une branche candidate ne déclenche pas le déploiement Pages, qui reste limité à `main`.
+
+Pseudo-commandes, à automatiser plutôt qu'à faire saisir à l'utilisateur :
 
 ```powershell
-git push cegep main:main
+$candidateSha = git rev-parse origin/main
+$shortSha = git rev-parse --short=7 $candidateSha
+$candidateBranch = "publication/candidat-$(Get-Date -Format 'yyyy-MM-dd')-$shortSha"
+
+git ls-remote --heads cegep "refs/heads/publication/candidat-*"
+git push --dry-run cegep "$candidateSha`:refs/heads/$candidateBranch"
+git push cegep "$candidateSha`:refs/heads/$candidateBranch"
+git ls-remote --heads cegep "refs/heads/$candidateBranch"
 ```
 
-Après le push :
+Les deux dernières commandes sont des écritures ou vérifications sur le dépôt officiel, mais aucune ne touche `main`.
 
-- [ ] vérifier le workflow GitHub Actions du dépôt officiel;
-- [ ] confirmer que le build et le déploiement réussissent;
-- [ ] ouvrir le site officiel;
-- [ ] vérifier quelques pages critiques et les ressources statiques;
-- [ ] noter le SHA publié.
+## Publication après le GO
 
-# Méthode recommandée à long terme — branche de publication et PR officielle
+Le futur script `scripts/deploiement/publier-candidat.ps1` ne sera créé qu'après l'alignement initial approuvé et testé. Il devra offrir `-DryRun` et procéder ainsi :
 
-La publication directe vers `cegep/main` est simple, mais une branche de publication offre davantage de sécurité.
+1. retrouver l'unique branche `publication/candidat-*` sur `cegep`;
+2. refuser zéro ou plusieurs candidats;
+3. vérifier que le SHA court du nom correspond au SHA complet de la branche;
+4. ne pas substituer `origin/main` si celui-ci a changé depuis la préparation;
+5. valider le candidat exact dans un worktree Git détaché et temporaire;
+6. vérifier que `cegep/main` est un ancêtre du candidat;
+7. effectuer un dry-run du push rapide;
+8. afficher le candidat, l'ancien SHA officiel et le nouveau SHA;
+9. exiger que l'instruction courante soit le GO exact;
+10. pousser le SHA du candidat vers `cegep/main` sans force;
+11. relire `cegep/main` et vérifier son SHA;
+12. attendre le succès du workflow officiel et vérifier le site;
+13. créer une trace `production/YYYY-MM-DD-<sha-court>`;
+14. déplacer le candidat vers `publication/publie-...` seulement après vérification réussie.
 
-Exemple :
+La promotion technique doit être une avance rapide directe. Une PR GitHub fusionnée par merge, squash ou rebase créerait ou recréerait des commits et ne garantirait plus que `cegep/main` désigne exactement le candidat validé. La protection recommandée de `main` doit donc interdire les force push et les suppressions, restreindre les acteurs autorisés, mais permettre à l'acteur de publication désigné d'effectuer cette avance rapide après le GO.
+
+## Alignement initial sans force push
+
+Tant que `cegep/main` n'est pas un ancêtre du candidat personnel, un push rapide est impossible. Il ne faut ni fusionner automatiquement les historiques ni forcer `main`.
+
+La méthode recommandée préserve l'ancien `main` officiel par renommage, puis crée un nouveau `main` au commit personnel validé.
+
+### Précontrôles sans écriture officielle
 
 ```powershell
-$sha = git rev-parse --short HEAD
-git push cegep main:publication-$sha
+git status --porcelain=v1
+git fetch origin --prune
+git fetch cegep --prune
+git rev-parse main
+git rev-parse origin/main
+git rev-parse cegep/main
+git merge-base --is-ancestor cegep/main origin/main
+npm run setup
+npm run typecheck
+npm run build
+npm --prefix web run build:refonte
 ```
 
-Puis ouvrir une PR dans `departement-info-cem/z03` :
+Arrêter si le worktree n'est pas propre, si `main` diffère de `origin/main`, si une validation échoue ou si les remotes sont inattendus.
+
+### Opérations après une autorisation distincte d'alignement
+
+1. **[ÉCRITURE OFFICIELLE]** Renommer la branche officielle actuelle :
+
+   ```text
+   main → archive/avant-alignement-YYYY-MM-DD-<sha-court-officiel>
+   ```
+
+   Le renommage préserve le commit et tout son historique sans force push ni suppression.
+
+2. Actualiser les références locales et confirmer que la branche d'archive pointe vers l'ancien SHA officiel.
+
+3. **[ÉCRITURE OFFICIELLE]** Créer le nouveau `main` directement au SHA validé de `origin/main` :
+
+   ```powershell
+   $candidateSha = git rev-parse origin/main
+   git push --dry-run cegep "$candidateSha`:refs/heads/main"
+   git push cegep "$candidateSha`:refs/heads/main"
+   ```
+
+4. **[MODIFICATION DE CONFIGURATION OFFICIELLE]** Remettre `main` comme branche par défaut.
+
+5. Ne pas modifier la configuration GitHub Pages si le mode `workflow` fonctionne toujours.
+
+6. Vérifier que `cegep/main` est identique au SHA validé, que le workflow officiel réussit et que le site répond correctement.
+
+7. Conserver la branche d'archive et les autres branches historiques jusqu'à une décision de conservation explicite.
+
+Cette opération provoque une production officielle lors de la création du nouveau `main`. Elle exige donc une autorisation d'alignement et de première production distincte de la présente phase d'audit.
+
+## GitHub Actions et Pages
+
+Le workflow versionné `.github/workflows/deploy.yml` est le seul mécanisme de déploiement attendu. Il doit :
+
+- se déclencher automatiquement sur un push à `main`;
+- installer avec Node.js 20 et `npm ci` dans `web/`;
+- exécuter le typecheck avant le build;
+- construire `web/build`;
+- empêcher le job de déploiement si la référence n'est pas `refs/heads/main`;
+- utiliser une concurrence Pages qui ne laisse pas deux productions se chevaucher;
+- téléverser uniquement `web/build`;
+- déployer avec l'environnement `github-pages`.
+
+Il ne faut pas conserver un deuxième workflow qui téléverse la racine du dépôt. Une branche candidate peut être bâtie manuellement pour diagnostic, mais ne doit jamais être déployée par `workflow_dispatch`.
+
+La configuration Docusaurus reste portable :
 
 ```text
-publication-<sha> → main
+emcmp/Z03                  → https://emcmp.github.io/Z03/
+departement-info-cem/z03  → https://info.cegepmontpetit.ca/z03/
 ```
 
-Avantages :
+## Scripts futurs
 
-- le diff officiel peut être relu une dernière fois;
-- le SHA publié est explicite;
-- les validations peuvent s'exécuter avant la fusion;
-- une publication accidentelle devient moins probable;
-- la fusion de la PR déclenche ensuite le déploiement officiel.
-
-# Phase 5 — Automatisation sécuritaire à confier à Codex
-
-L'automatisation ne doit être mise en place qu'après :
-
-1. la fusion et le nettoyage des branches du dépôt personnel;
-2. l'alignement initial des deux dépôts;
-3. au moins une publication manuelle réussie;
-4. la validation du déploiement officiel.
-
-## Fonctionnement cible
-
-Lorsqu'une version est prête, l'enseignant donne une instruction explicite à Codex, par exemple :
+Architecture proposée après l'alignement initial :
 
 ```text
-Mets en production sur le dépôt du Cégep le commit actuellement validé sur emcmp/Z03 main.
+scripts/deploiement/
+├── verifier-preview.ps1       # lecture seule
+├── preparer-candidat.ps1      # crée une branche candidate, jamais main
+├── publier-candidat.ps1       # -DryRun; main seulement après le GO
+└── annuler-candidat.ps1       # sort le candidat de l'espace actif
 ```
 
-Codex doit alors :
+Les contrôles partagés devraient être centralisés dans un module interne non exporté comme commande de publication. Aucun script ne doit contenir de jeton, contourner une protection ou accepter `--force`.
 
-1. identifier le SHA exact de `emcmp/Z03/main`;
-2. confirmer que la branche est propre et que toutes les PR nécessaires sont fusionnées;
-3. vérifier que les contrôles automatisés sont réussis;
-4. vérifier que le remote officiel correspond exactement à `departement-info-cem/z03`;
-5. vérifier qu'aucune publication plus récente n'est déjà présente;
-6. pousser le SHA vers une branche officielle `publication/<date>-<sha>`;
-7. ouvrir une PR vers `departement-info-cem/z03/main`;
-8. exécuter ou vérifier le typecheck et le build dans le dépôt officiel;
-9. fusionner seulement après une autorisation explicite de mise en production;
-10. vérifier le déploiement et rapporter l'URL, le SHA et le résultat des contrôles.
+## Protection recommandée
 
-## Script local envisagé
+Après l'alignement initial :
 
-Codex pourra créer un script comme :
+- interdire les force push et la suppression de `main`;
+- restreindre les mises à jour de `main` aux acteurs de publication désignés;
+- protéger `publication/candidat-*` contre la réécriture;
+- conserver l'environnement GitHub `github-pages`;
+- ajouter une approbation d'environnement si elle ne casse pas le déploiement automatique de la preview personnelle;
+- ne pas exiger une méthode de fusion qui change le SHA du candidat;
+- activer HTTPS pour le domaine officiel après vérification séparée du domaine et du certificat.
 
-```text
-scripts/publier-cegep.ps1
-```
+## Retour arrière
 
-Le script devra refuser de continuer si :
+Un retour arrière est une nouvelle publication explicite d'un commit précédemment validé. Il ne réécrit pas l'historique. Le journal doit conserver :
 
-- la branche courante n'est pas `main`;
-- le dossier contient des modifications;
-- `HEAD` ne correspond pas à `origin/main`;
-- le remote `cegep` pointe vers une autre URL;
-- le push ne serait pas une avance rapide;
-- le typecheck ou le build échoue;
-- le SHA à publier n'a pas été confirmé;
-- une branche de publication du même SHA existe déjà.
+- le SHA officiel précédent;
+- le SHA du candidat;
+- le nom de la branche candidate;
+- la date et l'auteur de l'autorisation;
+- les résultats du typecheck et des builds;
+- l'URL et le résultat du workflow Pages;
+- le résultat de la vérification du site.
 
-Le script devrait offrir :
-
-```text
-- un mode --dry-run;
-- un résumé avant toute écriture distante;
-- une confirmation explicite;
-- des messages d'erreur compréhensibles;
-- un journal du SHA publié;
-- aucune utilisation de force push.
-```
-
-# Authentification pour Codex
-
-## Codex local
-
-Préférer l'authentification GitHub déjà configurée sur le poste, par exemple avec Git Credential Manager ou GitHub CLI.
-
-Ne jamais placer les identifiants dans le script.
-
-## Automatisation exécutée par GitHub
-
-Si une automatisation inter-dépôts est un jour exécutée par GitHub Actions :
-
-- préférer une GitHub App ou un jeton finement limité;
-- limiter les permissions aux deux dépôts nécessaires;
-- conserver le secret dans les paramètres GitHub;
-- ne jamais écrire le secret dans le dépôt;
-- exiger un environnement protégé ou une approbation avant production;
-- ne pas donner de permission administrative si une permission de contenu suffit.
-
-Une automatisation inter-dépôts par GitHub Actions n'est pas nécessaire pour la première version du processus.
-
-# Protection recommandée du dépôt officiel
-
-Une fois le processus stabilisé :
-
-- protéger `departement-info-cem/z03/main`;
-- exiger une PR avant fusion;
-- exiger le typecheck et le build;
-- interdire les force push;
-- empêcher la suppression de `main`;
-- limiter les personnes et outils autorisés à fusionner;
-- conserver le déploiement uniquement sur une fusion dans `main`;
-- ajouter une approbation manuelle de l'environnement de production si la gouvernance du département le permet.
-
-# Retour arrière
-
-Avant chaque publication officielle, conserver :
-
-- le SHA actuellement en production;
-- le SHA proposé;
-- la branche de publication;
-- le résultat des contrôles.
-
-Optionnellement, créer une étiquette Git :
-
-```powershell
-git tag production-2026-08-21 <sha>
-git push cegep production-2026-08-21
-```
-
-En cas de problème, remettre en production un commit précédent doit se faire par une nouvelle PR ou une nouvelle publication explicite, et non par une réécriture silencieuse de l'historique.
-
-# Handoff futur à Codex
-
-Lorsque les opérations manuelles seront terminées, l'instruction à Codex devra inclure :
-
-1. les deux dépôts exacts;
-2. le rôle de `origin` et de `cegep`;
-3. le SHA de référence déjà publié manuellement;
-4. la règle d'absence de force push;
-5. la méthode branche de publication → PR officielle;
-6. les contrôles obligatoires;
-7. la procédure de vérification du déploiement;
-8. la stratégie de retour arrière;
-9. les permissions autorisées;
-10. la phrase ou l'autorisation explicite requise avant une mise en production.
-
-# Résumé opérationnel
-
-```text
-Maintenant
-→ terminer la révision
-→ fusionner les PR
-→ nettoyer les branches
-→ valider main et le site personnel
-
-Ensuite, manuellement
-→ ajouter le remote cegep
-→ préserver l'ancien main officiel
-→ aligner les deux dépôts
-→ réussir une première publication officielle
-
-Enfin, avec Codex
-→ créer un script sécurisé
-→ publier par branche et PR officielle
-→ exiger les contrôles et une autorisation explicite
-→ vérifier et documenter chaque mise en production
-```
+Le retour arrière suit les mêmes contrôles et exige une autorisation humaine explicite.
