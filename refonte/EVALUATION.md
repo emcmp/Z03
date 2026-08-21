@@ -19,15 +19,22 @@ Le modèle vise :
 
 - des preuves courtes et observables;
 - une rétroaction rapide;
-- la possibilité de représenter une compétence;
+- la possibilité de représenter une compétence technique;
 - une distinction claire entre résultat présent et compréhension réelle;
-- quatre passages principaux plutôt que huit entrevues séparées.
+- quatre passages principaux plutôt que huit entrevues séparées;
+- une appréciation distincte de la personnalisation et de l'appropriation du projet.
 
-## Pondération
+# Pondération
 
 Le bloc HTML/CSS représente **30 % de la note finale du cours**.
 
-Il couvre huit compétences :
+| Partie | Part du bloc HTML/CSS | Part de la note finale |
+| --- | ---: | ---: |
+| Huit compétences techniques | 80 % | 24 % |
+| Personnalisation et appropriation | 20 % | 6 % |
+| **Total** | **100 %** | **30 %** |
+
+Les huit compétences techniques sont :
 
 | Code | Compétence |
 | --- | --- |
@@ -40,9 +47,9 @@ Il couvre huit compétences :
 | **WEB-07** | Mettre en forme une interface avec CSS |
 | **WEB-08** | Organiser l'espace et la disposition des éléments |
 
-La répartition exacte des points entre les compétences peut être précisée séparément sans modifier ce total ni créer davantage de moments de validation.
+La personnalisation ne devient pas WEB-09. Elle est évaluée à l'aide d'une grille distincte et ne crée pas un cinquième passage de validation technique.
 
-## États possibles
+## États possibles des compétences techniques
 
 Chaque compétence reçoit indépendamment l'un de ces états :
 
@@ -52,7 +59,7 @@ Chaque compétence reçoit indépendamment l'un de ces états :
 
 `À revoir` ne constitue pas une pénalité automatique. L'étudiant peut présenter de nouveau la compétence après correction lorsque la logistique le permet.
 
-## Déroulement d'une validation
+## Déroulement d'une validation technique
 
 1. L'étudiant consulte la checklist de la compétence.
 2. Il vérifie que la partie concernée fonctionne dans le navigateur.
@@ -82,21 +89,31 @@ Ces périodes sont des **fenêtres de disponibilité et de priorité**, pas des 
 - La Validation D se termine principalement en R5.
 - Les reprises peuvent se poursuivre sans retarder le début de JavaScript à R6.
 
-## Rôle du Projet Web
+# Rôle du Projet Web
 
 Le Projet Web fournit un contexte commun et suffisamment riche pour observer les compétences.
 
 À la fin de R5, il contient au minimum :
 
-- un thème principal et deux sous-thèmes;
-- trois pages HTML;
-- une navigation complète;
+- un thème principal;
+- au moins deux pages de sujet;
+- une page À propos;
+- quatre pages HTML en comptant l'accueil;
+- une navigation complète vers les quatre pages;
 - au moins deux images locales;
 - un attribut `alt` sur chaque élément `<img>`;
 - une feuille CSS externe partagée;
 - des sélecteurs d'élément et des classes réutilisables;
 - une application du modèle en boîte;
 - un usage simple de Flexbox avec `gap`.
+
+Les étudiants peuvent ajouter plus de deux pages de sujet.
+
+La page À propos :
+
+- présente l'étudiant, ses intérêts et son choix de thème dans un site personnel ou informatif;
+- ou présente la description, la mission, les services et les coordonnées fictives d'une entreprise ou organisation;
+- ne doit pas demander de renseignements personnels sensibles.
 
 Ces minimums ne donnent pas automatiquement les badges.
 
@@ -134,7 +151,8 @@ L'enseignant peut demander de :
 - vérifier l'attribut `alt` d'une image;
 - ajouter ou modifier un élément de contenu;
 - expliquer un `href`;
-- réparer un lien de navigation.
+- réparer un lien de navigation;
+- expliquer le rôle distinct d'une page de sujet et de la page À propos.
 
 ### WEB-05 et WEB-06
 
@@ -156,11 +174,40 @@ L'enseignant peut demander de :
 - identifier un parent flex et ses enfants directs;
 - ajouter ou modifier un `gap`.
 
-## Niveaux d'attente
+# Personnalisation et appropriation — 20 points
+
+Cette appréciation est réalisée à la fin du bloc HTML/CSS. Elle ne reçoit pas les états d'une compétence technique et ne dépend pas d'une nouvelle entrevue formelle.
+
+| Critère | Points | Ce qui est observé |
+| --- | ---: | --- |
+| Contenu original | 5 | textes personnels, informations pertinentes, images choisies pour le thème |
+| Cohérence du thème | 5 | accueil, pages de sujet et page À propos complémentaires |
+| Décisions personnelles | 5 | noms, organisation, classes, couleurs et présentation adaptés plutôt que copiés |
+| Finition et initiative | 5 | relecture, cohérence, soin des détails et enrichissements pertinents |
+
+## Interprétation
+
+```text
+17 à 20 → appropriation très forte
+13 à 16 → personnalisation claire
+ 9 à 12 → personnalisation limitée
+ 0 à  8 → projet surtout générique, copié ou inachevé
+```
+
+## Règles d'équité pour cette appréciation
+
+- Réutiliser la structure HTML de base et les syntaxes enseignées est normal.
+- La note ne porte pas sur le nombre d'heures supposé.
+- Le talent graphique, l'accès à des logiciels coûteux ou la complexité visuelle ne doivent pas être récompensés en eux-mêmes.
+- Un site simple, cohérent, original et soigneusement terminé peut obtenir la note maximale.
+- Les enrichissements facultatifs peuvent contribuer à l'initiative, mais leur absence n'empêche pas une excellente note si le minimum est fortement personnalisé et bien fini.
+- La comparaison doit porter sur les critères annoncés, pas sur une impression vague du site le plus spectaculaire.
+
+# Niveaux d'attente
 
 ### À maîtriser
 
-La notion peut contribuer directement à une compétence.
+La notion peut contribuer directement à une compétence technique.
 
 ### Bonne pratique
 
@@ -170,9 +217,9 @@ La pratique est enseignée et encouragée, mais son absence seule ne bloque pas 
 
 La notion est facultative et ne doit pas être nécessaire pour réussir les validations ou l'évaluation finale.
 
-`background-image`, `border-radius`, `box-sizing`, `flex-wrap`, Grid, le positionnement et les transitions ne créent pas de critères indépendants dans le bloc actuel.
+`background-image`, `border-radius`, `box-sizing`, `flex-wrap`, Grid, le positionnement et les transitions ne créent pas de critères techniques indépendants dans le bloc actuel.
 
-## Règles d'équité
+## Règles d'équité des compétences
 
 Une compétence évaluée doit :
 
