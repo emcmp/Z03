@@ -1,6 +1,6 @@
-# Modifications transversales à prévoir — Rencontres 1 à 5
+# Modifications transversales — Rencontres 1 à 5
 
-Ce document sert de **liste de suivi avant modification** pour les rencontres 1 à 5 de Z03.
+Ce document sert de **liste de suivi des modifications transversales** pour les rencontres 1 à 5 de Z03.
 
 L'objectif est d'éviter les changements isolés : lorsqu'une notion est ajoutée, retirée ou déplacée, il faut vérifier tous les endroits où elle peut apparaître afin que la théorie, la pratique, le Projet Web et l'évaluation demeurent cohérents.
 
@@ -30,91 +30,81 @@ Inversement, une notion présentée comme essentielle dans la théorie devrait n
 
 ## 1. Rencontre 1 — Expliquer les commentaires HTML
 
-**Statut : à faire**
+**Statut : ✅ réalisé**
 
-Le gabarit du Projet Web utilise déjà un commentaire HTML, par exemple :
+Le gabarit du Projet Web utilise un commentaire HTML, par exemple :
 
 ```html
 <!-- Votre contenu ira ici -->
 ```
 
-La syntaxe des commentaires n'est toutefois pas expliquée explicitement avant son apparition.
+La syntaxe est maintenant expliquée avant son utilisation dans le Projet Web.
 
-### Modification souhaitée
-
-Ajouter une très courte explication des commentaires HTML dès la rencontre 1.
-
-Niveau attendu :
+### Niveau retenu
 
 - reconnaître la syntaxe `<!-- ... -->`;
 - comprendre qu'un commentaire sert à laisser une note dans le code;
 - comprendre qu'il n'est pas affiché comme contenu normal de la page.
 
-Il ne s'agit pas d'en faire une compétence ni une section importante du cours.
+Il ne s'agit pas d'une compétence ni d'une section importante du cours.
 
-### Propagation à vérifier
+### Propagation vérifiée
 
-- [ ] théorie R1;
-- [ ] exercice guidé R1, si un commentaire peut être utilisé naturellement;
-- [ ] Projet Web R1;
-- [ ] aide-mémoire HTML/CSS;
-- [ ] exemples de code R1;
-- [ ] sommaire de couverture.
+- [x] théorie R1;
+- [x] exercice guidé R1 — ajout d'un commentaire comme repère et observation du rendu;
+- [x] Projet Web R1 — explication du commentaire déjà présent dans le gabarit;
+- [x] aide-mémoire HTML/CSS;
+- [x] exemples de code R1 — la syntaxe est montrée explicitement dans les blocs de code;
+- [x] sommaire de couverture.
 
 ## 2. Rencontre 2 — Ajouter `width` et `height` aux images en HTML
 
-**Statut : à faire**
+**Statut : ✅ réalisé**
 
-À la rencontre 2, l'élément `<img>` est actuellement introduit principalement avec `src` et `alt`.
+À la rencontre 2, l'élément `<img>` est maintenant présenté avec `src`, `alt`, `width` et `height`.
 
-### Modification souhaitée
-
-Présenter aussi les attributs HTML :
+Exemple de référence :
 
 ```html
 <img src="images/chat.jpg" alt="Un chat" width="400" height="300">
 ```
 
-L'objectif est que l'étudiant sache qu'une image peut avoir des dimensions indiquées directement dans son élément HTML.
-
-Points à couvrir simplement :
+### Niveau retenu
 
 - `width` indique la largeur;
 - `height` indique la hauteur;
 - les valeurs représentent des pixels lorsqu'elles sont écrites comme nombres dans ces attributs HTML;
+- on n'écrit pas `px` dans les attributs HTML `width` et `height`;
 - les proportions doivent être respectées pour éviter de déformer l'image;
+- si une seule dimension est indiquée, le navigateur peut conserver l'autre à partir des proportions de l'image;
 - CSS permettra plus tard de contrôler plus largement la présentation et les dimensions des éléments.
 
-Cette introduction doit rester simple et adaptée à R2.
+L'introduction reste volontairement simple et adaptée à R2.
 
-### Propagation à vérifier
+### Propagation vérifiée
 
-- [ ] théorie R2 — section sur `<img>`;
-- [ ] exercice guidé R2;
-- [ ] Projet Web R2;
-- [ ] aide-mémoire HTML/CSS;
-- [ ] exemples utilisant `<img>`;
-- [ ] critères de compétence seulement si on décide explicitement que la maîtrise des dimensions fait partie de WEB-03;
-- [ ] sommaire de couverture.
+- [x] théorie R2 — section sur `<img>`;
+- [x] exercice guidé R2 — expérimentation de `width` et `height` et observation d'une déformation possible;
+- [x] Projet Web R2 — dimensions raisonnables proposées pour les images personnelles;
+- [x] aide-mémoire HTML/CSS;
+- [x] exemples utilisant `<img>` — l'exemple final R2 utilise une largeur simple cohérente;
+- [x] critères de compétence — **aucun nouveau critère mécanique ajouté** à WEB-03; la notion reste un outil HTML à comprendre;
+- [x] sommaire de couverture.
 
 ## 3. Rencontre 2 — Enseigner les liens vers une section de la même page
 
-**Statut : à faire**
+**Statut : ✅ réalisé**
 
-L'exercice Flexbox de la rencontre 5 utilise actuellement une ancre interne semblable à :
+L'exercice Flexbox de la rencontre 5 utilise une ancre interne semblable à :
 
 ```html
 <a href="#activites">Activités</a>
 <h2 id="activites">Activités</h2>
 ```
 
-Cette mécanique n'est pas encore enseignée explicitement avant son utilisation.
+Cette mécanique est maintenant enseignée et pratiquée en rencontre 2 avant son réemploi en rencontre 5.
 
-### Modification souhaitée
-
-Ajouter les **liens vers une section de la même page** à la rencontre 2, avec les autres formes de navigation.
-
-Présenter le principe :
+### Niveau retenu
 
 ```html
 <a href="#contact">Aller à la section Contact</a>
@@ -122,28 +112,31 @@ Présenter le principe :
 <h2 id="contact">Contact</h2>
 ```
 
-À expliquer :
+À comprendre :
 
 - `id` identifie un élément dans la page;
 - `href="#nom-id"` crée un lien vers cet élément;
 - le `#` indique une cible interne à la page;
-- la valeur de `href` doit correspondre à la valeur de `id`.
+- la valeur de `href` doit correspondre à la valeur de `id`;
+- un `id` doit être unique dans la page.
 
-La notion peut être présentée comme une extension naturelle de `<a>` et `href`, sans en faire une nouvelle compétence séparée.
+La notion est présentée comme une extension naturelle de `<a>` et `href`, sans créer une nouvelle compétence séparée.
 
-### Propagation à vérifier
+### Propagation vérifiée
 
-- [ ] théorie R2 — section sur les liens/navigation;
-- [ ] exercice guidé R2;
-- [ ] Projet Web R2, si un usage naturel peut être proposé sans devenir une exigence artificielle;
-- [ ] aide-mémoire HTML/CSS;
-- [ ] exemples R2;
-- [ ] exercice Flexbox R5, qui pourra alors conserver son ancre interne sans introduire une notion nouvelle;
-- [ ] sommaire de couverture.
+- [x] théorie R2 — section sur les liens/navigation;
+- [x] exercice guidé R2 — création d'une section `id="details"` et d'un lien `href="#details"`;
+- [x] Projet Web R2 — ajout d'un lien vers une section de la page d'accueil;
+- [x] aide-mémoire HTML/CSS;
+- [x] exemples R2 — le mini-site final réutilise une ancre interne;
+- [x] exercice Flexbox R5 — l'ancre existante peut être conservée puisqu'elle est maintenant une notion déjà connue;
+- [x] sommaire de couverture.
 
 # Vérification particulière après modification
 
-Une fois ces changements réalisés, refaire un passage ciblé sur les rencontres 1 à 5 afin de vérifier qu'aucune notion n'apparaît encore « par surprise » dans :
+Les trois modifications ci-dessus ont été propagées dans les principaux points de contact R1–R5.
+
+Le passage d'audit doit néanmoins rester une étape récurrente lorsque d'autres notions sont ajoutées, retirées ou déplacées. Il faut continuer à vérifier qu'aucune notion n'apparaît « par surprise » dans :
 
 - les blocs de code;
 - les checklists du Projet Web;
@@ -152,4 +145,4 @@ Une fois ces changements réalisés, refaire un passage ciblé sur les rencontre
 - l'aide-mémoire;
 - les contenus facultatifs qui pourraient être confondus avec des exigences.
 
-Le document `SOMMAIRE_COUVERTURE_RENCONTRES.md` doit ensuite être mis à jour pour refléter l'état réel du cours, et non seulement les intentions de la refonte.
+Le document `SOMMAIRE_COUVERTURE_RENCONTRES.md` doit toujours refléter l'état réel du cours, et non seulement les intentions de la refonte.
