@@ -50,7 +50,11 @@ Commencez par la structure générale :
 </html>
 ```
 
-Enregistrez le fichier et ouvrez-le dans votre navigateur.
+Enregistrez le fichier avec `Ctrl+S`. Avec `index.html` ouvert dans VS Code, appuyez ensuite sur `F5` pour démarrer l'affichage de la page dans le navigateur.
+
+:::tip Deux usages de F5
+Dans **VS Code**, `F5` démarre la page. Une fois dans le **navigateur**, `F5` sert plutôt à actualiser la page après une modification.
+:::
 
 :::info À maîtriser
 Vous devez être capable de reconnaître la structure générale d'un document HTML et de savoir où placer le contenu visible de la page.
@@ -195,6 +199,7 @@ Vérifiez que vous êtes capable de :
 
 - [ ] retrouver le dossier de l'exercice;
 - [ ] ouvrir ce dossier dans VS Code;
+- [ ] démarrer la page avec `F5` depuis VS Code;
 - [ ] reconnaître le `<head>` et le `<body>`;
 - [ ] ajouter un titre, un paragraphe et une liste;
 - [ ] reconnaître un commentaire HTML et expliquer pourquoi il ne s'affiche pas dans la page;
