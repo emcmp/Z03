@@ -4,7 +4,7 @@
 
 **Portée : source personnelle `emcmp/Z03` seulement**
 
-**État : Prêt à pousser — validation GitHub de la PR à compléter**
+**État : PR brouillon créée — validation GitHub sous Node 20 réussie**
 
 ## Plan et suivi
 
@@ -16,17 +16,19 @@
 | Retirer `.codex-temp/` du suivi sans effacement local | Terminé | Exclusion `.gitignore` confirmée | Aucun fichier suivi; 503 fichiers locaux toujours présents et ignorés |
 | Finaliser les garde-fous de phase 1 | Terminé | Audit du workflow et de la documentation | PR validée sans capacité de déploiement |
 | Exécuter les validations locales | Terminé | Modifications finalisées | Toutes les commandes imposées réussissent |
-| Créer les commits et la PR brouillon personnelle | À faire | Diff final inspecté | Branche poussée uniquement vers `origin`; PR brouillon créée |
-| Vérifier GitHub Actions sous Node 20 | À faire | PR brouillon disponible | Installation, typecheck et build réussis; aucun déploiement exécuté |
+| Créer les commits et la PR brouillon personnelle | Terminé | Diff final inspecté | Branche poussée uniquement vers `origin`; PR brouillon créée |
+| Vérifier GitHub Actions sous Node 20 | Terminé | PR brouillon disponible | Installation, typecheck et build réussis; déploiement ignoré |
 
 ## Commits préparés
 
 ```text
 dad22d2 chore: retire les artefacts Codex du suivi Git
 b6ad30a chore: sécurise le protocole de déploiement
+4dfd63e docs: consigne l’assainissement de la source
+ebce05f chore: corrige le formatage de gitignore
 ```
 
-Un commit documentaire distinct ajoute le présent rapport et corrige les contrôles de formatage sans réécrire les commits précédents.
+Un dernier commit documentaire consigne le résultat de la PR sans réécrire les commits précédents.
 
 ## État initial
 
@@ -121,7 +123,16 @@ Les builds conservent des avertissements non bloquants sur `onBrokenMarkdownLink
 
 ## Validation GitHub Actions sous Node 20
 
-À compléter après la création de la PR brouillon.
+PR brouillon personnelle : <https://github.com/emcmp/Z03/pull/4>
+
+Workflow : <https://github.com/emcmp/Z03/actions/runs/32516568140>
+
+| Job | Résultat |
+| --- | --- |
+| `Build le site` | Réussi sous Node 20 en 1 min 31 s |
+| `Déployer le site` | Ignoré comme prévu |
+
+Le workflow a été déclenché par `pull_request`. Il a exécuté `npm ci`, le typecheck et le build. La condition du job Pages a empêché tout déploiement depuis la PR.
 
 ## Risques volontairement reportés
 
