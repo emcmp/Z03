@@ -16,8 +16,8 @@
 | Ajouter les tests autonomes | Terminé | Scripts disponibles | `scripts/deploiement/tests/` | Cas sûrs et cas refusés vérifiés sans accès en écriture aux vrais remotes |
 | Actualiser les règles et la stratégie | Terminé | Comportement final des scripts | `AGENTS.md`, `refonte/STRATEGIE_DEPOTS_ET_MISE_EN_PRODUCTION.md` | Alignement réussi, workflow normal et arrêt sur divergence documentés |
 | Créer le guide opérateur | Terminé | Commandes humaines stabilisées | `refonte/GUIDE_MISE_EN_PRODUCTION.md` | Guide court, sans SHA ni commande Git à recopier |
-| Valider localement | En cours | Implémentation terminée | Aucun fichier généré suivi | npm, builds, dry-runs, tests et `git diff --check` réussissent |
-| Livrer pour révision | À faire | Validations réussies | PR brouillon personnelle | Commits logiques, push vers `origin` seulement, Actions vertes, `cegep` inchangé |
+| Valider localement | Terminé | Implémentation terminée | Aucun fichier généré suivi | npm, builds, dry-runs, tests et `git diff --check` réussissent |
+| Livrer pour révision | En cours | Validations réussies | PR brouillon personnelle | Commits logiques, push vers `origin` seulement, Actions vertes, `cegep` inchangé |
 
 ## Dépendances et contraintes
 
@@ -30,3 +30,12 @@
 ## Critère global de fin
 
 Le chantier est terminé lorsque les scripts et leurs tests passent localement, que la PR brouillon personnelle est verte, que `cegep/main` et toutes les branches officielles sont identiques à l’état initial, et qu’aucun candidat officiel n’a été créé.
+
+## Résultats locaux
+
+- `npm ci`, `npm run setup`, `npm run typecheck`, `npm run build` et le build Refonte : réussis;
+- suite PowerShell autonome sous Windows PowerShell 5.1 : 17 tests réussis sur 17;
+- dry-runs de preview et de préparation : refus sûr de la branche de travail, car seule `main` est acceptée;
+- dry-runs de publication et d’annulation : arrêt explicite « Aucun candidat actif », sans écriture;
+- workflow personnel existant du SHA de référence et routes personnelles : vérifiés en lecture seule;
+- site officiel, routes, navigation et ressources statiques : vérifiés en lecture seule.
