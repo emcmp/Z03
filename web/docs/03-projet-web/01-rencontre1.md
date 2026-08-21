@@ -8,6 +8,8 @@ import r1ProjetExempleHtml from '!!raw-loader!../../static/examples/rencontre1/p
 
 # Projet Web — Étape 1
 
+<ProjectStepHero step={1} />
+
 Cette activité est la **mise en pratique personnelle de la rencontre 1**. Vous allez créer la première version du site que vous ferez évoluer pendant les prochaines rencontres.
 
 Avant de commencer, vous devriez avoir fait l'**[exercice guidé sur la première page HTML](../01-cours/01-rencontre1-exercice-guide.md)**.
