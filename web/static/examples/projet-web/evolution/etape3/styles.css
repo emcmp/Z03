@@ -5,12 +5,12 @@ body {
 }
 
 h1 {
-  color: #2f6b45;
+  color: #245a86;
   text-align: center;
 }
 
 h2 {
-  color: #477a58;
+  color: #3f6f91;
 }
 
 a {
@@ -18,8 +18,8 @@ a {
 }
 
 .mise-en-valeur {
-  color: #6a3b12;
-  background-color: #fff4d8;
+  color: #7a1f1f;
+  background-color: #f7eaea;
   font-weight: bold;
-  border: 2px solid #c88b3a;
+  border: 2px solid #b45b5b;
 }
