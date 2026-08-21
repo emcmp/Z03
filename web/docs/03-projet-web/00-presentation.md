@@ -6,7 +6,13 @@ sidebar_position: 1
 
 # Projet Web - Présentation
 
-Pendant le cours Z03, vous construirez un **petit site Web qui évoluera progressivement**. Au lieu de recommencer un nouvel exercice complet chaque fois, vous garderez le même projet et vous l'améliorerez à mesure que de nouvelles notions seront introduites.
+Pendant le cours Z03, vous construirez **votre propre petit site Web** et vous le ferez évoluer progressivement. Au lieu de recommencer un nouvel exercice complet chaque fois, vous garderez le même projet et vous l'améliorerez à mesure que de nouvelles notions seront introduites.
+
+<TopicBadges topics={["html", "css", "validation"]} />
+
+<KeyPoint type="method" title="Un seul projet, cinq évolutions">
+Votre site commence très simplement, puis gagne des pages, des images, une identité visuelle, de meilleurs espacements et une disposition Flexbox. Vous voyez donc concrètement ce que chaque nouvelle notion apporte.
+</KeyPoint>
 
 Le projet sert d'abord de contexte de pratique. Il pourra aussi fournir des preuves concrètes lorsque certaines compétences seront validées en classe.
 
@@ -45,17 +51,13 @@ Le **sujet lui-même n'est pas évalué**. Il sert simplement de contexte pour a
 
 Choisissez surtout quelque chose qui vous permettra de produire facilement quelques titres, paragraphes, listes et, plus tard, des images et plusieurs pages.
 
-## Les grandes étapes
+## Votre parcours en cinq étapes
 
-| Rencontre | Évolution du site |
-| --- | --- |
-| **1** | Créer `index.html` et construire une première page HTML structurée. |
-| **2** | Organiser les fichiers, ajouter des images locales, créer plusieurs pages et une navigation. |
-| **3** | Ajouter une feuille CSS externe et commencer la mise en forme. |
-| **4** | Améliorer les espacements, bordures, dimensions et le modèle en boîte. |
-| **5** | Utiliser Flexbox simplement et consolider l'ensemble du site. |
+Chaque rencontre fait évoluer **le même site**. Vous n'avez pas besoin de penser aux cinq étapes en même temps : concentrez-vous sur la mission actuelle.
 
-Chaque étape possède sa propre page de consignes. Vous n'avez donc pas besoin de tout faire dès le départ.
+<ProjectJourney />
+
+Cliquez sur une étape pour ouvrir ses consignes. Les couleurs servent seulement à repérer la progression; elles ne représentent pas des niveaux de difficulté ou des points.
 
 ## Évaluation des compétences
 
@@ -87,12 +89,16 @@ Gardez le même dossier de projet pendant la session et travaillez par petites �
 
 À chaque séance :
 
-1. lisez la consigne de l'étape actuelle;
+1. lisez la mission de l'étape actuelle;
 2. faites une petite modification;
 3. enregistrez vos fichiers;
 4. actualisez le navigateur;
 5. observez le résultat;
 6. corrigez les problèmes avant d'ajouter beaucoup d'autres choses.
+
+<KeyPoint type="test" title="Le navigateur est votre tableau de bord">
+Après chaque petit changement, regardez ce qui se passe réellement dans le navigateur. Le projet doit évoluer par petites transformations que vous comprenez.
+</KeyPoint>
 
 Lorsque des compétences deviennent disponibles pour validation, l'enseignant pourra vous demander d'expliquer une partie de votre code ou de faire une petite modification afin de vérifier votre compréhension.
 
