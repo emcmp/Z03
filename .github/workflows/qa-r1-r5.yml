@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - agent/qa-finale-r1-r5
+  pull_request:
+    branches:
+      - main
 
 jobs:
   validate:
