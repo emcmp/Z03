@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #263238;
+  background-color: #f7fbf5;
+}
+
+h1 {
+  color: #245a86;
+  text-align: center;
+}
+
+h2 {
+  color: #3f6f91;
+}
+
+a {
+  color: #245a86;
+}
+
+.mise-en-valeur {
+  color: #7a1f1f;
+  background-color: #f7eaea;
+  font-weight: bold;
+  border: 2px solid #b45b5b;
+}

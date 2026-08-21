@@ -1,13 +1,14 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import CodeBlock from "@theme/CodeBlock";
+import CodeBlock from "@theme-original/CodeBlock";
 import styles from "./ExampleFrame.module.css";
 
 type ExampleFrameProps = {
   src: string;
   title: string;
-  html: string;
+  html?: string;
   css?: string;
+  showCode?: boolean;
   height?: number;
   minHeight?: number;
   maxHeight?: number;
@@ -25,6 +26,7 @@ export default function ExampleFrame({
   title,
   html,
   css,
+  showCode = true,
   height,
   minHeight = DEFAULT_MIN_HEIGHT,
   maxHeight = DEFAULT_MAX_HEIGHT,
@@ -100,16 +102,18 @@ export default function ExampleFrame({
 
   return (
     <div className={styles.exampleFrame}>
-      <div className={styles.codeStack}>
-        <CodeBlock language="html" title="index.html">
-          {html.trim()}
-        </CodeBlock>
-        {css ? (
-          <CodeBlock language="css" title="styles.css">
-            {css.trim()}
+      {showCode && html ? (
+        <div className={styles.codeStack}>
+          <CodeBlock language="html" title="index.html">
+            {html.trim()}
           </CodeBlock>
-        ) : null}
-      </div>
+          {css ? (
+            <CodeBlock language="css" title="styles.css">
+              {css.trim()}
+            </CodeBlock>
+          ) : null}
+        </div>
+      ) : null}
 
       <div className={styles.previewBlock}>
         <div className={styles.browserWindow}>

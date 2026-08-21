@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #263238;
+  background-color: #f7fbf5;
+}
+
+header {
+  background-color: #eaf3ff;
+  border-bottom: 2px solid #245a86;
+  padding: 20px;
+}
+
+h1 {
+  color: #245a86;
+  text-align: center;
+}
+
+h2 {
+  color: #3f6f91;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  background-color: #eaf3ff;
+  padding: 16px;
+}
+
+a {
+  color: #245a86;
+}
+
+main {
+  max-width: 900px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.cartes {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.carte {
+  background-color: #eaf3ff;
+  border: 2px solid #245a86;
+  padding: 20px;
+}
+
+.mise-en-valeur {
+  color: #7a1f1f;
+  background-color: #f7eaea;
+  font-weight: bold;
+  border: 2px solid #b45b5b;
+  padding: 16px;
+}
