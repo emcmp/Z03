@@ -97,7 +97,7 @@ export default function ExamplePeek({
               className={styles.previewFrame}
               src={resolvedSrc}
               title={title}
-              sandbox="allow-same-origin"
+              sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox"
               loading="lazy"
               style={{ height: `${height}px` }}
             />
