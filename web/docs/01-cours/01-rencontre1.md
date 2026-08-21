@@ -20,6 +20,7 @@ HTML est le langage qui décrit la **structure et le sens du contenu** d'une pag
 - expliquer simplement ce qu'est un élément HTML;
 - reconnaître une balise ouvrante, un contenu et une balise fermante;
 - reconnaître un attribut simple;
+- reconnaître un commentaire HTML simple;
 - imbriquer correctement des éléments HTML;
 - reconnaître les principales parties d'un document HTML;
 - utiliser des titres, des paragraphes et des listes pour structurer du contenu;
@@ -52,6 +53,20 @@ Une balise ouvrante peut contenir des **attributs**. Un attribut donne une infor
 ```
 
 Ici, l'attribut `class` possède la valeur `introduction`. Nous utiliserons davantage les classes lorsque nous commencerons CSS.
+
+### Les commentaires HTML
+
+Un **commentaire** permet de laisser une note dans le code sans l'afficher comme contenu normal dans la page.
+
+```html
+<!-- Le contenu principal commence ici -->
+```
+
+Le navigateur ignore ce texte lors de l'affichage de la page. Les commentaires peuvent être utiles pour laisser un repère ou une courte explication dans le fichier.
+
+:::info À retenir
+Un commentaire commence par `<!--` et se termine par `-->`. Vous devez surtout être capable de le reconnaître lorsque vous en voyez un dans un exemple.
+:::
 
 ### Quelques éléments sans balise fermante
 
