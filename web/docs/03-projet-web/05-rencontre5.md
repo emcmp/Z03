@@ -76,11 +76,12 @@ Assurez-vous de savoir quelle règle contrôle le groupe et quelle règle contr�
 - les images apparaissent-elles depuis la racine et depuis `pages/`?
 - les noms de fichiers correspondent-ils exactement?
 
-### CSS
+### CSS et sélecteurs
 
 - les quatre pages chargent-elles la même feuille?
 - les classes sont-elles nommées selon leur rôle?
 - une classe peut-elle remplacer deux règles dupliquées?
+- le projet contient-il un `id` unique et une règle `#id` correspondante?
 - les choix de typographie et de couleurs sont-ils cohérents?
 
 ### Espacements
@@ -128,6 +129,8 @@ Avant de considérer le bloc HTML/CSS terminé :
 - [ ] Les quatre pages chargent `css/styles.css`.
 - [ ] La feuille contient des sélecteurs d'élément et au moins deux classes utiles.
 - [ ] Au moins une classe est réutilisée.
+- [ ] Au moins un élément possède un `id` unique et une règle `#id` correspondante.
+- [ ] Je peux expliquer quand utiliser un sélecteur d'élément, une classe ou un identifiant.
 - [ ] Je peux expliquer une utilisation de `padding`, `border` et `margin`.
 - [ ] Au moins un parent utilise `display: flex` et `gap`.
 - [ ] Je peux expliquer mes principales décisions HTML et CSS.
