@@ -6,6 +6,8 @@ sidebar_position: 4
 
 # Projet Web — Étape 3
 
+<ProjectStepHero step={3} />
+
 Cette activité poursuit **le même site** commencé aux rencontres 1 et 2.
 
 Vous allez maintenant ajouter une feuille CSS externe pour donner une apparence cohérente à toutes vos pages, sans recopier les mêmes styles dans chaque fichier HTML.
