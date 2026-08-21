@@ -1,0 +1,5 @@
+# Fichiers temporaires produits pendant le travail local avec Codex
+/.codex-temp/
+
+# Dépendances installées à la racine, le cas échéant
+/node_modules/

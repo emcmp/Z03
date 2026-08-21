@@ -9,10 +9,13 @@ if (!allowedCommands.has(command)) {
   process.exit(1);
 }
 
-const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
+const docusaurusCommand = path.resolve(
+  __dirname,
+  "../node_modules/@docusaurus/core/bin/docusaurus.mjs",
+);
 const result = spawnSync(
-  npmCommand,
-  ["exec", "--", "docusaurus", command, ...process.argv.slice(3)],
+  process.execPath,
+  [docusaurusCommand, command, ...process.argv.slice(3)],
   {
     cwd: path.resolve(__dirname, ".."),
     env: {

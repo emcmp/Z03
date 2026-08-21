@@ -6,6 +6,7 @@
   "scripts": {
     "setup": "npm --prefix web ci",
     "start": "npm --prefix web run start",
+    "typecheck": "npm --prefix web run typecheck",
     "build": "npm --prefix web run build",
     "serve": "npm --prefix web run serve",
     "clear": "npm --prefix web run clear"
