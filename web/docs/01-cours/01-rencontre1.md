@@ -13,6 +13,8 @@ Votre environnement étant prêt, nous pouvons maintenant nous concentrer sur HT
 
 HTML est le langage qui décrit la **structure et le sens du contenu** d'une page Web. Pour cette première rencontre, nous allons apprendre à reconnaître ses principaux éléments et à construire une page simple que nous comprenons entièrement.
 
+<TopicBadges topics={["html", "structure", "content"]} />
+
 ## Objectifs de la rencontre
 
 À la fin de cette partie, vous devriez être capable de :
@@ -43,6 +45,10 @@ Dans cet exemple :
 - `<p>` ouvre l'élément;
 - `Ceci est un paragraphe.` est son contenu;
 - `</p>` ferme l'élément.
+
+<KeyPoint type="remember" title="Regardez l'élément au complet">
+Quand vous lisez du HTML, ne voyez pas seulement les balises. Cherchez le groupe complet : **ouverture → contenu → fermeture**.
+</KeyPoint>
 
 ### Les attributs
 
