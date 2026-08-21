@@ -77,7 +77,7 @@ Exemple de référence :
 - on n'écrit pas `px` dans les attributs HTML `width` et `height`;
 - les proportions doivent être respectées pour éviter de déformer l'image;
 - si une seule dimension est indiquée, le navigateur peut conserver l'autre à partir des proportions de l'image;
-- CSS permettra plus tard de contrôler plus largement la présentation et les dimensions des éléments.
+- CSS permet ensuite de contrôler plus largement la présentation et d'utiliser des dimensions relatives.
 
 L'introduction reste volontairement simple et adaptée à R2.
 
@@ -143,7 +143,7 @@ Le préambule annonçait déjà le cycle VS Code → navigateur, mais ne montrai
 Dans l'environnement utilisé au cours, l'étudiant doit savoir distinguer deux usages de `F5` :
 
 ```text
-F5 dans VS Code      → démarrer l'affichage de la page
+F5 dans VS Code       → démarrer l'affichage de la page
 F5 dans le navigateur → actualiser la page déjà ouverte
 ```
 
@@ -219,9 +219,92 @@ Exemple principal :
 - [x] exemples / aperçus — un aperçu `ExamplePeek` R5 montre une bannière avec image de fond;
 - [x] sommaire de couverture.
 
+## 6. Rencontre 4 — Distinguer les différentes façons de centrer
+
+**Statut : ✅ réalisé**
+
+R3 montrait déjà `text-align: center` pour un titre et R5 utilise `justify-content: center` avec Flexbox, mais il manquait une explication explicite du centrage d'une **boîte elle-même** dans la page.
+
+### Niveau retenu
+
+Trois situations sont distinguées :
+
+```text
+text-align: center     → centrer du contenu dans une boîte
+margin: 0 auto         → centrer une boîte dont la largeur est contrôlée
+justify-content: center → centrer des enfants dans un conteneur Flexbox
+```
+
+Exemple principal en R4 :
+
+```css
+main {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+```
+
+Une image peut aussi être centrée comme contenu en appliquant `text-align: center` à son parent.
+
+### Propagation vérifiée
+
+- [x] théorie R4 — distinction explicite entre centrage du contenu, de la boîte et futur centrage Flexbox;
+- [x] exercice guidé R4 — centrage d'une image dans son parent puis centrage du `<main>` avec `margin: 0 auto`;
+- [x] Projet Web R4 — centrage du contenu principal proposé dans le vrai site;
+- [x] aide-mémoire HTML/CSS — section de référence sur les deux formes de centrage avant Flexbox;
+- [x] exemples / aperçus — ExamplePeek montre une image centrée et une boîte centrée;
+- [x] compétences / évaluation — aucun critère mécanique ajouté; le centrage est un outil de WEB-08 à comprendre et choisir selon le contexte;
+- [x] sommaire de couverture.
+
+## 7. Rencontre 4 — Introduire les largeurs relatives avec `%`
+
+**Statut : ✅ réalisé**
+
+R2 utilise volontairement des attributs HTML `width` et `height` numériques, donc en pixels. R4 introduit maintenant la différence entre une dimension CSS fixe et une dimension CSS relative.
+
+### Niveau retenu
+
+Exemple de largeur relative :
+
+```css
+.image-principale {
+  width: 80%;
+  height: auto;
+}
+```
+
+À comprendre :
+
+- `px` représente une dimension fixe;
+- `%` représente une proportion de l'espace disponible dans le parent;
+- `height: auto` permet de conserver les proportions d'une image lorsque sa largeur change;
+- `max-width: 100%` est une façon fréquente d'empêcher une image de dépasser son conteneur;
+- une valeur en pourcentage est présentée en **CSS**, et non dans l'attribut HTML `width` enseigné en R2.
+
+Exemple adaptable :
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+### Propagation vérifiée
+
+- [x] théorie R4 — `px` et `%` comparés; images adaptables expliquées;
+- [x] exercice guidé R4 — essais avec `50%`, `80%`, `100%`, `max-width: 100%` et `height: auto`;
+- [x] Projet Web R4 — largeur relative, image adaptable et dimensions motivées réinvesties;
+- [x] aide-mémoire HTML/CSS — `%`, `height: auto` et `max-width: 100%` ajoutés;
+- [x] exemples d'évolution Projet Web R4–R5 — le `<main>` utilise une largeur relative et les images sont limitées à leur conteneur;
+- [x] exemples / aperçus — ExamplePeek illustre largeur à 80 % et image adaptable;
+- [x] compétences / évaluation — aucune valeur précise (`80%`, `900px`, etc.) n'est exigée mécaniquement; l'étudiant doit comprendre le choix de dimension;
+- [x] sommaire de couverture.
+
 # Vérification particulière après modification
 
-Les cinq modifications ci-dessus ont été propagées dans les principaux points de contact R1–R5.
+Les sept modifications ci-dessus ont été propagées dans les principaux points de contact R1–R5.
 
 Le passage d'audit doit néanmoins rester une étape récurrente lorsque d'autres notions sont ajoutées, retirées ou déplacées. Il faut continuer à vérifier qu'aucune notion n'apparaît « par surprise » dans :
 
