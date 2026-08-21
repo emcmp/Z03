@@ -1,6 +1,6 @@
 ---
 title: Étape 3 - Créer une identité visuelle partagée
-description: Relier les trois pages à une feuille CSS externe et créer des styles adaptés au thème du site.
+description: Relier les quatre pages à une feuille CSS externe et créer des styles adaptés au thème du site.
 sidebar_position: 4
 ---
 
@@ -10,7 +10,7 @@ sidebar_position: 4
 
 ## Mission
 
-Ajoutez une seule feuille CSS externe à votre site de trois pages, puis créez une identité visuelle cohérente avec votre thème.
+Ajoutez une seule feuille CSS externe à votre site de quatre pages, puis créez une identité visuelle cohérente avec votre thème et votre page À propos.
 
 Avant de commencer :
 
@@ -30,12 +30,13 @@ mon-site/
 │   └── ...
 └── pages/
     ├── sous-theme-1.html
-    └── sous-theme-2.html
+    ├── sous-theme-2.html
+    └── apropos.html
 ```
 
-Créez `css/styles.css`. Les trois pages doivent charger ce même fichier.
+Créez `css/styles.css`. Les quatre pages doivent charger ce même fichier.
 
-## 1. Relier les trois pages
+## 1. Relier les quatre pages
 
 Ajoutez un `<link>` dans le `<head>` de chaque document.
 
@@ -44,7 +45,7 @@ Le cours explique les deux chemins nécessaires :
 - depuis `index.html`;
 - depuis une page située sous `pages/`.
 
-Votre première vérification consiste à modifier une règle générale et à confirmer que **les trois pages** changent.
+Votre première vérification consiste à modifier une règle générale et à confirmer que **les quatre pages** changent.
 
 ## 2. Définir les styles généraux
 
@@ -69,6 +70,8 @@ mise-en-valeur
 fiche
 information-importante
 citation
+profil
+coordonnees
 ```
 
 Au moins une de ces classes doit être réutilisée sur plusieurs éléments ou plusieurs pages.
@@ -96,20 +99,33 @@ Vous n'avez pas à utiliser toutes les propriétés du cours.
 Vous devez pouvoir retrouver la règle qui produit chaque changement important et expliquer pourquoi vous l'avez choisie.
 :::
 
+## 5. Personnaliser aussi la page À propos
+
+La page À propos doit appartenir visuellement au même site, mais elle peut posséder un bloc adapté à son contenu, par exemple :
+
+- une courte présentation;
+- une fiche de profil;
+- une mission d'entreprise;
+- un groupe de services;
+- des coordonnées fictives.
+
+Réutilisez les mêmes règles générales et créez une classe supplémentaire seulement si le rôle du contenu le justifie.
+
 ## Décisions à prendre
 
 - Quelle ambiance visuelle correspond au thème?
 - Quelles règles doivent s'appliquer partout?
 - Quel contenu joue un rôle spécial et mérite une classe?
 - Une classe peut-elle être réutilisée au lieu de créer une règle différente pour chaque page?
-- Les trois pages ressemblent-elles au même site?
+- Les quatre pages ressemblent-elles au même site?
+- La présentation de la page À propos correspond-elle à son contenu?
 
 ## Tests à effectuer
 
 - [ ] `styles.css` existe dans `css/`.
 - [ ] `index.html` charge la feuille avec le bon chemin.
-- [ ] Les deux pages sous `pages/` chargent la même feuille.
-- [ ] Une modification générale apparaît sur les trois pages.
+- [ ] Les trois pages sous `pages/` chargent la même feuille.
+- [ ] Une modification générale apparaît sur les quatre pages.
 - [ ] La feuille utilise au moins un sélecteur d'élément.
 - [ ] La feuille contient au moins deux classes utiles.
 - [ ] Au moins une classe est réutilisée.
@@ -129,12 +145,14 @@ Vous pouvez aussi commencer la Validation C :
 - 🔌 **WEB-05 — Associer correctement une feuille CSS externe**;
 - 🎯 **WEB-06 — Cibler les éléments avec des sélecteurs appropriés**.
 
-:::note Pour aller plus loin — non évalué
-Vous pouvez créer une troisième classe utile ou expérimenter avec une autre combinaison de couleurs.
+Cette étape contribue aussi à la dimension **Personnalisation et appropriation du projet** par vos choix de couleurs, de typographie, de classes et de présentation.
+
+:::note Pour aller plus loin — non évalué séparément
+Vous pouvez créer une troisième classe utile, enrichir la page À propos ou expérimenter avec une autre combinaison de couleurs.
 
 N'utilisez pas encore Flexbox, Grid ou le positionnement comme exigences de votre projet.
 :::
 
 ## Prochaine étape
 
-À la rencontre 4, vous conserverez cette feuille et analyserez les vrais blocs de votre site pour corriger les espaces intérieurs et extérieurs.
+À la rencontre 4, vous conserverez cette feuille et analyserez les vrais blocs de vos quatre pages pour corriger les espaces intérieurs et extérieurs.
