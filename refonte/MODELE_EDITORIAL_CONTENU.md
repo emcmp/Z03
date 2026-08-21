@@ -62,9 +62,11 @@ Aide-mémoire
 
 - faire évoluer le même site pendant les rencontres 1 à 5;
 - imposer un minimum suffisamment riche pour démontrer les compétences;
+- demander au moins deux pages de sujet et une page À propos;
 - demander des décisions personnelles;
 - demander du contenu réel et distinct de l'exercice guidé;
-- exiger que l'étudiant puisse expliquer ses choix et modifier son code.
+- exiger que l'étudiant puisse expliquer ses choix et modifier son code;
+- créer une occasion d'apprécier la personnalisation et l'appropriation du mandat.
 
 ### Structure recommandée
 
@@ -82,7 +84,8 @@ Chaque étape contient seulement :
 - recopier le gabarit complet déjà utilisé dans l'exercice;
 - donner tous les textes, noms de classes et couleurs;
 - permettre de remplacer le projet personnel par une copie de l'exercice;
-- compter mécaniquement des propriétés sans vérifier la compréhension.
+- compter mécaniquement des propriétés sans vérifier la compréhension;
+- confondre personnalisation et complexité visuelle avancée.
 
 ## 4. Aide-mémoire
 
@@ -112,10 +115,12 @@ Chaque étape contient seulement :
 
 ### Rôle
 
-- définir les compétences et les fenêtres de validation;
+- définir les huit compétences techniques et les fenêtres de validation;
 - distinguer le minimum du projet et la preuve de compréhension;
 - fournir une checklist par compétence;
-- rappeler qu'une petite modification peut être demandée.
+- rappeler qu'une petite modification peut être demandée;
+- présenter séparément la grille de personnalisation et sa pondération;
+- expliquer que la personnalisation n'est pas une neuvième compétence technique.
 
 ### Règle importante
 
@@ -125,6 +130,8 @@ Les minimums du Projet Web créent un support suffisamment riche pour observer l
 Présence du code ≠ compétence automatiquement validée
 Comprendre, expliquer et modifier = preuve recherchée
 ```
+
+La personnalisation doit porter sur des manifestations observables : contenu original, cohérence, décisions adaptées et finition. Elle ne doit pas reposer sur le nombre d'heures supposé, le talent graphique ou l'utilisation de notions avancées.
 
 ## 6. Convention pour les rappels
 
@@ -145,5 +152,7 @@ Pour chaque page :
 - [ ] L'exercice guidé impose une pratique, mais ne remplace pas le projet.
 - [ ] Le Projet Web exige des décisions personnelles.
 - [ ] Les minimums sont explicites.
+- [ ] La page À propos et les deux pages de sujet sont distinguées clairement.
+- [ ] La personnalisation est séparée des compétences techniques.
 - [ ] Le contenu facultatif est clairement identifié.
 - [ ] Les checklists ne dupliquent pas inutilement la grille de compétence.
