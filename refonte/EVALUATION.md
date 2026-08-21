@@ -104,6 +104,7 @@ Le Projet Web fournit un contexte commun et suffisamment riche pour observer les
 - un attribut `alt` sur chaque élément `<img>`;
 - une feuille CSS externe partagée;
 - des sélecteurs d'élément et des classes réutilisables;
+- au moins un `id` unique ciblé par une règle `#id`;
 - une application du modèle en boîte;
 - un usage simple de Flexbox avec `gap`.
 
@@ -161,8 +162,13 @@ L'enseignant peut demander de :
 - expliquer les chemins différents vers `styles.css`;
 - corriger un `link`;
 - distinguer sélecteur, propriété et valeur;
-- ajouter une classe;
+- choisir entre un sélecteur d'élément, une classe et un identifiant;
+- ajouter ou réutiliser une classe;
+- créer un `id` unique et sa règle `#id`;
+- vérifier qu'un identifiant n'est pas répété;
 - modifier un sélecteur pour cibler les bons éléments.
+
+L'identifiant fait partie de WEB-06 parce qu'il prépare le travail ultérieur avec JavaScript et le DOM. Il ne constitue pas une neuvième compétence et il n'est pas nécessaire d'en multiplier les occurrences.
 
 ### WEB-07 et WEB-08
 
