@@ -36,7 +36,7 @@ Documents associés :
 | **R1 — Environnement et HTML** | OneDrive, dossiers/fichiers, extensions, ZIP, VS Code, ouverture de `index.html` dans le navigateur, `Ctrl+S`, `Ctrl+R`/`F5`; éléments HTML, attributs, commentaires, imbrication, structure complète, titres, paragraphes, listes, emphase | Première page complète; commentaire comme repère; cycle modifier/enregistrer/actualiser; erreurs d'imbrication; validation W3C | Création de `mon-site/index.html`, structure complète, commentaire du gabarit expliqué, contenu HTML de base, test navigateur, W3C | Prépare 🗂️ WEB-01 et 🧱 WEB-02 | ✅ |
 | **R2 — HTML, fichiers et navigation** | Arborescence, images locales, `src`, `alt`, `width`, `height`, chemins relatifs, `../`, liens, ancres internes avec `id`/`#`, navigation, éléments sémantiques simples, diagnostic | Site de deux pages avec `images/`, `pages/`, image redimensionnée, liens aller-retour, lien vers une section, erreur volontaire de chemin | Ajout d'une page secondaire, image locale et dimensions, navigation bidirectionnelle, lien vers une section, chemins relatifs | 🗂️ WEB-01, 🧱 WEB-02, ✍️ WEB-03, 🔗 WEB-04 | ✅ |
 | **R3 — Introduction à CSS** | Rôle HTML/CSS; CSS intraligne/interne/externe; règle CSS; feuille externe; sélecteurs élément/classe/id; cascade simple; couleurs, typographie, alignement, bordure | Deux pages reliées à une feuille CSS; sélecteurs d'élément; classe réutilisée; cascade simple; diagnostic d'un mauvais `href` CSS | Ajout de `css/styles.css`, feuille partagée, styles généraux, classe, premières décisions visuelles | 🔌 WEB-05, 🎯 WEB-06; reprises ✍️ WEB-03 / 🔗 WEB-04 | ✅; quelques enrichissements facultatifs non pratiqués dans le guidé |
-| **R4 — Modèle en boîte** | Contenu → `padding` → `border` → `margin`; une/deux valeurs; dimensions simples; `width`, `max-width`; conteneurs; `<div>` | Cartes; `padding`, `margin`, `border`; forme à deux valeurs; `width`; diagnostic | Ajustement des espacements du vrai site; classes réutilisées; `<div>` au besoin; `max-width` au besoin | 🎨 WEB-07, 📐 WEB-08; reprises 🔌 WEB-05 / 🎯 WEB-06 | ✅; enrichissements facultatifs à surveiller |
+| **R4 — Modèle en boîte** | Contenu → `padding` → `border` → `margin`; une/deux valeurs; `width` en `px` et `%`; `max-width`; `height: auto`; images adaptables; `text-align` vs `margin: 0 auto`; conteneurs; `<div>` | Cartes; `padding`, `margin`, `border`; forme à deux valeurs; largeur fixe puis relative; image à `80%`; `max-width: 100%`; centrage d'une image et du `<main>`; diagnostic | Ajustement des espacements; contenu principal limité et centré; images adaptables; classes réutilisées; `<div>` au besoin | 🎨 WEB-07, 📐 WEB-08; reprises 🔌 WEB-05 / 🎯 WEB-06 | ✅; centrage et dimensions relatives enseignés et pratiqués sans valeur mécanique imposée |
 | **R5 — Flexbox simple et intégration** | Parent/enfants directs; `display: flex`; `gap`; `justify-content`; `align-items`; navigation et cartes; `background-image`, `url(...)`, `background-size: cover`, `background-position: center`; intégration HTML/CSS | Navigation flex; cartes flex; `gap`; `justify-content`; `align-items`; erreur volontaire sur le mauvais parent; ancre interne réinvestie; bannière avec image de fond et chemin depuis `styles.css` | Flexbox utile dans le site; essai d'une image de fond lorsque pertinente; intégration et correction de tout le bloc HTML/CSS | 🎨 WEB-07, 📐 WEB-08; reprises de tous les badges | ✅ image de fond enseignée et pratiquée sans devenir un critère mécanique |
 | **R6 — Variables et JavaScript** | Page actuelle provisoire : JS, variables, affectation, nombres, chaînes, opérateurs, concaténation/interpolation, console | Aucun nouvel exercice guidé Z03 finalisé; ancien labo 2 à migrer | Aucun Projet Web R6 actuellement | Mini-quiz futur préparé par R6–R7; TP2/TP3 plus tard | ⏳ noyau cohérent, activité à reconstruire |
 | **R7 — Séquence à réaligner** | **Site actuel : conditions et logique** | Migration actuelle prévue depuis anciens labos 5 et 6 | Aucun Projet Web R7 | — | 🔴 ne correspond plus au plan de cours décidé : R7 doit devenir DOM + fonctions simples + console/`alert()` |
@@ -107,7 +107,7 @@ Sources :
 | `<img>` | ✅ | ✅ | ✅ | WEB-03 | Aligné |
 | `src` | ✅ | ✅ depuis racine et sous-dossier | ✅ | WEB-01 / WEB-03 | Aligné |
 | `alt` | ✅ bonne pratique fortement recommandée | ✅ utilisé | ✅ demandé dans les exemples | WEB-03 | Ne pas en faire seul un motif d'échec, conformément à la cartographie |
-| `width` / `height` dans `<img>` | ✅ rôle, pixels et proportions | ✅ expérimentation avec largeur et hauteur | ✅ réinvestis pour dimensionner une image | WEB-03 indirect | Aligné; ne pas transformer des dimensions précises en critère mécanique |
+| `width` / `height` dans `<img>` | ✅ rôle, pixels et proportions | ✅ expérimentation avec largeur et hauteur | ✅ réinvestis pour dimensionner une image | WEB-03 indirect | Aligné; les dimensions relatives en CSS arrivent explicitement en R4 |
 | Chemin vers fichier du même dossier | ✅ | ✅ | ✅ dans navigation secondaire | WEB-01 / WEB-04 | Aligné |
 | Chemin vers sous-dossier | ✅ | ✅ | ✅ | WEB-01 / WEB-04 | Aligné |
 | `../` | ✅ | ✅ avec erreur volontaire | ✅ | WEB-01 / WEB-04 | Très bien renforcé |
@@ -153,7 +153,7 @@ Sources :
 | `font-size` | ✅ | — | ✅ disponible parmi choix | WEB-07 | 🟡 enseigné mais peu pratiqué dans le guidé; acceptable si non obligatoire isolément |
 | `font-weight` | ✅ | ✅ | ✅ dans exemple classe | WEB-07 | Aligné |
 | `font-style` | ✅ | — | disponible parmi choix | WEB-07 | 🟡 non renforcé dans le guidé; ne pas en faire une exigence isolée |
-| `text-align` | ✅ | ✅ | ✅ possible | WEB-07 | Aligné |
+| `text-align` | ✅ | ✅ | ✅ possible | WEB-07 | Aligné; réinvesti en R4 pour distinguer centrage du contenu et de la boîte |
 | `border` | ✅ première introduction | ✅ | ✅ possible | WEB-07 puis R4 | Aligné; approfondi R4 |
 | `text-decoration` | seulement « pour aller plus loin » côté projet | — | facultatif | — | Correctement non évalué |
 
@@ -177,18 +177,22 @@ Sources :
 | `border` | ✅ réinvesti de R3 | ✅ | ✅ | WEB-07 / WEB-08 | Aligné |
 | Forme à une valeur | ✅ | ✅ | ✅ | WEB-08 | Aligné |
 | Forme à deux valeurs | ✅ | ✅ | ✅ exemple `20px 0` | WEB-08 | Aligné |
-| `width` | ✅ comme dimension simple | ✅ expérimentation temporaire | non exigé | WEB-08 | Correctement non obligatoire |
-| `max-width` | ✅ | — | proposé si besoin | WEB-08 | 🟡 théorie avant usage; non obligatoire |
+| `width` en `px` | ✅ dimension fixe | ✅ `320px` expérimenté | possible si besoin | WEB-08 | Aligné; valeur précise non obligatoire |
+| `width` en `%` | ✅ proportion du parent | ✅ image testée à `50%`, `80%`, `100%` | ✅ largeur relative proposée pour le contenu ou une image | WEB-08 | Aligné; introduction explicite des dimensions relatives |
+| `max-width` | ✅ limite souple | ✅ dans le centrage du `<main>` | ✅ contenu principal limité | WEB-08 | Aligné |
+| `max-width: 100%` + `height: auto` sur les images | ✅ | ✅ | ✅ proposé lorsque le site contient de grandes images | WEB-07 / WEB-08 indirect | Aligné; corrige une notion auparavant présente seulement dans l'aperçu d'évolution |
+| `margin: 0 auto` | ✅ marges horizontales automatiques | ✅ centrage du `<main>` | ✅ centrage du contenu principal | WEB-08 | Aligné; centrer la boîte est maintenant distingué de centrer son contenu |
+| `text-align: center` pour le contenu / une image | ✅ réinvesti de R3 | ✅ image centrée dans son parent | ✅ au besoin | WEB-07 / WEB-08 indirect | Aligné; ne pas confondre avec `margin: 0 auto` |
 | `<section>` comme conteneur sémantique | déjà rencontré, réutilisé | ✅ | ✅ | — | Aligné |
-| `<div>` | ✅ introduit comme conteneur général | — dans guidé principal | ✅ au besoin | — / WEB-08 indirect | 🟡 usage facultatif; ne pas évaluer l'usage du `div` lui-même |
-| Réutilisation d'une classe | ✅ | ✅ `.carte` | ✅ demandée lorsque pertinente | WEB-06 / WEB-07 | Aligné |
+| `<div>` | ✅ introduit comme conteneur général | ✅ utilisé comme zone d'image | ✅ au besoin | — / WEB-08 indirect | Usage contextuel; ne pas évaluer le `div` lui-même |
+| Réutilisation d'une classe | ✅ | ✅ `.carte`, `.image-principale` | ✅ demandée lorsque pertinente | WEB-06 / WEB-07 | Aligné |
 | `box-sizing: border-box` | facultatif | facultatif | facultatif | — | Correctement exclu du noyau |
 | `border-radius` | — dans noyau | — | pour aller plus loin | — | Correctement non évalué |
 | Positionnement / `inline-block` / animations | explicitement exclus | — | — | — | Très clair |
 
 ### Conclusion R4
 
-La matière du Projet Web est bien soutenue. Les dimensions (`width`, `max-width`) et `<div>` doivent rester des outils contextuels, pas des exigences mécaniques de WEB-08.
+La matière du Projet Web est maintenant soutenue jusque dans les besoins fréquents de **largeur relative, image adaptable et centrage**. `px`, `%`, `max-width`, `height: auto`, `text-align: center` et `margin: 0 auto` sont distingués par leur rôle. Aucune valeur précise comme `80%` ou `900px` ne doit devenir une exigence mécanique de WEB-08.
 
 ## Rencontre 5 — Flexbox simple et intégration
 
@@ -270,7 +274,7 @@ Les huit compétences sont documentées dans [COMPETENCES_HTML_CSS.md](./COMPETE
 | **A** | R2 | WEB-01, WEB-02 | fichiers/dossiers, chemins, structure complète, imbrication | ✅ R1–R2 |
 | **B** | R2 → début R3 | WEB-03, WEB-04 | titres, paragraphes, listes, images, liens, navigation | ✅ R1–R2 |
 | **C** | R3–R4 | WEB-05, WEB-06 | feuille CSS externe, chemins CSS, sélecteurs, classes | ✅ R3 |
-| **D** | R4–R5 | WEB-07, WEB-08 | mise en forme simple, boîte, espacements, Flexbox simple | ✅ R3–R5 |
+| **D** | R4–R5 | WEB-07, WEB-08 | mise en forme simple, boîte, espacements, dimensions relatives, centrage, Flexbox simple | ✅ R3–R5 |
 
 ### Règle d'évaluation à conserver
 
@@ -306,6 +310,8 @@ Les encadrés « Pour aller plus loin » sont explicitement exclus de l'examen.
 | basse | R1 | commentaire HTML présent dans le gabarit du Projet Web avant explication | commentaire expliqué et pratiqué en R1 avant le Projet Web | ✅ corrigé |
 | basse | Préambule R1 | ouverture de la page et actualisation annoncées sans procédure concrète | procédure VS Code → navigateur + `Ctrl+S` / `Ctrl+R` / `F5` ajoutée | ✅ corrigé |
 | basse | R5 | `background-image` existait dans l'aide-mémoire sans être enseigné dans une rencontre | notion enseignée et pratiquée en R5, puis réinvestie dans le Projet Web | ✅ corrigé |
+| basse | R4 | `text-align: center` et `justify-content: center` existaient, mais le centrage d'une boîte n'était pas expliqué | `margin: 0 auto` et la distinction entre les trois types de centrage sont enseignés et pratiqués | ✅ corrigé |
+| basse | R4 | l'aperçu du Projet Web utilisait `max-width: 100%` sur les images sans enseignement explicite des dimensions CSS relatives | `%`, `max-width: 100%` et `height: auto` sont enseignés, pratiqués puis réinvestis | ✅ corrigé |
 
 # Processus de validation d'une rencontre
 
