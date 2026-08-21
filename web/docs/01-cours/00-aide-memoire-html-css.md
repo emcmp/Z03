@@ -354,8 +354,11 @@ mon-site/
 Dans `css/styles.css` :
 
 ```css
-body {
+.banniere {
   background-image: url("../images/paysage.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 48px 20px;
 }
 ```
 
@@ -372,30 +375,25 @@ css/styles.css
 Dans une règle écrite dans `css/styles.css`, le chemin vers une image est calculé **à partir du dossier `css`**, pas à partir de `index.html`.
 :::
 
-### Couvrir le fond de la page et centrer l'image
-
-```css
-body {
-  min-height: 100vh;
-  background-color: #dbeafe;
-  background-image: url("../images/paysage.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-```
-
 | Propriété | Effet |
 |---|---|
-| `background-color` | Donne une couleur de fond. |
 | `background-image` | Utilise une image comme arrière-plan. |
-| `background-size: cover` | Agrandit l'image pour couvrir toute la zone. |
+| `background-size: cover` | Agrandit l'image pour couvrir la zone disponible. |
 | `background-position: center` | Garde le centre de l'image au centre. |
-| `background-repeat: no-repeat` | Empêche l'image de se répéter. |
-| `min-height: 100vh` | Permet au `body` d'occuper au moins toute la hauteur de l'écran. |
+| `padding` | Donne de la hauteur et de l'espace intérieur à la bannière. |
 
-:::note Référence pratique
-Une image de fond peut être utile dans un projet, mais l'objectif reste de comprendre le chemin et les propriétés utilisées. Elle ne constitue pas à elle seule une exigence de validation.
+:::tip Image de contenu ou image de fond?
+Une image importante pour comprendre la page devrait normalement rester un `<img>` avec un `alt`. `background-image` convient surtout à une image décorative ou à une ambiance visuelle.
+:::
+
+:::note Au besoin — non évalué séparément
+Vous pouvez aussi rencontrer :
+
+```css
+background-repeat: no-repeat;
+```
+
+Cette propriété empêche une image de fond de se répéter. Elle n'est pas une exigence mécanique de la Validation D.
 :::
 
 ## Modèle en boîte
