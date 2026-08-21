@@ -11,6 +11,8 @@ import r2MiniSiteHtml from '!!raw-loader!../../static/examples/rencontre2/exerci
 
 La difficulté principale de la rencontre est de comprendre **où se trouvent les fichiers les uns par rapport aux autres**. Cette idée servira aujourd'hui pour les images et les liens, puis à la rencontre 3 pour relier vos pages à une feuille CSS.
 
+<TopicBadges topics={["html", "paths", "test"]} />
+
 ## Objectifs de la rencontre
 
 À la fin de la rencontre, vous devriez être capable de :
@@ -183,6 +185,10 @@ pages/apropos.html
 → images/          entrer dans images
 → chat.jpg         atteindre le fichier
 ```
+
+<KeyPoint type="method" title="Toujours partir du fichier actuel">
+Un chemin relatif se lit comme un trajet. Commencez à l'emplacement du fichier HTML où le code est écrit, puis suivez les dossiers jusqu'à la destination.
+</KeyPoint>
 
 :::warning Le chemin dépend du fichier actuel
 Le même fichier image peut avoir deux chemins différents selon la page qui l'utilise.
