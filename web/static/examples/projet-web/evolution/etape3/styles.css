@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #263238;
+  background-color: #f7fbf5;
+}
+
+h1 {
+  color: #2f6b45;
+  text-align: center;
+}
+
+h2 {
+  color: #477a58;
+}
+
+nav a {
+  color: #245a86;
+}
+
+img {
+  max-width: 100%;
+}
+
+.mise-en-valeur {
+  color: #6a3b12;
+  background-color: #fff4d8;
+  font-weight: bold;
+  border: 2px solid #c88b3a;
+}
