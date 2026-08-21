@@ -180,7 +180,14 @@ p {
 }
 ```
 
+```text
+classe → rôle réutilisable → .nom-de-classe
+id     → élément unique    → #nom-identifiant
+```
+
 Une classe peut être réutilisée. Un `id` doit être unique dans la page.
+
+Dans le Projet Web, au moins un élément doit posséder un `id` unique ciblé par une règle `#id` correspondante.
 
 ## Propriétés visuelles courantes
 
