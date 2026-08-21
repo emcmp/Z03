@@ -1,6 +1,6 @@
 ---
 title: Étape 4 - Auditer les blocs et les espacements
-description: Analyser les vrais contenus du site et utiliser le modèle en boîte pour améliorer leur lisibilité.
+description: Analyser les vrais contenus des quatre pages et utiliser le modèle en boîte pour améliorer leur lisibilité.
 sidebar_position: 5
 ---
 
@@ -10,7 +10,7 @@ sidebar_position: 5
 
 ## Mission
 
-Faites un audit de vos trois pages et corrigez les problèmes réels d'espace intérieur, d'espace extérieur et de regroupement visuel.
+Faites un audit de vos quatre pages et corrigez les problèmes réels d'espace intérieur, d'espace extérieur et de regroupement visuel.
 
 Avant de commencer :
 
@@ -27,7 +27,8 @@ Choisissez au moins deux contenus qui jouent le même rôle, par exemple :
 - deux résumés de films;
 - deux recettes;
 - deux informations importantes;
-- deux sections présentant des sous-thèmes.
+- deux sections présentant des sujets;
+- un groupe de services ou d'intérêts dans la page À propos.
 
 Utilisez ou créez une classe commune pour ces blocs.
 
@@ -65,17 +66,18 @@ Selon votre sujet, utilisez au moins une propriété visuelle qui rend le regrou
 
 La bordure n'est pas obligatoire sur tous les blocs. Elle doit répondre à un besoin de lisibilité.
 
-## 5. Vérifier les trois pages
+## 5. Vérifier les quatre pages
 
 Ne corrigez pas seulement la page d'accueil.
 
-Parcourez les trois pages et cherchez :
+Parcourez l'accueil, les deux pages de sujet et la page À propos. Cherchez :
 
 - un texte collé à une bordure ou à un fond;
 - deux sections trop proches;
 - des blocs semblables qui utilisent des espacements différents sans raison;
 - une classe répétée sous plusieurs noms;
-- une largeur qui rend un texte difficile à lire.
+- une largeur qui rend un texte difficile à lire;
+- une page À propos qui semble visuellement détachée du reste du site.
 
 Une limite comme `max-width` peut être utilisée si elle résout un vrai problème, mais elle n'est pas obligatoire.
 
@@ -87,7 +89,7 @@ Votre site doit montrer :
 - un `padding` utilisé pour créer un espace intérieur;
 - un `margin` utilisé pour créer un espace extérieur;
 - une bordure ou un arrière-plan utilisé volontairement;
-- des valeurs cohérentes entre les pages;
+- des valeurs cohérentes entre les quatre pages;
 - une explication claire de la différence entre `padding` et `margin`.
 
 ## Décisions à prendre
@@ -97,10 +99,11 @@ Votre site doit montrer :
 - Une bordure aide-t-elle à comprendre le groupe?
 - Une classe existante peut-elle être réutilisée?
 - Les espacements sont-ils cohérents sans rendre toutes les pages identiques?
+- Un bloc de la page À propos mérite-t-il un traitement adapté?
 
 ## Tests à effectuer
 
-- [ ] Les trois pages chargent toujours la même feuille CSS.
+- [ ] Les quatre pages chargent toujours la même feuille CSS.
 - [ ] Je peux nommer contenu, `padding`, `border` et `margin`.
 - [ ] Je peux montrer un espace intérieur créé par `padding`.
 - [ ] Je peux montrer un espace extérieur créé par `margin`.
@@ -108,6 +111,7 @@ Votre site doit montrer :
 - [ ] Les valeurs choisies améliorent réellement la lisibilité.
 - [ ] Je n'ai pas ajouté des dimensions fixes partout sans raison.
 - [ ] La navigation et les images fonctionnent toujours.
+- [ ] La page À propos appartient visuellement au même site.
 
 ## Validations disponibles
 
@@ -123,12 +127,14 @@ Vous pouvez aussi commencer la Validation D :
 
 À cette rencontre, WEB-08 est surtout observée à travers le modèle en boîte. Flexbox sera ajouté à la rencontre 5.
 
-:::note Pour aller plus loin — non évalué
-Vous pouvez expérimenter avec `border-radius` ou lire à propos de `box-sizing: border-box`.
+Le soin apporté aux blocs réels du site contribue également à la dimension **Personnalisation et appropriation du projet**.
 
-Ces propriétés ne sont pas nécessaires pour réussir la validation.
+:::note Pour aller plus loin — non évalué séparément
+Vous pouvez expérimenter avec `border-radius`, enrichir un bloc de la page À propos ou lire à propos de `box-sizing: border-box`.
+
+Ces propriétés ne sont pas nécessaires pour réussir la validation technique.
 :::
 
 ## Prochaine étape
 
-À la rencontre 5, vous utiliserez Flexbox dans un besoin concret et ferez une dernière passe de correction sur l'ensemble du site.
+À la rencontre 5, vous utiliserez Flexbox dans un besoin concret et ferez une dernière passe de correction et de personnalisation sur l'ensemble du site.
