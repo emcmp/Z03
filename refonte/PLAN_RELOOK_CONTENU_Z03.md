@@ -1,6 +1,6 @@
 # Plan — relief visuel du contenu et personnalité du Projet Web
 
-**Statut : actif**  
+**Statut : prêt à réviser**  
 **Branche : `agent/visual-polish-project-web`**  
 **Date : 2026-08-20**
 
@@ -24,48 +24,50 @@ Principe directeur : **un élément visuel doit aider à repérer, comprendre, m
 
 ## Passe 1 — vocabulaire visuel commun
 
-**État : En cours**
+**État : Terminé**
 
-Créer un petit système réutilisable :
+Système réutilisable ajouté :
 
 - `TopicBadges` : pastilles compactes à sémantique stable (HTML, CSS, chemins, test, Flexbox, validation, optionnel, etc.);
 - `KeyPoint` : micro-rappel plus léger qu'une admonition pour une idée à retenir ou une méthode;
 - `ProjectStepHero` : bandeau spécifique au Projet Web avec numéro d'étape, progression 1 → 5, mission, résultat attendu et notions mobilisées;
-- légère finition des admonitions existantes afin de mieux les distinguer sans augmenter leur fréquence.
+- `ProjectJourney` : parcours visuel des cinq étapes sur la page Présentation.
+
+Décision après audit : les admonitions existantes sont déjà suffisamment présentes et distinctes. Elles ne sont **pas** restylées ni multipliées dans cette passe afin de préserver leur valeur sémantique.
 
 ## Passe 2 — application mesurée aux cours R1–R2
 
-**État : À faire**
+**État : Terminé**
 
-Ajouter les nouveaux repères seulement aux endroits où ils accélèrent la lecture :
+Application volontairement légère :
 
-- structure HTML et contenu en R1;
-- images, chemins relatifs et navigation en R2;
-- quelques rappels « à tester » / « réflexe »;
-- éviter d'ajouter des badges à chaque section ou chaque bloc de code.
+- R1 : repères `HTML`, `Structure`, `Contenu` au début du cours;
+- R1 : micro-rappel sur la lecture d'un élément HTML complet;
+- R2 : repères `HTML`, `Chemins`, `À tester` au début du cours;
+- R2 : micro-rappel sur la lecture d'un chemin relatif depuis le fichier actuel.
 
-Définition de terminé : la page gagne en rythme visuel sans que les nouveaux éléments deviennent le contenu dominant.
+Aucun badge n'a été ajouté à chaque section. Les admonitions et les 👁 existants restent les principaux repères locaux lorsque leur fonction est déjà claire.
 
 ## Passe 3 — personnalité du Projet Web R1–R5
 
-**État : À faire**
+**État : Prêt à réviser**
 
-Donner au Projet Web une identité propre et une vraie sensation de progression :
+Implémentation réalisée :
 
-- enrichir la page Présentation;
-- ajouter un `ProjectStepHero` au début de chacune des étapes 1 à 5;
-- afficher clairement « Étape N sur 5 » et la progression globale;
-- formuler une petite mission pour chaque étape;
-- montrer ce que le site possédera à la fin de l'étape;
-- afficher quelques badges de notions sans faire une liste exhaustive;
-- conserver les grands aperçus évolutifs déjà présents en R3–R5;
-- rendre la transition vers l'étape suivante plus motivante et plus lisible.
+- page Présentation enrichie avec un parcours visuel **Construire → Relier → Habiller → Faire respirer → Organiser**;
+- ajout d'un `ProjectStepHero` au début de chacune des étapes 1 à 5;
+- affichage clair de « Étape N sur 5 » et de la progression globale;
+- mission courte pour chaque étape;
+- résultat concret attendu à la fin de chaque étape;
+- quelques badges de notions intégrés au bandeau;
+- grands aperçus évolutifs R3–R5 conservés;
+- aucune nouvelle compétence ou exigence évaluée ajoutée.
 
 ## Validation
 
-**État : À faire**
+**État : Bloqué dans l'environnement de l'agent — à vérifier localement**
 
-Avant fusion :
+À faire avant fusion :
 
 - `npm run build`;
 - contrôle visuel sur R1, R2 et Projet Web 00–05;
@@ -73,6 +75,8 @@ Avant fusion :
 - contrôle rapide des styles Campus, Transit et Studio;
 - contrôle mobile / largeur étroite;
 - vérifier que les admonitions, badges, 👁 et grands `ExampleFrame` ne se concurrencent pas visuellement.
+
+L'environnement de l'agent ne peut actuellement pas résoudre `github.com`, ce qui empêche de cloner la branche et d'exécuter le build localement. Le workflow GitHub existant ne construit automatiquement que `main`, et son déclenchement manuel lancerait aussi le déploiement; il n'est donc pas utilisé pour cette validation de branche.
 
 ## Définition globale de terminé
 
