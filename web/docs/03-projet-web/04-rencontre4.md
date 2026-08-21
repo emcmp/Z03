@@ -6,6 +6,8 @@ sidebar_position: 5
 
 # Projet Web — Étape 4
 
+<ProjectStepHero step={4} />
+
 Votre site possède maintenant une feuille `css/styles.css` partagée par plusieurs pages. À cette étape, vous allez améliorer la **lisibilité et les espacements** sans changer de projet et sans recommencer votre design.
 
 Avant de commencer :
