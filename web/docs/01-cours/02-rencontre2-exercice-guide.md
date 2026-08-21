@@ -85,6 +85,30 @@ chat.jpg
 Dans un chemin relatif, le point de départ est le fichier qui contient le code, et non automatiquement la racine du projet.
 :::
 
+### Ajuster les dimensions de l'image
+
+Ajoutez maintenant une largeur simple :
+
+```html
+<img src="images/chat.jpg" alt="Un chat" width="300">
+```
+
+La valeur `300` représente 300 pixels. Le navigateur conserve l'autre dimension à partir des proportions de l'image.
+
+Vous pouvez aussi rencontrer les deux dimensions ensemble :
+
+```html
+<img src="images/chat.jpg" alt="Un chat" width="300" height="200">
+```
+
+`width` contrôle la largeur et `height` contrôle la hauteur.
+
+:::warning Vérifiez les proportions
+Essayez brièvement une hauteur qui ne correspond pas bien à l'image et observez la déformation, puis retirez-la ou corrigez-la. Si vous utilisez `width` et `height` ensemble, les deux valeurs doivent respecter les proportions de l'image.
+:::
+
+Pour la suite de l'exercice, vous pouvez conserver seulement `width="300"` si vous n'avez pas besoin de fixer précisément la hauteur.
+
 ## 4. Créer une deuxième page dans un sous-dossier
 
 Dans `pages/infos.html`, créez une deuxième page complète :
@@ -119,7 +143,7 @@ L'image ne devrait pas apparaître. Depuis `pages/infos.html`, il n'existe pas d
 Pour atteindre le véritable dossier `images`, il faut d'abord remonter au dossier parent avec `../` :
 
 ```html
-<img src="../images/chat.jpg" alt="Un chat">
+<img src="../images/chat.jpg" alt="Un chat" width="300">
 ```
 
 Le trajet devient :
@@ -157,6 +181,27 @@ Depuis `index.html`, le deuxième lien entre dans le dossier `pages` pour attein
 
 Cliquez sur le lien **Informations** pour vérifier qu'il fonctionne.
 
+### Ajouter un lien vers une section de la même page
+
+Ajoutez ensuite une petite section à la page d'accueil :
+
+```html
+<h2 id="details">Détails</h2>
+<p>Cette section se trouve plus bas dans la page d'accueil.</p>
+```
+
+Puis ajoutez un lien vers cette section dans la navigation de `index.html` :
+
+```html
+<a href="#details">Détails</a>
+```
+
+Cliquez sur **Détails**. Le navigateur reste sur la même page et se déplace vers l'élément dont `id="details"`.
+
+:::info À maîtriser
+Dans `href="#details"`, le `#` indique une cible dans la page actuelle. Le texte `details` doit correspondre exactement à la valeur de `id`.
+:::
+
 ## 7. Créer le chemin de retour
 
 Dans `pages/infos.html`, ajoutez aussi une navigation :
@@ -176,7 +221,7 @@ Le lien vers `infos.html` n'a pas besoin de dossier dans son chemin, puisque le 
 `<nav>` est un bon élément pour regrouper les liens de navigation importants d'un site. Nous l'utiliserons dans nos exemples, sans en faire une compétence évaluée séparément.
 :::
 
-Voici le résultat final du mini-site. Utilisez les liens dans le faux navigateur pour faire l'aller-retour entre les deux pages :
+Voici le résultat final du mini-site. Utilisez les liens dans le faux navigateur pour faire l'aller-retour entre les deux pages et tester le lien **Détails** de la page d'accueil :
 
 <ExampleFrame
   src="examples/rencontre2/exercice-final/preview.html"
@@ -190,10 +235,11 @@ Voici le résultat final du mini-site. Utilisez les liens dans le faux navigateu
 Testez maintenant les deux pages dans les deux directions :
 
 1. ouvrez `index.html`;
-2. cliquez sur **Informations**;
-3. vérifiez l'image;
-4. cliquez sur **Accueil**;
-5. recommencez le trajet une deuxième fois.
+2. cliquez sur **Détails** et vérifiez que vous restez dans la page d'accueil;
+3. cliquez sur **Informations**;
+4. vérifiez l'image;
+5. cliquez sur **Accueil**;
+6. recommencez le trajet une deuxième fois.
 
 Ensuite, provoquez volontairement une erreur dans `infos.html` :
 
@@ -226,7 +272,9 @@ Vérifiez que vous êtes capable de :
 - [ ] utiliser `images/chat.jpg` depuis `index.html`;
 - [ ] utiliser `../images/chat.jpg` depuis `pages/infos.html`;
 - [ ] expliquer ce que signifie `../`;
+- [ ] reconnaître `width` et `height` dans un élément `<img>` et éviter de déformer volontairement une image;
 - [ ] créer un lien avec `<a href="...">`;
+- [ ] créer un lien vers une section de la même page avec `href="#..."` et `id="..."`;
 - [ ] passer de `index.html` à une page dans `pages/`;
 - [ ] revenir d'une page dans `pages/` vers `index.html`;
 - [ ] repérer un chemin incorrect à l'aide de l'arborescence du projet.
