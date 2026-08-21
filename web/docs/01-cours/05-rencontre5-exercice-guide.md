@@ -1,6 +1,6 @@
 ---
 title: Exercice guidé - Flexbox simple
-description: Organiser une navigation et un groupe de cartes avec display flex et gap.
+description: Organiser une navigation et un groupe de cartes avec display flex et gap, puis réinvestir les chemins avec une image de fond CSS.
 ---
 
 # Exercice guidé — Flexbox simple
@@ -10,7 +10,9 @@ Dans cet exercice, vous allez utiliser Flexbox dans deux situations très concr�
 1. une navigation horizontale;
 2. un petit groupe de cartes.
 
-Le modèle mental principal est simple :
+Vous allez ensuite réinvestir les chemins relatifs en ajoutant une petite **image d'arrière-plan CSS**.
+
+Le modèle mental principal de Flexbox est simple :
 
 > On applique `display: flex` au **parent** pour organiser ses **enfants directs**.
 
@@ -21,9 +23,17 @@ Créez :
 ```text
 exercice-rencontre5/
 ├── index.html
-└── css/
-    └── styles.css
+├── css/
+│   └── styles.css
+└── images/
+    └── sentier.svg
 ```
+
+:::info 📥 Image pour l'exercice
+**[Télécharger `sentier.svg`](pathname:///examples/projet-web/evolution/etape5/images/sentier.svg)**
+
+Enregistrez le fichier dans le dossier `images` de l'exercice en gardant le nom `sentier.svg`.
+:::
 
 Dans `index.html` :
 
@@ -37,7 +47,7 @@ Dans `index.html` :
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <header>
+    <header class="banniere">
       <h1>Club découverte</h1>
     </header>
 
@@ -272,14 +282,58 @@ Les cartes utilisent encore :
 
 Le parent `.cartes` gère leur disposition, tandis que chaque `.carte` conserve son propre modèle en boîte.
 
-## 9. Petite personnalisation
+## 9. Ajouter une image d'arrière-plan
+
+Le fichier `sentier.svg` se trouve maintenant dans `images/`, mais la règle CSS sera écrite dans `css/styles.css`.
+
+Ajoutez :
+
+```css
+.banniere {
+  background-image: url("../images/sentier.svg");
+  background-size: cover;
+  background-position: center;
+  padding: 48px 20px;
+}
+```
+
+Enregistrez et actualisez le navigateur.
+
+Pourquoi faut-il écrire `../images/sentier.svg` plutôt que `images/sentier.svg`?
+
+```text
+css/styles.css
+→ ../        remonter dans exercice-rencontre5
+→ images/    entrer dans images
+→ sentier.svg
+```
+
+:::info À maîtriser
+Dans `url(...)`, le chemin est calculé à partir du **fichier CSS qui contient la règle**.
+
+Le point de départ est donc ici `css/styles.css`, et non `index.html`.
+:::
+
+Observez aussi le rôle de :
+
+- `background-size: cover` : l'image couvre la zone;
+- `background-position: center` : le centre de l'image reste au centre de la zone.
+
+:::tip Image de contenu ou image de fond?
+Si l'image transmet une information importante, utilisez plutôt un vrai `<img>` avec un `alt`.
+
+Ici, l'illustration sert surtout d'arrière-plan décoratif à la bannière.
+:::
+
+## 10. Petite personnalisation
 
 Sans ajouter de nouvelle propriété obligatoire :
 
 - ajustez le `gap` de la navigation;
 - ajustez le `gap` entre les cartes;
 - choisissez une valeur de `justify-content` pour la navigation;
-- choisissez une valeur de `align-items` pour le groupe de cartes si elle est utile.
+- choisissez une valeur de `align-items` pour le groupe de cartes si elle est utile;
+- essayez une autre valeur de `background-position` si vous voulez observer comment l'image se déplace dans la bannière.
 
 Expliquez votre choix avant de modifier les valeurs au hasard.
 
@@ -292,7 +346,9 @@ Expliquez votre choix avant de modifier les valeurs au hasard.
 - [ ] je comprends l'effet général de `justify-content`;
 - [ ] je comprends l'effet général de `align-items`;
 - [ ] je peux diagnostiquer une règle Flexbox appliquée au mauvais élément;
-- [ ] je comprends que le modèle en boîte continue de s'appliquer aux éléments flex.
+- [ ] je comprends que le modèle en boîte continue de s'appliquer aux éléments flex;
+- [ ] je sais ajouter une image de fond avec `background-image`;
+- [ ] je peux expliquer pourquoi `url("../images/sentier.svg")` part du fichier `styles.css`.
 
 :::note Pour aller plus loin — non évalué
 Sur un petit écran, vous pourriez rencontrer :
