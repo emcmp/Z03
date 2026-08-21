@@ -17,11 +17,12 @@ La difficulté principale de la rencontre est de comprendre **où se trouvent le
 
 - organiser les pages et les ressources dans des dossiers;
 - ajouter une image locale avec `<img>`;
-- utiliser `src` et `alt`;
+- utiliser `src`, `alt`, `width` et `height` dans une image;
 - lire une petite arborescence de fichiers;
 - construire un chemin relatif vers un fichier du même dossier ou d'un sous-dossier;
 - utiliser `../` pour remonter vers un dossier parent;
 - créer un lien avec `<a>` et `href`;
+- créer un lien vers une section de la même page avec `id` et `#`;
 - relier plusieurs pages HTML entre elles;
 - construire une navigation qui fonctionne depuis différentes pages;
 - diagnostiquer un lien ou une image qui ne fonctionne pas.
@@ -63,7 +64,7 @@ L'élément `<img>` permet d'afficher une image dans une page.
 <img src="images/chat.jpg" alt="Un chat blanc assis devant une fenêtre">
 ```
 
-Deux attributs sont particulièrement importants.
+Plusieurs attributs peuvent préciser comment l'image est utilisée.
 
 ### `src`
 
@@ -85,6 +86,36 @@ alt="Un chat blanc assis devant une fenêtre"
 
 :::tip Bonne pratique — texte alternatif
 Un bon texte alternatif transmet l'information utile de l'image. Un texte comme `chat.jpg` ou `image123` ne décrit pas réellement le contenu.
+:::
+
+### `width` et `height`
+
+Les attributs `width` et `height` permettent d'indiquer les dimensions affichées de l'image directement dans HTML.
+
+```html
+<img
+  src="images/paysage.jpg"
+  alt="Un paysage de montagne"
+  width="600"
+  height="400"
+>
+```
+
+Dans ces attributs HTML, les nombres correspondent à des **pixels**. On écrit donc `width="600"`, et non `width="600px"`.
+
+```text
+width  → largeur
+height → hauteur
+```
+
+:::warning Respectez les proportions de l'image
+Si vous indiquez à la fois `width` et `height`, les deux valeurs doivent respecter les proportions de l'image. Sinon, elle semblera étirée ou écrasée.
+
+Si vous ne connaissez pas les bonnes proportions, vous pouvez commencer par indiquer seulement une dimension et laisser le navigateur conserver l'autre à partir de l'image originale.
+:::
+
+:::info HTML aujourd'hui, CSS plus tard
+À cette rencontre, nous utilisons les attributs HTML `width` et `height` pour comprendre et contrôler simplement les dimensions d'une image. CSS offrira ensuite d'autres façons de contrôler la taille et la présentation des éléments.
 :::
 
 ## 3. Comprendre les chemins relatifs
@@ -219,6 +250,34 @@ Depuis `pages/apropos.html`, le lien de retour devient :
 <a href="../index.html">Accueil</a>
 ```
 
+### Lien vers une section de la même page
+
+Un lien peut aussi déplacer la personne vers un endroit précis **dans la page actuelle**.
+
+On commence par donner un identifiant à l'élément de destination :
+
+```html
+<h2 id="contact">Contact</h2>
+```
+
+Puis on crée un lien dont le `href` contient `#` suivi du même identifiant :
+
+```html
+<a href="#contact">Aller à la section Contact</a>
+```
+
+On peut lire le lien ainsi :
+
+```text
+#contact → trouver dans cette page l'élément dont id="contact"
+```
+
+:::info À maîtriser
+La valeur après `#` doit correspondre exactement à la valeur de `id`.
+
+Un `id` sert à identifier un élément particulier dans une page et doit être unique dans cette page.
+:::
+
 ### Lien vers un autre site
 
 Un lien peut aussi utiliser une adresse complète :
@@ -268,6 +327,8 @@ Pourquoi?
 - `../index.html` remonte vers le dossier parent;
 - `sujet.html` est dans le même dossier que la page actuelle;
 - `apropos.html` est aussi dans le même dossier.
+
+Un lien interne comme `href="#contact"` peut aussi faire partie d'une navigation lorsqu'une page contient plusieurs sections importantes.
 
 Voici un petit site complet où vous pouvez cliquer sur **Informations**, observer l'image, puis revenir à l'accueil :
 
@@ -399,7 +460,7 @@ Vous appliquerez ensuite les mêmes principes à votre propre site :
 La validation B peut se poursuivre au début de la rencontre 3 au besoin.
 
 :::info À maîtriser
-La validation porte sur votre capacité à **comprendre, expliquer et modifier** votre code. Elle ne consiste pas à compter un nombre précis d'images, de liens, de listes ou de balises.
+La validation porte sur votre capacité à **comprendre, expliquer et modifier** votre code. Elle ne consiste pas à compter un nombre précis d'images, de liens, de listes, de dimensions ou de balises.
 :::
 
 :::note Pour aller plus loin — non évalué
