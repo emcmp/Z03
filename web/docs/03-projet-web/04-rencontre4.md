@@ -1,6 +1,6 @@
 ---
-title: Étape 4 - Organiser les blocs et les espacements
-description: Utiliser le modèle en boîte, padding, margin et bordures pour améliorer la lisibilité du site.
+title: Étape 4 - Auditer les blocs et les espacements
+description: Analyser les vrais contenus des quatre pages et utiliser le modèle en boîte pour améliorer leur lisibilité.
 sidebar_position: 5
 ---
 
@@ -8,260 +8,133 @@ sidebar_position: 5
 
 <ProjectStepHero step={4} />
 
-Votre site possède maintenant une feuille `css/styles.css` partagée par plusieurs pages. À cette étape, vous allez améliorer la **lisibilité et les espacements** sans changer de projet et sans recommencer votre design.
+## Mission
+
+Faites un audit de vos quatre pages et corrigez les problèmes réels d'espace intérieur, d'espace extérieur et de regroupement visuel.
 
 Avant de commencer :
 
 - consultez le **[cours de la rencontre 4](../01-cours/04-rencontre4.md)**;
 - faites l'**[exercice guidé — Comprendre le modèle en boîte](../01-cours/04-rencontre4-exercice-guide.md)**.
 
-## 1. Reprendre le même site et la même feuille CSS
+L'exercice utilise des cartes communes pour isoler le modèle en boîte. Dans votre Projet Web, vous devez appliquer ces notions à des blocs qui ont un vrai rôle dans votre contenu.
 
-Votre structure ressemble toujours à ceci :
+## 1. Repérer deux blocs comparables
+
+Choisissez au moins deux contenus qui jouent le même rôle, par exemple :
+
+- deux fiches de joueurs;
+- deux résumés de films;
+- deux recettes;
+- deux informations importantes;
+- deux sections présentant des sujets;
+- un groupe de services ou d'intérêts dans la page À propos.
+
+Utilisez ou créez une classe commune pour ces blocs.
+
+:::info Réutiliser plutôt que dupliquer
+Si deux blocs jouent le même rôle, ils devraient généralement partager une classe au lieu de recevoir deux règles presque identiques.
+:::
+
+## 2. Corriger l'espace intérieur
+
+Ajoutez un `padding` lorsque le contenu est trop près de sa bordure ou de son arrière-plan.
+
+Vous devez pouvoir montrer un bloc et expliquer :
 
 ```text
-mon-site/
-├── index.html
-├── css/
-│   └── styles.css
-├── images/
-│   └── ...
-└── pages/
-    └── sujet.html
+Le padding crée ici l'espace entre le contenu et la bordure.
 ```
 
-Si votre site contient une ou plusieurs pages secondaires supplémentaires, conservez-les. Le minimum exigé reste une page sous `pages/`.
+## 3. Corriger l'espace extérieur
 
-Ne créez pas une deuxième feuille CSS pour cette rencontre.
+Utilisez `margin` lorsqu'un bloc est trop près de ses voisins.
 
-Tout le travail se poursuit dans le même `styles.css`.
-
-## 2. Choisir un bloc qui mérite plus d'espace intérieur
-
-Repérez un élément important de votre page, par exemple :
-
-- un `header`;
-- une `section`;
-- une information mise en valeur;
-- un groupe de contenu qui forme une petite carte.
-
-Ajoutez ou réutilisez une classe claire.
-
-Par exemple :
-
-```html
-<section class="carte">
-  <h2>Mon sujet</h2>
-  <p>Une courte présentation de cette partie du site.</p>
-</section>
-```
-
-Puis dans CSS :
-
-```css
-.carte {
-  background-color: #eaf3ff;
-  border: 2px solid #245a86;
-  padding: 20px;
-}
-```
-
-Le `padding` crée maintenant de l'espace **entre le contenu et la bordure**.
-
-:::info À maîtriser
-Vous devez pouvoir expliquer pourquoi vous utilisez `padding` plutôt que `margin` dans cette situation.
-:::
-
-## 3. Créer de l'espace entre les blocs
-
-Si plusieurs éléments sont trop collés entre eux, ajoutez de l'espace extérieur.
-
-Par exemple :
-
-```css
-.carte {
-  background-color: #eaf3ff;
-  border: 2px solid #245a86;
-  padding: 20px;
-  margin: 20px 0;
-}
-```
-
-Ici :
+Vous devez pouvoir montrer deux éléments et expliquer :
 
 ```text
-20px → haut et bas
-0    → gauche et droite
+La margin sépare ici les boîtes l'une de l'autre.
 ```
 
-Vous n'avez pas besoin d'utiliser cette valeur exacte. Choisissez un espacement cohérent avec votre site.
+## 4. Rendre les limites visibles lorsque cela aide
 
-## 4. Réutiliser une classe au lieu de recopier les mêmes règles
+Selon votre sujet, utilisez au moins une propriété visuelle qui rend le regroupement compréhensible :
 
-Si plusieurs sections jouent le même rôle visuel, la même classe peut être utilisée :
+- `border`;
+- `background-color`;
+- ou les deux.
 
-```html
-<section class="carte">...</section>
-<section class="carte">...</section>
-```
+La bordure n'est pas obligatoire sur tous les blocs. Elle doit répondre à un besoin de lisibilité.
 
-Les deux blocs reçoivent alors le même :
+## 5. Vérifier les quatre pages
 
-```text
-background-color
-border
-padding
-margin
-```
+Ne corrigez pas seulement la page d'accueil.
 
-:::tip Bonne pratique
-Une classe doit représenter une intention ou un rôle réutilisable. Évitez de créer une nouvelle classe pour chaque élément simplement parce que vous le pouvez.
-:::
+Parcourez l'accueil, les deux pages de sujet et la page À propos. Cherchez :
 
-## 5. Utiliser `<div>` seulement lorsqu'il est utile
+- un texte collé à une bordure ou à un fond;
+- deux sections trop proches;
+- des blocs semblables qui utilisent des espacements différents sans raison;
+- une classe répétée sous plusieurs noms;
+- une largeur qui rend un texte difficile à lire;
+- une page À propos qui semble visuellement détachée du reste du site.
 
-Un élément comme `<section>`, `<header>`, `<nav>` ou `<main>` est préférable lorsqu'il décrit bien le rôle du contenu.
+Une limite comme `max-width` peut être utilisée si elle résout un vrai problème, mais elle n'est pas obligatoire.
 
-Si aucun élément plus précis ne convient, vous pouvez utiliser un conteneur général :
+## Minimum attendu
 
-```html
-<div class="carte">
-  <h2>À retenir</h2>
-  <p>Ce groupe n'a pas besoin d'une signification HTML plus précise.</p>
-</div>
-```
+Votre site doit montrer :
 
-Le `<div>` ne possède pas d'apparence spéciale par lui-même. C'est votre CSS qui lui donne son style.
+- au moins une classe appliquée à deux blocs comparables;
+- un `padding` utilisé pour créer un espace intérieur;
+- un `margin` utilisé pour créer un espace extérieur;
+- une bordure ou un arrière-plan utilisé volontairement;
+- des valeurs cohérentes entre les quatre pages;
+- une explication claire de la différence entre `padding` et `margin`.
 
-:::tip Bonne pratique
-Ne remplacez pas tous vos éléments HTML par des `<div>`. Utilisez-les comme conteneurs généraux lorsqu'ils sont réellement nécessaires.
-:::
+## Décisions à prendre
 
-## 6. Ajuster une dimension seulement si elle résout un problème
+- Quels contenus forment un même type de bloc?
+- Où se trouve réellement le problème d'espace?
+- Une bordure aide-t-elle à comprendre le groupe?
+- Une classe existante peut-elle être réutilisée?
+- Les espacements sont-ils cohérents sans rendre toutes les pages identiques?
+- Un bloc de la page À propos mérite-t-il un traitement adapté?
 
-Certaines pages deviennent difficiles à lire lorsque le contenu s'étend beaucoup sur un grand écran.
+## Tests à effectuer
 
-Vous pouvez expérimenter avec une limite simple :
+- [ ] Les quatre pages chargent toujours la même feuille CSS.
+- [ ] Je peux nommer contenu, `padding`, `border` et `margin`.
+- [ ] Je peux montrer un espace intérieur créé par `padding`.
+- [ ] Je peux montrer un espace extérieur créé par `margin`.
+- [ ] Deux blocs comparables partagent une classe.
+- [ ] Les valeurs choisies améliorent réellement la lisibilité.
+- [ ] Je n'ai pas ajouté des dimensions fixes partout sans raison.
+- [ ] La navigation et les images fonctionnent toujours.
+- [ ] La page À propos appartient visuellement au même site.
 
-```css
-main {
-  max-width: 900px;
-}
-```
+## Validations disponibles
 
-Cette propriété indique une largeur maximale, sans obliger le contenu à toujours avoir cette largeur.
+Vous pouvez poursuivre la Validation C :
 
-Ce réglage n'est pas obligatoire si votre site n'en a pas besoin.
+- 🔌 **WEB-05**;
+- 🎯 **WEB-06**.
 
-:::warning Ne forcez pas les dimensions partout
-Évitez d'ajouter des `width` ou `height` fixes à tous les éléments simplement pour montrer que vous connaissez les propriétés.
-
-Une dimension devrait répondre à un besoin concret.
-:::
-
-## 7. Faire une passe de cohérence
-
-Parcourez toutes vos pages.
-
-Posez-vous ces questions :
-
-- le texte est-il collé aux bordures ou aux arrière-plans?
-- certains blocs sont-ils trop près les uns des autres?
-- les mêmes types de contenu utilisent-ils des espacements cohérents?
-- une bordure aide-t-elle réellement à distinguer un groupe?
-- une classe pourrait-elle éviter de répéter le même style?
-
-Corrigez seulement les problèmes qui vous semblent utiles.
-
-Le but n'est pas de rendre tous les sites identiques.
-
-## 8. Diagnostic rapide
-
-Pour chacune de ces situations, choisissez la propriété avant de modifier le code.
-
-### Le texte est trop près de sa bordure
-
-Pensez à :
-
-```css
-padding
-```
-
-### Deux blocs sont trop près l'un de l'autre
-
-Pensez à :
-
-```css
-margin
-```
-
-### La ligne autour d'un bloc doit changer
-
-Pensez à :
-
-```css
-border
-```
-
-### Un bloc devient beaucoup trop large
-
-Une limite comme celle-ci peut être utile :
-
-```css
-max-width
-```
-
-## 9. Précontrôle avant validation
-
-Avant de demander une validation, vérifiez que :
-
-- [ ] toutes vos pages chargent encore la même feuille CSS;
-- [ ] vous pouvez expliquer où se trouve `styles.css`;
-- [ ] vos classes ont un rôle compréhensible;
-- [ ] vous avez utilisé `padding` là où un espace intérieur était nécessaire;
-- [ ] vous avez utilisé `margin` là où un espace extérieur était nécessaire;
-- [ ] vous pouvez montrer une bordure et expliquer où elle se situe dans le modèle en boîte;
-- [ ] vous savez nommer contenu, padding, border et margin;
-- [ ] vous êtes capable de modifier un espacement sans essayer plusieurs propriétés au hasard.
-
-Cette checklist sert à vous préparer. La validation porte sur votre compréhension, pas sur un nombre précis de cartes, de marges ou de bordures.
-
-## Badges disponibles pour validation
-
-Consultez **[Projet Web — Évaluation](./00-evaluation.md)** pour les checklists détaillées et l'état de votre collection de badges.
-
-### Validation C — CSS de base
-
-Si elle n'est pas encore terminée, vous pouvez présenter :
-
-- 🔌 **WEB-05 — Associer correctement une feuille CSS externe**;
-- 🎯 **WEB-06 — Cibler les éléments avec des sélecteurs appropriés**.
-
-### Validation D — Mise en forme et disposition
-
-Vous pouvez aussi commencer à démontrer :
+Vous pouvez aussi commencer la Validation D :
 
 - 🎨 **WEB-07 — Mettre en forme une interface avec CSS**;
 - 📐 **WEB-08 — Organiser l'espace et la disposition des éléments**.
 
-À cette rencontre, 📐 WEB-08 est surtout observée à travers le modèle en boîte et les espacements. Flexbox simple sera ajouté à la rencontre 5.
+À cette rencontre, WEB-08 est surtout observée à travers le modèle en boîte. Flexbox sera ajouté à la rencontre 5.
 
-:::tip Collection de badges
-Il n'est pas nécessaire d'acquérir tous les badges le même jour. Les compétences **À revoir** peuvent être présentées de nouveau lorsque vous êtes prêt.
+Le soin apporté aux blocs réels du site contribue également à la dimension **Personnalisation et appropriation du projet**.
+
+:::note Pour aller plus loin — non évalué séparément
+Vous pouvez expérimenter avec `border-radius`, enrichir un bloc de la page À propos ou lire à propos de `box-sizing: border-box`.
+
+Ces propriétés ne sont pas nécessaires pour réussir la validation technique.
 :::
 
-:::note Pour aller plus loin — non évalué
-Si votre site est déjà clair et que vous avez du temps, vous pouvez expérimenter avec :
+## Prochaine étape
 
-```css
-border-radius
-```
-
-ou lire à propos de :
-
-```css
-box-sizing: border-box
-```
-
-Ces éléments ne sont pas nécessaires pour réussir la validation.
-:::
+À la rencontre 5, vous utiliserez Flexbox dans un besoin concret et ferez une dernière passe de correction et de personnalisation sur l'ensemble du site.

@@ -1,161 +1,144 @@
 ---
-title: Étape 1 - Première version de votre site
-description: Créer la première page de votre site personnel en appliquant la structure HTML vue à la rencontre 1.
+title: Étape 1 - Définir votre thème et vos quatre pages
+description: Choisir un thème principal, planifier deux pages de sujet et une page À propos, puis construire l'accueil.
 sidebar_position: 2
 ---
-
-import r1ProjetExempleHtml from '!!raw-loader!../../static/examples/rencontre1/projet-exemple/preview.html';
 
 # Projet Web — Étape 1
 
 <ProjectStepHero step={1} />
 
-Cette activité est la **mise en pratique personnelle de la rencontre 1**. Vous allez créer la première version du site que vous ferez évoluer pendant les prochaines rencontres.
+## Mission
 
-Avant de commencer, vous devriez avoir fait l'**[exercice guidé sur la première page HTML](../01-cours/01-rencontre1-exercice-guide.md)**.
+Choisissez le thème principal de votre site, planifiez au moins **deux pages de sujet distinctes** et une page **À propos**, puis construisez une première page d'accueil qui présente clairement l'ensemble.
 
-Pour comprendre l'ensemble du travail à venir, consultez la **[présentation du Projet Web](./00-presentation.md)**.
+Avant de commencer :
 
-## 1. Choisir ou confirmer un sujet
+- faites l'**[exercice guidé sur la première page HTML](../01-cours/01-rencontre1-exercice-guide.md)**;
+- consultez la galerie d'idées dans la **[présentation du Projet Web](./00-presentation.md)**.
 
-Si vous n'avez pas encore choisi votre sujet, faites un choix provisoire maintenant. Le sujet n'est pas évalué et pourra encore être ajusté avant que votre site contienne plusieurs pages.
+## 1. Choisir un thème qui peut devenir un site
 
-Le plus important est de choisir quelque chose sur lequel vous pouvez écrire facilement quelques petites sections.
+Votre sujet doit pouvoir être développé dans plusieurs pages.
 
-## 2. Créer le dossier du projet
-
-Dans votre dossier de cours Z03, créez un dossier pour votre site.
-
-Par exemple :
+Le minimum final sera :
 
 ```text
-Z03/
-└── mon-site/
+Accueil
+├── Sujet 1
+├── Sujet 2
+└── À propos
 ```
 
-Ouvrez ensuite **le dossier complet** dans VS Code et créez :
+Choisissez maintenant :
 
-```text
-index.html
-```
+- le thème principal;
+- le nom provisoire du site;
+- au moins deux sous-thèmes qui deviendront des pages de sujet;
+- l'angle de votre page À propos.
 
-À cette étape, votre projet devrait donc ressembler à ceci :
+Vous pourrez ajouter une troisième page de sujet ou davantage si votre thème s'y prête.
 
-```text
-mon-site/
-└── index.html
-```
-
-## 3. Créer une structure HTML complète
-
-Votre fichier `index.html` doit contenir la structure générale vue en classe :
-
-```html
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon sujet</title>
-  </head>
-  <body>
-    <!-- Votre contenu ira ici -->
-  </body>
-</html>
-```
-
-Remplacez `Mon sujet` par un titre adapté à votre propre site.
-
-La ligne `<!-- Votre contenu ira ici -->` est un **commentaire HTML** : elle sert de repère dans le code et son texte ne s'affiche pas dans la page. Vous pouvez la conserver, la modifier ou la retirer lorsque vous avez ajouté votre contenu.
-
-## 4. Construire le contenu de la page
-
-Dans le `<body>`, construisez une première vraie page sur votre sujet.
-
-Votre page devrait contenir :
-
-- un titre principal avec `<h1>`;
-- une courte introduction avec un ou plusieurs paragraphes;
-- quelques sections organisées avec des titres pertinents;
-- au moins une liste là où une liste a du sens;
-- du contenu réel lié à votre sujet.
-
-Vous pouvez utiliser `<strong>` ou `<em>` lorsqu'ils ont un sens dans votre contenu.
-
-Voici un exemple du **niveau de simplicité attendu** à cette étape. Votre sujet et votre contenu seront différents :
-
-<ExampleFrame
-  src="examples/rencontre1/projet-exemple/preview.html"
-  title="Exemple de première version simple d'un Projet Web"
-  html={r1ProjetExempleHtml}
-/>
-
-:::info À maîtriser
-Le but n'est pas d'accumuler des balises. Vous devez être capable de choisir des éléments qui correspondent au rôle du contenu et de les imbriquer correctement.
+:::warning Contenu personnel
+Le thème, les textes et les exemples de l'exercice guidé servent seulement à pratiquer. Votre projet doit présenter un autre sujet et un autre contenu.
 :::
 
-## 5. Tester votre page
+## 2. Planifier les quatre pages
 
-Ouvrez `index.html` dans un navigateur et travaillez par petits changements :
+Avant de coder, complétez mentalement ou sur papier ce plan :
 
-```text
-modifier le code
-      ↓
-enregistrer
-      ↓
-actualiser le navigateur
-      ↓
-observer le résultat
-```
+| Page | Rôle | Contenu prévu |
+| --- | --- | --- |
+| `index.html` | présenter le thème général | introduction et aperçu des pages de sujet |
+| page de sujet 1 | développer un premier aspect du thème | informations propres à ce sujet |
+| page de sujet 2 | développer un deuxième aspect du thème | informations différentes du premier |
+| `pages/apropos.html` | présenter la personne, l'entreprise ou l'organisation derrière le site | parcours, intérêts, mission ou coordonnées fictives |
 
-Lorsque la page fonctionne, utilisez aussi le [validateur W3C](https://validator.w3.org/) pour repérer d'éventuelles erreurs de structure.
+Vous créerez les trois pages secondaires à la rencontre 2. Aujourd'hui, chacune doit déjà avoir un but clair.
 
-:::warning Pas de CSS aujourd'hui
-Votre page sera probablement très simple visuellement. C'est normal.
+## 3. Définir l'angle de la page À propos
 
-HTML sert d'abord à **structurer le contenu**. Nous commencerons la mise en forme avec CSS à la rencontre 3.
+### Pour un site personnel ou informatif
+
+Planifiez quelques informations que vous êtes à l'aise de partager, par exemple :
+
+- votre prénom ou un pseudonyme;
+- votre domaine d'études;
+- vos intérêts et vos passe-temps;
+- la raison du choix du thème;
+- ce que vous voulez faire découvrir.
+
+### Pour une entreprise ou une organisation fictive
+
+Planifiez par exemple :
+
+- une description;
+- une mission;
+- des services ou activités;
+- une équipe fictive;
+- une adresse ou des coordonnées fictives.
+
+:::danger Renseignements personnels
+Ne prévoyez pas publier votre adresse personnelle, votre numéro de téléphone, votre horaire précis ou d'autres renseignements sensibles.
 :::
 
-## 6. Checklist de fin de rencontre
+## 4. Créer le projet
 
-Avant de terminer, vérifiez que :
+Créez un dossier pour votre site dans votre dossier Z03, ouvrez **le dossier complet** dans VS Code et créez `index.html`.
 
-- [ ] vous savez où se trouve le dossier de votre site;
-- [ ] le fichier se nomme réellement `index.html`;
-- [ ] le dossier du projet s'ouvre correctement dans VS Code;
-- [ ] la page s'ouvre dans le navigateur;
-- [ ] votre document contient une structure HTML complète;
-- [ ] votre `<title>` et votre `<h1>` correspondent à votre sujet;
-- [ ] votre contenu est organisé avec des éléments HTML pertinents;
-- [ ] vos balises sont correctement imbriquées;
-- [ ] vous reconnaissez le commentaire HTML utilisé comme repère dans le gabarit;
-- [ ] vous savez modifier le code, enregistrer et actualiser la page.
+Utilisez la structure HTML complète vue dans le **[cours de la rencontre 1](../01-cours/01-rencontre1.md)** et dans l'exercice guidé. Ne recopiez pas ici les textes de l'exercice.
 
-Si un de ces points ne fonctionne pas, demandez de l'aide avant la prochaine rencontre.
+## Minimum attendu dans `index.html`
 
-## Badges de compétence préparés
+Votre page d'accueil doit contenir :
 
-Il n'y a **aucune validation sommative** à la rencontre 1, mais vous commencez déjà à préparer vos premiers badges :
+- un `<title>` adapté au thème;
+- un `<h1>` qui nomme clairement le site;
+- une introduction d'au moins deux courts paragraphes;
+- une section avec un `<h2>` pour présenter le premier sujet;
+- une autre section avec un `<h2>` pour présenter le deuxième sujet;
+- au moins une liste utilisée dans un contexte pertinent;
+- du contenu réel, et non du texte de remplissage.
+
+Vous pouvez utiliser `<strong>` ou `<em>` lorsqu'ils apportent un sens au contenu.
+
+## Décisions à prendre
+
+- Quel est le nom du site?
+- À qui s'adresse-t-il?
+- Que doit comprendre une personne en lisant la page d'accueil?
+- Pourquoi vos deux sujets méritent-ils chacun leur propre page?
+- Que racontera la page À propos?
+- Quels noms de fichiers seraient courts, descriptifs, sans espace et sans accent?
+
+## Tests à effectuer
+
+- [ ] Le bon dossier est ouvert dans VS Code.
+- [ ] Le fichier se nomme réellement `index.html`.
+- [ ] La page s'ouvre dans le navigateur.
+- [ ] Le `<title>` et le `<h1>` correspondent au thème.
+- [ ] Les deux sujets sont annoncés clairement.
+- [ ] L'angle de la page À propos est planifié.
+- [ ] Les balises sont correctement imbriquées.
+- [ ] Le contenu est différent de celui de l'exercice guidé.
+- [ ] Le document a été vérifié avec le validateur W3C avec de l'aide au besoin.
+
+## Compétences préparées
+
+Il n'y a aucune validation sommative à la rencontre 1. Cette étape prépare surtout :
 
 - 🗂️ **WEB-01 — Organiser un projet Web et utiliser les chemins**;
-- 🧱 **WEB-02 — Construire une page HTML correctement structurée**.
+- 🧱 **WEB-02 — Construire une page HTML correctement structurée**;
+- ✍️ **WEB-03 — Structurer et enrichir le contenu HTML**.
 
-Ces compétences commenceront à être observées plus formellement à la rencontre 2, lorsque votre projet contiendra plusieurs fichiers et ressources.
+Elle commence aussi la dimension **Personnalisation et appropriation du projet** par le choix du thème et la planification du contenu.
 
-👉 Consultez **[Projet Web — Évaluation](./00-evaluation.md)** pour voir votre collection complète de badges, les critères et le calendrier des validations.
+:::note Pour aller plus loin — non évalué séparément
+Planifiez une troisième page de sujet ou une autre section originale qui pourrait enrichir le site plus tard.
 
-:::note Pour aller plus loin — non évalué
-Si vous terminez rapidement, enrichissez le **contenu** de votre page : ajoutez une section, une liste ou une sous-section supplémentaire et vérifiez que la structure reste logique.
-
-N'essayez pas encore de prendre de l'avance avec CSS, la navigation ou une mise en page complexe.
+Ne commencez pas encore CSS ou une mise en page complexe.
 :::
 
 ## Prochaine étape
 
-À la rencontre 2, cette page unique deviendra un petit site avec :
-
-- plusieurs pages;
-- des images locales;
-- des dossiers organisés;
-- des chemins relatifs;
-- une navigation permettant de circuler dans le site.
+À la rencontre 2, vous créerez les deux pages de sujet et la page À propos, ajouterez des images locales et construirez une navigation entre les quatre pages.

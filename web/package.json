@@ -5,7 +5,9 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
+    "start:refonte": "node scripts/run-refonte.cjs start",
     "build": "docusaurus build",
+    "build:refonte": "node scripts/run-refonte.cjs build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

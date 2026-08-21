@@ -1,450 +1,226 @@
-# Plan directeur — site Web évolutif des rencontres 1 à 5
+# Plan directeur — Projet Web évolutif des rencontres 1 à 5
 
-Ce document définit le **plan haut niveau** du projet Web construit progressivement pendant les cinq premières rencontres de Z03.
+**Mise à jour : 2026-08-21**  
+**Statut : référence courante**
 
-Il remplace, dans l'organisation pédagogique, l'ancien modèle « exercices HTML/CSS séparés + TP1 remis à la fin ». L'étudiant pratique directement les notions dans un **même site Web personnel** qu'il enrichit au fur et à mesure que la matière est enseignée.
+Ce document définit le plan haut niveau du Projet Web construit pendant les cinq premières rencontres de Z03.
 
-Ce document est d'abord un document de conception pour la refonte. Il servira ensuite de source pour rédiger les pages étudiantes détaillées de chaque rencontre.
+Il doit rester cohérent avec :
 
-Documents associés :
-
-- `COMPETENCES_HTML_CSS.md` — huit compétences et quatre moments de validation;
-- `EVALUATION.md` — modèle de validation progressive;
-- `SUIVI_CONTENU.md` — séquence et décisions de migration;
-- `MIGRATION_LABORATOIRES_CODEX.md` — réalignement futur des laboratoires de programmation.
+- `COMPETENCES_HTML_CSS.md`;
+- `EVALUATION.md`;
+- `MODELE_EDITORIAL_CONTENU.md`;
+- `PLAN_EPURATION_REPETITIONS_R1_R5.md`;
+- les pages étudiantes sous `web/docs/03-projet-web/`.
 
 # Intention pédagogique
 
-Pendant les rencontres 1 à 5, le travail pratique n'est pas une série de petits exercices indépendants.
+L'étudiant ne réalise pas cinq exercices indépendants. Il construit un seul site et le transforme progressivement :
 
-Le cycle visé est :
+```text
+R1  planifier et créer l'accueil
+ ↓
+R2  ajouter les pages, les images et la navigation
+ ↓
+R3  créer une identité visuelle avec une feuille CSS partagée
+ ↓
+R4  corriger les blocs et les espacements
+ ↓
+R5  intégrer Flexbox, personnaliser et finaliser
+```
 
-1. courte présentation d'une nouvelle notion;
-2. démonstration par l'enseignant;
-3. application immédiate dans le site personnel de l'étudiant;
-4. aide au besoin;
-5. validation d'une ou de plusieurs compétences lorsque l'étudiant est prêt;
-6. poursuite et amélioration du même site à la rencontre suivante.
-
-Le projet sert donc simultanément de :
+Le Projet Web sert de :
 
 - terrain de pratique;
-- fil conducteur entre les rencontres;
-- preuve observable pour les validations de compétences;
-- contexte authentique pour apprendre les fichiers, les chemins, HTML et CSS.
+- fil conducteur;
+- support aux validations techniques;
+- occasion de produire un travail personnel;
+- contexte pour apprendre les fichiers, les chemins, HTML et CSS.
 
-Il ne doit pas redevenir un gros TP dont toute la note dépend d'une remise finale.
+# Mandat final
 
-# Sujet et portée du site
+Le site porte sur un thème principal qui se divise naturellement en au moins deux pages de sujet.
 
-L'étudiant choisit un **sujet de son choix** : loisir, sport, jeu vidéo, voyage, musique, animaux, cuisine, technologie, collection, entreprise fictive, etc.
-
-Le sujet sert uniquement de contexte. La qualité ou l'originalité du sujet ne doit pas influencer la maîtrise des compétences techniques.
-
-Le site doit rester volontairement petit. À terme, il devrait contenir environ **trois pages significatives ou plus**, par exemple :
-
-- une page d'accueil;
-- une page consacrée à une partie du sujet (détail, produits, activités, galerie, information, etc.);
-- une page À propos, Contact ou autre page pertinente au sujet.
-
-Ces exemples ne sont pas des noms de fichiers obligatoires. L'étudiant peut adapter la structure à son sujet tant que le site permet de démontrer les compétences attendues.
-
-# Règles de conception
-
-## Ce qui est évalué
-
-L'évaluation porte sur la capacité de l'étudiant à **construire, expliquer et modifier** son site en utilisant les notions enseignées.
-
-On ne compte pas mécaniquement :
-
-- le nombre de couleurs;
-- le nombre de polices;
-- le nombre de `<div>`;
-- le nombre de classes;
-- le nombre de listes;
-- le nombre de bordures;
-- le nombre exact de propriétés CSS.
-
-Une contrainte de pratique peut demander à l'étudiant d'essayer une notion, mais elle ne devient pas automatiquement un critère de notation indépendant.
-
-## Trois niveaux d'attente
-
-Les pages étudiantes devront distinguer clairement :
-
-### À maîtriser
-
-Contenu qui contribue directement aux compétences évaluées.
-
-### Bonne pratique
-
-Pratique recommandée et enseignée, mais dont l'absence ne fait pas échouer une compétence à elle seule.
-
-### Pour aller plus loin — non évalué
-
-Contenu facultatif pour les étudiants qui avancent plus rapidement ou souhaitent enrichir leur site.
-
-Le libellé textuel doit être visible; la couleur seule ne doit pas servir à distinguer les niveaux.
-
-# Progression du site par rencontre
-
-## Rencontre 1 — Démarrer le site
-
-### Matière principale
-
-- environnement de travail;
-- fichiers, dossiers et extensions;
-- VS Code et navigateur;
-- première page HTML;
-- structure générale d'un document;
-- éléments HTML de contenu de base.
-
-### Étape du projet
-
-L'étudiant :
-
-1. choisit un sujet;
-2. crée le dossier racine de son site;
-3. crée `index.html`;
-4. ouvre sa page dans le navigateur;
-5. ajoute du contenu réel lié à son sujet;
-6. utilise quelques éléments HTML pertinents : titres, paragraphes, listes, images ou autres éléments déjà vus.
-
-L'objectif n'est pas de terminer une page complète. L'étudiant doit surtout réussir à créer, enregistrer, modifier et afficher une première page qu'il comprend.
-
-### Compétences
-
-Aucune validation sommative principale n'est prévue à la rencontre 1.
-
-Les premières observations peuvent toutefois préparer :
-
-- **WEB-01 — Organiser un projet Web et utiliser les chemins**;
-- **WEB-02 — Construire une page HTML correctement structurée**.
-
-### Bonnes pratiques possibles
-
-- indentation lisible;
-- noms de fichiers simples et explicites;
-- structure HTML propre;
-- utilisation de `<main>`, `<header>` ou d'autres éléments sémantiques lorsque cela aide, sans en faire une exigence de maîtrise.
-
-### Pour aller plus loin
-
-L'étudiant rapide peut ajouter davantage de contenu ou explorer quelques éléments HTML supplémentaires, sans prendre d'avance sur les compétences obligatoires des rencontres suivantes.
-
----
-
-## Rencontre 2 — Transformer la page en véritable petit site
-
-### Matière principale
-
-- organisation des ressources;
-- images locales;
-- chemins relatifs;
-- sous-dossiers;
-- `../` lorsque nécessaire;
-- liens;
-- plusieurs pages;
-- navigation.
-
-### Étape du projet
-
-L'étudiant transforme sa première page en petit site multipage.
-
-À la fin de l'étape, le projet devrait avoir une structure comparable à :
+## Structure minimale
 
 ```text
 mon-site/
 ├── index.html
-├── une-autre-page.html
-├── apropos.html
 ├── css/
-│   └── styles.css      # peut être créé maintenant ou à la rencontre 3
-└── images/
-    ├── image1.jpg
-    └── image2.jpg
+│   └── styles.css
+├── images/
+│   └── au moins deux images locales
+└── pages/
+    ├── sujet-1.html
+    ├── sujet-2.html
+    └── apropos.html
 ```
 
+Le projet possède donc au minimum :
+
+- une page d'accueil;
+- deux pages de sujet distinctes;
+- une page À propos;
+- quatre documents HTML complets;
+- une navigation vers les quatre pages depuis chacune d'elles;
+- une feuille CSS externe partagée;
+- du contenu original;
+- au moins deux images locales avec `alt`;
+- une application du modèle en boîte;
+- un usage simple de Flexbox.
+
+L'étudiant peut ajouter plus de deux pages de sujet.
+
+# Galerie de thèmes
+
+Les pages étudiantes montrent plusieurs possibilités avec des icônes afin d'éviter de donner l'impression qu'un seul type de projet est attendu :
+
+- 🏒 sports;
+- 🎬 films et séries;
+- 🎮 jeux vidéo;
+- 🎵 musique;
+- 🍳 cuisine;
+- 🐾 animaux et nature;
+- ✈️ voyage et lieux;
+- 💻 technologie;
+- 📚 livres, bandes dessinées et mangas;
+- 🎨 portfolio créatif;
+- 🚗 véhicules;
+- 🏢 entreprise ou service fictif.
+
+La qualité intrinsèque du sujet ne détermine pas la note. Ce qui compte est la façon dont il permet de construire un contenu personnel, cohérent et suffisamment riche.
+
+# Page À propos
+
+La page `pages/apropos.html` est obligatoire.
+
+## Site personnel ou informatif
+
+Elle peut présenter :
+
+- un prénom ou un pseudonyme;
+- un programme ou domaine d'études;
+- des intérêts et passe-temps;
+- la raison du choix du thème;
+- l'intention du site.
+
+## Entreprise ou organisation fictive
+
+Elle peut présenter :
+
+- une description;
+- une mission;
+- des services ou activités;
+- une équipe fictive;
+- une adresse et des coordonnées fictives.
+
+Aucun renseignement personnel sensible ne doit être demandé ou publié.
+
+# Progression par rencontre
+
+## Rencontre 1 — Planifier et créer l'accueil
+
 L'étudiant :
 
-1. organise les ressources dans des dossiers;
-2. crée plusieurs pages liées à son sujet;
-3. ajoute des images locales lorsque pertinent;
-4. construit une navigation permettant de circuler entre les pages;
-5. vérifie ses chemins relatifs;
-6. ajoute suffisamment de contenu pour que chaque page ait une fonction reconnaissable.
+1. choisit un thème;
+2. planifie deux pages de sujet minimum;
+3. planifie la page À propos;
+4. crée le dossier du projet et `index.html`;
+5. construit un accueil avec une introduction, deux sections de sujet et une liste pertinente.
 
-### Validations disponibles
+Aucune validation principale n'est prévue, mais WEB-01 à WEB-03 sont préparées.
 
-**Validation A — Structure HTML**
-
-- **WEB-01 — Organiser un projet Web et utiliser les chemins**;
-- **WEB-02 — Construire une page HTML correctement structurée**.
-
-**Validation B — Contenu et navigation**
-
-- **WEB-03 — Structurer et enrichir le contenu HTML**;
-- **WEB-04 — Relier plusieurs pages dans une navigation fonctionnelle**.
-
-La validation B peut se poursuivre au début de la rencontre 3 si nécessaire.
-
-### Exemples de vérifications rapides
-
-L'enseignant peut demander :
-
-- « Montre-moi comment on passe de cette page à ta page À propos. »;
-- « Où se trouve cette image dans ton projet? »;
-- « Si cette page était dans un sous-dossier, qu'est-ce qui changerait dans le chemin? »;
-- « Ajoute ou corrige ce lien devant moi. »
-
-### Bonnes pratiques possibles
-
-- `alt` pertinent pour les images;
-- `<nav>` pour une navigation importante;
-- `<main>` pour le contenu principal;
-- validation W3C comme précontrôle;
-- commentaires lorsqu'ils ont une utilité réelle.
-
-### Pour aller plus loin
-
-- ajouter une page supplémentaire;
-- ajouter des liens externes pertinents;
-- enrichir le contenu sans créer de nouvelles exigences évaluées.
-
----
-
-## Rencontre 3 — Donner une identité visuelle au site
-
-### Matière principale
-
-- syntaxe d'une règle CSS;
-- CSS intraligne/interne comme contexte;
-- feuille CSS externe comme méthode attendue;
-- `<link>` et chemin vers la feuille CSS;
-- sélecteurs d'élément;
-- classes;
-- `id` à un niveau de compréhension;
-- couleurs, arrière-plans, typographie, alignement et bordures simples.
-
-### Étape du projet
+## Rencontre 2 — Construire le site de quatre pages
 
 L'étudiant :
 
-1. crée ou complète `css/styles.css`;
-2. relie correctement ses pages à cette feuille externe;
-3. applique une première identité visuelle cohérente à son site;
-4. utilise des sélecteurs d'élément lorsque cela convient;
-5. crée et réutilise des classes pour cibler certains groupes d'éléments;
-6. modifie volontairement plusieurs propriétés visuelles.
+1. crée les deux pages de sujet;
+2. crée `pages/apropos.html`;
+3. ajoute au moins deux images locales;
+4. ajoute `alt` à chaque `<img>`;
+5. construit une navigation complète vers les quatre pages;
+6. teste les chemins depuis la racine et depuis `pages/`.
 
-Le but n'est pas d'atteindre un nombre précis de couleurs ou de polices. L'étudiant doit montrer qu'il sait **cibler un élément et produire volontairement un résultat visuel**.
+Validation A prioritaire; Validation B peut commencer.
 
-### Validation disponible
+## Rencontre 3 — Créer l'identité visuelle
 
-Début de la **Validation C — CSS de base** :
+L'étudiant :
 
-- **WEB-05 — Associer correctement une feuille CSS externe**;
-- **WEB-06 — Cibler les éléments avec des sélecteurs appropriés**.
+1. crée `css/styles.css`;
+2. relie les quatre pages à cette feuille;
+3. définit des styles généraux;
+4. crée au moins deux classes utiles;
+5. réutilise au moins une classe;
+6. adapte les choix visuels à son thème et à sa page À propos.
 
-### Exemples de vérifications rapides
+Fin possible de B; début de C.
 
-- « Montre-moi comment cette page trouve ton fichier CSS. »;
-- « Fais-moi changer tous les éléments de ce groupe sans modifier les autres. »;
-- « Pourquoi as-tu utilisé une classe ici? »;
-- « Cette règle ne s'applique pas : trouve-moi pourquoi. »
+## Rencontre 4 — Auditer les blocs et les espacements
 
-### Bonnes pratiques possibles
+L'étudiant :
 
-- éviter le CSS intraligne pour le projet;
-- réutiliser les classes plutôt que recopier les mêmes styles;
-- garder des noms de classes compréhensibles;
-- comprendre sommairement qu'une règle peut en remplacer une autre.
+1. parcourt les quatre pages;
+2. repère des blocs comparables;
+3. réutilise une classe;
+4. utilise `padding`, `border` et `margin` volontairement;
+5. améliore la cohérence sans recopier la carte de l'exercice guidé.
 
-### Pour aller plus loin
+Poursuite de C; début de D.
 
-- styles au survol (`:hover`) si introduits comme extra;
-- propriétés purement décoratives supplémentaires;
-- exploration personnelle sans incidence sur la validation.
+## Rencontre 5 — Intégrer Flexbox et finaliser
 
----
+L'étudiant :
 
-## Rencontre 4 — Organiser l'espace avec le modèle en boîte
+1. applique `display: flex` et `gap` à un parent pertinent;
+2. identifie le parent et ses enfants directs;
+3. vérifie HTML, chemins, navigation, images, CSS et espacements;
+4. relit les quatre pages;
+5. améliore le contenu, la cohérence et la finition;
+6. prépare l'appréciation de personnalisation.
 
-### Matière principale
+Finalisation de D, reprises et appréciation de la personnalisation.
 
-- dimensions simples lorsque pertinentes;
-- `border`;
-- `padding`;
-- `margin`;
-- relation contenu / remplissage / bordure / marge;
-- regroupement d'éléments;
-- consolidation des classes et du CSS externe.
+# Modèle d'évaluation
 
-### Étape du projet
-
-L'étudiant améliore la structure visuelle de ses pages.
-
-Il doit notamment :
-
-1. identifier quelques zones ou groupes de contenu qui gagneraient à être présentés comme des blocs;
-2. appliquer des bordures ou arrière-plans lorsque cela aide à distinguer ces zones;
-3. utiliser `padding` pour créer de l'espace à l'intérieur des blocs;
-4. utiliser `margin` pour espacer les blocs entre eux;
-5. ajuster certaines dimensions lorsque cela est réellement utile;
-6. réutiliser ses classes plutôt que multiplier les règles presque identiques.
-
-### Validations disponibles
-
-- terminer au besoin la **Validation C — WEB-05 / WEB-06**;
-- commencer la **Validation D — WEB-07 / WEB-08**.
-
-Compétences principalement observées :
-
-- **WEB-07 — Mettre en forme une interface avec CSS**;
-- **WEB-08 — Organiser l'espace et la disposition des éléments**.
-
-### Exemples de vérifications rapides
-
-- « Mets plus d'espace entre le texte et sa bordure. »;
-- « Éloigne ces deux blocs sans déplacer leur contenu à l'intérieur. »;
-- « Explique-moi la différence entre ce `margin` et ce `padding`. »;
-- « Applique le même style à ces éléments sans recopier toute la règle. »
-
-### Bonnes pratiques possibles
-
-- `border-radius`;
-- cohérence des espacements;
-- éviter les hauteurs fixes inutiles;
-- corriger le CSS existant plutôt qu'empiler des règles contradictoires.
-
-### Pour aller plus loin
-
-- effets visuels supplémentaires;
-- nuances du modèle en boîte non nécessaires aux exercices;
-- propriétés avancées clairement indiquées comme non évaluées.
-
----
-
-## Rencontre 5 — Disposer, intégrer et finaliser
-
-### Matière principale
-
-- `display: flex` dans des cas simples;
-- `gap`;
-- `justify-content` / `align-items` au besoin;
-- navigation horizontale simple;
-- intégration et consolidation;
-- diagnostic et correction de problèmes HTML/CSS.
-
-### Étape du projet
-
-L'étudiant termine le bloc HTML/CSS en améliorant son site plutôt qu'en ajoutant beaucoup de nouvelles fonctionnalités.
-
-Il doit :
-
-1. utiliser Flexbox dans au moins un cas où cela apporte une solution simple et compréhensible, par exemple la navigation ou un groupe de blocs;
-2. vérifier la cohérence visuelle entre les pages;
-3. corriger les liens, chemins, styles ou espacements encore problématiques;
-4. être capable de modifier son propre code à la demande;
-5. compléter les validations HTML/CSS qui ne sont pas encore maîtrisées.
-
-### Validation disponible
-
-Finalisation de la **Validation D — Mise en forme et disposition** :
-
-- **WEB-07 — Mettre en forme une interface avec CSS**;
-- **WEB-08 — Organiser l'espace et la disposition des éléments**.
-
-Reprises possibles des validations A, B ou C lorsque la logistique le permet.
-
-### Bonnes pratiques possibles
-
-- navigation cohérente d'une page à l'autre;
-- présentation visuelle lisible;
-- code suffisamment propre pour être retrouvé et modifié rapidement;
-- éléments sémantiques appropriés lorsqu'ils sont naturels.
-
-### Pour aller plus loin — non évalué
-
-Exemples à offrir aux étudiants qui veulent enrichir leur site :
-
-- approfondissement de Flexbox;
-- `:hover` et transitions simples;
-- `box-shadow`;
-- positionnement dans un cas particulier;
-- `overflow`;
-- CSS Grid;
-- animations;
-- autres effets visuels.
-
-Ces éléments ne doivent pas être nécessaires pour obtenir la pleine maîtrise des compétences HTML/CSS.
-
-# Vue synthèse : matière, projet et validations
-
-| Rencontre | L'étudiant fait évoluer son site | Compétences / validation |
-|---|---|---|
-| **1** | choisit son sujet, crée `index.html`, ajoute son premier contenu | préparation WEB-01/02; aucune validation principale |
-| **2** | organise les ressources, crée plusieurs pages, ajoute images et navigation | Validation A : WEB-01/02; Validation B : WEB-03/04 |
-| **3** | crée/relie la feuille CSS, ajoute classes et identité visuelle | début Validation C : WEB-05/06 |
-| **4** | améliore blocs, espacements et modèle en boîte | fin C; début Validation D : WEB-07/08 |
-| **5** | ajoute une disposition Flexbox simple, consolide et corrige | fin Validation D et reprises |
-
-# Pondération
-
-Le bloc HTML/CSS des rencontres 1 à 5 représente **30 % de la note finale**.
-
-La valeur exacte par compétence reste à détailler. Cette répartition future ne doit pas augmenter artificiellement le nombre d'interactions d'évaluation : les huit compétences restent regroupées dans quatre moments principaux.
-
-# Structure future des pages étudiantes
-
-Lorsque ce plan sera validé, créer des pages étudiantes détaillées pour chacune des rencontres 1 à 5.
-
-Chaque page devrait suivre une structure commune :
+Le bloc HTML/CSS vaut **30 % de la note finale**.
 
 ```text
-1. Ce que nous apprenons aujourd'hui
-2. Démonstration / exemples de cours
-3. Ton site aujourd'hui
-   - À maîtriser
-   - Étapes de construction
-4. Avant de demander une validation
-   - courte liste de précontrôle
-5. Compétence(s) pouvant être validée(s)
-6. Bonne pratique
-7. Pour aller plus loin — non évalué
+80 % du bloc → huit compétences techniques WEB-01 à WEB-08
+20 % du bloc → personnalisation et appropriation du projet
 ```
 
-Les consignes doivent être suffisamment précises pour faire progresser un étudiant débutant, sans transformer le projet en grille mécanique d'occurrences.
+La personnalisation n'est pas une neuvième compétence technique.
 
-# Précontrôle avant une validation
+Elle est appréciée sur 20 points :
 
-Les pages détaillées pourront proposer une petite liste que l'étudiant vérifie lui-même avant de demander une validation.
+- contenu original : 5;
+- cohérence du thème : 5;
+- décisions personnelles : 5;
+- finition et initiative : 5.
 
-Exemples selon la rencontre :
+L'appréciation porte sur le résultat observable et non sur le nombre d'heures supposé, le talent graphique ou l'utilisation de CSS avancé.
 
-- les pages s'ouvrent;
-- les liens testés fonctionnent;
-- les images utilisées s'affichent;
-- la feuille CSS est réellement externe;
-- les notions demandées ont été essayées;
-- l'étudiant est capable d'expliquer et de modifier son propre code.
+# Règles éditoriales
 
-Ce précontrôle ne constitue pas une évaluation et ne remplace pas la validation de l'enseignant.
+- Le cours explique la notion.
+- L'exercice guidé fait pratiquer une structure imposée.
+- Le Projet Web demande d'adapter, de décider et d'expliquer.
+- L'aide-mémoire fournit seulement la syntaxe et le dépannage.
 
-# Passage à JavaScript
+Le Projet Web ne doit pas répéter intégralement le cours ou l'exercice guidé.
 
-À la rencontre 6, la séquence d'enseignement passe à JavaScript.
+# Notions facultatives
 
-Le site évolutif HTML/CSS peut rester disponible comme réalisation de l'étudiant et éventuellement servir de contexte à certains exemples, mais **aucune nouvelle matière HTML/CSS essentielle ne doit être ajoutée après la rencontre 5**.
+Les éléments suivants ne sont pas nécessaires pour obtenir la pleine maîtrise technique :
 
-Un étudiant dont une compétence HTML/CSS est encore `À revoir` peut la représenter plus tard lorsque la logistique le permet, sans retarder la progression du groupe en programmation.
+- `background-image` dans le Projet Web;
+- `border-radius`;
+- `box-sizing`;
+- `flex-wrap`;
+- Flexbox avancé;
+- Grid;
+- positionnement;
+- transitions et animations.
 
-# Prochaine étape de conception
-
-Après validation de ce plan haut niveau :
-
-1. rédiger la page étudiante détaillée de la rencontre 1;
-2. rédiger celle de la rencontre 2 en y intégrant clairement les validations A et B;
-3. poursuivre avec les rencontres 3, 4 et 5;
-4. déplacer progressivement le contenu pertinent des pages HTML/CSS actuelles dans ces nouvelles pages;
-5. marquer visuellement les blocs `Bonne pratique` et `Pour aller plus loin — non évalué`;
-6. retirer de la navigation principale les anciennes pages de matière lorsqu'elles ont été entièrement migrées et vérifiées.
+Ils peuvent enrichir un projet lorsqu'ils sont compris, mais leur absence ne réduit pas automatiquement la note de personnalisation.

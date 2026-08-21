@@ -16,7 +16,6 @@ Cette rencontre regroupe provisoirement les deux anciens cours sur les condition
 - opérateurs logiques `&&` et `||`;
 - lecture et correction de conditions simples.
 
-## Sources héritées à fusionner
-
-- [Ancien cours 5 - Booléens et conditions](./05-rencontre3.1.md)
-- [Ancien cours 6 - Opérateurs logiques](./06-rencontre3.2.md)
+:::note Refonte à venir
+Les sources historiques nécessaires à cette rencontre sont conservées hors du site étudiant. Elles seront réévaluées lors de la refonte des rencontres 6 et suivantes.
+:::

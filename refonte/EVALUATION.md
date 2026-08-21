@@ -1,58 +1,43 @@
 # Évaluation progressive des compétences — Z03
 
-Ce document décrit la stratégie d'évaluation retenue pour Z03. Il doit évoluer avec la séquence de cours et rester cohérent avec `SUIVI_CONTENU.md` et `COMPETENCES_HTML_CSS.md`.
+**Mise à jour : 2026-08-21**
+
+Ce document décrit le modèle d'évaluation actuellement retenu pour le bloc HTML/CSS des rencontres 1 à 5.
+
+Il doit rester cohérent avec :
+
+- `COMPETENCES_HTML_CSS.md`;
+- `MODELE_EDITORIAL_CONTENU.md`;
+- `PLAN_EPURATION_REPETITIONS_R1_R5.md`;
+- `web/docs/03-projet-web/00-evaluation.md`.
 
 ## Intention
 
-Éviter de concentrer l'évaluation dans quelques gros travaux pratiques remis à une date fixe. Les compétences sont plutôt validées progressivement pendant les rencontres, sur des réalisations concrètes et observables.
+Éviter une grosse remise unique corrigée à la fin du bloc. Les compétences sont plutôt observées progressivement pendant les périodes de travail, sur le Projet Web que l'étudiant fait évoluer.
 
-Le modèle visé est :
+Le modèle vise :
 
-- une seule évaluation sommative finale à la rencontre 15;
-- des validations de compétences tout au long de la session;
-- au moins 15 % de la note déjà évaluée au plus tard à la rencontre 6;
-- la rencontre 14 conservée comme buffer, rattrapage, travail ou révision;
-- aucune notion essentielle introduite à la rencontre 14;
-- possibilité pour un étudiant de représenter une compétence qui n'était pas encore maîtrisée lors d'une première tentative.
+- des preuves courtes et observables;
+- une rétroaction rapide;
+- la possibilité de représenter une compétence technique;
+- une distinction claire entre résultat présent et compréhension réelle;
+- quatre passages principaux plutôt que huit entrevues séparées;
+- une appréciation distincte de la personnalisation et de l'appropriation du projet.
 
-## Principe de validation
+# Pondération
 
-Une compétence doit être suffisamment petite pour être vérifiée rapidement en classe, idéalement en 1 à 3 minutes.
+Le bloc HTML/CSS représente **30 % de la note finale du cours**.
 
-La validation devrait porter sur ce que l'étudiant sait faire et expliquer, et non seulement sur la présence du résultat final dans un projet.
+| Partie | Part du bloc HTML/CSS | Part de la note finale |
+| --- | ---: | ---: |
+| Huit compétences techniques | 80 % | 24 % |
+| Personnalisation et appropriation | 20 % | 6 % |
+| **Total** | **100 %** | **30 %** |
 
-Les notions ne correspondent pas une à une aux compétences. Plusieurs notions proches peuvent être regroupées dans une seule compétence, et plusieurs compétences peuvent être observées au cours d'un même passage auprès de l'étudiant.
-
-Le modèle distingue trois statuts :
-
-- `À faire` : aucune preuve suffisante n'a encore été observée;
-- `À revoir` : une tentative a eu lieu, mais la maîtrise n'est pas encore suffisante;
-- `Validée` : la preuve de maîtrise est jugée suffisante.
-
-`À revoir` ne constitue pas une pénalité en soi. L'étudiant peut représenter la compétence lorsque la logistique le permet.
-
-## Déroulement suggéré en classe
-
-1. Une partie de la rencontre sert à l'enseignement et à la pratique guidée.
-2. Une plage de travail autonome permet aux étudiants d'avancer leurs exercices ou leur projet fil rouge.
-3. Lorsqu'un étudiant estime maîtriser une compétence disponible, il demande une validation.
-4. L'enseignant vérifie rapidement la réalisation et peut poser une courte question ou demander une petite modification pour distinguer compréhension et simple copie.
-5. Une même interaction peut permettre de statuer sur deux compétences proches.
-6. Chaque compétence reçoit indépendamment un statut : `À faire`, `À revoir` ou `Validée`.
-7. Une compétence `À revoir` peut être représentée plus tard sans attendre une grosse remise.
-
-Ce fonctionnement doit éviter une file d'attente permanente. La validation ne doit pas se transformer en séance de tutorat prolongée : si la maîtrise n'est pas encore suffisante, l'enseignant indique brièvement ce qui doit être retravaillé et passe à l'étudiant suivant.
-
-## Bloc HTML/CSS — huit compétences, quatre moments de validation
-
-Les rencontres 1 à 5 constituent le bloc HTML/CSS. La programmation JavaScript commence à la rencontre 6.
-
-Les compétences détaillées et le mapping complet des notions se trouvent dans `COMPETENCES_HTML_CSS.md`.
-
-### Compétences
+Les huit compétences techniques sont :
 
 | Code | Compétence |
-|---|---|
+| --- | --- |
 | **WEB-01** | Organiser un projet Web et utiliser les chemins |
 | **WEB-02** | Construire une page HTML correctement structurée |
 | **WEB-03** | Structurer et enrichir le contenu HTML |
@@ -62,142 +47,198 @@ Les compétences détaillées et le mapping complet des notions se trouvent dans
 | **WEB-07** | Mettre en forme une interface avec CSS |
 | **WEB-08** | Organiser l'espace et la disposition des éléments |
 
-### Moments de validation
+La personnalisation ne devient pas WEB-09. Elle est évaluée à l'aide d'une grille distincte et ne crée pas un cinquième passage de validation technique.
+
+## États possibles des compétences techniques
+
+Chaque compétence reçoit indépendamment l'un de ces états :
+
+- **À faire** : aucune preuve suffisante n'a encore été observée;
+- **À revoir** : une tentative a eu lieu, mais certains éléments doivent être retravaillés;
+- **Validée** : la preuve de maîtrise est suffisante et le badge est acquis.
+
+`À revoir` ne constitue pas une pénalité automatique. L'étudiant peut présenter de nouveau la compétence après correction lorsque la logistique le permet.
+
+## Déroulement d'une validation technique
+
+1. L'étudiant consulte la checklist de la compétence.
+2. Il vérifie que la partie concernée fonctionne dans le navigateur.
+3. Il demande une validation pendant une période de travail.
+4. L'enseignant observe rapidement le projet.
+5. L'étudiant explique une partie de son code.
+6. L'enseignant peut demander une petite modification ou correction.
+7. Chaque compétence observée reçoit son propre état.
+
+Une interaction devrait idéalement durer **1 à 3 minutes**. Si la maîtrise n'est pas encore suffisante, l'enseignant indique brièvement ce qui doit être retravaillé sans transformer la validation en longue séance de tutorat.
+
+## Quatre fenêtres de validation
 
 | Moment | Période cible | Compétences |
-|---|---|---|
-| **Validation A — Structure HTML** | Rencontre 2 — priorité opérationnelle | WEB-01, WEB-02 |
-| **Validation B — Contenu et navigation** | Rencontre 2 et début de la rencontre 3 | WEB-03, WEB-04 |
+| --- | --- | --- |
+| **Validation A — Structure HTML** | Rencontre 2 — priorité | WEB-01, WEB-02 |
+| **Validation B — Contenu et navigation** | Rencontre 2 et début de R3 | WEB-03, WEB-04 |
 | **Validation C — CSS de base** | Rencontres 3–4 | WEB-05, WEB-06 |
 | **Validation D — Mise en forme et disposition** | Rencontres 4–5 | WEB-07, WEB-08 |
 
-Ainsi, huit compétences ne produisent pas huit entrevues distinctes par étudiant. Le modèle vise quatre passages principaux, répartis pendant les périodes de travail.
+Ces périodes sont des **fenêtres de disponibilité et de priorité**, pas des échéances rigides.
 
-La capacité de diagnostiquer et corriger sert de méthode de validation plutôt que de compétence autonome. Par exemple, l'enseignant peut demander de réparer un chemin relatif, de cibler plusieurs éléments avec une classe ou d'ajuster un `padding`.
+- La Validation A est prioritaire en R2.
+- La Validation B peut commencer avec les étudiants prêts et se poursuivre au début de R3.
+- Le groupe peut commencer CSS même si certaines B restent à faire ou à revoir.
+- La Validation C commence avec les étudiants prêts pendant R3–R4.
+- La Validation D se termine principalement en R5.
+- Les reprises peuvent se poursuivre sans retarder le début de JavaScript à R6.
 
-### Ordre opérationnel autour des rencontres 2 et 3
+# Rôle du Projet Web
 
-Les périodes indiquées ci-dessus sont des **fenêtres de disponibilité et de priorité**, pas des échéances obligeant tout le groupe à terminer une validation au même moment.
+Le Projet Web fournit un contexte commun et suffisamment riche pour observer les compétences.
 
-Pour éviter de surcharger la rencontre 2 :
+À la fin de R5, il contient au minimum :
 
-1. la **Validation A** est la priorité de la rencontre 2;
-2. la **Validation B** peut commencer en rencontre 2 avec les étudiants prêts, puis se poursuivre au début de la rencontre 3;
-3. il n'est pas nécessaire que toute la Validation B du groupe soit terminée avant d'introduire CSS;
-4. la **Validation C** peut commencer avec les étudiants prêts pendant les rencontres 3–4;
-5. les reprises restent possibles plus tard sans retarder la progression générale du groupe.
+- un thème principal;
+- au moins deux pages de sujet;
+- une page À propos;
+- quatre pages HTML en comptant l'accueil;
+- une navigation complète vers les quatre pages;
+- au moins deux images locales;
+- un attribut `alt` sur chaque élément `<img>`;
+- une feuille CSS externe partagée;
+- des sélecteurs d'élément et des classes réutilisables;
+- au moins un `id` unique ciblé par une règle `#id`;
+- une application du modèle en boîte;
+- un usage simple de Flexbox avec `gap`.
 
-Cette organisation ne change ni les compétences, ni le nombre de moments de validation, ni leur portée. Elle vise seulement à rendre le fonctionnement réaliste pendant une période de trois heures avec plusieurs étudiants à accompagner.
+Les étudiants peuvent ajouter plus de deux pages de sujet.
 
-## Niveaux d'attente dans le matériel
+La page À propos :
 
-Le contenu pédagogique doit être classé en trois niveaux.
+- présente l'étudiant, ses intérêts et son choix de thème dans un site personnel ou informatif;
+- ou présente la description, la mission, les services et les coordonnées fictives d'une entreprise ou organisation;
+- ne doit pas demander de renseignements personnels sensibles.
+
+Ces minimums ne donnent pas automatiquement les badges.
+
+```text
+Résultat présent seulement
+≠
+compétence démontrée
+```
+
+La validation doit montrer que l'étudiant peut :
+
+- retrouver son code;
+- expliquer son fonctionnement;
+- justifier un choix;
+- modifier une valeur ou une structure;
+- corriger une erreur comparable.
+
+## Preuves possibles
+
+### WEB-01 et WEB-02
+
+L'enseignant peut demander de :
+
+- montrer l'organisation du projet;
+- expliquer un chemin relatif;
+- corriger un chemin;
+- identifier `head` et `body`;
+- corriger une erreur d'imbrication.
+
+### WEB-03 et WEB-04
+
+L'enseignant peut demander de :
+
+- expliquer le choix d'un titre, d'une liste ou d'une image;
+- vérifier l'attribut `alt` d'une image;
+- ajouter ou modifier un élément de contenu;
+- expliquer un `href`;
+- réparer un lien de navigation;
+- expliquer le rôle distinct d'une page de sujet et de la page À propos.
+
+### WEB-05 et WEB-06
+
+L'enseignant peut demander de :
+
+- expliquer les chemins différents vers `styles.css`;
+- corriger un `link`;
+- distinguer sélecteur, propriété et valeur;
+- choisir entre un sélecteur d'élément, une classe et un identifiant;
+- ajouter ou réutiliser une classe;
+- créer un `id` unique et sa règle `#id`;
+- vérifier qu'un identifiant n'est pas répété;
+- modifier un sélecteur pour cibler les bons éléments.
+
+L'identifiant fait partie de WEB-06 parce qu'il prépare le travail ultérieur avec JavaScript et le DOM. Il ne constitue pas une neuvième compétence et il n'est pas nécessaire d'en multiplier les occurrences.
+
+### WEB-07 et WEB-08
+
+L'enseignant peut demander de :
+
+- retrouver la règle qui produit un effet visible;
+- modifier une couleur, une bordure ou une propriété typographique;
+- choisir entre `padding` et `margin`;
+- identifier un parent flex et ses enfants directs;
+- ajouter ou modifier un `gap`.
+
+# Personnalisation et appropriation — 20 points
+
+Cette appréciation est réalisée à la fin du bloc HTML/CSS. Elle ne reçoit pas les états d'une compétence technique et ne dépend pas d'une nouvelle entrevue formelle.
+
+| Critère | Points | Ce qui est observé |
+| --- | ---: | --- |
+| Contenu original | 5 | textes personnels, informations pertinentes, images choisies pour le thème |
+| Cohérence du thème | 5 | accueil, pages de sujet et page À propos complémentaires |
+| Décisions personnelles | 5 | noms, organisation, classes, couleurs et présentation adaptés plutôt que copiés |
+| Finition et initiative | 5 | relecture, cohérence, soin des détails et enrichissements pertinents |
+
+## Interprétation
+
+```text
+17 à 20 → appropriation très forte
+13 à 16 → personnalisation claire
+ 9 à 12 → personnalisation limitée
+ 0 à  8 → projet surtout générique, copié ou inachevé
+```
+
+## Règles d'équité pour cette appréciation
+
+- Réutiliser la structure HTML de base et les syntaxes enseignées est normal.
+- La note ne porte pas sur le nombre d'heures supposé.
+- Le talent graphique, l'accès à des logiciels coûteux ou la complexité visuelle ne doivent pas être récompensés en eux-mêmes.
+- Un site simple, cohérent, original et soigneusement terminé peut obtenir la note maximale.
+- Les enrichissements facultatifs peuvent contribuer à l'initiative, mais leur absence n'empêche pas une excellente note si le minimum est fortement personnalisé et bien fini.
+- La comparaison doit porter sur les critères annoncés, pas sur une impression vague du site le plus spectaculaire.
+
+# Niveaux d'attente
 
 ### À maîtriser
 
-La notion fait partie du noyau attendu et peut contribuer directement à une compétence évaluée ou être réinvestie dans l'évaluation finale.
+La notion peut contribuer directement à une compétence technique.
 
 ### Bonne pratique
 
-La notion ou pratique est enseignée et encouragée, mais son absence ne doit pas faire échouer une compétence à elle seule.
-
-Exemples HTML :
-
-- utiliser `<nav>` pour une navigation;
-- utiliser `<main>` pour le contenu principal;
-- utiliser `<header>` et `<footer>` lorsque ces éléments conviennent;
-- fournir un texte alternatif pertinent aux images;
-- valider le HTML et maintenir une indentation lisible.
+La pratique est enseignée et encouragée, mais son absence seule ne bloque pas une validation.
 
 ### Pour aller plus loin
 
-La notion est facultative, clairement identifiée comme non évaluée et ne doit pas être requise dans l'évaluation finale.
+La notion est facultative et ne doit pas être nécessaire pour réussir les validations ou l'évaluation finale.
 
-Exemples CSS :
+`background-image`, `border-radius`, `box-sizing`, `flex-wrap`, Grid, le positionnement et les transitions ne créent pas de critères techniques indépendants dans le bloc actuel.
 
-- détails de `inline` / `inline-block`;
-- `overflow`;
-- positionnement (`position`, `top`, `left`, etc.);
-- Flexbox avancé;
-- Grid;
-- animations et transitions.
-
-Le site doit utiliser un repère visuel et textuel clair pour distinguer ces catégories. La couleur seule ne doit pas servir d'indication.
-
-## Pondération
-
-La pondération finale doit respecter les règles institutionnelles applicables.
-
-Le bloc HTML/CSS des rencontres 1 à 5 représente **30 % de la note finale**.
-
-Cette pondération couvre les huit compétences **WEB-01 à WEB-08**, regroupées dans les quatre moments de validation A à D. Elle remplace l'ancien TP1 de 15 % et reprend aussi une partie du poids auparavant associé à une première évaluation qui combinait HTML/CSS et premières notions de programmation.
-
-La hausse de la pondération ne doit pas augmenter mécaniquement le nombre de moments de validation. Les huit compétences HTML/CSS demeurent regroupées en quatre moments principaux.
-
-La pondération exacte par compétence pourra être détaillée séparément sans modifier le total de 30 % ni créer davantage de moments de validation.
-
-## Projet fil rouge
-
-Un petit site Web évolutif sert de support aux validations successives sans devenir un gros TP remis d'un seul bloc.
-
-Le même projet peut servir de preuve pour :
-
-- environnement et structure de fichiers;
-- HTML;
-- navigation;
-- CSS;
-- ajout de JavaScript;
-- DOM et interactions;
-- puis, si retenus, boucles/tableaux et manipulation de plusieurs éléments.
-
-L'étudiant accumule ainsi des validations sur un produit qu'il améliore, mais la note n'attend pas une remise finale du produit complet.
-
-## Règles pour les compétences
+## Règles d'équité des compétences
 
 Une compétence évaluée doit :
 
 1. être observable;
-2. être formulée avec un verbe d'action;
+2. correspondre à de la matière enseignée;
 3. pouvoir être vérifiée rapidement;
-4. correspondre à de la matière réellement enseignée;
-5. ne pas dépendre d'un contenu déclaré facultatif;
-6. pouvoir être rattachée à un ou plusieurs exercices identifiés dans `SUIVI_CONTENU.md`;
-7. être incluse explicitement dans la portée de l'examen final seulement si elle est considérée essentielle.
+4. ne pas dépendre d'une notion facultative;
+5. porter sur la maîtrise plutôt que sur un simple nombre d'occurrences;
+6. pouvoir être représentée après une première tentative;
+7. être appliquée de façon comparable entre les groupes.
 
-Les critères mécaniques comme « utiliser deux couleurs », « avoir deux classes » ou « insérer deux `div` » peuvent servir à guider la pratique, mais ne doivent pas devenir des compétences distinctes ni imposer un décompte pendant une validation.
+## Après le bloc HTML/CSS
 
-## Application de suivi — besoin fonctionnel
+JavaScript commence à la rencontre 6. Les reprises HTML/CSS demeurent possibles lorsque la logistique le permet, mais aucune nouvelle matière HTML/CSS essentielle ne doit retarder la progression du groupe.
 
-L'application de suivi devra permettre de gérer rapidement les validations individuelles et l'historique des tentatives.
-
-### Vue principale
-
-- étudiants par groupe;
-- compétences regroupées par bloc;
-- états `À faire`, `À revoir`, `Validée`;
-- progression globale;
-- filtre par compétence ou moment de validation;
-- horodatage;
-- courte note facultative;
-- historique des changements de statut.
-
-### Flux minimal
-
-L'étudiant demande une validation. L'enseignant ouvre sa fiche, sélectionne le moment ou les compétences concernées, observe la preuve et enregistre les statuts appropriés.
-
-La conception de l'application est traitée séparément du présent document pédagogique.
-
-## Décisions actuelles
-
-- Une seule évaluation sommative formelle est prévue, à la rencontre 15.
-- L'évaluation progressive par compétences remplace l'idée de dépendre d'un gros TP unique pour obtenir les premières notes.
-- Les rencontres 1 et 2 servent principalement à l'environnement de travail et à HTML.
-- Les rencontres 3, 4 et 5 servent principalement à CSS.
-- La programmation JavaScript commence à la rencontre 6.
-- Le bloc HTML/CSS comprend huit compétences regroupées en quatre moments de validation.
-- La Validation A est prioritaire en rencontre 2; la Validation B peut commencer en rencontre 2 et se poursuivre au début de la rencontre 3.
-- Le bloc HTML/CSS représente **30 % de la note finale**.
-- La pondération exacte par compétence pourra être détaillée ultérieurement sans modifier ce total.
-- Le contenu pédagogique est classé en `À maîtriser`, `Bonne pratique` ou `Pour aller plus loin`.
-- Les notions « Pour aller plus loin » ne font pas partie des validations obligatoires ni de l'examen final.
-- La rencontre 14 demeure un buffer sans nouvelle matière essentielle.
+Une seule évaluation sommative formelle reste prévue à la rencontre 15, conformément à la stratégie générale du cours.

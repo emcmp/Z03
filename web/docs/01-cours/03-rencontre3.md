@@ -7,6 +7,8 @@ import classeHtml from '!!raw-loader!../../static/examples/rencontre3/classe-mis
 import classeCss from '!!raw-loader!../../static/examples/rencontre3/classe-mise-en-valeur/styles.css';
 import couleursR3Html from '!!raw-loader!../../static/examples/rencontre3/couleurs-r3/preview.html';
 import couleursR3Css from '!!raw-loader!../../static/examples/rencontre3/couleurs-r3/styles.css';
+import bordureHtml from '!!raw-loader!../../static/examples/rencontre3/bordure-simple/preview.html';
+import bordureCss from '!!raw-loader!../../static/examples/rencontre3/bordure-simple/styles.css';
 
 # Rencontre 3 - Introduction à CSS
 
@@ -26,8 +28,9 @@ Le but n'est pas d'apprendre toutes les possibilités de CSS en une seule rencon
 - utiliser le bon chemin vers CSS depuis la racine ou depuis un sous-dossier;
 - utiliser un sélecteur d'élément;
 - créer et réutiliser une classe CSS;
-- reconnaître un sélecteur d'identifiant;
-- comprendre un conflit CSS simple entre une règle générale et une classe;
+- créer un identifiant unique et le cibler avec `#id`;
+- choisir entre un sélecteur d'élément, une classe et un identifiant selon le besoin;
+- comprendre un conflit CSS simple entre des règles de précision différente;
 - appliquer quelques propriétés visuelles simples;
 - diagnostiquer une page qui ne reçoit pas sa feuille CSS.
 
@@ -121,8 +124,6 @@ Puis la page HTML charge cette feuille avec `<link>` :
 ```html
 <link rel="stylesheet" href="css/styles.css">
 ```
-
-![Exemple de feuille CSS externe](../../static/img/cours-introduction-css/fichier-css-externe.png)
 
 Une deuxième page peut charger **le même fichier** au lieu de recopier la règle. Une modification dans `styles.css` peut donc mettre à jour plusieurs pages à la fois.
 
@@ -313,15 +314,17 @@ avertissement
 Le rôle du contenu peut rester le même même si vous changez plus tard sa couleur.
 :::
 
-## 7. Et les identifiants `id`?
+## 7. Les identifiants ciblent un élément unique
 
-Vous pourriez aussi rencontrer un identifiant :
+Une **classe** décrit un rôle qui peut être partagé. Un attribut `id` donne plutôt un nom unique à un élément précis de la page.
+
+Dans HTML :
 
 ```html
-<p id="message-principal">Bienvenue.</p>
+<h2 id="message-principal">Bienvenue.</h2>
 ```
 
-En CSS, un identifiant est ciblé avec `#` :
+En CSS, l'identifiant est ciblé avec `#` :
 
 ```css
 #message-principal {
@@ -329,12 +332,23 @@ En CSS, un identifiant est ciblé avec `#` :
 }
 ```
 
-Un `id` doit être unique dans une page.
+Un identifiant doit respecter trois règles simples :
 
-Pour les styles que vous voulez réutiliser, une **classe** est généralement plus appropriée.
+- sa valeur doit être unique dans la page;
+- elle ne doit pas contenir d'espace;
+- le nom utilisé dans CSS doit correspondre exactement à celui du HTML.
 
-:::tip Bonne pratique
-Vous devez reconnaître `id` et `#id`, mais vous n'avez pas à multiplier les identifiants pour mettre votre site en forme.
+```text
+class="mise-en-valeur" → rôle réutilisable → .mise-en-valeur
+id="message-principal" → élément unique     → #message-principal
+```
+
+:::info À maîtriser
+Vous devez être capable de créer un `id` unique, de le cibler avec `#id` et d'expliquer pourquoi une classe convient mieux lorsqu'un style doit être réutilisé.
+:::
+
+:::tip Préparation à JavaScript
+Plus tard, JavaScript devra souvent retrouver un élément précis de la page. Il existe plusieurs façons de sélectionner un élément, mais comprendre les identifiants fournit dès maintenant un repère clair pour cibler un élément unique.
 :::
 
 ## 8. Quand plusieurs règles visent le même élément
@@ -369,6 +383,7 @@ Vous n'avez pas à mémoriser toute la théorie de priorité CSS.
 Pour les cas simples :
 
 - une classe peut remplacer une règle générale sur un type d'élément;
+- un sélecteur d'identifiant est plus précis qu'un sélecteur de classe;
 - lorsque deux règles comparables se contredisent, leur ordre peut aussi avoir un effet;
 - si le résultat vous surprend, cherchez quelles règles ciblent le même élément.
 :::
@@ -426,11 +441,14 @@ h1 {
 
 ### Bordure simple
 
-```css
-.mise-en-valeur {
-  border: 2px solid #b45b5b;
-}
-```
+Voici le code HTML, la règle CSS et le rendu produits par les mêmes fichiers :
+
+<ExampleFrame
+  src="examples/rencontre3/bordure-simple/preview.html"
+  title="Rendu d'un paragraphe entouré d'une bordure simple"
+  html={bordureHtml}
+  css={bordureCss}
+/>
 
 La propriété `border` réunit ici :
 
@@ -439,8 +457,6 @@ La propriété `border` réunit ici :
 solid     → style de trait
 #b45b5b   → couleur
 ```
-
-![Exemple d'une bordure CSS](../../static/img/cours-introduction-css/bordure-rendu.png)
 
 À la rencontre 4, nous verrons plus précisément comment la bordure s'insère dans le **modèle en boîte** avec `padding` et `margin`.
 
@@ -472,7 +488,7 @@ mon-site/
     </header>
 
     <main>
-      <h2>Bienvenue</h2>
+      <h2 id="introduction">Bienvenue</h2>
       <p>Voici une première page mise en forme avec CSS.</p>
       <p class="mise-en-valeur">Cette information reçoit un style particulier.</p>
     </main>
@@ -491,6 +507,10 @@ body {
 h1 {
   color: #245a86;
   text-align: center;
+}
+
+#introduction {
+  color: #245a86;
 }
 
 .mise-en-valeur {
@@ -524,9 +544,9 @@ Si `index.html` est stylé mais qu'une page sous `pages/` ne l'est pas, vérifie
 - Une règle CSS contient un sélecteur et des déclarations.
 - Le chemin vers `styles.css` se lit à partir du fichier HTML actuel.
 - Un sélecteur d'élément vise un type d'élément.
-- Une classe peut être réutilisée et constitue l'outil principal pour cibler un rôle particulier.
-- `id` doit être reconnu, mais une classe convient mieux lorsqu'un style doit être réutilisé.
-- Une classe peut remplacer une règle plus générale dans un conflit simple.
+- Une classe peut être réutilisée et constitue l'outil principal pour cibler un rôle partagé.
+- Un `id` cible un élément unique et se sélectionne avec `#id`.
+- Une classe ou un identifiant peut remplacer une règle plus générale dans un conflit simple.
 - Quelques propriétés suffisent déjà pour donner une identité visuelle au site.
 
 ## Pratique guidée

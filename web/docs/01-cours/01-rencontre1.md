@@ -115,24 +115,7 @@ L'indentation aide à voir la structure et à repérer plus facilement une balis
 
 ## 3. La structure d'un document HTML
 
-Une page HTML complète possède une structure générale semblable à celle-ci :
-
-```html
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma première page</title>
-  </head>
-  <body>
-    <h1>Bienvenue sur ma page</h1>
-    <p>Je viens de créer ma première page Web.</p>
-  </body>
-</html>
-```
-
-Voici ce que ce document produit réellement dans un navigateur, sans CSS :
+Voici la structure générale d'une page HTML complète et le résultat qu'elle produit dans le navigateur :
 
 <ExampleFrame
   src="examples/rencontre1/page-complete/preview.html"

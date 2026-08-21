@@ -1,6 +1,6 @@
 ---
 title: Étape 5 - Intégrer Flexbox et finaliser le site
-description: Utiliser Flexbox dans un besoin concret, réinvestir les chemins avec une image de fond et terminer les validations HTML/CSS.
+description: Utiliser Flexbox dans un besoin concret, corriger les quatre pages et préparer l'appréciation de personnalisation.
 sidebar_position: 6
 ---
 
@@ -8,226 +8,87 @@ sidebar_position: 6
 
 <ProjectStepHero step={5} />
 
-Cette étape termine le noyau HTML/CSS du Projet Web avant le début de JavaScript.
+## Mission
 
-L'objectif n'est pas d'ajouter beaucoup de nouvelles fonctionnalités. Vous allez surtout :
-
-- utiliser **Flexbox simple** dans une situation utile;
-- réinvestir les chemins relatifs avec une image d'arrière-plan CSS;
-- harmoniser les pages;
-- corriger les problèmes encore présents;
-- terminer ou reprendre les validations HTML/CSS.
+Utilisez Flexbox dans **un besoin réel** de votre site, puis faites une passe finale de correction et de personnalisation sur les quatre pages avant le début de JavaScript.
 
 Avant de commencer :
 
 - consultez le **[cours de la rencontre 5](../01-cours/05-rencontre5.md)**;
 - faites l'**[exercice guidé — Flexbox simple](../01-cours/05-rencontre5-exercice-guide.md)**.
 
-## 1. Reprendre le même site
+## 1. Choisir le bon groupe à organiser
 
-Votre projet conserve la même structure générale :
-
-```text
-mon-site/
-├── index.html
-├── css/
-│   └── styles.css
-├── images/
-│   └── ...
-└── pages/
-    └── sujet.html
-```
-
-Si votre site contient une ou plusieurs pages secondaires supplémentaires, conservez-les. Le minimum exigé reste une page sous `pages/`.
-
-Ne créez pas un nouveau site et ne créez pas une nouvelle feuille CSS pour Flexbox.
-
-Tout continue dans votre projet actuel.
-
-## 2. Utiliser Flexbox pour la navigation
-
-Votre navigation possède déjà des liens.
-
-Par exemple :
-
-```html
-<nav class="navigation">
-  <a href="index.html">Accueil</a>
-  <a href="pages/sujet.html">Mon sujet</a>
-</nav>
-```
-
-Si vous avez ajouté une autre page facultative, conservez aussi son lien dans votre navigation.
-
-Dans `styles.css`, vous pouvez organiser les liens ainsi :
-
-```css
-.navigation {
-  display: flex;
-  gap: 20px;
-}
-```
-
-:::info À maîtriser
-Ici :
+La navigation principale est le choix le plus simple :
 
 ```text
 parent flex     → nav.navigation
-enfants directs → les liens <a>
+enfants directs → les quatre liens minimum
 ```
 
-C'est le parent qui reçoit `display: flex`.
-:::
+Vous pouvez aussi utiliser Flexbox pour un autre groupe pertinent, par exemple deux fiches, deux résumés comparables ou un groupe d'informations dans la page À propos.
 
-## 3. Ajuster l'alignement seulement si nécessaire
+Une seule utilisation utile et comprise est suffisante.
 
-Si vous voulez regrouper les liens au centre :
+## Minimum Flexbox
+
+Votre projet doit contenir au moins un parent avec :
 
 ```css
-.navigation {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
+display: flex;
+gap: ...;
 ```
 
-Ou, si la disposition actuelle fonctionne déjà bien, gardez-la simple.
+Vous devez pouvoir :
 
-Vous n'avez pas besoin d'utiliser toutes les propriétés Flexbox vues en classe.
+- identifier le parent;
+- nommer ses enfants directs;
+- expliquer pourquoi `display: flex` est appliqué au parent;
+- modifier le `gap` et prévoir son effet.
 
-:::tip Bonne pratique
-Une règle CSS devrait répondre à un besoin. N'ajoutez pas `justify-content` ou `align-items` simplement pour montrer que vous connaissez leur nom.
-:::
+`justify-content` ou `align-items` peuvent être ajoutés lorsqu'ils résolvent un besoin. Ils ne sont pas obligatoires simplement pour remplir la feuille CSS.
 
-## 4. Utiliser Flexbox ailleurs seulement si cela aide
+## 2. Vérifier le modèle en boîte autour du groupe
 
-Votre site possède peut-être un groupe d'éléments qui gagnerait à être placé côte à côte.
+Flexbox ne remplace pas `padding`, `border` ou `margin`.
 
 Par exemple :
 
-```html
-<div class="cartes">
-  <section class="carte">...</section>
-  <section class="carte">...</section>
-</div>
-```
+- le parent peut utiliser `padding` pour créer de l'espace intérieur;
+- `gap` sépare les enfants flex;
+- les cartes peuvent conserver leur propre bordure et leur propre `padding`.
 
-Vous pourriez utiliser :
+Assurez-vous de savoir quelle règle contrôle le groupe et quelle règle contrôle chaque élément.
 
-```css
-.cartes {
-  display: flex;
-  gap: 20px;
-}
-```
+## 3. Faire une passe complète de correction
 
-Mais ce deuxième usage n'est pas obligatoire.
+### HTML et contenu
 
-Une seule utilisation de Flexbox bien comprise et utile vaut mieux que plusieurs conteneurs flex ajoutés artificiellement.
+- les quatre pages possèdent-elles une structure complète?
+- les titres décrivent-ils réellement chaque page?
+- les contenus des deux sujets sont-ils différents?
+- la page À propos contient-elle une présentation adaptée au type de site?
+- chaque `<img>` possède-t-il un attribut `alt`?
 
-## 5. Garder le modèle en boîte
+### Chemins et navigation
 
-Flexbox organise les enfants d'un parent. Il ne remplace pas `padding`, `border` et `margin`.
+- les quatre destinations sont-elles accessibles depuis chaque page?
+- les images apparaissent-elles depuis la racine et depuis `pages/`?
+- les noms de fichiers correspondent-ils exactement?
 
-Par exemple :
+### CSS et sélecteurs
 
-```css
-.carte {
-  background-color: #eaf3ff;
-  border: 2px solid #245a86;
-  padding: 20px;
-}
+- les quatre pages chargent-elles la même feuille?
+- les classes sont-elles nommées selon leur rôle?
+- une classe peut-elle remplacer deux règles dupliquées?
+- le projet contient-il un `id` unique et une règle `#id` correspondante?
+- les choix de typographie et de couleurs sont-ils cohérents?
 
-.cartes {
-  display: flex;
-  gap: 20px;
-}
-```
+### Espacements
 
-Ici :
-
-- `.carte` contrôle l'apparence et l'espace **dans chaque carte**;
-- `.cartes` contrôle la **disposition du groupe**.
-
-## 6. Réinvestir une image d'arrière-plan
-
-Choisissez une image locale de votre dossier `images/` qui peut servir de **fond décoratif**, par exemple dans un en-tête ou une bannière.
-
-Supposons :
-
-```text
-mon-site/
-├── css/
-│   └── styles.css
-└── images/
-    └── paysage.jpg
-```
-
-Si votre HTML contient :
-
-```html
-<header class="banniere">
-  <h1>Mon sujet</h1>
-</header>
-```
-
-vous pouvez essayer dans `css/styles.css` :
-
-```css
-.banniere {
-  background-image: url("../images/paysage.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 48px 20px;
-}
-```
-
-:::info Le point important est le chemin
-`styles.css` se trouve dans `css/`. Pour atteindre `images/paysage.jpg`, le chemin doit donc d'abord remonter avec `../`.
-
-```text
-css/styles.css
-→ ../
-→ images/
-→ paysage.jpg
-```
-:::
-
-Faites l'essai dans votre site et vérifiez que vous pouvez expliquer le chemin. Vous pouvez ensuite **conserver ou retirer** l'image de fond selon votre sujet et votre mise en page.
-
-:::tip `<img>` reste utile
-N'utilisez pas `background-image` pour remplacer toutes vos images HTML.
-
-Une image qui fait partie du contenu et transmet une information importante devrait normalement rester un `<img>` avec un texte `alt`. L'image de fond sert surtout à la présentation.
-:::
-
-L'utilisation d'une image de fond n'est pas un nouveau critère obligatoire à cocher pour obtenir WEB-07. Elle sert à réinvestir CSS et les chemins relatifs dans un contexte différent.
-
-## 7. Faire une passe complète sur toutes les pages
-
-Ouvrez chaque page dans le navigateur.
-
-Vérifiez :
-
-### HTML et chemins
-
-- la navigation fonctionne-t-elle partout?
-- les images s'affichent-elles?
-- les chemins sont-ils corrects depuis la racine et depuis `pages/`?
-- si vous utilisez `background-image`, son chemin est-il correct depuis `styles.css`?
-- les pages ont-elles une structure HTML complète?
-
-### Feuille CSS
-
-- toutes les pages chargent-elles `styles.css`?
-- les classes sont-elles écrites de la même façon dans HTML et CSS?
-- les styles généraux sont-ils cohérents?
-
-### Modèle en boîte
-
-- le texte est-il collé aux bordures?
-- les blocs ont-ils assez d'espace entre eux?
-- utilisez-vous `padding` et `margin` au bon endroit?
+- le `padding` est-il utilisé pour l'espace intérieur?
+- le `margin` est-il utilisé pour l'espace extérieur?
+- les blocs comparables ont-ils des espacements cohérents?
 
 ### Flexbox
 
@@ -235,93 +96,82 @@ Vérifiez :
 - les enfants directs sont-ils ceux que vous vouliez organiser?
 - `gap` produit-il l'espacement désiré?
 
-## 8. Corriger plutôt qu'ajouter
+## 4. Faire une passe de personnalisation
 
-À cette étape, consacrez une partie importante du temps à la correction.
+Relisez votre site comme si vous le voyiez pour la première fois.
 
-Quelques bons objectifs :
+Vérifiez :
 
-- réparer un lien qui ne fonctionne pas;
-- corriger un chemin CSS ou un chemin dans `url(...)`;
-- enlever une classe devenue inutile;
-- réutiliser une classe au lieu de dupliquer une règle;
-- ajuster un `padding` ou une `margin`;
-- simplifier une mise en forme devenue trop compliquée;
-- vérifier une page que vous aviez moins testée.
+- que les textes sont personnels et ne reprennent pas ceux de l'exercice;
+- que les deux pages de sujet apportent réellement des informations différentes;
+- que la page À propos vous présente ou présente l'organisation fictive de façon crédible;
+- que les images ont été choisies pour votre thème;
+- que les noms de fichiers, les classes et les textes des liens sont adaptés;
+- que les couleurs et la présentation forment un ensemble cohérent;
+- que les détails visibles ont été relus et corrigés.
 
-:::warning Le site n'a pas besoin d'être spectaculaire
-Un petit site simple, cohérent et compris vaut beaucoup plus qu'un site rempli d'effets copiés sans comprendre leur fonctionnement.
+:::info Personnaliser ne signifie pas ajouter des effets avancés
+Un site simple peut recevoir une excellente appréciation s'il contient des choix personnels, du contenu original et une finition soignée.
 :::
 
-## 9. Précontrôle final HTML/CSS
+## Minimum final du Projet Web
 
-Avant de considérer cette étape terminée :
+Avant de considérer le bloc HTML/CSS terminé :
 
-- [ ] `index.html` est à la racine;
-- [ ] les pages secondaires sont organisées de façon cohérente;
-- [ ] les images et les liens utilisent des chemins relatifs corrects;
-- [ ] toutes les pages chargent la même feuille CSS;
-- [ ] je peux expliquer un sélecteur d'élément et une classe;
-- [ ] je peux diagnostiquer un `<link>` CSS incorrect;
-- [ ] je comprends contenu → padding → border → margin;
-- [ ] je peux choisir entre `padding` et `margin`;
-- [ ] j'utilise Flexbox dans au moins une situation utile;
-- [ ] je sais identifier le parent flex et ses enfants directs;
-- [ ] j'utilise `gap` pour espacer des enfants flex;
-- [ ] si j'utilise une image de fond, je peux expliquer son `url(...)` et son chemin depuis le fichier CSS;
-- [ ] je peux expliquer mes principales décisions CSS.
+- [ ] Le site possède au moins quatre pages : accueil, deux pages de sujet et À propos.
+- [ ] Les deux pages de sujet développent des aspects distincts du thème.
+- [ ] La page À propos correspond au type de site choisi.
+- [ ] Le contenu est personnel et différent de l'exercice guidé.
+- [ ] Les quatre pages sont reliées par une navigation complète.
+- [ ] Au moins deux images locales sont utilisées.
+- [ ] Chaque `<img>` possède un attribut `alt`.
+- [ ] Les chemins relatifs fonctionnent depuis la racine et depuis `pages/`.
+- [ ] Les quatre pages chargent `css/styles.css`.
+- [ ] La feuille contient des sélecteurs d'élément et au moins deux classes utiles.
+- [ ] Au moins une classe est réutilisée.
+- [ ] Au moins un élément possède un `id` unique et une règle `#id` correspondante.
+- [ ] Je peux expliquer quand utiliser un sélecteur d'élément, une classe ou un identifiant.
+- [ ] Je peux expliquer une utilisation de `padding`, `border` et `margin`.
+- [ ] Au moins un parent utilise `display: flex` et `gap`.
+- [ ] Je peux expliquer mes principales décisions HTML et CSS.
+- [ ] J'ai relu la grille **Personnalisation et appropriation du projet**.
 
-Cette liste sert à préparer les validations. Elle ne représente pas un décompte automatique de points.
+Cette liste décrit le minimum du projet. La validation technique vérifie aussi votre capacité à expliquer et à modifier le code.
 
-## Badge final du bloc HTML/CSS — Validation D
+## Image d'arrière-plan — enrichissement facultatif
 
-La Validation D porte sur les deux derniers badges du bloc :
+Le cours et l'exercice montrent `background-image` afin de réinvestir un chemin écrit dans CSS.
+
+Dans votre Projet Web, vous pouvez essayer une image de fond décorative, puis la conserver ou la retirer selon votre design.
+
+:::info Statut clair
+`background-image` est **facultatif dans le Projet Web** et n'ajoute pas un critère mécanique à la Validation D.
+
+Une image informative doit normalement rester un élément `<img>` avec un attribut `alt`.
+:::
+
+## Validation D et appréciation finale
+
+Cette rencontre permet de finaliser :
 
 - 🎨 **WEB-07 — Mettre en forme une interface avec CSS**;
 - 📐 **WEB-08 — Organiser l'espace et la disposition des éléments**.
 
-Consultez **[Projet Web — Évaluation](./00-evaluation.md)** pour revoir les checklists détaillées avant d'appeler votre enseignant.
+Les reprises des validations précédentes restent possibles lorsque la logistique le permet.
 
-L'enseignant peut vous demander, par exemple :
+La dimension **Personnalisation et appropriation du projet** est ensuite appréciée séparément sur 20 points. Elle représente 20 % du bloc HTML/CSS et ne constitue pas un neuvième badge technique.
 
-- de modifier un `padding` ou une `margin` et d'expliquer votre choix;
-- d'identifier les parties du modèle en boîte;
-- de rendre un parent flex;
-- d'ajouter ou de modifier un `gap`;
-- d'expliquer quels éléments sont les enfants directs d'un conteneur flex;
-- de corriger une disposition simple devant lui.
+:::note Pour aller plus loin — non évalué séparément
+Vous pouvez :
 
-L'image d'arrière-plan ne devient pas une propriété obligatoire à réciter ou à utiliser pour réussir la Validation D.
+- ajouter une troisième page de sujet ou davantage;
+- enrichir la page À propos;
+- approfondir le contenu d'un sujet;
+- explorer une amélioration visuelle facultative.
 
-## Reprises possibles
-
-Si une compétence précédente est encore `À revoir`, cette rencontre laisse du temps pour la représenter lorsque la logistique le permet.
-
-Votre collection complète est :
-
-- 🗂️ WEB-01 / 🧱 WEB-02;
-- ✍️ WEB-03 / 🔗 WEB-04;
-- 🔌 WEB-05 / 🎯 WEB-06;
-- 🎨 WEB-07 / 📐 WEB-08.
-
-Une reprise ne doit pas empêcher le groupe de commencer JavaScript à la rencontre 6.
-
-:::tip Collection complète
-Quand les huit compétences sont **Validées**, vos huit badges HTML/CSS sont acquis. L'objectif n'est pas d'avoir le site le plus complexe, mais de pouvoir expliquer et modifier ce que vous avez construit.
-:::
-
-:::note Pour aller plus loin — non évalué
-Si votre site fonctionne bien et que vos validations sont prêtes, vous pouvez explorer une amélioration facultative, par exemple :
-
-```css
-flex-wrap: wrap;
-```
-
-Vous pouvez aussi lire sur Grid, le positionnement ou les transitions, mais ces notions ne font pas partie du noyau évalué des rencontres 1 à 5.
+Grid, le positionnement, les transitions et Flexbox avancé ne font pas partie du noyau évalué des rencontres 1 à 5.
 :::
 
 ## Après cette étape
 
-Le noyau HTML/CSS des rencontres 1 à 5 est terminé.
-
-À la rencontre 6, le cours commence **JavaScript**. Vous continuerez à utiliser HTML et CSS, mais aucune nouvelle notion HTML/CSS essentielle ne devrait être nécessaire pour suivre la progression.
+Le noyau HTML/CSS est terminé. À la rencontre 6, le cours commence JavaScript. Votre site pourra continuer à servir de contexte, mais aucune nouvelle notion HTML/CSS essentielle ne devrait être nécessaire.

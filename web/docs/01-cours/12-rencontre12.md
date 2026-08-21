@@ -17,8 +17,8 @@ Cette rencontre conserve le lien naturel entre tableaux et boucles, tout en réd
 - parcourir un tableau;
 - utiliser `push` lorsque cela sert un exercice concret.
 
-## Source héritée à adapter
-
-- [Ancien cours 12 - Tableaux](./12-rencontre6.2.md)
-
 Les opérations comme `pop` ou `splice` peuvent devenir facultatives si aucun exercice essentiel n'en dépend.
+
+:::note Refonte à venir
+Les sources historiques nécessaires à cette rencontre sont conservées hors du site étudiant. Elles seront réévaluées lors de la refonte des rencontres 6 et suivantes.
+:::
