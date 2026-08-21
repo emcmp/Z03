@@ -64,6 +64,8 @@ Votre fichier `index.html` doit contenir la structure générale vue en classe :
 
 Remplacez `Mon sujet` par un titre adapté à votre propre site.
 
+La ligne `<!-- Votre contenu ira ici -->` est un **commentaire HTML** : elle sert de repère dans le code et son texte ne s'affiche pas dans la page. Vous pouvez la conserver, la modifier ou la retirer lorsque vous avez ajouté votre contenu.
+
 ## 4. Construire le contenu de la page
 
 Dans le `<body>`, construisez une première vraie page sur votre sujet.
@@ -124,6 +126,7 @@ Avant de terminer, vérifiez que :
 - [ ] votre `<title>` et votre `<h1>` correspondent à votre sujet;
 - [ ] votre contenu est organisé avec des éléments HTML pertinents;
 - [ ] vos balises sont correctement imbriquées;
+- [ ] vous reconnaissez le commentaire HTML utilisé comme repère dans le gabarit;
 - [ ] vous savez modifier le code, enregistrer et actualiser la page.
 
 Si un de ces points ne fonctionne pas, demandez de l'aide avant la prochaine rencontre.
