@@ -38,6 +38,14 @@ Le but n'est pas de tout mémoriser. Utilisez cette page pour retrouver une synt
 | `<body>` | Contient ce qui est visible dans la page. |
 | `<link>` | Relie la page à une feuille CSS externe. |
 
+### Commentaire HTML
+
+```html
+<!-- Cette note reste dans le code -->
+```
+
+Un commentaire commence par `<!--` et se termine par `-->`. Son texte n'est pas affiché comme contenu normal de la page.
+
 ## Deux raccourcis VS Code très pratiques
 
 ### Générer la structure HTML avec Emmet
@@ -110,7 +118,7 @@ Sur macOS, le raccourci équivalent est généralement `Shift + Option + F`.
 | Texte important | `<strong>Important</strong>` |
 | Emphase | `<em>Mot</em>` |
 | Lien | `<a href="pages/sujet.html">Sujet</a>` |
-| Image | `<img src="images/chat.jpg" alt="Un chat blanc">` |
+| Image | `<img src="images/chat.jpg" alt="Un chat blanc" width="400" height="300">` |
 | Navigation | `<nav>...</nav>` |
 | Contenu principal | `<main>...</main>` |
 | En-tête | `<header>...</header>` |
@@ -131,8 +139,34 @@ Sur macOS, le raccourci équivalent est généralement `Shift + Option + F`.
 | `href` | `<a href="pages/sujet.html">` | Destination d'un lien. |
 | `src` | `<img src="images/chat.jpg">` | Emplacement d'une image. |
 | `alt` | `alt="Un chat blanc"` | Description textuelle d'une image. |
+| `width` | `width="400"` | Largeur d'une image en pixels dans HTML. |
+| `height` | `height="300"` | Hauteur d'une image en pixels dans HTML. |
 | `class` | `class="carte"` | Permet de réutiliser un style CSS. |
-| `id` | `id="intro"` | Identifie un élément unique dans la page. |
+| `id` | `id="intro"` | Identifie un élément unique et peut servir de cible à un lien dans la page. |
+
+:::warning Dimensions d'une image
+Si vous indiquez `width` et `height` ensemble, gardez les proportions de l'image pour éviter de l'étirer ou de l'écraser. Dans les attributs HTML, écrivez un nombre comme `width="400"`, sans `px`.
+:::
+
+## Lien vers une section de la même page
+
+Donnez d'abord un `id` à la cible :
+
+```html
+<h2 id="contact">Contact</h2>
+```
+
+Puis utilisez le même nom après `#` dans le lien :
+
+```html
+<a href="#contact">Aller à la section Contact</a>
+```
+
+```text
+href="#contact" → cible l'élément dont id="contact"
+```
+
+La valeur après `#` doit correspondre exactement à la valeur de `id`.
 
 ## Chemins relatifs : `/` et surtout `../`
 
@@ -286,7 +320,7 @@ CSS :
 }
 ```
 
-Un `id` doit être unique dans une page. Pour un style réutilisable, préférez généralement une classe.
+Un `id` doit être unique dans une page. Il peut aussi servir de cible à un lien comme `href="#intro"`. Pour un style réutilisable, préférez généralement une classe.
 
 ## Propriétés CSS courantes
 
