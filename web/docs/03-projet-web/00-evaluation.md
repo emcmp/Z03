@@ -122,7 +122,8 @@ Le site doit aussi contenir :
 - du contenu original et différent dans chaque page;
 - un attribut `alt` sur chaque élément `<img>`;
 - une feuille CSS externe partagée;
-- des classes réutilisables;
+- des sélecteurs d'élément et des classes réutilisables;
+- au moins un `id` unique ciblé par une règle `#id`;
 - une application du modèle en boîte;
 - une utilisation simple de Flexbox.
 
@@ -140,14 +141,14 @@ Ne publiez pas de renseignements personnels sensibles.
 
 | Compétence | Support minimal dans le projet |
 | --- | --- |
-| **WEB-01** | `index.html` à la racine, trois pages sous `pages/`, ressources dans des dossiers logiques et chemins relatifs fonctionnels |
-| **WEB-02** | quatre documents HTML complets, correctement imbriqués et possédant chacun un titre de page et un contenu visible |
-| **WEB-03** | contenu réel et distinct sur les quatre pages, titres et paragraphes pertinents, au moins une liste utile, au moins deux images locales avec `alt` |
-| **WEB-04** | navigation présente sur chaque page et permettant d'atteindre les quatre pages |
-| **WEB-05** | un seul fichier `css/styles.css` chargé correctement par les quatre pages |
-| **WEB-06** | au moins un sélecteur d'élément et deux classes nommées selon leur rôle; au moins une classe réutilisée |
-| **WEB-07** | une typographie générale, des choix de couleurs cohérents et au moins un bloc mis en valeur avec une propriété visuelle comprise |
-| **WEB-08** | un bloc utilisant volontairement le modèle en boîte et un parent utilisant `display: flex` avec `gap` |
+| 🗂️ **WEB-01** | `index.html` à la racine, trois pages sous `pages/`, ressources dans des dossiers logiques et chemins relatifs fonctionnels |
+| 🧱 **WEB-02** | quatre documents HTML complets, correctement imbriqués et possédant chacun un titre de page et un contenu visible |
+| ✍️ **WEB-03** | contenu réel et distinct sur les quatre pages, titres et paragraphes pertinents, au moins une liste utile, au moins deux images locales avec `alt` |
+| 🔗 **WEB-04** | navigation présente sur chaque page et permettant d'atteindre les quatre pages |
+| 🔌 **WEB-05** | un seul fichier `css/styles.css` chargé correctement par les quatre pages |
+| 🎯 **WEB-06** | au moins un sélecteur d'élément, deux classes nommées selon leur rôle dont une réutilisée, ainsi qu'un `id` unique avec une règle `#id` correspondante |
+| 🎨 **WEB-07** | une typographie générale, des choix de couleurs cohérents et au moins un bloc mis en valeur avec une propriété visuelle comprise |
+| 📐 **WEB-08** | un bloc utilisant volontairement le modèle en boîte et un parent utilisant `display: flex` avec `gap` |
 
 Ces minimums créent des occasions d'observer les compétences. L'enseignant peut utiliser une autre partie équivalente de votre projet si elle démontre mieux votre maîtrise.
 
@@ -227,11 +228,17 @@ Vous devez pouvoir :
 
 Vous devez pouvoir :
 
-- choisir entre un sélecteur d'élément et une classe;
+- choisir entre un sélecteur d'élément, une classe et un identifiant selon le besoin;
 - créer une classe utile;
 - réutiliser une classe lorsque plusieurs éléments partagent le même rôle;
-- relier `class="nom"` dans HTML à `.nom` dans CSS;
+- créer un `id` unique pour un élément précis;
+- relier `class="nom"` à `.nom` et `id="nom"` à `#nom`;
+- vérifier qu'un même `id` n'est pas répété dans la page;
 - modifier un sélecteur pour cibler les bons éléments.
+
+:::info Pourquoi `id` fait partie du noyau
+Comprendre les identifiants prépare le travail avec JavaScript et le DOM, où il faudra souvent retrouver un élément précis avant de le modifier.
+:::
 
 </details>
 
