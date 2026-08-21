@@ -85,7 +85,7 @@ const rules: PreviewRule[] = [
 
 const stagePreviewRules: StagePreviewRule[] = [
   {
-    pathIncludes: "/projet-web/03-rencontre3",
+    pathIncludes: "/projet-web/rencontre3",
     code: `color\nbackground-color\nfont-family\nfont-size\nfont-weight\nfont-style\ntext-align\nborder`,
     src: "examples/projet-web/evolution/etape3/preview.html",
     title: "Exemple de Projet Web à la fin de l'étape 3",
@@ -94,7 +94,7 @@ const stagePreviewRules: StagePreviewRule[] = [
     maxHeight: 560,
   },
   {
-    pathIncludes: "/projet-web/04-rencontre4",
+    pathIncludes: "/projet-web/rencontre4",
     code: `main {\n  max-width: 900px;\n}`,
     src: "examples/projet-web/evolution/etape4/preview.html",
     title: "Exemple de Projet Web à la fin de l'étape 4",
@@ -103,7 +103,7 @@ const stagePreviewRules: StagePreviewRule[] = [
     maxHeight: 620,
   },
   {
-    pathIncludes: "/projet-web/05-rencontre5",
+    pathIncludes: "/projet-web/rencontre5",
     code: `.carte {\n  background-color: #eaf3ff;\n  border: 2px solid #245a86;\n  padding: 20px;\n}\n\n.cartes {\n  display: flex;\n  gap: 20px;\n}`,
     src: "examples/projet-web/evolution/etape5/preview.html",
     title: "Exemple de Projet Web à la fin de l'étape 5",
