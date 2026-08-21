@@ -36,21 +36,17 @@ const refonteSourceDirectory = path.resolve(__dirname, "../refonte");
 const refonteContentDirectory = path.resolve(__dirname, ".refonte-docs");
 
 if (includeRefonteDocs) {
+  fs.rmSync(refonteContentDirectory, { recursive: true, force: true });
   fs.mkdirSync(refonteContentDirectory, { recursive: true });
+
   for (const document of refonteDocuments) {
     const source = path.join(refonteSourceDirectory, document);
     const destination = path.join(refonteContentDirectory, document);
-    const sourceContent = fs.readFileSync(source);
-    const destinationContent = fs.existsSync(destination)
-      ? fs.readFileSync(destination)
-      : null;
-
-    if (!destinationContent || !sourceContent.equals(destinationContent)) {
-      fs.writeFileSync(destination, sourceContent);
-    }
+    fs.copyFileSync(source, destination);
   }
 }
 
+/** @type {NonNullable<import('@docusaurus/types').Config['plugins']>} */
 const plugins = [require.resolve("./plugins/docs-metadata")];
 
 if (includeRefonteDocs) {
@@ -67,6 +63,7 @@ if (includeRefonteDocs) {
   ]);
 }
 
+/** @type {NonNullable<import('@docusaurus/preset-classic').ThemeConfig['navbar']>['items']} */
 const navbarItems = [
   {
     type: "docSidebar",
@@ -211,7 +208,7 @@ const config = {
       metadata: [
         {
           name: "keywords",
-          content: `${siteConfig.nom}, ${siteConfig.description}, informatique, technique, cégep, cegep, édouard-montpetit, edouard-montpetit, édouard montpetit, edouard-montpetit`,
+          content: `${siteConfig.nom}, ${siteConfig.description}, informatique, technique, cégep, cegep, édouard-montpetit, edouard-montpetit, édouard montpetit, edouard montpetit`,
         },
       ],
     }),
