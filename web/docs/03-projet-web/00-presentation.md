@@ -1,110 +1,106 @@
 ---
 title: Projet Web - Présentation
-description: Comprendre le projet Web évolutif, son fonctionnement, les compétences travaillées et les grandes étapes à venir.
+description: Comprendre le projet Web évolutif, son thème, ses exigences minimales et les grandes étapes à venir.
 sidebar_position: 1
 ---
 
 # Projet Web - Présentation
 
-Pendant le cours Z03, vous construirez **votre propre petit site Web** et vous le ferez évoluer progressivement. Au lieu de recommencer un nouvel exercice complet chaque fois, vous garderez le même projet et vous l'améliorerez à mesure que de nouvelles notions seront introduites.
+Pendant les rencontres 1 à 5, vous construirez **un seul site Web personnel** et vous le ferez évoluer à mesure que vous apprendrez HTML et CSS.
 
 <TopicBadges topics={["html", "css", "validation"]} />
 
-<KeyPoint type="method" title="Un seul projet, cinq évolutions">
-Votre site commence très simplement, puis gagne des pages, des images, une identité visuelle, de meilleurs espacements et une disposition Flexbox. Vous voyez donc concrètement ce que chaque nouvelle notion apporte.
+<KeyPoint type="method" title="Un thème, plusieurs pages, cinq évolutions">
+Votre site présente un thème principal, puis développe au moins deux sous-thèmes dans des pages distinctes. Chaque rencontre ajoute une nouvelle capacité au même projet.
 </KeyPoint>
 
-Le projet sert d'abord de contexte de pratique. Il pourra aussi fournir des preuves concrètes lorsque certaines compétences seront validées en classe.
+## Le mandat
 
-## Le principe du projet
+Choisissez un thème qui peut être divisé naturellement en plusieurs parties.
 
-Vous partez d'une page HTML très simple. Au fil des rencontres, votre site gagnera de nouvelles pages, des images, une navigation, du CSS et une mise en page plus organisée.
+| Thème principal | Page d'accueil | Pages secondaires possibles |
+| --- | --- | --- |
+| une équipe sportive | présentation de l'équipe | fiche d'un joueur; fiche d'un autre joueur |
+| une ligue sportive | présentation de la ligue | une équipe; une autre équipe |
+| une saga de films ou de livres | présentation générale | une œuvre; une autre œuvre |
+| une collection de recettes | présentation de la collection | une recette; une autre recette |
+| un groupe musical | présentation du groupe | un album; un autre album |
 
-Pendant les rencontres 1 à 5, le projet sert principalement à apprendre **HTML et CSS**. Plus tard dans la session, le même site pourra aussi être réutilisé lorsque JavaScript et le DOM seront introduits.
+Votre sujet peut être différent. Il doit simplement vous permettre de produire du **contenu réel, distinct et organisé**.
 
-:::info Important
-Le projet n'est pas un gros travail remis une seule fois à la fin. Les compétences sont plutôt observées progressivement pendant que vous travaillez.
+:::warning Le projet n'est pas une copie de l'exercice guidé
+Les exercices guidés utilisent des thèmes et des fichiers communs pour apprendre une méthode.
+
+Votre Projet Web doit utiliser votre propre thème, vos propres textes, vos propres noms de pages, vos propres images et vos propres décisions visuelles.
 :::
 
-## Choisir un sujet
+## Minimum attendu à la fin de la rencontre 5
 
-Choisissez un sujet sur lequel vous pourrez facilement écrire quelques petites sections et trouver du contenu simple.
+```text
+mon-site/
+├── index.html
+├── css/
+│   └── styles.css
+├── images/
+│   └── au moins deux images locales
+└── pages/
+    ├── sujet-1.html
+    └── sujet-2.html
+```
 
-Quelques possibilités :
+Les noms `sujet-1.html` et `sujet-2.html` sont des exemples. Utilisez des noms qui décrivent réellement vos sous-thèmes.
 
-- un sport;
-- un jeu;
-- un artiste ou un genre musical;
-- un animal;
-- un lieu ou un voyage;
-- la cuisine;
-- une collection;
-- une technologie;
-- une entreprise ou un service fictif;
-- tout autre sujet approprié qui vous intéresse.
+Le site final doit posséder :
 
-Le **sujet lui-même n'est pas évalué**. Il sert simplement de contexte pour apprendre à construire un site.
+- **trois pages HTML minimum** : une page d'accueil et deux pages secondaires;
+- une navigation permettant d'atteindre les trois pages depuis chaque page;
+- du contenu différent et pertinent dans chaque page;
+- au moins deux images locales;
+- un attribut `alt` sur chaque élément `<img>`;
+- une feuille CSS externe partagée par toutes les pages;
+- des sélecteurs d'élément et des classes réutilisables;
+- une utilisation comprise de `padding`, `border` et `margin`;
+- au moins une disposition simple avec `display: flex` et `gap`.
 
-### Votre choix peut être provisoire
-
-À la première rencontre, vous pouvez commencer avec une idée temporaire. Vous pourrez confirmer ou ajuster votre sujet avant que le site contienne plusieurs pages.
-
-Choisissez surtout quelque chose qui vous permettra de produire facilement quelques titres, paragraphes, listes et, plus tard, des images et plusieurs pages.
+:::info Minimum du projet et validation des compétences
+Ces exigences rendent le projet suffisamment riche pour montrer vos apprentissages. Elles ne valident pas automatiquement une compétence : vous devrez aussi être capable d'expliquer votre code et d'effectuer une petite modification.
+:::
 
 ## Votre parcours en cinq étapes
 
-Chaque rencontre fait évoluer **le même site**. Vous n'avez pas besoin de penser aux cinq étapes en même temps : concentrez-vous sur la mission actuelle.
-
 <ProjectJourney />
 
-Cliquez sur une étape pour ouvrir ses consignes. Les couleurs servent seulement à repérer la progression; elles ne représentent pas des niveaux de difficulté ou des points.
+- **Rencontre 1** — choisir le thème, planifier deux sous-thèmes et construire la page d'accueil;
+- **Rencontre 2** — créer les deux pages secondaires, ajouter les images et construire la navigation;
+- **Rencontre 3** — relier toutes les pages à une feuille CSS et créer une identité visuelle;
+- **Rencontre 4** — analyser les vrais blocs du site et corriger les espacements;
+- **Rencontre 5** — utiliser Flexbox dans un besoin concret, corriger et finaliser.
 
 ## Évaluation des compétences
 
-Le bloc HTML/CSS est évalué progressivement à l'aide de **huit compétences**, regroupées en quatre moments de validation pendant les rencontres 2 à 5.
-
-L'ensemble de ces validations représente **30 % de la note finale du cours**.
-
-Votre progression est représentée par une petite collection de **huit badges de compétence** :
+Le bloc HTML/CSS est évalué progressivement à l'aide de **huit compétences**, regroupées en quatre fenêtres de validation pendant les rencontres 2 à 5. L'ensemble représente **30 % de la note finale du cours**.
 
 **🗂️ 🧱 ✍️ 🔗 🔌 🎯 🎨 📐**
 
-Un badge est acquis lorsque la compétence correspondante est **Validée**.
-
-La page **[Projet Web — Évaluation](./00-evaluation.md)** contient :
-
-- les huit badges et les compétences correspondantes;
-- le calendrier des validations;
-- ce que chaque compétence englobe;
-- une checklist pour chacune;
-- la marche à suivre avant de demander une validation à votre enseignant.
-
-:::tip À consulter régulièrement
-Avant de demander une validation, ouvrez la page **Projet Web — Évaluation** et utilisez la checklist de la compétence concernée pour vérifier que vous êtes prêt à la présenter.
-:::
+Consultez **[Projet Web — Évaluation](./00-evaluation.md)** pour voir les compétences, les minimums qui permettent de les démontrer, le calendrier et les checklists.
 
 ## Comment travailler sur le projet
 
-Gardez le même dossier de projet pendant la session et travaillez par petites étapes.
+À chaque rencontre :
 
-À chaque séance :
-
-1. lisez la mission de l'étape actuelle;
-2. faites une petite modification;
-3. enregistrez vos fichiers;
-4. actualisez le navigateur;
-5. observez le résultat;
-6. corrigez les problèmes avant d'ajouter beaucoup d'autres choses.
+1. reprenez le même dossier;
+2. lisez la mission de l'étape;
+3. prenez les décisions demandées;
+4. modifiez une petite chose à la fois;
+5. enregistrez et testez dans le navigateur;
+6. corrigez avant d'ajouter de la complexité;
+7. préparez-vous à expliquer ce que vous avez fait.
 
 <KeyPoint type="test" title="Le navigateur est votre tableau de bord">
-Après chaque petit changement, regardez ce qui se passe réellement dans le navigateur. Le projet doit évoluer par petites transformations que vous comprenez.
+Un site simple que vous comprenez vaut davantage qu'un site complexe composé de code copié.
 </KeyPoint>
-
-Lorsque des compétences deviennent disponibles pour validation, l'enseignant pourra vous demander d'expliquer une partie de votre code ou de faire une petite modification afin de vérifier votre compréhension.
 
 ## Commencer
 
-À la rencontre 1, nous construisons d'abord une page ensemble. Ensuite, vous appliquez la même méthode à votre propre site.
-
 1. **[Exercice guidé — Construire une première page HTML](../01-cours/01-rencontre1-exercice-guide.md)**
-2. **[Projet Web — Étape 1 : première version de votre site](./01-rencontre1.md)**
+2. **[Projet Web — Étape 1 : définir votre thème et votre page d'accueil](./01-rencontre1.md)**
