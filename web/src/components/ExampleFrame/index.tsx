@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import CodeBlock from "@theme/CodeBlock";
+import CodeBlock from "@theme-original/CodeBlock";
 import styles from "./ExampleFrame.module.css";
 
 type ExampleFrameProps = {
