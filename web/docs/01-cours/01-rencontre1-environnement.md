@@ -22,7 +22,7 @@ Cette partie ne porte pas encore sur la programmation. Elle sert à préparer un
 - ouvrir **un dossier complet** dans VS Code;
 - reconnaître l'Explorateur de VS Code et créer un fichier dans le bon dossier;
 - comprendre que VS Code modifie de vrais fichiers présents sur l'ordinateur ou dans OneDrive;
-- ouvrir une page HTML dans le navigateur et l'actualiser après une modification.
+- démarrer l'affichage d'une page HTML depuis VS Code et l'actualiser après une modification.
 
 ## 1. Où conserver vos fichiers
 
@@ -239,28 +239,41 @@ Avant de commencer à coder, regardez toujours le nom du dossier affiché dans l
 
 VS Code sert à **modifier le code**. Le navigateur sert à **interpréter et afficher la page Web**.
 
-VS Code n'ouvre pas automatiquement votre fichier HTML dans le navigateur. Pour une première page locale, nous allons simplement ouvrir le vrai fichier `index.html` avec le navigateur.
+Dans l'environnement utilisé pour le cours, le moyen le plus rapide pour démarrer l'affichage de votre page est d'utiliser **F5 dans VS Code**.
 
-### À partir de VS Code
+### Méthode 1 — Démarrer avec F5 depuis VS Code
 
-Dans l'Explorateur de VS Code :
+1. ouvrez `index.html` dans l'éditeur;
+2. enregistrez le fichier avec `Ctrl+S`;
+3. appuyez sur `F5` dans VS Code;
+4. si VS Code vous demande un navigateur ou une configuration au premier démarrage, choisissez celle utilisée en classe.
 
-1. enregistrez `index.html` avec `Ctrl+S`;
-2. faites un clic droit sur `index.html`;
-3. choisissez **Révéler dans l'Explorateur de fichiers** ou la commande équivalente;
-4. dans Windows, double-cliquez sur `index.html`.
+Le navigateur s'ouvre alors avec votre page.
 
-La page s'ouvre alors dans votre navigateur par défaut. L'adresse peut commencer par `file:///` : c'est normal, car vous regardez un fichier local présent sur votre ordinateur.
+:::warning Le raccourci F5 dépend de la fenêtre active
+`F5` n'a pas le même rôle selon l'application dans laquelle vous vous trouvez :
 
-:::info Pas besoin d'une extension pour commencer
-Certaines extensions de VS Code peuvent ouvrir ou actualiser automatiquement une page Web. Nous n'en avons pas besoin pour apprendre le cycle de base : **enregistrer le fichier, ouvrir la page dans le navigateur, puis l'actualiser**.
+- **dans VS Code** : `F5` démarre l'exécution ou l'affichage de la page;
+- **dans le navigateur** : `F5` actualise la page déjà ouverte.
+
+Regardez donc quelle fenêtre est active avant d'appuyer sur `F5`.
 :::
+
+### Méthode 2 — Ouvrir le fichier manuellement
+
+Si vous ne voulez pas utiliser `F5`, ou si le démarrage ne fonctionne pas sur un poste :
+
+1. faites un clic droit sur `index.html` dans l'Explorateur de VS Code;
+2. choisissez **Révéler dans l'Explorateur de fichiers** ou la commande équivalente;
+3. dans Windows, double-cliquez sur `index.html`.
+
+La page s'ouvre alors dans votre navigateur par défaut. Avec cette méthode, l'adresse peut commencer par `file:///` : c'est normal, car vous regardez un fichier local présent sur votre ordinateur.
 
 ### Si le dossier est déjà ouvert dans Windows
 
 Vous pouvez aussi retrouver directement le dossier du projet avec l'Explorateur de fichiers de Windows et double-cliquer sur `index.html`.
 
-Dans les deux cas, assurez-vous d'ouvrir **le bon `index.html`** si vous avez plusieurs exercices ou projets.
+Dans tous les cas, assurez-vous d'ouvrir **le bon `index.html`** si vous avez plusieurs exercices ou projets.
 
 ## 8. Modifier, enregistrer et actualiser
 
@@ -286,7 +299,7 @@ Par exemple, si vous modifiez le texte d'un titre dans VS Code, le navigateur ne
 Vérifiez dans cet ordre :
 
 1. avez-vous enregistré le fichier avec `Ctrl+S`?
-2. avez-vous actualisé la page avec `Ctrl+R` ou `F5`?
+2. avez-vous actualisé la page dans le navigateur avec `Ctrl+R` ou `F5`?
 3. regardez-vous le bon fichier dans le navigateur?
 4. modifiez-vous le bon fichier dans le bon dossier VS Code?
 :::
@@ -311,8 +324,8 @@ Vérifiez que vous pouvez faire chacune de ces actions :
 - [ ] repérer le nom du projet dans l'Explorateur de VS Code;
 - [ ] créer et enregistrer un fichier;
 - [ ] retrouver le même fichier dans Windows;
-- [ ] ouvrir `index.html` dans un navigateur;
-- [ ] utiliser `Ctrl+S`, puis `Ctrl+R` ou `F5` pour voir une modification.
+- [ ] démarrer `index.html` depuis VS Code avec `F5`;
+- [ ] utiliser `Ctrl+S`, puis `Ctrl+R` ou `F5` dans le navigateur pour voir une modification.
 
 Il n'y a aucune validation sommative associée à cette partie. Ces habitudes servent de fondation au reste du cours.
 
