@@ -22,6 +22,8 @@ Le but n'est pas de devenir spécialiste de Flexbox aujourd'hui.
 - comprendre le rôle général de `align-items`;
 - utiliser Flexbox notamment pour une navigation horizontale;
 - réutiliser le modèle en boîte avec des éléments flex;
+- utiliser une image locale comme arrière-plan CSS avec `background-image`;
+- comprendre qu'un chemin dans `url(...)` est calculé à partir du fichier CSS;
 - diagnostiquer une règle Flexbox appliquée au mauvais élément;
 - consolider le site HTML/CSS avant JavaScript.
 
@@ -249,7 +251,84 @@ On combine donc les connaissances :
 .cartes → disposition du groupe
 ```
 
-## 8. L'erreur fréquente : rendre le mauvais élément flex
+## 8. Ajouter une image d'arrière-plan en CSS
+
+Une image peut aussi servir de **fond visuel** à un élément. Dans ce cas, on utilise CSS plutôt que l'élément HTML `<img>`.
+
+Supposons cette structure :
+
+```text
+mon-site/
+├── index.html
+├── css/
+│   └── styles.css
+└── images/
+    └── sentier.svg
+```
+
+Dans `index.html`, on peut avoir :
+
+```html
+<header class="banniere">
+  <h1>Club découverte</h1>
+</header>
+```
+
+Puis, dans `css/styles.css` :
+
+```css
+.banniere {
+  background-image: url("../images/sentier.svg");
+  background-size: cover;
+  background-position: center;
+  padding: 48px 20px;
+}
+```
+
+`background-image` choisit l'image utilisée comme arrière-plan.
+
+`background-size: cover` agrandit l'image pour couvrir la zone disponible, quitte à en couper une partie.
+
+`background-position: center` garde le centre de l'image au centre de la zone.
+
+:::info Le chemin part du fichier CSS
+Le chemin suivant :
+
+```css
+url("../images/sentier.svg")
+```
+
+est écrit dans `css/styles.css`. Le navigateur part donc du dossier `css/` :
+
+```text
+css/styles.css
+→ ../        remonter dans mon-site
+→ images/    entrer dans images
+→ sentier.svg
+```
+
+Le chemin **ne part pas de `index.html`**.
+:::
+
+### `<img>` ou `background-image`?
+
+Utilisez généralement `<img>` lorsque l'image fait partie du **contenu** et transmet une information importante.
+
+Utilisez `background-image` lorsqu'elle sert surtout de **fond décoratif** ou d'ambiance visuelle derrière un élément.
+
+Une image de fond CSS n'a pas d'attribut `alt`. Une image importante pour comprendre la page devrait donc normalement rester une vraie image HTML.
+
+:::tip Au besoin
+Vous pouvez aussi rencontrer :
+
+```css
+background-repeat: no-repeat;
+```
+
+Cette propriété empêche une petite image de se répéter. Avec `background-size: cover`, elle est souvent moins importante dans nos exemples.
+:::
+
+## 9. L'erreur fréquente : rendre le mauvais élément flex
 
 Supposons que vous voulez placer les cartes côte à côte.
 
@@ -281,7 +360,7 @@ Si Flexbox agit sur les mauvais éléments :
 3. vérifiez que `display: flex` est appliqué à ce parent.
 :::
 
-## 9. Ce que nous ne couvrons pas en profondeur
+## 10. Ce que nous ne couvrons pas en profondeur
 
 Flexbox contient beaucoup d'autres propriétés :
 
@@ -317,7 +396,7 @@ flex-wrap: wrap;
 Cette propriété autorise les enfants à passer sur une autre ligne lorsque l'espace manque. Elle n'est pas requise dans la Validation D.
 :::
 
-## 10. La rencontre 5 est aussi une rencontre d'intégration
+## 11. La rencontre 5 est aussi une rencontre d'intégration
 
 Après la démonstration Flexbox, l'objectif principal devient de **consolider votre site**.
 
@@ -331,13 +410,14 @@ Vous devrez revoir :
 - couleurs et typographie;
 - modèle en boîte;
 - `padding`, `border`, `margin`;
-- une utilisation simple de Flexbox.
+- une utilisation simple de Flexbox;
+- une image d'arrière-plan CSS et le chemin écrit dans `url(...)`.
 
 :::warning N'ajoutez pas des effets simplement pour remplir la page
 Un petit site clair, cohérent et compris est préférable à un site contenant beaucoup de propriétés copiées sans comprendre leur rôle.
 :::
 
-## 11. Exemple complet de navigation
+## 12. Exemple complet de navigation
 
 HTML dans `index.html` :
 
@@ -381,6 +461,9 @@ Le CSS reste le même parce que les pages partagent toujours `styles.css`.
 - `justify-content` agit sur l'axe principal;
 - `align-items` agit sur l'autre axe;
 - le modèle en boîte continue de s'appliquer aux éléments flex;
+- `background-image` permet d'utiliser une image locale comme fond visuel;
+- un chemin dans `url(...)` est calculé à partir du fichier CSS qui contient la règle;
+- une image de contenu reste généralement un `<img>`, tandis qu'une image décorative peut devenir un arrière-plan CSS;
 - une seule utilisation Flexbox pertinente et comprise est suffisante pour démontrer le concept;
 - cette rencontre sert aussi à corriger et intégrer tout le bloc HTML/CSS.
 
@@ -400,5 +483,7 @@ Cette rencontre permet de finaliser la **Validation D** :
 - **WEB-08 — Organiser l'espace et la disposition des éléments**.
 
 Les reprises des validations précédentes restent possibles lorsque la logistique le permet.
+
+L'image d'arrière-plan est un outil de mise en forme à comprendre et à réutiliser lorsqu'elle est pertinente. Elle n'ajoute pas un nouveau critère mécanique à la Validation D.
 
 Après cette rencontre, aucune nouvelle notion HTML/CSS essentielle n'est prévue. La rencontre 6 commence JavaScript.
