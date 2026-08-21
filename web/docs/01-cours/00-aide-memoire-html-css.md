@@ -146,6 +146,8 @@ Sur macOS, le raccourci équivalent est généralement `Shift + Option + F`.
 
 :::warning Dimensions d'une image
 Si vous indiquez `width` et `height` ensemble, gardez les proportions de l'image pour éviter de l'étirer ou de l'écraser. Dans les attributs HTML, écrivez un nombre comme `width="400"`, sans `px`.
+
+Pour une largeur en pourcentage, utilisez plutôt CSS, par exemple `width: 80%`.
 :::
 
 ## Lien vers une section de la même page
@@ -332,11 +334,12 @@ Un `id` doit être unique dans une page. Il peut aussi servir de cible à un lie
 | `font-size` | `font-size: 1.2rem;` | Taille du texte. |
 | `font-weight` | `font-weight: bold;` | Graisse du texte. |
 | `font-style` | `font-style: italic;` | Style du texte. |
-| `text-align` | `text-align: center;` | Alignement du texte. |
+| `text-align` | `text-align: center;` | Alignement du contenu en ligne dans une boîte. |
 | `text-decoration` | `text-decoration: none;` | Décoration du texte. |
 | `border` | `border: 2px solid #245a86;` | Bordure. |
-| `width` | `width: 320px;` | Largeur simple. |
-| `max-width` | `max-width: 900px;` | Largeur maximale. |
+| `width` | `width: 320px;` ou `width: 80%;` | Largeur fixe ou relative. |
+| `max-width` | `max-width: 900px;` ou `max-width: 100%;` | Largeur maximale. |
+| `height` | `height: auto;` | Laisse le navigateur calculer la hauteur. |
 
 ## Image de fond avec `background-image`
 
@@ -429,6 +432,57 @@ contenu → padding → border → margin
 24px → gauche et droite
 ```
 
+## Largeurs relatives, images et centrage
+
+### Largeur en pourcentage
+
+```css
+.image-principale {
+  width: 80%;
+  height: auto;
+}
+```
+
+`80%` signifie 80 % de la largeur disponible dans le parent. `height: auto` conserve les proportions de l'image lorsque sa largeur change.
+
+### Empêcher une image de dépasser son conteneur
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+### Centrer une boîte
+
+```css
+main {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+```
+
+Dans `margin: 0 auto`, `0` s'applique en haut et en bas et `auto` aux côtés gauche et droit.
+
+### Centrer le contenu d'une boîte
+
+```css
+.zone-image {
+  text-align: center;
+}
+```
+
+À retenir :
+
+```text
+text-align: center → centre le contenu dans la boîte
+margin: 0 auto     → peut centrer la boîte elle-même
+```
+
+À la rencontre 5, `justify-content: center` servira plutôt à disposer les enfants d'un conteneur Flexbox.
+
 ## Flexbox simple
 
 HTML :
@@ -516,6 +570,25 @@ Si la règle est dans `css/styles.css`, vérifiez le chemin **depuis le dossier 
 
 ```css
 background-image: url("../images/paysage.jpg");
+```
+
+### Une image dépasse son conteneur
+
+Vérifiez si une règle comme celle-ci est appropriée :
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+### Une boîte n'est pas centrée
+
+Vérifiez d'abord que sa largeur est plus petite que l'espace disponible, puis ses marges horizontales :
+
+```css
+margin: 0 auto;
 ```
 
 ### Flexbox agit sur les mauvais éléments
