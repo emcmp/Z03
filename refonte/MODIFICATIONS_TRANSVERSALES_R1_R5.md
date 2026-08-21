@@ -132,9 +132,84 @@ La notion est présentée comme une extension naturelle de `<a>` et `href`, sans
 - [x] exercice Flexbox R5 — l'ancre existante peut être conservée puisqu'elle est maintenant une notion déjà connue;
 - [x] sommaire de couverture.
 
+## 4. Préambule R1 — Expliquer comment afficher et actualiser une page Web
+
+**Statut : ✅ réalisé**
+
+Le préambule annonçait déjà le cycle VS Code → navigateur, mais ne montrait pas concrètement comment passer du fichier `index.html` à la page affichée.
+
+### Niveau retenu
+
+L'étudiant doit savoir faire le cycle de base sans dépendre d'une extension VS Code :
+
+```text
+modifier dans VS Code
+→ Ctrl+S
+→ ouvrir ou revenir au navigateur
+→ Ctrl+R ou F5
+→ observer le résultat
+```
+
+Le préambule explique maintenant :
+
+- que VS Code sert à modifier les fichiers et que le navigateur sert à les afficher;
+- comment faire **Révéler dans l'Explorateur de fichiers** depuis `index.html` dans VS Code;
+- comment ouvrir ensuite `index.html` avec le navigateur par défaut;
+- qu'une adresse locale peut commencer par `file:///`;
+- que `Ctrl+S` enregistre le fichier;
+- que `Ctrl+R` ou `F5` actualise la page;
+- comment diagnostiquer le cas classique « j'ai modifié le code, mais rien ne change ».
+
+### Propagation vérifiée
+
+- [x] préambule R1 — procédure détaillée ajoutée à la fin de la prise en main de VS Code;
+- [x] exercice guidé R1 — le cycle enregistrer → actualiser → observer était déjà pratiqué plusieurs fois;
+- [x] Projet Web R1 — le test dans le navigateur est déjà demandé;
+- [x] compétences / évaluation — aucune nouvelle compétence; il s'agit d'une habitude opérationnelle de fondation;
+- [x] aide-mémoire — pas de nouvelle syntaxe HTML/CSS à ajouter; le préambule reste la référence pour la procédure;
+- [x] sommaire de couverture.
+
+## 5. Rencontre 5 — Enseigner une image d'arrière-plan avec `background-image`
+
+**Statut : ✅ réalisé**
+
+L'aide-mémoire possédait déjà une référence à `background-image`, mais la notion n'était pas enseignée dans une rencontre. Elle est maintenant intégrée à R5 comme réinvestissement de CSS et des chemins relatifs.
+
+### Niveau retenu
+
+Exemple principal :
+
+```css
+.banniere {
+  background-image: url("../images/sentier.svg");
+  background-size: cover;
+  background-position: center;
+  padding: 48px 20px;
+}
+```
+
+À comprendre :
+
+- `background-image` utilise une image comme fond visuel;
+- le chemin dans `url(...)` est calculé à partir du **fichier CSS** qui contient la règle;
+- `background-size: cover` couvre la zone;
+- `background-position: center` centre l'image dans cette zone;
+- `background-repeat: no-repeat` peut être rencontré au besoin, sans devenir une exigence mécanique;
+- une image de contenu reste généralement un `<img>` avec `alt`, alors qu'une image de fond sert surtout à la présentation.
+
+### Propagation vérifiée
+
+- [x] théorie R5 — nouvelle section sur `background-image`, `url(...)`, `cover` et `center`;
+- [x] exercice guidé R5 — téléchargement de `sentier.svg`, ajout d'une bannière et pratique du chemin `../images/sentier.svg` depuis `css/styles.css`;
+- [x] Projet Web R5 — essai d'une image de fond dans le site personnel, avec possibilité de la conserver ou de la retirer selon le design;
+- [x] compétences / évaluation — aucun nouveau critère mécanique ajouté à WEB-07; la notion est un outil de mise en forme à comprendre;
+- [x] aide-mémoire HTML/CSS — une section `background-image` existait déjà et sert maintenant de référence après l'enseignement de R5;
+- [x] exemples / aperçus — un aperçu `ExamplePeek` R5 montre une bannière avec image de fond;
+- [x] sommaire de couverture.
+
 # Vérification particulière après modification
 
-Les trois modifications ci-dessus ont été propagées dans les principaux points de contact R1–R5.
+Les cinq modifications ci-dessus ont été propagées dans les principaux points de contact R1–R5.
 
 Le passage d'audit doit néanmoins rester une étape récurrente lorsque d'autres notions sont ajoutées, retirées ou déplacées. Il faut continuer à vérifier qu'aucune notion n'apparaît « par surprise » dans :
 
