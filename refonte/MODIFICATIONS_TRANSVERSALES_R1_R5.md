@@ -140,30 +140,42 @@ Le préambule annonçait déjà le cycle VS Code → navigateur, mais ne montrai
 
 ### Niveau retenu
 
-L'étudiant doit savoir faire le cycle de base sans dépendre d'une extension VS Code :
+Dans l'environnement utilisé au cours, l'étudiant doit savoir distinguer deux usages de `F5` :
 
 ```text
-modifier dans VS Code
+F5 dans VS Code      → démarrer l'affichage de la page
+F5 dans le navigateur → actualiser la page déjà ouverte
+```
+
+Le cycle normal devient :
+
+```text
+ouvrir index.html dans VS Code
 → Ctrl+S
-→ ouvrir ou revenir au navigateur
-→ Ctrl+R ou F5
+→ F5 dans VS Code pour démarrer la page
+→ modifier le code
+→ Ctrl+S
+→ revenir au navigateur
+→ Ctrl+R ou F5 pour actualiser
 → observer le résultat
 ```
 
 Le préambule explique maintenant :
 
 - que VS Code sert à modifier les fichiers et que le navigateur sert à les afficher;
-- comment faire **Révéler dans l'Explorateur de fichiers** depuis `index.html` dans VS Code;
-- comment ouvrir ensuite `index.html` avec le navigateur par défaut;
-- qu'une adresse locale peut commencer par `file:///`;
+- comment démarrer la page avec `F5` depuis VS Code;
+- qu'au premier démarrage VS Code peut demander le navigateur ou la configuration utilisée en classe;
+- la différence entre `F5` dans VS Code et `F5` dans le navigateur;
+- la méthode manuelle **Révéler dans l'Explorateur de fichiers** comme solution de rechange;
+- qu'une adresse locale ouverte manuellement peut commencer par `file:///`;
 - que `Ctrl+S` enregistre le fichier;
-- que `Ctrl+R` ou `F5` actualise la page;
+- que `Ctrl+R` ou `F5` dans le navigateur actualise la page;
 - comment diagnostiquer le cas classique « j'ai modifié le code, mais rien ne change ».
 
 ### Propagation vérifiée
 
-- [x] préambule R1 — procédure détaillée ajoutée à la fin de la prise en main de VS Code;
-- [x] exercice guidé R1 — le cycle enregistrer → actualiser → observer était déjà pratiqué plusieurs fois;
+- [x] préambule R1 — `F5` depuis VS Code devient la méthode principale, avec ouverture manuelle comme solution de rechange;
+- [x] exercice guidé R1 — première page démarrée avec `F5`, puis cycle enregistrer → actualiser → observer pratiqué plusieurs fois;
 - [x] Projet Web R1 — le test dans le navigateur est déjà demandé;
 - [x] compétences / évaluation — aucune nouvelle compétence; il s'agit d'une habitude opérationnelle de fondation;
 - [x] aide-mémoire — pas de nouvelle syntaxe HTML/CSS à ajouter; le préambule reste la référence pour la procédure;
