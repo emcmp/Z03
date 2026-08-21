@@ -17,7 +17,7 @@
 | Actualiser les règles et la stratégie | Terminé | Comportement final des scripts | `AGENTS.md`, `refonte/STRATEGIE_DEPOTS_ET_MISE_EN_PRODUCTION.md` | Alignement réussi, workflow normal et arrêt sur divergence documentés |
 | Créer le guide opérateur | Terminé | Commandes humaines stabilisées | `refonte/GUIDE_MISE_EN_PRODUCTION.md` | Guide court, sans SHA ni commande Git à recopier |
 | Valider localement | Terminé | Implémentation terminée | Aucun fichier généré suivi | npm, builds, dry-runs, tests et `git diff --check` réussissent |
-| Livrer pour révision | En cours | Validations réussies | PR brouillon personnelle | Commits logiques, push vers `origin` seulement, Actions vertes, `cegep` inchangé |
+| Livrer pour révision | Prêt à réviser | Validations réussies | PR brouillon personnelle | Commits logiques, push vers `origin` seulement, Actions vertes, `cegep` inchangé |
 
 ## Dépendances et contraintes
 
@@ -39,3 +39,4 @@ Le chantier est terminé lorsque les scripts et leurs tests passent localement, 
 - dry-runs de publication et d’annulation : arrêt explicite « Aucun candidat actif », sans écriture;
 - workflow personnel existant du SHA de référence et routes personnelles : vérifiés en lecture seule;
 - site officiel, routes, navigation et ressources statiques : vérifiés en lecture seule.
+- PR brouillon personnelle : `emcmp/Z03#5`; build et typecheck réussis, déploiement ignoré.
