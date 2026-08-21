@@ -17,7 +17,6 @@ Le contenu DOM doit être extrait de plusieurs anciens cours afin de former une 
 - conserver un élément HTML dans une variable lorsque cela simplifie le code;
 - lire ou modifier un attribut concret lorsque requis.
 
-## Sources héritées à réorganiser
-
-- [Ancien cours 3 - DOM et fonctions](./03-rencontre2.1.md)
-- [Ancien cours 14 - Classes et attributs](./14-rencontre7.2.md)
+:::note Refonte à venir
+Les sources historiques nécessaires à cette rencontre sont conservées hors du site étudiant. Elles seront réévaluées lors de la refonte des rencontres 6 et suivantes.
+:::
