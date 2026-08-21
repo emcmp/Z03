@@ -100,6 +100,13 @@ Avec :
 }
 ```
 
+<ExamplePeek
+  src="examples/rencontre4/padding-peek/preview.html"
+  title="Rendu d'une carte avec 20 pixels de padding"
+  label="Voir le padding"
+  height={180}
+/>
+
 Le `padding` éloigne le contenu de la bordure.
 
 Il se trouve **dans la zone colorée de la boîte**.
