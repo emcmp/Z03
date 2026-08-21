@@ -33,11 +33,11 @@ Documents associés :
 
 | Rencontre | Théorie actuelle | Exercice guidé / pratique actuelle | Projet Web / activité actuelle | Compétences / évaluation | Audit |
 |---|---|---|---|---|---|
-| **R1 — Environnement et HTML** | OneDrive, dossiers/fichiers, extensions, ZIP, VS Code, navigateur; éléments HTML, attributs, commentaires, imbrication, structure complète, titres, paragraphes, listes, emphase | Première page complète; commentaire comme repère; cycle modifier/enregistrer/actualiser; erreurs d'imbrication; validation W3C | Création de `mon-site/index.html`, structure complète, commentaire du gabarit expliqué, contenu HTML de base, test navigateur, W3C | Prépare 🗂️ WEB-01 et 🧱 WEB-02 | ✅ |
+| **R1 — Environnement et HTML** | OneDrive, dossiers/fichiers, extensions, ZIP, VS Code, ouverture de `index.html` dans le navigateur, `Ctrl+S`, `Ctrl+R`/`F5`; éléments HTML, attributs, commentaires, imbrication, structure complète, titres, paragraphes, listes, emphase | Première page complète; commentaire comme repère; cycle modifier/enregistrer/actualiser; erreurs d'imbrication; validation W3C | Création de `mon-site/index.html`, structure complète, commentaire du gabarit expliqué, contenu HTML de base, test navigateur, W3C | Prépare 🗂️ WEB-01 et 🧱 WEB-02 | ✅ |
 | **R2 — HTML, fichiers et navigation** | Arborescence, images locales, `src`, `alt`, `width`, `height`, chemins relatifs, `../`, liens, ancres internes avec `id`/`#`, navigation, éléments sémantiques simples, diagnostic | Site de deux pages avec `images/`, `pages/`, image redimensionnée, liens aller-retour, lien vers une section, erreur volontaire de chemin | Ajout d'une page secondaire, image locale et dimensions, navigation bidirectionnelle, lien vers une section, chemins relatifs | 🗂️ WEB-01, 🧱 WEB-02, ✍️ WEB-03, 🔗 WEB-04 | ✅ |
 | **R3 — Introduction à CSS** | Rôle HTML/CSS; CSS intraligne/interne/externe; règle CSS; feuille externe; sélecteurs élément/classe/id; cascade simple; couleurs, typographie, alignement, bordure | Deux pages reliées à une feuille CSS; sélecteurs d'élément; classe réutilisée; cascade simple; diagnostic d'un mauvais `href` CSS | Ajout de `css/styles.css`, feuille partagée, styles généraux, classe, premières décisions visuelles | 🔌 WEB-05, 🎯 WEB-06; reprises ✍️ WEB-03 / 🔗 WEB-04 | ✅; quelques enrichissements facultatifs non pratiqués dans le guidé |
 | **R4 — Modèle en boîte** | Contenu → `padding` → `border` → `margin`; une/deux valeurs; dimensions simples; `width`, `max-width`; conteneurs; `<div>` | Cartes; `padding`, `margin`, `border`; forme à deux valeurs; `width`; diagnostic | Ajustement des espacements du vrai site; classes réutilisées; `<div>` au besoin; `max-width` au besoin | 🎨 WEB-07, 📐 WEB-08; reprises 🔌 WEB-05 / 🎯 WEB-06 | ✅; enrichissements facultatifs à surveiller |
-| **R5 — Flexbox simple et intégration** | Parent/enfants directs; `display: flex`; `gap`; `justify-content`; `align-items`; navigation et cartes; intégration HTML/CSS | Navigation flex; cartes flex; `gap`; `justify-content`; `align-items`; erreur volontaire sur le mauvais parent; ancre interne réinvestie | Flexbox utile dans le site, surtout navigation; intégration et correction de tout le bloc HTML/CSS | 🎨 WEB-07, 📐 WEB-08; reprises de tous les badges | ✅ l'ancre interne utilisée dans le guidé est maintenant enseignée et pratiquée en R2 |
+| **R5 — Flexbox simple et intégration** | Parent/enfants directs; `display: flex`; `gap`; `justify-content`; `align-items`; navigation et cartes; `background-image`, `url(...)`, `background-size: cover`, `background-position: center`; intégration HTML/CSS | Navigation flex; cartes flex; `gap`; `justify-content`; `align-items`; erreur volontaire sur le mauvais parent; ancre interne réinvestie; bannière avec image de fond et chemin depuis `styles.css` | Flexbox utile dans le site; essai d'une image de fond lorsque pertinente; intégration et correction de tout le bloc HTML/CSS | 🎨 WEB-07, 📐 WEB-08; reprises de tous les badges | ✅ image de fond enseignée et pratiquée sans devenir un critère mécanique |
 | **R6 — Variables et JavaScript** | Page actuelle provisoire : JS, variables, affectation, nombres, chaînes, opérateurs, concaténation/interpolation, console | Aucun nouvel exercice guidé Z03 finalisé; ancien labo 2 à migrer | Aucun Projet Web R6 actuellement | Mini-quiz futur préparé par R6–R7; TP2/TP3 plus tard | ⏳ noyau cohérent, activité à reconstruire |
 | **R7 — Séquence à réaligner** | **Site actuel : conditions et logique** | Migration actuelle prévue depuis anciens labos 5 et 6 | Aucun Projet Web R7 | — | 🔴 ne correspond plus au plan de cours décidé : R7 doit devenir DOM + fonctions simples + console/`alert()` |
 | **R8 — Séquence à réaligner** | **Site actuel : fonctions** | Migration actuelle prévue depuis portions des anciens labos 3 et 13 | Aucun Projet Web R8 | **Mini-quiz 10 % au début de R8** | 🔴 le plan de cours prévoit ensuite portée locale/globale + événements + DOM/fonctions; page actuelle à reconstruire |
@@ -68,6 +68,8 @@ Sources :
 | Extensions `.html`, `.css`, `.js`, `.jpg`, `.png`, `.txt`, `.pdf`, `.zip` | ✅ préambule | `.html` utilisé | `.html` utilisé | WEB-01 | Les extensions CSS/JS sont annoncées avant leur utilisation, sans être exigées |
 | ZIP : extraire avant de travailler | ✅ préambule | — | — | Fondation | Théorie opérationnelle, non évaluée séparément |
 | Ouvrir un **dossier complet** dans VS Code | ✅ | ✅ | ✅ | WEB-01 | Aligné |
+| Ouvrir `index.html` dans le navigateur depuis le projet | ✅ procédure VS Code → Explorateur Windows → navigateur | ✅ demandé dès la structure initiale | ✅ test du site | Fondation | Aligné; aucune extension VS Code n'est requise |
+| `Ctrl+S` puis `Ctrl+R` / `F5` | ✅ procédure et dépannage | ✅ répété explicitement | ✅ cycle réutilisé | Fondation | Aligné; le cas « rien ne change » est maintenant diagnostiqué explicitement |
 | Cycle modifier → enregistrer → actualiser → observer | ✅ | ✅ répété explicitement | ✅ | Fondation | Aligné |
 | `<!doctype html>` | ✅ | ✅ | ✅ | WEB-02 | Aligné |
 | `<html lang="fr">` | ✅ | ✅ | ✅ | WEB-02 | Aligné |
@@ -89,7 +91,7 @@ Sources :
 
 ### Conclusion R1
 
-Le noyau évalué WEB-01 / WEB-02 est couvert. Le commentaire HTML utilisé dans le Projet Web est maintenant **présenté puis pratiqué avant son réemploi**.
+Le noyau évalué WEB-01 / WEB-02 est couvert. Le commentaire HTML utilisé dans le Projet Web est maintenant **présenté puis pratiqué avant son réemploi**. Le préambule donne aussi une procédure concrète pour **ouvrir `index.html`, enregistrer puis actualiser le navigateur**, avant que ce cycle soit répété dans l'exercice guidé.
 
 ## Rencontre 2 — Images, chemins et navigation
 
@@ -206,6 +208,10 @@ Sources :
 | Navigation horizontale | ✅ exemple central | ✅ | ✅ usage recommandé | WEB-08 | Aligné |
 | Flexbox sur groupe de cartes | ✅ deuxième exemple | ✅ | facultatif | WEB-08 | Aligné |
 | Modèle en boîte + Flexbox | ✅ | ✅ | ✅ réinvesti | WEB-07 / WEB-08 | Aligné |
+| `background-image: url(...)` | ✅ image de fond décorative | ✅ bannière avec `sentier.svg` | ✅ essai dans le site personnel si pertinent | WEB-07 indirect | Aligné; outil de mise en forme, pas critère mécanique |
+| Chemin d'une image depuis `css/styles.css` | ✅ `../images/sentier.svg` expliqué depuis le fichier CSS | ✅ trajet pratiqué | ✅ vérification proposée | WEB-01 / WEB-05 réinvestis | Très bon réinvestissement des chemins de R2–R3 |
+| `background-size: cover` / `background-position: center` | ✅ rôle simple | ✅ observés dans la bannière | facultatifs selon le design | WEB-07 indirect | Aligné; ne pas transformer les valeurs en catalogue à mémoriser |
+| `<img>` vs image de fond | ✅ contenu important vs fond décoratif | ✅ rappel explicite | ✅ consigne de choix | WEB-03 / WEB-07 indirect | Aligné; une image importante conserve normalement son `alt` dans HTML |
 | Mauvais parent flex — diagnostic | ✅ | ✅ erreur volontaire | peut être demandé en validation | WEB-08 | Très bon alignement |
 | `flex-direction`, `flex-grow`, etc. | explicitement hors noyau | — | — | — | Correctement exclus |
 | `flex-wrap` | pour aller plus loin | pour aller plus loin | pour aller plus loin | — | Correctement non évalué |
@@ -213,7 +219,7 @@ Sources :
 
 ### Conclusion R5
 
-Le noyau WEB-08 est très bien couvert. L'ancre interne du guidé est maintenant un **réinvestissement d'une notion de R2**, et non une syntaxe nouvelle au milieu de l'activité Flexbox.
+Le noyau WEB-08 reste très bien couvert. L'image d'arrière-plan ajoute un **réinvestissement ciblé de WEB-07 et des chemins relatifs** : elle est enseignée, pratiquée et proposée dans le Projet Web, sans devenir une propriété obligatoire pour valider la compétence. L'ancre interne du guidé demeure un réinvestissement d'une notion de R2.
 
 # Audit de la séquence R6 à R15
 
@@ -298,6 +304,8 @@ Les encadrés « Pour aller plus loin » sont explicitement exclus de l'examen.
 | haute | R15 | page indique encore que la pondération finale reste à concevoir | inscrire examen final 30 % | à faire |
 | moyenne | R5 | `href="#activites"` / `id="activites"` apparaissait sans enseignement antérieur | ancres internes ajoutées à R2 et réinvesties en R5 | ✅ corrigé |
 | basse | R1 | commentaire HTML présent dans le gabarit du Projet Web avant explication | commentaire expliqué et pratiqué en R1 avant le Projet Web | ✅ corrigé |
+| basse | Préambule R1 | ouverture de la page et actualisation annoncées sans procédure concrète | procédure VS Code → navigateur + `Ctrl+S` / `Ctrl+R` / `F5` ajoutée | ✅ corrigé |
+| basse | R5 | `background-image` existait dans l'aide-mémoire sans être enseigné dans une rencontre | notion enseignée et pratiquée en R5, puis réinvestie dans le Projet Web | ✅ corrigé |
 
 # Processus de validation d'une rencontre
 
