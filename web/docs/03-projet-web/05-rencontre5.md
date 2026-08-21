@@ -1,6 +1,6 @@
 ---
 title: Étape 5 - Intégrer Flexbox et finaliser le site
-description: Utiliser Flexbox dans un besoin concret, corriger les trois pages et terminer les validations HTML/CSS.
+description: Utiliser Flexbox dans un besoin concret, corriger les quatre pages et préparer l'appréciation de personnalisation.
 sidebar_position: 6
 ---
 
@@ -10,7 +10,7 @@ sidebar_position: 6
 
 ## Mission
 
-Utilisez Flexbox dans **un besoin réel** de votre site, puis faites une passe finale de correction sur les trois pages avant le début de JavaScript.
+Utilisez Flexbox dans **un besoin réel** de votre site, puis faites une passe finale de correction et de personnalisation sur les quatre pages avant le début de JavaScript.
 
 Avant de commencer :
 
@@ -23,10 +23,10 @@ La navigation principale est le choix le plus simple :
 
 ```text
 parent flex     → nav.navigation
-enfants directs → les trois liens
+enfants directs → les quatre liens minimum
 ```
 
-Vous pouvez aussi utiliser Flexbox pour un autre groupe pertinent, par exemple deux fiches ou deux résumés comparables.
+Vous pouvez aussi utiliser Flexbox pour un autre groupe pertinent, par exemple deux fiches, deux résumés comparables ou un groupe d'informations dans la page À propos.
 
 Une seule utilisation utile et comprise est suffisante.
 
@@ -64,20 +64,21 @@ Assurez-vous de savoir quelle règle contrôle le groupe et quelle règle contr�
 
 ### HTML et contenu
 
-- les trois pages possèdent-elles une structure complète?
+- les quatre pages possèdent-elles une structure complète?
 - les titres décrivent-ils réellement chaque page?
-- les contenus des deux sous-thèmes sont-ils différents?
+- les contenus des deux sujets sont-ils différents?
+- la page À propos contient-elle une présentation adaptée au type de site?
 - chaque `<img>` possède-t-il un attribut `alt`?
 
 ### Chemins et navigation
 
-- les trois destinations sont-elles accessibles depuis chaque page?
+- les quatre destinations sont-elles accessibles depuis chaque page?
 - les images apparaissent-elles depuis la racine et depuis `pages/`?
 - les noms de fichiers correspondent-ils exactement?
 
 ### CSS
 
-- les trois pages chargent-elles la même feuille?
+- les quatre pages chargent-elles la même feuille?
 - les classes sont-elles nommées selon leur rôle?
 - une classe peut-elle remplacer deux règles dupliquées?
 - les choix de typographie et de couleurs sont-ils cohérents?
@@ -94,24 +95,45 @@ Assurez-vous de savoir quelle règle contrôle le groupe et quelle règle contr�
 - les enfants directs sont-ils ceux que vous vouliez organiser?
 - `gap` produit-il l'espacement désiré?
 
+## 4. Faire une passe de personnalisation
+
+Relisez votre site comme si vous le voyiez pour la première fois.
+
+Vérifiez :
+
+- que les textes sont personnels et ne reprennent pas ceux de l'exercice;
+- que les deux pages de sujet apportent réellement des informations différentes;
+- que la page À propos vous présente ou présente l'organisation fictive de façon crédible;
+- que les images ont été choisies pour votre thème;
+- que les noms de fichiers, les classes et les textes des liens sont adaptés;
+- que les couleurs et la présentation forment un ensemble cohérent;
+- que les détails visibles ont été relus et corrigés.
+
+:::info Personnaliser ne signifie pas ajouter des effets avancés
+Un site simple peut recevoir une excellente appréciation s'il contient des choix personnels, du contenu original et une finition soignée.
+:::
+
 ## Minimum final du Projet Web
 
 Avant de considérer le bloc HTML/CSS terminé :
 
-- [ ] Le site possède au moins trois pages : accueil et deux sous-thèmes.
+- [ ] Le site possède au moins quatre pages : accueil, deux pages de sujet et À propos.
+- [ ] Les deux pages de sujet développent des aspects distincts du thème.
+- [ ] La page À propos correspond au type de site choisi.
 - [ ] Le contenu est personnel et différent de l'exercice guidé.
-- [ ] Les trois pages sont reliées par une navigation complète.
+- [ ] Les quatre pages sont reliées par une navigation complète.
 - [ ] Au moins deux images locales sont utilisées.
 - [ ] Chaque `<img>` possède un attribut `alt`.
 - [ ] Les chemins relatifs fonctionnent depuis la racine et depuis `pages/`.
-- [ ] Les trois pages chargent `css/styles.css`.
+- [ ] Les quatre pages chargent `css/styles.css`.
 - [ ] La feuille contient des sélecteurs d'élément et au moins deux classes utiles.
 - [ ] Au moins une classe est réutilisée.
 - [ ] Je peux expliquer une utilisation de `padding`, `border` et `margin`.
 - [ ] Au moins un parent utilise `display: flex` et `gap`.
 - [ ] Je peux expliquer mes principales décisions HTML et CSS.
+- [ ] J'ai relu la grille **Personnalisation et appropriation du projet**.
 
-Cette liste décrit le minimum du projet. La validation vérifie aussi votre capacité à expliquer et à modifier le code.
+Cette liste décrit le minimum du projet. La validation technique vérifie aussi votre capacité à expliquer et à modifier le code.
 
 ## Image d'arrière-plan — enrichissement facultatif
 
@@ -125,7 +147,7 @@ Dans votre Projet Web, vous pouvez essayer une image de fond décorative, puis l
 Une image informative doit normalement rester un élément `<img>` avec un attribut `alt`.
 :::
 
-## Validation D
+## Validation D et appréciation finale
 
 Cette rencontre permet de finaliser :
 
@@ -134,15 +156,17 @@ Cette rencontre permet de finaliser :
 
 Les reprises des validations précédentes restent possibles lorsque la logistique le permet.
 
-:::note Pour aller plus loin — non évalué
+La dimension **Personnalisation et appropriation du projet** est ensuite appréciée séparément sur 20 points. Elle représente 20 % du bloc HTML/CSS et ne constitue pas un neuvième badge technique.
+
+:::note Pour aller plus loin — non évalué séparément
 Vous pouvez :
 
-- ajouter une quatrième page;
-- enrichir un sous-thème;
-- expérimenter avec `flex-wrap: wrap`;
+- ajouter une troisième page de sujet ou davantage;
+- enrichir la page À propos;
+- approfondir le contenu d'un sujet;
 - explorer une amélioration visuelle facultative.
 
-Grid, le positionnement et les transitions ne font pas partie du noyau évalué des rencontres 1 à 5.
+Grid, le positionnement, les transitions et Flexbox avancé ne font pas partie du noyau évalué des rencontres 1 à 5.
 :::
 
 ## Après cette étape
