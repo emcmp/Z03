@@ -1,6 +1,6 @@
 ---
-title: Étape 3 - Ajouter une identité visuelle avec CSS
-description: Créer une feuille CSS externe commune, la relier à toutes les pages et commencer la mise en forme du site.
+title: Étape 3 - Créer une identité visuelle partagée
+description: Relier les quatre pages à une feuille CSS externe, utiliser des classes et un identifiant, puis créer des styles adaptés au thème du site.
 sidebar_position: 4
 ---
 
@@ -8,40 +8,18 @@ sidebar_position: 4
 
 <ProjectStepHero step={3} />
 
-Cette activité poursuit **le même site** commencé aux rencontres 1 et 2.
+## Mission
 
-Vous allez maintenant ajouter une feuille CSS externe pour donner une apparence cohérente à toutes vos pages, sans recopier les mêmes styles dans chaque fichier HTML.
+Ajoutez une seule feuille CSS externe à votre site de quatre pages, utilisez des sélecteurs adaptés au besoin, puis créez une identité visuelle cohérente avec votre thème et votre page À propos.
 
 Avant de commencer :
 
 - consultez le **[cours de la rencontre 3](../01-cours/03-rencontre3.md)**;
 - faites l'**[exercice guidé — Première feuille CSS](../01-cours/03-rencontre3-exercice-guide.md)**.
 
-## 1. Reprendre exactement le même projet
+## Structure minimale
 
-Votre projet ressemble probablement à ceci :
-
-```text
-mon-site/
-├── index.html
-├── images/
-│   └── image1.jpg
-└── pages/
-    └── sujet.html
-```
-
-Si vous avez ajouté une deuxième page secondaire à la rencontre 2, conservez-la. Une seule page sous `pages/` suffit toutefois pour poursuivre le Projet Web.
-
-Ne recommencez pas un nouveau site.
-
-Aujourd'hui, vous allez simplement ajouter :
-
-```text
-css/
-└── styles.css
-```
-
-Votre projet devient donc :
+Votre projet devient :
 
 ```text
 mon-site/
@@ -49,231 +27,172 @@ mon-site/
 ├── css/
 │   └── styles.css
 ├── images/
-│   └── image1.jpg
+│   └── ...
 └── pages/
-    └── sujet.html
+    ├── sous-theme-1.html
+    ├── sous-theme-2.html
+    └── apropos.html
 ```
 
-## 2. Créer `css/styles.css`
+Créez `css/styles.css`. Les quatre pages doivent charger ce même fichier.
 
-Créez le dossier `css`, puis le fichier `styles.css` à l'intérieur.
+## 1. Relier les quatre pages
 
-Commencez avec quelques règles simples, par exemple :
+Ajoutez un `<link>` dans le `<head>` de chaque document.
+
+Le cours explique les deux chemins nécessaires :
+
+- depuis `index.html`;
+- depuis une page située sous `pages/`.
+
+Votre première vérification consiste à modifier une règle générale et à confirmer que **les quatre pages** changent.
+
+## 2. Définir les styles généraux
+
+Votre feuille doit au minimum contenir des règles générales pour :
+
+- la typographie du `body`;
+- la couleur du texte ou de l'arrière-plan général;
+- l'apparence des titres principaux;
+- l'apparence des liens ou de la navigation.
+
+Choisissez des valeurs adaptées à votre sujet plutôt que de conserver automatiquement les couleurs de l'exercice guidé.
+
+## 3. Créer deux classes utiles
+
+Créez au moins **deux classes nommées selon leur rôle**.
+
+Exemples de rôles :
+
+```text
+introduction
+mise-en-valeur
+fiche
+information-importante
+citation
+profil
+coordonnees
+```
+
+Au moins une de ces classes doit être réutilisée sur plusieurs éléments ou plusieurs pages.
+
+:::warning Noms de classes
+Évitez un nom qui décrit seulement une couleur, comme `texte-rouge`.
+
+Un nom comme `information-importante` reste pertinent même si vous changez plus tard la couleur.
+:::
+
+## 4. Créer un identifiant unique
+
+Choisissez un élément qui joue un rôle unique dans l'une de vos pages, par exemple :
+
+- le message principal de l'accueil;
+- le titre d'une section importante;
+- une courte mission dans la page À propos;
+- une information particulière qui ne se répète pas.
+
+Ajoutez-lui un `id` clair dans HTML :
+
+```html
+<h2 id="message-principal">Bienvenue</h2>
+```
+
+Puis ciblez ce même élément dans `styles.css` :
 
 ```css
-body {
-  font-family: Arial, sans-serif;
-  color: #263238;
-}
-
-h1 {
-  color: #245a86;
+#message-principal {
+  color: darkgreen;
 }
 ```
 
-Vous pourrez ensuite modifier les valeurs pour qu'elles correspondent au sujet et à l'ambiance de votre site.
+Votre projet doit donc contenir **au moins un `id` unique utilisé volontairement et une règle `#id` correspondante**.
 
 :::info À maîtriser
-La feuille CSS doit être un vrai fichier du projet. Vous devez être capable de montrer où elle se trouve et d'expliquer comment chaque page HTML l'atteint.
+Une classe peut être réutilisée. Un `id` doit être unique dans la page.
+
+Vous devez pouvoir montrer l'élément HTML, retrouver la règle CSS correspondante et expliquer pourquoi vous avez choisi un identifiant plutôt qu'une classe.
 :::
 
-## 3. Relier la page d'accueil
-
-Dans `<head>` de `index.html`, ajoutez :
-
-```html
-<link rel="stylesheet" href="css/styles.css">
-```
-
-Enregistrez puis actualisez la page dans le navigateur.
-
-Si rien ne change, vérifiez d'abord le chemin et le nom du fichier.
-
-## 4. Relier les pages du dossier `pages`
-
-Une page située dans `pages/` doit d'abord remonter d'un dossier.
-
-Dans chaque page située sous `pages/`, ajoutez :
-
-```html
-<link rel="stylesheet" href="../css/styles.css">
-```
-
-:::warning Le chemin n'est pas identique sur toutes les pages
-Depuis `index.html` :
-
-```text
-css/styles.css
-```
-
-Depuis une page sous `pages/` :
-
-```text
-../css/styles.css
-```
-
-La feuille CSS est pourtant exactement la même.
+:::tip Préparation à JavaScript
+Cette pratique prépare le travail avec le DOM : plus tard, JavaScript devra souvent retrouver un élément précis pour le modifier.
 :::
 
-Testez **toutes les pages** avant de continuer.
+## 5. Construire une identité visuelle simple
 
-## 5. Définir quelques styles généraux
+Votre site doit montrer au moins trois décisions visuelles que vous comprenez, par exemple :
 
-Choisissez quelques éléments que vous voulez harmoniser sur tout le site.
-
-Par exemple :
-
-```css
-body {
-  font-family: Arial, sans-serif;
-  color: #263238;
-}
-
-h1 {
-  color: #245a86;
-  text-align: center;
-}
-
-h2 {
-  color: #3f6f91;
-}
-```
-
-Vous n'avez pas besoin de multiplier les propriétés.
-
-L'objectif est de voir que **la même règle agit sur plusieurs pages**.
-
-## 6. Utiliser une classe de façon volontaire
-
-Choisissez un type de contenu qui mérite un style particulier dans votre site :
-
-- une information importante;
-- une courte introduction;
-- une note spéciale;
-- une citation;
-- un message à retenir.
-
-Ajoutez une classe claire dans HTML, par exemple :
-
-```html
-<p class="mise-en-valeur">Cette information est particulièrement importante.</p>
-```
-
-Puis ajoutez la règle correspondante :
-
-```css
-.mise-en-valeur {
-  color: #7a1f1f;
-  background-color: #f7eaea;
-  font-weight: bold;
-  border: 2px solid #b45b5b;
-}
-```
-
-Le nom `mise-en-valeur` est seulement un exemple. Choisissez un nom qui décrit le **rôle** du contenu plutôt que son apparence exacte.
-
-:::tip Bonne pratique
-Une classe est particulièrement utile lorsqu'un même rôle visuel revient à plusieurs endroits.
-
-Évitez des noms comme `texte-rouge` si la couleur pourrait changer plus tard. Un nom comme `important`, `intro` ou `mise-en-valeur` décrit mieux l'intention.
-:::
-
-## 7. Donner une identité visuelle simple au site
-
-Vous pouvez maintenant ajuster quelques propriétés parmi celles vues en classe :
-
-```css
-color
-background-color
-font-family
-font-size
-font-weight
-font-style
-text-align
-border
-```
-
-Il n'est pas nécessaire d'utiliser toutes ces propriétés.
-
-Choisissez plutôt quelques décisions cohérentes :
-
-- une famille de caractères lisible;
+- une famille de caractères générale;
 - une couleur principale pour les titres;
-- une couleur de texte facile à lire;
-- un arrière-plan lorsque cela apporte quelque chose;
-- une classe spéciale pour un type de contenu;
-- une bordure simple lorsque vous voulez faire ressortir un élément.
+- une couleur ou un arrière-plan pour un type de contenu;
+- une bordure simple;
+- un alignement de texte choisi volontairement;
+- une apparence cohérente pour les liens.
 
-:::warning N'essayez pas encore de tout placer parfaitement
-`margin`, `padding`, dimensions et disposition avec Flexbox seront abordés aux rencontres 4 et 5.
+Vous n'avez pas à utiliser toutes les propriétés du cours.
 
-Aujourd'hui, concentrez-vous sur la **feuille CSS, les chemins et les sélecteurs**.
+:::info L'objectif n'est pas de décorer au hasard
+Vous devez pouvoir retrouver la règle qui produit chaque changement important et expliquer pourquoi vous l'avez choisie.
 :::
 
-## 8. Vérifier que la feuille est réellement partagée
+## 6. Personnaliser aussi la page À propos
 
-Faites un petit test :
+La page À propos doit appartenir visuellement au même site, mais elle peut posséder un bloc adapté à son contenu, par exemple :
 
-1. modifiez la couleur de vos `h1` dans `styles.css`;
-2. enregistrez;
-3. actualisez `index.html`;
-4. actualisez aussi vos pages sous `pages/`.
+- une courte présentation;
+- une fiche de profil;
+- une mission d'entreprise;
+- un groupe de services;
+- des coordonnées fictives.
 
-La même modification devrait apparaître partout où la règle s'applique.
+Réutilisez les mêmes règles générales et créez une classe supplémentaire seulement si le rôle du contenu le justifie.
 
-Si une seule page ne change pas, vérifiez son `<link>`.
+## Décisions à prendre
 
-## 9. Précontrôle avant la Validation C
+- Quelle ambiance visuelle correspond au thème?
+- Quelles règles doivent s'appliquer partout?
+- Quel contenu joue un rôle spécial et mérite une classe?
+- Quel élément est réellement unique et mérite un `id`?
+- Une classe peut-elle être réutilisée au lieu de créer une règle différente pour chaque page?
+- Les quatre pages ressemblent-elles au même site?
+- La présentation de la page À propos correspond-elle à son contenu?
 
-Avant de demander une validation, vérifiez que :
+## Tests à effectuer
 
-- [ ] vous travaillez toujours dans le site commencé aux rencontres précédentes;
-- [ ] `css/styles.css` existe réellement;
-- [ ] `index.html` charge `css/styles.css`;
-- [ ] les pages dans `pages/` chargent `../css/styles.css`;
-- [ ] toutes vos pages reçoivent la feuille CSS;
-- [ ] votre feuille contient au moins des règles générales compréhensibles;
-- [ ] vous savez expliquer ce qu'est un sélecteur d'élément;
-- [ ] vous utilisez une classe pour un besoin réel de votre site;
-- [ ] vous pouvez expliquer le lien entre `class="..."` dans HTML et `.nom-classe` dans CSS;
-- [ ] vous savez quoi vérifier si une page perd sa mise en forme.
+- [ ] `styles.css` existe dans `css/`.
+- [ ] `index.html` charge la feuille avec le bon chemin.
+- [ ] Les trois pages sous `pages/` chargent la même feuille.
+- [ ] Une modification générale apparaît sur les quatre pages.
+- [ ] La feuille utilise au moins un sélecteur d'élément.
+- [ ] La feuille contient au moins deux classes utiles.
+- [ ] Au moins une classe est réutilisée.
+- [ ] Au moins un élément possède un `id` unique.
+- [ ] Une règle `#id` cible exactement cet élément.
+- [ ] Les noms des classes et de l'identifiant correspondent exactement dans HTML et CSS.
+- [ ] Les couleurs et la typographie restent lisibles.
+- [ ] Le contenu et la navigation fonctionnent toujours.
 
-La validation porte sur votre compréhension et votre capacité à intervenir dans le code. Elle ne consiste pas à compter le nombre de propriétés ou de classes.
+## Validations disponibles
 
-## Badges disponibles — Validation C
+Vous pouvez terminer la Validation B si nécessaire :
 
-À cette étape, vous pouvez commencer à acquérir les badges CSS suivants :
+- ✍️ **WEB-03**;
+- 🔗 **WEB-04**.
+
+Vous pouvez aussi commencer la Validation C :
 
 - 🔌 **WEB-05 — Associer correctement une feuille CSS externe**;
 - 🎯 **WEB-06 — Cibler les éléments avec des sélecteurs appropriés**.
 
-Consultez **[Projet Web — Évaluation](./00-evaluation.md)** pour voir les checklists détaillées de ces badges et le calendrier complet.
+Pour WEB-06, vous devez pouvoir distinguer un sélecteur d'élément, une classe réutilisable et un identifiant unique.
 
-L'enseignant peut, par exemple, vous demander :
+Cette étape contribue aussi à la dimension **Personnalisation et appropriation du projet** par vos choix de couleurs, de typographie, de classes, d'identifiant et de présentation.
 
-- d'expliquer pourquoi deux pages utilisent des chemins CSS différents;
-- de corriger un `<link>` qui pointe au mauvais endroit;
-- d'ajouter une classe à un élément;
-- de modifier une règle pour cibler le bon groupe d'éléments;
-- d'expliquer pourquoi une classe remplace une règle plus générale.
+:::note Pour aller plus loin — non évalué séparément
+Vous pouvez créer une troisième classe utile, enrichir la page À propos ou expérimenter avec une autre combinaison de couleurs.
 
-Vous n'êtes pas obligé de faire valider les deux compétences au même moment. Une compétence `À revoir` pourra être représentée plus tard.
-
-:::tip Collection de badges
-Si les badges ✍️ WEB-03 ou 🔗 WEB-04 ne sont pas encore acquis, vous pouvez aussi terminer leur validation au début de cette rencontre.
-:::
-
-:::note Pour aller plus loin — non évalué
-Si votre feuille CSS fonctionne partout et que vous êtes prêt pour la validation, vous pouvez :
-
-- créer une deuxième classe utile;
-- expérimenter avec une autre combinaison de couleurs;
-- essayer `text-decoration` sur un élément où son effet est pertinent;
-- comparer une couleur nommée et un code hexadécimal.
-
-N'utilisez pas encore Flexbox, Grid, positionnement ou des effets complexes comme exigence du projet.
+N'utilisez pas encore Flexbox, Grid ou le positionnement comme exigences de votre projet.
 :::
 
 ## Prochaine étape
 
-À la rencontre 4, vous conserverez cette même feuille CSS et vous apprendrez à mieux contrôler **l'espace autour du contenu** avec le modèle en boîte, `padding`, `border` et `margin`.
+À la rencontre 4, vous conserverez cette feuille et analyserez les vrais blocs de vos quatre pages pour corriger les espaces intérieurs et extérieurs.

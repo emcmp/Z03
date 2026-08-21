@@ -17,6 +17,6 @@ Cette rencontre reprend l'ancien contenu sur les événements et les styles DOM,
 - modifier une propriété simple directement seulement lorsque cela est pertinent;
 - consolider les fonctions et le DOM.
 
-## Source héritée à réorganiser
-
-- [Ancien cours 4 - Événements et styles](./04-rencontre2.2.md)
+:::note Refonte à venir
+Les sources historiques nécessaires à cette rencontre sont conservées hors du site étudiant. Elles seront réévaluées lors de la refonte des rencontres 6 et suivantes.
+:::

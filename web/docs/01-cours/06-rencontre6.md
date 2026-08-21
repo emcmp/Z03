@@ -20,6 +20,6 @@ La programmation commence ici de façon confirmée. Le détail de la séquence J
 
 Les reprises HTML/CSS peuvent continuer en marge du travail sans retarder le début de la programmation.
 
-## Source héritée à migrer
-
-- [Ancien cours 2 - Variables et affectation](./02-rencontre1.2.md)
+:::note Refonte à venir
+Les sources historiques nécessaires à cette rencontre sont conservées hors du site étudiant. Elles seront réévaluées lors de la refonte des rencontres 6 et suivantes.
+:::

@@ -15,8 +15,8 @@ Les notions identifiées **Pour aller plus loin** ne doivent pas être exigées.
 La forme précise, la durée et la pondération de l'évaluation finale restent à concevoir une fois la séquence des rencontres 6 à 13 stabilisée.
 :::
 
-## Source héritée à adapter
+L'ancien examen ne doit pas être repris tel quel : il est conservé hors du site étudiant et servira seulement de source lors de la conception de la nouvelle évaluation finale.
 
-- [Ancien cours 10 - Examen sommatif 1](./10-rencontre5.2.md)
-
-L'ancien examen ne doit pas être repris tel quel : il servira seulement de source lors de la conception de la nouvelle évaluation finale.
+:::note Refonte à venir
+Les sources historiques nécessaires à cette rencontre sont conservées hors du site étudiant. Elles seront réévaluées lors de la refonte des rencontres 6 et suivantes.
+:::

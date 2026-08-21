@@ -1,6 +1,6 @@
 ---
-title: Étape 4 - Organiser les blocs et les espacements
-description: Utiliser le modèle en boîte, les dimensions relatives et le centrage pour améliorer la lisibilité du site.
+title: Étape 4 - Auditer les blocs, les dimensions et les espacements
+description: Analyser les vrais contenus des quatre pages et utiliser le modèle en boîte, les dimensions relatives et le centrage pour améliorer leur lisibilité.
 sidebar_position: 5
 ---
 
@@ -8,138 +8,67 @@ sidebar_position: 5
 
 <ProjectStepHero step={4} />
 
-Votre site possède maintenant une feuille `css/styles.css` partagée par plusieurs pages. À cette étape, vous allez améliorer la **lisibilité, les dimensions et les espacements** sans changer de projet et sans recommencer votre design.
+## Mission
+
+Faites un audit de vos quatre pages et corrigez les problèmes réels d'espace intérieur, d'espace extérieur, de dimensions, de centrage et de regroupement visuel.
 
 Avant de commencer :
 
 - consultez le **[cours de la rencontre 4](../01-cours/04-rencontre4.md)**;
 - faites l'**[exercice guidé — Comprendre le modèle en boîte](../01-cours/04-rencontre4-exercice-guide.md)**.
 
-## 1. Reprendre le même site et la même feuille CSS
+L'exercice utilise des cartes communes pour isoler les notions. Dans votre Projet Web, vous devez les appliquer à des blocs qui ont un vrai rôle dans votre contenu.
 
-Votre structure ressemble toujours à ceci :
+## 1. Repérer deux blocs comparables
 
-```text
-mon-site/
-├── index.html
-├── css/
-│   └── styles.css
-├── images/
-│   └── ...
-└── pages/
-    └── sujet.html
-```
+Choisissez au moins deux contenus qui jouent le même rôle, par exemple :
 
-Si votre site contient une ou plusieurs pages secondaires supplémentaires, conservez-les. Le minimum exigé reste une page sous `pages/`.
+- deux fiches de joueurs;
+- deux résumés de films;
+- deux recettes;
+- deux informations importantes;
+- deux sections présentant des sujets;
+- un groupe de services ou d'intérêts dans la page À propos.
 
-Ne créez pas une deuxième feuille CSS pour cette rencontre.
+Utilisez ou créez une classe commune pour ces blocs.
 
-Tout le travail se poursuit dans le même `styles.css`.
-
-## 2. Choisir un bloc qui mérite plus d'espace intérieur
-
-Repérez un élément important de votre page, par exemple :
-
-- un `header`;
-- une `section`;
-- une information mise en valeur;
-- un groupe de contenu qui forme une petite carte.
-
-Ajoutez ou réutilisez une classe claire.
-
-Par exemple :
-
-```html
-<section class="carte">
-  <h2>Mon sujet</h2>
-  <p>Une courte présentation de cette partie du site.</p>
-</section>
-```
-
-Puis dans CSS :
-
-```css
-.carte {
-  background-color: #eaf3ff;
-  border: 2px solid #245a86;
-  padding: 20px;
-}
-```
-
-Le `padding` crée maintenant de l'espace **entre le contenu et la bordure**.
-
-:::info À maîtriser
-Vous devez pouvoir expliquer pourquoi vous utilisez `padding` plutôt que `margin` dans cette situation.
+:::info Réutiliser plutôt que dupliquer
+Si deux blocs jouent le même rôle, ils devraient généralement partager une classe au lieu de recevoir deux règles presque identiques.
 :::
 
-## 3. Créer de l'espace entre les blocs
+## 2. Corriger l'espace intérieur
 
-Si plusieurs éléments sont trop collés entre eux, ajoutez de l'espace extérieur.
+Ajoutez un `padding` lorsque le contenu est trop près de sa bordure ou de son arrière-plan.
 
-Par exemple :
-
-```css
-.carte {
-  background-color: #eaf3ff;
-  border: 2px solid #245a86;
-  padding: 20px;
-  margin: 20px 0;
-}
-```
-
-Ici :
+Vous devez pouvoir montrer un bloc et expliquer :
 
 ```text
-20px → haut et bas
-0    → gauche et droite
+Le padding crée ici l'espace entre le contenu et la bordure.
 ```
 
-Vous n'avez pas besoin d'utiliser cette valeur exacte. Choisissez un espacement cohérent avec votre site.
+## 3. Corriger l'espace extérieur
 
-## 4. Réutiliser une classe au lieu de recopier les mêmes règles
+Utilisez `margin` lorsqu'un bloc est trop près de ses voisins.
 
-Si plusieurs sections jouent le même rôle visuel, la même classe peut être utilisée :
-
-```html
-<section class="carte">...</section>
-<section class="carte">...</section>
-```
-
-Les deux blocs reçoivent alors le même :
+Vous devez pouvoir montrer deux éléments et expliquer :
 
 ```text
-background-color
-border
-padding
-margin
+La margin sépare ici les boîtes l'une de l'autre.
 ```
 
-:::tip Bonne pratique
-Une classe doit représenter une intention ou un rôle réutilisable. Évitez de créer une nouvelle classe pour chaque élément simplement parce que vous le pouvez.
-:::
+## 4. Rendre les limites visibles lorsque cela aide
 
-## 5. Utiliser `<div>` seulement lorsqu'il est utile
+Selon votre sujet, utilisez au moins une propriété visuelle qui rend le regroupement compréhensible :
 
-Un élément comme `<section>`, `<header>`, `<nav>` ou `<main>` est préférable lorsqu'il décrit bien le rôle du contenu.
+- `border`;
+- `background-color`;
+- ou les deux.
 
-Si aucun élément plus précis ne convient, vous pouvez utiliser un conteneur général :
+La bordure n'est pas obligatoire sur tous les blocs. Elle doit répondre à un besoin de lisibilité.
 
-```html
-<div class="carte">
-  <h2>À retenir</h2>
-  <p>Ce groupe n'a pas besoin d'une signification HTML plus précise.</p>
-</div>
-```
+## 5. Limiter et centrer le contenu principal
 
-Le `<div>` ne possède pas d'apparence spéciale par lui-même. C'est votre CSS qui lui donne son style.
-
-:::tip Bonne pratique
-Ne remplacez pas tous vos éléments HTML par des `<div>`. Utilisez-les comme conteneurs généraux lorsqu'ils sont réellement nécessaires.
-:::
-
-## 6. Limiter et centrer le contenu principal
-
-Certaines pages deviennent difficiles à lire lorsque le contenu s'étend beaucoup sur un grand écran.
+Une page devient souvent difficile à lire lorsque son contenu s'étend sur toute la largeur d'un grand écran.
 
 Vous pouvez combiner une largeur relative, une limite et des marges automatiques :
 
@@ -153,25 +82,23 @@ main {
 
 Dans cet exemple :
 
-- `width: 80%` utilise 80 % de la largeur disponible dans le parent;
+- `width: 80%` utilise une proportion de l'espace disponible dans le parent;
 - `max-width: 900px` empêche le contenu de devenir trop large;
-- `margin: 0 auto` laisse le navigateur partager l'espace restant à gauche et à droite pour centrer la boîte.
+- `margin: 0 auto` partage l'espace restant à gauche et à droite pour centrer la boîte.
 
-:::info Centrer le texte ou centrer la boîte?
-Pour centrer le texte d'un titre, vous connaissez déjà :
+Les valeurs `80%` et `900px` sont des exemples. Choisissez des valeurs raisonnables pour votre site et soyez capable de les expliquer.
 
-```css
-text-align: center;
-```
+:::info Centrer le contenu ou centrer la boîte?
+`text-align: center` centre du texte ou du contenu en ligne **dans une boîte**.
 
-Pour centrer la boîte `<main>` elle-même, c'est plutôt la combinaison d'une largeur appropriée et de marges horizontales `auto` qui est utilisée.
+`margin: 0 auto` peut centrer **la boîte elle-même** lorsqu'elle n'occupe pas toute la largeur disponible.
 :::
 
-Ce réglage n'a pas besoin d'être exactement `80%` ou `900px`. Choisissez des valeurs raisonnables pour votre site et soyez capable d'expliquer votre choix.
+## 6. Garder les images dans leur conteneur
 
-## 7. Donner aux images une largeur souple
+Puisque votre site contient des images, vérifiez qu'elles ne dépassent pas de leur parent.
 
-Si une image risque de dépasser de son conteneur, une règle générale peut être utile :
+Une règle générale peut être utile :
 
 ```css
 img {
@@ -180,9 +107,9 @@ img {
 }
 ```
 
-L'image peut rester plus petite que son conteneur, mais elle ne le dépassera pas. `height: auto` conserve ses proportions.
+`max-width: 100%` empêche l'image de devenir plus large que son conteneur. `height: auto` conserve ses proportions.
 
-Pour donner une largeur relative particulière à une image, vous pouvez plutôt utiliser une classe :
+Pour donner une largeur relative particulière à une image, utilisez une classe :
 
 ```css
 .image-principale {
@@ -191,11 +118,9 @@ Pour donner une largeur relative particulière à une image, vous pouvez plutôt
 }
 ```
 
-Ici, `80%` est une valeur **CSS** calculée à partir de la largeur disponible dans le parent. Ce n'est pas la même chose que l'attribut HTML `width="400"` vu à la rencontre 2.
+Ici, `80%` est une valeur CSS calculée à partir de la largeur disponible dans le parent. Ce n'est pas la même chose que l'attribut HTML `width="400"` vu à la rencontre 2.
 
-### Centrer une image dans son conteneur
-
-Une image est du contenu placé dans une boîte. Vous pouvez donc centrer le contenu du parent :
+Pour centrer l'image dans une zone :
 
 ```css
 .zone-image {
@@ -203,148 +128,87 @@ Une image est du contenu placé dans une boîte. Vous pouvez donc centrer le con
 }
 ```
 
-Vous n'avez pas besoin d'ajouter cette structure partout. Utilisez-la seulement lorsqu'un centrage de l'image répond à votre design.
+Utilisez cette structure seulement lorsqu'elle répond à votre design.
 
-## 8. Ajuster les dimensions seulement si elles résolvent un problème
+## 7. Vérifier les quatre pages
 
-Évitez d'ajouter des `width` ou `height` fixes à tous les éléments simplement pour montrer que vous connaissez les propriétés.
+Ne corrigez pas seulement la page d'accueil.
 
-Une dimension devrait répondre à un besoin concret :
+Parcourez l'accueil, les deux pages de sujet et la page À propos. Cherchez :
 
-- une largeur en `px` pour une dimension volontairement fixe;
-- une largeur en `%` pour suivre l'espace disponible dans le parent;
-- une `max-width` pour imposer une limite sans forcer une largeur constante.
+- un texte collé à une bordure ou à un fond;
+- deux sections trop proches;
+- des blocs semblables qui utilisent des espacements différents sans raison;
+- une classe répétée sous plusieurs noms;
+- un contenu principal inutilement large;
+- une image qui dépasse de son conteneur;
+- un centrage appliqué au contenu alors que vous vouliez centrer la boîte, ou l'inverse;
+- une page À propos qui semble visuellement détachée du reste du site.
 
-:::warning Ne déformez pas les images
-Si vous modifiez la largeur d'une image avec CSS, `height: auto` permet généralement de conserver ses proportions.
-:::
+## Minimum attendu
 
-## 9. Faire une passe de cohérence
+Votre site doit montrer :
 
-Parcourez toutes vos pages.
+- au moins une classe appliquée à deux blocs comparables;
+- un `padding` utilisé pour créer un espace intérieur;
+- un `margin` utilisé pour créer un espace extérieur;
+- une bordure ou un arrière-plan utilisé volontairement;
+- un contenu principal dont la largeur est contrôlée et centré avec des marges automatiques;
+- des images qui restent dans leur conteneur et conservent leurs proportions;
+- des valeurs cohérentes entre les quatre pages;
+- une explication claire de la différence entre `padding` et `margin`, entre `px` et `%`, puis entre `text-align: center` et `margin: 0 auto`.
 
-Posez-vous ces questions :
+Aucune valeur précise comme `80%` ou `900px` n'est imposée. La validation porte sur votre compréhension et vos choix.
 
-- le texte est-il collé aux bordures ou aux arrière-plans?
-- certains blocs sont-ils trop près les uns des autres?
-- le contenu devient-il inutilement large sur une grande fenêtre?
-- certaines images dépassent-elles de leur conteneur?
-- si un élément est centré, ai-je centré son contenu ou sa boîte volontairement?
-- les mêmes types de contenu utilisent-ils des espacements cohérents?
-- une bordure aide-t-elle réellement à distinguer un groupe?
-- une classe pourrait-elle éviter de répéter le même style?
+## Décisions à prendre
 
-Corrigez seulement les problèmes qui vous semblent utiles.
+- Quels contenus forment un même type de bloc?
+- Où se trouve réellement le problème d'espace?
+- Une bordure aide-t-elle à comprendre le groupe?
+- Une classe existante peut-elle être réutilisée?
+- Quelle largeur rend le contenu confortable à lire?
+- Une largeur fixe ou relative répond-elle mieux au besoin?
+- Voulez-vous centrer le contenu d'une boîte ou la boîte elle-même?
+- Les images restent-elles lisibles et proportionnées?
+- Un bloc de la page À propos mérite-t-il un traitement adapté?
 
-Le but n'est pas de rendre tous les sites identiques.
+## Tests à effectuer
 
-## 10. Diagnostic rapide
+- [ ] Les quatre pages chargent toujours la même feuille CSS.
+- [ ] Je peux nommer contenu, `padding`, `border` et `margin`.
+- [ ] Je peux montrer un espace intérieur créé par `padding`.
+- [ ] Je peux montrer un espace extérieur créé par `margin`.
+- [ ] Deux blocs comparables partagent une classe.
+- [ ] Le contenu principal possède une largeur contrôlée et reste centré.
+- [ ] Je peux expliquer la différence entre une largeur en `px` et une largeur en `%`.
+- [ ] Les images ne dépassent pas de leur conteneur et ne sont pas déformées.
+- [ ] Je peux expliquer la différence entre `text-align: center` et `margin: 0 auto`.
+- [ ] Les valeurs choisies améliorent réellement la lisibilité.
+- [ ] La navigation et les images fonctionnent toujours.
+- [ ] La page À propos appartient visuellement au même site.
 
-Pour chacune de ces situations, choisissez la propriété avant de modifier le code.
+## Validations disponibles
 
-### Le texte est trop près de sa bordure
+Vous pouvez poursuivre la Validation C :
 
-Pensez à :
+- 🔌 **WEB-05**;
+- 🎯 **WEB-06**.
 
-```css
-padding
-```
-
-### Deux blocs sont trop près l'un de l'autre
-
-Pensez à :
-
-```css
-margin
-```
-
-### La ligne autour d'un bloc doit changer
-
-Pensez à :
-
-```css
-border
-```
-
-### Un bloc devient beaucoup trop large
-
-Une limite comme celle-ci peut être utile :
-
-```css
-max-width
-```
-
-### Le contenu principal doit être centré
-
-Une fois sa largeur contrôlée, pensez à :
-
-```css
-margin: 0 auto;
-```
-
-### Une image dépasse son conteneur
-
-Pensez à :
-
-```css
-max-width: 100%;
-height: auto;
-```
-
-## 11. Précontrôle avant validation
-
-Avant de demander une validation, vérifiez que :
-
-- [ ] toutes vos pages chargent encore la même feuille CSS;
-- [ ] vous pouvez expliquer où se trouve `styles.css`;
-- [ ] vos classes ont un rôle compréhensible;
-- [ ] vous avez utilisé `padding` là où un espace intérieur était nécessaire;
-- [ ] vous avez utilisé `margin` là où un espace extérieur était nécessaire;
-- [ ] vous pouvez montrer une bordure et expliquer où elle se situe dans le modèle en boîte;
-- [ ] vous savez nommer contenu, padding, border et margin;
-- [ ] vous pouvez expliquer la différence entre une largeur en `px` et une largeur en `%` si vous les utilisez;
-- [ ] vous pouvez expliquer la différence entre centrer du contenu avec `text-align` et centrer une boîte avec des marges automatiques;
-- [ ] si votre site contient de grandes images, vous avez vérifié qu'elles restent dans leur conteneur;
-- [ ] vous êtes capable de modifier un espacement ou une dimension sans essayer plusieurs propriétés au hasard.
-
-Cette checklist sert à vous préparer. La validation porte sur votre compréhension, pas sur un nombre précis de cartes, de marges, de dimensions ou de bordures.
-
-## Badges disponibles pour validation
-
-Consultez **[Projet Web — Évaluation](./00-evaluation.md)** pour les checklists détaillées et l'état de votre collection de badges.
-
-### Validation C — CSS de base
-
-Si elle n'est pas encore terminée, vous pouvez présenter :
-
-- 🔌 **WEB-05 — Associer correctement une feuille CSS externe**;
-- 🎯 **WEB-06 — Cibler les éléments avec des sélecteurs appropriés**.
-
-### Validation D — Mise en forme et disposition
-
-Vous pouvez aussi commencer à démontrer :
+Vous pouvez aussi commencer la Validation D :
 
 - 🎨 **WEB-07 — Mettre en forme une interface avec CSS**;
 - 📐 **WEB-08 — Organiser l'espace et la disposition des éléments**.
 
-À cette rencontre, 📐 WEB-08 est surtout observée à travers le modèle en boîte, les dimensions et les espacements. Flexbox simple sera ajouté à la rencontre 5.
+À cette rencontre, WEB-08 est surtout observée à travers le modèle en boîte, les dimensions, le centrage et les espacements. Flexbox sera ajouté à la rencontre 5.
 
-:::tip Collection de badges
-Il n'est pas nécessaire d'acquérir tous les badges le même jour. Les compétences **À revoir** peuvent être présentées de nouveau lorsque vous êtes prêt.
+Le soin apporté aux blocs réels du site contribue également à la dimension **Personnalisation et appropriation du projet**.
+
+:::note Pour aller plus loin — non évalué séparément
+Vous pouvez expérimenter avec `border-radius`, enrichir un bloc de la page À propos ou lire à propos de `box-sizing: border-box`.
+
+Ces propriétés ne sont pas nécessaires pour réussir la validation technique.
 :::
 
-:::note Pour aller plus loin — non évalué
-Si votre site est déjà clair et que vous avez du temps, vous pouvez expérimenter avec :
+## Prochaine étape
 
-```css
-border-radius
-```
-
-ou lire à propos de :
-
-```css
-box-sizing: border-box
-```
-
-Ces éléments ne sont pas nécessaires pour réussir la validation.
-:::
+À la rencontre 5, vous utiliserez Flexbox dans un besoin concret et ferez une dernière passe de correction et de personnalisation sur l'ensemble du site.

@@ -17,7 +17,6 @@ Cette rencontre sert de dernier bloc de nouvelle matière essentielle avant la r
 - manipuler des classes ou des attributs lorsque cela sert l'exercice;
 - consolider la programmation Web avant la révision finale.
 
-## Sources héritées à intégrer
-
-- [Ancien cours 15 - Tableaux d'éléments HTML](./15-rencontre8.1.md)
-- portions pertinentes de [l'ancien cours 14 - Classes et attributs](./14-rencontre7.2.md)
+:::note Refonte à venir
+Les sources historiques nécessaires à cette rencontre sont conservées hors du site étudiant. Elles seront réévaluées lors de la refonte des rencontres 6 et suivantes.
+:::

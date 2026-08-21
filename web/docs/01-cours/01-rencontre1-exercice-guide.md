@@ -53,7 +53,7 @@ Commencez par la structure générale :
 Enregistrez le fichier avec `Ctrl+S`. Avec `index.html` ouvert dans VS Code, appuyez ensuite sur `F5` pour démarrer l'affichage de la page dans le navigateur.
 
 :::tip Deux usages de F5
-Dans **VS Code**, `F5` démarre la page. Une fois dans le **navigateur**, `F5` sert plutôt à actualiser la page après une modification.
+Dans **VS Code**, `F5` démarre la page dans l'environnement utilisé en classe. Une fois dans le **navigateur**, `F5` sert plutôt à actualiser la page après une modification.
 :::
 
 :::info À maîtriser
@@ -165,16 +165,23 @@ Qu'est-ce qui ne va pas ici?
 
 Les éléments imbriqués doivent se fermer dans l'ordre inverse de leur ouverture.
 
-### Paragraphe oublié
+### Chevron fermant oublié
 
-Repérez aussi l'erreur suivante :
+Repérez l'erreur suivante :
 
 ```html
-<p>Premier paragraphe
-<p>Deuxième paragraphe</p>
+<p>Premier paragraphe.</p
+<p>Deuxième paragraphe.</p>
 ```
 
-Même si le navigateur peut afficher quelque chose de plausible, gardez des balises explicites et une structure lisible.
+La première balise fermante `</p>` n'est pas terminée : il manque le caractère `>`.
+
+Corrigez-la ainsi :
+
+```html
+<p>Premier paragraphe.</p>
+<p>Deuxième paragraphe.</p>
+```
 
 ## 6. Valider le document avec W3C
 
@@ -199,7 +206,7 @@ Vérifiez que vous êtes capable de :
 
 - [ ] retrouver le dossier de l'exercice;
 - [ ] ouvrir ce dossier dans VS Code;
-- [ ] démarrer la page avec `F5` depuis VS Code;
+- [ ] démarrer la page avec `F5` depuis VS Code dans l'environnement utilisé en classe;
 - [ ] reconnaître le `<head>` et le `<body>`;
 - [ ] ajouter un titre, un paragraphe et une liste;
 - [ ] reconnaître un commentaire HTML et expliquer pourquoi il ne s'affiche pas dans la page;

@@ -1,6 +1,6 @@
 ---
 title: Exercice guidé - Première feuille CSS
-description: Relier deux pages à une même feuille CSS, utiliser des sélecteurs et diagnostiquer un chemin de feuille de styles.
+description: Relier deux pages à une même feuille CSS, utiliser des sélecteurs d'élément, de classe et d'identifiant, puis diagnostiquer un chemin de feuille de styles.
 ---
 
 # Exercice guidé — Première feuille CSS
@@ -12,7 +12,8 @@ L'objectif n'est pas de créer un design complexe. Vous devez surtout comprendre
 - où placer `styles.css`;
 - comment le relier depuis deux dossiers différents;
 - comment un sélecteur choisit les éléments à modifier;
-- comment une classe permet de donner un style particulier à certains éléments;
+- comment une classe permet de donner un style particulier à plusieurs éléments;
+- comment un `id` permet de cibler un élément unique;
 - quoi vérifier lorsqu'une page semble ne pas recevoir son CSS.
 
 ## 1. Créer la structure de l'exercice
@@ -47,7 +48,9 @@ Dans `index.html`, utilisez ce contenu :
   <body>
     <header>
       <h1>Club découverte</h1>
-      <p class="mise-en-valeur">Une activité différente chaque semaine.</p>
+      <p id="message-principal" class="mise-en-valeur">
+        Une activité différente chaque semaine.
+      </p>
     </header>
 
     <nav>
@@ -220,7 +223,40 @@ Dans CSS :
 On écrit le point dans le sélecteur CSS, mais pas dans la valeur de l'attribut `class`.
 :::
 
-## 8. Observer un conflit simple
+## 8. Utiliser un identifiant unique
+
+Le premier paragraphe de `index.html` possède aussi :
+
+```html
+id="message-principal"
+```
+
+Ajoutez maintenant une règle qui cible uniquement cet élément :
+
+```css
+#message-principal {
+  text-align: center;
+}
+```
+
+Le symbole `#` indique que le sélecteur vise un **identifiant**.
+
+```text
+class="mise-en-valeur"  → plusieurs éléments peuvent partager ce rôle
+id="message-principal" → un seul élément porte ce nom dans la page
+```
+
+Actualisez les deux pages. Tous les éléments `.mise-en-valeur` conservent leur style commun, mais seul `#message-principal` reçoit aussi l'alignement centré.
+
+:::warning Un `id` doit rester unique
+N'ajoutez pas `id="message-principal"` au deuxième paragraphe. Un même identifiant ne doit apparaître qu'une seule fois dans une page.
+:::
+
+:::tip Préparation à JavaScript
+Plus tard, JavaScript devra souvent retrouver un élément précis pour modifier son texte, sa classe ou une autre propriété. Comprendre maintenant le lien entre `id="message-principal"` et `#message-principal` prépare ce travail.
+:::
+
+## 9. Observer un conflit simple
 
 Ajoutez d'abord une règle générale pour tous les paragraphes :
 
@@ -247,7 +283,7 @@ Vous venez d'observer une partie de la **cascade CSS** : plusieurs règles peuve
 
 Il n'est pas nécessaire de mémoriser une longue table de priorité aujourd'hui.
 
-## 9. Faire un diagnostic volontaire
+## 10. Faire un diagnostic volontaire
 
 Dans `pages/infos.html`, remplacez temporairement :
 
@@ -292,7 +328,7 @@ Lorsqu'une page n'est pas stylée, vérifiez d'abord :
 4. que les fichiers ont bien été enregistrés.
 :::
 
-## 10. Petite personnalisation
+## 11. Petite personnalisation
 
 Sans ajouter de nouvelle notion, modifiez maintenant quelques valeurs dans `styles.css` :
 
@@ -300,7 +336,8 @@ Sans ajouter de nouvelle notion, modifiez maintenant quelques valeurs dans `styl
 - la couleur d'arrière-plan de `.mise-en-valeur`;
 - la police du `body`;
 - l'alignement du `h1`;
-- la couleur de la bordure.
+- la couleur de la bordure;
+- la valeur de `text-align` dans `#message-principal`.
 
 L'objectif est d'observer qu'**une modification dans une seule feuille CSS peut changer les deux pages**.
 
@@ -312,6 +349,8 @@ L'objectif est d'observer qu'**une modification dans une seule feuille CSS peut 
 - [ ] les deux pages changent lorsque vous modifiez `styles.css`;
 - [ ] vous savez reconnaître un sélecteur d'élément;
 - [ ] vous savez reconnaître et utiliser une classe;
+- [ ] vous savez créer un `id` unique et le cibler avec `#id`;
+- [ ] vous pouvez expliquer la différence entre une classe réutilisable et un identifiant unique;
 - [ ] vous pouvez expliquer pourquoi `.mise-en-valeur` peut remplacer la couleur générale des paragraphes;
 - [ ] vous savez quoi vérifier lorsqu'une page semble ne pas recevoir la feuille CSS.
 
