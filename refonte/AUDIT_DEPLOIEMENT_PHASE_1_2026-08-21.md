@@ -1,7 +1,9 @@
 # Audit du déploiement — phase 1
 
-**Date : 2026-08-21**  
-**Portée : audit, préparation et documentation seulement**  
+**Date : 2026-08-21**
+
+**Portée : audit, préparation et documentation seulement**
+
 **Interdiction : aucune modification de `departement-info-cem/z03/main`**
 
 ## Plan d'implémentation
