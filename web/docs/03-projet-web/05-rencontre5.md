@@ -6,6 +6,8 @@ sidebar_position: 6
 
 # Projet Web — Étape 5
 
+<ProjectStepHero step={5} />
+
 Cette étape termine le noyau HTML/CSS du Projet Web avant le début de JavaScript.
 
 L'objectif n'est pas d'ajouter beaucoup de nouvelles fonctionnalités. Vous allez surtout :
