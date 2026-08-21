@@ -1,0 +1,248 @@
+.stepHero,
+.journeyCard {
+  --step-color: #3974d4;
+}
+
+.stepHero[data-step="1"],
+.journeyCard[data-step="1"] { --step-color: #3974d4; }
+.stepHero[data-step="2"],
+.journeyCard[data-step="2"] { --step-color: #14869a; }
+.stepHero[data-step="3"],
+.journeyCard[data-step="3"] { --step-color: #7957c7; }
+.stepHero[data-step="4"],
+.journeyCard[data-step="4"] { --step-color: #b46d12; }
+.stepHero[data-step="5"],
+.journeyCard[data-step="5"] { --step-color: #27835b; }
+
+.stepHero {
+  position: relative;
+  overflow: hidden;
+  margin: 1.1rem 0 2rem;
+  padding: 1.25rem 1.35rem 1.35rem;
+  border: 1px solid color-mix(in srgb, var(--step-color) 32%, var(--z03-border));
+  border-top: 4px solid var(--step-color);
+  border-radius: var(--z03-radius);
+  background:
+    radial-gradient(circle at top right, color-mix(in srgb, var(--step-color) 14%, transparent), transparent 38%),
+    var(--z03-surface);
+  box-shadow: var(--z03-shadow);
+}
+
+.heroEyebrow {
+  margin-bottom: 0.65rem;
+  color: var(--step-color);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+  margin-bottom: 1rem;
+}
+
+.progress span {
+  display: grid;
+  width: 1.7rem;
+  height: 1.7rem;
+  place-items: center;
+  border: 1px solid var(--z03-border);
+  border-radius: 999px;
+  font-size: 0.73rem;
+  font-weight: 800;
+}
+
+.progressDone {
+  border-color: color-mix(in srgb, var(--step-color) 45%, var(--z03-border)) !important;
+  background: color-mix(in srgb, var(--step-color) 13%, var(--z03-surface));
+  color: var(--step-color);
+}
+
+.progressCurrent {
+  border-color: var(--step-color) !important;
+  background: var(--step-color);
+  color: white;
+  transform: scale(1.08);
+}
+
+.progressFuture {
+  background: var(--z03-surface-muted);
+  color: var(--z03-muted);
+}
+
+.heroHeading {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.heroNumber {
+  display: grid;
+  width: 3.6rem;
+  height: 3.6rem;
+  place-items: center;
+  border-radius: calc(var(--z03-radius) * 0.85);
+  background: color-mix(in srgb, var(--step-color) 13%, var(--z03-surface));
+  color: var(--step-color);
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.heroVerb {
+  color: var(--step-color);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.heroTitle {
+  margin-top: 0.05rem;
+  color: var(--z03-text);
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+  font-weight: 850;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+}
+
+.heroMission {
+  max-width: 48rem;
+  margin: 0.45rem 0 0;
+  color: var(--z03-muted);
+  font-size: 1rem;
+}
+
+.outcome {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: baseline;
+  margin-top: 0.15rem;
+  padding: 0.78rem 0.9rem;
+  border-radius: calc(var(--z03-radius) * 0.7);
+  background: color-mix(in srgb, var(--step-color) 7%, var(--z03-surface-muted));
+}
+
+.outcome strong {
+  color: var(--step-color);
+  white-space: nowrap;
+}
+
+.outcome span {
+  color: var(--z03-text);
+}
+
+.journey {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.journeyCard {
+  position: relative;
+  display: flex;
+  min-height: 12.25rem;
+  flex-direction: column;
+  padding: 1rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--step-color) 26%, var(--z03-border));
+  border-radius: var(--z03-radius);
+  background: var(--z03-surface);
+  box-shadow: var(--z03-shadow);
+  color: var(--z03-text);
+  text-decoration: none !important;
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.journeyCard::before {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: var(--step-color);
+  content: "";
+}
+
+.journeyCard:hover {
+  border-color: var(--step-color);
+  color: var(--z03-text);
+  transform: translateY(-2px);
+}
+
+.cardNumber {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.8rem;
+  place-items: center;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--step-color) 12%, var(--z03-surface));
+  color: var(--step-color);
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
+.cardVerb {
+  color: var(--step-color);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  margin-top: 0.15rem;
+  color: var(--z03-text);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.cardSummary {
+  margin-top: 0.55rem;
+  color: var(--z03-muted);
+  font-size: 0.87rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 996px) {
+  .journey {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .stepHero {
+    padding: 1rem;
+  }
+
+  .heroHeading {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .heroNumber {
+    width: 2.8rem;
+    height: 2.8rem;
+    font-size: 1.4rem;
+  }
+
+  .outcome {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .outcome strong {
+    white-space: normal;
+  }
+
+  .journey {
+    grid-template-columns: 1fr;
+  }
+
+  .journeyCard {
+    min-height: 0;
+  }
+}
