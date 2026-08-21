@@ -80,6 +80,7 @@ const rules: PreviewRule[] = [
   { code: `.carte {\n  display: flex;\n}`, src: "examples/peek/r5-wrong-parent.html", title: "Rendu lorsque le mauvais élément devient flex", label: "Voir l'erreur", height: 190 },
   { code: `.cartes {\n  display: flex;\n}`, src: "examples/peek/r5-right-parent.html", title: "Rendu lorsque le bon parent devient flex", label: "Voir le bon parent", height: 180 },
   { code: `.navigation {\n  display: flex;\n  gap: 20px;\n  justify-content: center;\n  background-color: #eaf3ff;\n  padding: 16px;\n}`, src: "examples/peek/r5-nav-complete.html", title: "Rendu d'une navigation Flexbox complète", label: "Voir la navigation", height: 120 },
+  { code: `.banniere {\n  background-image: url("../images/sentier.svg");\n  background-size: cover;\n  background-position: center;\n  padding: 48px 20px;\n}`, src: "examples/peek/r5-background-image.html", title: "Rendu d'une bannière avec image de fond", label: "Voir l'image de fond", height: 180 },
   { code: `.carte {\n  background-color: #eaf3ff;\n  border: 2px solid #245a86;\n  padding: 20px;\n}\n\n.cartes {\n  display: flex;\n  gap: 20px;\n}`, src: "examples/projet-web/evolution/etape5/preview.html", title: "Projet Web avec cartes et Flexbox", label: "Voir dans le site", height: 350 },
 ];
 
