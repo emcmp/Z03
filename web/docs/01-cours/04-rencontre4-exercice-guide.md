@@ -1,6 +1,6 @@
 ---
 title: Exercice guidé - Comprendre le modèle en boîte
-description: Manipuler padding, border et margin pour comprendre l'espace intérieur et extérieur d'un bloc.
+description: Manipuler padding, border, margin, dimensions relatives et centrage pour comprendre l'espace occupé par les éléments.
 ---
 
 # Exercice guidé — Comprendre le modèle en boîte
@@ -11,6 +11,8 @@ Dans cet exercice, vous allez construire quelques **cartes simples** afin de voi
 contenu → padding → border → margin
 ```
 
+Vous allez aussi comparer une largeur fixe à une largeur en pourcentage et distinguer le centrage du contenu du centrage d'une boîte.
+
 L'objectif n'est pas de produire un design final. Vous allez plutôt modifier une propriété à la fois et observer son effet.
 
 ## 1. Créer la structure
@@ -20,9 +22,15 @@ Créez :
 ```text
 exercice-rencontre4/
 ├── index.html
-└── css/
-    └── styles.css
+├── css/
+│   └── styles.css
+└── images/
+    └── chat.jpg
 ```
+
+:::info 📥 Image à utiliser
+Vous pouvez réutiliser l'image de la rencontre 2 ou télécharger de nouveau **[chat.jpg](pathname:///files/rencontre2/chat.jpg)** et la placer dans le dossier `images`.
+:::
 
 Dans `index.html`, utilisez :
 
@@ -38,6 +46,10 @@ Dans `index.html`, utilisez :
   <body>
     <main>
       <h1>Activités de la semaine</h1>
+
+      <div class="zone-image">
+        <img class="image-principale" src="images/chat.jpg" alt="Un chat">
+      </div>
 
       <section class="carte">
         <h2>Photo</h2>
@@ -200,7 +212,7 @@ Essayez :
 Pour commencer, une valeur ou deux valeurs suffisent dans la majorité de nos exemples. Vous n'avez pas à mémoriser toutes les variantes possibles aujourd'hui.
 :::
 
-## 7. Expérimenter une largeur simple
+## 7. Comparer une largeur fixe et une largeur relative
 
 Ajoutez temporairement :
 
@@ -210,11 +222,83 @@ Ajoutez temporairement :
 }
 ```
 
-Observez que la zone de contenu possède maintenant une largeur définie.
+Observez que la zone de contenu possède maintenant une largeur fixe.
 
-Le `padding` et la bordure occupent eux aussi de l'espace autour du contenu.
+Retirez ensuite cette règle et donnez plutôt une largeur relative à l'image :
 
-Retirez ensuite cette largeur si elle rend la page inutilement étroite.
+```css
+.image-principale {
+  width: 80%;
+  height: auto;
+}
+```
+
+Actualisez, puis essayez temporairement `50%` et `100%`.
+
+Observez que la largeur de l'image dépend maintenant de l'espace disponible dans son parent.
+
+:::info `px` ou `%`?
+- `320px` décrit une dimension fixe;
+- `80%` décrit une dimension relative à la largeur disponible dans le parent.
+
+Dans CSS, le choix dépend du résultat recherché.
+:::
+
+## 8. Garder l'image dans son conteneur et la centrer
+
+Ajoutez une règle générale pour éviter qu'une image soit plus large que son conteneur :
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+Puis centrez le contenu de la zone qui contient l'image :
+
+```css
+.zone-image {
+  text-align: center;
+}
+```
+
+L'image est maintenant centrée **à l'intérieur de la boîte `.zone-image`**.
+
+:::info Réinvestissement de R3
+Vous connaissiez déjà `text-align: center` pour centrer le texte d'un titre. Une image est aussi du contenu en ligne dans son conteneur, donc le même principe peut servir ici.
+:::
+
+## 9. Centrer la boîte principale
+
+Nous allons maintenant centrer le `<main>` lui-même dans l'espace disponible.
+
+Ajoutez :
+
+```css
+main {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+```
+
+Actualisez la page et observez les marges gauche et droite.
+
+Dans `margin: 0 auto` :
+
+```text
+0    → haut et bas
+auto → gauche et droite
+```
+
+Les marges horizontales automatiques se partagent l'espace restant autour du `<main>`.
+
+:::warning Deux centrages différents
+`text-align: center` centre le **contenu à l'intérieur d'une boîte**.
+
+`margin: 0 auto` peut centrer **la boîte elle-même** lorsqu'elle n'occupe pas toute la largeur disponible.
+:::
 
 :::note Pour aller plus loin — non évalué
 Vous pourriez rencontrer :
@@ -226,7 +310,7 @@ box-sizing: border-box;
 Cette propriété rend certaines dimensions plus faciles à prévoir parce que le `padding` et la bordure sont inclus dans la largeur déclarée. Nous n'en faisons pas une exigence de la rencontre.
 :::
 
-## 8. Ajouter un troisième bloc
+## 10. Ajouter un troisième bloc
 
 Ajoutez dans `<main>` :
 
@@ -241,7 +325,7 @@ Vous n'avez rien à ajouter dans CSS : la classe `.carte` existe déjà.
 
 Les trois blocs reçoivent donc le même modèle de boîte.
 
-## 9. Faire un diagnostic
+## 11. Faire un diagnostic
 
 Pour chacun des problèmes suivants, choisissez d'abord la propriété que vous modifieriez.
 
@@ -269,6 +353,24 @@ Vous voulez rendre la ligne qui entoure la carte plus visible.
 padding, border ou margin?
 ```
 
+### Problème D
+
+Une image dépasse la largeur de son conteneur.
+
+```text
+width fixe ou max-width: 100%?
+```
+
+### Problème E
+
+Le `<main>` doit rester moins large que l'écran et être centré.
+
+Pensez à une largeur ou une `max-width`, puis à :
+
+```css
+margin: 0 auto;
+```
+
 Expliquez votre choix avant de modifier le CSS.
 
 ## Vérification avant de terminer
@@ -279,7 +381,10 @@ Expliquez votre choix avant de modifier le CSS.
 - [ ] je peux utiliser une valeur simple de `padding` et de `margin`;
 - [ ] je comprends la forme à deux valeurs;
 - [ ] je sais que la bordure se situe entre padding et margin;
-- [ ] je peux choisir la bonne propriété pour corriger un problème d'espacement simple.
+- [ ] je peux expliquer la différence entre une largeur en `px` et une largeur en `%`;
+- [ ] je peux utiliser `max-width: 100%` et `height: auto` pour garder une image dans son conteneur;
+- [ ] je peux expliquer la différence entre `text-align: center` et `margin: 0 auto`;
+- [ ] je peux choisir la bonne propriété pour corriger un problème d'espacement ou de dimension simple.
 
 ## Continuer avec votre Projet Web
 
