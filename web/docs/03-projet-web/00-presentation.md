@@ -95,6 +95,7 @@ Le site final doit posséder :
 - un attribut `alt` sur chaque élément `<img>`;
 - une feuille CSS externe partagée par toutes les pages;
 - des sélecteurs d'élément et des classes réutilisables;
+- au moins un `id` unique ciblé par une règle `#id`;
 - une utilisation comprise de `padding`, `border` et `margin`;
 - au moins une disposition simple avec `display: flex` et `gap`.
 
@@ -108,7 +109,7 @@ Ces exigences rendent le projet suffisamment riche pour montrer vos apprentissag
 
 - **Rencontre 1** — choisir le thème, planifier deux pages de sujet et la page À propos, puis construire l'accueil;
 - **Rencontre 2** — créer les trois pages secondaires, ajouter les images et construire la navigation;
-- **Rencontre 3** — relier toutes les pages à une feuille CSS et créer une identité visuelle;
+- **Rencontre 3** — relier toutes les pages à une feuille CSS, utiliser les trois types de sélecteurs attendus et créer une identité visuelle;
 - **Rencontre 4** — analyser les vrais blocs du site et corriger les espacements;
 - **Rencontre 5** — utiliser Flexbox dans un besoin concret, personnaliser, corriger et finaliser.
 
