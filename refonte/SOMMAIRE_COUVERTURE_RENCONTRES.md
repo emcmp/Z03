@@ -18,6 +18,7 @@ Documents associés :
 - [EVALUATION.md](./EVALUATION.md)
 - [SUIVI_CONTENU.md](./SUIVI_CONTENU.md)
 - [MIGRATION_LABORATOIRES_CODEX.md](./MIGRATION_LABORATOIRES_CODEX.md)
+- [MODIFICATIONS_TRANSVERSALES_R1_R5.md](./MODIFICATIONS_TRANSVERSALES_R1_R5.md)
 
 ## Légende d'audit
 
@@ -32,11 +33,11 @@ Documents associés :
 
 | Rencontre | Théorie actuelle | Exercice guidé / pratique actuelle | Projet Web / activité actuelle | Compétences / évaluation | Audit |
 |---|---|---|---|---|---|
-| **R1 — Environnement et HTML** | OneDrive, dossiers/fichiers, extensions, ZIP, VS Code, navigateur; éléments HTML, attributs, imbrication, structure complète, titres, paragraphes, listes, emphase | Première page complète; cycle modifier/enregistrer/actualiser; erreurs d'imbrication; validation W3C | Création de `mon-site/index.html`, structure complète, contenu HTML de base, test navigateur, W3C | Prépare 🗂️ WEB-01 et 🧱 WEB-02 | ✅ avec un petit écart sur les commentaires HTML, détaillé plus bas |
-| **R2 — HTML, fichiers et navigation** | Arborescence, images locales, `src`, `alt`, chemins relatifs, `../`, liens, navigation, éléments sémantiques simples, diagnostic | Site de deux pages avec `images/`, `pages/`, image utilisée depuis deux niveaux, liens aller-retour, erreur volontaire de chemin | Ajout d'une page secondaire, image locale, navigation bidirectionnelle, chemins relatifs | 🗂️ WEB-01, 🧱 WEB-02, ✍️ WEB-03, 🔗 WEB-04 | ✅ |
+| **R1 — Environnement et HTML** | OneDrive, dossiers/fichiers, extensions, ZIP, VS Code, navigateur; éléments HTML, attributs, commentaires, imbrication, structure complète, titres, paragraphes, listes, emphase | Première page complète; commentaire comme repère; cycle modifier/enregistrer/actualiser; erreurs d'imbrication; validation W3C | Création de `mon-site/index.html`, structure complète, commentaire du gabarit expliqué, contenu HTML de base, test navigateur, W3C | Prépare 🗂️ WEB-01 et 🧱 WEB-02 | ✅ |
+| **R2 — HTML, fichiers et navigation** | Arborescence, images locales, `src`, `alt`, `width`, `height`, chemins relatifs, `../`, liens, ancres internes avec `id`/`#`, navigation, éléments sémantiques simples, diagnostic | Site de deux pages avec `images/`, `pages/`, image redimensionnée, liens aller-retour, lien vers une section, erreur volontaire de chemin | Ajout d'une page secondaire, image locale et dimensions, navigation bidirectionnelle, lien vers une section, chemins relatifs | 🗂️ WEB-01, 🧱 WEB-02, ✍️ WEB-03, 🔗 WEB-04 | ✅ |
 | **R3 — Introduction à CSS** | Rôle HTML/CSS; CSS intraligne/interne/externe; règle CSS; feuille externe; sélecteurs élément/classe/id; cascade simple; couleurs, typographie, alignement, bordure | Deux pages reliées à une feuille CSS; sélecteurs d'élément; classe réutilisée; cascade simple; diagnostic d'un mauvais `href` CSS | Ajout de `css/styles.css`, feuille partagée, styles généraux, classe, premières décisions visuelles | 🔌 WEB-05, 🎯 WEB-06; reprises ✍️ WEB-03 / 🔗 WEB-04 | ✅; quelques enrichissements facultatifs non pratiqués dans le guidé |
 | **R4 — Modèle en boîte** | Contenu → `padding` → `border` → `margin`; une/deux valeurs; dimensions simples; `width`, `max-width`; conteneurs; `<div>` | Cartes; `padding`, `margin`, `border`; forme à deux valeurs; `width`; diagnostic | Ajustement des espacements du vrai site; classes réutilisées; `<div>` au besoin; `max-width` au besoin | 🎨 WEB-07, 📐 WEB-08; reprises 🔌 WEB-05 / 🎯 WEB-06 | ✅; enrichissements facultatifs à surveiller |
-| **R5 — Flexbox simple et intégration** | Parent/enfants directs; `display: flex`; `gap`; `justify-content`; `align-items`; navigation et cartes; intégration HTML/CSS | Navigation flex; cartes flex; `gap`; `justify-content`; `align-items`; erreur volontaire sur le mauvais parent | Flexbox utile dans le site, surtout navigation; intégration et correction de tout le bloc HTML/CSS | 🎨 WEB-07, 📐 WEB-08; reprises de tous les badges | 🔴 le guidé utilise un lien d'ancrage interne non enseigné explicitement |
+| **R5 — Flexbox simple et intégration** | Parent/enfants directs; `display: flex`; `gap`; `justify-content`; `align-items`; navigation et cartes; intégration HTML/CSS | Navigation flex; cartes flex; `gap`; `justify-content`; `align-items`; erreur volontaire sur le mauvais parent; ancre interne réinvestie | Flexbox utile dans le site, surtout navigation; intégration et correction de tout le bloc HTML/CSS | 🎨 WEB-07, 📐 WEB-08; reprises de tous les badges | ✅ l'ancre interne utilisée dans le guidé est maintenant enseignée et pratiquée en R2 |
 | **R6 — Variables et JavaScript** | Page actuelle provisoire : JS, variables, affectation, nombres, chaînes, opérateurs, concaténation/interpolation, console | Aucun nouvel exercice guidé Z03 finalisé; ancien labo 2 à migrer | Aucun Projet Web R6 actuellement | Mini-quiz futur préparé par R6–R7; TP2/TP3 plus tard | ⏳ noyau cohérent, activité à reconstruire |
 | **R7 — Séquence à réaligner** | **Site actuel : conditions et logique** | Migration actuelle prévue depuis anciens labos 5 et 6 | Aucun Projet Web R7 | — | 🔴 ne correspond plus au plan de cours décidé : R7 doit devenir DOM + fonctions simples + console/`alert()` |
 | **R8 — Séquence à réaligner** | **Site actuel : fonctions** | Migration actuelle prévue depuis portions des anciens labos 3 et 13 | Aucun Projet Web R8 | **Mini-quiz 10 % au début de R8** | 🔴 le plan de cours prévoit ensuite portée locale/globale + événements + DOM/fonctions; page actuelle à reconstruire |
@@ -81,14 +82,14 @@ Sources :
 | `<ol>` | ✅ | — | non exigé | WEB-03 | Théorie seulement; acceptable |
 | `<strong>` / `<em>` | ✅ | ✅ | facultatif selon le sens | WEB-03 | Aligné |
 | `<br>` / `<hr>` | ✅ comme éléments sans fermeture | — | non exigés | — | Théorie de reconnaissance seulement |
+| Commentaire HTML `<!-- ... -->` | ✅ reconnaissance et rôle | ✅ commentaire ajouté comme repère | ✅ commentaire du gabarit expliqué | — | Aligné; notion légère, non évaluée séparément |
 | Imbrication et balises croisées | ✅ | ✅ erreurs à corriger | ✅ checklist | WEB-02 | Aligné |
 | Indentation | Bonne pratique | ✅ utilisée comme outil de diagnostic | attendue comme lisibilité, pas critère mécanique | WEB-02 | Aligné avec le statut de bonne pratique |
 | Validation W3C | pas développée dans la page théorique R1 | ✅ enseignée explicitement | ✅ demandée comme précontrôle | WEB-02 | 🟡 couverte par l'exercice guidé avant le Projet Web, donc pas d'exigence « surprise » |
-| Commentaire HTML `<!-- ... -->` | **non enseigné dans R1** | — | apparaît dans le gabarit de structure | — | 🔴 petit écart : soit retirer le commentaire du gabarit, soit expliquer en une phrase qu'il s'agit d'un commentaire |
 
 ### Conclusion R1
 
-Le noyau évalué WEB-01 / WEB-02 est couvert. Le seul élément réellement utilisé avant explication est le **commentaire HTML dans le gabarit du Projet Web**, sans conséquence sur la validation, mais facile à nettoyer.
+Le noyau évalué WEB-01 / WEB-02 est couvert. Le commentaire HTML utilisé dans le Projet Web est maintenant **présenté puis pratiqué avant son réemploi**.
 
 ## Rencontre 2 — Images, chemins et navigation
 
@@ -104,10 +105,12 @@ Sources :
 | `<img>` | ✅ | ✅ | ✅ | WEB-03 | Aligné |
 | `src` | ✅ | ✅ depuis racine et sous-dossier | ✅ | WEB-01 / WEB-03 | Aligné |
 | `alt` | ✅ bonne pratique fortement recommandée | ✅ utilisé | ✅ demandé dans les exemples | WEB-03 | Ne pas en faire seul un motif d'échec, conformément à la cartographie |
+| `width` / `height` dans `<img>` | ✅ rôle, pixels et proportions | ✅ expérimentation avec largeur et hauteur | ✅ réinvestis pour dimensionner une image | WEB-03 indirect | Aligné; ne pas transformer des dimensions précises en critère mécanique |
 | Chemin vers fichier du même dossier | ✅ | ✅ | ✅ dans navigation secondaire | WEB-01 / WEB-04 | Aligné |
 | Chemin vers sous-dossier | ✅ | ✅ | ✅ | WEB-01 / WEB-04 | Aligné |
 | `../` | ✅ | ✅ avec erreur volontaire | ✅ | WEB-01 / WEB-04 | Très bien renforcé |
 | `<a href="...">` | ✅ | ✅ | ✅ | WEB-04 | Aligné |
+| `id="..."` + `href="#..."` | ✅ lien vers une section de la même page | ✅ section `details` et lien interne | ✅ lien vers une section du site personnel | WEB-04 indirect | Aligné; `id` sera réinvesti comme sélecteur CSS en R3 |
 | Lien externe avec URL complète | ✅ | — | seulement enrichissement facultatif | WEB-04 | Théorie suffisante puisque non obligatoire |
 | `<nav>` | ✅ comme bonne pratique | ✅ | ✅ utilisé | WEB-04 | Ne constitue pas une compétence autonome |
 | `<main>` | ✅ comme bonne pratique | — | non exigé explicitement | WEB-03 | Acceptable |
@@ -119,7 +122,7 @@ Sources :
 
 ### Conclusion R2
 
-La rencontre 2 est fortement cohérente : les notions évaluées sont enseignées, pratiquées puis transférées dans le Projet Web.
+La rencontre 2 est fortement cohérente : les notions évaluées sont enseignées, pratiquées puis transférées dans le Projet Web. Les dimensions d'images et les ancres internes sont maintenant introduites ici avant leurs réemplois ultérieurs.
 
 ## Rencontre 3 — Introduction à CSS
 
@@ -140,7 +143,7 @@ Sources :
 | Chemins `css/styles.css` et `../css/styles.css` | ✅ | ✅ | ✅ | WEB-05 / WEB-01 | Réinvestissement direct de R2 |
 | Sélecteur d'élément (`body`, `h1`, `p`) | ✅ | ✅ | ✅ | WEB-06 | Aligné |
 | `class="..."` / `.classe` | ✅ | ✅ réutilisée | ✅ classe intentionnelle | WEB-06 | Aligné |
-| `id="..."` / `#id` | ✅ reconnaissance seulement | — | non exigé | WEB-06 | 🟡 présent en théorie, correctement non requis |
+| `id="..."` / `#id` | ✅ `id` déjà connu de R2; nouveau sélecteur `#id` présenté | — | non exigé | WEB-06 | 🟡 reconnaissance du sélecteur CSS seulement; correctement non requis |
 | Cascade simple élément vs classe | ✅ | ✅ conflit observé | peut être questionnée lors validation | WEB-06 | Aligné |
 | `color` | ✅ | ✅ | ✅ possible | WEB-07 | Aligné |
 | `background-color` | ✅ | ✅ | ✅ possible | WEB-07 | Aligné |
@@ -206,11 +209,11 @@ Sources :
 | Mauvais parent flex — diagnostic | ✅ | ✅ erreur volontaire | peut être demandé en validation | WEB-08 | Très bon alignement |
 | `flex-direction`, `flex-grow`, etc. | explicitement hors noyau | — | — | — | Correctement exclus |
 | `flex-wrap` | pour aller plus loin | pour aller plus loin | pour aller plus loin | — | Correctement non évalué |
-| Ancre interne `href="#activites"` + `id="activites"` | **non enseignée dans le cours R5 ni auparavant comme mécanisme de navigation interne** | ✅ utilisée dans le code de départ | non requise dans Projet Web | — | 🔴 éviter cette syntaxe dans le guidé ou l'expliquer explicitement; elle n'apporte rien à l'objectif Flexbox |
+| Ancre interne `href="#activites"` + `id="activites"` | ✅ mécanisme enseigné en R2 | ✅ réinvesti dans le code de départ | non requise spécifiquement en R5 | — / WEB-04 indirect | Aligné; aucune nouvelle notion de navigation n'est introduite par surprise en R5 |
 
 ### Conclusion R5
 
-Le noyau WEB-08 est très bien couvert. Le **lien d'ancrage interne** est l'écart principal à corriger pour que l'exercice guidé n'utilise aucun mécanisme Web inexpliqué.
+Le noyau WEB-08 est très bien couvert. L'ancre interne du guidé est maintenant un **réinvestissement d'une notion de R2**, et non une syntaxe nouvelle au milieu de l'activité Flexbox.
 
 # Audit de la séquence R6 à R15
 
@@ -293,8 +296,8 @@ Les encadrés « Pour aller plus loin » sont explicitement exclus de l'examen.
 |---|---|---|---|---|
 | haute | R7–R12 | ordre actuel du site incompatible avec le nouveau plan de cours | réaligner les pages, sidebars et plan de migration des labos | à faire |
 | haute | R15 | page indique encore que la pondération finale reste à concevoir | inscrire examen final 30 % | à faire |
-| moyenne | R5 | `href="#activites"` / `id="activites"` dans le guidé sans enseignement des ancres internes | remplacer par des liens simples `href="#"` ou expliquer explicitement le mécanisme | à faire |
-| basse | R1 | commentaire HTML présent dans le gabarit du Projet Web avant explication | retirer `<!-- ... -->` ou ajouter une phrase d'explication | à faire |
+| moyenne | R5 | `href="#activites"` / `id="activites"` apparaissait sans enseignement antérieur | ancres internes ajoutées à R2 et réinvesties en R5 | ✅ corrigé |
+| basse | R1 | commentaire HTML présent dans le gabarit du Projet Web avant explication | commentaire expliqué et pratiqué en R1 avant le Projet Web | ✅ corrigé |
 
 # Processus de validation d'une rencontre
 
