@@ -97,6 +97,13 @@ Ajoutons :
 }
 ```
 
+<ExamplePeek
+  src="examples/rencontre5/flex-gap-peek/preview.html"
+  title="Rendu d'une navigation utilisant Flexbox et gap"
+  label="Voir Flexbox + gap"
+  height={110}
+/>
+
 `gap` crée un espace cohérent **entre les enfants** du conteneur flex.
 
 :::tip Bonne pratique
