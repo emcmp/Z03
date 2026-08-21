@@ -1,6 +1,6 @@
 ---
 title: Étape 5 - Intégrer Flexbox et finaliser le site
-description: Utiliser Flexbox dans un besoin concret, harmoniser les pages et terminer les validations HTML/CSS.
+description: Utiliser Flexbox dans un besoin concret, réinvestir les chemins avec une image de fond et terminer les validations HTML/CSS.
 sidebar_position: 6
 ---
 
@@ -11,6 +11,7 @@ Cette étape termine le noyau HTML/CSS du Projet Web avant le début de JavaScri
 L'objectif n'est pas d'ajouter beaucoup de nouvelles fonctionnalités. Vous allez surtout :
 
 - utiliser **Flexbox simple** dans une situation utile;
+- réinvestir les chemins relatifs avec une image d'arrière-plan CSS;
 - harmoniser les pages;
 - corriger les problèmes encore présents;
 - terminer ou reprendre les validations HTML/CSS.
@@ -146,7 +147,61 @@ Ici :
 - `.carte` contrôle l'apparence et l'espace **dans chaque carte**;
 - `.cartes` contrôle la **disposition du groupe**.
 
-## 6. Faire une passe complète sur toutes les pages
+## 6. Réinvestir une image d'arrière-plan
+
+Choisissez une image locale de votre dossier `images/` qui peut servir de **fond décoratif**, par exemple dans un en-tête ou une bannière.
+
+Supposons :
+
+```text
+mon-site/
+├── css/
+│   └── styles.css
+└── images/
+    └── paysage.jpg
+```
+
+Si votre HTML contient :
+
+```html
+<header class="banniere">
+  <h1>Mon sujet</h1>
+</header>
+```
+
+vous pouvez essayer dans `css/styles.css` :
+
+```css
+.banniere {
+  background-image: url("../images/paysage.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 48px 20px;
+}
+```
+
+:::info Le point important est le chemin
+`styles.css` se trouve dans `css/`. Pour atteindre `images/paysage.jpg`, le chemin doit donc d'abord remonter avec `../`.
+
+```text
+css/styles.css
+→ ../
+→ images/
+→ paysage.jpg
+```
+:::
+
+Faites l'essai dans votre site et vérifiez que vous pouvez expliquer le chemin. Vous pouvez ensuite **conserver ou retirer** l'image de fond selon votre sujet et votre mise en page.
+
+:::tip `<img>` reste utile
+N'utilisez pas `background-image` pour remplacer toutes vos images HTML.
+
+Une image qui fait partie du contenu et transmet une information importante devrait normalement rester un `<img>` avec un texte `alt`. L'image de fond sert surtout à la présentation.
+:::
+
+L'utilisation d'une image de fond n'est pas un nouveau critère obligatoire à cocher pour obtenir WEB-07. Elle sert à réinvestir CSS et les chemins relatifs dans un contexte différent.
+
+## 7. Faire une passe complète sur toutes les pages
 
 Ouvrez chaque page dans le navigateur.
 
@@ -157,6 +212,7 @@ Vérifiez :
 - la navigation fonctionne-t-elle partout?
 - les images s'affichent-elles?
 - les chemins sont-ils corrects depuis la racine et depuis `pages/`?
+- si vous utilisez `background-image`, son chemin est-il correct depuis `styles.css`?
 - les pages ont-elles une structure HTML complète?
 
 ### Feuille CSS
@@ -177,14 +233,14 @@ Vérifiez :
 - les enfants directs sont-ils ceux que vous vouliez organiser?
 - `gap` produit-il l'espacement désiré?
 
-## 7. Corriger plutôt qu'ajouter
+## 8. Corriger plutôt qu'ajouter
 
 À cette étape, consacrez une partie importante du temps à la correction.
 
 Quelques bons objectifs :
 
 - réparer un lien qui ne fonctionne pas;
-- corriger un chemin CSS;
+- corriger un chemin CSS ou un chemin dans `url(...)`;
 - enlever une classe devenue inutile;
 - réutiliser une classe au lieu de dupliquer une règle;
 - ajuster un `padding` ou une `margin`;
@@ -195,7 +251,7 @@ Quelques bons objectifs :
 Un petit site simple, cohérent et compris vaut beaucoup plus qu'un site rempli d'effets copiés sans comprendre leur fonctionnement.
 :::
 
-## 8. Précontrôle final HTML/CSS
+## 9. Précontrôle final HTML/CSS
 
 Avant de considérer cette étape terminée :
 
@@ -210,6 +266,7 @@ Avant de considérer cette étape terminée :
 - [ ] j'utilise Flexbox dans au moins une situation utile;
 - [ ] je sais identifier le parent flex et ses enfants directs;
 - [ ] j'utilise `gap` pour espacer des enfants flex;
+- [ ] si j'utilise une image de fond, je peux expliquer son `url(...)` et son chemin depuis le fichier CSS;
 - [ ] je peux expliquer mes principales décisions CSS.
 
 Cette liste sert à préparer les validations. Elle ne représente pas un décompte automatique de points.
@@ -231,6 +288,8 @@ L'enseignant peut vous demander, par exemple :
 - d'ajouter ou de modifier un `gap`;
 - d'expliquer quels éléments sont les enfants directs d'un conteneur flex;
 - de corriger une disposition simple devant lui.
+
+L'image d'arrière-plan ne devient pas une propriété obligatoire à réciter ou à utiliser pour réussir la Validation D.
 
 ## Reprises possibles
 
