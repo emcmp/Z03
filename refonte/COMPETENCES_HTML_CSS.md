@@ -49,6 +49,7 @@ Le projet contient au minimum :
 - un attribut `alt` sur chaque élément `<img>`;
 - une feuille CSS externe partagée;
 - des sélecteurs d'élément et des classes réutilisables;
+- au moins un `id` unique ciblé par une règle `#id`;
 - une application comprise du modèle en boîte;
 - une disposition simple avec `display: flex` et `gap`.
 
@@ -77,7 +78,7 @@ Exemples :
 - utiliser `header`, `nav`, `main` et `footer` lorsqu'ils conviennent;
 - garder une indentation lisible;
 - valider le HTML avec W3C;
-- nommer les classes selon leur rôle;
+- nommer les classes et les identifiants selon leur rôle;
 - rédiger un texte alternatif précis et concis.
 
 ### Pour aller plus loin
@@ -105,6 +106,22 @@ image décorative   → alt=""
 
 La **présence** de l'attribut fait partie du minimum technique de WEB-03. La qualité exacte de sa rédaction est accompagnée comme bonne pratique d'accessibilité et ne devient pas un décompte mécanique de mots.
 
+## Règle concernant `id`
+
+L'identifiant devient une notion **À maîtriser** dans WEB-06.
+
+L'étudiant doit pouvoir :
+
+- ajouter un attribut `id` à un élément unique;
+- respecter l'unicité de la valeur dans la page;
+- relier `id="nom"` dans HTML au sélecteur `#nom` dans CSS;
+- expliquer qu'une classe convient à un rôle réutilisable et qu'un identifiant convient à un élément précis;
+- retrouver et modifier la règle qui cible cet identifiant.
+
+Le Projet Web doit contenir au moins un `id` utilisé volontairement et une règle `#id` correspondante. Il n'est pas nécessaire de multiplier les identifiants.
+
+Cette exigence prépare le bloc JavaScript et DOM : même si JavaScript peut sélectionner un élément de plusieurs façons, les identifiants fournissent un modèle clair pour retrouver un élément unique.
+
 # Huit compétences techniques
 
 | Code | Compétence | Notions principalement observées | Support minimal dans le projet |
@@ -114,7 +131,7 @@ La **présence** de l'attribut fait partie du minimum technique de WEB-03. La qu
 | **WEB-03** | **Structurer et enrichir le contenu HTML** | titres, paragraphes, listes, images, choix d'éléments | contenu original sur quatre pages, au moins une liste utile, deux images et `alt` sur chaque `<img>` |
 | **WEB-04** | **Relier plusieurs pages dans une navigation fonctionnelle** | `a`, `href`, navigation, chemins | quatre destinations accessibles depuis chaque page |
 | **WEB-05** | **Associer correctement une feuille CSS externe** | fichier CSS, `link`, chemins vers CSS, syntaxe d'une règle | un seul `css/styles.css` chargé par les quatre pages |
-| **WEB-06** | **Cibler les éléments avec des sélecteurs appropriés** | sélecteurs d'élément, classes, réutilisation, cascade simple | au moins un sélecteur d'élément, deux classes utiles et une classe réutilisée |
+| **WEB-06** | **Cibler les éléments avec des sélecteurs appropriés** | sélecteurs d'élément, classes, identifiants, réutilisation, unicité et cascade simple | au moins un sélecteur d'élément, deux classes utiles dont une réutilisée, ainsi qu'un `id` unique avec une règle `#id` correspondante |
 | **WEB-07** | **Mettre en forme une interface avec CSS** | couleurs, arrière-plans, typographie, alignement, bordures | choix visuels cohérents et règles que l'étudiant peut retrouver et modifier |
 | **WEB-08** | **Organiser l'espace et la disposition des éléments** | modèle en boîte, `padding`, `border`, `margin`, Flexbox simple | un bloc utilisant volontairement le modèle en boîte et un parent avec `display: flex` et `gap` |
 
@@ -144,6 +161,7 @@ Une validation ne devient pas un décompte automatique du type :
 - deux `div`;
 - un nombre précis de bordures;
 - une liste de chaque type;
+- plusieurs identifiants sans besoin réel;
 - toutes les valeurs de `justify-content`;
 - toutes les propriétés vues dans le cours.
 
@@ -198,7 +216,7 @@ Ces périodes sont des fenêtres, pas des échéances imposant que tout le group
 | --- | --- | --- | --- | --- |
 | **R1** | environnement et premiers HTML | page HTML commune | thème, deux sujets et page À propos planifiés; page d'accueil créée | aucune sommative |
 | **R2** | images, chemins et navigation | mini-site de deux pages pour isoler `../` | création de deux pages de sujet, de `apropos.html`, des images et de la navigation à quatre pages | A prioritaire; B peut débuter |
-| **R3** | feuille CSS externe et sélecteurs | deux pages reliées à une feuille commune | identité visuelle des quatre pages et classes personnelles | fin possible de B; début C |
+| **R3** | feuille CSS externe; sélecteurs d'élément, de classe et d'identifiant | deux pages reliées à une feuille commune; classe réutilisée et `id` unique | identité visuelle des quatre pages, classes personnelles et un `id` ciblé avec `#id` | fin possible de B; début C |
 | **R4** | modèle en boîte | cartes communes pour comparer les espaces | audit des vrais blocs des quatre pages | C; début D |
 | **R5** | Flexbox simple et intégration | navigation, cartes et chemin CSS vers une image | un usage flex utile, personnalisation et passe finale de correction | D, reprises et appréciation de la personnalisation |
 
