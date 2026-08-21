@@ -90,12 +90,6 @@ const navbarItems = [
     sidebarId: "dansAutobus",
     label: "Dans l'autobus",
   },
-  {
-    type: "docSidebar",
-    position: "left",
-    sidebarId: "labos",
-    label: "Laboratoires",
-  },
 ];
 
 if (includeRefonteDocs) {
