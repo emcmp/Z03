@@ -30,6 +30,7 @@ const refonteDocuments = [
   "PLAN_EPURATION_REPETITIONS_R1_R5.md",
   "VERIFICATIONS_LOCALES_AVANT_COURS.md",
   "CONSULTER_REFONTE_LOCAL.md",
+  "STRATEGIE_DEPOTS_ET_MISE_EN_PRODUCTION.md",
   "ARCHIVAGE_SOURCES_HISTORIQUES.md",
 ];
 const refonteSourceDirectory = path.resolve(__dirname, "../refonte");
