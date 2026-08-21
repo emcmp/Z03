@@ -1,5 +1,7 @@
 import React from "react";
+import { useLocation } from "@docusaurus/router";
 import OriginalCodeBlock from "@theme-original/CodeBlock";
+import ExampleFrame from "@site/src/components/ExampleFrame";
 import ExamplePeek from "@site/src/components/ExamplePeek";
 
 type CodeBlockProps = React.ComponentProps<typeof OriginalCodeBlock>;
@@ -10,6 +12,16 @@ type PreviewRule = {
   title: string;
   label?: string;
   height?: number;
+};
+
+type StagePreviewRule = {
+  code: string;
+  pathIncludes: string;
+  src: string;
+  title: string;
+  caption: string;
+  minHeight?: number;
+  maxHeight?: number;
 };
 
 const rules: PreviewRule[] = [
@@ -41,6 +53,9 @@ const rules: PreviewRule[] = [
   { code: `h1 {\n  text-align: center;\n}`, src: "examples/peek/r3-align.html", title: "Rendu d'un titre centré", label: "Voir l'alignement", height: 100 },
   { code: `.mise-en-valeur {\n  border: 2px solid #b45b5b;\n}`, src: "examples/peek/r3-border.html", title: "Rendu d'une bordure CSS", label: "Voir la bordure", height: 100 },
   { code: `body {\n  font-family: Arial, sans-serif;\n  color: #263238;\n}\n\nh1 {\n  color: #245a86;\n  text-align: center;\n}\n\n.mise-en-valeur {\n  color: #7a1f1f;\n  background-color: #f7eaea;\n  font-weight: bold;\n  border: 2px solid #b45b5b;\n}`, src: "examples/peek/r3-complete.html", title: "Rendu de l'exemple complet de la rencontre 3", label: "Voir l'exemple complet", height: 230 },
+  { code: `body {\n  font-family: Arial, sans-serif;\n  color: #263238;\n}\n\nh1 {\n  color: #245a86;\n}`, src: "examples/projet-web/evolution/etape3/preview.html", title: "Projet Web après les premiers styles généraux", label: "Voir dans le site", height: 300 },
+  { code: `body {\n  font-family: Arial, sans-serif;\n  color: #263238;\n}\n\nh1 {\n  color: #245a86;\n  text-align: center;\n}\n\nh2 {\n  color: #3f6f91;\n}`, src: "examples/projet-web/evolution/etape3/preview.html", title: "Projet Web avec styles généraux cohérents", label: "Voir dans le site", height: 300 },
+  { code: `.mise-en-valeur {\n  color: #7a1f1f;\n  background-color: #f7eaea;\n  font-weight: bold;\n  border: 2px solid #b45b5b;\n}`, src: "examples/projet-web/evolution/etape3/preview.html", title: "Projet Web avec une classe de mise en valeur", label: "Voir dans le site", height: 300 },
 
   { code: `.carte {\n  background-color: #eaf3ff;\n  border: 2px solid #245a86;\n}`, src: "examples/peek/r4-visible-box.html", title: "Rendu d'une boîte HTML rendue visible", label: "Voir la boîte", height: 150 },
   { code: `.carte {\n  background-color: #eaf3ff;\n  border: 2px solid #245a86;\n  padding: 20px;\n}`, src: "examples/peek/r4-padding.html", title: "Rendu d'une carte avec padding", label: "Voir le padding", height: 170 },
@@ -51,6 +66,8 @@ const rules: PreviewRule[] = [
   { code: `.carte {\n  border: 2px solid #245a86;\n}`, src: "examples/peek/r4-visible-box.html", title: "Rendu d'une bordure autour d'une carte", label: "Voir la bordure", height: 150 },
   { code: `.carte {\n  width: 320px;\n}`, src: "examples/peek/r4-width.html", title: "Rendu d'une carte de 320 pixels", label: "Voir la largeur", height: 130 },
   { code: `body {\n  font-family: Arial, sans-serif;\n  color: #263238;\n}\n\n.carte {\n  background-color: #eaf3ff;\n  border: 2px solid #245a86;\n  padding: 20px;\n  margin: 24px 0;\n}`, src: "examples/peek/r4-complete.html", title: "Rendu de l'exemple complet de la rencontre 4", label: "Voir l'exemple complet", height: 300 },
+  { code: `.carte {\n  background-color: #eaf3ff;\n  border: 2px solid #245a86;\n  padding: 20px;\n  margin: 20px 0;\n}`, src: "examples/projet-web/evolution/etape4/preview.html", title: "Projet Web avec cartes et espacements", label: "Voir dans le site", height: 330 },
+  { code: `main {\n  max-width: 900px;\n}`, src: "examples/projet-web/evolution/etape4/preview.html", title: "Projet Web avec largeur maximale", label: "Voir dans le site", height: 330 },
 
   { code: `.navigation {\n  display: flex;\n}`, src: "examples/peek/r5-flex.html", title: "Rendu d'une navigation Flexbox", label: "Voir Flexbox", height: 100 },
   { code: `.navigation {\n  display: flex;\n  gap: 20px;\n}`, src: "examples/peek/r5-gap.html", title: "Rendu de Flexbox avec gap", label: "Voir Flexbox + gap", height: 100 },
@@ -63,6 +80,37 @@ const rules: PreviewRule[] = [
   { code: `.carte {\n  display: flex;\n}`, src: "examples/peek/r5-wrong-parent.html", title: "Rendu lorsque le mauvais élément devient flex", label: "Voir l'erreur", height: 190 },
   { code: `.cartes {\n  display: flex;\n}`, src: "examples/peek/r5-right-parent.html", title: "Rendu lorsque le bon parent devient flex", label: "Voir le bon parent", height: 180 },
   { code: `.navigation {\n  display: flex;\n  gap: 20px;\n  justify-content: center;\n  background-color: #eaf3ff;\n  padding: 16px;\n}`, src: "examples/peek/r5-nav-complete.html", title: "Rendu d'une navigation Flexbox complète", label: "Voir la navigation", height: 120 },
+  { code: `.carte {\n  background-color: #eaf3ff;\n  border: 2px solid #245a86;\n  padding: 20px;\n}\n\n.cartes {\n  display: flex;\n  gap: 20px;\n}`, src: "examples/projet-web/evolution/etape5/preview.html", title: "Projet Web avec cartes et Flexbox", label: "Voir dans le site", height: 350 },
+];
+
+const stagePreviewRules: StagePreviewRule[] = [
+  {
+    pathIncludes: "/projet-web/03-rencontre3",
+    code: `color\nbackground-color\nfont-family\nfont-size\nfont-weight\nfont-style\ntext-align\nborder`,
+    src: "examples/projet-web/evolution/etape3/preview.html",
+    title: "Exemple de Projet Web à la fin de l'étape 3",
+    caption: "Exemple de progression — Étape 3 : une identité visuelle simple avec la même feuille CSS, sans mise en page avancée.",
+    minHeight: 420,
+    maxHeight: 560,
+  },
+  {
+    pathIncludes: "/projet-web/04-rencontre4",
+    code: `main {\n  max-width: 900px;\n}`,
+    src: "examples/projet-web/evolution/etape4/preview.html",
+    title: "Exemple de Projet Web à la fin de l'étape 4",
+    caption: "Exemple de progression — Étape 4 : le même site après l'ajout de cartes, de padding, de margin et d'une largeur maximale.",
+    minHeight: 480,
+    maxHeight: 620,
+  },
+  {
+    pathIncludes: "/projet-web/05-rencontre5",
+    code: `.carte {\n  background-color: #eaf3ff;\n  border: 2px solid #245a86;\n  padding: 20px;\n}\n\n.cartes {\n  display: flex;\n  gap: 20px;\n}`,
+    src: "examples/projet-web/evolution/etape5/preview.html",
+    title: "Exemple de Projet Web à la fin de l'étape 5",
+    caption: "Exemple de progression — Étape 5 : le même site avec Flexbox pour la navigation et le groupe de cartes.",
+    minHeight: 470,
+    maxHeight: 620,
+  },
 ];
 
 function normalize(children: React.ReactNode) {
@@ -70,8 +118,12 @@ function normalize(children: React.ReactNode) {
 }
 
 export default function CodeBlock(props: CodeBlockProps) {
+  const location = useLocation();
   const code = normalize(props.children);
   const preview = rules.find((rule) => rule.code === code);
+  const stagePreview = stagePreviewRules.find(
+    (rule) => rule.code === code && location.pathname.includes(rule.pathIncludes)
+  );
 
   return (
     <>
@@ -83,6 +135,18 @@ export default function CodeBlock(props: CodeBlockProps) {
           label={preview.label}
           height={preview.height}
         />
+      ) : null}
+      {stagePreview ? (
+        <div>
+          <p><strong>{stagePreview.caption}</strong> Votre sujet, vos textes et vos choix visuels seront différents.</p>
+          <ExampleFrame
+            src={stagePreview.src}
+            title={stagePreview.title}
+            showCode={false}
+            minHeight={stagePreview.minHeight}
+            maxHeight={stagePreview.maxHeight}
+          />
+        </div>
       ) : null}
     </>
   );
