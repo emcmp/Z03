@@ -20,6 +20,7 @@ Les anciens plans et revues restent utiles comme historique des décisions, mais
 - Le même Projet Web sert de support aux validations.
 - Une validation porte sur la compréhension et la capacité à modifier le code, pas seulement sur la présence d'un résultat.
 - Les minimums du projet garantissent un support assez riche; ils ne constituent pas une grille mécanique de points.
+- La personnalisation est appréciée séparément et ne devient pas une neuvième compétence technique.
 
 ## Minimum du Projet Web à la fin de la rencontre 5
 
@@ -32,15 +33,17 @@ mon-site/
 │   └── au moins deux images locales
 └── pages/
     ├── sous-theme-1.html
-    └── sous-theme-2.html
+    ├── sous-theme-2.html
+    └── apropos.html
 ```
 
 Le projet contient au minimum :
 
 - un thème principal;
-- deux sous-thèmes distincts;
-- trois pages HTML complètes;
-- une navigation permettant d'atteindre les trois pages depuis chaque page;
+- deux pages de sujet distinctes, avec possibilité d'en ajouter davantage;
+- une page À propos adaptée au type de site;
+- quatre pages HTML complètes;
+- une navigation permettant d'atteindre les quatre pages depuis chaque page;
 - du contenu original et différent dans chaque page;
 - au moins deux images locales;
 - un attribut `alt` sur chaque élément `<img>`;
@@ -50,6 +53,14 @@ Le projet contient au minimum :
 - une disposition simple avec `display: flex` et `gap`.
 
 `background-image` est un enrichissement facultatif dans le Projet Web. La notion est montrée dans l'exercice de la rencontre 5 pour réinvestir les chemins écrits dans CSS, mais elle n'ajoute pas de critère indépendant.
+
+## Page À propos
+
+La page `pages/apropos.html` est obligatoire.
+
+- Pour un site personnel ou informatif, elle peut présenter un prénom ou un pseudonyme, le domaine d'études, les intérêts, les passe-temps et la motivation liée au thème.
+- Pour une entreprise ou une organisation fictive, elle peut présenter sa description, sa mission, ses services, son équipe et des coordonnées fictives.
+- Aucun renseignement personnel sensible ne doit être demandé.
 
 ## Niveaux d'attente
 
@@ -94,15 +105,15 @@ image décorative   → alt=""
 
 La **présence** de l'attribut fait partie du minimum technique de WEB-03. La qualité exacte de sa rédaction est accompagnée comme bonne pratique d'accessibilité et ne devient pas un décompte mécanique de mots.
 
-# Huit compétences
+# Huit compétences techniques
 
 | Code | Compétence | Notions principalement observées | Support minimal dans le projet |
 | --- | --- | --- | --- |
-| **WEB-01** | **Organiser un projet Web et utiliser les chemins** | dossiers, ressources, chemins relatifs, sous-dossiers, `../` | `index.html` à la racine, deux pages sous `pages/`, images sous `images/`, chemins fonctionnels |
-| **WEB-02** | **Construire une page HTML correctement structurée** | document complet, `head`, `body`, éléments, attributs, imbrication | trois documents HTML complets et lisibles |
-| **WEB-03** | **Structurer et enrichir le contenu HTML** | titres, paragraphes, listes, images, choix d'éléments | contenu original sur trois pages, au moins une liste utile, deux images et `alt` sur chaque `<img>` |
-| **WEB-04** | **Relier plusieurs pages dans une navigation fonctionnelle** | `a`, `href`, navigation, chemins | trois destinations accessibles depuis chaque page |
-| **WEB-05** | **Associer correctement une feuille CSS externe** | fichier CSS, `link`, chemins vers CSS, syntaxe d'une règle | un seul `css/styles.css` chargé par les trois pages |
+| **WEB-01** | **Organiser un projet Web et utiliser les chemins** | dossiers, ressources, chemins relatifs, sous-dossiers, `../` | `index.html` à la racine, trois pages sous `pages/`, images sous `images/`, chemins fonctionnels |
+| **WEB-02** | **Construire une page HTML correctement structurée** | document complet, `head`, `body`, éléments, attributs, imbrication | quatre documents HTML complets et lisibles |
+| **WEB-03** | **Structurer et enrichir le contenu HTML** | titres, paragraphes, listes, images, choix d'éléments | contenu original sur quatre pages, au moins une liste utile, deux images et `alt` sur chaque `<img>` |
+| **WEB-04** | **Relier plusieurs pages dans une navigation fonctionnelle** | `a`, `href`, navigation, chemins | quatre destinations accessibles depuis chaque page |
+| **WEB-05** | **Associer correctement une feuille CSS externe** | fichier CSS, `link`, chemins vers CSS, syntaxe d'une règle | un seul `css/styles.css` chargé par les quatre pages |
 | **WEB-06** | **Cibler les éléments avec des sélecteurs appropriés** | sélecteurs d'élément, classes, réutilisation, cascade simple | au moins un sélecteur d'élément, deux classes utiles et une classe réutilisée |
 | **WEB-07** | **Mettre en forme une interface avec CSS** | couleurs, arrière-plans, typographie, alignement, bordures | choix visuels cohérents et règles que l'étudiant peut retrouver et modifier |
 | **WEB-08** | **Organiser l'espace et la disposition des éléments** | modèle en boîte, `padding`, `border`, `margin`, Flexbox simple | un bloc utilisant volontairement le modèle en boîte et un parent avec `display: flex` et `gap` |
@@ -138,6 +149,38 @@ Une validation ne devient pas un décompte automatique du type :
 
 Les minimums du projet portent sur une structure suffisamment riche et cohérente. La validation porte sur l'usage volontaire des outils.
 
+# Personnalisation et appropriation du projet
+
+Cette dimension transversale représente **20 % du bloc HTML/CSS**. Les huit compétences techniques représentent ensemble les 80 % restants.
+
+Puisque le bloc HTML/CSS vaut 30 % de la note finale :
+
+```text
+compétences techniques → 24 % de la note finale
+personnalisation        →  6 % de la note finale
+```
+
+La personnalisation :
+
+- n'est pas nommée WEB-09;
+- ne reçoit pas de badge;
+- n'utilise pas les états `À faire`, `À revoir` et `Validée`;
+- est appréciée à la fin du bloc sur 20 points;
+- porte sur des manifestations observables, pas sur un nombre d'heures supposé.
+
+## Critères de personnalisation — 20 points
+
+| Critère | Points | Manifestations observées |
+| --- | ---: | --- |
+| Contenu original | 5 | textes personnels, informations pertinentes, images choisies pour le thème |
+| Cohérence du thème | 5 | accueil, pages de sujet et page À propos complémentaires |
+| Décisions personnelles | 5 | noms, organisation, classes, couleurs et présentation adaptés plutôt que copiés |
+| Finition et initiative | 5 | relecture, cohérence, soin des détails et enrichissements pertinents |
+
+La structure HTML de base et les syntaxes apprises dans le cours peuvent naturellement être réutilisées. Ce qui est apprécié est la transformation de ces outils en un projet personnel.
+
+Un site simple peut obtenir une excellente appréciation. Les effets avancés, le talent graphique, les ressources financières ou le temps supposé ne doivent pas devenir des critères implicites.
+
 # Quatre fenêtres de validation
 
 | Validation | Période cible | Compétences | Priorité |
@@ -153,11 +196,11 @@ Ces périodes sont des fenêtres, pas des échéances imposant que tout le group
 
 | Rencontre | Cours | Exercice guidé | Projet Web | Validation |
 | --- | --- | --- | --- | --- |
-| **R1** | environnement et premiers HTML | page HTML commune | thème, deux sous-thèmes planifiés et page d'accueil | aucune sommative |
-| **R2** | images, chemins et navigation | mini-site de deux pages pour isoler `../` | création des deux pages secondaires, images et navigation à trois pages | A prioritaire; B peut débuter |
-| **R3** | feuille CSS externe et sélecteurs | deux pages reliées à une feuille commune | identité visuelle des trois pages et classes personnelles | fin possible de B; début C |
-| **R4** | modèle en boîte | cartes communes pour comparer les espaces | audit des vrais blocs du site | C; début D |
-| **R5** | Flexbox simple et intégration | navigation, cartes et chemin CSS vers une image | un usage flex utile et passe finale de correction | D et reprises |
+| **R1** | environnement et premiers HTML | page HTML commune | thème, deux sujets et page À propos planifiés; page d'accueil créée | aucune sommative |
+| **R2** | images, chemins et navigation | mini-site de deux pages pour isoler `../` | création de deux pages de sujet, de `apropos.html`, des images et de la navigation à quatre pages | A prioritaire; B peut débuter |
+| **R3** | feuille CSS externe et sélecteurs | deux pages reliées à une feuille commune | identité visuelle des quatre pages et classes personnelles | fin possible de B; début C |
+| **R4** | modèle en boîte | cartes communes pour comparer les espaces | audit des vrais blocs des quatre pages | C; début D |
+| **R5** | Flexbox simple et intégration | navigation, cartes et chemin CSS vers une image | un usage flex utile, personnalisation et passe finale de correction | D, reprises et appréciation de la personnalisation |
 
 # Modèle éditorial associé
 
