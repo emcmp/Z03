@@ -15,6 +15,7 @@ try {
     Assert-CurrentBranch -ExpectedBranch 'main' -RepositoryRoot $repositoryRoot
 
     Update-OriginRefs -RepositoryRoot $repositoryRoot
+    Update-OfficialRefs -RepositoryRoot $repositoryRoot
     $headBefore = Get-CommitSha -Reference 'HEAD' -RepositoryRoot $repositoryRoot
     $originSha = Get-CommitSha -Reference 'origin/main' -RepositoryRoot $repositoryRoot
     $officialSha = Get-CommitSha -Reference 'cegep/main' -RepositoryRoot $repositoryRoot

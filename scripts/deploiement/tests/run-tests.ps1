@@ -214,6 +214,16 @@ try {
             Assert-True ($content -notmatch 'git[^\r\n]*push[^\r\n]*(--force|--force-with-lease)') "$name contient un force push."
         }
     }
+
+    Invoke-Test 'preview actualise cegep avant de lire cegep/main' {
+        $previewPath = Join-Path (Split-Path -Parent $PSScriptRoot) 'verifier-preview.ps1'
+        $content = Get-Content -Raw -LiteralPath $previewPath
+        $fetchIndex = $content.IndexOf('Update-OfficialRefs -RepositoryRoot $repositoryRoot')
+        $readIndex = $content.IndexOf("Get-CommitSha -Reference 'cegep/main'")
+        Assert-True ($fetchIndex -ge 0) 'Le fetch officiel est absent de verifier-preview.ps1.'
+        Assert-True ($readIndex -ge 0) 'La lecture de cegep/main est absente de verifier-preview.ps1.'
+        Assert-True ($fetchIndex -lt $readIndex) 'cegep/main est lu avant lʼactualisation du remote cegep.'
+    }
 }
 finally {
     $fullTestRoot = [System.IO.Path]::GetFullPath($testRoot)
