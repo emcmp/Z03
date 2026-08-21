@@ -8,7 +8,6 @@ import MainDocsGrid from "@site/src/components/MainDocsGrid";
 import MainDocsCalendar from "@site/src/components/MainDocsCalendar";
 import DocsViewer from "@site/src/components/DocsViewer";
 import ExampleFrame from "@site/src/components/ExampleFrame";
-import ExamplePeek from "@site/src/components/ExamplePeek";
 
 export default {
   ...MDXComponents,
@@ -21,5 +20,4 @@ export default {
   MainDocsCalendar,
   DocsViewer,
   ExampleFrame,
-  ExamplePeek,
 };
