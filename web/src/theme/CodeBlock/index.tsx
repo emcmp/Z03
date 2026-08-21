@@ -40,6 +40,7 @@ const rules: PreviewRule[] = [
   { code: `.mise-en-valeur {\n  font-weight: bold;\n}\n\n.citation {\n  font-style: italic;\n}`, src: "examples/peek/r3-font-emphasis.html", title: "Rendu de bold et italic", label: "Voir bold + italic", height: 120 },
   { code: `h1 {\n  text-align: center;\n}`, src: "examples/peek/r3-align.html", title: "Rendu d'un titre centré", label: "Voir l'alignement", height: 100 },
   { code: `.mise-en-valeur {\n  border: 2px solid #b45b5b;\n}`, src: "examples/peek/r3-border.html", title: "Rendu d'une bordure CSS", label: "Voir la bordure", height: 100 },
+  { code: `body {\n  font-family: Arial, sans-serif;\n  color: #263238;\n}\n\nh1 {\n  color: #245a86;\n  text-align: center;\n}\n\n.mise-en-valeur {\n  color: #7a1f1f;\n  background-color: #f7eaea;\n  font-weight: bold;\n  border: 2px solid #b45b5b;\n}`, src: "examples/peek/r3-complete.html", title: "Rendu de l'exemple complet de la rencontre 3", label: "Voir l'exemple complet", height: 230 },
 
   { code: `.carte {\n  background-color: #eaf3ff;\n  border: 2px solid #245a86;\n}`, src: "examples/peek/r4-visible-box.html", title: "Rendu d'une boîte HTML rendue visible", label: "Voir la boîte", height: 150 },
   { code: `.carte {\n  background-color: #eaf3ff;\n  border: 2px solid #245a86;\n  padding: 20px;\n}`, src: "examples/peek/r4-padding.html", title: "Rendu d'une carte avec padding", label: "Voir le padding", height: 170 },
@@ -49,6 +50,7 @@ const rules: PreviewRule[] = [
   { code: `.carte {\n  margin: 24px 0;\n}`, src: "examples/peek/r4-margin-vertical.html", title: "Rendu d'une margin verticale", label: "Voir la margin", height: 160 },
   { code: `.carte {\n  border: 2px solid #245a86;\n}`, src: "examples/peek/r4-visible-box.html", title: "Rendu d'une bordure autour d'une carte", label: "Voir la bordure", height: 150 },
   { code: `.carte {\n  width: 320px;\n}`, src: "examples/peek/r4-width.html", title: "Rendu d'une carte de 320 pixels", label: "Voir la largeur", height: 130 },
+  { code: `body {\n  font-family: Arial, sans-serif;\n  color: #263238;\n}\n\n.carte {\n  background-color: #eaf3ff;\n  border: 2px solid #245a86;\n  padding: 20px;\n  margin: 24px 0;\n}`, src: "examples/peek/r4-complete.html", title: "Rendu de l'exemple complet de la rencontre 4", label: "Voir l'exemple complet", height: 300 },
 
   { code: `.navigation {\n  display: flex;\n}`, src: "examples/peek/r5-flex.html", title: "Rendu d'une navigation Flexbox", label: "Voir Flexbox", height: 100 },
   { code: `.navigation {\n  display: flex;\n  gap: 20px;\n}`, src: "examples/peek/r5-gap.html", title: "Rendu de Flexbox avec gap", label: "Voir Flexbox + gap", height: 100 },
