@@ -8,6 +8,8 @@ import r2ProjetExempleHtml from '!!raw-loader!../../static/examples/rencontre2/e
 
 # Projet Web — Étape 2
 
+<ProjectStepHero step={2} />
+
 Cette activité est la **mise en pratique personnelle de la rencontre 2**. Vous partez du site commencé à la rencontre 1 et vous le transformez en un petit site composé de plusieurs pages.
 
 Avant de commencer, consultez le **[cours de la rencontre 2](../01-cours/02-rencontre2.md)**. L'**[exercice guidé sur les chemins et la navigation](../01-cours/02-rencontre2-exercice-guide.md)** vous permettra ensuite de pratiquer avec un petit exemple avant de modifier votre propre projet.
