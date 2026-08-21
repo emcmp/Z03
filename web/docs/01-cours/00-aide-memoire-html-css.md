@@ -89,6 +89,19 @@ image décorative   → alt=""
 
 Chaque élément `<img>` doit posséder un attribut `alt`.
 
+### Dimensions
+
+Dans l'attribut HTML, `width="400"` représente des pixels et s'écrit sans `px`.
+
+Pour une largeur relative, utilisez CSS :
+
+```css
+.image-principale {
+  width: 80%;
+  height: auto;
+}
+```
+
 ## Chemins relatifs
 
 Avec cette structure :
@@ -242,6 +255,61 @@ padding: 16px 24px;
 24px → gauche et droite
 ```
 
+## Largeurs, images et centrage
+
+### Largeur fixe ou relative
+
+```css
+.carte {
+  width: 320px;
+}
+
+.image-principale {
+  width: 80%;
+  height: auto;
+}
+```
+
+```text
+px → dimension fixe
+%  → proportion de l'espace disponible dans le parent
+```
+
+### Garder une image dans son conteneur
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+### Centrer une boîte
+
+```css
+main {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+```
+
+Dans `margin: 0 auto`, `0` agit en haut et en bas; `auto` agit à gauche et à droite.
+
+### Centrer le contenu d'une boîte
+
+```css
+.zone-image {
+  text-align: center;
+}
+```
+
+```text
+text-align: center  → centre le contenu dans la boîte
+margin: 0 auto      → peut centrer la boîte elle-même
+justify-content     → dispose les enfants d'un conteneur Flexbox
+```
+
 ## Flexbox simple
 
 ```html
@@ -249,6 +317,7 @@ padding: 16px 24px;
   <a href="index.html">Accueil</a>
   <a href="pages/sujet-1.html">Sujet 1</a>
   <a href="pages/sujet-2.html">Sujet 2</a>
+  <a href="pages/apropos.html">À propos</a>
 </nav>
 ```
 
@@ -261,6 +330,7 @@ padding: 16px 24px;
 
 ```text
 parent flex
+├── enfant direct
 ├── enfant direct
 ├── enfant direct
 └── enfant direct
@@ -303,6 +373,25 @@ Une image informative devrait normalement rester un `<img>` avec `alt`.
 3. Vérifiez le `<link>`.
 4. Comparez `css/styles.css` et `../css/styles.css`.
 5. Actualisez la bonne page.
+
+### Une image dépasse son conteneur
+
+Vérifiez si cette règle convient :
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+### Une boîte n'est pas centrée
+
+Vérifiez qu'elle n'occupe pas toute la largeur, puis ses marges horizontales :
+
+```css
+margin: 0 auto;
+```
 
 ### Flexbox agit sur les mauvais éléments
 

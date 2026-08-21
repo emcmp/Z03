@@ -1,6 +1,6 @@
 ---
-title: Étape 4 - Auditer les blocs et les espacements
-description: Analyser les vrais contenus des quatre pages et utiliser le modèle en boîte pour améliorer leur lisibilité.
+title: Étape 4 - Auditer les blocs, les dimensions et les espacements
+description: Analyser les vrais contenus des quatre pages et utiliser le modèle en boîte, les dimensions relatives et le centrage pour améliorer leur lisibilité.
 sidebar_position: 5
 ---
 
@@ -10,14 +10,14 @@ sidebar_position: 5
 
 ## Mission
 
-Faites un audit de vos quatre pages et corrigez les problèmes réels d'espace intérieur, d'espace extérieur et de regroupement visuel.
+Faites un audit de vos quatre pages et corrigez les problèmes réels d'espace intérieur, d'espace extérieur, de dimensions, de centrage et de regroupement visuel.
 
 Avant de commencer :
 
 - consultez le **[cours de la rencontre 4](../01-cours/04-rencontre4.md)**;
 - faites l'**[exercice guidé — Comprendre le modèle en boîte](../01-cours/04-rencontre4-exercice-guide.md)**.
 
-L'exercice utilise des cartes communes pour isoler le modèle en boîte. Dans votre Projet Web, vous devez appliquer ces notions à des blocs qui ont un vrai rôle dans votre contenu.
+L'exercice utilise des cartes communes pour isoler les notions. Dans votre Projet Web, vous devez les appliquer à des blocs qui ont un vrai rôle dans votre contenu.
 
 ## 1. Repérer deux blocs comparables
 
@@ -66,7 +66,71 @@ Selon votre sujet, utilisez au moins une propriété visuelle qui rend le regrou
 
 La bordure n'est pas obligatoire sur tous les blocs. Elle doit répondre à un besoin de lisibilité.
 
-## 5. Vérifier les quatre pages
+## 5. Limiter et centrer le contenu principal
+
+Une page devient souvent difficile à lire lorsque son contenu s'étend sur toute la largeur d'un grand écran.
+
+Vous pouvez combiner une largeur relative, une limite et des marges automatiques :
+
+```css
+main {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+```
+
+Dans cet exemple :
+
+- `width: 80%` utilise une proportion de l'espace disponible dans le parent;
+- `max-width: 900px` empêche le contenu de devenir trop large;
+- `margin: 0 auto` partage l'espace restant à gauche et à droite pour centrer la boîte.
+
+Les valeurs `80%` et `900px` sont des exemples. Choisissez des valeurs raisonnables pour votre site et soyez capable de les expliquer.
+
+:::info Centrer le contenu ou centrer la boîte?
+`text-align: center` centre du texte ou du contenu en ligne **dans une boîte**.
+
+`margin: 0 auto` peut centrer **la boîte elle-même** lorsqu'elle n'occupe pas toute la largeur disponible.
+:::
+
+## 6. Garder les images dans leur conteneur
+
+Puisque votre site contient des images, vérifiez qu'elles ne dépassent pas de leur parent.
+
+Une règle générale peut être utile :
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+`max-width: 100%` empêche l'image de devenir plus large que son conteneur. `height: auto` conserve ses proportions.
+
+Pour donner une largeur relative particulière à une image, utilisez une classe :
+
+```css
+.image-principale {
+  width: 80%;
+  height: auto;
+}
+```
+
+Ici, `80%` est une valeur CSS calculée à partir de la largeur disponible dans le parent. Ce n'est pas la même chose que l'attribut HTML `width="400"` vu à la rencontre 2.
+
+Pour centrer l'image dans une zone :
+
+```css
+.zone-image {
+  text-align: center;
+}
+```
+
+Utilisez cette structure seulement lorsqu'elle répond à votre design.
+
+## 7. Vérifier les quatre pages
 
 Ne corrigez pas seulement la page d'accueil.
 
@@ -76,10 +140,10 @@ Parcourez l'accueil, les deux pages de sujet et la page À propos. Cherchez :
 - deux sections trop proches;
 - des blocs semblables qui utilisent des espacements différents sans raison;
 - une classe répétée sous plusieurs noms;
-- une largeur qui rend un texte difficile à lire;
+- un contenu principal inutilement large;
+- une image qui dépasse de son conteneur;
+- un centrage appliqué au contenu alors que vous vouliez centrer la boîte, ou l'inverse;
 - une page À propos qui semble visuellement détachée du reste du site.
-
-Une limite comme `max-width` peut être utilisée si elle résout un vrai problème, mais elle n'est pas obligatoire.
 
 ## Minimum attendu
 
@@ -89,8 +153,12 @@ Votre site doit montrer :
 - un `padding` utilisé pour créer un espace intérieur;
 - un `margin` utilisé pour créer un espace extérieur;
 - une bordure ou un arrière-plan utilisé volontairement;
+- un contenu principal dont la largeur est contrôlée et centré avec des marges automatiques;
+- des images qui restent dans leur conteneur et conservent leurs proportions;
 - des valeurs cohérentes entre les quatre pages;
-- une explication claire de la différence entre `padding` et `margin`.
+- une explication claire de la différence entre `padding` et `margin`, entre `px` et `%`, puis entre `text-align: center` et `margin: 0 auto`.
+
+Aucune valeur précise comme `80%` ou `900px` n'est imposée. La validation porte sur votre compréhension et vos choix.
 
 ## Décisions à prendre
 
@@ -98,7 +166,10 @@ Votre site doit montrer :
 - Où se trouve réellement le problème d'espace?
 - Une bordure aide-t-elle à comprendre le groupe?
 - Une classe existante peut-elle être réutilisée?
-- Les espacements sont-ils cohérents sans rendre toutes les pages identiques?
+- Quelle largeur rend le contenu confortable à lire?
+- Une largeur fixe ou relative répond-elle mieux au besoin?
+- Voulez-vous centrer le contenu d'une boîte ou la boîte elle-même?
+- Les images restent-elles lisibles et proportionnées?
 - Un bloc de la page À propos mérite-t-il un traitement adapté?
 
 ## Tests à effectuer
@@ -108,8 +179,11 @@ Votre site doit montrer :
 - [ ] Je peux montrer un espace intérieur créé par `padding`.
 - [ ] Je peux montrer un espace extérieur créé par `margin`.
 - [ ] Deux blocs comparables partagent une classe.
+- [ ] Le contenu principal possède une largeur contrôlée et reste centré.
+- [ ] Je peux expliquer la différence entre une largeur en `px` et une largeur en `%`.
+- [ ] Les images ne dépassent pas de leur conteneur et ne sont pas déformées.
+- [ ] Je peux expliquer la différence entre `text-align: center` et `margin: 0 auto`.
 - [ ] Les valeurs choisies améliorent réellement la lisibilité.
-- [ ] Je n'ai pas ajouté des dimensions fixes partout sans raison.
 - [ ] La navigation et les images fonctionnent toujours.
 - [ ] La page À propos appartient visuellement au même site.
 
@@ -125,7 +199,7 @@ Vous pouvez aussi commencer la Validation D :
 - 🎨 **WEB-07 — Mettre en forme une interface avec CSS**;
 - 📐 **WEB-08 — Organiser l'espace et la disposition des éléments**.
 
-À cette rencontre, WEB-08 est surtout observée à travers le modèle en boîte. Flexbox sera ajouté à la rencontre 5.
+À cette rencontre, WEB-08 est surtout observée à travers le modèle en boîte, les dimensions, le centrage et les espacements. Flexbox sera ajouté à la rencontre 5.
 
 Le soin apporté aux blocs réels du site contribue également à la dimension **Personnalisation et appropriation du projet**.
 

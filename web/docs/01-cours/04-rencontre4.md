@@ -1,6 +1,6 @@
 ---
 title: Rencontre 4 - Modèle en boîte et espacements
-description: Comprendre margin, padding, bordures et dimensions pour organiser les éléments d'une page.
+description: Comprendre margin, padding, bordures, dimensions et centrage pour organiser les éléments d'une page.
 ---
 
 # Rencontre 4 - Modèle en boîte et espacements
@@ -9,7 +9,7 @@ description: Comprendre margin, padding, bordures et dimensions pour organiser l
 
 Aujourd'hui, nous allons répondre à une question très fréquente en CSS :
 
-> **Où dois-je ajouter de l'espace?**
+> **Où dois-je ajouter de l'espace et comment contrôler la place occupée par un élément?**
 
 Pour y répondre, il faut comprendre le **modèle en boîte**.
 
@@ -22,9 +22,12 @@ Pour y répondre, il faut comprendre le **modèle en boîte**.
 - distinguer `padding` et `margin`;
 - utiliser `padding`, `border` et `margin` volontairement;
 - utiliser une forme simple à une ou deux valeurs;
-- utiliser une dimension simple lorsqu'elle répond à un besoin réel;
+- distinguer une largeur fixe en pixels d'une largeur relative en pourcentage;
+- utiliser `width` et `max-width` lorsqu'ils répondent à un besoin réel;
+- garder une image dans l'espace disponible avec `max-width: 100%`;
+- distinguer le centrage du contenu avec `text-align` du centrage d'une boîte avec des marges automatiques;
 - regrouper du contenu dans un conteneur approprié;
-- diagnostiquer un problème d'espacement sans essayer des propriétés au hasard.
+- diagnostiquer un problème d'espacement ou de dimension sans essayer des propriétés au hasard.
 
 ## 1. Chaque élément HTML occupe une boîte
 
@@ -197,9 +200,9 @@ margin
 
 La bordure peut donc servir de repère visuel pour comprendre la différence entre espace intérieur et extérieur.
 
-## 7. Une dimension simple lorsque c'est utile
+## 7. Dimensions en pixels et en pourcentage
 
-On peut donner une largeur à une boîte :
+On peut donner une largeur fixe à une boîte :
 
 ```css
 .carte {
@@ -207,24 +210,54 @@ On peut donner une largeur à une boîte :
 }
 ```
 
-Cette valeur fixe la largeur de la zone de contenu dans le modèle normal de boîte.
+`320px` représente une largeur fixe de 320 pixels pour la zone de contenu dans le modèle normal de boîte.
 
 Le `padding` et la bordure utilisent eux aussi de l'espace autour de ce contenu.
 
 ![Une boîte dont la dimension totale comprend plusieurs zones](../../static/img/cours-modele-boites-positionnement/dimensions-totales-boite.png)
 
-Dans un vrai site, il est souvent préférable de ne pas forcer une largeur fixe partout.
+### Une largeur relative avec `%`
 
-Une limite peut être plus souple :
+CSS permet aussi de donner une largeur relative à l'espace disponible dans le parent.
 
 ```css
-main {
-  max-width: 900px;
+.image-principale {
+  width: 80%;
+  height: auto;
 }
 ```
 
+Ici, l'image utilise **80 % de la largeur disponible dans son parent**. Si le parent devient plus étroit ou plus large, l'image s'adapte avec lui.
+
+`height: auto` laisse le navigateur calculer la hauteur afin de conserver les proportions de l'image.
+
+:::warning HTML et CSS n'écrivent pas les dimensions de la même façon
+À la rencontre 2, un attribut HTML comme :
+
+```html
+<img src="images/chat.jpg" alt="Un chat" width="400">
+```
+
+utilise un nombre qui représente des pixels. Pour une largeur en pourcentage, utilisez plutôt CSS avec une règle comme `width: 80%`.
+:::
+
+### Empêcher une image de dépasser son conteneur
+
+Une règle très fréquente pour les images est :
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+`max-width: 100%` signifie que l'image peut rester plus petite, mais qu'elle ne doit pas devenir plus large que l'espace disponible dans son parent.
+
+Dans un vrai site, cette approche est souvent plus souple que de donner une largeur fixe à toutes les images.
+
 :::tip Bonne pratique
-Ajoutez une dimension parce qu'elle résout un problème réel, pas simplement pour montrer que vous connaissez la propriété.
+Utilisez une dimension parce qu'elle résout un problème réel. Une valeur fixe en `px` et une valeur relative en `%` ne répondent pas exactement au même besoin.
 :::
 
 :::note Pour aller plus loin — non évalué
@@ -239,7 +272,62 @@ Cette propriété peut rendre certaines dimensions plus faciles à prévoir parc
 Nous n'en faisons pas une exigence de la rencontre.
 :::
 
-## 8. Appliquer la boîte à un conteneur
+## 8. Centrer le contenu ou centrer la boîte
+
+Le mot **centrer** peut décrire plusieurs besoins différents.
+
+### Centrer du texte ou le contenu d'une boîte
+
+À la rencontre 3, vous avez déjà utilisé :
+
+```css
+h1 {
+  text-align: center;
+}
+```
+
+Cette propriété centre le contenu en ligne à l'intérieur de la boîte du `h1`.
+
+Le même principe peut servir à centrer une image placée dans un conteneur :
+
+```css
+.zone-image {
+  text-align: center;
+}
+```
+
+L'image reste un élément à l'intérieur de `.zone-image`; c'est le **contenu du conteneur** qui est centré.
+
+### Centrer une boîte dans l'espace disponible
+
+Pour centrer une boîte comme le contenu principal du site, on peut combiner une largeur et des marges horizontales automatiques :
+
+```css
+main {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+```
+
+On peut lire `margin: 0 auto` ainsi :
+
+```text
+0    → marge en haut et en bas
+auto → marges gauche et droite calculées automatiquement
+```
+
+Lorsque la boîte n'occupe pas toute la largeur disponible, les marges gauche et droite automatiques se partagent l'espace restant et la boîte apparaît centrée.
+
+:::info Trois idées différentes
+Dans ce cours :
+
+- `text-align: center` centre du texte ou du contenu en ligne **dans une boîte**;
+- `margin: 0 auto` peut centrer **la boîte elle-même** lorsqu'elle a une largeur ou une largeur maximale appropriée;
+- à la rencontre 5, `justify-content: center` servira à disposer des **enfants d'un conteneur Flexbox**.
+:::
+
+## 9. Appliquer la boîte à un conteneur
 
 Vous pouvez appliquer ces propriétés à des éléments HTML que vous connaissez déjà :
 
@@ -270,7 +358,7 @@ Vous pouvez alors utiliser :
 Utilisez `<header>`, `<nav>`, `<main>`, `<section>` ou un autre élément approprié lorsqu'il décrit bien le contenu. Utilisez `<div>` lorsqu'aucun élément plus précis n'est nécessaire.
 :::
 
-## 9. Exemple complet
+## 10. Exemple complet
 
 HTML :
 
@@ -298,6 +386,12 @@ body {
   color: #263238;
 }
 
+main {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .carte {
   background-color: #eaf3ff;
   border: 2px solid #245a86;
@@ -306,9 +400,9 @@ body {
 }
 ```
 
-Une seule classe donne le même modèle de boîte aux deux sections.
+Une seule classe donne le même modèle de boîte aux deux sections, tandis que `main` limite et centre l'ensemble du contenu principal.
 
-## 10. Diagnostiquer le bon type d'espace
+## 11. Diagnostiquer le bon type de problème
 
 Avant de modifier le CSS, identifiez le problème.
 
@@ -352,8 +446,25 @@ max-width
 
 peut être pertinente.
 
+### Une image dépasse son conteneur
+
+Pensez à :
+
+```css
+max-width: 100%;
+height: auto;
+```
+
+### Le contenu principal doit être centré dans la page
+
+Pensez à une largeur appropriée avec :
+
+```css
+margin: 0 auto;
+```
+
 :::info À maîtriser
-Le but n'est pas de mémoriser une liste de propriétés. Le but est de choisir la propriété qui correspond à l'endroit où se trouve le problème.
+Le but n'est pas de mémoriser une liste de propriétés. Le but est de choisir la propriété qui correspond au problème observé.
 :::
 
 ## Ce que nous ne faisons pas aujourd'hui
@@ -371,7 +482,7 @@ animations et transitions
 
 Ces notions ne font pas partie du noyau de la rencontre 4.
 
-Pour la disposition horizontale du site, nous utiliserons **Flexbox simple à la rencontre 5**.
+Pour la disposition horizontale de plusieurs éléments, nous utiliserons **Flexbox simple à la rencontre 5**.
 
 ## À retenir
 
@@ -380,6 +491,9 @@ Pour la disposition horizontale du site, nous utiliserons **Flexbox simple à la
 - `padding` crée de l'espace intérieur;
 - `margin` crée de l'espace extérieur;
 - une ou deux valeurs suffisent pour nos principaux besoins;
+- `px` donne une dimension fixe alors que `%` donne une dimension relative à l'espace disponible dans le parent;
+- `max-width: 100%` avec `height: auto` permet à une image de rester dans son conteneur en conservant ses proportions;
+- `text-align: center` centre du contenu dans une boîte, tandis que `margin: 0 auto` peut centrer la boîte elle-même;
 - une dimension devrait répondre à un besoin réel;
 - une classe permet de réutiliser le même modèle de boîte;
 - `<div>` est un conteneur général, pas un remplacement automatique des éléments sémantiques.
@@ -404,4 +518,4 @@ Vous pouvez aussi commencer la **Validation D** :
 - **WEB-07 — Mettre en forme une interface avec CSS**;
 - **WEB-08 — Organiser l'espace et la disposition des éléments**.
 
-À cette rencontre, WEB-08 porte surtout sur le modèle en boîte. Flexbox sera ajouté à la rencontre 5.
+À cette rencontre, WEB-08 porte surtout sur le modèle en boîte, les dimensions et les espacements. Flexbox sera ajouté à la rencontre 5.
