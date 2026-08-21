@@ -163,6 +163,10 @@ const config = {
             docsPluginId: "refonte",
             label: "Refonte",
           },
+          {
+            type: "custom-styleSwitcher",
+            position: "right",
+          },
         ],
       },
       footer: {
