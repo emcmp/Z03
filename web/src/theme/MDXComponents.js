@@ -8,6 +8,8 @@ import MainDocsGrid from "@site/src/components/MainDocsGrid";
 import MainDocsCalendar from "@site/src/components/MainDocsCalendar";
 import DocsViewer from "@site/src/components/DocsViewer";
 import ExampleFrame from "@site/src/components/ExampleFrame";
+import { KeyPoint, TopicBadges } from "@site/src/components/LearningCues";
+import { ProjectJourney, ProjectStepHero } from "@site/src/components/ProjectVisuals";
 
 export default {
   ...MDXComponents,
@@ -20,4 +22,8 @@ export default {
   MainDocsCalendar,
   DocsViewer,
   ExampleFrame,
+  KeyPoint,
+  TopicBadges,
+  ProjectJourney,
+  ProjectStepHero,
 };
