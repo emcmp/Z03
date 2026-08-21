@@ -88,6 +88,21 @@ Ajoutez une liste de trois éléments :
 </ul>
 ```
 
+### Un commentaire comme repère dans le code
+
+Ajoutez maintenant une petite note au-dessus de votre contenu :
+
+```html
+<!-- Contenu principal de la page -->
+<h1>Ma première page Web</h1>
+```
+
+Enregistrez et actualisez le navigateur. Le commentaire reste visible dans votre **code**, mais son texte n'apparaît pas dans la page.
+
+:::info À retenir
+Les commentaires servent de repères pour les personnes qui lisent le code. Ils commencent par `<!--` et se terminent par `-->`.
+:::
+
 À ce stade, votre page devrait ressembler à ceci dans le navigateur :
 
 <ExampleFrame
@@ -182,6 +197,7 @@ Vérifiez que vous êtes capable de :
 - [ ] ouvrir ce dossier dans VS Code;
 - [ ] reconnaître le `<head>` et le `<body>`;
 - [ ] ajouter un titre, un paragraphe et une liste;
+- [ ] reconnaître un commentaire HTML et expliquer pourquoi il ne s'affiche pas dans la page;
 - [ ] corriger une balise fermante incorrecte;
 - [ ] enregistrer et actualiser le navigateur après une modification;
 - [ ] utiliser le validateur W3C avec de l'aide au besoin.
