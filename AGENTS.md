@@ -71,6 +71,21 @@ Les scripts racine délèguent leurs commandes au projet situé dans `web/`.
 
 La procédure détaillée, l'alignement initial et les contrôles obligatoires sont dans `refonte/STRATEGIE_DEPOTS_ET_MISE_EN_PRODUCTION.md`.
 
+## Outils locaux de déploiement
+
+Les opérations normales doivent utiliser les scripts contrôlés suivants depuis la racine du dépôt :
+
+```text
+Vérification personnelle  → scripts/deploiement/verifier-preview.ps1
+Préparation du candidat   → scripts/deploiement/preparer-candidat.ps1
+Publication               → scripts/deploiement/publier-candidat.ps1
+Annulation                → scripts/deploiement/annuler-candidat.ps1
+```
+
+Tous acceptent `-DryRun`. Les SHA sont déterminés automatiquement par les scripts; l'utilisateur n'a pas à les recopier. Les journaux locaux sont écrits sous `.codex-temp/deploiement/` et ne doivent jamais être versionnés.
+
+Seule la phrase exacte **« GO production du candidat en attente »** autorise Codex à exécuter `scripts/deploiement/publier-candidat.ps1` sans `-DryRun`. Aucun script, argument ou dialogue `Read-Host` ne remplace cette autorisation conversationnelle. Une divergence d'historique arrête toujours l'automatisation.
+
 ## Règles de travail
 
 1. Faire des changements ciblés. Ne pas réécrire en masse le contenu hérité du 905 sans demande explicite.
