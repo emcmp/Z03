@@ -1,6 +1,6 @@
 ---
 title: Étape 3 - Créer une identité visuelle partagée
-description: Relier les quatre pages à une feuille CSS externe et créer des styles adaptés au thème du site.
+description: Relier les quatre pages à une feuille CSS externe, utiliser des classes et un identifiant, puis créer des styles adaptés au thème du site.
 sidebar_position: 4
 ---
 
@@ -10,7 +10,7 @@ sidebar_position: 4
 
 ## Mission
 
-Ajoutez une seule feuille CSS externe à votre site de quatre pages, puis créez une identité visuelle cohérente avec votre thème et votre page À propos.
+Ajoutez une seule feuille CSS externe à votre site de quatre pages, utilisez des sélecteurs adaptés au besoin, puis créez une identité visuelle cohérente avec votre thème et votre page À propos.
 
 Avant de commencer :
 
@@ -82,7 +82,42 @@ Au moins une de ces classes doit être réutilisée sur plusieurs éléments ou 
 Un nom comme `information-importante` reste pertinent même si vous changez plus tard la couleur.
 :::
 
-## 4. Construire une identité visuelle simple
+## 4. Créer un identifiant unique
+
+Choisissez un élément qui joue un rôle unique dans l'une de vos pages, par exemple :
+
+- le message principal de l'accueil;
+- le titre d'une section importante;
+- une courte mission dans la page À propos;
+- une information particulière qui ne se répète pas.
+
+Ajoutez-lui un `id` clair dans HTML :
+
+```html
+<h2 id="message-principal">Bienvenue</h2>
+```
+
+Puis ciblez ce même élément dans `styles.css` :
+
+```css
+#message-principal {
+  color: darkgreen;
+}
+```
+
+Votre projet doit donc contenir **au moins un `id` unique utilisé volontairement et une règle `#id` correspondante**.
+
+:::info À maîtriser
+Une classe peut être réutilisée. Un `id` doit être unique dans la page.
+
+Vous devez pouvoir montrer l'élément HTML, retrouver la règle CSS correspondante et expliquer pourquoi vous avez choisi un identifiant plutôt qu'une classe.
+:::
+
+:::tip Préparation à JavaScript
+Cette pratique prépare le travail avec le DOM : plus tard, JavaScript devra souvent retrouver un élément précis pour le modifier.
+:::
+
+## 5. Construire une identité visuelle simple
 
 Votre site doit montrer au moins trois décisions visuelles que vous comprenez, par exemple :
 
@@ -99,7 +134,7 @@ Vous n'avez pas à utiliser toutes les propriétés du cours.
 Vous devez pouvoir retrouver la règle qui produit chaque changement important et expliquer pourquoi vous l'avez choisie.
 :::
 
-## 5. Personnaliser aussi la page À propos
+## 6. Personnaliser aussi la page À propos
 
 La page À propos doit appartenir visuellement au même site, mais elle peut posséder un bloc adapté à son contenu, par exemple :
 
@@ -116,6 +151,7 @@ Réutilisez les mêmes règles générales et créez une classe supplémentaire 
 - Quelle ambiance visuelle correspond au thème?
 - Quelles règles doivent s'appliquer partout?
 - Quel contenu joue un rôle spécial et mérite une classe?
+- Quel élément est réellement unique et mérite un `id`?
 - Une classe peut-elle être réutilisée au lieu de créer une règle différente pour chaque page?
 - Les quatre pages ressemblent-elles au même site?
 - La présentation de la page À propos correspond-elle à son contenu?
@@ -129,7 +165,9 @@ Réutilisez les mêmes règles générales et créez une classe supplémentaire 
 - [ ] La feuille utilise au moins un sélecteur d'élément.
 - [ ] La feuille contient au moins deux classes utiles.
 - [ ] Au moins une classe est réutilisée.
-- [ ] Les noms des classes correspondent exactement dans HTML et CSS.
+- [ ] Au moins un élément possède un `id` unique.
+- [ ] Une règle `#id` cible exactement cet élément.
+- [ ] Les noms des classes et de l'identifiant correspondent exactement dans HTML et CSS.
 - [ ] Les couleurs et la typographie restent lisibles.
 - [ ] Le contenu et la navigation fonctionnent toujours.
 
@@ -145,7 +183,9 @@ Vous pouvez aussi commencer la Validation C :
 - 🔌 **WEB-05 — Associer correctement une feuille CSS externe**;
 - 🎯 **WEB-06 — Cibler les éléments avec des sélecteurs appropriés**.
 
-Cette étape contribue aussi à la dimension **Personnalisation et appropriation du projet** par vos choix de couleurs, de typographie, de classes et de présentation.
+Pour WEB-06, vous devez pouvoir distinguer un sélecteur d'élément, une classe réutilisable et un identifiant unique.
+
+Cette étape contribue aussi à la dimension **Personnalisation et appropriation du projet** par vos choix de couleurs, de typographie, de classes, d'identifiant et de présentation.
 
 :::note Pour aller plus loin — non évalué séparément
 Vous pouvez créer une troisième classe utile, enrichir la page À propos ou expérimenter avec une autre combinaison de couleurs.
