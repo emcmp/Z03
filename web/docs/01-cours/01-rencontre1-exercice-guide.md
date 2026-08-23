@@ -198,6 +198,8 @@ L'objectif n'est pas de mémoriser tous les messages du validateur. Apprenez plu
 
 :::tip Bonne pratique
 L'indentation et la validation W3C sont fortement recommandées. Elles vous aident à trouver les problèmes, mais une compétence n'est pas évaluée seulement sur la beauté de l'indentation ou sur un compteur mécanique d'erreurs.
+
+Rappel: `SHIFT + ALT + F` permet de formatter automatiquement le document.
 :::
 
 ## 7. Avant de passer au projet
