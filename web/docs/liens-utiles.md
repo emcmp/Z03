@@ -26,7 +26,7 @@ Ces outils peuvent être pratiques pour expérimenter avec certaines propriété
 ### Ombres (`box-shadow`)
 
 - **[Box Shadow CSS Generator — HTML CSS JS](https://html-css-js.com/css/generator/box-shadow/)**
-- **[Box Shadow Generator — CSSmatic](https://www.cssmatic.com/box-shadow)**
+- **[Box Shadow Generator — CSSmatic](https://www.cssmatic.com/gen-box-shadow.html)**
 
 ### Transitions
 

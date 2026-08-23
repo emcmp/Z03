@@ -86,7 +86,7 @@ Vous pouvez :
 
 - passer à son bureau pendant une période de disponibilité;
 - écrire avant de passer afin de confirmer un bon moment;
-- utiliser le **centre d’aide du département d’informatique, local D-000-8**, lorsqu’un enseignant ou une enseignante y est disponible;
+- utiliser le **centre d’aide du département d’informatique, local D-0008**, lorsqu’un enseignant ou une enseignante y est disponible;
 - utiliser Teams pour convenir d’un moment dans la journée lorsque la personne responsable de votre groupe n’est pas au cégep.
 
 ---
