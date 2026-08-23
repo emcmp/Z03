@@ -91,7 +91,7 @@ Chaque élément `<img>` doit posséder un attribut `alt`.
 
 ### Dimensions
 
-Dans l'attribut HTML, `width="400"` représente des pixels et s'écrit sans `px`.
+Dans l'attribut HTML, `width="400"` représente la largeur en pixels et s'écrit sans `px`.
 
 Pour une largeur relative, utilisez CSS :
 
@@ -200,7 +200,7 @@ id     → élément unique    → #nom-identifiant
 
 Une classe peut être réutilisée. Un `id` doit être unique dans la page.
 
-Dans le Projet Web, au moins un élément doit posséder un `id` unique ciblé par une règle `#id` correspondante.
+Dans le Projet Web, au moins un élément doit posséder un `id` unique ciblé par un sélecteur `#id` correspondant.
 
 ## Propriétés visuelles courantes
 
@@ -227,7 +227,7 @@ h1 {
 ## Modèle en boîte
 
 ```text
-contenu → padding → border → margin
+De l'intérieur vers l'extérieur: contenu → padding → border → margin
 ```
 
 ```css
@@ -305,7 +305,7 @@ Dans `margin: 0 auto`, `0` agit en haut et en bas; `auto` agit à gauche et à d
 ```
 
 ```text
-text-align: center  → centre le contenu dans la boîte
+text-align: center  → centre le texte et les éléments en ligne
 margin: 0 auto      → peut centrer la boîte elle-même
 justify-content     → dispose les enfants d'un conteneur Flexbox
 ```
@@ -336,8 +336,8 @@ parent flex
 └── enfant direct
 ```
 
-- `display: flex` s'applique au parent;
-- `gap` espace ses enfants directs;
+- `display: flex` s'applique sur le parent des éléments à organiser;
+- `gap` espace entre ses enfants directs;
 - `justify-content` agit sur l'axe principal;
 - `align-items` agit sur l'autre axe.
 
@@ -366,13 +366,13 @@ Une image informative devrait normalement rester un `<img>` avec `alt`.
 3. Vérifiez s'il faut entrer dans un dossier ou remonter avec `../`.
 4. Vérifiez les noms et les majuscules.
 
-### Une page ne reçoit pas CSS
+### Une page ne reçoit pas le CSS
 
-1. Enregistrez HTML et CSS.
+1. Enregistrez les fichiers HTML et CSS.
 2. Vérifiez le nom `styles.css`.
 3. Vérifiez le `<link>`.
 4. Comparez `css/styles.css` et `../css/styles.css`.
-5. Actualisez la bonne page.
+5. Actualisez la bonne page avec `CTRL + R`.
 
 ### Une image dépasse son conteneur
 
