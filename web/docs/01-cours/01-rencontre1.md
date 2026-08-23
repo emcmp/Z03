@@ -58,7 +58,7 @@ Une balise ouvrante peut contenir des **attributs**. Un attribut donne une infor
 <p class="introduction">Bienvenue!</p>
 ```
 
-Ici, l'attribut `class` possède la valeur `introduction`. Nous utiliserons davantage les classes lorsque nous commencerons CSS.
+Ici, l'attribut `class` possède la valeur `introduction`. Nous utiliserons davantage les classes lorsque nous aborderons le CSS.
 
 ### Les commentaires HTML
 
@@ -83,6 +83,7 @@ Certains éléments ne contiennent pas de texte et n'ont pas de balise fermante.
 <hr>
 ```
 
+`<br>` insère un retour à la ligne et `<hr>` représente une séparation thématique.
 Nous verrons l'élément `<img>` et les chemins vers les images à la rencontre 2.
 
 ## 2. Imbriquer les éléments correctement
@@ -137,7 +138,7 @@ Le `<head>` contient des informations sur la page qui ne font pas partie du cont
 
 ### `<body>`
 
-Le `<body>` contient ce que la personne voit dans la page : titres, paragraphes, listes et, plus tard, images et liens.
+Le `<body>` contient le contenu affiché dans la page : titres, paragraphes, listes et, plus tard, images et liens.
 
 :::info À maîtriser
 Vous n'avez pas besoin de réciter cette structure de mémoire dès aujourd'hui. Vous devez surtout être capable d'en reconnaître les grandes parties et de savoir où placer le contenu visible.
