@@ -198,6 +198,14 @@ try {
         Assert-Throws -Body { Invoke-CheckedCommand -Command 'powershell.exe' -Arguments @('-NoProfile', '-Command', 'exit 7') -WorkingDirectory $repository } -Pattern 'code 7'
     }
 
+    Invoke-Test 'commande externe avec ligne vide journalisée' {
+        $result = @(Invoke-CheckedCommand -Command 'powershell.exe' -Arguments @('-NoProfile', '-Command', "[Console]::WriteLine('avant'); [Console]::WriteLine(''); [Console]::WriteLine('après')") -WorkingDirectory $repository)
+        Assert-True ($result.Count -eq 3) 'La commande doit retourner exactement trois lignes.'
+        Assert-True ($result[0] -eq 'avant') 'La première ligne est inattendue.'
+        Assert-True ($result[1] -eq '') 'La ligne vide nʼa pas été conservée.'
+        Assert-True ($result[2] -eq 'après') 'La dernière ligne est inattendue.'
+    }
+
     Invoke-Test 'workflow échoué refusé' {
         $details = [pscustomobject]@{
             url = 'https://example.invalid/run/1'

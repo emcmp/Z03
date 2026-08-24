@@ -62,7 +62,7 @@ function Start-DeploymentLog {
 
 function Write-DeploymentMessage {
     param(
-        [Parameter(Mandatory = $true)][string]$Message,
+        [Parameter(Mandatory = $true)][AllowEmptyString()][string]$Message,
         [ValidateSet('INFO', 'OK', 'ATTENTION', 'ERREUR', 'DETAIL')][string]$Level = 'INFO'
     )
 
