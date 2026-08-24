@@ -56,6 +56,23 @@ Un rendez-vous médical qui ne peut réellement pas être déplacé peut, par ex
 
 La note ne sera pas répartie ou ajoutée aux autres évaluations.
 
+### Note de passage et double seuil
+
+La note de passage du cours est de **60 %** (PIEA, article 5.1m).
+
+Le cours applique aussi un **double seuil** pour les évaluations supervisées et non supervisées (PIEA, article 5.5.2) :
+
+- vous devez obtenir au moins **60 % dans les évaluations supervisées**, comme les examens et les contrôles;
+- vous devez aussi obtenir au moins **60 % dans les évaluations non supervisées**, comme les travaux pratiques et les devoirs.
+
+Si l’un de ces deux seuils n’est pas atteint, la note inscrite au bulletin correspond à la plus basse des deux notes obtenues pour ces catégories d’évaluations.
+
+:::important En résumé
+Pour réussir le cours, **ça vous prend 60 % dans les travaux ET 60 % dans les examens**.
+
+Un bon résultat dans une catégorie ne compense pas une note sous 60 % dans l’autre.
+:::
+
 ---
 
 ## 💬 Communiquer avec l’enseignant ou l’enseignante
@@ -67,6 +84,14 @@ Teams est généralement la meilleure façon de joindre votre enseignant ou ense
 - avez une question;
 - êtes bloqué ou bloquée dans un exercice;
 - travaillez à la maison et avez besoin d’un coup de main.
+
+Vous pouvez aussi communiquer dans le **canal Teams du groupe**. Des annonces, rappels et parfois des **« à faire pour la semaine prochaine »** peuvent y être publiés.
+
+Il est donc important de :
+
+- consulter régulièrement le canal Teams;
+- garder les **notifications importantes activées**;
+- vérifier les messages et les tâches annoncées avant le prochain cours.
 
 Lorsque c’est possible, Teams peut aussi permettre à votre enseignant ou enseignante de se connecter à votre poste pour vous aider à diagnostiquer un problème.
 
@@ -243,6 +268,7 @@ Le cours vous demande surtout de :
 
 - être présent ou présente et prêt ou prête à travailler;
 - communiquer lorsqu’il y a un problème;
+- consulter Teams et rester attentif ou attentive aux annonces et tâches à faire;
 - être autonome sans hésiter à demander de l’aide;
 - respecter le groupe et le matériel;
 - limiter les distractions;
