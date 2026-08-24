@@ -1,11 +1,15 @@
 ---
 title: Liens utiles
-description: "Ressources utiles pour le cours de programmation Web : validation HTML, références HTML/CSS/JavaScript et générateurs CSS."
+description: "Ressources utiles pour le cours de programmation Web : outils, validation HTML, références HTML/CSS/JavaScript et générateurs CSS."
 ---
 
 # Liens utiles
 
 Voici des ressources et des liens qui pourront vous être utiles pendant la session pour le cours de **programmation Web**.
+
+## Installer Visual Studio Code
+
+- **[Visual Studio Code](https://code.visualstudio.com/)** — l’éditeur de code utilisé dans le cours. Il est recommandé de l’installer sur votre ordinateur personnel afin de pouvoir travailler dans le même environnement qu’au cégep.
 
 ## Valider son code HTML
 
