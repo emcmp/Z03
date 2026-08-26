@@ -162,9 +162,20 @@ const sidebars = {
         },
       ],
     },
-    { type: "doc", id: "cours/rencontre10", label: "Rencontre 10 — Événements et classes CSS" },
-    { type: "doc", id: "cours/rencontre11", label: "Rencontre 11 — Boucles" },
-    { type: "doc", id: "cours/rencontre12", label: "Rencontre 12 — Tableaux" },
+    { type: "doc", id: "cours/rencontre10", label: "Rencontre 10 — Boucles" },
+    {
+      type: "category",
+      label: "Rencontre 11 — Tableaux et plusieurs éléments DOM",
+      items: [
+        { type: "doc", id: "cours/rencontre11", label: "Cours — Tableaux" },
+        {
+          type: "doc",
+          id: "cours/rencontre11-queryselectorall",
+          label: "Cours — Tableaux d'éléments HTML",
+        },
+      ],
+    },
+    { type: "doc", id: "cours/rencontre12", label: "Rencontre 12 — Paramètres et retours" },
     { type: "doc", id: "cours/rencontre13", label: "Rencontre 13 — Plusieurs éléments du DOM" },
     { type: "doc", id: "cours/rencontre14", label: "Rencontre 14 — Rattrapage et révision" },
     { type: "doc", id: "cours/rencontre15", label: "Rencontre 15 — Évaluation sommative finale" },
