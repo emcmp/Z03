@@ -119,7 +119,7 @@ function texteEtBordure(couleurChoisie){
 Et voilà ! On a une fonction qui fera le travail, **peu importe la couleur** :
 
 * `textureEtBordure("pink");` permettrait de rendre le texte et la bordure roses.
-* `textureEtBordure("crimson");` permettrait de rendre l'élément `.description` cramoisi.
+* `textureEtBordure("crimson");` permettrait de rendre le texte et la bordure cramoisis.
 * etc.
 
 :::tip
