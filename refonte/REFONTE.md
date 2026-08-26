@@ -47,9 +47,10 @@ Cette structure peut évoluer pendant la refonte. Les changements majeurs d'orga
 
 Les décisions pédagogiques de haut niveau ne suffisent pas à suivre un chantier qui s'étend sur plusieurs sessions. Pour les travaux importants, un **plan d'implémentation versionné** doit être créé avant de commencer les modifications.
 
-Le plan actif pour finaliser le bloc HTML/CSS est :
+Plans de référence :
 
-- `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` — état, ordre des tâches, points de reprise et tâches optionnelles pour Codex.
+- `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` — état, ordre des tâches, points de reprise et tâches optionnelles pour le bloc HTML/CSS;
+- `PLAN_RENCONTRES_6_A_15.md` — **référence pédagogique canonique pour la séquence JavaScript et la fin de session**, incluant le mapping des sources 905, les candidats au pruning et les contraintes R13–R15.
 
 Ce plan doit être mis à jour après chaque lot cohérent de travail afin qu'une interruption ou un changement d'agent ne fasse pas perdre l'état réel du chantier.
 
@@ -93,12 +94,24 @@ La configuration Docusaurus doit rester portable afin que la même source puisse
 - Documenter les chantiers importants avec un plan d'implémentation à états explicites avant de commencer les modifications, afin de rendre le travail reprenable après interruption.
 - Utiliser `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` comme plan opérationnel actif pour terminer le bloc HTML/CSS.
 
+### 2026-08-26
+
+- Adopter `PLAN_RENCONTRES_6_A_15.md` comme **référence canonique de planification** pour la suite JavaScript.
+- Terminer toute nouvelle matière essentielle au plus tard à la **rencontre 12** afin de libérer la rencontre 13.
+- Réserver **R13** à un TP, une activité d'intégration ou du travail supervisé; conserver **R14** comme buffer sans nouvelle matière essentielle; conserver **R15** pour l'examen final de 30 %.
+- Privilégier une **migration minimale** du matériel 905 : un ancien cours/laboratoire reçoit une destination principale unique; ne le scinder que si le gain pédagogique est clair après inventaire.
+- Mapping de travail : ancien 2 → R6; ancien 3 → R7; anciens 4 + 14 → R8; anciens 5 + 6 → R9; ancien 11 → R10; ancien 12 → R11; ancien 15 → R11 ou R12; ancien 13 → R12.
+- Déplacer `querySelectorAll` et le parcours de plusieurs éléments avant R13, idéalement en R11 avec les tableaux/boucles, sinon comme bloc en R12.
+- Privilégier une seule forme principale de boucle; choisir laquelle **après l'inventaire** des laboratoires 11, 12 et 15.
+- Ne plus considérer `push`, `pop` et `splice` comme des candidats naturels au retrait : ils peuvent être conservés lorsque les exercices sont simples et efficaces, même si leur poids dans l'évaluation demeure léger.
+- La prochaine tâche Codex est un **inventaire factuel des laboratoires historiques seulement**. Aucune migration, réécriture, suppression, modification de navigation ou décision pédagogique autonome ne doit être faite pendant cet inventaire.
+
 ## Questions à trancher pendant la refonte
 
-- Quelle quantité de HTML est nécessaire avant de commencer CSS et JavaScript?
-- Quelles notions CSS sont essentielles pour soutenir les exercices de programmation sans transformer Z03 en cours de design Web?
-- Quelles rencontres JavaScript du 905 peuvent être reprises presque telles quelles?
-- Quelles notions du cours Z03 actuel peuvent être supprimées ou déplacées pour réduire la surcharge?
-- Quelle progression hebdomadaire donne suffisamment de temps de pratique aux débutants?
+- Quelles notions JavaScript peuvent être retirées sans appauvrir inutilement les TP ou l'examen final?
+- Quelle forme principale de boucle permet de conserver les meilleurs exercices et de soutenir le plus simplement les tableaux et `querySelectorAll`?
+- L'ancien laboratoire 15 peut-il être intégré sans surcharge à R11, ou doit-il être conservé comme bloc en R12?
+- Quel TP d'intégration exploite le mieux le noyau appris d'ici R12?
+- Quelles notions du matériel Z03/905 sont réellement nécessaires à ce TP et à l'examen final?
 
 Mettre à jour ce document lorsque des décisions structurantes sont prises.
