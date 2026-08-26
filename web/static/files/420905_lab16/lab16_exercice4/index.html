@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="init()">
+    <nav>
+        <a href="../lab16_exercice1/index.html">Exercice 1</a>
+        <a href="../lab16_exercice2/index.html">Exercice 2</a>
+        <a href="../lab16_exercice3/index.html">Exercice 3</a>
+        <a href="../lab16_exercice4/index.html">Exercice 4</a>
+    </nav>
+    <div id="description">
+        <h2>Exercice 4 - Trafique maritime 🐟</h2>
+        <p>
+            Des poissons traverseront l'écran. Il faut compter
+            le nombre de 🐟, de 🐠 et de 🐡 qui traversent 
+            en appuyant sur des touches du clavier. (Ex : si 15 🐟
+            sont passés, il faut avoir appuyé 15 fois sur la touche 1)
+        </p>
+    </div>
+
+    <div id="container">
+        <div class="info">
+            <button class="bouton">Jouer</button>
+            <button class="niveau">Niveau : facile</button>
+            <div id="temps">Temps restant : 0</div>
+        </div>
+        
+        <div class="touches">
+            <div id="morue">1 🐟</div>
+            <div id="clown">2 🐠</div>
+            <div id="blob">3 🐡</div>
+        </div>
+        
+        <div id="jeu">
+            
+        </div>
+
+        <div id="resultats" style="display:none;">
+            <table>
+                <tr>
+                    <th>Votre compte</th>
+                    <th>Réponse</th>
+                </tr>
+                <tr>
+                    <td><span id="cpMorue">0</span>🐟</td>
+                    <td><span id="nbMorue">0</span>🐟</td>
+                </tr>
+                <tr>
+                    <td><span id="cpClown">0</span>🐠</td>
+                    <td><span id="nbClown">0</span>🐠</td>
+                </tr>
+                <tr>
+                    <td><span id="cpBlob">0</span>🐡</td>
+                    <td><span id="nbBlob">0</span>🐡</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="init()">
+    <nav>
+        <a href="../lab22_exercice1/index.html">Exercice 1</a>
+        <a href="../lab22_exercice2/index.html">Exercice 2</a>
+        <a href="../lab22_exercice3/index.html">Exercice 3</a>
+        <a href="../lab22_exercice4/index.html">Exercice 4</a>
+    </nav>
+    <div id="description">
+        <h2>Exercice 4 - Souvenirs lexicaux 🧠</h2>
+        <p>
+            Vous aurez quelques secondes pour mémoriser des mots, puis
+            vous devrez tous les taper au clavier. Vous pouvez cliquer sur 👅😹
+            pour donner votre langue au chat et dévoiler 1 mot, mais cela coûte une erreur.
+        </p>
+    </div>
+
+    <div id="container">
+
+        <button class="bouton1">Jouer</button>
+        <div class="score">Score : 0</div>
+        <div class="temps" style="display:none;"><span class="secondes">10</span> secondes pour mémoriser ...</div>
+
+        <div class="jeu">
+            <div class="ui" style="display:none;">
+                <div class="row">
+                    <div class="col">Mots trouvés : <span class="motsTrouves">0 / 3</span></div>
+                    <div class="col">Erreurs :  <span class="erreurs">0 / 3</span></div>
+                    <div class="langueChat" class="col">👅😹</div>
+                </div>
+                <div class="row">
+                    <div class="col rep">Mot : <span class="reponse"></span></div>
+                </div>
+                <div class="row">
+                    <div class="col info">(Appuyez sur Enter pour valider un mot. Appuyez sur Backspace pour retirer des lettres)</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

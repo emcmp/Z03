@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+body{
+    font-family:verdana;
+}
+
+#description{
+    background:linear-gradient(to bottom, #a0c0fb, #6d85d4, #5f54b1);
+    width:800px;
+    margin:auto;
+    color:rgb(237, 245, 243);
+    border-radius:20px;
+    padding:10px 15px;
+}
+
+#description p, #description ul{
+    font-size:1.2em;
+}
+
+#description h2, #description p{
+    margin:5px 0px;
+}
+
+#container{
+    width:800px;
+    margin:auto;
+    margin-top:20px;
+    display:flex;
+    justify-content: center;
+    gap:10px;
+    flex-wrap: wrap;
+}
+
+button{
+    padding:5px 10px;
+    font-size:1.2em;
+    cursor:pointer;
+}
+
+nav{
+    justify-content: center;
+    display: flex;
+    gap:5px;
+    margin-bottom: 10px;
+}
+
+nav a{
+    display:inline-block;
+    background:linear-gradient(to bottom, #a0c0fb, #6d85d4, #5f54b1);
+    border-radius:5px;
+    padding:5px 10px;
+    font-weight:bold;
+    color:white;
+    text-decoration: none;
+}
+
+.texte{
+
+    border:solid black 2px;
+    border-radius:5px;
+    padding:10px;
+    width:700px;
+    text-align:center;
+
+}
+
+[class^=minerai]{
+    width:50px;
+    transition:300s;
+}
+
+.multicolore{
+    filter:hue-rotate(36000deg);
+}

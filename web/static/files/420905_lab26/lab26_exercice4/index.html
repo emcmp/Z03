@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="init()">
+    <nav>
+        <a href="../lab26_exercice1/index.html">Exercice 1</a>
+        <a href="../lab26_exercice2/index.html">Exercice 2</a>
+        <a href="../lab26_exercice3/index.html">Exercice 3</a>
+        <a href="../lab26_exercice4/index.html">Exercice 4</a>
+    </nav>
+    <div id="description">
+        <h2>Exercice 4 - Ceux qui savent 🤔</h2>
+        <p>
+            Il y a cinq images de Mr. Incredible. Il faut créer une animation :
+            à tour de rôle, chaque image change pour devenir obscure.
+            (Son attribut src devient "images/dark_mr_incredible.png") Donc, dans l'ordre :
+            la 1ère image devient obscure... puis la 2e... puis la 3e...
+            etc. Après la 5e image, cela redevient le tour de la première.
+            Une seule image est obscure à la fois. Ça veut dire que quand la 2e devient
+            obscure, la 1ère redevient normale, par exemple.
+        </p>
+    </div>
+
+    <div id="container">
+        <img class="bob" src="images/dark_mr_incredible.png" alt="Dark Mr. Incredible">
+        <img class="bob" src="images/mr_incredible.png" alt="Mr. Incredible">
+        <img class="bob" src="images/mr_incredible.png" alt="Mr. Incredible">
+        <img class="bob" src="images/mr_incredible.png" alt="Mr. Incredible">
+        <img class="bob" src="images/mr_incredible.png" alt="Mr. Incredible">
+    </div>
+    
+</body>
+</html>

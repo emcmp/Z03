@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body onload="init()">
+    <nav>
+        <a href="../lab25_exercice1/index.html">Exercice 1</a>
+        <a href="../lab25_exercice2/index.html">Exercice 2</a>
+        <a href="../lab25_exercice3/index.html">Exercice 3</a>
+        <a href="../lab25_exercice4/index.html">Exercice 4</a>
+    </nav>
+    <div id="description">
+        <h2>Exercice 1 - Roue du destin 🔮🎲</h2>
+        <p>
+            Posez une question de votre choix qui se répond par Oui ou par Non à la roue pour connaître votre destinée.
+            Penser à la question dans votre tête est suffisant : la roue entend vos pensées 🙄
+        </p>
+    </div>
+
+    <div id="container">
+        <div style="width:100%;">
+            <button class="bouton1">Faire tourner la roue</button>
+            <button class="bouton2">Afficher l'historique des réponses</button>
+        </div>
+        <div style="width:500px" class="zoneRoue">
+            <img class="roue" src="images/roue.png" alt="Roue">
+            <img src="images/pointeur.png" alt="Pointeur">
+            <div class="historique" style="display:none;">
+                <div>Historique</div>
+                <div class="valeursHistorique"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

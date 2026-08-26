@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+body{
+    font-family:verdana;
+}
+
+#description{
+    background:linear-gradient(to bottom, #a0c0fb, #6d85d4, #5f54b1);
+    width:800px;
+    margin:auto;
+    color:rgb(237, 245, 243);
+    border-radius:20px;
+    padding:10px 15px;
+}
+
+#description p, #description ul{
+    font-size:1.2em;
+}
+
+#description h2, #description p{
+    margin:5px 0px;
+}
+
+#container{
+    width:800px;
+    margin:auto;
+    margin-top:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    flex-wrap: wrap;
+}
+
+button{
+    padding:5px 10px;
+    font-size:1.2em;
+    cursor:pointer;
+}
+
+nav{
+    justify-content: center;
+    display: flex;
+    gap:5px;
+    margin-bottom: 10px;
+}
+
+nav a{
+    display:inline-block;
+    background:linear-gradient(to bottom, #a0c0fb, #6d85d4, #5f54b1);
+    border-radius:5px;
+    padding:5px 10px;
+    font-weight:bold;
+    color:white;
+    text-decoration: none;
+}
+
+.jeu{
+    width:800px;
+    height:400px;
+    background-image: url("../images/fond.png");
+    border-radius:20px;
+    color:white;
+    position:relative;
+}
+
+.mot{
+    position:absolute;
+    background-color: rgba(0,0,0,0.5);
+    padding:5px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.ui{
+    position:absolute;
+    width:600px;
+    left:100px;
+    top:120px;
+}
+
+.row{
+    display:flex;
+    justify-content: center;
+    gap:10px;
+    margin:5px 0px;
+}
+
+.col{
+    background-color: rgba(0,0,0,0.5);
+    padding:10px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.rep{
+    font-size:2em;
+}
+
+.info{
+    font-size:0.7em;
+    font-weight: normal;
+}
+
+.langueChat{
+    cursor:pointer;
+}
+
+.score, .temps{
+    background-color:darkslategrey;
+    color:white;
+    border-radius:5px;
+    padding:5px 10px;
+}
