@@ -1,6 +1,11 @@
-# Laboratoire 2
+---
+title: Rencontre 6 - Laboratoire sur les variables
+sidebar_label: Rencontre 6 — Variables
+---
 
-[Cliquez ici pour télécharger le laboratoire 2](../../static/files/420905_lab2.docx)
+# Rencontre 6 - Laboratoire sur les variables
+
+[Cliquez ici pour télécharger le laboratoire](../../static/files/420905_lab2.docx)
 
 📬 N'oubliez pas de remettre l'exercice sur Teams une fois complété !
 
