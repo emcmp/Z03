@@ -23,15 +23,16 @@ Consulter également :
 - `EVALUATION.md` pour le modèle général de validation;
 - `COMPETENCES_HTML_CSS.md` pour la cartographie détaillée des rencontres 1 à 5, les huit compétences HTML/CSS et les trois niveaux d'attente;
 - `RESSOURCES_A_FOURNIR.md` pour les captures d'écran, images et fichiers à préparer avant chaque rencontre;
-- `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` pour l'ordre opérationnel, les états de tâches et les points de reprise du chantier HTML/CSS actuel.
+- `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` pour le bloc HTML/CSS;
+- `PLAN_RENCONTRES_6_A_15.md` et `PLAN_IMPLEMENTATION_RENCONTRES_6_A_15.md` pour la séquence JavaScript et son implantation.
 
 ## Structure actuelle et sources d'exercices
 
 | Cours actuel | Titre / sujet actuel | Notions principales | Exercices / source actuelle | Destination ou décision | Actions de migration |
 |---|---|---|---|---|---|
 | 1 | Atelier / environnement technologique | stockage, système de fichiers, dossiers, extensions, ZIP, outils du cours | Ancien `01-rencontre1.1.md`; PowerPoint historique **Environnement de travail** fourni pendant la refonte; aucun laboratoire numéroté associé | **Intégré comme préambule distinct de la théorie HTML** | Nouveau `01-rencontre1-environnement.md`; OneDrive, arborescence, extensions, ZIP, VS Code et navigateur intégrés. Ancien atelier conservé comme source. Des captures historiques/provisoires sont déjà intégrées; les remplacements modernes éventuels restent suivis dans `RESSOURCES_A_FOURNIR.md`. |
-| 2 | Variables et affectation | Variables, affectation, nombres, opérateurs, chaînes, concaténation | Labo 2 → `420905_lab2.docx` | À déplacer dans la future séquence JavaScript | Conserver et réévaluer les exercices lors du déplacement. |
-| 3 | DOM et fonctions | `querySelector`, `textContent`, VS Code, fonctions | Labo 3 → `420905_lab3.zip` | Probablement à éclater entre fonctions et DOM | Extraire le labo 3 et identifier quels exercices relèvent des fonctions et lesquels relèvent du DOM. |
+| 2 | Variables et affectation | Variables, affectation, nombres, opérateurs, chaînes, concaténation | Labo 2 → `420905_lab2.docx` | **Implanté en R6** | Théorie historique copiée dans `web/docs/01-cours/06-rencontre6.md`; page de labo historique conservée mais présentée comme **Rencontre 6 — Variables**. DOCX original, transcription Markdown et captures conservés. Aucun exercice réécrit. |
+| 3 | DOM et fonctions | `querySelector`, `textContent`, VS Code, fonctions | Labo 3 → `420905_lab3.zip` | **Implanté en R7 comme bloc cohérent** | Théorie historique copiée dans `web/docs/01-cours/07-rencontre7.md`; page de labo présentée comme **Rencontre 7 — DOM et fonctions**. ZIP et dossier décompressé conservés. Aucun exercice scindé ou réécrit. |
 | 4 | Événements et styles | Variables globales/locales, événements, styles DOM | Labo 4 → `420905_lab4.zip` | À réorganiser dans le bloc DOM / événements | Extraire le labo 4 et répartir les exercices selon la nouvelle progression. |
 | 5 | Booléens et conditions | Booléens, `if`, `else` | Labo 5 → `420905_lab5.zip` | **Fusion envisagée avec le cours 6** | Extraire le labo 5; inventorier les exercices à conserver. |
 | 6 | Opérateurs logiques | Opérateurs logiques, `else if`, débogage | Labo 6 → `420905_lab6.zip` | **Fusion envisagée avec le cours 5** | Extraire le labo 6; fusionner les exercices pertinents avec ceux du labo 5 et éliminer les doublons. |
@@ -57,7 +58,7 @@ Consulter également :
 
 Les anciennes sources de migration `sources/R01-Introduction-HTML-Markdown/`, `sources/R02-Introduction-CSS-Markdown/` et `sources/R03-Modele-Boites-Positionnement-Markdown/` restent utiles pour la traçabilité, mais les pages de référence actives sont maintenant sous `web/docs/01-cours/`.
 
-## Séquence confirmée pour les rencontres 1 à 6
+## Séquence confirmée pour les rencontres 1 à 7
 
 | Rencontre | Noyau de matière | Validation |
 |---|---|---|
@@ -66,7 +67,8 @@ Les anciennes sources de migration `sources/R01-Introduction-HTML-Markdown/`, `s
 | **3** | syntaxe CSS, feuille externe, chemins CSS, sélecteurs, classes, propriétés visuelles | début Validation C — WEB-05/06 |
 | **4** | consolidation CSS, bordures, dimensions simples, `margin`, `padding`, modèle en boîte | Validation C; début Validation D — WEB-07/08 |
 | **5** | Flexbox simple, navigation horizontale, intégration, pratique et correction | Validation D et reprises |
-| **6** | début de la programmation JavaScript | reprises HTML/CSS seulement au besoin; aucune nouvelle matière HTML/CSS essentielle |
+| **6** | variables, affectation, nombres, chaînes, opérateurs, concaténation et littéraux de gabarits | reprises HTML/CSS seulement au besoin |
+| **7** | DOM de base avec `querySelector` / `textContent`, VS Code et fonctions simples | prépare avec R6 le mini-quiz de R8 |
 
 ## Niveaux d'attente pour le contenu
 
@@ -91,16 +93,17 @@ Exemples : détails `inline`/`inline-block`, `overflow`, positionnement, Flexbox
 ## Contraintes de calendrier confirmées
 
 - Le cours comporte 15 rencontres.
-- Toute matière essentielle doit être terminée au plus tard à la rencontre 13.
+- Toute nouvelle matière essentielle doit être terminée au plus tard à la rencontre 12.
+- La **rencontre 13** est réservée à un TP, une activité d'intégration ou du travail supervisé, sans nouvelle notion essentielle.
 - La **rencontre 14 est un buffer** : rattrapage, travail, pratique, révision ou absorption d'une interruption. Aucune nouvelle notion essentielle ne doit dépendre de cette rencontre.
 - La rencontre 15 est réservée à l'évaluation sommative.
-- Le formatif ne nécessite pas forcément une rencontre complète et peut devenir une activité à faire hors classe.
 - HTML/CSS est enseigné comme noyau aux rencontres 1 à 5 seulement.
 - JavaScript commence à la rencontre 6.
 
 ## Contraintes d'évaluation confirmées
 
-- Une seule évaluation sommative formelle est prévue à la rencontre 15.
+- Le mini-quiz de la rencontre 8 vaut **10 %** et porte uniquement sur la matière enseignée avant le quiz, principalement R6 et R7.
+- La rencontre 15 contient l'évaluation sommative finale de **30 %**.
 - L'évaluation doit commencer tôt dans la session sous forme de validations progressives de compétences observables.
 - Au moins **15 % de la note doit avoir été évalué au plus tard à la rencontre 6**.
 - Le bloc HTML/CSS des rencontres 1 à 5 représente **30 % de la note finale**.
@@ -126,8 +129,8 @@ Exemples : détails `inline`/`inline-block`, `overflow`, positionnement, Flexbox
 | Styles via DOM | surtout utiliser des classes CSS avec `classList`; modifier une propriété simple lorsque pertinent | quelques propriétés `.style` utiles | mémoriser une longue liste de propriétés CSS en JavaScript |
 | Classes DOM | `classList.add`, `remove`, `toggle` | `contains` | cas avancés non nécessaires |
 | Attributs DOM | lire/modifier un attribut concret lorsque requis (`src`, `alt`, etc.) | présentation courte intégrée au DOM | rencontre complète consacrée aux attributs |
-| Boucles | comprendre la répétition et savoir parcourir une séquence | choisir une forme principale de boucle pour le cours | `do...while`, conditions de boucle complexes, débogueur avancé |
-| Tableaux | création, index, `length`, parcours; `push` si utile | modification simple d'un élément | `pop`, `splice` et opérations avancées si non nécessaires |
+| Boucles | comprendre la répétition et savoir parcourir une séquence | forme principale à réévaluer seulement après la première implantation | `do...while`, conditions de boucle complexes, débogueur avancé : pistes de révision ultérieure |
+| Tableaux | création, index, `length`, parcours; `push`, `pop` et `splice` peuvent être conservés lorsque les exercices sont simples | modification simple d'un élément | opérations avancées seulement si elles surchargent réellement le parcours |
 | Plusieurs éléments DOM | `querySelectorAll` et parcours de plusieurs éléments | intégrer au bloc tableaux/boucles/DOM | rencontre complète indépendante |
 | Débogage | lire la console, tester souvent, reconnaître les erreurs courantes | pratiquer le débogage dans tous les cours | grosse section autonome au débogueur |
 
@@ -150,9 +153,10 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 
 - Les anciens TP du 905 ont été retirés et ne sont pas des sources à préserver.
 - Toute fusion de contenu doit inclure explicitement la migration des exercices associés.
+- La rencontre 13 est réservée à l'intégration / TP / travail supervisé sans nouvelle matière essentielle.
 - La rencontre 14 doit rester disponible comme buffer et séance de travail/rattrapage.
-- La rencontre 15 est l'évaluation sommative.
-- HTML/CSS occupe les rencontres 1 à 5, avec JavaScript dès la rencontre 6.
+- La rencontre 15 est l'évaluation sommative finale de 30 %.
+- HTML/CSS occupe les rencontres 1 à 5, avec JavaScript dès 6.
 - Huit compétences HTML/CSS sont retenues et regroupées en quatre moments de validation.
 - Les notions du matériel sont classées selon `À maîtriser`, `Bonne pratique` et `Pour aller plus loin`.
 - Les éléments sémantiques comme `header`, `nav`, `main` et `footer` sont des bonnes pratiques enseignées plutôt que des compétences bloquantes.
@@ -163,17 +167,16 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 - Toute ressource à fournir aux étudiants doit être inscrite dans `RESSOURCES_A_FOURNIR.md` avant qu'une page en dépende.
 - Les documents internes de refonte sont regroupés sous `refonte/` et les sources historiques/importées sous `sources/`.
 - Les chantiers pédagogiques importants doivent être précédés d'un plan d'implémentation versionné et mis à jour pendant le travail.
-- La finalisation des rencontres 1 à 5 précède la poursuite de la refonte détaillée de JavaScript; le plan actif est `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`.
+- Pour R6–R15, la première implantation place d'abord la théorie et les exercices historiques aux bonnes rencontres **sans réécriture pédagogique**; les améliorations viennent seulement après que la séquence complète fonctionne.
+- R6 utilise l'ancien cours/labo 2; R7 utilise l'ancien cours/labo 3 conservé comme bloc cohérent.
 
 ## Décisions / hypothèses en cours
 
 - La pondération HTML/CSS est fixée à **30 %**; seule la répartition exacte entre WEB-01 à WEB-08 reste à établir avec la pondération des premières compétences JavaScript.
-- Fusionner les anciens cours 5 (Booléens et conditions) et 6 (Opérateurs logiques) en une seule rencontre est considéré réaliste.
-- Si cette fusion est retenue, `420905_lab5.zip` et `420905_lab6.zip` devront être extraits, comparés et recomposés en un ensemble cohérent d'exercices.
+- Les anciens cours/labos 5 et 6 doivent être placés ensemble en R9 dans la première implantation; l'élimination de doublons est reportée à la révision pédagogique ultérieure.
 - Les paramètres de fonctions sont considérés plus importants que l'approfondissement des valeurs de retour.
-- Pour les boucles, `do...while` est un bon candidat à supprimer.
-- Pour les tableaux, `pop()` et `splice()` sont de bons candidats à supprimer si aucun exercice essentiel n'en dépend.
-- Le DOM devrait privilégier l'application/retrait de classes CSS plutôt qu'une longue liste de styles écrits directement en JavaScript.
+- Le choix éventuel d'une boucle principale différente de la théorie historique reste une piste de révision, pas un prérequis à la migration.
+- Le DOM devrait privilégier à terme l'application/retrait de classes CSS plutôt qu'une longue liste de styles écrits directement en JavaScript, mais cette amélioration n'est pas faite pendant la première implantation.
 
 ## Journal des migrations
 
@@ -197,3 +200,4 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 | 2026-08-19 | Création et validation technique de la rencontre 4 : cours canonique, exercice guidé et Projet Web — Étape 4 | `00-modele-boites-positionnement.md`, `04-rencontre4.md`, `04-rencontre4-exercice-guide.md`, `03-projet-web/04-rencontre4.md` | Exercice guidé — Comprendre le modèle en boîte | Prêt à réviser; source historique conservée |
 | 2026-08-19 | Création et validation technique de la rencontre 5 : cours canonique, exercice guidé et Projet Web — Étape 5 | Nouvelle synthèse Flexbox ciblée, `05-rencontre5.md`, `05-rencontre5-exercice-guide.md`, `03-projet-web/05-rencontre5.md` | Exercice guidé — Flexbox simple | Prêt à réviser |
 | 2026-08-20 | Pondération HTML/CSS harmonisée à 30 % sans changer les huit compétences ni les quatre moments de validation | `EVALUATION.md`, `COMPETENCES_HTML_CSS.md`, `PLAN_SITE_EVOLUTIF.md`, pages étudiantes du Projet Web | Aucun exercice modifié par cette décision | Décidé |
+| 2026-08-26 | Première implantation de R6 et R7 : théorie historique déplacée telle quelle et laboratoires rattachés aux nouvelles rencontres | ancien cours 2 → `06-rencontre6.md`; ancien cours 3 → `07-rencontre7.md`; pages labo 2 et 3 | labo 2 → R6; labo 3 → R7; fichiers historiques et exercices inchangés | Implanté; validation technique en cours |
