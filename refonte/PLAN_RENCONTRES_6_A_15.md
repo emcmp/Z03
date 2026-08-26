@@ -4,154 +4,162 @@
 
 Ce document est la **référence pédagogique canonique pour la planification des rencontres 6 à 15** pendant la refonte de Z03.
 
-Il fixe le mapping de travail avant l'inventaire détaillé des anciens laboratoires du 905. Tant que cet inventaire n'est pas terminé, les destinations décrites ici sont des cibles de planification : elles peuvent être ajustées si les exercices historiques révèlent une meilleure organisation, mais tout changement doit être décidé explicitement et documenté.
+Il fixe la destination pédagogique des blocs historiques du 905. Le plan opérationnel correspondant se trouve dans `PLAN_IMPLEMENTATION_RENCONTRES_6_A_15.md`.
 
-Lorsque ce document entre en conflit avec un ancien mapping R6–R15 dans `SUIVI_CONTENU.md`, `SOMMAIRE_COUVERTURE_RENCONTRES.md` ou une version antérieure de `MIGRATION_LABORATOIRES_CODEX.md`, **le présent document prévaut pour la séquence R6–R15**.
+Lorsque ce document entre en conflit avec un ancien mapping R6–R15 dans `SUIVI_CONTENU.md`, `SOMMAIRE_COUVERTURE_RENCONTRES.md` ou `MIGRATION_LABORATOIRES_CODEX.md`, **le présent document prévaut pour la séquence R6–R15**.
 
 ## Contraintes structurantes
 
 - HTML/CSS occupe les rencontres 1 à 5.
 - JavaScript commence à la rencontre 6.
 - Le mini-quiz supervisé de la rencontre 8 vaut **10 %** et porte uniquement sur de la matière enseignée avant le quiz, donc principalement R6 et R7.
-- Toute nouvelle matière essentielle doit maintenant être terminée **au plus tard à la rencontre 12**.
-- La rencontre 13 doit être libérée, si possible, pour un **TP, une activité d'intégration ou du travail supervisé**.
+- Toute nouvelle matière essentielle doit être terminée **au plus tard à la rencontre 12**.
+- La rencontre 13 est réservée à un **TP, une activité d'intégration ou du travail supervisé**.
 - La rencontre 14 demeure un **buffer** : TP, rattrapage, reprises, pratique ou révision; aucune nouvelle notion essentielle ne doit en dépendre.
 - La rencontre 15 demeure réservée à l'**évaluation sommative finale de 30 %**.
-- Les notions marquées facultatives ou « Pour aller plus loin » ne doivent pas être nécessaires à la réussite d'un TP ou de l'examen final.
+- Les notions facultatives ne doivent pas devenir implicitement nécessaires à une évaluation.
 
-## Principe de migration minimale
+## Principe de migration — placer avant d'améliorer
 
-La refonte doit **bouger et scinder le moins de matériel possible**.
+La première implantation doit partir du matériel historique déjà utilisé et testé.
 
-Règle par défaut :
-
-> Un ancien cours ou laboratoire reçoit une destination principale unique. On ne le scinde que si son contenu forme réellement deux blocs indépendants et que la scission apporte un gain pédagogique clair.
+> **On place d'abord la théorie et les exercices aux bonnes rencontres sans les réécrire. La révision qualitative vient ensuite.**
 
 Conséquences :
 
-- privilégier les fusions naturelles de blocs voisins, par exemple anciens cours/labos 5 + 6;
-- conserver un ancien laboratoire comme unité lorsqu'il correspond suffisamment bien à une nouvelle rencontre;
-- éviter de redistribuer exercice par exercice uniquement pour faire correspondre un ancien découpage à une nouvelle numérotation;
-- ne décider d'une scission qu'après avoir ouvert et inventorié les sources réelles.
+- conserver la théorie historique telle quelle autant que possible;
+- conserver les exercices historiques tels quels autant que possible;
+- accepter qu'un exercice contienne du code d'infrastructure utilisant une notion pas encore enseignée en détail si l'étudiant n'a pas à produire cette partie;
+- permettre les ajustements mécaniques nécessaires au nouvel emplacement : titres, numérotation, liens, chemins, navigation, assets ou petit branchement technique;
+- ne pas modifier un exercice qui fonctionne déjà simplement parce que son code fourni comporte une construction plus avancée;
+- noter les améliorations possibles, puis les traiter dans une passe ultérieure lorsque toute la séquence R6–R12 est en place.
 
-## Matrice de planification R6–R15
+La règle de migration minimale demeure valide : ne scinder un laboratoire que lorsque ses exercices forment réellement des blocs pédagogiques distincts.
 
-| Rencontre | Objectif principal | Sources 905 à privilégier | Notions indispensables | Compression / pruning possible | Rôle dans l'évaluation et les TP |
-|---|---|---|---|---|---|
-| **R6** | Entrer en programmation avec des valeurs et des instructions simples | ancien cours/labo 2 | JavaScript; variables; affectation; nombres; chaînes; opérateurs simples; concaténation/interpolation; console et tests fréquents | priorité détaillée des opérateurs; opérateurs secondaires sans utilité concrète | Fondation du mini-quiz R8 et de toute la suite JavaScript |
-| **R7** | Produire un premier effet JavaScript visible dans une page Web | ancien cours/labo 3, à garder ensemble autant que possible | DOM de base; `querySelector`; `textContent`; fonctions simples; déclaration et appel; console; `alert()` si utile | fonctions sophistiquées; approfondissement prématuré de `return` | Deuxième bloc du mini-quiz R8; première programmation Web directement observable |
-| **R8** | Passer d'un script exécuté une fois à une page interactive | ancien cours/labo 4 comme source principale; ancien 14 comme complément cohérent | **mini-quiz 10 % au début**; portée locale; notion de globale au besoin; événements; `click`; `addEventListener`; fonction appelée par un événement; DOM; `classList`; attributs concrets lorsque pertinents | théorie détaillée des globales; convention de préfixe global; catalogue d'événements; longue liste de propriétés `.style`; cas DOM avancés | Donne les mécanismes essentiels pour construire un TP Web interactif |
-| **R9** | Faire prendre des décisions au programme | anciens cours/labos 5 + 6 fusionnés | booléens; comparaisons; `if`; `else`; `else if`; `&&`; `||` | opérateur `!` si peu utile; tableaux complets de priorité; exemples logiques artificiellement complexes | Noyau très probable des TP et de l'examen final |
-| **R10** | Répéter un traitement et comprendre le parcours | ancien cours/labo 11 | besoin de répétition; lecture et écriture d'une boucle simple; parcours; erreurs courantes de condition de boucle | conserver **une forme principale de boucle**; `do...while` et les formes redondantes sont candidates au retrait; débogueur avancé hors noyau | Prépare surtout le parcours des tableaux et collections DOM |
-| **R11** | Stocker plusieurs valeurs et les parcourir; appliquer ce parcours au Web | ancien cours/labo 12; ancien 15 si l'intégration est raisonnable | tableaux; index; `length`; parcours avec la boucle retenue; `push`; `pop`; `splice`; introduction possible de `querySelectorAll` et parcours d'une collection DOM | opérations de tableaux seulement si l'inventaire montre une surcharge réelle; ne pas couper `push`/`pop`/`splice` par principe | Rencontre charnière pour les TP : données multiples et plusieurs éléments de la page |
-| **R12** | Structurer et intégrer un programme plus complet | ancien cours/labo 13; ancien 15 en solution de repli si R11 devient trop chargée | paramètres; arguments; fonctions réutilisables; `return` lorsque cela apporte une valeur claire; intégration variables + DOM + événements + conditions + tableaux/boucles; `querySelectorAll` ici au plus tard si non traité en R11 | approfondissement des valeurs de retour; fonctions abstraites ou sophistiquées; répétitions inutiles des notions précédentes | **Dernière rencontre de nouvelle matière essentielle**; préparation directe du TP et de l'examen |
-| **R13** | **TP / intégration / travail supervisé** | exercices retenus des blocs précédents | aucune nouvelle notion essentielle | — | Rencontre volontairement libérée pour réaliser un TP substantiel ou une activité d'intégration |
-| **R14** | **TP / rattrapage / reprises / révision** | activités et exercices précédents | aucune nouvelle notion essentielle | — | Buffer conservé; peut devenir une deuxième séance de TP lorsque le calendrier le permet |
-| **R15** | Évaluation sommative finale | — | uniquement le noyau réellement enseigné et pratiqué | tout contenu facultatif est exclu | **Examen final 30 %** |
+## Matrice stabilisée R6–R15
 
-## Mapping de travail des blocs hérités
+| Rencontre | Objectif principal | Théorie historique | Exercices historiques | Remarque |
+|---|---|---|---|---|
+| **R6** | Entrer en programmation avec des valeurs et instructions simples | ancien cours 2 | labo 2 | déplacement direct |
+| **R7** | Premier effet JavaScript visible : DOM + fonctions simples | ancien cours 3 | labo 3 | garder le bloc ensemble |
+| **R8** | Interactivité, événements, classes et attributs | anciens cours 4 + 14 | labo 4 + labo 14 ex. 1–2 | mini-quiz 10 % au début |
+| **R9** | Faire prendre des décisions au programme | anciens cours 5 + 6 | labos 5 + 6 | placer les deux blocs ensemble sans les réécrire |
+| **R10** | Répéter un traitement | ancien cours 11 | labo 11 | conserver d'abord le matériel de boucles tel quel |
+| **R11** | Tableaux, parcours, puis plusieurs éléments DOM | anciens cours 12 + 15 | labo 12 + labo 15 ex. 1–3 | `querySelectorAll` suit naturellement tableaux + parcours |
+| **R12** | Paramètres, retours et intégration | ancien cours 13 | labo 13 + labo 15 ex. 4 | dernière nouvelle matière essentielle |
+| **R13** | TP / intégration / travail supervisé | aucune nouvelle théorie | candidats : labo 14 ex. 3–4 et autres exercices éprouvés au besoin | sélection finale après mise en place R6–R12 |
+| **R14** | TP / rattrapage / reprises / révision | aucune nouvelle théorie | matériel de reprise au besoin | buffer |
+| **R15** | Évaluation sommative finale | — | — | examen final 30 % |
 
-| Bloc hérité du 905 | Destination de travail | Intention |
-|---|---|---|
-| **2 — Variables et affectation** | **R6** | déplacement direct |
-| **3 — DOM et fonctions** | **R7** | garder le bloc ensemble autant que possible plutôt que le scinder |
-| **4 — Portée, événements et styles DOM** | **R8** | source principale de l'interactivité |
-| **14 — Classes et attributs DOM** | **R8** | fusionner comme complément de l'ancien 4 si l'inventaire confirme la cohérence |
-| **5 + 6 — Conditions et opérateurs logiques** | **R9** | fusion naturelle; éliminer les doublons |
-| **11 — Boucles** | **R10** | simplifier vers une forme principale de boucle |
-| **12 — Tableaux** | **R11** | conserver le bloc; mettre l'accent sur le parcours |
-| **15 — Plusieurs éléments DOM / `querySelectorAll`** | **R11**, ou **R12** si R11 devient trop chargée | déplacer le bloc comme unité autant que possible; ne plus réserver R13 à cette notion |
-| **13 — Paramètres et retours** | **R12** | conserver paramètres/arguments; `return` selon son utilité réelle |
-| **7–10 — anciens TP / examens intermédiaires** | aucune destination directe | ces plages historiques sont réaffectées dans la nouvelle structure |
+## Décisions de placement confirmées
 
-## Décisions de pruning actuelles
+### Ancien 2 → R6
 
-Ces décisions sont des orientations à confirmer contre les exercices réels.
+Variables, affectation, nombres, chaînes, opérations simples et console.
 
-### À conserver par défaut
+### Ancien 3 → R7
 
-- variables, nombres, chaînes et opérateurs simples;
-- DOM de base : `querySelector`, `textContent`;
-- fonctions simples et appels;
-- événements `click` et `addEventListener`;
-- `classList` pour appliquer ou retirer des classes CSS;
-- conditions : comparaisons, `if`, `else`, `else if`, `&&`, `||`;
-- une forme principale de boucle;
-- tableaux, index, `length` et parcours;
-- **`push`, `pop` et `splice`** : ils ne sont plus considérés comme des candidats naturels au retrait, puisqu'ils sont généralement faciles à comprendre et à utiliser; leur poids dans l'évaluation peut cependant rester léger;
-- paramètres et arguments;
-- `querySelectorAll` et le parcours de plusieurs éléments, mais **sans consacrer une rencontre entière à cette seule notion**.
+DOM de base et fonctions simples restent ensemble. Le labo 3 ne sera pas éclaté dans la première implantation.
 
-### À compresser ou retirer si aucun exercice essentiel n'en dépend
+### Anciens 4 + 14 → R8, avec scission ciblée du labo 14
 
-- détails fins de priorité des opérateurs;
-- opérateur logique `!` si son utilité réelle est faible;
-- théorie détaillée sur les variables globales et conventions de nommage spécifiques;
-- catalogue d'événements (`mouseover`, `mouseout`, etc.);
-- longue liste de modifications par `.style`;
-- formes de boucles redondantes, notamment `do...while`;
-- débogueur avancé comme bloc autonome;
-- approfondissement des valeurs de retour et exemples de fonctions trop abstraits.
+Le cours 14 complète naturellement le bloc DOM/interactivité du cours 4.
 
-## Point particulier — choix de la boucle
+Le labo 14 est toutefois composé de deux blocs distincts :
 
-Le cours doit privilégier **une forme principale de boucle** pour réduire la surcharge.
+- **exercices 1–2 → R8** : `classList`, attributs, manipulation d'un élément;
+- **exercices 3–4 → réserve R12/R13** : ils dépendent déjà de boucles, paramètres, retours et intégration plus avancée.
 
-Le choix exact n'est pas fixé avant l'inventaire. Il doit être fait en comparant les anciens laboratoires 11, 12 et 15 selon deux critères :
+Cette scission ne nécessite aucune réécriture des exercices.
 
-1. quelle forme permet de conserver le plus de bons exercices sans réécriture artificielle;
-2. quelle forme soutient le mieux le parcours des tableaux et des collections retournées par `querySelectorAll`.
+### Anciens 5 + 6 → R9
 
-## Point particulier — `querySelectorAll`
+Fusion de rencontre confirmée. Les deux cours et les deux laboratoires sont placés sous R9. Les répétitions pourront être évaluées seulement lors de la révision ultérieure.
 
-La rencontre 13 ne doit plus être nécessaire pour introduire `querySelectorAll`.
+### Ancien 11 → R10
 
-Cible préférée : **R11**, immédiatement après les tableaux et le parcours, pour créer la progression :
+Le cours et le labo historiques sur les boucles sont placés tels quels dans la première implantation.
+
+L'analyse des exercices a fait émerger `for` comme **piste intéressante pour une future simplification**, mais cette piste ne justifie pas de réécrire maintenant une théorie historique construite autour de `while` et `do...while`.
+
+Le choix final de la forme principale de boucle est donc **reporté à la phase de révision pédagogique**, après mise en place complète de R6–R12.
+
+### Anciens 12 + 15 → R11, avec exercice 4 du labo 15 en R12
+
+R11 suit la progression :
 
 ```text
-tableau → plusieurs valeurs → boucle → plusieurs éléments HTML → querySelectorAll → parcours
+tableaux → index / length → opérations → parcours → querySelectorAll → parcours de plusieurs éléments HTML
 ```
 
-Si l'inventaire montre que cette rencontre devient trop chargée, déplacer **le bloc ancien 15 en entier à R12** plutôt que de le scinder entre plusieurs rencontres.
+Le cours 15 peut être placé immédiatement après le cours 12.
 
-## Questions à vérifier avec l'inventaire des laboratoires
+Pour les exercices :
 
-L'inventaire doit nous permettre de répondre avant toute migration :
+- **labo 15 ex. 1–3 → R11** : `querySelectorAll`, collection d'éléments et parcours;
+- **labo 15 ex. 4 → R12** : fonction paramétrée, retour et réutilisation en plus du parcours DOM.
 
-- quels exercices sont encore pédagogiquement bons tels quels;
-- quelles notions chaque exercice utilise réellement;
-- quels exercices dépendent de notions candidates au pruning;
-- quelles archives contiennent plusieurs blocs réellement indépendants;
-- si l'ancien labo 3 peut rester presque entièrement en R7;
-- si les anciens labos 4 et 14 se combinent proprement en R8;
-- si les labos 5 et 6 forment un parcours cohérent unique pour R9;
-- quelle forme de boucle est la plus naturelle en observant les labos 11, 12 et 15;
-- si le labo 15 peut être intégré en R11 sans surcharge, sinon en R12;
-- quelles notions sont nécessaires pour construire un TP final intéressant;
-- quelles notions peuvent être retirées sans appauvrir inutilement le TP ou l'examen final.
+### Ancien 13 → R12
 
-## Prochaine étape — inventaire Codex
+Paramètres, arguments, fonctions réutilisables et valeurs de retour. R12 intègre également le labo 15 ex. 4.
 
-La prochaine intervention de Codex doit être **un inventaire factuel seulement**.
+## Notions à conserver dans le matériel initial
 
-Codex devra :
+Pendant la première implantation, on ne retire pas des notions simplement pour compresser le cours. On conserve le matériel retenu et on observe la charge réelle.
 
-1. ouvrir les `.docx` et extraire les `.zip` hérités pertinents;
-2. inventorier les fichiers et exercices présents dans chaque source;
-3. pour chaque exercice, relever les notions et prérequis réellement utilisés;
-4. identifier les dépendances entre exercices ou fichiers de départ;
-5. signaler les doublons entre laboratoires voisins;
-6. indiquer si l'exercice peut être conservé tel quel, allégé, fusionné ou retiré;
-7. signaler les conséquences d'un retrait de notion sur les exercices concernés;
-8. comparer le résultat au mapping de travail du présent document.
+Notamment :
 
-À cette étape, Codex ne doit **pas** :
+- variables, nombres, chaînes, opérations;
+- DOM : `querySelector`, `textContent`;
+- fonctions simples;
+- événements présents dans les exercices historiques;
+- `classList` et attributs;
+- conditions et opérateurs logiques présents dans les cours 5–6;
+- boucles présentes dans le cours/labo 11;
+- tableaux, index, `length`, `push`, `pop`, `splice`;
+- paramètres et `return`;
+- `querySelectorAll`.
 
-- réécrire les exercices;
-- renommer ou déplacer les archives historiques;
-- modifier les pages de cours;
-- modifier la navigation Docusaurus;
-- décider seul d'un nouveau mapping pédagogique;
-- supprimer du matériel.
+La présence d'une notion dans du **code fourni** n'implique pas automatiquement qu'elle devient une compétence à évaluer.
 
-Les décisions pédagogiques seront prises après lecture de l'inventaire.
+## Pistes de révision ultérieure — ne pas appliquer pendant la migration
+
+Les analyses ont relevé plusieurs pistes qui pourront être examinées une fois la séquence fonctionnelle :
+
+- privilégier éventuellement `for` comme forme principale de boucle;
+- retirer ou rendre facultatif `do...while` si aucun besoin réel ne le justifie;
+- réduire les répétitions dans les labos 5–6 et 12;
+- revoir la quantité de `.style` et le catalogue d'événements dans le bloc R8;
+- vérifier si certaines méthodes de tableaux méritent moins de poids;
+- nettoyer certains morceaux de code fourni seulement s'ils causent réellement de la confusion;
+- compresser certaines parties de théorie historique;
+- sélectionner les meilleurs exercices avancés pour R13.
+
+Ces points sont des **notes de révision**, pas des instructions d'implantation immédiate.
+
+## `querySelectorAll`
+
+`querySelectorAll` doit être enseigné avant R13.
+
+La destination stabilisée est **R11** pour le cours 15 et les exercices 1–3 du labo 15. L'exercice 4 passe en R12 puisqu'il combine ce mécanisme avec paramètres et retour.
+
+## R13 et matériel historique plus avancé
+
+R13 demeure volontairement sans nouvelle matière essentielle.
+
+Les exercices 3–4 du labo 14 sont des candidats d'intégration. Les labos historiques 16 et 21–26 demeurent également disponibles comme **réservoir de matériel éprouvé**, sans être automatiquement ajoutés au noyau.
+
+Ils pourront servir au TP, aux reprises ou à l'enrichissement seulement après validation de la charge réelle de R6–R12.
+
+## Prochaine étape
+
+Suivre `PLAN_IMPLEMENTATION_RENCONTRES_6_A_15.md`.
+
+La prochaine phase consiste à :
+
+1. placer la théorie historique aux nouvelles rencontres;
+2. rattacher les exercices historiques correspondants;
+3. effectuer seulement les ajustements mécaniques indispensables;
+4. vérifier que tout fonctionne;
+5. mettre à jour `SUIVI_CONTENU.md` avec les déplacements réellement réalisés;
+6. **ensuite seulement**, entreprendre une révision qualitative rencontre par rencontre.
