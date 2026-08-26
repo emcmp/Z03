@@ -50,9 +50,10 @@ Les décisions pédagogiques de haut niveau ne suffisent pas à suivre un chanti
 Plans de référence :
 
 - `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md` — état, ordre des tâches, points de reprise et tâches optionnelles pour le bloc HTML/CSS;
-- `PLAN_RENCONTRES_6_A_15.md` — **référence pédagogique canonique pour la séquence JavaScript et la fin de session**, incluant le mapping des sources 905, les candidats au pruning et les contraintes R13–R15.
+- `PLAN_RENCONTRES_6_A_15.md` — **référence pédagogique canonique pour la séquence JavaScript et la fin de session**;
+- `PLAN_IMPLEMENTATION_RENCONTRES_6_A_15.md` — **plan opérationnel pour placer la théorie et les exercices historiques avant toute révision qualitative**.
 
-Ce plan doit être mis à jour après chaque lot cohérent de travail afin qu'une interruption ou un changement d'agent ne fasse pas perdre l'état réel du chantier.
+Ces plans doivent être mis à jour après chaque lot cohérent de travail afin qu'une interruption ou un changement d'agent ne fasse pas perdre l'état réel du chantier.
 
 ## Déploiement et dépôts
 
@@ -99,18 +100,21 @@ La configuration Docusaurus doit rester portable afin que la même source puisse
 - Adopter `PLAN_RENCONTRES_6_A_15.md` comme **référence canonique de planification** pour la suite JavaScript.
 - Terminer toute nouvelle matière essentielle au plus tard à la **rencontre 12** afin de libérer la rencontre 13.
 - Réserver **R13** à un TP, une activité d'intégration ou du travail supervisé; conserver **R14** comme buffer sans nouvelle matière essentielle; conserver **R15** pour l'examen final de 30 %.
-- Privilégier une **migration minimale** du matériel 905 : un ancien cours/laboratoire reçoit une destination principale unique; ne le scinder que si le gain pédagogique est clair après inventaire.
-- Mapping de travail : ancien 2 → R6; ancien 3 → R7; anciens 4 + 14 → R8; anciens 5 + 6 → R9; ancien 11 → R10; ancien 12 → R11; ancien 15 → R11 ou R12; ancien 13 → R12.
-- Déplacer `querySelectorAll` et le parcours de plusieurs éléments avant R13, idéalement en R11 avec les tableaux/boucles, sinon comme bloc en R12.
-- Privilégier une seule forme principale de boucle; choisir laquelle **après l'inventaire** des laboratoires 11, 12 et 15.
-- Ne plus considérer `push`, `pop` et `splice` comme des candidats naturels au retrait : ils peuvent être conservés lorsque les exercices sont simples et efficaces, même si leur poids dans l'évaluation demeure léger.
-- La prochaine tâche Codex est un **inventaire factuel des laboratoires historiques seulement**. Aucune migration, réécriture, suppression, modification de navigation ou décision pédagogique autonome ne doit être faite pendant cet inventaire.
+- Adopter pour la première implantation JavaScript le principe **placement avant révision** : déplacer la théorie et les exercices historiques aux bonnes rencontres sans les réécrire, puis seulement ensuite entreprendre leur amélioration.
+- Accepter qu'un exercice contienne du code d'infrastructure utilisant une notion non encore enseignée en détail si l'étudiant n'a pas à produire cette partie et si l'exercice fonctionne déjà.
+- Mapping stabilisé : ancien 2 → R6; ancien 3 → R7; anciens 4 + 14 → R8 avec labo 14 ex. 1–2 en R8; anciens 5 + 6 → R9; ancien 11 → R10; anciens 12 + 15 → R11 avec labo 15 ex. 1–3; ancien 13 + labo 15 ex. 4 → R12.
+- Les exercices 3–4 du labo 14 sont conservés comme candidats pour R12/R13 plutôt que d'être forcés en R8.
+- `querySelectorAll` est placé en R11 avec les tableaux et le parcours; l'exercice 4 du labo 15 passe en R12 à cause de ses paramètres et retours.
+- Le choix de `for` comme éventuelle boucle principale demeure une **piste de révision future**, mais la première implantation conserve le cours/labo 11 historiques tels quels (`while` / `do...while`) afin de ne pas réécrire prématurément le matériel.
+- `push`, `pop` et `splice` sont conservés dans le matériel initial; leur importance finale sera réévaluée plus tard.
+- Les labos 16 et 21–26 demeurent un réservoir de matériel éprouvé pour intégration, reprise ou enrichissement; ils ne sont pas automatiquement ajoutés au noyau.
+- Créer et utiliser `PLAN_IMPLEMENTATION_RENCONTRES_6_A_15.md` pour guider l'ordre de migration structurelle avant toute révision pédagogique.
 
 ## Questions à trancher pendant la refonte
 
-- Quelles notions JavaScript peuvent être retirées sans appauvrir inutilement les TP ou l'examen final?
-- Quelle forme principale de boucle permet de conserver les meilleurs exercices et de soutenir le plus simplement les tableaux et `querySelectorAll`?
-- L'ancien laboratoire 15 peut-il être intégré sans surcharge à R11, ou doit-il être conservé comme bloc en R12?
+- Après implantation complète de R6–R12, quelles notions JavaScript peuvent réellement être retirées ou rendues facultatives sans affaiblir le TP ni l'examen final?
+- La boucle principale finale doit-elle devenir `for`, ou le matériel `while` historique reste-t-il préférable une fois observé dans la nouvelle séquence?
+- Quels exercices du matériel avancé sont les meilleurs candidats pour R13?
 - Quel TP d'intégration exploite le mieux le noyau appris d'ici R12?
 - Quelles notions du matériel Z03/905 sont réellement nécessaires à ce TP et à l'examen final?
 
