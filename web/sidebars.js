@@ -138,8 +138,30 @@ const sidebars = {
     },
     { type: "doc", id: "cours/rencontre6", label: "Rencontre 6 — Variables et affectation" },
     { type: "doc", id: "cours/rencontre7", label: "Rencontre 7 — DOM et fonctions" },
-    { type: "doc", id: "cours/rencontre8", label: "Rencontre 8 — Fonctions" },
-    { type: "doc", id: "cours/rencontre9", label: "Rencontre 9 — DOM de base" },
+    {
+      type: "category",
+      label: "Rencontre 8 — Interactivité, classes et attributs",
+      items: [
+        { type: "doc", id: "cours/rencontre8", label: "Cours — Événements et styles" },
+        {
+          type: "doc",
+          id: "cours/rencontre8-classes-attributs",
+          label: "Cours — Classes et attributs",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Rencontre 9 — Conditions et logique",
+      items: [
+        { type: "doc", id: "cours/rencontre9", label: "Cours — Booléens et conditions" },
+        {
+          type: "doc",
+          id: "cours/rencontre9-operateurs-logiques",
+          label: "Cours — Opérateurs logiques",
+        },
+      ],
+    },
     { type: "doc", id: "cours/rencontre10", label: "Rencontre 10 — Événements et classes CSS" },
     { type: "doc", id: "cours/rencontre11", label: "Rencontre 11 — Boucles" },
     { type: "doc", id: "cours/rencontre12", label: "Rencontre 12 — Tableaux" },
