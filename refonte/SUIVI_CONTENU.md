@@ -31,7 +31,7 @@ Consulter également :
 | Cours actuel | Titre / sujet actuel | Notions principales | Exercices / source actuelle | Destination ou décision | Actions de migration |
 |---|---|---|---|---|---|
 | 1 | Atelier / environnement technologique | stockage, système de fichiers, dossiers, extensions, ZIP, outils du cours | Ancien `01-rencontre1.1.md`; PowerPoint historique **Environnement de travail** fourni pendant la refonte; aucun laboratoire numéroté associé | **Intégré comme préambule distinct de la théorie HTML** | Nouveau `01-rencontre1-environnement.md`; OneDrive, arborescence, extensions, ZIP, VS Code et navigateur intégrés. Ancien atelier conservé comme source. Des captures historiques/provisoires sont déjà intégrées; les remplacements modernes éventuels restent suivis dans `RESSOURCES_A_FOURNIR.md`. |
-| 2 | Variables et affectation | Variables, affectation, nombres, opérateurs, chaînes, concaténation | Labo 2 → `420905_lab2.docx` | **Implanté en R6** | Théorie historique copiée dans `web/docs/01-cours/06-rencontre6.md`; page de labo historique conservée mais présentée comme **Rencontre 6 — Variables**. DOCX original, transcription Markdown et captures conservés. Aucun exercice réécrit. |
+| 2 | Variables et affectation | Variables, affectation, nombres, opérateurs, chaînes, concaténation | Labo 2 → `420905_lab2.docx` | **Révisé en R6** | Théorie R6 allégée et distinction déclaration / affectation / réaffectation renforcée. Nouveau labo étudiant intégré directement à `web/docs/02-labos/01-labo2.md` : 15 activités principales + pratiques facultatives. DOCX, transcription Markdown et captures historiques conservés. Référence avant révision : branche `archive/r6-before-revision-2026-08-26`. |
 | 3 | DOM et fonctions | `querySelector`, `textContent`, VS Code, fonctions | Labo 3 → `420905_lab3.zip` | **Implanté en R7 comme bloc cohérent** | Théorie historique copiée dans `web/docs/01-cours/07-rencontre7.md`; page de labo présentée comme **Rencontre 7 — DOM et fonctions**. ZIP et dossier décompressé conservés. Aucun exercice scindé ou réécrit. |
 | 4 | Événements et styles | Variables globales/locales, événements, styles DOM | Labo 4 → `420905_lab4.zip` | À réorganiser dans le bloc DOM / événements | Extraire le labo 4 et répartir les exercices selon la nouvelle progression. |
 | 5 | Booléens et conditions | Booléens, `if`, `else` | Labo 5 → `420905_lab5.zip` | **Fusion envisagée avec le cours 6** | Extraire le labo 5; inventorier les exercices à conserver. |
@@ -67,7 +67,7 @@ Les anciennes sources de migration `sources/R01-Introduction-HTML-Markdown/`, `s
 | **3** | syntaxe CSS, feuille externe, chemins CSS, sélecteurs, classes, propriétés visuelles | début Validation C — WEB-05/06 |
 | **4** | consolidation CSS, bordures, dimensions simples, `margin`, `padding`, modèle en boîte | Validation C; début Validation D — WEB-07/08 |
 | **5** | Flexbox simple, navigation horizontale, intégration, pratique et correction | Validation D et reprises |
-| **6** | variables, affectation, nombres, chaînes, opérateurs, concaténation et littéraux de gabarits | reprises HTML/CSS seulement au besoin |
+| **6** | variables, déclaration, affectation, réaffectation, nombres, chaînes, opérateurs, concaténation et littéraux de gabarits | reprises HTML/CSS seulement au besoin |
 | **7** | DOM de base avec `querySelector` / `textContent`, VS Code et fonctions simples | prépare avec R6 le mini-quiz de R8 |
 
 ## Niveaux d'attente pour le contenu
@@ -121,7 +121,7 @@ Exemples : détails `inline`/`inline-block`, `overflow`, positionnement, Flexbox
 | HTML | structure du document, éléments/attributs, titres/paragraphes/listes, images, liens, chemins relatifs, navigation | `header`, `nav`, `main`, `footer`, `alt`, commentaires, validation W3C, sémantique simple | éléments HTML rarement utilisés et nuances sémantiques avancées |
 | CSS — base | liaison externe, syntaxe d'une règle, sélecteurs d'élément et de classe, propriétés visuelles de base | `id`, cascade simple, `<span>`, détails contextuels CSS intraligne/interne | théorie détaillée de spécificité |
 | CSS — espace/disposition | `margin`, `padding`, modèle en boîte, dimensions simples, `display:flex` simple, `gap` | `border-radius`, `justify-content`/`align-items` selon les exercices | détails `inline`/`inline-block`, `overflow`, positionnement, Flexbox avancé, Grid, animations |
-| Variables / chaînes | variables, affectation, nombres, chaînes, opérateurs simples, template strings | opérateurs d'affectation secondaires | détails de priorité des opérateurs au-delà du nécessaire |
+| Variables / chaînes | variables, déclaration, affectation, réaffectation, nombres, chaînes, opérateurs simples, template strings | `+=` et `-=` à pratiquer sans multiplier les variantes | déclarations multiples, `++` / `--`, détails de priorité au-delà du nécessaire |
 | Conditions | booléens, comparaisons, `if`, `else`, `else if`, `&&`, `||` | exemples complexes d'opérateurs logiques | opérateur `!` et tableau complet de priorité des opérateurs |
 | Fonctions | déclaration, appel, paramètres simples | plusieurs paramètres, `return` présenté brièvement | approfondissement des valeurs de retour, exemples sophistiqués si le temps manque |
 | Portée des variables | comprendre qu'une variable déclarée dans une fonction est locale | mentionner les globales seulement lorsqu'un état doit être partagé | convention systématique du préfixe `g` et théorie détaillée sur les globales |
@@ -167,8 +167,9 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 - Toute ressource à fournir aux étudiants doit être inscrite dans `RESSOURCES_A_FOURNIR.md` avant qu'une page en dépende.
 - Les documents internes de refonte sont regroupés sous `refonte/` et les sources historiques/importées sous `sources/`.
 - Les chantiers pédagogiques importants doivent être précédés d'un plan d'implémentation versionné et mis à jour pendant le travail.
-- Pour R6–R15, la première implantation place d'abord la théorie et les exercices historiques aux bonnes rencontres **sans réécriture pédagogique**; les améliorations viennent seulement après que la séquence complète fonctionne.
-- R6 utilise l'ancien cours/labo 2; R7 utilise l'ancien cours/labo 3 conservé comme bloc cohérent.
+- Pour R6–R15, la première implantation a placé la théorie et les exercices historiques aux bonnes rencontres avant la révision pédagogique.
+- R6 utilise l'ancien cours/labo 2 comme source historique, mais sa théorie et son laboratoire étudiant ont maintenant été révisés; voir `REVISION_R6.md`.
+- R7 utilise encore l'ancien cours/labo 3 conservé comme bloc cohérent en attente de sa propre révision.
 
 ## Décisions / hypothèses en cours
 
@@ -200,4 +201,5 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 | 2026-08-19 | Création et validation technique de la rencontre 4 : cours canonique, exercice guidé et Projet Web — Étape 4 | `00-modele-boites-positionnement.md`, `04-rencontre4.md`, `04-rencontre4-exercice-guide.md`, `03-projet-web/04-rencontre4.md` | Exercice guidé — Comprendre le modèle en boîte | Prêt à réviser; source historique conservée |
 | 2026-08-19 | Création et validation technique de la rencontre 5 : cours canonique, exercice guidé et Projet Web — Étape 5 | Nouvelle synthèse Flexbox ciblée, `05-rencontre5.md`, `05-rencontre5-exercice-guide.md`, `03-projet-web/05-rencontre5.md` | Exercice guidé — Flexbox simple | Prêt à réviser |
 | 2026-08-20 | Pondération HTML/CSS harmonisée à 30 % sans changer les huit compétences ni les quatre moments de validation | `EVALUATION.md`, `COMPETENCES_HTML_CSS.md`, `PLAN_SITE_EVOLUTIF.md`, pages étudiantes du Projet Web | Aucun exercice modifié par cette décision | Décidé |
-| 2026-08-26 | Première implantation de R6 et R7 : théorie historique déplacée telle quelle et laboratoires rattachés aux nouvelles rencontres | ancien cours 2 → `06-rencontre6.md`; ancien cours 3 → `07-rencontre7.md`; pages labo 2 et 3 | labo 2 → R6; labo 3 → R7; fichiers historiques et exercices inchangés | Implanté; validation technique en cours |
+| 2026-08-26 | Première implantation de R6 et R7 : théorie historique déplacée telle quelle et laboratoires rattachés aux nouvelles rencontres | ancien cours 2 → `06-rencontre6.md`; ancien cours 3 → `07-rencontre7.md`; pages labo 2 et 3 | labo 2 → R6; labo 3 → R7; fichiers historiques et exercices inchangés | Implanté |
+| 2026-08-26 | Révision pédagogique de R6 avec archive avant révision | `06-rencontre6.md`, `01-labo2.md`, `REVISION_R6.md`, sources `420905_lab2` | 42 questions historiques condensées en 15 activités principales + pratiques facultatives; déclaration / affectation / réaffectation renforcées | Implanté; validation technique à confirmer |
