@@ -1,6 +1,6 @@
 # Révision pédagogique — Rencontre 6
 
-**État : Implantée — validation technique bloquée par une erreur historique hors R6**
+**État : Implantée — passe visuelle effectuée; validation globale toujours bloquée par une erreur historique hors R6**
 
 ## Référence avant révision
 
@@ -38,25 +38,43 @@ La page explique aussi que `let score = 10;` combine une déclaration et une pre
 
 Le laboratoire pratique séparément : déclaration seule, affectation, réaffectation, tentative de redéclaration, puis reconnaissance des deux opérations dans une instruction avec `let` et `=`.
 
+## Passe de mise en scène visuelle
+
+Après la première réécriture, la page était pédagogiquement plus structurée, mais visuellement plus plate que l'ancien cours. Une passe distincte a donc été effectuée **sans modifier le noyau de matière**.
+
+Changements de présentation :
+
+- réintroduction d'emojis comme repères dans les titres;
+- ajout d'encadrés Docusaurus colorés (`tip`, `info`, `warning`, `danger`, `important`);
+- réutilisation sélective de captures historiques déjà présentes dans le dépôt;
+- mise en évidence visuelle du trio `déclarer / affecter / réaffecter`;
+- ajout d'un tableau synthèse très court avant le détail des variables;
+- ajout de séparateurs visuels entre les grands blocs;
+- renforcement visuel des erreurs fréquentes, notamment la redéclaration avec un deuxième `let`;
+- conservation d'un résumé final illustré par des pictogrammes.
+
+Cette passe ne réintroduit ni les déclarations multiples, ni `++` / `--`, ni le gros exemple initial avec `if` / `for`.
+
 ## Théorie — avant / après
 
 | Élément | Avant | Après | Impact pour l'enseignement |
 | --- | --- | --- | --- |
 | Introduction JavaScript | Longue introduction avec un programme contenant plusieurs syntaxes inconnues | Introduction courte centrée sur le Web, `.js` et la console | Ne plus commenter le gros programme d'ouverture |
-| Opérateurs `+ - * /` | Plusieurs exemples visuels séparés | Tableau synthèse | Même matière, moins de temps |
+| Présentation visuelle | Nombreuses captures, emojis et encadrés dans la version historique | Structure condensée, mais repères visuels réintroduits de façon sélective | Conserver un cours vivant sans remettre la surcharge de contenu |
+| Opérateurs `+ - * /` | Plusieurs exemples visuels séparés | Tableau synthèse + rappel visuel de la priorité | Même matière, moins de temps |
 | Priorité | Incluait aussi `=` dans la hiérarchie | Parenthèses, `* /`, puis `+ -` | Ne plus faire mémoriser la priorité de l'affectation |
-| Déclaration `let` | Présente | Renforcée | Insister sur « créer la variable » |
-| Affectation `=` | Présente | Renforcée | Insister sur « placer une valeur » |
-| Réaffectation | Plus dispersée | Placée immédiatement après l'affectation | Comparer directement avec une redéclaration |
+| Déclaration `let` | Présente | Renforcée et mise en évidence visuellement | Insister sur « créer la variable » |
+| Affectation `=` | Présente | Renforcée et mise en évidence visuellement | Insister sur « placer une valeur » |
+| Réaffectation | Plus dispersée | Placée immédiatement après l'affectation, avec contraste visuel | Comparer directement avec une redéclaration |
 | `let x = valeur` | Raccourci pratique | Deux opérations explicitement nommées | Éviter le réflexe de remettre `let` |
 | `undefined` | Explication longue | Mention courte liée à une déclaration sans valeur | Ne pas en faire une notion autonome |
 | Déclarations multiples | Présentes | Retirées | Ne plus les présenter en R6 |
 | Nommage | Liste détaillée de règles | Règles essentielles, nom significatif, camelCase | Insister sur la lisibilité |
-| `+=` / `-=` | Plusieurs exemples et variantes | Une explication directe | Les enseigner sans multiplier les cas |
+| `+=` / `-=` | Plusieurs exemples et variantes | Une explication directe avec une capture historique | Les enseigner sans multiplier les cas |
 | `++` / `--` | Présentés comme facultatifs | Retirés | Ne plus les présenter en R6 |
-| Nombre vs chaîne | Présent | Conservé | Toujours important |
-| Concaténation | Très illustrée | Exemple court | Même notion, plus rapide |
-| Littéraux de gabarits | Plusieurs captures et étapes | Syntaxe directe avec exemples | Toujours au programme |
+| Nombre vs chaîne | Présent | Conservé avec captures historiques | Toujours important |
+| Concaténation | Très illustrée | Exemple court + encadré explicatif | Même notion, plus rapide |
+| Littéraux de gabarits | Plusieurs captures et étapes | Syntaxe directe + une capture + exemple | Toujours au programme |
 | `+=` avec texte | Plusieurs exemples | Un exemple court | Prépare R7 |
 
 ## Laboratoire — avant / après
@@ -116,11 +134,11 @@ L'ancien laboratoire avait **42 numéros**. La nouvelle page comporte **15 activ
 
 ## Validation technique
 
-Le workflow du dépôt a été exécuté sur le commit `98344fbf82baccc5fc826e90d029e2da84e7db61`.
+Le workflow du dépôt a été exécuté sur le commit `98344fbf82baccc5fc826e90d029e2da84e7db61` après la révision pédagogique initiale.
 
 - `npm ci` : réussi;
 - `npm run typecheck` : échec sur un fichier historique hors R6;
-- `npm run build` : non exécuté, car le workflow s'arrête après l'échec du typecheck.
+- `npm run build` : non exécuté par le workflow, car celui-ci s'arrête après l'échec du typecheck.
 
 Erreur confirmée :
 
@@ -129,4 +147,4 @@ static/files/420905_lab6/lab6_exercice3/js/script.js(75,2)
 TS1005: '}' expected.
 ```
 
-Cette erreur était déjà connue avant la révision de R6. Elle n'est pas corrigée ici afin de ne pas modifier le labo 6 hors portée. La validation complète du build demeure donc bloquée par ce défaut historique.
+Cette erreur était déjà connue avant la révision de R6. Elle n'est pas corrigée ici afin de ne pas modifier le labo 6 hors portée. La validation globale du workflow demeure donc bloquée par ce défaut historique.
