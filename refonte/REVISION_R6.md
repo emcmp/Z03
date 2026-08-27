@@ -1,6 +1,6 @@
 # Révision pédagogique — Rencontre 6
 
-**État : Implantée — validation technique à confirmer**
+**État : Implantée — validation technique bloquée par une erreur historique hors R6**
 
 ## Référence avant révision
 
@@ -114,4 +114,19 @@ L'ancien laboratoire avait **42 numéros**. La nouvelle page comporte **15 activ
 - `web/static/files/420905_lab2/consignes.md`
 - `web/static/files/420905_lab2/consignes-images/`
 
-La validation technique sera consignée après le build.
+## Validation technique
+
+Le workflow du dépôt a été exécuté sur le commit `98344fbf82baccc5fc826e90d029e2da84e7db61`.
+
+- `npm ci` : réussi;
+- `npm run typecheck` : échec sur un fichier historique hors R6;
+- `npm run build` : non exécuté, car le workflow s'arrête après l'échec du typecheck.
+
+Erreur confirmée :
+
+```text
+static/files/420905_lab6/lab6_exercice3/js/script.js(75,2)
+TS1005: '}' expected.
+```
+
+Cette erreur était déjà connue avant la révision de R6. Elle n'est pas corrigée ici afin de ne pas modifier le labo 6 hors portée. La validation complète du build demeure donc bloquée par ce défaut historique.
