@@ -1,62 +1,77 @@
 # Révision pédagogique — Rencontre 6
 
-**État : théorie revenue à la version historique 905; laboratoire révisé conservé**
+**État : théorie 905 conservée avec micro-ajustements ciblés; laboratoire révisé conservé**
 
-## Décision finale pour la théorie R6
+## Référence avant les micro-ajustements
 
-Après une première réécriture pédagogique puis une passe de mise en scène visuelle, la décision finale est de **conserver la théorie historique du cours 905** comme contenu actif de la rencontre 6.
+La théorie active avait été ramenée à la version historique migrée du cours 905 avant cette passe :
 
-La page active est donc revenue au contenu de la branche :
-
-- `archive/r6-before-revision-2026-08-26`
+- branche d'archive : `archive/r6-before-revision-2026-08-26`
 - commit de référence : `a98cdefe79c8caa7daf7cd6d7fe0c0520ea4d2a3`
-- blob historique réutilisé pour `web/docs/01-cours/06-rencontre6.md` : `ef609bfbd286fa69fb5c179eafde3e5beb605425`
+- blob historique de `web/docs/01-cours/06-rencontre6.md` : `ef609bfbd286fa69fb5c179eafde3e5beb605425`
 
-Le titre avait déjà été adapté mécaniquement de l'ancien « Cours 2 » à « Rencontre 6 » lors de la migration. Le texte, les exemples, les captures, les encadrés, les emojis et l'ordre des notions correspondent à la version historique migrée du 905.
+Cette référence demeure disponible pour comparer la version 905 originale avec la version active.
 
-Les titres `##` et `###` de cette page sont conservés afin que Docusaurus génère la navigation native **Sur cette page**, comme pour les autres rencontres.
+## Décision actuelle
 
-## Pourquoi revenir à la version 905
+La rencontre 6 **ne fait pas l'objet d'une nouvelle refonte complète**. Le cours 905 reste la base : son ton, ses exemples, ses captures, ses encadrés, ses emojis et la grande majorité de son texte sont conservés.
 
-La version réécrite était plus courte et plus structurée, mais elle s'éloignait trop d'un cours déjà donné plusieurs fois et dont la mise en scène visuelle fonctionnait bien en classe.
+La version active applique seulement quelques ajustements à fort rendement afin de mieux ordonner les idées et de rendre plus visible la distinction entre déclaration et affectation.
 
-La priorité retenue est donc :
+Les titres `##` et `###` restent utilisés afin que Docusaurus génère la navigation native **Sur cette page**.
 
-- préserver le cours éprouvé;
-- éviter que l'enseignant doive réapprendre une nouvelle version inutilement;
-- conserver les illustrations, couleurs, captures et exemples familiers;
-- faire les ajustements seulement lorsqu'un besoin pédagogique concret le justifie.
+## Micro-ajustements appliqués
 
-## Historique de la tentative de révision
+1. **Fil conducteur au début** : ajout de `console → calculs → variables → texte` sous le titre.
+2. **Priorité des opérateurs rapprochée des calculs** : la section est maintenant placée immédiatement après les opérateurs arithmétiques. Comme elle apparaît avant l'affectation, elle se limite à `()`, `* /`, puis `+ -`.
+3. **Ajout du « trio à distinguer »** au début du bloc Variables : déclaration, affectation et réaffectation sont comparées dans un tableau court.
+4. **Regroupement déclaration → affectation → réaffectation → redéclaration** : les captures `doubleLet.png` et `changeValue.png` sont déplacées près de la réaffectation plutôt qu'après le nommage.
+5. **Déclarations multiples rendues secondaires** : elles sont conservées, mais placées dans un encadré explicite `Pour aller plus loin`.
+6. **Répétition de `+=` réduite dans la concaténation** : les exemples numériques ne sont pas répétés; le cours passe directement au cas nouveau avec une chaîne, tout en conservant les captures historiques pertinentes.
+7. **Résumé final ajouté** : tableau des syntaxes principales et rappel du réflexe à adopter avant d'écrire `let`.
 
-| Étape | Décision | État final |
+Quelques coquilles évidentes ont aussi été corrigées sans modifier le fond (`remplacer`, accord de `Conventions`, `fonctionne`, `équivalent à`, etc.).
+
+## Avant / après
+
+| Élément | Avant — 905 | Après — version active |
 | --- | --- | --- |
-| Version historique 905 déplacée en R6 | contenu conservé presque tel quel | **Version active de nouveau** |
-| Réécriture pédagogique de R6 | théorie condensée; déclaration / affectation / réaffectation renforcées | abandonnée pour la théorie |
-| Passe de mise en scène visuelle | visuels et encadrés réintroduits dans la version condensée | abandonnée pour la théorie |
-| Retour à la version 905 | restauration du blob historique | **Décision finale actuelle** |
+| Parcours de la rencontre | implicite | une ligne `console → calculs → variables → texte` |
+| Priorité des opérateurs | après tout le bloc Variables et affectation | immédiatement après les opérateurs arithmétiques |
+| Déclarer / affecter / réaffecter | expliqué à différents endroits | synthèse « trio à distinguer » puis explications historiques |
+| Erreur de double `let` | après le nommage | directement près de la réaffectation |
+| Déclarations multiples | dans le chemin principal | conservées en `Pour aller plus loin` |
+| `+=` dans la partie chaînes | rappel numérique avant le texte | rappel en une phrase, puis cas avec chaîne |
+| Résumé | aucun | tableau synthèse final |
+| Captures / emojis / ton | nombreux et familiers | conservés |
+| Gros exemple initial `if` / `for` | présent | conservé |
+| `++` / `--` | facultatifs | conservés comme dans le 905 |
 
-La branche `archive/r6-before-revision-2026-08-26` reste disponible pour comparaison. Les commits de la tentative de révision restent également dans l'historique Git, ce qui permet de revoir les différences au besoin.
+## Point pédagogique renforcé
 
-## Point pédagogique à garder en tête
+Le point à surveiller reste la différence entre :
 
-Même si la théorie historique est conservée, la confusion récurrente entre **déclarer**, **affecter** et **réaffecter** reste un point de vigilance en classe.
+```js
+let score;   // déclaration
+score = 10;  // affectation
+score = 20;  // réaffectation
+```
 
-La version 905 contient déjà les éléments nécessaires :
+Le cours précise aussi que :
 
-- `let` pour créer une variable;
-- `=` pour lui affecter une valeur;
-- un exemple de changement de valeur sans nouveau `let`;
-- une erreur de double déclaration illustrée avec `doubleLet.png`;
-- une illustration de changement de valeur avec `changeValue.png`.
+```js
+let score = 10;
+```
 
-Il n'est donc pas nécessaire de réécrire la théorie pour insister davantage oralement sur cette distinction.
+combine une **déclaration** et une **première affectation**.
+
+Le bloc de redéclaration rappelle ensuite qu'un deuxième `let` n'est pas nécessaire lorsqu'on veut seulement changer la valeur d'une variable existante.
 
 ## Laboratoire R6
 
-La décision de revenir à la théorie 905 **ne remet pas automatiquement l'ancien laboratoire de 42 questions en place**.
+Cette passe ne modifie **pas** le laboratoire.
 
-Le laboratoire actif reste pour l'instant la version réorganisée dans :
+Le laboratoire actif demeure la version réorganisée dans :
 
 `web/docs/02-labos/01-labo2.md`
 
@@ -68,27 +83,13 @@ Les sources historiques restent conservées :
 - `web/static/files/420905_lab2/consignes.md`
 - `web/static/files/420905_lab2/consignes-images/`
 
-Cette séparation permet de garder **le cours éprouvé** tout en conservant un laboratoire moins répétitif. Le laboratoire pourra être réévalué séparément après usage ou relecture.
-
-## Diff pédagogique actuel
-
-| Élément | Version 905 | Version active |
-| --- | --- | --- |
-| Théorie R6 | cours historique complet | **identique à la version historique migrée** |
-| Visuels et captures | nombreux | **conservés** |
-| Déclarations multiples | présentes | **présentes** |
-| `++` / `--` | présentés comme facultatifs | **présents comme dans le 905** |
-| Gros exemple initial avec `if` / `for` | présent | **présent** |
-| Navigation « Sur cette page » | générée à partir des titres | **conservée via les titres `##` / `###`** |
-| Laboratoire | 42 numéros historiques | **15 activités principales + pratiques facultatives** |
-
 ## Validation technique
 
-La validation globale du dépôt demeure bloquée par une erreur historique hors R6 :
+La validation globale du dépôt demeure historiquement bloquée par une erreur hors R6 :
 
 ```text
 static/files/420905_lab6/lab6_exercice3/js/script.js(75,2)
 TS1005: '}' expected.
 ```
 
-Ce défaut n'est pas modifié dans le cadre de la décision sur R6.
+Ce défaut n'est pas modifié dans le cadre de la révision R6.
