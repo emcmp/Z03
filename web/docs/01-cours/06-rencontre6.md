@@ -8,6 +8,8 @@ import TabItem from '@theme/TabItem';
 
 # Rencontre 6 - Variables et affectation
 
+> **Aujourd'hui :** console → calculs → variables → texte.
+
 ## 🤓 JavaScript
 
 * C'est un langage de programmation né en 1996 👶
@@ -53,7 +55,7 @@ Soyez donc **patient(e)** ⌛, car apprendre à programmer risque de ne pas êtr
 
 ## 🌐 JavaScript dans un navigateur Web
 
-Pour le moment, nous utiliserons la « console du navigateur Web » de **Google Chrome** ou **Mozilla Firefox** pour apprendre JavaScript.
+Pour le moment, nous utiliserons la « console du navigateur Web » de **Google Chrome** ou **Mozilla Firefox** pour apprendre JavaScript.
 
 Ouvrez un **navigateur Web** et appuyez sur `F12` (ou faites **clic-droit** -> **Inspecter**) puis accédez à la **console** :
 
@@ -93,6 +95,20 @@ Exemples : `-3`, `-69.96`, `-420`, etc.
 
 :::
 
+## 🥇🥈🥉 Priorité des opérateurs
+
+L'ordre de priorité des opérateurs arithmétiques est le suivant :
+
+1. Parenthèses `()`
+2. Multiplication et division `*` `/`
+3. Addition et soustraction `+` `-`
+
+(En cas d'égalité, on résout l'expression de **gauche à droite**.)
+
+Les parenthèses permettent donc de prioriser certaines opérations. Par exemple, ci-dessous, on obtient deux résultats différents grâce aux parenthèses :
+
+<center>![Fichier avec l'extension js](../../static/img/cours2/parenthesis.png)</center>
+
 ## 📦 Variables
 
 Une variable est un « espace dans la mémoire » qui permet de stocker une **donnée**.
@@ -101,9 +117,31 @@ Dans un programme (logiciel, jeu, application, etc.), on a souvent besoin de **s
 
 Quelques exemples :
 * Stocker les **points de vie** d'un personnage : `78` 💗
-* Stocker la **taille du pinceau** utilisé dans Photoshop : `5.5` 🎨
+* Stocker la **taille du pinceau** utilisé dans Photoshop : `5.5` 🎨
 * Stocker le **nom d'un item** dans un jeu : `"diamond"` 💎
 * Stocker votre **niveau de concentration** en classe : `10` (%) 😴
+
+### 🧭 Le trio à distinguer
+
+Ces trois opérations se ressemblent, mais elles ne veulent pas dire la même chose :
+
+| Opération | Exemple | Ce que je fais |
+| --- | --- | --- |
+| **Déclarer** | `let score;` | Je crée la variable. |
+| **Affecter** | `score = 10;` | Je lui donne une valeur. |
+| **Réaffecter** | `score = 20;` | Je remplace sa valeur. |
+
+:::tip
+
+Une ligne comme celle-ci réalise **deux opérations à la fois** :
+
+```js
+let score = 10;
+```
+
+`let score` **déclare** la variable, puis `= 10` lui **affecte** sa première valeur.
+
+:::
 
 ### 📢 Déclarer une variable
 
@@ -129,7 +167,7 @@ Parfois, la console nous répond `← undefined`... C'est normal !
 
 <center>![Fichier avec l'extension js](../../static/img/cours2/undefined.png)</center>
 
-Quand on fait un calcul, la console **doit nous retourner le résultat**, mais quand on crée une variable... la console n'a rien à nous dire ! Elle nous répond donc simplement `undefined` et c'est normal. (La variable a bien été créée)
+Quand on fait un calcul, la console **doit nous retourner le résultat**, mais quand on crée une variable... la console n'a rien à nous dire ! Elle nous répond donc simplement `undefined` et c'est normal. (La variable a bien été créée)
 
 :::
 
@@ -175,13 +213,17 @@ On peut **déclarer** et **affecter** une variable simultanément :
 let ageSylvain = 102;
 ```
 
+:::
+
+:::note Pour aller plus loin — plusieurs variables sur une ligne
+
 On peut **déclarer** plusieurs variables simultanément en utilisant des `,` (virgules) pour séparer leur nom :
 
 ```js
 let prixPain, prixNutella, prixCouteau;
 ```
 
-On peut **déclarer** et **affecter** plusieurs variables simultanément :
+On peut aussi **déclarer** et **affecter** plusieurs variables simultanément :
 
 ```js
 let triangle = 3, carre = 4, pentagone = 5;
@@ -189,7 +231,9 @@ let triangle = 3, carre = 4, pentagone = 5;
 
 :::
 
-Notez qu'on peut utiliser l'opérateur `=` sur une variable qui **contient déjà une valeur** pour la **remplacer.
+### 🔄 Réaffecter une valeur
+
+On peut utiliser l'opérateur `=` sur une variable qui **contient déjà une valeur** pour la **remplacer**.
 
 Par exemple, à la fin de ces lignes de code, la variable `prix` contiendra `50` plutôt que `40` :
 
@@ -197,6 +241,20 @@ Par exemple, à la fin de ces lignes de code, la variable `prix` contiendra `50`
 let prix = 40;
 prix = 50;
 ```
+
+:::danger Attention à la redéclaration
+
+Il ne faut pas utiliser `let` une deuxième fois lorsqu'on veut seulement changer la valeur d'une variable existante.
+
+<center>![Fichier avec l'extension js](../../static/img/cours2/doubleLet.png)</center>
+
+Si on souhaite changer la valeur de la variable, il suffit de faire ceci :
+
+<center>![Fichier avec l'extension js](../../static/img/cours2/changeValue.png)</center>
+
+Avant d'écrire `let`, demandez-vous donc : **« Est-ce que je crée cette variable pour la première fois? »**
+
+:::
 
 Enfin, n'hésitez pas à utiliser des **calculs** pour **affecter** des valeurs à des variables.
 
@@ -216,7 +274,7 @@ let prixDeTroisPitous = 150 * 3;
 * Peut contenir des **lettres**, des **chiffres** et des traits de soulignement `_`.
 * Ne peut pas contenir d'**espace** et de **caractères spéciaux** comme `?!#/%&*~\`.
 
-#### 📐 Convention de nommage (fortement suggérées ✅)
+#### 📐 Conventions de nommage (fortement suggérées ✅)
 
 * Doit être significatif. (Représente bien l'utilité de la variable)
   * ✅ `nomDragon`, `prix`, `age`
@@ -224,18 +282,6 @@ let prixDeTroisPitous = 150 * 3;
 * Si composé de **plusieurs mots**, le premier commence par une **minuscule** et les suivants par une **majuscule**.
   * ✅ `dateNaissance`, `nbEtudiants`, `pointsDeVie`
   * 🚫 `cestillisible`, `cafaitdur`, `bonnechance`
-
-:::danger
-
-Il ne faut jamais donner **le même nom** à deux variables ! Attention quand vous utilisez `let` : assurez-vous qu'aucune variable avec ce nom n'existe.
-
-<center>![Fichier avec l'extension js](../../static/img/cours2/doubleLet.png)</center>
-
-Si on souhaitait changer la valeur de la variable, il suffisait de faire ceci :
-
-<center>![Fichier avec l'extension js](../../static/img/cours2/changeValue.png)</center>
-
-:::
 
 ### 🧰 Utiliser des variables
 
@@ -266,7 +312,7 @@ Dans cet exemple, `a` vaut `12`, puis ensuite `a` vaut `5`.
 
 <center>![Fichier avec l'extension js](../../static/img/cours2/equal.png)</center>
 
-### Opérateurs `+=` et `-=` 
+### Opérateurs `+=` et `-=`
 
 L'opérateur `+=` permet d'**incrémenter** (augmenter) la valeur de la variable.
 
@@ -320,14 +366,14 @@ Diminuer une variable de 5 :
 
 Vous n'êtes pas obligé(e) de les utiliser, mais il existe également les opérateurs `++` et `--`.
 
-`++` est simplement équivalent de `+= 1`. Ici, la variable `x` sera **augmentée de 1** :
+`++` est simplement équivalent à `+= 1`. Ici, la variable `x` sera **augmentée de 1** :
 
 ```js
 let x = 7;
 x++;
 ```
 
-`--` est simplement équivalent de `-= 1`. Ici, la variable `y` sera **réduite de 1** :
+`--` est simplement équivalent à `-= 1`. Ici, la variable `y` sera **réduite de 1** :
 
 ```js
 let y = 4;
@@ -335,22 +381,6 @@ y--;
 ```
 
 :::
-
-## 🥇🥈🥉 Priorité des opérateurs
-
-L'ordre de priorité des opérateurs est la suivante :
-
-1. Parenthèses `()`
-2. Multiplication et division `*` `/`
-3. Addition et soustraction `+` `-`
-4. Affectation `=`
-
-(En cas d'égalité, on résout l'équation de **gauche à droite**)
-
-Les parenthèses permettent donc de prioriser certaines opérations. Par exemple, ci-dessous, on obtient deux résultats différents grâce aux parenthèses :
-
-<center>![Fichier avec l'extension js](../../static/img/cours2/parenthesis.png)</center>
-
 
 ## 🔤 Chaînes de caractères
 
@@ -388,7 +418,7 @@ let pasUnNombre = "55";
 let unNombre = 55;
 ```
 
-> Qu'est-ce que ça change ?
+> Qu'est-ce que ça change ?
 
 Si on tente de faire des opérations mathématiques avec la variable `pasUnNombre`, on risque d'avoir des surprises :
 
@@ -400,7 +430,7 @@ Si on tente de faire des opérations mathématiques avec la variable `pasUnNombr
 
 ### 🧰 Opérateur `+`
 
-L'opérateur `+` fonctionnement différemment dès qu'une donnée de type **chaîne de caractères** fait partie de l'équation :
+L'opérateur `+` fonctionne différemment dès qu'une donnée de type **chaîne de caractères** fait partie de l'équation :
 
 <table>
 <tr>
@@ -456,17 +486,7 @@ Un **template string** peut contenir des calculs :
 
 ### 🧰 Opérateur `+=`
 
-Pour rappel, l'opérateur `+=` permet d'**augmenter (incrémenter)** la valeur d'une variable.
-
-<center>`x` valait `4`, maintenant ça vaut `7` :</center>
-
-<center>![Incrémentation](../../static/img/cours3/plusEqualNumber.png)</center>
-<br/>
-<center>`y` valait `7`, maintenant ça vaut `13` :</center>
-
-<center>![Incrémentation de texte](../../static/img/cours3/plusEqualNumber2.png)</center>
-<br/>
-Cela dit, avec des **chaînes de caractères**, cela **ajoute du texte à la fin de la chaîne**.
+On a déjà utilisé `+=` avec des nombres. Avec une **chaîne de caractères**, le même opérateur permet d'**ajouter du texte à la fin de la chaîne**.
 
 <center>`mot` contenait `"caca"`, maintenant ça contient `"cacahuète"`, car on a **ajouté** `"huète"` à la fin :</center>
 
@@ -475,3 +495,22 @@ Cela dit, avec des **chaînes de caractères**, cela **ajoute du texte à la fin
 Voici d'autres exemples :
 
 <center>![Incrémentation de texte](../../static/img/cours3/plusEqualExamples.png)</center>
+
+## 🧾 Résumé
+
+| Je veux… | Exemple |
+| --- | --- |
+| Déclarer une variable | `let score;` |
+| Déclarer et donner une première valeur | `let score = 10;` |
+| Réaffecter une nouvelle valeur | `score = 20;` |
+| Augmenter sa valeur | `score += 5;` |
+| Diminuer sa valeur | `score -= 2;` |
+| Créer une chaîne | `let nom = "Mia";` |
+| Concaténer | `"Bonjour " + nom` |
+| Insérer une valeur dans une chaîne | `` `Bonjour ${nom}` `` |
+
+:::important Le réflexe principal de R6
+
+Avant d'écrire `let`, demandez-vous : **« Est-ce que je crée une nouvelle variable ou est-ce que je modifie une variable qui existe déjà? »**
+
+:::
