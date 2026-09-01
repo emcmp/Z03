@@ -4,5 +4,8 @@
   "compilerOptions": {
     "jsx": "react",
     "baseUrl": "."
-  }
+  },
+  "exclude": [
+    "static/**/*"
+  ]
 }
