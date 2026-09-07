@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import { useLocation } from "@docusaurus/router";
 import styles from "./ExamplePeek.module.css";
 
 type ExamplePeekProps = {
@@ -18,7 +19,19 @@ export default function ExamplePeek({
   const rootRef = useRef<HTMLSpanElement>(null);
   const [open, setOpen] = useState(false);
   const [pinned, setPinned] = useState(false);
-  const resolvedSrc = useBaseUrl(src);
+  const location = useLocation();
+
+  const isRencontre3GuidedExercise =
+    location.pathname.includes("rencontre3-exercice-guide") &&
+    src === "examples/projet-web/evolution/etape3/preview.html";
+
+  const effectiveSrc = isRencontre3GuidedExercise
+    ? "examples/exercices/rencontre3/preview.html"
+    : src;
+  const effectiveTitle = isRencontre3GuidedExercise
+    ? "Club découverte avec une classe de mise en valeur"
+    : title;
+  const resolvedSrc = useBaseUrl(effectiveSrc);
 
   useEffect(() => {
     const handlePointerDown = (event: PointerEvent) => {
@@ -83,7 +96,7 @@ export default function ExamplePeek({
       </button>
 
       {open ? (
-        <span className={styles.popover} role="dialog" aria-label={title}>
+        <span className={styles.popover} role="dialog" aria-label={effectiveTitle}>
           <span className={styles.browserWindow}>
             <span className={styles.browserBar}>
               <span className={styles.browserDots} aria-hidden="true">
@@ -96,7 +109,7 @@ export default function ExamplePeek({
             <iframe
               className={styles.previewFrame}
               src={resolvedSrc}
-              title={title}
+              title={effectiveTitle}
               sandbox="allow-same-origin"
               loading="lazy"
               style={{ height: `${height}px` }}

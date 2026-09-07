@@ -36,6 +36,18 @@ mon-site/
 
 Créez `css/styles.css`. Les quatre pages doivent charger ce même fichier.
 
+## Exemple de progression
+
+Voici un exemple de site rendu à la fin de cette étape. **Votre sujet, vos textes, vos images et vos choix visuels seront différents.** Observez surtout la structure de quatre pages, la feuille CSS partagée, les classes réutilisées et l'identifiant unique.
+
+<ExampleFrame
+  src="examples/projet-web/evolution/etape3/preview.html"
+  title="Exemple de Projet Web à la fin de l'étape 3"
+  showCode={false}
+  minHeight={420}
+  maxHeight={560}
+/>
+
 ## 1. Relier les quatre pages
 
 Ajoutez un `<link>` dans le `<head>` de chaque document.

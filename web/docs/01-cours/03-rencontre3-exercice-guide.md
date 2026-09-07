@@ -266,9 +266,13 @@ p {
 }
 ```
 
-Vous avez maintenant aussi cette règle plus ciblée :
+Votre feuille contient maintenant notamment ces deux règles qui peuvent viser le même paragraphe :
 
 ```css
+p {
+  color: #37474f;
+}
+
 .mise-en-valeur {
   color: #7a1f1f;
   background-color: #f7eaea;
@@ -282,6 +286,16 @@ Les paragraphes ordinaires utilisent la couleur de `p`, tandis que les paragraph
 Vous venez d'observer une partie de la **cascade CSS** : plusieurs règles peuvent viser le même élément, et une règle plus précise peut remplacer une règle plus générale.
 
 Il n'est pas nécessaire de mémoriser une longue table de priorité aujourd'hui.
+
+À ce stade, le rendu tient compte de toutes les règles ajoutées depuis le début de l'exercice :
+
+<ExampleFrame
+  src="examples/exercices/rencontre3/cascade/preview.html"
+  title="Club découverte après l'ajout de la règle générale sur les paragraphes"
+  showCode={false}
+  minHeight={280}
+  maxHeight={380}
+/>
 
 ## 10. Faire un diagnostic volontaire
 
