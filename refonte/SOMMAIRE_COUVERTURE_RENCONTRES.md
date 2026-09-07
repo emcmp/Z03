@@ -35,7 +35,7 @@ Documents associés :
 |---|---|---|---|---|---|
 | **R1 — Environnement et HTML** | OneDrive, dossiers/fichiers, extensions, ZIP, VS Code, ouverture de `index.html` dans le navigateur, `Ctrl+S`, `Ctrl+R`/`F5`; éléments HTML, attributs, commentaires, imbrication, structure complète, titres, paragraphes, listes, emphase | Première page complète; commentaire comme repère; cycle modifier/enregistrer/actualiser; erreurs d'imbrication; validation W3C | Création de `mon-site/index.html`, structure complète, commentaire du gabarit expliqué, contenu HTML de base, test navigateur, W3C | Prépare 🗂️ WEB-01 et 🧱 WEB-02 | ✅ |
 | **R2 — HTML, fichiers et navigation** | Arborescence, images locales, `src`, `alt`, `width`, `height`, chemins relatifs, `../`, liens, ancres internes avec `id`/`#`, navigation, éléments sémantiques simples, diagnostic | Site de deux pages avec `images/`, `pages/`, image redimensionnée, liens aller-retour, lien vers une section, erreur volontaire de chemin | Ajout d'une page secondaire, image locale et dimensions, navigation bidirectionnelle, lien vers une section, chemins relatifs | 🗂️ WEB-01, 🧱 WEB-02, ✍️ WEB-03, 🔗 WEB-04 | ✅ |
-| **R3 — Introduction à CSS** | Rôle HTML/CSS; CSS intraligne/interne/externe; règle CSS; feuille externe; sélecteurs élément/classe/id; cascade simple; couleurs, typographie, alignement, bordure | Deux pages reliées à une feuille CSS; sélecteurs d'élément; classe réutilisée; cascade simple; diagnostic d'un mauvais `href` CSS | Ajout de `css/styles.css`, feuille partagée, styles généraux, classe, premières décisions visuelles | 🔌 WEB-05, 🎯 WEB-06; reprises ✍️ WEB-03 / 🔗 WEB-04 | ✅; quelques enrichissements facultatifs non pratiqués dans le guidé |
+| **R3 — Introduction à CSS** | Rôle HTML/CSS; CSS intraligne/interne/externe; règle CSS; feuille externe; sélecteurs élément/classe/id; cascade simple; couleurs, typographie, alignement, bordure | Deux pages reliées à une feuille CSS; sélecteurs d'élément; classe réutilisée; `id` unique ciblé par `#id`; cascade simple; diagnostic d'un mauvais `href` CSS | Ajout de `css/styles.css`, feuille partagée, styles généraux, deux classes utiles dont une réutilisée, `id` unique avec règle `#id`, premières décisions visuelles | 🔌 WEB-05, 🎯 WEB-06; reprises ✍️ WEB-03 / 🔗 WEB-04 | ✅ |
 | **R4 — Modèle en boîte** | Contenu → `padding` → `border` → `margin`; une/deux valeurs; `width` en `px` et `%`; `max-width`; `height: auto`; images adaptables; `text-align` vs `margin: 0 auto`; conteneurs; `<div>` | Cartes; `padding`, `margin`, `border`; forme à deux valeurs; largeur fixe puis relative; image à `80%`; `max-width: 100%`; centrage d'une image et du `<main>`; diagnostic | Ajustement des espacements; contenu principal limité et centré; images adaptables; classes réutilisées; `<div>` au besoin | 🎨 WEB-07, 📐 WEB-08; reprises 🔌 WEB-05 / 🎯 WEB-06 | ✅; centrage et dimensions relatives enseignés et pratiqués sans valeur mécanique imposée |
 | **R5 — Flexbox simple et intégration** | Parent/enfants directs; `display: flex`; `gap`; `justify-content`; `align-items`; navigation et cartes; `background-image`, `url(...)`, `background-size: cover`, `background-position: center`; intégration HTML/CSS | Navigation flex; cartes flex; `gap`; `justify-content`; `align-items`; erreur volontaire sur le mauvais parent; ancre interne réinvestie; bannière avec image de fond et chemin depuis `styles.css` | Flexbox utile dans le site; essai d'une image de fond lorsque pertinente; intégration et correction de tout le bloc HTML/CSS | 🎨 WEB-07, 📐 WEB-08; reprises de tous les badges | ✅ image de fond enseignée et pratiquée sans devenir un critère mécanique |
 | **R6 — Variables et JavaScript** | Page actuelle provisoire : JS, variables, affectation, nombres, chaînes, opérateurs, concaténation/interpolation, console | Aucun nouvel exercice guidé Z03 finalisé; ancien labo 2 à migrer | Aucun Projet Web R6 actuellement | Mini-quiz futur préparé par R6–R7; TP2/TP3 plus tard | ⏳ noyau cohérent, activité à reconstruire |
@@ -144,8 +144,8 @@ Sources :
 | `<link rel="stylesheet" href="...">` | ✅ | ✅ depuis deux niveaux | ✅ toutes les pages | WEB-05 | Très bien aligné |
 | Chemins `css/styles.css` et `../css/styles.css` | ✅ | ✅ | ✅ | WEB-05 / WEB-01 | Réinvestissement direct de R2 |
 | Sélecteur d'élément (`body`, `h1`, `p`) | ✅ | ✅ | ✅ | WEB-06 | Aligné |
-| `class="..."` / `.classe` | ✅ | ✅ réutilisée | ✅ classe intentionnelle | WEB-06 | Aligné |
-| `id="..."` / `#id` | ✅ `id` déjà connu de R2; nouveau sélecteur `#id` présenté | — | non exigé | WEB-06 | 🟡 reconnaissance du sélecteur CSS seulement; correctement non requis |
+| `class="..."` / `.classe` | ✅ | ✅ réutilisée | ✅ deux classes utiles dont une réutilisée | WEB-06 | Aligné |
+| `id="..."` / `#id` | ✅ `id` déjà connu de R2; nouveau sélecteur `#id` présenté | ✅ `id` unique ciblé par une règle `#id` | ✅ obligatoire : au moins un `id` unique avec règle correspondante | WEB-06 | Aligné avec la cartographie courante et prépare le DOM |
 | Cascade simple élément vs classe | ✅ | ✅ conflit observé | peut être questionnée lors validation | WEB-06 | Aligné |
 | `color` | ✅ | ✅ | ✅ possible | WEB-07 | Aligné |
 | `background-color` | ✅ | ✅ | ✅ possible | WEB-07 | Aligné |
@@ -159,7 +159,7 @@ Sources :
 
 ### Conclusion R3
 
-Les compétences WEB-05 et WEB-06 sont solidement couvertes. Pour WEB-07, l'évaluation doit continuer à porter sur une **mise en forme simple et comprise**, et non exiger chacune des propriétés du catalogue théorique.
+Les compétences WEB-05 et WEB-06 sont solidement couvertes. Le support minimal de WEB-06 est maintenant explicite : sélecteur d'élément, deux classes utiles dont une réutilisée, et un `id` unique avec règle `#id`. Pour WEB-07, l'évaluation doit continuer à porter sur une **mise en forme simple et comprise**, et non exiger chacune des propriétés du catalogue théorique.
 
 ## Rencontre 4 — Modèle en boîte et espacements
 
@@ -273,7 +273,7 @@ Les huit compétences sont documentées dans [COMPETENCES_HTML_CSS.md](./COMPETE
 |---|---|---|---|---|
 | **A** | R2 | WEB-01, WEB-02 | fichiers/dossiers, chemins, structure complète, imbrication | ✅ R1–R2 |
 | **B** | R2 → début R3 | WEB-03, WEB-04 | titres, paragraphes, listes, images, liens, navigation | ✅ R1–R2 |
-| **C** | R3–R4 | WEB-05, WEB-06 | feuille CSS externe, chemins CSS, sélecteurs, classes | ✅ R3 |
+| **C** | R3–R4 | WEB-05, WEB-06 | feuille CSS externe, chemins CSS, sélecteurs, deux classes utiles dont une réutilisée, `id` unique et règle `#id` | ✅ R3 |
 | **D** | R4–R5 | WEB-07, WEB-08 | mise en forme simple, boîte, espacements, dimensions relatives, centrage, Flexbox simple | ✅ R3–R5 |
 
 ### Règle d'évaluation à conserver
