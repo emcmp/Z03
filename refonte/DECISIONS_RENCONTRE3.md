@@ -1,11 +1,12 @@
 # Décisions de conception — Rencontre 3
 
 **Date : 2026-08-19**  
-**Statut : R3-01 à R3-05 terminés; rencontre prête à réviser**
+**Mise à jour : 2026-09-07**  
+**Statut : Rencontre 3 alignée avec la cartographie HTML/CSS courante**
 
 **Plan maître : `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`**
 
-Ce document consigne le résultat de **R3-01 — Délimiter le contenu de cours** avant la rédaction de la rencontre 3. Il permet de reprendre le travail sans redécider la portée pédagogique si l'implémentation est interrompue.
+Ce document consigne les décisions de conception de la rencontre 3. Lorsqu'une exigence plus ancienne diffère de `COMPETENCES_HTML_CSS.md`, **la cartographie HTML/CSS courante prévaut**.
 
 ## Intention de la rencontre
 
@@ -38,11 +39,12 @@ La rencontre doit laisser un temps réel pour :
 
 - sélecteur d'élément (`body`, `h1`, `p`, etc.);
 - classe CSS avec `.nom-classe` et attribut HTML `class="nom-classe"`;
-- réutilisation d'une même classe lorsque plusieurs éléments ont le même rôle visuel;
-- compréhension de `id` / `#id`, sans demander son utilisation comme exigence indépendante;
+- au moins deux classes utiles dans le Projet Web, dont au moins une réutilisée;
+- identifiant unique avec `id="nom"` et règle CSS correspondante `#nom`;
+- choix entre une classe pour un rôle réutilisable et un identifiant pour un élément précis;
 - cascade au niveau minimal nécessaire au débogage : une classe peut remplacer une règle plus générale visant le type d'élément; à précision comparable, l'ordre peut influencer le résultat.
 
-La rencontre ne doit pas devenir un cours détaillé sur la spécificité CSS.
+La rencontre ne doit pas devenir un cours détaillé sur la spécificité CSS. Les minimums du Projet Web servent à fournir des preuves observables pour la validation; ils ne doivent pas devenir un décompte mécanique de points.
 
 ## Propriétés visuelles à montrer
 
@@ -58,7 +60,7 @@ Le cours présente un petit vocabulaire de propriétés permettant de voir immé
 
 Les couleurs peuvent être montrées avec des noms et des codes hexadécimaux. `rem` peut être rencontré pour `font-size`, avec une explication d'une phrase seulement; aucune théorie détaillée des unités n'est nécessaire en R3.
 
-La validation ne doit jamais devenir un décompte du nombre de couleurs, polices, classes ou bordures utilisées.
+La validation ne doit jamais devenir un décompte du nombre de couleurs, polices, classes ou bordures utilisées au-delà des supports minimaux définis dans la cartographie courante.
 
 ## Pourquoi une feuille CSS externe?
 
@@ -128,6 +130,7 @@ L'exercice fait pratiquer :
 - deux chemins différents vers la même feuille CSS;
 - un sélecteur d'élément;
 - une classe réutilisable;
+- un `id` unique ciblé par `#id`;
 - quelques propriétés visuelles;
 - un conflit simple règle générale / classe;
 - un diagnostic volontaire d'une page non stylée à cause d'un mauvais chemin.
@@ -148,18 +151,20 @@ mon-site/
 ├── images/
 │   └── ...
 └── pages/
-    ├── sujet.html
+    ├── sous-theme-1.html
+    ├── sous-theme-2.html
     └── apropos.html
 ```
 
 L'étudiant :
 
-- conserve exactement le même site;
+- conserve exactement le même site de quatre pages commencé aux rencontres 1 et 2;
 - crée `css/styles.css`;
-- relie toutes les pages avec le bon chemin;
+- relie les quatre pages avec le bon chemin;
 - définit quelques styles généraux cohérents;
-- choisit un rôle visuel qui mérite une classe réutilisable, sans imposer un nombre mécanique de classes;
-- vérifie que la feuille agit sur la page racine et les pages sous `pages/`;
+- crée au moins deux classes utiles nommées selon leur rôle, dont au moins une est réutilisée;
+- ajoute au moins un `id` unique utilisé volontairement et une règle `#id` correspondante;
+- vérifie que la feuille agit sur la page racine et les trois pages sous `pages/`;
 - garde les espacements avancés et la disposition pour R4 et R5.
 
 La **Validation C** peut commencer ici :
@@ -175,16 +180,16 @@ Aucune nouvelle ressource n'est bloquante pour R3. La page canonique réutilise 
 
 ## Implémentation réalisée
 
-Les éléments suivants sont maintenant présents sur `main` :
+Les éléments suivants constituent la version courante de la rencontre 3 :
 
 - `web/docs/01-cours/03-rencontre3.md` — cours canonique complet;
 - `web/docs/01-cours/03-rencontre3-exercice-guide.md` — exercice guidé;
 - `web/docs/03-projet-web/03-rencontre3.md` — Projet Web, étape 3;
 - `web/sidebars.js` — rencontre 3 structurée en Cours / Exercice guidé / Projet Web.
 
-## Validation technique réalisée
+## Validation technique
 
-Validation locale réussie le 2026-08-19 :
+Validation locale initiale réussie le 2026-08-19 :
 
 - `npm run build` réussit après nettoyage du cache généré Docusaurus;
 - `git diff --check` réussit;
@@ -193,8 +198,8 @@ Validation locale réussie le 2026-08-19 :
 - les blocs de code et admonitions sont présents dans le HTML généré;
 - les trois routes R3 répondent en HTTP 200 sans marqueur de page 404.
 
+La rencontre a ensuite été réalignée en septembre 2026 avec la cartographie courante WEB-05 / WEB-06 et les aperçus de code ont été vérifiés pour correspondre aux fichiers montrés.
+
 ## Point de reprise
 
-La prochaine tâche pédagogique est :
-
-> **REV-01 — Relecture ciblée de R2**, puis **REV-02 — Lecture transversale R1 → R5**.
+La rencontre 3 peut être considérée comme stabilisée lorsque la PR de réalignement passe son build final et est fusionnée. La prochaine tâche pédagogique demeure la poursuite de la refonte des rencontres suivantes.
