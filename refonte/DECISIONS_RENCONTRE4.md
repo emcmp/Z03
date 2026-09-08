@@ -2,7 +2,7 @@
 
 **Date initiale : 2026-08-19**  
 **Mise à jour : 2026-09-08**  
-**Statut : théorie et exercice guidé stabilisés; Projet Web à vérifier**
+**Statut : théorie, exercice guidé et Projet Web stabilisés**
 
 **Référence courante : `COMPETENCES_HTML_CSS.md`**
 
@@ -101,6 +101,8 @@ Reporter ou classer hors noyau :
 
 La disposition horizontale est faite avec **Flexbox simple à R5**, pas avec `inline-block`.
 
+Cette liste est une **décision interne de conception**. Elle ne doit pas être reproduite dans la page étudiante sous forme de section « ce que nous ne faisons pas » ou d'historique de l'ancien matériel. L'étudiant voit ce qu'il doit apprendre et les transitions utiles vers la suite du cours, pas les éléments retirés pendant la refonte.
+
 ## Exercice guidé
 
 Implémenté dans `web/docs/01-cours/04-rencontre4-exercice-guide.md` autour de petites cartes empilées du thème **Club découverte**, afin de conserver un fil conducteur visuel avec les exercices des rencontres 3 et 5.
@@ -153,6 +155,20 @@ Il doit :
 
 Le projet peut utiliser `section`, `header`, `main` ou un `<div>` lorsque nécessaire. Aucun nombre mécanique de cartes ou de conteneurs n'est imposé.
 
+### Exemple d'évolution du Projet Web
+
+L'exemple de l'étape 4 est une **évolution directe de l'étape 3** :
+
+- les quatre pages sont conservées;
+- la navigation à quatre destinations est conservée;
+- la feuille partagée reste `css/styles.css`;
+- les classes `introduction` et `mise-en-valeur` restent présentes;
+- l'identifiant `message-principal` et la règle `#message-principal` restent présents;
+- R4 ajoute les espacements, la largeur contrôlée et les images adaptables sans supprimer les acquis précédents;
+- les blocs ajoutés ont des rôles liés au thème (`fiche-sentier`, `conseil`, `presentation`) plutôt qu'une classe générique copiée de l'exercice guidé.
+
+Le grand aperçu du site est affiché explicitement dans la section **Exemple de progression** du Projet Web. Il n'est plus injecté automatiquement après un bloc CSS, afin de garder les micro-aperçus de syntaxe séparés de l'état global du projet.
+
 ## Validation
 
 R4 permet :
@@ -177,7 +193,8 @@ Conséquences :
 - pas de `overflow`, `display`, `box-sizing` ou sélecteur descendant ajouté pour « aider » un aperçu si le bloc ne les montre pas;
 - un bloc « padding seul » et un bloc « bordure seule » utilisent des aperçus distincts des exemples composés;
 - l'aperçu complet de la théorie contient exactement les règles `body`, `main` et `.carte` affichées dans le cours;
-- l'aperçu final de l'exercice utilise son propre CSS cumulatif et n'est pas substitué à un micro-aperçu de notion.
+- l'aperçu final de l'exercice utilise son propre CSS cumulatif et n'est pas substitué à un micro-aperçu de notion;
+- le grand aperçu du Projet Web représente le vrai site de quatre pages et conserve les acquis des étapes précédentes.
 
 ## Ressources
 
@@ -192,16 +209,17 @@ L'exercice réutilise `chat.jpg` de la rencontre 2. Aucune nouvelle ressource ex
 
 ## Implémentation actuelle
 
-Les éléments suivants sont présents sur `main` ou dans la branche de correction R4 en cours :
+Les éléments suivants sont présents dans la branche de stabilisation R4 :
 
-- `web/docs/01-cours/04-rencontre4.md` — cours canonique complet;
+- `web/docs/01-cours/04-rencontre4.md` — cours canonique sans historique de notions retirées;
 - `web/docs/01-cours/04-rencontre4-exercice-guide.md` — exercice guidé stabilisé;
-- `web/docs/03-projet-web/04-rencontre4.md` — Projet Web, étape 4;
+- `web/docs/03-projet-web/04-rencontre4.md` — Projet Web recentré sur l'audit du vrai site;
 - `web/sidebars.js` — rencontre 4 structurée en Cours / Exercice guidé / Projet Web;
 - `web/static/examples/peek/r4-*.html` — micro-aperçus de notions;
 - `web/static/examples/exercices/rencontre4/` — état final de l'exercice guidé;
-- `web/src/theme/CodeBlock/index.tsx` — correspondance exacte entre blocs et micro-aperçus.
+- `web/static/examples/projet-web/evolution/etape4/` — évolution fidèle du site de quatre pages de l'étape 3;
+- `web/src/theme/CodeBlock/index.tsx` — correspondance exacte entre blocs et micro-aperçus, sans injection automatique du grand aperçu R4.
 
 ## Point de reprise
 
-Après validation technique de la théorie et de l'exercice guidé R4, la prochaine vérification pédagogique porte sur **Projet Web — Étape 4**, notamment la fidélité de son exemple d'évolution et la distinction entre exercice imposé et application personnelle au vrai site de quatre pages.
+Après validation technique de l'ensemble de R4, la prochaine revue peut porter sur **la Rencontre 5**, en commençant par vérifier que son Projet Web repart bien de l'état final corrigé de l'étape 4.
