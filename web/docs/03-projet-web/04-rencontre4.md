@@ -10,16 +10,47 @@ sidebar_position: 5
 
 ## Mission
 
-Faites un audit de vos quatre pages et corrigez les problèmes réels d'espace intérieur, d'espace extérieur, de dimensions, de centrage et de regroupement visuel.
+Faites un audit de vos quatre pages et corrigez des problèmes réels d'espace intérieur, d'espace extérieur, de dimensions, de centrage et de regroupement visuel.
 
 Avant de commencer :
 
 - consultez le **[cours de la rencontre 4](../01-cours/04-rencontre4.md)**;
 - faites l'**[exercice guidé — Comprendre le modèle en boîte](../01-cours/04-rencontre4-exercice-guide.md)**.
 
-L'exercice utilise des cartes communes pour isoler les notions. Dans votre Projet Web, vous devez les appliquer à des blocs qui ont un vrai rôle dans votre contenu.
+L'exercice guidé utilise des cartes communes pour isoler les notions. Dans votre Projet Web, **ne recopiez pas ces cartes automatiquement**. Appliquez plutôt les propriétés de la rencontre aux contenus qui ont déjà un vrai rôle dans votre site.
 
-## 1. Repérer deux blocs comparables
+## Exemple de progression
+
+Voici le même **Carnet de randonnée** que dans l'étape 3, maintenant amélioré avec le modèle en boîte. Les quatre pages, la navigation, la feuille `css/styles.css`, les classes de R3 et l'identifiant unique sont toujours présents.
+
+Observez surtout que les nouveaux espacements sont appliqués à des contenus qui ont un rôle réel : fiches de sentiers, conseils, bloc de présentation et messages importants.
+
+<ExampleFrame
+  src="examples/projet-web/evolution/etape4/preview.html"
+  title="Exemple de Projet Web à la fin de l'étape 4"
+  showCode={false}
+  minHeight={480}
+  maxHeight={620}
+/>
+
+Votre sujet, vos textes, vos classes et vos choix visuels seront différents.
+
+## 1. Observer avant de modifier
+
+Parcourez les **quatre pages** de votre site avant d'ajouter du CSS.
+
+Repérez quelques problèmes concrets, par exemple :
+
+- un texte trop près d'une bordure ou d'un arrière-plan;
+- deux blocs trop collés;
+- des contenus semblables espacés différemment sans raison;
+- un contenu principal trop large sur un grand écran;
+- une image qui risque de dépasser de son conteneur;
+- une page À propos qui semble visuellement détachée du reste du site.
+
+Pour chaque correction, essayez d'abord de nommer le problème : **espace intérieur, espace extérieur, largeur, image ou centrage**.
+
+## 2. Choisir de vrais blocs comparables
 
 Choisissez au moins deux contenus qui jouent le même rôle, par exemple :
 
@@ -28,49 +59,27 @@ Choisissez au moins deux contenus qui jouent le même rôle, par exemple :
 - deux recettes;
 - deux informations importantes;
 - deux sections présentant des sujets;
-- un groupe de services ou d'intérêts dans la page À propos.
+- deux services ou intérêts.
 
-Utilisez ou créez une classe commune pour ces blocs.
+Utilisez ou créez une **classe commune** pour ces blocs.
 
 :::info Réutiliser plutôt que dupliquer
 Si deux blocs jouent le même rôle, ils devraient généralement partager une classe au lieu de recevoir deux règles presque identiques.
 :::
 
-## 2. Corriger l'espace intérieur
+## 3. Corriger les espacements utiles
 
-Ajoutez un `padding` lorsque le contenu est trop près de sa bordure ou de son arrière-plan.
+Utilisez `padding` lorsque le contenu a besoin d'espace **à l'intérieur** de sa boîte.
 
-Vous devez pouvoir montrer un bloc et expliquer :
+Utilisez `margin` lorsque la boîte a besoin d'espace **par rapport à ses voisines**.
 
-```text
-Le padding crée ici l'espace entre le contenu et la bordure.
-```
+Une `border` ou un `background-color` peut aider à rendre un regroupement visible, mais seulement si cela améliore réellement votre interface.
 
-## 3. Corriger l'espace extérieur
+Vous devez pouvoir montrer une correction et expliquer pourquoi vous avez choisi `padding`, `margin` ou `border`.
 
-Utilisez `margin` lorsqu'un bloc est trop près de ses voisins.
+## 4. Contrôler la largeur du contenu principal
 
-Vous devez pouvoir montrer deux éléments et expliquer :
-
-```text
-La margin sépare ici les boîtes l'une de l'autre.
-```
-
-## 4. Rendre les limites visibles lorsque cela aide
-
-Selon votre sujet, utilisez au moins une propriété visuelle qui rend le regroupement compréhensible :
-
-- `border`;
-- `background-color`;
-- ou les deux.
-
-La bordure n'est pas obligatoire sur tous les blocs. Elle doit répondre à un besoin de lisibilité.
-
-## 5. Limiter et centrer le contenu principal
-
-Une page devient souvent difficile à lire lorsque son contenu s'étend sur toute la largeur d'un grand écran.
-
-Vous pouvez combiner une largeur relative, une limite et des marges automatiques :
+Si votre contenu devient trop large, vous pouvez utiliser une combinaison comme :
 
 ```css
 main {
@@ -80,23 +89,17 @@ main {
 }
 ```
 
-Dans cet exemple :
-
-- `width: 80%` utilise une proportion de l'espace disponible dans le parent;
-- `max-width: 900px` empêche le contenu de devenir trop large;
-- `margin: 0 auto` partage l'espace restant à gauche et à droite pour centrer la boîte.
-
 Les valeurs `80%` et `900px` sont des exemples. Choisissez des valeurs raisonnables pour votre site et soyez capable de les expliquer.
 
-:::info Centrer le contenu ou centrer la boîte?
-`text-align: center` centre du texte ou du contenu en ligne **dans une boîte**.
+Rappelez-vous :
 
-`margin: 0 auto` peut centrer **la boîte elle-même** lorsqu'elle n'occupe pas toute la largeur disponible.
-:::
+- une valeur en `px` est fixe;
+- une valeur en `%` dépend de l'espace disponible dans le parent;
+- `margin: 0 auto` peut centrer une boîte dont la largeur est contrôlée.
 
-## 6. Garder les images dans leur conteneur
+## 5. Garder les images dans leur conteneur
 
-Puisque votre site contient des images, vérifiez qu'elles ne dépassent pas de leur parent.
+Vérifiez toutes les images de votre site.
 
 Une règle générale peut être utile :
 
@@ -107,43 +110,26 @@ img {
 }
 ```
 
-`max-width: 100%` empêche l'image de devenir plus large que son conteneur. `height: auto` conserve ses proportions.
+Si une image doit avoir une largeur particulière, créez une classe adaptée à son rôle plutôt que d'imposer la même largeur à toutes les images.
 
-Pour donner une largeur relative particulière à une image, utilisez une classe :
+:::info Deux centrages différents
+`text-align: center` centre du contenu à l'intérieur d'une boîte.
 
-```css
-.image-principale {
-  width: 80%;
-  height: auto;
-}
-```
+`margin: 0 auto` peut centrer la boîte elle-même lorsqu'elle n'occupe pas toute la largeur disponible.
+:::
 
-Ici, `80%` est une valeur CSS calculée à partir de la largeur disponible dans le parent. Ce n'est pas la même chose que l'attribut HTML `width="400"` vu à la rencontre 2.
-
-Pour centrer l'image dans une zone :
-
-```css
-.zone-image {
-  text-align: center;
-}
-```
-
-Utilisez cette structure seulement lorsqu'elle répond à votre design.
-
-## 7. Vérifier les quatre pages
+## 6. Vérifier les quatre pages
 
 Ne corrigez pas seulement la page d'accueil.
 
-Parcourez l'accueil, les deux pages de sujet et la page À propos. Cherchez :
+Parcourez l'accueil, les deux pages de sujet et la page À propos. Vérifiez que :
 
-- un texte collé à une bordure ou à un fond;
-- deux sections trop proches;
-- des blocs semblables qui utilisent des espacements différents sans raison;
-- une classe répétée sous plusieurs noms;
-- un contenu principal inutilement large;
-- une image qui dépasse de son conteneur;
-- un centrage appliqué au contenu alors que vous vouliez centrer la boîte, ou l'inverse;
-- une page À propos qui semble visuellement détachée du reste du site.
+- les espacements sont cohérents lorsqu'ils répondent au même besoin;
+- les classes existantes sont réutilisées lorsque possible;
+- la largeur du contenu reste confortable à lire;
+- les images restent dans leur conteneur et conservent leurs proportions;
+- la navigation fonctionne toujours;
+- la page À propos appartient visuellement au même site.
 
 ## Minimum attendu
 
@@ -164,7 +150,7 @@ Aucune valeur précise comme `80%` ou `900px` n'est imposée. La validation port
 
 - Quels contenus forment un même type de bloc?
 - Où se trouve réellement le problème d'espace?
-- Une bordure aide-t-elle à comprendre le groupe?
+- Une bordure ou un arrière-plan aide-t-il à comprendre le groupe?
 - Une classe existante peut-elle être réutilisée?
 - Quelle largeur rend le contenu confortable à lire?
 - Une largeur fixe ou relative répond-elle mieux au besoin?
@@ -174,7 +160,9 @@ Aucune valeur précise comme `80%` ou `900px` n'est imposée. La validation port
 
 ## Tests à effectuer
 
-- [ ] Les quatre pages chargent toujours la même feuille CSS.
+- [ ] Les quatre pages chargent toujours la même feuille `css/styles.css`.
+- [ ] La navigation permet toujours d'atteindre les quatre pages.
+- [ ] Les classes et l'identifiant créés aux étapes précédentes sont toujours présents lorsqu'ils sont utiles.
 - [ ] Je peux nommer contenu, `padding`, `border` et `margin`.
 - [ ] Je peux montrer un espace intérieur créé par `padding`.
 - [ ] Je peux montrer un espace extérieur créé par `margin`.
@@ -184,7 +172,6 @@ Aucune valeur précise comme `80%` ou `900px` n'est imposée. La validation port
 - [ ] Les images ne dépassent pas de leur conteneur et ne sont pas déformées.
 - [ ] Je peux expliquer la différence entre `text-align: center` et `margin: 0 auto`.
 - [ ] Les valeurs choisies améliorent réellement la lisibilité.
-- [ ] La navigation et les images fonctionnent toujours.
 - [ ] La page À propos appartient visuellement au même site.
 
 ## Validations disponibles
@@ -202,12 +189,6 @@ Vous pouvez aussi commencer la Validation D :
 À cette rencontre, WEB-08 est surtout observée à travers le modèle en boîte, les dimensions, le centrage et les espacements. Flexbox sera ajouté à la rencontre 5.
 
 Le soin apporté aux blocs réels du site contribue également à la dimension **Personnalisation et appropriation du projet**.
-
-:::note Pour aller plus loin — non évalué séparément
-Vous pouvez expérimenter avec `border-radius`, enrichir un bloc de la page À propos ou lire à propos de `box-sizing: border-box`.
-
-Ces propriétés ne sont pas nécessaires pour réussir la validation technique.
-:::
 
 ## Prochaine étape
 

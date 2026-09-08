@@ -5,8 +5,6 @@ body {
 }
 
 header {
-  background-color: #eaf3ff;
-  border-bottom: 2px solid #245a86;
   padding: 20px;
 }
 
@@ -19,12 +17,12 @@ h2 {
   color: #3f6f91;
 }
 
-nav {
-  margin: 20px 0;
-}
-
 a {
   color: #245a86;
+}
+
+nav {
+  margin: 20px 0;
 }
 
 main {
@@ -38,11 +36,8 @@ img {
   height: auto;
 }
 
-.carte {
-  background-color: #eaf3ff;
-  border: 2px solid #245a86;
-  padding: 20px;
-  margin: 20px 0;
+.introduction {
+  font-style: italic;
 }
 
 .mise-en-valeur {
@@ -51,4 +46,30 @@ img {
   font-weight: bold;
   border: 2px solid #b45b5b;
   padding: 16px;
+  margin: 20px 0;
+}
+
+.fiche-sentier {
+  background-color: #eaf3ff;
+  border: 2px solid #245a86;
+  padding: 18px;
+  margin: 20px 0;
+}
+
+.conseil {
+  background-color: #f2f7ee;
+  border: 2px solid #78906b;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.presentation {
+  background-color: #f2f7ee;
+  border: 2px solid #78906b;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+#message-principal {
+  color: darkgreen;
 }
