@@ -72,7 +72,6 @@ const rules: PreviewRule[] = [
   { code: `.zone-image {\n  text-align: center;\n}`, src: "examples/peek/r4-centered-image.html", title: "Image centrée dans son conteneur", label: "Voir l'image centrée", height: 230 },
   { code: `main {\n  width: 80%;\n  max-width: 900px;\n  margin: 0 auto;\n}`, src: "examples/peek/r4-centered-box.html", title: "Boîte principale centrée avec des marges automatiques", label: "Voir la boîte centrée", height: 180 },
   { code: `body {\n  font-family: Arial, sans-serif;\n  color: #263238;\n}\n\nmain {\n  width: 80%;\n  max-width: 900px;\n  margin: 0 auto;\n}\n\n.carte {\n  background-color: #eaf3ff;\n  border: 2px solid #245a86;\n  padding: 20px;\n  margin: 24px 0;\n}`, src: "examples/peek/r4-complete.html", title: "Rendu de l'exemple complet de la rencontre 4", label: "Voir l'exemple complet", height: 300 },
-  { code: `.carte {\n  background-color: #eaf3ff;\n  border: 2px solid #245a86;\n  padding: 20px;\n  margin: 20px 0;\n}`, src: "examples/projet-web/evolution/etape4/preview.html", title: "Projet Web avec cartes et espacements", label: "Voir dans le site", height: 330 },
 
   { code: `.navigation {\n  display: flex;\n}`, src: "examples/peek/r5-flex.html", title: "Rendu d'une navigation Flexbox", label: "Voir Flexbox", height: 100 },
   { code: `.navigation {\n  display: flex;\n  gap: 20px;\n}`, src: "examples/peek/r5-gap.html", title: "Rendu de Flexbox avec gap", label: "Voir Flexbox + gap", height: 100 },
@@ -98,15 +97,6 @@ const stagePreviewRules: StagePreviewRule[] = [
     caption: "Exemple de progression — Étape 3 : une identité visuelle simple avec la même feuille CSS, sans mise en page avancée.",
     minHeight: 420,
     maxHeight: 560,
-  },
-  {
-    pathIncludes: "/projet-web/rencontre4",
-    code: `main {\n  width: 80%;\n  max-width: 900px;\n  margin: 0 auto;\n}`,
-    src: "examples/projet-web/evolution/etape4/preview.html",
-    title: "Exemple de Projet Web à la fin de l'étape 4",
-    caption: "Exemple de progression — Étape 4 : le même site avec cartes, espacements, largeur relative et contenu principal centré.",
-    minHeight: 480,
-    maxHeight: 620,
   },
   {
     pathIncludes: "/projet-web/rencontre5",
