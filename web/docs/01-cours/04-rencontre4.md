@@ -467,23 +467,6 @@ margin: 0 auto;
 Le but n'est pas de mémoriser une liste de propriétés. Le but est de choisir la propriété qui correspond au problème observé.
 :::
 
-## Ce que nous ne faisons pas aujourd'hui
-
-L'ancien matériel CSS contient aussi des notions comme :
-
-```text
-inline-block
-overflow
-position: absolute
-position: fixed
-z-index
-animations et transitions
-```
-
-Ces notions ne font pas partie du noyau de la rencontre 4.
-
-Pour la disposition horizontale de plusieurs éléments, nous utiliserons **Flexbox simple à la rencontre 5**.
-
 ## À retenir
 
 - chaque élément HTML occupe une boîte;
@@ -517,5 +500,3 @@ Vous pouvez aussi commencer la **Validation D** :
 
 - **WEB-07 — Mettre en forme une interface avec CSS**;
 - **WEB-08 — Organiser l'espace et la disposition des éléments**.
-
-À cette rencontre, WEB-08 porte surtout sur le modèle en boîte, les dimensions et les espacements. Flexbox sera ajouté à la rencontre 5.
