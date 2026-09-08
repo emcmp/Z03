@@ -2,7 +2,7 @@
 
 **Date initiale : 2026-08-19**  
 **Mise à jour : 2026-09-08**  
-**Statut : rencontre stabilisée; aperçus à maintenir strictement fidèles au code montré**
+**Statut : théorie et exercice guidé stabilisés; Projet Web à vérifier**
 
 **Référence courante : `COMPETENCES_HTML_CSS.md`**
 
@@ -66,9 +66,9 @@ La rencontre ne doit pas devenir un cours sur toutes les unités CSS ni sur tout
 
 ## `box-sizing`
 
-`box-sizing: border-box` peut être mentionné comme **Pour aller plus loin / référence utile**, mais n'est pas une exigence de validation.
+`box-sizing: border-box` peut être mentionné comme **Pour aller plus loin / référence utile** dans la théorie, mais n'est pas une exigence de validation.
 
-Il ne doit pas être ajouté silencieusement dans un aperçu d'un exemple qui ne le montre pas.
+Il ne doit pas être ajouté silencieusement dans un aperçu d'un exemple qui ne le montre pas et n'est pas répété dans l'exercice guidé.
 
 ## Conteneurs HTML
 
@@ -103,21 +103,35 @@ La disposition horizontale est faite avec **Flexbox simple à R5**, pas avec `in
 
 ## Exercice guidé
 
-Implémenté dans `web/docs/01-cours/04-rencontre4-exercice-guide.md` autour de petites cartes empilées.
+Implémenté dans `web/docs/01-cours/04-rencontre4-exercice-guide.md` autour de petites cartes empilées du thème **Club découverte**, afin de conserver un fil conducteur visuel avec les exercices des rencontres 3 et 5.
 
 L'exercice fait pratiquer :
 
 1. rendre les limites de la boîte visibles avec un arrière-plan et une bordure;
 2. ajouter du `padding` et constater que l'espace apparaît **à l'intérieur**;
 3. ajouter de la `margin` et constater que l'espace apparaît **à l'extérieur**;
-4. comparer plusieurs blocs;
-5. modifier volontairement padding vs margin pour diagnostiquer le bon choix;
+4. comparer volontairement beaucoup de `padding` / peu de `margin`, puis l'inverse;
+5. remettre explicitement le fichier dans un état connu après chaque expérience;
 6. utiliser une forme à deux valeurs;
 7. comparer une largeur fixe en `px` et une largeur relative en `%`;
-8. garder une image dans son conteneur avec `max-width: 100%` et `height: auto`;
-9. distinguer le centrage du contenu (`text-align`) du centrage d'une boîte (`margin: 0 auto`).
+8. provoquer volontairement un débordement avec `width: 120%`;
+9. corriger ce débordement avec `max-width: 100%` et `height: auto`;
+10. distinguer le centrage du contenu (`text-align`) du centrage d'une boîte (`margin: 0 auto`);
+11. terminer avec un `styles.css` complet et déterministe avant le diagnostic final.
 
-L'exercice reste expérimental : il sert à isoler les notions avant leur transfert dans le Projet Web.
+L'exercice reste expérimental : il sert à isoler les notions avant leur transfert dans le Projet Web. Les valeurs temporaires (`5px`, `40px`, `120%`, `width: 320px`) sont explicitement retirées ou remplacées avant l'état final.
+
+### État final de l'exercice
+
+L'état final de référence utilise :
+
+- `main { width: 80%; max-width: 900px; margin: 0 auto; }`;
+- `img { max-width: 100%; height: auto; }`;
+- `.image-principale { width: 80%; }`;
+- `.zone-image { text-align: center; }`;
+- `.carte` avec arrière-plan, bordure de `2px`, `padding: 16px 24px` et `margin: 24px 0`.
+
+Un aperçu final dédié est conservé sous `web/static/examples/exercices/rencontre4/` avec une feuille `css/styles.css` distincte. Il sert à vérifier l'état cumulatif de l'exercice; les micro-aperçus génériques continuent de servir uniquement aux notions isolées.
 
 ## Projet Web — Étape 4
 
@@ -162,7 +176,8 @@ Conséquences :
 
 - pas de `overflow`, `display`, `box-sizing` ou sélecteur descendant ajouté pour « aider » un aperçu si le bloc ne les montre pas;
 - un bloc « padding seul » et un bloc « bordure seule » utilisent des aperçus distincts des exemples composés;
-- l'aperçu complet doit contenir exactement les règles `body`, `main` et `.carte` affichées dans le cours.
+- l'aperçu complet de la théorie contient exactement les règles `body`, `main` et `.carte` affichées dans le cours;
+- l'aperçu final de l'exercice utilise son propre CSS cumulatif et n'est pas substitué à un micro-aperçu de notion.
 
 ## Ressources
 
@@ -173,19 +188,20 @@ Le cours réutilise des schémas déjà présents sous `web/static/img/cours-mod
 - `boites-rendues-visibles.png`;
 - `dimensions-totales-boite.png`.
 
-Aucune nouvelle ressource n'est bloquante.
+L'exercice réutilise `chat.jpg` de la rencontre 2. Aucune nouvelle ressource externe n'est nécessaire.
 
 ## Implémentation actuelle
 
 Les éléments suivants sont présents sur `main` ou dans la branche de correction R4 en cours :
 
 - `web/docs/01-cours/04-rencontre4.md` — cours canonique complet;
-- `web/docs/01-cours/04-rencontre4-exercice-guide.md` — exercice guidé;
+- `web/docs/01-cours/04-rencontre4-exercice-guide.md` — exercice guidé stabilisé;
 - `web/docs/03-projet-web/04-rencontre4.md` — Projet Web, étape 4;
 - `web/sidebars.js` — rencontre 4 structurée en Cours / Exercice guidé / Projet Web;
-- `web/static/examples/peek/r4-*.html` — aperçus de notions;
-- `web/src/theme/CodeBlock/index.tsx` — correspondance exacte entre blocs et aperçus.
+- `web/static/examples/peek/r4-*.html` — micro-aperçus de notions;
+- `web/static/examples/exercices/rencontre4/` — état final de l'exercice guidé;
+- `web/src/theme/CodeBlock/index.tsx` — correspondance exacte entre blocs et micro-aperçus.
 
 ## Point de reprise
 
-Après correction et validation technique des aperçus R4, la prochaine vérification pédagogique peut porter sur **l'exercice guidé de la rencontre 4**, puis sur la fidélité de l'exemple d'évolution du Projet Web — Étape 4.
+Après validation technique de la théorie et de l'exercice guidé R4, la prochaine vérification pédagogique porte sur **Projet Web — Étape 4**, notamment la fidélité de son exemple d'évolution et la distinction entre exercice imposé et application personnelle au vrai site de quatre pages.
