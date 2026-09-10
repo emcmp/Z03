@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #263238;
+}
+
+main {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-principale {
+  width: 80%;
+}
+
+.zone-image {
+  text-align: center;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  background-color: #f3f6f8;
+  padding: 16px;
+}
+
+.cartes {
+  display: flex;
+  gap: 20px;
+}
+
+.carte {
+  background-color: #eaf3ff;
+  border: 2px solid #245a86;
+  padding: 16px 24px;
+  margin: 0;
+}

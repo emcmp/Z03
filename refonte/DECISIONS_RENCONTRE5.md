@@ -1,11 +1,10 @@
 # Décisions de conception — Rencontre 5
 
-**Date : 2026-08-19**  
-**Statut : R5-01 à R5-05 terminés; rencontre prête à réviser**
+**Date initiale : 2026-08-19**  
+**Mise à jour : 2026-09-09**  
+**Statut : exercice guidé refait; théorie et Projet Web à réviser**
 
-**Plan maître : `PLAN_IMPLEMENTATION_RENCONTRES_1_A_5.md`**
-
-Ce document consigne le résultat de **R5-01 — Définir le Flexbox minimal** avant la rédaction de la rencontre 5.
+**Référence courante : `COMPETENCES_HTML_CSS.md`**
 
 ## Intention de la rencontre
 
@@ -24,24 +23,7 @@ Flexbox est présenté avec une idée simple :
 
 > On applique `display: flex` au **parent** pour organiser ses **enfants directs**.
 
-Exemple :
-
-```html
-<nav class="navigation">
-  <a href="index.html">Accueil</a>
-  <a href="pages/sujet.html">Sujet</a>
-  <a href="pages/apropos.html">À propos</a>
-</nav>
-```
-
-```css
-.navigation {
-  display: flex;
-  gap: 16px;
-}
-```
-
-La navigation est le premier cas concret parce qu'elle réutilise directement le site des rencontres précédentes.
+La relation parent/enfants doit rester le fil conducteur principal de la rencontre.
 
 ## Noyau obligatoire de R5
 
@@ -49,7 +31,7 @@ La navigation est le premier cas concret parce qu'elle réutilise directement le
 
 - parent flex / enfants directs;
 - `display: flex`;
-- disposition horizontale par défaut dans notre exemple;
+- disposition horizontale par défaut dans les exemples retenus;
 - `gap` pour espacer les enfants;
 - réutilisation du modèle en boîte sur les éléments placés par Flexbox;
 - diagnostic simple : vérifier que `display: flex` est appliqué au bon parent.
@@ -58,22 +40,20 @@ La navigation est le premier cas concret parce qu'elle réutilise directement le
 
 ### `justify-content`
 
-Le cours montre seulement quelques valeurs utiles :
+La propriété sert à montrer qu'un groupe peut être placé sur l'axe principal.
 
-- `flex-start` comme comportement de départ conceptuel;
-- `center`;
-- `space-between` lorsqu'un besoin réel le justifie.
+Dans l'exercice guidé, on utilise surtout :
 
-Aucune mémorisation exhaustive n'est demandée.
+- `center` comme état final;
+- `flex-start` comme comparaison temporaire.
+
+Il n'est pas nécessaire de transformer l'exercice en catalogue de valeurs.
 
 ### `align-items`
 
-La propriété est présentée comme contrôle de l'alignement sur l'autre axe avec surtout :
+La propriété peut rester présentée dans la théorie comme contrôle de l'autre axe, mais elle n'est plus nécessaire dans l'exercice guidé.
 
-- `center`;
-- `flex-start` pour comparer.
-
-R5 ne devient pas un chapitre détaillé sur les axes Flexbox.
+Elle ne constitue pas une exigence mécanique de WEB-08.
 
 ## Contenu volontairement hors noyau
 
@@ -90,23 +70,63 @@ Ne sont pas rendus obligatoires :
 - positionnement;
 - animations et transitions.
 
-`flex-wrap` est seulement mentionné **Pour aller plus loin — non évalué**.
+Ces décisions sont internes. Elles ne doivent pas devenir une longue liste de notions « non couvertes » présentée aux étudiants sans besoin pédagogique.
 
-## Exercice guidé
+## Exercice guidé — version refaite
 
-Implémenté dans `web/docs/01-cours/05-rencontre5-exercice-guide.md` avec deux situations :
+Implémenté dans `web/docs/01-cours/05-rencontre5-exercice-guide.md`.
 
-1. transformer une navigation en conteneur flex et utiliser `gap`;
-2. placer quelques cartes côte à côte avec un parent `.cartes`.
+L'exercice reprend directement l'état final **Club découverte** de R4 au lieu de repartir avec un nouveau mini-projet. Il conserve donc :
 
-L'exercice fait verbaliser :
+- la même image;
+- les trois cartes;
+- le modèle en boîte;
+- le centrage du contenu principal;
+- la feuille `css/styles.css`.
 
-- quel élément est le parent flex;
-- quels éléments sont les enfants directs;
-- où `gap` crée l'espace;
-- ce qui se passe si `display: flex` est appliqué au mauvais élément.
+La progression devient :
 
-`justify-content` et `align-items` sont expérimentés avec quelques valeurs seulement.
+1. copier l'exercice R4 et ajouter un conteneur `.cartes` ainsi qu'une navigation;
+2. identifier `.cartes` comme parent des trois cartes;
+3. ajouter `display: flex` au parent et observer le passage évident de cartes empilées à une rangée;
+4. ajouter `gap` et comparer temporairement quelques valeurs;
+5. retirer la marge des cartes afin que `gap` contrôle clairement l'espace entre les enfants flex;
+6. provoquer l'erreur classique en appliquant `display: flex` à `.carte` plutôt qu'à `.cartes`, puis corriger;
+7. transférer le même modèle mental à `.navigation`;
+8. utiliser `justify-content: center` avec un essai temporaire de `flex-start`;
+9. réutiliser `padding` sur la navigation pour montrer que Flexbox ne remplace pas le modèle en boîte;
+10. terminer avec un `styles.css` complet et déterministe avant le diagnostic final.
+
+### Choix de l'ordre
+
+Les cartes sont utilisées avant la navigation parce que l'effet de `display: flex` y est immédiatement visible : des sections naturellement empilées deviennent côte à côte.
+
+Les liens `<a>` d'une navigation peuvent déjà apparaître sur une même ligne sans Flexbox. La navigation est donc plus utile comme **transfert du modèle mental** et pour pratiquer `gap` et `justify-content` que comme première démonstration de `display: flex`.
+
+### Notions retirées de l'exercice guidé
+
+L'exercice guidé ne demande plus :
+
+- `background-image`;
+- `background-size`;
+- `background-position`;
+- le calcul d'un chemin dans `url(...)`;
+- `align-items`;
+- `space-between` comme essai obligatoire;
+- une nouvelle image `sentier.svg`.
+
+`background-image` peut rester un enrichissement dans la théorie ou le Projet Web lorsqu'il est pertinent, mais il ne doit pas détourner l'exercice de son objectif Flexbox.
+
+### État final et aperçu
+
+L'état final de l'exercice contient :
+
+- `.cartes { display: flex; gap: 20px; }`;
+- `.navigation { display: flex; gap: 20px; justify-content: center; ... }`;
+- les acquis R4 sur `main`, les images et `.carte`;
+- `margin: 0` sur `.carte` afin que l'espacement entre les cartes soit attribuable clairement à `gap`.
+
+Un aperçu final dédié est conservé sous `web/static/examples/exercices/rencontre5/` avec un CSS identique à l'état final montré dans l'exercice.
 
 ## Projet Web — Étape 5
 
@@ -126,6 +146,8 @@ L'étudiant doit :
 
 Aucun nombre précis de conteneurs flex n'est exigé.
 
+Le Projet Web R5 devra être revu séparément afin de repartir du nouvel état R4 à quatre pages et d'éviter l'ancienne régression de l'exemple d'évolution.
+
 ## Validation
 
 R5 vise la finalisation de :
@@ -137,31 +159,13 @@ Après R5, aucune nouvelle notion HTML/CSS essentielle n'est prévue. JavaScript
 
 ## Ressources
 
-Aucune ressource externe n'est requise pour comprendre le noyau. Les exemples de code et les schémas textuels parent/enfants suffisent pour cette passe.
+Aucune nouvelle ressource externe n'est requise pour l'exercice guidé.
 
-Une illustration Flexbox dédiée pourra être ajoutée plus tard si elle apporte une vraie valeur pédagogique, mais elle n'est pas bloquante.
-
-## Implémentation réalisée
-
-Les éléments suivants sont maintenant présents sur `main` :
-
-- `web/docs/01-cours/05-rencontre5.md` — cours canonique complet;
-- `web/docs/01-cours/05-rencontre5-exercice-guide.md` — exercice guidé;
-- `web/docs/03-projet-web/05-rencontre5.md` — Projet Web, étape 5;
-- `web/sidebars.js` — rencontre 5 structurée en Cours / Exercice guidé / Projet Web.
-
-## Validation technique réalisée
-
-Validation locale réussie le 2026-08-19 :
-
-- `npm run build` et `git diff --check` réussissent;
-- les IDs de navigation et les liens entre cours, exercice et Projet Web sont résolus;
-- les blocs de code Flexbox et les admonitions sont présents dans le HTML généré;
-- les trois routes R5 répondent en HTTP 200 sans marqueur de page 404;
-- aucune page R3–R5 ne pointe vers un lien local ou un asset absent.
+L'exercice réutilise `chat.jpg` de R4. Les exemples de code et les schémas textuels parent/enfants suffisent pour comprendre le noyau.
 
 ## Point de reprise
 
-Après validation technique du bloc R3–R5, le prochain travail pédagogique est :
+Après stabilisation de l'exercice guidé, les prochaines vérifications pédagogiques de R5 sont :
 
-> **REV-01 puis REV-02 — relire R2 et ensuite la progression complète R1 → R5 pour juger le poids réel de chaque rencontre.**
+1. la théorie, notamment son niveau de détail réel par rapport au noyau;
+2. le Projet Web — Étape 5 et son exemple d'évolution à partir du site R4 à quatre pages.
