@@ -304,7 +304,6 @@ Ajoutez donc à `.navigation` :
   justify-content: center;
   background-color: #f3f6f8;
   padding: 16px;
-  margin-bottom: 24px;
 }
 ```
 
@@ -351,7 +350,6 @@ img {
   justify-content: center;
   background-color: #f3f6f8;
   padding: 16px;
-  margin-bottom: 24px;
 }
 
 .cartes {
