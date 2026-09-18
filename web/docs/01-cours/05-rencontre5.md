@@ -33,15 +33,15 @@ Commençons avec deux cartes qui sont naturellement empilées :
 
 ```html
 <div class="cartes">
-  <section class="carte">
+  <div class="carte">
     <h2>Photo</h2>
     <p>Une activité extérieure.</p>
-  </section>
+  </div>
 
-  <section class="carte">
+  <div class="carte">
     <h2>Cuisine</h2>
     <p>Un atelier pratique.</p>
-  </section>
+  </div>
 </div>
 ```
 
