@@ -27,7 +27,7 @@ Le but n'est pas de devenir spécialiste de Flexbox aujourd'hui.
 - diagnostiquer une règle Flexbox appliquée au mauvais élément;
 - consolider le site HTML/CSS avant JavaScript.
 
-## 1. Le modèle mental : parent et enfants
+## 1. Le modèle mental et `display: flex`
 
 Commençons avec deux cartes qui sont naturellement empilées :
 
@@ -53,20 +53,7 @@ On peut représenter leur structure ainsi :
 └── .carte
 ```
 
-Si nous voulons organiser les **deux cartes**, le parent qui nous intéresse est `.cartes`.
-
-:::info À maîtriser
-Flexbox commence par deux questions :
-
-1. quels éléments est-ce que je veux organiser?
-2. quel est leur parent commun?
-
-C'est généralement ce parent qui reçoit `display: flex`.
-:::
-
-## 2. `display: flex`
-
-Ajoutons Flexbox au parent :
+Si nous voulons organiser les **deux cartes**, leur parent commun est `.cartes`. C'est donc ce parent qui reçoit Flexbox :
 
 ```css
 .cartes {
@@ -74,7 +61,7 @@ Ajoutons Flexbox au parent :
 }
 ```
 
-Les enfants directs du conteneur deviennent des **éléments flex**. Dans notre exemple, les deux cartes passent d'une disposition verticale à une rangée.
+Les enfants directs du conteneur deviennent alors des **éléments flex**. Les deux cartes passent d'une disposition verticale à une rangée.
 
 ```text
 avant                après
@@ -83,13 +70,20 @@ Photo                Photo   Cuisine
 Cuisine
 ```
 
-Le changement est visible parce que des sections qui s'empilaient naturellement sont maintenant organisées par leur parent.
+:::info À maîtriser
+Avant d'écrire `display: flex`, posez-vous deux questions :
 
-## 3. `gap` : espacer les enfants
+1. quels éléments est-ce que je veux organiser?
+2. quel est leur parent commun?
+
+C'est ce parent qui reçoit généralement `display: flex`.
+:::
+
+## 2. `gap` : espacer les enfants
 
 Les cartes sont maintenant côte à côte, mais elles peuvent être trop rapprochées.
 
-Ajoutons :
+Ajoutons `gap` à la règle qui existe déjà :
 
 ```css
 .cartes {
@@ -104,7 +98,7 @@ Ajoutons :
 Quand vous voulez surtout séparer les éléments d'un même groupe flex, `gap` est souvent plus clair que d'ajouter une marge différente sur chaque enfant.
 :::
 
-## 4. L'erreur fréquente : rendre le mauvais élément flex
+## 3. L'erreur fréquente : rendre le mauvais élément flex
 
 Supposons que vous voulez placer les cartes côte à côte, mais que vous écrivez :
 
@@ -116,7 +110,7 @@ Supposons que vous voulez placer les cartes côte à côte, mais que vous écriv
 
 Vous avez alors rendu **chaque carte** flex. Flexbox essaie d'organiser le contenu à l'intérieur de chaque carte plutôt que d'organiser les cartes entre elles.
 
-Le bon parent est :
+Le bon parent reste :
 
 ```css
 .cartes {
@@ -132,9 +126,9 @@ Si Flexbox agit sur les mauvais éléments :
 3. vérifiez que `display: flex` est appliqué à ce parent.
 :::
 
-## 5. Appliquer le même modèle à une navigation
+## 4. Utiliser Flexbox dans une navigation
 
-Une navigation possède la même relation parent → enfants :
+Le même principe peut servir à organiser les liens d'une navigation :
 
 ```html
 <nav class="navigation">
@@ -144,39 +138,7 @@ Une navigation possède la même relation parent → enfants :
 </nav>
 ```
 
-```text
-nav.navigation
-├── a
-├── a
-└── a
-```
-
-On peut donc écrire :
-
-```css
-.navigation {
-  display: flex;
-  gap: 20px;
-}
-```
-
-Les liens peuvent déjà apparaître sur une même ligne sans Flexbox. Ici, l'intérêt est surtout de transformer la navigation en **groupe contrôlable** : on peut gérer son espacement et sa disposition de façon cohérente.
-
-## 6. `justify-content` : placer le groupe
-
-Dans notre navigation horizontale, `justify-content` permet de choisir où le groupe de liens se place dans l'espace disponible.
-
-### Au début
-
-```css
-.navigation {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-start;
-}
-```
-
-### Au centre
+On transforme la navigation en conteneur flex, on espace les liens avec `gap`, puis on peut placer le groupe avec `justify-content` :
 
 ```css
 .navigation {
@@ -186,8 +148,18 @@ Dans notre navigation horizontale, `justify-content` permet de choisir où le gr
 }
 ```
 
+`justify-content: center` place ici le groupe de liens au centre de l'axe principal.
+
+Pour comparer, remplacez temporairement la dernière ligne par :
+
+```css
+justify-content: flex-start;
+```
+
+Le groupe revient alors au début du conteneur.
+
 :::tip Pas de catalogue à mémoriser
-Pour cette rencontre, retenez surtout que `justify-content` agit sur l'axe principal. Nous utilisons quelques valeurs utiles seulement.
+Retenez surtout que `justify-content` déplace **le groupe d'enfants** sur l'axe principal. Vous n'avez pas à mémoriser toutes les valeurs possibles.
 :::
 
 ### Et `align-items`?
@@ -203,7 +175,7 @@ Pour cette rencontre, retenez surtout que `justify-content` agit sur l'axe princ
 
 Vous n'avez pas à mémoriser toutes ses valeurs ni à l'utiliser obligatoirement dans votre projet. Retenez surtout son rôle général.
 
-## 7. Flexbox ne remplace pas le modèle en boîte
+## 5. Flexbox ne remplace pas le modèle en boîte
 
 Une carte peut toujours utiliser les notions de la rencontre 4 :
 
@@ -231,7 +203,7 @@ On combine donc les connaissances :
 .cartes → disposition du groupe et espace entre les enfants
 ```
 
-## 8. Ajouter une image d'arrière-plan en CSS
+## 6. Ajouter une image d'arrière-plan en CSS
 
 Une image peut aussi servir de **fond visuel** à un élément. C'est une technique simple qui peut donner beaucoup de personnalité à une bannière ou à une section d'un site.
 
@@ -296,7 +268,7 @@ Utilisez `background-image` lorsqu'elle sert surtout de **fond décoratif** ou d
 
 Une image de fond CSS n'a pas d'attribut `alt`. Une image importante pour comprendre la page devrait donc normalement rester une vraie image HTML.
 
-## 9. Intégrer les notions dans votre site
+## 7. Intégrer les notions dans votre site
 
 Après la pratique Flexbox, l'objectif principal devient de **consolider votre Projet Web**.
 
