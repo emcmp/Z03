@@ -1,24 +1,23 @@
 ---
 title: Exercice guidé - Flexbox simple
-description: Organiser une navigation et un groupe de cartes avec display flex et gap, puis réinvestir les chemins avec une image de fond CSS.
+description: Faire évoluer le Club découverte avec un parent flex, gap et une navigation simple.
 ---
 
 # Exercice guidé — Flexbox simple
 
-Dans cet exercice, vous allez utiliser Flexbox dans deux situations très concrètes :
+Dans cet exercice, vous allez **faire évoluer le Club découverte de la rencontre 4**.
 
-1. une navigation horizontale;
-2. un petit groupe de cartes.
+Les cartes possèdent déjà leur modèle en boîte. Cette fois, nous allons apprendre à organiser plusieurs éléments comme un groupe.
 
-Vous allez ensuite réinvestir les chemins relatifs en ajoutant une petite **image d'arrière-plan CSS**.
-
-Le modèle mental principal de Flexbox est simple :
+Le modèle mental principal est :
 
 > On applique `display: flex` au **parent** pour organiser ses **enfants directs**.
 
-## 1. Créer la structure
+Nous allons d'abord l'observer avec les trois cartes, parce que le changement de disposition est très visible. Ensuite, nous appliquerons la même idée à une navigation.
 
-Créez :
+## 1. Repartir de l'état final de la rencontre 4
+
+Copiez votre dossier `exercice-rencontre4` et renommez la copie :
 
 ```text
 exercice-rencontre5/
@@ -26,16 +25,12 @@ exercice-rencontre5/
 ├── css/
 │   └── styles.css
 └── images/
-    └── sentier.svg
+    └── chat.jpg
 ```
 
-:::info 📥 Image pour l'exercice
-**[Télécharger `sentier.svg`](pathname:///examples/projet-web/evolution/etape5/images/sentier.svg)**
+Vous repartez donc avec les mêmes cartes, la même image et le même modèle en boîte.
 
-Enregistrez le fichier dans le dossier `images` de l'exercice en gardant le nom `sentier.svg`.
-:::
-
-Dans `index.html` :
+Dans `index.html`, ajoutez une navigation avant `<main>` et regroupez les trois cartes dans un conteneur `.cartes` :
 
 ```html
 <!doctype html>
@@ -47,32 +42,33 @@ Dans `index.html` :
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <header class="banniere">
-      <h1>Club découverte</h1>
-    </header>
-
     <nav class="navigation">
-      <a href="#">Accueil</a>
-      <a href="#activites">Activités</a>
+      <a href="#photo">Photo</a>
+      <a href="#cuisine">Cuisine</a>
+      <a href="#jeux">Jeux</a>
     </nav>
 
     <main>
-      <h2 id="activites">Activités</h2>
+      <h1>Club découverte</h1>
+
+      <div class="zone-image">
+        <img class="image-principale" src="images/chat.jpg" alt="Un chat">
+      </div>
 
       <div class="cartes">
-        <section class="carte">
-          <h3>Photo</h3>
-          <p>Une sortie pour pratiquer la photographie.</p>
+        <section class="carte" id="photo">
+          <h2>Photo</h2>
+          <p>Une sortie pour pratiquer la photographie extérieure.</p>
         </section>
 
-        <section class="carte">
-          <h3>Cuisine</h3>
-          <p>Un atelier pour essayer une nouvelle recette.</p>
+        <section class="carte" id="cuisine">
+          <h2>Cuisine</h2>
+          <p>Un atelier simple pour découvrir une nouvelle recette.</p>
         </section>
 
-        <section class="carte">
-          <h3>Jeux</h3>
-          <p>Une rencontre pour découvrir un nouveau jeu.</p>
+        <section class="carte" id="jeux">
+          <h2>Jeux</h2>
+          <p>Une rencontre pour découvrir un nouveau jeu de société.</p>
         </section>
       </div>
     </main>
@@ -80,7 +76,7 @@ Dans `index.html` :
 </html>
 ```
 
-Dans `css/styles.css` :
+Gardez d'abord le CSS de la fin de la rencontre 4 :
 
 ```css
 body {
@@ -88,75 +84,196 @@ body {
   color: #263238;
 }
 
-.navigation {
-  background-color: #eaf3ff;
-  padding: 16px;
+main {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-principale {
+  width: 80%;
+}
+
+.zone-image {
+  text-align: center;
 }
 
 .carte {
-  background-color: #f7f7f7;
+  background-color: #eaf3ff;
   border: 2px solid #245a86;
-  padding: 16px;
+  padding: 16px 24px;
+  margin: 24px 0;
 }
 ```
 
 Ouvrez la page dans le navigateur.
 
-## 2. Transformer la navigation en conteneur flex
+Les trois cartes sont encore empilées. Le nouveau conteneur `.cartes` ne change rien par lui-même.
 
-Ajoutez :
+## 2. Identifier le parent et ses enfants
+
+Avant d'écrire du CSS, observez cette partie du HTML :
+
+```text
+.cartes
+├── section.carte
+├── section.carte
+└── section.carte
+```
+
+Si nous voulons organiser **les trois cartes**, le parent à modifier est donc `.cartes`.
+
+:::info À maîtriser
+Posez-vous toujours ces deux questions :
+
+1. Quels éléments est-ce que je veux organiser?
+2. Quel est leur parent commun?
+:::
+
+## 3. Rendre le parent flex
+
+Ajoutez cette nouvelle règle :
 
 ```css
-.navigation {
-  background-color: #eaf3ff;
-  padding: 16px;
+.cartes {
   display: flex;
 }
 ```
 
-Ici :
+Actualisez la page.
+
+Les trois enfants directs de `.cartes` se placent maintenant sur une rangée.
+
+Vous n'avez pas rendu les cartes flex individuellement. Vous avez rendu **leur parent commun** flex.
 
 ```text
-parent flex     → nav.navigation
-enfants directs → les liens <a>
+parent flex     → .cartes
+enfants directs → les trois .carte
 ```
 
-:::info À maîtriser
-`display: flex` s'applique au **parent** dont vous voulez organiser les enfants.
-:::
+## 4. Espacer les cartes avec `gap`
 
-## 3. Ajouter de l'espace avec `gap`
-
-Ajoutez :
+Ajoutez maintenant `gap` dans la même règle :
 
 ```css
-.navigation {
-  background-color: #eaf3ff;
-  padding: 16px;
+.cartes {
   display: flex;
   gap: 20px;
 }
 ```
 
-`gap` crée maintenant un espace cohérent entre les enfants du conteneur flex.
+Le `gap` crée l'espace **entre les enfants du conteneur flex**.
 
-Il évite d'ajouter une marge différente sur chaque lien simplement pour les séparer.
+Pour que ce soit bien `gap` qui contrôle l'espace entre les cartes dans cet exercice, remplacez aussi la marge de `.carte` :
 
-## 4. Centrer le groupe de liens
+```css
+.carte {
+  background-color: #eaf3ff;
+  border: 2px solid #245a86;
+  padding: 16px 24px;
+  margin: 0;
+}
+```
+
+Essayez temporairement :
+
+```css
+gap: 5px;
+```
+
+puis :
+
+```css
+gap: 40px;
+```
+
+Remettez ensuite :
+
+```css
+gap: 20px;
+```
+
+:::info Différence utile
+À la rencontre 4, `margin` permettait de créer de l'espace autour d'une boîte.
+
+Ici, `gap` sert directement à créer l'espace **entre les enfants d'un même groupe flex**.
+:::
+
+## 5. Faire une erreur volontaire
+
+Nous allons maintenant provoquer une erreur fréquente.
+
+Retirez temporairement `display: flex` de `.cartes` et ajoutez-le plutôt à `.carte` :
+
+```css
+.carte {
+  display: flex;
+}
+```
+
+Actualisez.
+
+Les trois cartes ne sont plus placées côte à côte comme prévu. À la place, Flexbox essaie d'organiser le contenu **à l'intérieur de chaque carte**.
+
+Le mauvais parent a reçu `display: flex`.
+
+Corrigez maintenant l'erreur :
+
+- retirez `display: flex` de `.carte`;
+- remettez `display: flex` dans `.cartes`;
+- gardez `gap: 20px` dans `.cartes`.
+
+Votre règle doit revenir à :
+
+```css
+.cartes {
+  display: flex;
+  gap: 20px;
+}
+```
+
+:::tip Réflexe de débogage
+Si Flexbox agit sur les mauvais éléments, retrouvez d'abord le parent commun des éléments que vous voulez organiser.
+:::
+
+## 6. Appliquer la même idée à la navigation
+
+La navigation possède la même relation parent → enfants :
+
+```text
+nav.navigation
+├── a
+├── a
+└── a
+```
 
 Ajoutez :
 
 ```css
 .navigation {
-  background-color: #eaf3ff;
-  padding: 16px;
+  display: flex;
+  gap: 20px;
+}
+```
+
+Les liens étaient déjà capables d'apparaître sur une même ligne, mais ils font maintenant partie d'un **conteneur flex** que vous pouvez contrôler comme un groupe.
+
+Ajoutez ensuite :
+
+```css
+.navigation {
   display: flex;
   gap: 20px;
   justify-content: center;
 }
 ```
 
-Les liens sont maintenant regroupés au centre sur l'axe principal.
+Le groupe de liens se place maintenant au centre de l'espace disponible.
 
 Essayez temporairement :
 
@@ -164,202 +281,148 @@ Essayez temporairement :
 justify-content: flex-start;
 ```
 
-puis :
+Observez le déplacement du groupe, puis remettez :
 
 ```css
-justify-content: space-between;
+justify-content: center;
 ```
-
-Remettez ensuite la valeur qui convient le mieux à l'exemple.
 
 :::tip Pas de catalogue à mémoriser
-Le but est de comprendre **ce que la propriété permet de contrôler**, pas de mémoriser toutes ses valeurs aujourd'hui.
+Pour aujourd'hui, retenez surtout que `justify-content` permet de placer le groupe sur l'axe principal. Vous n'avez pas à mémoriser toutes les valeurs possibles.
 :::
 
-## 5. Placer les cartes côte à côte
+## 7. Réutiliser le modèle en boîte sur la navigation
 
-Pour le moment, les sections `.carte` s'empilent les unes sous les autres.
+Flexbox organise les enfants, mais le parent reste lui aussi une boîte.
 
-Leur parent est :
-
-```html
-<div class="cartes">
-```
-
-Ajoutez :
+Ajoutez donc à `.navigation` :
 
 ```css
-.cartes {
+.navigation {
   display: flex;
   gap: 20px;
-}
-```
-
-Les trois cartes deviennent des enfants flex et se placent côte à côte dans l'espace disponible.
-
-```text
-parent flex
-.cartes
-├── section.carte
-├── section.carte
-└── section.carte
-```
-
-:::info À maîtriser
-Le style `.carte` contrôle l'apparence de chaque carte.
-
-Le style `.cartes` contrôle la **disposition du groupe**.
-:::
-
-## 6. Observer `align-items`
-
-Ajoutez temporairement :
-
-```css
-.cartes {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-```
-
-Puis essayez :
-
-```css
-align-items: flex-start;
-```
-
-Observez la différence si les cartes n'ont pas exactement la même hauteur.
-
-Pour aujourd'hui, retenez simplement que `align-items` contrôle l'alignement des enfants sur l'autre axe du conteneur flex.
-
-## 7. Faire une erreur volontaire
-
-Retirez `display: flex` de `.cartes` et ajoutez-le plutôt à `.carte` :
-
-```css
-.carte {
-  display: flex;
-}
-```
-
-Que se passe-t-il?
-
-Les cartes ne se placent plus côte à côte comme prévu, parce que vous avez rendu **chaque carte** flex au lieu de rendre leur **parent commun** flex.
-
-Remettez ensuite :
-
-```css
-.cartes {
-  display: flex;
-  gap: 20px;
-}
-```
-
-et retirez le `display: flex` ajouté par erreur dans `.carte`.
-
-:::tip Réflexe de débogage
-Si Flexbox semble agir sur les mauvais éléments, demandez-vous :
-
-1. quel élément est le parent?
-2. quels sont ses enfants directs?
-3. est-ce bien ce parent qui possède `display: flex`?
-:::
-
-## 8. Réutiliser le modèle en boîte
-
-Flexbox ne remplace pas ce que vous avez appris à la rencontre 4.
-
-Les cartes utilisent encore :
-
-```css
-.carte {
-  background-color: #f7f7f7;
-  border: 2px solid #245a86;
+  justify-content: center;
+  background-color: #f3f6f8;
   padding: 16px;
 }
 ```
 
-Le parent `.cartes` gère leur disposition, tandis que chaque `.carte` conserve son propre modèle en boîte.
+Vous combinez maintenant les deux rencontres :
 
-## 9. Ajouter une image d'arrière-plan
+```text
+padding → espace à l'intérieur de la navigation
+gap     → espace entre les liens
+Flexbox → disposition du groupe de liens
+```
 
-Le fichier `sentier.svg` se trouve maintenant dans `images/`, mais la règle CSS sera écrite dans `css/styles.css`.
+## 8. Stabiliser l'état final
 
-Ajoutez :
+Avant de terminer, votre fichier `css/styles.css` doit être dans cet état :
 
 ```css
-.banniere {
-  background-image: url("../images/sentier.svg");
-  background-size: cover;
-  background-position: center;
-  padding: 48px 20px;
+body {
+  font-family: Arial, sans-serif;
+  color: #263238;
+}
+
+main {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-principale {
+  width: 80%;
+}
+
+.zone-image {
+  text-align: center;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  background-color: #f3f6f8;
+  padding: 16px;
+}
+
+.cartes {
+  display: flex;
+  gap: 20px;
+}
+
+.carte {
+  background-color: #eaf3ff;
+  border: 2px solid #245a86;
+  padding: 16px 24px;
+  margin: 0;
 }
 ```
 
-Enregistrez et actualisez le navigateur.
+Les valeurs temporaires `gap: 5px`, `gap: 40px` et `justify-content: flex-start` ne doivent plus être présentes.
 
-Pourquoi faut-il écrire `../images/sentier.svg` plutôt que `images/sentier.svg`?
+<ExampleFrame
+  src="examples/exercices/rencontre5/preview.html"
+  title="Résultat final de l'exercice guidé — Rencontre 5"
+  showCode={false}
+  minHeight={520}
+  maxHeight={680}
+/>
 
-```text
-css/styles.css
-→ ../        remonter dans exercice-rencontre5
-→ images/    entrer dans images
-→ sentier.svg
+## 9. Diagnostic rapide
+
+Pour chaque situation, dites d'abord **quel élément vous inspecteriez**.
+
+### A. Les trois cartes restent empilées
+
+Vérifiez si le parent `.cartes` possède bien :
+
+```css
+display: flex;
 ```
 
-:::info À maîtriser
-Dans `url(...)`, le chemin est calculé à partir du **fichier CSS qui contient la règle**.
+### B. Le texte d'une carte se place bizarrement sur une rangée
 
-Le point de départ est donc ici `css/styles.css`, et non `index.html`.
-:::
+Vérifiez si `display: flex` a été ajouté par erreur à `.carte` au lieu de `.cartes`.
 
-Observez aussi le rôle de :
+### C. Les cartes sont côte à côte, mais trop rapprochées
 
-- `background-size: cover` : l'image couvre la zone;
-- `background-position: center` : le centre de l'image reste au centre de la zone.
+Vérifiez la valeur de :
 
-:::tip Image de contenu ou image de fond?
-Si l'image transmet une information importante, utilisez plutôt un vrai `<img>` avec un `alt`.
+```css
+gap
+```
 
-Ici, l'illustration sert surtout d'arrière-plan décoratif à la bannière.
-:::
+sur `.cartes`.
 
-## 10. Petite personnalisation
+### D. La navigation est flex, mais les liens ne sont pas centrés
 
-Sans ajouter de nouvelle propriété obligatoire :
+Vérifiez la règle `.navigation` et la valeur de :
 
-- ajustez le `gap` de la navigation;
-- ajustez le `gap` entre les cartes;
-- choisissez une valeur de `justify-content` pour la navigation;
-- choisissez une valeur de `align-items` pour le groupe de cartes si elle est utile;
-- essayez une autre valeur de `background-position` si vous voulez observer comment l'image se déplace dans la bannière.
-
-Expliquez votre choix avant de modifier les valeurs au hasard.
+```css
+justify-content
+```
 
 ## Vérification avant de terminer
 
 - [ ] je sais identifier le parent flex;
 - [ ] je sais identifier ses enfants directs;
-- [ ] je sais où écrire `display: flex`;
-- [ ] je sais utiliser `gap`;
+- [ ] je sais appliquer `display: flex` au bon parent;
+- [ ] je sais utiliser `gap` pour espacer les enfants d'un groupe flex;
+- [ ] je peux expliquer pourquoi `.cartes` et `.carte` n'ont pas le même rôle;
+- [ ] je peux diagnostiquer `display: flex` appliqué au mauvais élément;
 - [ ] je comprends l'effet général de `justify-content`;
-- [ ] je comprends l'effet général de `align-items`;
-- [ ] je peux diagnostiquer une règle Flexbox appliquée au mauvais élément;
-- [ ] je comprends que le modèle en boîte continue de s'appliquer aux éléments flex;
-- [ ] je sais ajouter une image de fond avec `background-image`;
-- [ ] je peux expliquer pourquoi `url("../images/sentier.svg")` part du fichier `styles.css`.
-
-:::note Pour aller plus loin — non évalué
-Sur un petit écran, vous pourriez rencontrer :
-
-```css
-flex-wrap: wrap;
-```
-
-Cette propriété permet aux enfants de passer sur une autre ligne lorsque l'espace manque. Elle n'est pas requise pour la validation de cette rencontre.
-:::
+- [ ] je comprends que Flexbox ne remplace pas `padding`, `border` ou `margin`;
+- [ ] mon CSS final ne contient plus les valeurs temporaires utilisées pendant les essais.
 
 ## Continuer avec votre Projet Web
+
+Dans votre propre site, vous n'avez pas besoin de reproduire les cartes de cet exercice. Cherchez plutôt **un vrai groupe d'éléments** à organiser, par exemple votre navigation principale.
 
 **[Continuer vers Projet Web — Étape 5](../03-projet-web/05-rencontre5.md)**
