@@ -1,6 +1,6 @@
 # Cartographie HTML/CSS — version courante
 
-**Mise à jour : 2026-08-21**  
+**Mise à jour : 2026-09-18**  
 **Portée : rencontres 1 à 5**
 
 Ce document est la référence interne actuelle pour les compétences HTML/CSS. Il doit être lu avec :
@@ -53,7 +53,7 @@ Le projet contient au minimum :
 - une application comprise du modèle en boîte;
 - une disposition simple avec `display: flex` et `gap`.
 
-`background-image` est un enrichissement facultatif dans le Projet Web. La notion est montrée dans l'exercice de la rencontre 5 pour réinvestir les chemins écrits dans CSS, mais elle n'ajoute pas de critère indépendant.
+`background-image` est un enrichissement facultatif dans le Projet Web. La notion est montrée dans la théorie de la rencontre 5 pour enrichir visuellement le site et réinvestir les chemins écrits dans CSS, mais elle n'ajoute pas de critère indépendant.
 
 ## Page À propos
 
@@ -218,7 +218,7 @@ Ces périodes sont des fenêtres, pas des échéances imposant que tout le group
 | **R2** | images, chemins et navigation | mini-site de deux pages pour isoler `../` | création de deux pages de sujet, de `apropos.html`, des images et de la navigation à quatre pages | A prioritaire; B peut débuter |
 | **R3** | feuille CSS externe; sélecteurs d'élément, de classe et d'identifiant | deux pages reliées à une feuille commune; classe réutilisée et `id` unique | identité visuelle des quatre pages, classes personnelles et un `id` ciblé avec `#id` | fin possible de B; début C |
 | **R4** | modèle en boîte | cartes communes pour comparer les espaces | audit des vrais blocs des quatre pages | C; début D |
-| **R5** | Flexbox simple et intégration | navigation, cartes et chemin CSS vers une image | un usage flex utile, personnalisation et passe finale de correction | D, reprises et appréciation de la personnalisation |
+| **R5** | Flexbox simple, `background-image` comme enrichissement visuel et intégration | cartes puis navigation pour pratiquer parent/enfants, `display: flex`, `gap` et diagnostic | un usage flex utile, personnalisation et passe finale de correction | D, reprises et appréciation de la personnalisation |
 
 # Modèle éditorial associé
 
