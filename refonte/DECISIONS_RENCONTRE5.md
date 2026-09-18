@@ -113,7 +113,9 @@ La progression devient :
 
 ### Choix de l'ordre
 
-Les cartes sont utilisées avant la navigation parce que l'effet de `display: flex` y est immédiatement visible : des sections naturellement empilées deviennent côte à côte.
+Les cartes sont utilisées avant la navigation parce que l'effet de `display: flex` y est immédiatement visible : des blocs `<div>` naturellement empilés deviennent côte à côte.
+
+Les cartes restent des `<div>` afin de ne pas introduire une nouvelle balise HTML au moment où l'objectif est Flexbox.
 
 Les liens `<a>` d'une navigation peuvent déjà apparaître sur une même ligne sans Flexbox. La navigation est donc plus utile comme **transfert du modèle mental** et pour pratiquer `gap` et `justify-content` que comme première démonstration de `display: flex`.
 
