@@ -355,7 +355,7 @@ Vous pouvez alors utiliser :
 `<div>` ne possède pas un style particulier par défaut. Il sert surtout de conteneur général auquel on peut appliquer une classe.
 
 :::tip Bonne pratique
-Utilisez `<header>`, `<nav>`, `<main>`, `<section>` ou un autre élément approprié lorsqu'il décrit bien le contenu. Utilisez `<div>` lorsqu'aucun élément plus précis n'est nécessaire.
+Pour nos cartes, nous utilisons `<div>` : c’est le conteneur général que vous connaissez déjà. D’autres balises HTML peuvent aussi servir à structurer une page, mais nous n’en avons pas besoin pour pratiquer le modèle en boîte.
 :::
 
 ## 10. Exemple complet
