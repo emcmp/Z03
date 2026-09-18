@@ -121,9 +121,9 @@ Avant d'écrire du CSS, observez cette partie du HTML :
 
 ```text
 .cartes
-├── section.carte
-├── section.carte
-└── section.carte
+├── div.carte
+├── div.carte
+└── div.carte
 ```
 
 Si nous voulons organiser **les trois cartes**, le parent à modifier est donc `.cartes`.
