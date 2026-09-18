@@ -1,8 +1,8 @@
 # Décisions de conception — Rencontre 5
 
 **Date initiale : 2026-08-19**  
-**Mise à jour : 2026-09-09**  
-**Statut : exercice guidé refait; théorie et Projet Web à réviser**
+**Mise à jour : 2026-09-18**  
+**Statut : théorie et exercice guidé stabilisés; Projet Web à réviser**
 
 **Référence courante : `COMPETENCES_HTML_CSS.md`**
 
@@ -51,9 +51,21 @@ Il n'est pas nécessaire de transformer l'exercice en catalogue de valeurs.
 
 ### `align-items`
 
-La propriété peut rester présentée dans la théorie comme contrôle de l'autre axe, mais elle n'est plus nécessaire dans l'exercice guidé.
+La propriété reste présentée brièvement dans la théorie comme contrôle de l'autre axe. Elle n'est pas nécessaire dans l'exercice guidé et ne constitue pas une exigence mécanique de WEB-08.
 
-Elle ne constitue pas une exigence mécanique de WEB-08.
+### `background-image`
+
+La théorie conserve une section dédiée à `background-image` parce que cette technique apporte rapidement une valeur visuelle importante dans un site réel.
+
+La section couvre seulement :
+
+- `background-image`;
+- `background-size: cover`;
+- `background-position: center`;
+- le chemin relatif calculé depuis `css/styles.css`;
+- la distinction entre une image de contenu (`<img>`) et une image décorative de fond.
+
+`background-image` demeure un enrichissement visuel : il n'ajoute pas un critère mécanique indépendant à WEB-07 ou WEB-08.
 
 ## Contenu volontairement hors noyau
 
@@ -70,7 +82,9 @@ Ne sont pas rendus obligatoires :
 - positionnement;
 - animations et transitions.
 
-Ces décisions sont internes. Elles ne doivent pas devenir une longue liste de notions « non couvertes » présentée aux étudiants sans besoin pédagogique.
+Ces décisions sont internes. Elles ne doivent pas devenir une longue liste de notions « non couvertes » présentée aux étudiants.
+
+Dans la théorie étudiante, elles sont remplacées par un court encadré **Pour aller plus loin** qui mentionne quelques propriétés à explorer et renvoie vers la documentation CSS Flexbox de W3Schools.
 
 ## Exercice guidé — version refaite
 
@@ -163,9 +177,10 @@ Aucune nouvelle ressource externe n'est requise pour l'exercice guidé.
 
 L'exercice réutilise `chat.jpg` de R4. Les exemples de code et les schémas textuels parent/enfants suffisent pour comprendre le noyau.
 
+La théorie propose, uniquement en **Pour aller plus loin**, la documentation CSS Flexbox de W3Schools pour les étudiants qui souhaitent expérimenter des propriétés hors noyau.
+
 ## Point de reprise
 
-Après stabilisation de l'exercice guidé, les prochaines vérifications pédagogiques de R5 sont :
+Après stabilisation de la théorie et de l'exercice guidé, la prochaine vérification pédagogique de R5 est :
 
-1. la théorie, notamment son niveau de détail réel par rapport au noyau;
-2. le Projet Web — Étape 5 et son exemple d'évolution à partir du site R4 à quatre pages.
+> **le Projet Web — Étape 5 et son exemple d'évolution à partir du site R4 à quatre pages.**
