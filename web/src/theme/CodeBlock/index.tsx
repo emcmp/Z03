@@ -75,11 +75,8 @@ const rules: PreviewRule[] = [
 
   { code: `.navigation {\n  display: flex;\n}`, src: "examples/peek/r5-flex.html", title: "Rendu d'une navigation Flexbox", label: "Voir Flexbox", height: 100 },
   { code: `.navigation {\n  display: flex;\n  gap: 20px;\n}`, src: "examples/peek/r5-gap.html", title: "Rendu de Flexbox avec gap", label: "Voir Flexbox + gap", height: 100 },
-  { code: `.navigation {\n  display: flex;\n  gap: 20px;\n  justify-content: flex-start;\n}`, src: "examples/peek/r5-gap.html", title: "Rendu avec justify-content flex-start", label: "Voir flex-start", height: 100 },
   { code: `.navigation {\n  display: flex;\n  gap: 20px;\n  justify-content: center;\n}`, src: "examples/peek/r5-center.html", title: "Rendu avec justify-content center", label: "Voir le centrage", height: 100 },
-  { code: `.navigation {\n  display: flex;\n  justify-content: space-between;\n}`, src: "examples/peek/r5-space-between.html", title: "Rendu avec space-between", label: "Voir space-between", height: 100 },
   { code: `.ligne {\n  display: flex;\n  align-items: center;\n}`, src: "examples/peek/r5-align-items.html", title: "Rendu avec align-items center", label: "Voir align-items", height: 150 },
-  { code: `align-items: flex-start;`, src: "examples/peek/r5-align-start.html", title: "Comparaison avec align-items flex-start", label: "Voir flex-start", height: 150 },
   { code: `.cartes {\n  display: flex;\n  gap: 20px;\n}`, src: "examples/peek/r5-cards.html", title: "Rendu de deux cartes avec Flexbox", label: "Voir les cartes", height: 180 },
   { code: `.carte {\n  display: flex;\n}`, src: "examples/peek/r5-wrong-parent.html", title: "Rendu lorsque le mauvais élément devient flex", label: "Voir l'erreur", height: 190 },
   { code: `.cartes {\n  display: flex;\n}`, src: "examples/peek/r5-right-parent.html", title: "Rendu lorsque le bon parent devient flex", label: "Voir le bon parent", height: 180 },
