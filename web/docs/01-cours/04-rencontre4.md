@@ -87,10 +87,10 @@ contenu → padding → border → margin
 Supposons cette carte :
 
 ```html
-<section class="carte">
+<div class="carte">
   <h2>Photo</h2>
   <p>Une activité extérieure.</p>
-</section>
+</div>
 ```
 
 Avec :
@@ -333,7 +333,7 @@ Vous pouvez appliquer ces propriétés à des éléments HTML que vous connaisse
 
 ```html
 <header class="entete">...</header>
-<section class="carte">...</section>
+<div class="carte">...</div>
 <main class="contenu">...</main>
 ```
 
@@ -355,7 +355,7 @@ Vous pouvez alors utiliser :
 `<div>` ne possède pas un style particulier par défaut. Il sert surtout de conteneur général auquel on peut appliquer une classe.
 
 :::tip Bonne pratique
-Utilisez `<header>`, `<nav>`, `<main>`, `<section>` ou un autre élément approprié lorsqu'il décrit bien le contenu. Utilisez `<div>` lorsqu'aucun élément plus précis n'est nécessaire.
+Pour nos cartes, nous utilisons `<div>` : c’est le conteneur général que vous connaissez déjà. D’autres balises HTML peuvent aussi servir à structurer une page, mais nous n’en avons pas besoin pour pratiquer le modèle en boîte.
 :::
 
 ## 10. Exemple complet
@@ -366,15 +366,15 @@ HTML :
 <main>
   <h1>Activités</h1>
 
-  <section class="carte">
+  <div class="carte">
     <h2>Photo</h2>
     <p>Une sortie extérieure pour pratiquer la photographie.</p>
-  </section>
+  </div>
 
-  <section class="carte">
+  <div class="carte">
     <h2>Cuisine</h2>
     <p>Un atelier pour découvrir une nouvelle recette.</p>
-  </section>
+  </div>
 </main>
 ```
 

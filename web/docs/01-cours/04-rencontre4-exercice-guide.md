@@ -51,15 +51,15 @@ Dans `index.html`, utilisez :
         <img class="image-principale" src="images/chat.jpg" alt="Un chat">
       </div>
 
-      <section class="carte">
+      <div class="carte">
         <h2>Photo</h2>
         <p>Une sortie pour pratiquer la photographie extérieure.</p>
-      </section>
+      </div>
 
-      <section class="carte">
+      <div class="carte">
         <h2>Cuisine</h2>
         <p>Un atelier simple pour découvrir une nouvelle recette.</p>
-      </section>
+      </div>
     </main>
   </body>
 </html>
@@ -355,10 +355,10 @@ Les marges horizontales automatiques se partagent l'espace restant autour du `<m
 Ajoutez dans `<main>` :
 
 ```html
-<section class="carte">
+<div class="carte">
   <h2>Jeux</h2>
   <p>Une rencontre pour découvrir un nouveau jeu de société.</p>
-</section>
+</div>
 ```
 
 Vous n'avez rien à ajouter dans CSS : la classe `.carte` existe déjà.

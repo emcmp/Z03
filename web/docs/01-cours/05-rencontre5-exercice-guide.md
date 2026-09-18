@@ -56,20 +56,20 @@ Dans `index.html`, ajoutez une navigation avant `<main>` et regroupez les trois 
       </div>
 
       <div class="cartes">
-        <section class="carte" id="photo">
+        <div class="carte" id="photo">
           <h2>Photo</h2>
           <p>Une sortie pour pratiquer la photographie extérieure.</p>
-        </section>
+        </div>
 
-        <section class="carte" id="cuisine">
+        <div class="carte" id="cuisine">
           <h2>Cuisine</h2>
           <p>Un atelier simple pour découvrir une nouvelle recette.</p>
-        </section>
+        </div>
 
-        <section class="carte" id="jeux">
+        <div class="carte" id="jeux">
           <h2>Jeux</h2>
           <p>Une rencontre pour découvrir un nouveau jeu de société.</p>
-        </section>
+        </div>
       </div>
     </main>
   </body>
@@ -121,9 +121,9 @@ Avant d'écrire du CSS, observez cette partie du HTML :
 
 ```text
 .cartes
-├── section.carte
-├── section.carte
-└── section.carte
+├── div.carte
+├── div.carte
+└── div.carte
 ```
 
 Si nous voulons organiser **les trois cartes**, le parent à modifier est donc `.cartes`.
