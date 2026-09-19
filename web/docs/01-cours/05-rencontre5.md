@@ -268,11 +268,134 @@ Utilisez `background-image` lorsqu'elle sert surtout de **fond décoratif** ou d
 
 Une image de fond CSS n'a pas d'attribut `alt`. Une image importante pour comprendre la page devrait donc normalement rester une vraie image HTML.
 
-## 7. Intégrer les notions dans votre site
+## 7. Extras — enrichir votre site
+
+Les propriétés suivantes sont **facultatives et non évaluées séparément**. Leur but est simplement de vous donner quelques effets visuels faciles à copier, essayer et adapter à votre goût.
+
+:::tip Choisissez-en une ou deux
+Vous n'avez pas à tout utiliser. Un ou deux effets bien choisis sont souvent plus efficaces qu'une accumulation d'effets.
+:::
+
+### Changer un lien au survol avec `:hover`
+
+La pseudo-classe `:hover` applique un style pendant que la souris se trouve sur un élément.
+
+```css
+.navigation a {
+  background-color: #eaf3ff;
+  color: #245a86;
+  padding: 10px 14px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.navigation a:hover {
+  background-color: #245a86;
+  color: white;
+}
+```
+
+Ici, `transition` rend le changement de couleur plus fluide. Vous pouvez modifier les couleurs et la durée pour obtenir un résultat qui correspond à votre site.
+
+### Donner du relief à une carte
+
+Quelques propriétés suffisent pour changer rapidement l'apparence d'une boîte :
+
+```css
+.carte {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
+  transition: transform 0.2s;
+}
+
+.carte:hover {
+  transform: scale(1.03);
+}
+```
+
+- `border-radius` arrondit les coins;
+- `box-shadow` ajoute une ombre;
+- `transform: scale(1.03)` agrandit légèrement la carte au survol;
+- `transition` rend le mouvement plus doux.
+
+:::warning Effet léger
+Pour `scale()`, restez près de `1`, par exemple `1.02` ou `1.03`. Un gros zoom devient rapidement dérangeant.
+:::
+
+### Utiliser une couleur semi-transparente
+
+Une couleur peut contenir une valeur **alpha**, c'est-à-dire un niveau de transparence.
+
+Par exemple :
+
+```css
+background-color: rgb(0 0 0 / 55%);
+```
+
+Ici, le noir est opaque à 55 %. Une partie de ce qui se trouve derrière reste donc visible.
+
+C'est particulièrement pratique pour placer du texte lisible par-dessus une image de fond :
+
+```html
+<div class="banniere">
+  <div class="contenu-banniere">
+    <h1>Club découverte</h1>
+    <p>Explorez de nouvelles activités.</p>
+  </div>
+</div>
+```
+
+```css
+.banniere {
+  background-image: url("../images/sentier.svg");
+  background-size: cover;
+  background-position: center;
+  padding: 48px 20px;
+}
+
+.contenu-banniere {
+  background-color: rgb(0 0 0 / 55%);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+```
+
+Vous pouvez essayer `30%`, `55%` ou `80%` pour observer la différence :
+
+```text
+0%   → complètement transparent
+100% → complètement opaque
+```
+
+### Deux autres effets rapides
+
+Pour un gros titre sur une image :
+
+```css
+h1 {
+  text-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+}
+```
+
+Et pour créer un fond en dégradé sans image :
+
+```css
+.banniere {
+  background: linear-gradient(135deg, #245a86, #7a1f1f);
+  color: white;
+  padding: 48px 20px;
+}
+```
+
+Ces effets sont là pour vous donner des idées. Copiez le code, changez les valeurs et gardez seulement ce qui améliore réellement votre site.
+
+## 8. Intégrer les notions dans votre site
 
 Après la pratique Flexbox, l'objectif principal devient de **consolider votre Projet Web**.
 
-Vous allez ajouter un usage pertinent de Flexbox, puis revoir vos quatre pages, vos chemins, votre feuille CSS et vos espacements. L'image d'arrière-plan peut aussi être utilisée si elle améliore réellement votre présentation.
+Vous allez ajouter un usage pertinent de Flexbox, puis revoir vos quatre pages, vos chemins, votre feuille CSS et vos espacements. L'image d'arrière-plan et les extras visuels peuvent aussi être utilisés s'ils améliorent réellement votre présentation.
 
 :::warning
 N'ajoutez pas des effets simplement pour remplir la page. Un petit site clair, cohérent et compris est préférable à un site contenant beaucoup de propriétés copiées sans comprendre leur rôle.
@@ -297,6 +420,7 @@ Pour explorer ces propriétés avec des exemples interactifs, consultez la **[do
 - un chemin dans `url(...)` est calculé à partir du fichier CSS qui contient la règle;
 - une image de contenu reste généralement un `<img>`, tandis qu'une image décorative peut devenir un arrière-plan CSS;
 - une utilisation Flexbox pertinente et comprise est suffisante pour démontrer le concept;
+- les extras visuels comme `:hover`, `transition`, `box-shadow`, `border-radius`, `transform` et les couleurs avec alpha sont facultatifs;
 - cette rencontre sert aussi à corriger et intégrer tout le bloc HTML/CSS.
 
 ## Pratique guidée
