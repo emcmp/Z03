@@ -80,11 +80,29 @@ Ne sont pas rendus obligatoires :
 - Flexbox imbriqué complexe;
 - Grid;
 - positionnement;
-- animations et transitions.
+- animations;
+- transitions comme exigence technique.
 
 Ces décisions sont internes. Elles ne doivent pas devenir une longue liste de notions « non couvertes » présentée aux étudiants.
 
 Dans la théorie étudiante, elles sont remplacées par un court encadré **Pour aller plus loin** qui mentionne quelques propriétés à explorer et renvoie vers la documentation CSS Flexbox de W3Schools.
+
+## Extras visuels facultatifs
+
+R5 contient une section étudiante **Extras — enrichir votre site**. Ces notions sont montrées comme recettes courtes, copiables et personnalisables, sans devenir des critères techniques de Validation D :
+
+- `:hover`;
+- `transition`;
+- `box-shadow`;
+- `border-radius`;
+- `transform: scale(...)`;
+- couleurs avec alpha, notamment pour un fond semi-transparent sur une image;
+- `text-shadow`;
+- `linear-gradient(...)`.
+
+Le principe pédagogique est de maximiser l'impact visuel pour peu de nouvelle syntaxe. L'étudiant peut choisir un ou deux effets, modifier les valeurs et conserver seulement ce qui sert son design.
+
+Ces extras ne sont pas ajoutés à l'exercice guidé Flexbox obligatoire afin de garder son objectif principal clair.
 
 ## Exercice guidé — version refaite
 
