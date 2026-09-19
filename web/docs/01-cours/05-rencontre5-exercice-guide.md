@@ -30,6 +30,14 @@ exercice-rencontre5/
 
 Vous repartez donc avec les mêmes cartes, la même image et le même modèle en boîte.
 
+:::info Deux façons de commencer
+Vous pouvez soit **recopier le code ci-dessous**, soit télécharger directement le projet de départ complet :
+
+**[Télécharger le projet de départ — Rencontre 5 (.zip)](pathname:///files/rencontre5/exercice-rencontre5-depart.zip)**
+
+Dans les deux cas, vous devez obtenir exactement la même structure avant de commencer Flexbox.
+:::
+
 Dans `index.html`, ajoutez une navigation avant `<main>` et regroupez les trois cartes dans un conteneur `.cartes` :
 
 ```html
@@ -115,7 +123,7 @@ Ouvrez la page dans le navigateur.
 
 Les trois cartes sont encore empilées. Le nouveau conteneur `.cartes` ne change rien par lui-même.
 
-## 2. Identifier le parent et ses enfants
+## 2. Identifier le parent et le rendre flex
 
 Avant d'écrire du CSS, observez cette partie du HTML :
 
@@ -126,18 +134,16 @@ Avant d'écrire du CSS, observez cette partie du HTML :
 └── div.carte
 ```
 
-Si nous voulons organiser **les trois cartes**, le parent à modifier est donc `.cartes`.
+Si nous voulons organiser **les trois cartes**, leur parent commun est `.cartes`.
 
 :::info À maîtriser
-Posez-vous toujours ces deux questions :
+Avant d'utiliser Flexbox, posez-vous toujours ces deux questions :
 
 1. Quels éléments est-ce que je veux organiser?
 2. Quel est leur parent commun?
 :::
 
-## 3. Rendre le parent flex
-
-Ajoutez cette nouvelle règle :
+Ajoutez maintenant cette nouvelle règle :
 
 ```css
 .cartes {
@@ -149,14 +155,14 @@ Actualisez la page.
 
 Les trois enfants directs de `.cartes` se placent maintenant sur une rangée.
 
-Vous n'avez pas rendu les cartes flex individuellement. Vous avez rendu **leur parent commun** flex.
-
 ```text
 parent flex     → .cartes
 enfants directs → les trois .carte
 ```
 
-## 4. Espacer les cartes avec `gap`
+Vous n'avez pas rendu les cartes flex individuellement. Vous avez rendu **leur parent commun** flex.
+
+## 3. Espacer les cartes avec `gap`
 
 Ajoutez maintenant `gap` dans la même règle :
 
@@ -204,7 +210,7 @@ gap: 20px;
 Ici, `gap` sert directement à créer l'espace **entre les enfants d'un même groupe flex**.
 :::
 
-## 5. Faire une erreur volontaire
+## 4. Faire une erreur volontaire
 
 Nous allons maintenant provoquer une erreur fréquente.
 
@@ -241,7 +247,7 @@ Votre règle doit revenir à :
 Si Flexbox agit sur les mauvais éléments, retrouvez d'abord le parent commun des éléments que vous voulez organiser.
 :::
 
-## 6. Appliquer la même idée à la navigation
+## 5. Organiser la navigation
 
 La navigation possède la même relation parent → enfants :
 
@@ -252,28 +258,28 @@ nav.navigation
 └── a
 ```
 
-Ajoutez :
+Ajoutez cette règle :
 
 ```css
 .navigation {
   display: flex;
   gap: 20px;
+  background-color: #f3f6f8;
+  padding: 16px;
 }
 ```
 
-Les liens étaient déjà capables d'apparaître sur une même ligne, mais ils font maintenant partie d'un **conteneur flex** que vous pouvez contrôler comme un groupe.
+Les liens font maintenant partie d'un **conteneur flex** que vous pouvez contrôler comme un groupe.
 
-Ajoutez ensuite :
+Le `background-color` et le `padding` viennent du modèle en boîte vu à la rencontre 4. Ils permettent aussi de voir clairement toute la largeur occupée par la navigation.
+
+Ajoutez maintenant cette ligne dans la même règle :
 
 ```css
-.navigation {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
+justify-content: center;
 ```
 
-Le groupe de liens se place maintenant au centre de l'espace disponible.
+Le groupe de liens se place au centre de l'espace disponible.
 
 Essayez temporairement :
 
@@ -281,41 +287,28 @@ Essayez temporairement :
 justify-content: flex-start;
 ```
 
-Observez le déplacement du groupe, puis remettez :
+Le groupe revient au début du conteneur. Comme la zone de navigation est visible, le déplacement devrait être facile à observer.
+
+Remettez ensuite :
 
 ```css
 justify-content: center;
+```
+
+Vous combinez maintenant les deux rencontres :
+
+```text
+padding         → espace à l'intérieur de la navigation
+gap             → espace entre les liens
+Flexbox         → disposition du groupe de liens
+justify-content → position du groupe dans l'espace disponible
 ```
 
 :::tip Pas de catalogue à mémoriser
 Pour aujourd'hui, retenez surtout que `justify-content` permet de placer le groupe sur l'axe principal. Vous n'avez pas à mémoriser toutes les valeurs possibles.
 :::
 
-## 7. Réutiliser le modèle en boîte sur la navigation
-
-Flexbox organise les enfants, mais le parent reste lui aussi une boîte.
-
-Ajoutez donc à `.navigation` :
-
-```css
-.navigation {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  background-color: #f3f6f8;
-  padding: 16px;
-}
-```
-
-Vous combinez maintenant les deux rencontres :
-
-```text
-padding → espace à l'intérieur de la navigation
-gap     → espace entre les liens
-Flexbox → disposition du groupe de liens
-```
-
-## 8. Stabiliser l'état final
+## 6. Stabiliser l'état final
 
 Avant de terminer, votre fichier `css/styles.css` doit être dans cet état :
 
@@ -375,7 +368,7 @@ Les valeurs temporaires `gap: 5px`, `gap: 40px` et `justify-content: flex-start`
   maxHeight={680}
 />
 
-## 9. Diagnostic rapide
+## 7. Diagnostic rapide
 
 Pour chaque situation, dites d'abord **quel élément vous inspecteriez**.
 

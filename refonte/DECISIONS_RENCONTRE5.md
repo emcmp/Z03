@@ -90,7 +90,11 @@ Dans la théorie étudiante, elles sont remplacées par un court encadré **Pour
 
 Implémenté dans `web/docs/01-cours/05-rencontre5-exercice-guide.md`.
 
-L'exercice reprend directement l'état final **Club découverte** de R4 au lieu de repartir avec un nouveau mini-projet. Il conserve donc :
+L'exercice reprend directement l'état final **Club découverte** de R4 au lieu de repartir avec un nouveau mini-projet.
+
+Pour que les étudiants absents ou ceux qui n'ont plus leur dossier R4 puissent repartir du même point, l'étape 1 conserve **tout le code de départ visible** et offre aussi un **ZIP téléchargeable** contenant le même projet complet. Le téléchargement est une option, pas un remplacement des explications.
+
+Il conserve donc :
 
 - la même image;
 - les trois cartes;
@@ -100,16 +104,13 @@ L'exercice reprend directement l'état final **Club découverte** de R4 au lieu 
 
 La progression devient :
 
-1. copier l'exercice R4 et ajouter un conteneur `.cartes` ainsi qu'une navigation;
-2. identifier `.cartes` comme parent des trois cartes;
-3. ajouter `display: flex` au parent et observer le passage évident de cartes empilées à une rangée;
-4. ajouter `gap` et comparer temporairement quelques valeurs;
-5. retirer la marge des cartes afin que `gap` contrôle clairement l'espace entre les enfants flex;
-6. provoquer l'erreur classique en appliquant `display: flex` à `.carte` plutôt qu'à `.cartes`, puis corriger;
-7. transférer le même modèle mental à `.navigation`;
-8. utiliser `justify-content: center` avec un essai temporaire de `flex-start`;
-9. réutiliser `padding` sur la navigation pour montrer que Flexbox ne remplace pas le modèle en boîte;
-10. terminer avec un `styles.css` complet et déterministe avant le diagnostic final.
+1. repartir du code complet de R4, soit en le recopiant, soit avec le ZIP de départ;
+2. identifier `.cartes` comme parent des trois cartes et lui ajouter `display: flex`;
+3. ajouter `gap`, comparer temporairement quelques valeurs et retirer la marge des cartes;
+4. provoquer l'erreur classique en appliquant `display: flex` à `.carte` plutôt qu'à `.cartes`, puis corriger;
+5. transférer le même modèle mental à `.navigation`, rendre sa boîte visible avec les acquis R4, puis comparer `center` et `flex-start`;
+6. terminer avec un `styles.css` complet et déterministe;
+7. faire un diagnostic final.
 
 ### Choix de l'ordre
 
