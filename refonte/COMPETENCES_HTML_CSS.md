@@ -87,13 +87,20 @@ La notion est facultative et non évaluée dans le bloc HTML/CSS.
 
 Exemples :
 
+- `:hover`;
+- `transition`;
+- `box-shadow`;
 - `border-radius`;
+- `transform`;
+- couleurs avec alpha;
+- `text-shadow`;
+- dégradés;
 - `box-sizing: border-box`;
 - `flex-wrap`;
 - Flexbox avancé;
 - Grid;
 - positionnement;
-- transitions et animations.
+- animations.
 
 ## Règle concernant `alt`
 
@@ -218,7 +225,7 @@ Ces périodes sont des fenêtres, pas des échéances imposant que tout le group
 | **R2** | images, chemins et navigation | mini-site de deux pages pour isoler `../` | création de deux pages de sujet, de `apropos.html`, des images et de la navigation à quatre pages | A prioritaire; B peut débuter |
 | **R3** | feuille CSS externe; sélecteurs d'élément, de classe et d'identifiant | deux pages reliées à une feuille commune; classe réutilisée et `id` unique | identité visuelle des quatre pages, classes personnelles et un `id` ciblé avec `#id` | fin possible de B; début C |
 | **R4** | modèle en boîte | cartes communes pour comparer les espaces | audit des vrais blocs des quatre pages | C; début D |
-| **R5** | Flexbox simple, `background-image` comme enrichissement visuel et intégration | cartes puis navigation pour pratiquer parent/enfants, `display: flex`, `gap` et diagnostic | un usage flex utile, personnalisation et passe finale de correction | D, reprises et appréciation de la personnalisation |
+| **R5** | Flexbox simple, `background-image` et extras visuels facultatifs (`:hover`, transition, ombre, arrondis, alpha) | cartes puis navigation pour pratiquer parent/enfants, `display: flex`, `gap` et diagnostic | un usage flex utile, enrichissements visuels au choix, personnalisation et passe finale de correction | D, reprises et appréciation de la personnalisation |
 
 # Modèle éditorial associé
 

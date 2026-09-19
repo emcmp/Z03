@@ -140,7 +140,7 @@ Cette liste décrit le minimum du projet. La validation technique vérifie aussi
 
 ## Image d'arrière-plan — enrichissement facultatif
 
-Le cours et l'exercice montrent `background-image` afin de réinvestir un chemin écrit dans CSS.
+Le cours montre `background-image` afin de réinvestir un chemin écrit dans CSS.
 
 Dans votre Projet Web, vous pouvez essayer une image de fond décorative, puis la conserver ou la retirer selon votre design.
 
@@ -148,6 +148,24 @@ Dans votre Projet Web, vous pouvez essayer une image de fond décorative, puis l
 `background-image` est **facultatif dans le Projet Web** et n'ajoute pas un critère mécanique à la Validation D.
 
 Une image informative doit normalement rester un élément `<img>` avec un attribut `alt`.
+:::
+
+## Extras visuels — facultatifs
+
+La rencontre 5 présente aussi quelques effets rapides que vous pouvez copier et adapter :
+
+- `:hover` pour modifier un élément au survol;
+- `transition` pour rendre un changement plus fluide;
+- `box-shadow` pour donner du relief;
+- `border-radius` pour arrondir les coins;
+- `transform: scale(...)` pour un léger effet de zoom;
+- des couleurs avec alpha pour créer des fonds semi-transparents;
+- `text-shadow` ou un `linear-gradient(...)` comme enrichissements supplémentaires.
+
+:::info Statut clair
+Ces effets sont **facultatifs et non évalués séparément**. Utilisez-en seulement s'ils améliorent votre site et si vous êtes capable de retrouver les valeurs pour les ajuster.
+
+La qualité de votre personnalisation ne dépend pas du nombre d'effets ajoutés.
 :::
 
 ## Validation D et appréciation finale
@@ -169,7 +187,7 @@ Vous pouvez :
 - approfondir le contenu d'un sujet;
 - explorer une amélioration visuelle facultative.
 
-Grid, le positionnement, les transitions et Flexbox avancé ne font pas partie du noyau évalué des rencontres 1 à 5.
+Grid, le positionnement, les animations et Flexbox avancé ne font pas partie du noyau évalué des rencontres 1 à 5. Les transitions peuvent être utilisées comme extra visuel facultatif.
 :::
 
 ## Après cette étape
