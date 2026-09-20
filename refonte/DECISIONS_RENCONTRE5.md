@@ -102,6 +102,8 @@ R5 contient une section étudiante **Extras — enrichir votre site**. Ces notio
 
 Le principe pédagogique est de maximiser l'impact visuel pour peu de nouvelle syntaxe. L'étudiant peut choisir un ou deux effets, modifier les valeurs et conserver seulement ce qui sert son design.
 
+Chaque extra visuel possède son **propre aperçu** associé au bloc de code qui l'introduit. Les effets ne sont combinés qu'après avoir été montrés séparément, dans un exemple final d'intégration.
+
 Ces extras ne sont pas ajoutés à l'exercice guidé Flexbox obligatoire afin de garder son objectif principal clair.
 
 ## Exercice guidé — version refaite
