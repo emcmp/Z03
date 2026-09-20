@@ -270,108 +270,91 @@ Une image de fond CSS n'a pas d'attribut `alt`. Une image importante pour compre
 
 ## 7. Extras — enrichir votre site
 
-Les propriétés suivantes sont **facultatives et non évaluées séparément**. Leur but est simplement de vous donner quelques effets visuels faciles à copier, essayer et adapter à votre goût.
+Les propriétés suivantes sont **facultatives et non évaluées séparément**. Leur but est de vous donner quelques effets visuels faciles à copier, tester et adapter à votre goût.
 
 :::tip Choisissez-en une ou deux
 Vous n'avez pas à tout utiliser. Un ou deux effets bien choisis sont souvent plus efficaces qu'une accumulation d'effets.
 :::
 
-### Changer un lien au survol avec `:hover`
+### `:hover` — changer un élément au survol
 
 La pseudo-classe `:hover` applique un style pendant que la souris se trouve sur un élément.
 
 ```css
-.navigation a {
-  background-color: #eaf3ff;
-  color: #245a86;
-  padding: 10px 14px;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.2s, color 0.2s;
-}
-
 .navigation a:hover {
   background-color: #245a86;
   color: white;
 }
 ```
 
-Ici, `transition` rend le changement de couleur plus fluide. Vous pouvez modifier les couleurs et la durée pour obtenir un résultat qui correspond à votre site.
+Essayez ensuite vos propres couleurs.
 
-### Donner du relief à une carte
+### `transition` — rendre un changement plus fluide
 
-Quelques propriétés suffisent pour changer rapidement l'apparence d'une boîte :
+Sans transition, un changement de style est instantané. Avec `transition`, il peut se faire progressivement.
+
+```css
+.navigation a {
+  transition: background-color 0.5s, color 0.5s;
+}
+```
+
+La durée `0.5s` peut être raccourcie ou allongée.
+
+### `border-radius` — arrondir les coins
 
 ```css
 .carte {
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
-  transition: transform 0.2s;
 }
+```
 
+Essayez par exemple `4px`, `12px` ou `24px`.
+
+### `box-shadow` — ajouter une ombre
+
+```css
+.carte {
+  box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
+}
+```
+
+Cette propriété ajoute une ombre sous la boîte. Les valeurs contrôlent notamment son déplacement, son flou et sa couleur.
+
+### `transform: scale(...)` — agrandir légèrement au survol
+
+```css
 .carte:hover {
   transform: scale(1.03);
 }
 ```
 
-- `border-radius` arrondit les coins;
-- `box-shadow` ajoute une ombre;
-- `transform: scale(1.03)` agrandit légèrement la carte au survol;
-- `transition` rend le mouvement plus doux.
-
 :::warning Effet léger
-Pour `scale()`, restez près de `1`, par exemple `1.02` ou `1.03`. Un gros zoom devient rapidement dérangeant.
+Restez près de `1`, par exemple `1.02` ou `1.03`. Un gros zoom devient rapidement dérangeant.
 :::
 
-### Utiliser une couleur semi-transparente
+Vous pouvez ensuite ajouter une `transition` sur `transform` si vous voulez rendre ce changement plus fluide.
+
+### Couleur avec alpha — créer un fond semi-transparent
 
 Une couleur peut contenir une valeur **alpha**, c'est-à-dire un niveau de transparence.
 
-Par exemple :
-
 ```css
-background-color: rgb(0 0 0 / 55%);
-```
-
-Ici, le noir est opaque à 55 %. Une partie de ce qui se trouve derrière reste donc visible.
-
-C'est particulièrement pratique pour placer du texte lisible par-dessus une image de fond :
-
-```html
-<div class="banniere">
-  <div class="contenu-banniere">
-    <h1>Club découverte</h1>
-    <p>Explorez de nouvelles activités.</p>
-  </div>
-</div>
-```
-
-```css
-.banniere {
-  background-image: url("../images/sentier.svg");
-  background-size: cover;
-  background-position: center;
-  padding: 48px 20px;
-}
-
 .contenu-banniere {
   background-color: rgb(0 0 0 / 55%);
-  color: white;
-  padding: 20px;
-  border-radius: 12px;
 }
 ```
 
-Vous pouvez essayer `30%`, `55%` ou `80%` pour observer la différence :
+Ici, le noir est opaque à 55 %. L'image ou la couleur placée derrière reste donc partiellement visible.
 
 ```text
 0%   → complètement transparent
 100% → complètement opaque
 ```
 
-### Deux autres effets rapides
+C'est particulièrement pratique pour rendre du texte lisible par-dessus une image de fond.
 
-Pour un gros titre sur une image :
+### `text-shadow` — ajouter une ombre au texte
 
 ```css
 h1 {
@@ -379,7 +362,11 @@ h1 {
 }
 ```
 
-Et pour créer un fond en dégradé sans image :
+L'effet peut aider un gros titre clair à ressortir sur une image.
+
+### `linear-gradient(...)` — créer un dégradé
+
+Un dégradé permet de créer un fond coloré sans utiliser d'image.
 
 ```css
 .banniere {
@@ -389,7 +376,43 @@ Et pour créer un fond en dégradé sans image :
 }
 ```
 
-Ces effets sont là pour vous donner des idées. Copiez le code, changez les valeurs et gardez seulement ce qui améliore réellement votre site.
+Changez les deux couleurs pour obtenir un résultat adapté à votre thème.
+
+### Exemple combiné
+
+Ces effets peuvent être combinés, mais ils n'ont pas besoin de l'être tous. Voici un exemple qui rassemble plusieurs extras dans une petite interface :
+
+```css
+.navigation a {
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.navigation a:hover {
+  background-color: #245a86;
+  color: white;
+}
+
+.carte {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
+  transition: transform 0.2s;
+}
+
+.carte:hover {
+  transform: scale(1.03);
+}
+
+.contenu-banniere {
+  background-color: rgb(0 0 0 / 55%);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+}
+```
+
+Copiez ce qui vous intéresse, changez les valeurs et gardez seulement les effets qui améliorent réellement votre site.
 
 ## 8. Intégrer les notions dans votre site
 
