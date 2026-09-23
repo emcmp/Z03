@@ -150,6 +150,14 @@ Les quatre captures VS Code sont maintenant **suffisantes pour enseigner la proc
 
 L'exercice guidé de la rencontre 2 contient maintenant un encadré **📥 Fichier à télécharger** avec un lien direct vers `chat.jpg` et l'instruction de le placer dans le dossier `images`.
 
+# Rencontre 6 — Variables et affectation
+
+## Fichiers à fournir
+
+| Ressource | Emplacement prévu | Utilisation | État |
+|---|---|---|---|
+| Version Word du laboratoire sur les variables | `web/static/files/rencontre6/laboratoire-rencontre6-variables.docx` | Permet de télécharger une version Word des 15 activités du laboratoire R6, alignée avec la page étudiante. | **Prêt** — document généré à partir du laboratoire actuel et lien direct ajouté à la page. |
+
 # Rencontres suivantes
 
 La liste doit être enrichie **au moment où chaque nouvelle rencontre est conçue**, avant de considérer son matériel prêt pour la classe.

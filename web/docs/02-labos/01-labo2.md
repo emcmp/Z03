@@ -7,6 +7,14 @@ sidebar_label: Rencontre 6 — Variables
 
 Ce laboratoire permet de pratiquer les notions de la rencontre 6 directement dans la **console du navigateur**.
 
+:::info 📥 Fichier à télécharger
+
+**[Télécharger `laboratoire-rencontre6-variables.docx`](pathname:///files/rencontre6/laboratoire-rencontre6-variables.docx)**
+
+Le document Word contient les mêmes **15 activités** que cette page.
+
+:::
+
 :::warning
 
 Dès qu'une consigne n'est pas claire ou qu'un résultat vous surprend, demandez de l'aide. Les premières erreurs en JavaScript sont souvent de petites erreurs de syntaxe et elles font partie de l'apprentissage.

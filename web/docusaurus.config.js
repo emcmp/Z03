@@ -81,6 +81,12 @@ const navbarItems = [
   {
     type: "docSidebar",
     position: "left",
+    sidebarId: "labos",
+    label: "Laboratoires",
+  },
+  {
+    type: "docSidebar",
+    position: "left",
     sidebarId: "projetWeb",
     label: "Projet Web",
   },
