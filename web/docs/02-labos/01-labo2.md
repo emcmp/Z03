@@ -7,11 +7,13 @@ sidebar_label: Rencontre 6 — Variables
 
 Ce laboratoire permet de pratiquer les notions de la rencontre 6 directement dans la **console du navigateur**.
 
-:::info 📥 Fichier à télécharger
+:::info 📥 Fichiers et corrigé
 
-**[Télécharger `laboratoire-rencontre6-variables.docx`](pathname:///files/rencontre6/laboratoire-rencontre6-variables.docx)**
+**[Télécharger le laboratoire Word](pathname:///files/rencontre6/laboratoire-rencontre6-variables.docx)**
 
 Le document Word contient les mêmes **15 activités** que cette page.
+
+**[Consulter le corrigé étudiant](./labo2-corrige)** — à utiliser après avoir essayé les activités.
 
 :::
 
