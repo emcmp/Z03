@@ -50,15 +50,6 @@ if (includeRefonteDocs) {
 /** @type {NonNullable<import('@docusaurus/types').Config['plugins']>} */
 const plugins = [require.resolve("./plugins/docs-metadata")];
 
-if (isPersonalPreview) {
-  navbarItems.splice(2, 0, {
-    type: "docSidebar",
-    position: "left",
-    sidebarId: "labos",
-    label: "Laboratoires",
-  });
-}
-
 if (includeRefonteDocs) {
   plugins.push([
     "@docusaurus/plugin-content-docs",
@@ -100,6 +91,15 @@ const navbarItems = [
     label: "Dans l'autobus",
   },
 ];
+
+if (isPersonalPreview) {
+  navbarItems.splice(2, 0, {
+    type: "docSidebar",
+    position: "left",
+    sidebarId: "labos",
+    label: "Laboratoires",
+  });
+}
 
 if (includeRefonteDocs) {
   navbarItems.push({
