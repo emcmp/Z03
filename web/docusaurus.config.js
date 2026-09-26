@@ -92,14 +92,12 @@ const navbarItems = [
   },
 ];
 
-if (isPersonalPreview) {
-  navbarItems.splice(2, 0, {
-    type: "docSidebar",
-    position: "left",
-    sidebarId: "labos",
-    label: "Laboratoires",
-  });
-}
+navbarItems.splice(2, 0, {
+  type: "docSidebar",
+  position: "left",
+  sidebarId: "labos",
+  label: "Laboratoires",
+});
 
 if (includeRefonteDocs) {
   navbarItems.push({
