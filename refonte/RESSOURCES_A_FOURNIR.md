@@ -18,6 +18,11 @@ Ne jamais laisser une dépendance implicite du type « image fournie en classe �
 
 ## Convention pour les téléchargements étudiants
 
+| Ressource | Emplacement | Contenu | État |
+|---|---|---|---|
+| `rencontre8-classes-attributs.zip` | `web/static/files/rencontre8/` | Labo 14 dérivé : exercice 1 réduit aux classes et attributs; exercice 2 conservé | Prêt |
+| `rencontre9-conditions-dom.zip` | `web/static/files/rencontre9/` | Deux tâches DOM avec `if/else` issues du labo 14 | Prêt |
+
 Lorsqu'un fichier doit être téléchargé par l'étudiant, la page doit le signaler de façon très visible avec un encadré portant le libellé **📥 Fichier à télécharger**.
 
 Le bloc doit contenir au minimum :

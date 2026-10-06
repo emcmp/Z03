@@ -1,7 +1,7 @@
 # Plan d'implémentation — rencontres 6 à 15
 
 **Statut du plan : actif**  
-**Dernière mise à jour : 2026-08-26**
+**Dernière mise à jour : 2026-10-06**
 
 Ce document est le plan opérationnel pour mettre en place la séquence JavaScript des rencontres 6 à 15. `PLAN_RENCONTRES_6_A_15.md` demeure la référence pédagogique canonique.
 
@@ -25,8 +25,8 @@ Pendant cette passe :
 | **Documentation / mapping** | **Terminé** | Mapping R6–R15 stabilisé; principe « placement avant révision » documenté. |
 | **R6** | **Implanté** | Ancien cours 2 + labo 2. |
 | **R7** | **Implanté / révisé** | Ancien cours 3 + labo 3, avec portée locale/globale et labo 4 exercice 1 déplacés depuis R8. |
-| **R8** | **À réviser** | Ancien cours 4 sans la portée + ancien cours 14; labo 4 exercices 2–5. La section `.style` est conservée telle quelle; `classList.contains()` passe à R9. |
-| **R9** | **Implanté** | Anciens cours 5 + 6, conservés en deux pages; labos 5 + 6. |
+| **R8** | **Prêt à réviser** | Ancien cours 4 sans la portée + ancien cours 14; labo 4 exercices 2–5. Labo 14 exercices 1–2 dérivés dans `rencontre8-classes-attributs.zip`; les deux tâches conditionnelles de l'exercice 1 passent à R9. |
+| **R9** | **Prêt à réviser** | Anciens cours 5 + 6, conservés en deux pages; labos 5 + 6. Deux tâches DOM avec `if/else` du labo 14 sont disponibles dans `rencontre9-conditions-dom.zip`. |
 | **R10** | **Implanté** | Ancien cours 11 + labo 11; `while`, `do...while` et débogueur optionnel conservés tels quels. |
 | **R11** | **Implanté** | Ancien cours 12 + ancien cours 15 en deux pages; labo 12 + exercices 1–3 du labo 15. |
 | **R12** | **Implanté** | Ancien cours 13 + labo 13 + exercice 4 du labo 15. |
@@ -77,6 +77,15 @@ Première implantation réalisée :
 **État : Implanté.**
 
 ## R9 — Conditions
+
+### Réorganisation ciblée du labo 14 — 2026-10-06
+
+| Tâche | État | Dépendance et fichiers | Définition de « terminé » |
+|---|---|---|---|
+| Dériver les exercices 1–2 pour R8 | Prêt à réviser | `web/static/files/420905_lab14/` → `web/static/files/rencontre8/`; page `11-labo14.md` | Exercice 1 limité à `add/remove/toggle` et attributs; exercice 2 conservé; zip et liens vérifiés. |
+| Isoler les deux tâches conditionnelles pour R9 | Prêt à réviser | Exercice 1 historique → `web/static/files/rencontre9/`; page `04-labo5.md` | Seuls `contains` et l'alternance selon `alt` sont proposés; zip et liens vérifiés. |
+
+Les sources `420905_lab14/` et `420905_lab14.zip` restent intactes. Les exercices 3–4 demeurent dans la source historique pour une décision ultérieure. Les labos 5/6 et les pages de théorie ne font pas partie de cette réorganisation.
 
 **Sources :** anciens cours 5 + 6 et labos 5 + 6.
 

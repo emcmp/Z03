@@ -43,7 +43,7 @@ Consulter également :
 | 11 | Boucles | `while`, `do while` | Labo 11 → `420905_lab11.zip` | À conserver, probablement simplifier | Extraire et réévaluer les exercices; privilégier les boucles réellement utiles à Z03. |
 | 12 | Tableaux | Tableaux et parcours avec une boucle | Labo 12 → `420905_lab12.zip` | À conserver | Garder la relation boucles → tableaux; vérifier les exercices après réorganisation. |
 | 13 | Paramètres et retours | Fonctions avec paramètres et valeurs de retour | Labo 13 → `420905_lab13.zip` | Probablement à fusionner avec l'introduction aux fonctions | Extraire le labo 13 et rattacher les exercices à la future rencontre sur les fonctions. |
-| 14 | Classes et attributs | Classes, attributs, élément HTML en variable | Labo 14 → `420905_lab14.zip` | Probablement à intégrer au bloc DOM | Extraire le labo 14 et répartir les exercices avec les notions DOM correspondantes. |
+| 14 | Classes et attributs | Classes, attributs, élément HTML en variable | Labo 14 → `420905_lab14.zip` | R8/R9 dérivés | Exercice 1 : `add/remove/toggle` et attributs en R8; tâches `contains` et alternance d'image selon `alt` en R9. Exercice 2 conservé en R8. Exercices 3–4 en attente; source intacte. |
 | 15 | Tableaux d'éléments HTML | `querySelectorAll`, collections d'éléments, boucles | Labo 15 → `420905_lab15.zip` | Matière à déplacer plus tôt; rencontre 15 réservée à l'examen | Extraire le labo 15 et rattacher les exercices à la future rencontre DOM + tableaux/boucles. |
 
 ## Nouvelles sources HTML / CSS
@@ -180,6 +180,8 @@ Principe de migration : **ne pas réécrire un exercice qui fonctionne déjà po
 - Le DOM devrait privilégier à terme l'application/retrait de classes CSS plutôt qu'une longue liste de styles écrits directement en JavaScript, mais cette amélioration n'est pas faite pendant la première implantation.
 
 ## Journal des migrations
+
+Le 2026-10-06, deux archives dérivées du labo 14 ont été créées : `web/static/files/rencontre8/rencontre8-classes-attributs.zip` (exercices 1–2, sans tâches conditionnelles dans le premier) et `web/static/files/rencontre9/rencontre9-conditions-dom.zip` (uniquement les deux tâches retirées). Les pages R8 et R9 pointent vers ces archives. `420905_lab14/` et `420905_lab14.zip` restent les sources historiques; les exercices 3–4 n'ont pas été migrés.
 
 | Date | Changement | Sources concernées | Exercices concernés | État |
 |---|---|---|---|---|

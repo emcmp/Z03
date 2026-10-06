@@ -58,7 +58,7 @@ document.querySelector(".classe").classList.toggle("classe_a_basculer");
 
 <center>![Classes](../../static/img/cours15/onlyFirst.png)</center>
 
-⛔ De plus, notez que si on **retire toutes les classes** d'un élément, il ne sera plus possible de le manipuler facilement à l'aide de `dcoument.querySelector(...)` : 
+⛔ De plus, notez que si on **retire toutes les classes** d'un élément, il ne sera plus possible de le manipuler facilement à l'aide de `document.querySelector(...)` : 
 
 <center>![Classes](../../static/img/cours15/noClass.png)</center>
 

@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+body{
+    font-family:verdana;
+}
+
+#description{
+    background:linear-gradient(to bottom, #a0c0fb, #6d85d4, #5f54b1);
+    width:800px;
+    margin:auto;
+    color:rgb(237, 245, 243);
+    border-radius:20px;
+    padding:10px 15px;
+}
+
+#description p, #description ul{
+    font-size:1.2em;
+}
+
+#description h2, #description p{
+    margin:5px 0px;
+}
+
+nav{
+    justify-content: center;
+    display: flex;
+    gap:5px;
+    margin-bottom: 10px;
+}
+
+nav a{
+    display:inline-block;
+    background:linear-gradient(to bottom, #a0c0fb, #6d85d4, #5f54b1);
+    border-radius:5px;
+    padding:5px 10px;
+    font-weight:bold;
+    color:white;
+    text-decoration: none;
+}
+
+#container{
+    width:800px;
+    margin:auto;
+    margin-top:20px;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+button{
+    padding:5px 10px;
+    font-size:1.2em;
+    cursor:pointer;
+    margin:10px;
+}
+
+.row{
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    width:800px;
+}
+
+[class^="texte"]{
+    margin-top:10px;
+    width:600px;
+    border:black solid 2px;
+    border-radius:5px;
+    padding:10px;
+}
+
+.objetBrun{
+    border:#8f6132 solid 4px;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+.brun{
+    border-color:#583512;
+    background-color:#8f6132;
+    color:white;
+    font-family:"Segoe print";
+    font-weight:bold;
+}
