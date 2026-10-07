@@ -185,7 +185,7 @@ Le 2026-10-06, deux archives dérivées du labo 14 ont été créées : `web/sta
 
 | Date | Changement | Sources concernées | Exercices concernés | État |
 |---|---|---|---|---|
-| 2026-08-18 | Création du registre de suivi | Cours 1 à 15 | Labos 2–6 et 11–15 inventoriés | En cours |
+| 2026-10-07 | Relance du déploiement GitHub Pages après attente d'approbation incohérente avec la configuration courante de l'environnement `github-pages` | `.github/workflows/deploy.yml`, environnement `github-pages` | Aucun contenu pédagogique modifié | Relance technique |\n| 2026-08-18 | Création du registre de suivi | Cours 1 à 15 | Labos 2–6 et 11–15 inventoriés | En cours |
 | 2026-08-18 | Sommative fixée à la rencontre 15 | Ancien cours 10 | Aucun labo | Décidé |
 | 2026-08-18 | Fusion booléens + opérateurs logiques envisagée | Anciens cours 5 et 6 | `420905_lab5.zip`, `420905_lab6.zip` | À réaliser lors de la réorganisation |
 | 2026-08-18 | Rencontre 14 réservée comme buffer / travail / rattrapage | Future rencontre 14 | À déterminer | Décidé |
