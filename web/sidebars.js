@@ -200,6 +200,16 @@ const sidebars = {
           id: "cours/rencontre9-operateurs-logiques",
           label: "Cours — Opérateurs logiques",
         },
+        {
+          type: "ref",
+          id: "labos/labo5",
+          label: "Laboratoire — Conditions",
+        },
+        {
+          type: "ref",
+          id: "labos/labo6",
+          label: "Laboratoire — Opérateurs logiques",
+        },
       ],
     },
     { type: "doc", id: "cours/rencontre10", label: "Rencontre 10 — Boucles" },
