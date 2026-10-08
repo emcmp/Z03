@@ -243,6 +243,38 @@ const sidebars = {
       id: "labos/labo3",
       label: "Rencontre 7 — DOM et fonctions",
     },
+    {
+      type: "category",
+      label: "Rencontre 8 — Interactivité, classes et attributs",
+      items: [
+        {
+          type: "doc",
+          id: "labos/labo4",
+          label: "Événements et styles",
+        },
+        {
+          type: "doc",
+          id: "labos/labo14",
+          label: "Classes et attributs",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Rencontre 9 — Conditions et logique",
+      items: [
+        {
+          type: "doc",
+          id: "labos/labo5",
+          label: "Booléens et conditions",
+        },
+        {
+          type: "doc",
+          id: "labos/labo6",
+          label: "Opérateurs logiques",
+        },
+      ],
+    },
   ],
 };
 
