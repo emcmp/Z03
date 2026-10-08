@@ -178,6 +178,16 @@ const sidebars = {
           id: "cours/rencontre8-classes-attributs",
           label: "Cours — Classes et attributs",
         },
+        {
+          type: "ref",
+          id: "labos/labo4",
+          label: "Laboratoire — Événements et styles",
+        },
+        {
+          type: "ref",
+          id: "labos/labo14",
+          label: "Laboratoire — Classes et attributs",
+        },
       ],
     },
     {
