@@ -165,6 +165,14 @@ L'exercice guidé de la rencontre 2 contient maintenant un encadré **📥 Fichi
 
 # Rencontres suivantes
 
+## TP2 — Roche-Papier-Ciseaux (R7 à R10)
+
+| Ressource | Emplacement prévu | Contenu attendu | État |
+| --- | --- | --- | --- |
+| `tp2-roche-papier-ciseaux-etudiants.zip` | `web/static/files/travaux-pratiques/` | Paquet officiel étudiant : `TP2_Etudiants/js/script.js` à compléter, `TP2_Etudiants/js/aide-tests.js` avec les tests R7/R8/R9, `TP2_Etudiants/images/roche.png`, autres fichiers du jeu et `ENONCE_TP2.html`. Aucun corrigé enseignant. | **À fournir** — aucun candidat trouvé parmi les 332 ZIP inspectés dans le dépôt et ses dossiers temporaires le 2026-10-21. |
+
+Page préparée : `web/docs/05-travaux-pratiques/01-tp2.md`. Aucun lien de téléchargement avant réception et vérification du paquet officiel. Ne pas utiliser l'ancien `web/static/files/tp2.zip`. La PR doit rester en brouillon tant que le ZIP manque; reprise décrite dans `PLAN_INTEGRATION_TP2.md`.
+
 La liste doit être enrichie **au moment où chaque nouvelle rencontre est conçue**, avant de considérer son matériel prêt pour la classe.
 
 Pour toute nouvelle ressource, noter au minimum :
