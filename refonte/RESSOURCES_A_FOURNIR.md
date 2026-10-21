@@ -169,9 +169,9 @@ L'exercice guidé de la rencontre 2 contient maintenant un encadré **📥 Fichi
 
 | Ressource | Emplacement prévu | Contenu attendu | État |
 | --- | --- | --- | --- |
-| `tp2-roche-papier-ciseaux-etudiants.zip` | `web/static/files/travaux-pratiques/` | Paquet officiel étudiant : `TP2_Etudiants/js/script.js` à compléter, `TP2_Etudiants/js/aide-tests.js` avec les tests R7/R8/R9, `TP2_Etudiants/images/roche.png`, autres fichiers du jeu et `ENONCE_TP2.html`. Aucun corrigé enseignant. | **À fournir** — aucun candidat trouvé parmi les 332 ZIP inspectés dans le dépôt et ses dossiers temporaires le 2026-10-21. |
+| `tp2-roche-papier-ciseaux-etudiants.zip` | `web/static/files/travaux-pratiques/` | Paquet officiel déposé par l'utilisateur : racine `TP2_Etudiants/`, `index.html`, `js/script.js` à compléter, `js/aide-tests.js` avec les aides R7/R8/R9, CSS, huit images et `ENONCE_TP2.html`. Aucun corrigé enseignant. | **Prêt** — 8 629 669 octets; 13 fichiers inspectés, intégrité ZIP et téléchargement HTTP exact vérifiés; lien portable intégré à la page TP2. |
 
-Page préparée : `web/docs/05-travaux-pratiques/01-tp2.md`. Aucun lien de téléchargement avant réception et vérification du paquet officiel. Ne pas utiliser l'ancien `web/static/files/tp2.zip`. La PR doit rester en brouillon tant que le ZIP manque; reprise décrite dans `PLAN_INTEGRATION_TP2.md`.
+Page : `web/docs/05-travaux-pratiques/01-tp2.md`, encadré **📥 Fichier à télécharger**. ZIP conservé sans modification; SHA-256 : `915807263279e302afca7d179c117dc8065c8dd0aaf2ca9b40c7c8a877a18b73`. L'ancien `web/static/files/tp2.zip` n'est pas utilisé. Validation et livraison décrites dans `PLAN_INTEGRATION_TP2.md`.
 
 La liste doit être enrichie **au moment où chaque nouvelle rencontre est conçue**, avant de considérer son matériel prêt pour la classe.
 
