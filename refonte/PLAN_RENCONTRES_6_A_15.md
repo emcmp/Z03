@@ -1,6 +1,8 @@
 # Plan de refonte — Rencontres 6 à 15
 
-**Mise à jour : 2026-08-26**
+**Mise à jour : 2026-10-26**
+
+**Séquence pédagogique révisée et approuvée :** R10 = paramètres et retours; R11 = boucles; R12 = tableaux et parcours. `do...while` facultatif; `push`, `pop`, `splice` conservés; `querySelectorAll` et les exercices associés mis en réserve **sans effacer les sources historiques**. R13–R14 sont consacrées au TP3, avec possibilité d'un court formatif.
 
 Ce document est la **référence pédagogique canonique pour la planification des rencontres 6 à 15** pendant la refonte de Z03.
 
@@ -44,9 +46,9 @@ La règle de migration minimale demeure valide : ne scinder un laboratoire que l
 | **R7** | Premier effet JavaScript visible : DOM + fonctions simples + portée des variables | ancien cours 3 + portée de l'ancien cours 4 | labo 3 + labo 4 ex. 1 | garder le bloc ensemble et y ajouter la portée |
 | **R8** | Interactivité, événements, styles, classes et attributs | ancien cours 4 sans la portée + ancien cours 14 | labo 4 ex. 2–5 + portions pertinentes du labo 14 | mini-quiz 10 % au début; section `.style` conservée |
 | **R9** | Faire prendre des décisions au programme | anciens cours 5 + 6 | labos 5 + 6 | placer les deux blocs ensemble sans les réécrire |
-| **R10** | Répéter un traitement | ancien cours 11 | labo 11 | conserver d'abord le matériel de boucles tel quel |
-| **R11** | Tableaux, parcours, puis plusieurs éléments DOM | anciens cours 12 + 15 | labo 12 + labo 15 ex. 1–3 | `querySelectorAll` suit naturellement tableaux + parcours |
-| **R12** | Paramètres, retours et intégration | ancien cours 13 | labo 13 + labo 15 ex. 4 | dernière nouvelle matière essentielle |
+| **R10** | Déclarer et appeler des fonctions réutilisables avec paramètres et retours | ancien cours 13 | labo 13 exercices 1 et 2 | théorie intégrale, exercices 3 et 4 conservés en réserve |
+| **R11** | Répéter des traitements dans le DOM | ancien cours 11 | labo 11 | `while` essentiel, `do...while` facultatif |
+| **R12** | Tableaux, opérations et parcours | ancien cours 12 | labo 12 | `push`, `pop`, `splice` conservés; `querySelectorAll` en réserve; lancement TP3 |
 | **R13** | TP / intégration / travail supervisé | aucune nouvelle théorie | candidats : labo 14 ex. 3–4 et autres exercices éprouvés au besoin | sélection finale après mise en place R6–R12 |
 | **R14** | TP / rattrapage / reprises / révision | aucune nouvelle théorie | matériel de reprise au besoin | buffer |
 | **R15** | Évaluation sommative finale | — | — | examen final 30 % |
@@ -76,32 +78,22 @@ Cette scission ne nécessite aucune réécriture des exercices.
 
 Fusion de rencontre confirmée. Les deux cours et les deux laboratoires sont placés sous R9. Les répétitions pourront être évaluées seulement lors de la révision ultérieure.
 
-### Ancien 11 → R10
+### Ancien 13 → R10 : paramètres et retours
 
-Le cours et le labo historiques sur les boucles sont placés tels quels dans la première implantation.
+La théorie historique est conservée intégralement. Le laboratoire 13 accompagne R10 avec ses **exercices 1 et 2 obligatoires**; ses exercices 3 et 4 demeurent dans les ressources historiques, sans être exigés avant les boucles et les tableaux.
 
-L'analyse des exercices a fait émerger `for` comme **piste intéressante pour une future simplification**, mais cette piste ne justifie pas de réécrire maintenant une théorie historique construite autour de `while` et `do...while`.
+### Ancien 11 → R11 : DOM et boucles
 
-Le choix final de la forme principale de boucle est donc **reporté à la phase de révision pédagogique**, après mise en place complète de R6–R12.
+Le cours et le laboratoire historiques sur les boucles sont repositionnés en R11. `while` reste à maîtriser; `do...while` devient facultatif, sans supprimer son contenu. La révision qualitative de R11 reste à faire.
 
-### Anciens 12 + 15 → R11, avec exercice 4 du labo 15 en R12
+### Ancien 12 → R12 : tableaux et parcours
 
-R11 suit la progression :
+Les tableaux, indices, `length`, parcours avec une boucle et `push()`, `pop()`, `splice()` restent au programme (méthodes utiles au TP3 historique). La révision détaillée des exercices R12 reste à faire.
 
-```text
-tableaux → index / length → opérations → parcours → querySelectorAll → parcours de plusieurs éléments HTML
-```
+### Ancien 15 → réserve : `querySelectorAll()`
 
-Le cours 15 peut être placé immédiatement après le cours 12.
+La théorie et les exercices du laboratoire 15 sont conservés physiquement mais retirés de la navigation pédagogique obligatoire. Tant que cette notion n'est pas enseignée, elle n'est ni un préalable au TP3 ni une exigence pour l'examen.
 
-Pour les exercices :
-
-- **labo 15 ex. 1–3 → R11** : `querySelectorAll`, collection d'éléments et parcours;
-- **labo 15 ex. 4 → R12** : fonction paramétrée, retour et réutilisation en plus du parcours DOM.
-
-### Ancien 13 → R12
-
-Paramètres, arguments, fonctions réutilisables et valeurs de retour. R12 intègre également le labo 15 ex. 4.
 
 ## Notions à conserver dans le matériel initial
 
@@ -118,7 +110,7 @@ Notamment :
 - boucles présentes dans le cours/labo 11;
 - tableaux, index, `length`, `push`, `pop`, `splice`;
 - paramètres et `return`;
-- `querySelectorAll`.
+- `querySelectorAll` (en réserve, hors programme obligatoire).
 
 La présence d'une notion dans du **code fourni** n'implique pas automatiquement qu'elle devient une compétence à évaluer.
 
@@ -137,11 +129,10 @@ Les analyses ont relevé plusieurs pistes qui pourront être examinées une fois
 
 Ces points sont des **notes de révision**, pas des instructions d'implantation immédiate.
 
-## `querySelectorAll`
+## `querySelectorAll` (en réserve)
 
-`querySelectorAll` doit être enseigné avant R13.
+La théorie et les exercices du laboratoire 15 demeurent conservés. Ils ne sont plus au programme obligatoire et ne doivent pas être exigés aux évaluations sans enseignement explicite.
 
-La destination stabilisée est **R11** pour le cours 15 et les exercices 1–3 du labo 15. L'exercice 4 passe en R12 puisqu'il combine ce mécanisme avec paramètres et retour.
 
 ## R13 et matériel historique plus avancé
 

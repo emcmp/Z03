@@ -1,5 +1,7 @@
 # Suivi de la refonte du contenu Z03
 
+**Décision pédagogique validée le 26 octobre 2026 :** R10 — fonctions avec paramètres et retours (ancien cours 13, labo 13 exercices 1 et 2 seulement); R11 — boucles DOM (ancien cours 11, `do...while` facultatif); R12 — tableaux, parcours et méthodes `push()`, `pop()`, `splice()` (ancien cours 12). `querySelectorAll()` et le labo 15 sont mis en réserve, sans aucune suppression. R13–R14 demeurent réservées au TP3 et à un éventuel formatif plus court. Les sources d'origine restent disponibles.
+
 Ce document sert de registre de migration pendant la refonte du cours. Il doit être mis à jour chaque fois qu'une rencontre est déplacée, fusionnée, supprimée ou réécrite.
 
 ## Règle de traçabilité
@@ -40,11 +42,11 @@ Consulter également :
 | 8 | TP1 | Temps consacré au TP1 | Ancien TP supprimé de Z03 | Rencontre à récupérer | Aucun ancien TP à préserver; réaffecter la rencontre. |
 | 9 | Examen formatif 1 | Révision / formatif | Pas de labo associé | Formatif possiblement hors classe | Ne pas réserver nécessairement une rencontre complète; conserver l'idée d'une activité formative autonome. |
 | 10 | Examen sommatif 1 | Évaluation sommative | Pas de labo associé | **Déplacer l'évaluation sommative à la rencontre 15** | Adapter plus tard la portée de l'évaluation à la nouvelle séquence. |
-| 11 | Boucles | `while`, `do while` | Labo 11 → `420905_lab11.zip` | À conserver, probablement simplifier | Extraire et réévaluer les exercices; privilégier les boucles réellement utiles à Z03. |
-| 12 | Tableaux | Tableaux et parcours avec une boucle | Labo 12 → `420905_lab12.zip` | À conserver | Garder la relation boucles → tableaux; vérifier les exercices après réorganisation. |
-| 13 | Paramètres et retours | Fonctions avec paramètres et valeurs de retour | Labo 13 → `420905_lab13.zip` | Probablement à fusionner avec l'introduction aux fonctions | Extraire le labo 13 et rattacher les exercices à la future rencontre sur les fonctions. |
+| 11 | Boucles | `while`, `do while` | Labo 11 → `420905_lab11.zip` | **R11 — boucles DOM** | `while` à maîtriser; `do...while` facultatif. Sources historiques conservées. |
+| 12 | Tableaux | Tableaux et parcours avec une boucle | Labo 12 → `420905_lab12.zip` | **R12 — tableaux** | Indices, `length`, boucles, `push`, `pop`, `splice` maintenus, lancement TP3. |
+| 13 | Paramètres et retours | Fonctions avec paramètres et valeurs de retour | Labo 13 → `420905_lab13.zip` | **R10 — paramètres et retours** | Théorie historique déplacée intégralement; ex. 1 et 2 seuls obligatoires, ex. 3 et 4 en réserve. Archive dérivée R10, source historique intacte. |
 | 14 | Classes et attributs | Classes, attributs, élément HTML en variable | Labo 14 → `420905_lab14.zip` | R8/R9 dérivés | Exercice 1 : `add/remove/toggle` et attributs en R8; tâches `contains` et alternance d'image selon `alt` en R9. Exercice 2 conservé en R8. Exercices 3–4 en attente; source intacte. |
-| 15 | Tableaux d'éléments HTML | `querySelectorAll`, collections d'éléments, boucles | Labo 15 → `420905_lab15.zip` | Matière à déplacer plus tôt; rencontre 15 réservée à l'examen | Extraire le labo 15 et rattacher les exercices à la future rencontre DOM + tableaux/boucles. |
+| 15 | Tableaux d'éléments HTML | `querySelectorAll`, collections d'éléments, boucles | Labo 15 → `420905_lab15.zip` | **Réserve** | Fichiers et exercices conservés, sans navigation ni évaluation obligatoire. |
 
 ## Nouvelles sources HTML / CSS
 

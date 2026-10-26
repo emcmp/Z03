@@ -1,5 +1,7 @@
 # Plan d'implémentation — rencontres 6 à 15
 
+> **Mise à jour du 26 octobre 2026 :** séquence approuvée R10 = fonctions avec paramètres et retours (ancien cours 13 et laboratoire 13 ex. 1–2); R11 = boucles DOM (ancien cours 11/labo 11, `do...while` facultatif); R12 = tableaux et parcours (ancien cours 12/labo 12, conserver `push`, `pop`, `splice`). `querySelectorAll` et le labo 15 sont conservés en réserve hors navigation. Les pages sont repositionnées mais la révision pédagogique détaillée de R11–R12 reste à faire. Les sections de première implantation historique plus bas restent documentaires et sont supplantées par ce nouveau plan.
+
 **Statut du plan : actif**  
 **Dernière mise à jour : 2026-10-16**
 
@@ -27,9 +29,9 @@ Pendant cette passe :
 | **R7** | **Implanté / révisé** | Ancien cours 3 + labo 3, avec portée locale/globale et labo 4 exercice 1 déplacés depuis R8. |
 | **R8** | **Prêt à réviser** | Ancien cours 4 sans la portée + ancien cours 14; labo 4 exercices 2–5. Labo 14 exercices 1–2 dérivés dans `rencontre8-classes-attributs.zip`; les deux tâches conditionnelles de l'exercice 1 passent à R9. |
 | **R9** | **Implanté; corrigé séparé disponible** | Anciens cours 5 + 6 en deux pages inchangées dans le présent lot; dix activités consolidées dans `rencontre9.zip`, dont les deux tâches DOM du labo 14. Corrigé public distinct dans `rencontre9-corrige.zip`; suivi courant dans `PLAN_CORRIGES_R9.md`. |
-| **R10** | **Implanté** | Ancien cours 11 + labo 11; `while`, `do...while` et débogueur optionnel conservés tels quels. |
-| **R11** | **Implanté** | Ancien cours 12 + ancien cours 15 en deux pages; labo 12 + exercices 1–3 du labo 15. |
-| **R12** | **Implanté** | Ancien cours 13 + labo 13 + exercice 4 du labo 15. |
+| **R10** | **Préparé pour révision** | Ancien cours 13 (paramètres/retours) déplacé; labo 13 exercices 1–2 obligatoires. |
+| **R11** | **Déplacé, révision à venir** | Ancien cours 11 + labo 11; `while` obligatoire, `do...while` facultatif. |
+| **R12** | **Déplacé, révision à venir** | Ancien cours 12 + labo 12; tableaux, parcours, `push`/`pop`/`splice` maintenus, `querySelectorAll` en réserve. |
 | **R13–R15** | À faire après R6–R12 | Intégration / buffer / examen. |
 | **Validation CI** | **Blocages historiques dépassés** | Typecheck/build et workflow personnel réussis lors de la livraison `12812aa` du 2026-10-16. Les restrictions du 2026-10-09 sont conservées plus bas comme historique. Validation du présent lot suivie dans `PLAN_CORRIGES_R9.md`. |
 
@@ -41,9 +43,9 @@ Pendant cette passe :
 | **R7** | ancien cours 3 — DOM et fonctions + portée locale/globale de l'ancien cours 4 | labo 3 + labo 4 exercice 1 | conserver le bloc ensemble et ajouter la portée |
 | **R8** | ancien cours 4 sans la portée + ancien cours 14 | labo 4 exercices 2–5 + portions pertinentes du labo 14 | mini-quiz 10 % au début; événements/styles ensuite; `.style` conservé |
 | **R9** | anciens cours 5 + 6 | labos 5 + 6 | placer ensemble sans enlever les doublons dans la première passe |
-| **R10** | ancien cours 11 — boucles | labo 11 | conserver d'abord `while` / `do...while` tels qu'enseignés historiquement; choix final reporté |
-| **R11** | ancien cours 12 + ancien cours 15 | labo 12 + labo 15 exercices 1–3 | tableaux, parcours, puis `querySelectorAll` |
-| **R12** | ancien cours 13 | labo 13 + labo 15 exercice 4 | paramètres, retours et intégration |
+| **R10** | ancien cours 13 — paramètres et retours | labo 13 exercices 1–2 | conserver toute la théorie; exercices 3–4 en réserve |
+| **R11** | ancien cours 11 — boucles | labo 11 | `while` essentiel; `do...while` facultatif |
+| **R12** | ancien cours 12 — tableaux | labo 12 | tableaux/parcours/`push`/`pop`/`splice`; `querySelectorAll` en réserve |
 | **R13** | aucune nouvelle théorie essentielle | candidats d'intégration, notamment labo 14 exercices 3–4 au besoin | TP / intégration / travail supervisé |
 | **R14** | aucune nouvelle théorie essentielle | reprises / suite du TP | buffer |
 | **R15** | aucune nouvelle théorie | — | examen final 30 % |
@@ -130,7 +132,7 @@ Première implantation réalisée :
 
 **État : Implanté.**
 
-## R10 — Boucles
+## Historique de la première implantation — R10 Boucles (maintenant R11)
 
 **Sources :** ancien cours 11 + labo 11.
 
@@ -145,7 +147,7 @@ La possibilité d'utiliser éventuellement `for` comme forme principale reste un
 
 **État : Implanté.**
 
-## R11 — Tableaux et plusieurs éléments DOM
+## Historique de la première implantation — R11 Tableaux et DOM (tableaux maintenant R12)
 
 **Sources :** ancien cours/labo 12 + ancien cours 15 + labo 15 exercices 1–3.
 
@@ -162,7 +164,7 @@ Côté exercices :
 
 **État : Implanté.**
 
-## R12 — Paramètres, retours et intégration
+## Historique de la première implantation — R12 Paramètres et retours (maintenant R10)
 
 **Sources :** ancien cours/labo 13 + labo 15 exercice 4.
 
