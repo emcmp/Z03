@@ -29,7 +29,7 @@ Pendant cette passe :
 | **R7** | **Implanté / révisé** | Ancien cours 3 + labo 3, avec portée locale/globale et labo 4 exercice 1 déplacés depuis R8. |
 | **R8** | **Prêt à réviser** | Ancien cours 4 sans la portée + ancien cours 14; labo 4 exercices 2–5. Labo 14 exercices 1–2 dérivés dans `rencontre8-classes-attributs.zip`; les deux tâches conditionnelles de l'exercice 1 passent à R9. |
 | **R9** | **Implanté; corrigé séparé disponible** | Anciens cours 5 + 6 en deux pages inchangées dans le présent lot; dix activités consolidées dans `rencontre9.zip`, dont les deux tâches DOM du labo 14. Corrigé public distinct dans `rencontre9-corrige.zip`; suivi courant dans `PLAN_CORRIGES_R9.md`. |
-| **R10** | **Préparé pour révision** | Ancien cours 13 (paramètres/retours) déplacé; labo 13 exercices 1–2 obligatoires. |
+| **R10** | **Préparé pour révision** | Ancien cours 13 (paramètres/retours) déplacé; labo 13 exercices 1–2 seuls distribués dans `rencontre10.zip`, avec corrigé séparé dans `rencontre10-corrige.zip`. Exercices 3–4 uniquement archivés dans les sources historiques. |
 | **R11** | **Déplacé, révision à venir** | Ancien cours 11 + labo 11; `while` obligatoire, `do...while` facultatif. |
 | **R12** | **Déplacé, révision à venir** | Ancien cours 12 + labo 12; tableaux, parcours, `push`/`pop`/`splice` maintenus, `querySelectorAll` en réserve. |
 | **R13–R15** | À faire après R6–R12 | Intégration / buffer / examen. |
