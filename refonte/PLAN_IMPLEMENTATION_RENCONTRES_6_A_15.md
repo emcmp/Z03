@@ -1,5 +1,7 @@
 # Plan d'implémentation — rencontres 6 à 15
 
+> **Complément du 28 octobre 2026 — R12 :** deux activités essentielles (opérations et parcours `while`), quatre activités facultatives dans une archive indépendante, solutions séparées et historique `420905_lab12` préservé. Corrigés et ZIPs à valider avant diffusion officielle.
+
 > **Mise à jour du 26 octobre 2026 :** séquence approuvée R10 = fonctions avec paramètres et retours (ancien cours 13 et laboratoire 13 ex. 1–2); R11 = boucles DOM (ancien cours 11/labo 11, `do...while` facultatif); R12 = tableaux et parcours (ancien cours 12/labo 12, conserver `push`, `pop`, `splice`). `querySelectorAll` et le labo 15 sont conservés en réserve hors navigation. Les pages sont repositionnées mais la révision pédagogique détaillée de R11–R12 reste à faire. Les sections de première implantation historique plus bas restent documentaires et sont supplantées par ce nouveau plan.
 
 **Statut du plan : actif**  
@@ -31,7 +33,7 @@ Pendant cette passe :
 | **R9** | **Implanté; corrigé séparé disponible** | Anciens cours 5 + 6 en deux pages inchangées dans le présent lot; dix activités consolidées dans `rencontre9.zip`, dont les deux tâches DOM du labo 14. Corrigé public distinct dans `rencontre9-corrige.zip`; suivi courant dans `PLAN_CORRIGES_R9.md`. |
 | **R10** | **Préparé pour révision** | Ancien cours 13 (paramètres/retours) déplacé; labo 13 exercices 1–2 seuls distribués dans `rencontre10.zip`, avec corrigé séparé dans `rencontre10-corrige.zip`. Exercices 3–4 uniquement archivés dans les sources historiques. |
 | **R11** | **Révisé, validation enseignante à venir** | Cours `while` conservé; `do...while` explicitement facultatif; labo 11 dérivé en `rencontre11.zip` (ex. 1–2 essentiels, ex. 3 défi facultatif) avec corrigés séparés. Ex. 4 préservé uniquement en archives historiques. |
-| **R12** | **Déplacé, révision à venir** | Ancien cours 12 + labo 12; tableaux, parcours, `push`/`pop`/`splice` maintenus, `querySelectorAll` en réserve. |
+| **R12** | **Révisé, à valider** | Ancien cours 12 : tableau, index, `length`, `push`, `pop`, `splice`, parcours avec `while`. Deux exercices essentiels adaptés + quatre activités pour aller plus loin dans ZIP indépendant, corrigés séparés. Sources du labo 12 inchangées. |
 | **R13–R15** | À faire après R6–R12 | Intégration / buffer / examen. |
 | **Validation CI** | **Blocages historiques dépassés** | Typecheck/build et workflow personnel réussis lors de la livraison `12812aa` du 2026-10-16. Les restrictions du 2026-10-09 sont conservées plus bas comme historique. Validation du présent lot suivie dans `PLAN_CORRIGES_R9.md`. |
 
@@ -45,7 +47,7 @@ Pendant cette passe :
 | **R9** | anciens cours 5 + 6 | labos 5 + 6 | placer ensemble sans enlever les doublons dans la première passe |
 | **R10** | ancien cours 13 — paramètres et retours | labo 13 exercices 1–2 | conserver toute la théorie; exercices 3–4 en réserve |
 | **R11** | ancien cours 11 — boucles | labo 11 exercices 1–3 | `while` essentiel; ex. 3 défi; ex. 4 et `do...while` en réserve historique |
-| **R12** | ancien cours 12 — tableaux | labo 12 | tableaux/parcours/`push`/`pop`/`splice`; `querySelectorAll` en réserve |
+| **R12** | ancien cours 12 — tableaux | labo 12 ex. 1 et 4 (allégés), ex. 2–3 et compléments en facultatif | tableaux, index, `length`, `push`, `pop`, `splice`, parcours `while`; aucune dépendance à `querySelectorAll` |
 | **R13** | aucune nouvelle théorie essentielle | candidats d'intégration, notamment labo 14 exercices 3–4 au besoin | TP / intégration / travail supervisé |
 | **R14** | aucune nouvelle théorie essentielle | reprises / suite du TP | buffer |
 | **R15** | aucune nouvelle théorie | — | examen final 30 % |

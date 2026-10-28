@@ -84,7 +84,7 @@ Exemple : une question sur une boucle ou un événement peut naturellement néce
 - `&&` et `||`;
 - boucles;
 - tableaux, index, `length` et parcours;
-- `querySelectorAll` et manipulation de plusieurs éléments;
+- `querySelectorAll` et manipulation de plusieurs éléments (ancienne cible, maintenant en réserve : **non exigées** dans la séquence R6–R12);
 - fonctions avec paramètres;
 - fonctions avec valeur de retour;
 - intégration de plusieurs notions dans quelques problèmes plus riches.
