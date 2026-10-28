@@ -22,6 +22,10 @@ Ne jamais laisser une dépendance implicite du type « image fournie en classe �
 |---|---|---|---|
 | `rencontre8-classes-attributs.zip` | `web/static/files/rencontre8/` | Labo 14 dérivé : exercice 1 réduit aux classes et attributs; exercice 2 conservé | Prêt |
 | `rencontre9-conditions-dom.zip` | `web/static/files/rencontre9/` | Deux tâches DOM avec `if/else` issues du labo 14 | Prêt |
+| `rencontre12.zip` | `web/static/files/` | Deux exercices essentiels R12, tableaux et parcours `while`, sans réponses | Prêt |
+| `rencontre12-corrige.zip` | `web/static/files/` | Corrigé distinct des deux exercices essentiels R12 | Prêt |
+| `rencontre12-pour-aller-plus-loin.zip` | `web/static/files/` | Quatre activités facultatives R12 : deux compléments et anciens exercices Amis/Cochons | Prêt |
+| `rencontre12-pour-aller-plus-loin-corrige.zip` | `web/static/files/` | Solutions distinctes des quatre activités facultatives R12 | Prêt |
 | `rencontre11.zip` | `web/static/files/` | R11, boucle `while` : ex. 1–2 essentiels, ex. 3 défi facultatif; dossiers `exercice01`–`exercice03` sans corrigés | Prêt |
 | `rencontre11-corrige.zip` | `web/static/files/` | Corrigé distinct des trois exercices R11; exercices 4 et `do...while` conservés dans les sources historiques, non distribués | Prêt |
 

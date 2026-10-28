@@ -162,7 +162,7 @@ monTableau.pop();
 Exemple :
 
 ```js
-let notes = [68, 71 93, 78];
+let notes = [68, 71, 93, 78];
 
 notes.pop();
 // contient maintenant [68, 71, 93]
@@ -235,7 +235,7 @@ Par exemple, avec ce tableau :
 let lettres = ["a", "b", "c"];
 ```
 
-On aura besoin d'une boucle qui parcourir les index `0`, puis `1`, puis `2`. 
+On aura besoin d'une boucle qui parcourra les index `0`, puis `1`, puis `2`. 
 
 C'est à dire qui parcourt tous les index, de `0` à `lettres.length - 1`.
 
