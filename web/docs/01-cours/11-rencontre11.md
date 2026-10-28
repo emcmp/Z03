@@ -1,6 +1,6 @@
 ---
 title: Rencontre 11 - Boucles
-description: Boucles while et boucles do while
+description: Boucles while, compteurs et manipulation du DOM
 ---
 
 # Rencontre 11 - Boucles
@@ -131,7 +131,9 @@ Les **conditions** de nos boucles peuvent être aussi sophistiquées que nécess
 * À cause de la **condition**, dès que `x` atteindra `5` ou plus OU dès que `y` atteindra `5` ou moins, la boucle s’**arrêtera**.
 * Comme `y` diminue plus rapidement que `x` augmente, la boucle s’arrête alors que `x` respecte encore la condition, mais `y` vaut `4` et ne respecte plus la condition.
 
-## 🏁 Boucles do while
+## 🏁 Pour aller plus loin — Boucles do while (facultatif)
+
+Cette forme de boucle est **facultative** dans Z03. La boucle `while` suffit pour les exercices essentiels de cette rencontre. Vous pouvez lire cette section par curiosité, mais vous n'avez pas à utiliser `do...while` pour les évaluations.
 
 Syntaxe :
 

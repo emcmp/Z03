@@ -30,7 +30,7 @@ Pendant cette passe :
 | **R8** | **Prêt à réviser** | Ancien cours 4 sans la portée + ancien cours 14; labo 4 exercices 2–5. Labo 14 exercices 1–2 dérivés dans `rencontre8-classes-attributs.zip`; les deux tâches conditionnelles de l'exercice 1 passent à R9. |
 | **R9** | **Implanté; corrigé séparé disponible** | Anciens cours 5 + 6 en deux pages inchangées dans le présent lot; dix activités consolidées dans `rencontre9.zip`, dont les deux tâches DOM du labo 14. Corrigé public distinct dans `rencontre9-corrige.zip`; suivi courant dans `PLAN_CORRIGES_R9.md`. |
 | **R10** | **Préparé pour révision** | Ancien cours 13 (paramètres/retours) déplacé; labo 13 exercices 1–2 seuls distribués dans `rencontre10.zip`, avec corrigé séparé dans `rencontre10-corrige.zip`. Exercices 3–4 uniquement archivés dans les sources historiques. |
-| **R11** | **Déplacé, révision à venir** | Ancien cours 11 + labo 11; `while` obligatoire, `do...while` facultatif. |
+| **R11** | **Révisé, validation enseignante à venir** | Cours `while` conservé; `do...while` explicitement facultatif; labo 11 dérivé en `rencontre11.zip` (ex. 1–2 essentiels, ex. 3 défi facultatif) avec corrigés séparés. Ex. 4 préservé uniquement en archives historiques. |
 | **R12** | **Déplacé, révision à venir** | Ancien cours 12 + labo 12; tableaux, parcours, `push`/`pop`/`splice` maintenus, `querySelectorAll` en réserve. |
 | **R13–R15** | À faire après R6–R12 | Intégration / buffer / examen. |
 | **Validation CI** | **Blocages historiques dépassés** | Typecheck/build et workflow personnel réussis lors de la livraison `12812aa` du 2026-10-16. Les restrictions du 2026-10-09 sont conservées plus bas comme historique. Validation du présent lot suivie dans `PLAN_CORRIGES_R9.md`. |
@@ -44,7 +44,7 @@ Pendant cette passe :
 | **R8** | ancien cours 4 sans la portée + ancien cours 14 | labo 4 exercices 2–5 + portions pertinentes du labo 14 | mini-quiz 10 % au début; événements/styles ensuite; `.style` conservé |
 | **R9** | anciens cours 5 + 6 | labos 5 + 6 | placer ensemble sans enlever les doublons dans la première passe |
 | **R10** | ancien cours 13 — paramètres et retours | labo 13 exercices 1–2 | conserver toute la théorie; exercices 3–4 en réserve |
-| **R11** | ancien cours 11 — boucles | labo 11 | `while` essentiel; `do...while` facultatif |
+| **R11** | ancien cours 11 — boucles | labo 11 exercices 1–3 | `while` essentiel; ex. 3 défi; ex. 4 et `do...while` en réserve historique |
 | **R12** | ancien cours 12 — tableaux | labo 12 | tableaux/parcours/`push`/`pop`/`splice`; `querySelectorAll` en réserve |
 | **R13** | aucune nouvelle théorie essentielle | candidats d'intégration, notamment labo 14 exercices 3–4 au besoin | TP / intégration / travail supervisé |
 | **R14** | aucune nouvelle théorie essentielle | reprises / suite du TP | buffer |

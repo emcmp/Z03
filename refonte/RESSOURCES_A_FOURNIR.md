@@ -22,6 +22,8 @@ Ne jamais laisser une dépendance implicite du type « image fournie en classe �
 |---|---|---|---|
 | `rencontre8-classes-attributs.zip` | `web/static/files/rencontre8/` | Labo 14 dérivé : exercice 1 réduit aux classes et attributs; exercice 2 conservé | Prêt |
 | `rencontre9-conditions-dom.zip` | `web/static/files/rencontre9/` | Deux tâches DOM avec `if/else` issues du labo 14 | Prêt |
+| `rencontre11.zip` | `web/static/files/` | R11, boucle `while` : ex. 1–2 essentiels, ex. 3 défi facultatif; dossiers `exercice01`–`exercice03` sans corrigés | Prêt |
+| `rencontre11-corrige.zip` | `web/static/files/` | Corrigé distinct des trois exercices R11; exercices 4 et `do...while` conservés dans les sources historiques, non distribués | Prêt |
 
 Lorsqu'un fichier doit être téléchargé par l'étudiant, la page doit le signaler de façon très visible avec un encadré portant le libellé **📥 Fichier à télécharger**.
 
