@@ -6,6 +6,14 @@ slug: /aide-memoire/telechargements
 
 Les fiches HTML autonomes peuvent être consultées sans connexion Internet une fois enregistrées sur votre ordinateur.
 
+## Aide-mémoire complet — R6 à R12
+
+**[Télécharger le fichier HTML regroupé (R6–R12)](pathname:///files/aide-memoire/aide-memoire-javascript-r6-r12.html)**
+
+Ce document regroupe les six fiches ci-dessous dans **un seul fichier HTML**, avec un sommaire par rencontre et une mise en page imprimable. Il peut être consulté sans connexion Internet après enregistrement.
+
+## Fiches individuelles
+
 :::info 📥 Fichier à télécharger
 
 | Fiche | Matière | Fichier HTML |
@@ -20,9 +28,5 @@ Les fiches HTML autonomes peuvent être consultées sans connexion Internet une 
 Ouvrez une fiche, puis utilisez la commande de votre navigateur pour enregistrer la page sur votre ordinateur. Vous pourrez ensuite ouvrir le fichier HTML enregistré dans votre navigateur pour le consulter hors ligne.
 
 :::
-
-## Futur aide-mémoire complet R6 à R12
-
-À venir : les fiches individuelles R6–R12 sont disponibles, mais leur assemblage en un seul fichier sera préparé et validé séparément.
 
 Ces ressources servent à la révision. L’enseignant détermine les documents expressément permis à l’examen.
