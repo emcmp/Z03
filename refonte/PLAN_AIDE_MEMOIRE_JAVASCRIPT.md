@@ -42,3 +42,7 @@ Portée : trois HTML autonomes et un menu principal, selon la demande de l’ens
 La validation ne change aucune compétence évaluée. R10–R12 ne sont pas affichées. La rédaction finale reste à réviser par l’enseignant.
 
 Validation : `npm run build` avec `GITHUB_REPOSITORY=emcmp/Z03` réussi, code 0, le 28 octobre 2026; trois HTML présents dans `web/build`; 21 liens d’ancre internes valides. La navigation utilise `to: 'pathname:///files/...'` et `target: '_self'`, compatibles avec le baseUrl. R10–R12 absentes volontairement.
+
+## Rencontre 10 — Aide-mémoire
+
+Ajout de la fiche R10 à la section de consultation et aux téléchargements : `web/docs/06-aide-memoire/05-rencontre10.md` et `web/static/files/rencontre10/aide-memoire-rencontre10.html`. Contenu repris de `web/docs/01-cours/10-rencontre10.md` : paramètres, arguments, plusieurs paramètres, réutilisation, passage de valeurs et de variables, `return`, `Math.random()`, interruption de la fonction et exemples de valeurs retournées. R11 et R12 à préparer; document fusionné R6–R12 non créé. Publication limitée à EMCMP personnel.
