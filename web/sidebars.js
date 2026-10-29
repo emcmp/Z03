@@ -7,6 +7,7 @@ const sidebars = {
     { type: "doc", id: "aide-memoire/rencontres6-7", label: "Rencontres 6 et 7" },
     { type: "doc", id: "aide-memoire/rencontre8", label: "Rencontre 8" },
     { type: "doc", id: "aide-memoire/rencontre9", label: "Rencontre 9" },
+    { type: "doc", id: "aide-memoire/rencontre10", label: "Rencontre 10" },
     { type: "doc", id: "aide-memoire/telechargements", label: "Téléchargements" },
   ],
   bienDebuter: [
