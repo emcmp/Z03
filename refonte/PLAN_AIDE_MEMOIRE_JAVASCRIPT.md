@@ -46,3 +46,9 @@ Validation : `npm run build` avec `GITHUB_REPOSITORY=emcmp/Z03` réussi, code 0,
 ## Rencontre 10 — Aide-mémoire
 
 Ajout de la fiche R10 à la section de consultation et aux téléchargements : `web/docs/06-aide-memoire/05-rencontre10.md` et `web/static/files/rencontre10/aide-memoire-rencontre10.html`. Contenu repris de `web/docs/01-cours/10-rencontre10.md` : paramètres, arguments, plusieurs paramètres, réutilisation, passage de valeurs et de variables, `return`, `Math.random()`, interruption de la fonction et exemples de valeurs retournées. R11 et R12 à préparer; document fusionné R6–R12 non créé. Publication limitée à EMCMP personnel.
+
+## Rencontre 11 — Aide-mémoire
+
+Ajout de la fiche R11 en Markdown intégré et en HTML autonome : `web/docs/06-aide-memoire/06-rencontre11.md` et `web/static/files/rencontre11/aide-memoire-rencontre11.html`.
+
+Contenu ancré dans `web/docs/01-cours/11-rencontre11.md` : boucle `while`, condition, itérations, compteur et incrémentation, accumulation avec `+=`, classes numérotées et `querySelector` / `classList.add`, prévention de boucle infinie, insertion de `if` et condition combinée `&&`. Une section séparée mentionne `do...while` et débogueur comme facultatifs et non exigés aux évaluations. R12 à rédiger avant l'éventuelle fusion R6–R12. Publication EMCMP personnel uniquement après validation CI; aucune modification au dépôt officiel.
