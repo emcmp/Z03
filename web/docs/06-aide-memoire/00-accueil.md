@@ -12,9 +12,10 @@ Utilisez le menu à gauche pour consulter les fiches de révision. Une page est 
 - [Rencontre 10](./05-rencontre10.md)
 - [Rencontre 11](./06-rencontre11.md)
 - [Rencontre 12](./07-rencontre12.md)
+- **[Aide-mémoire complet — R6 à R12](./08-complet-r6-r12.md)**
 
 La page [Téléchargements](./04-telechargements.md) donne accès aux fichiers HTML autonomes à enregistrer pour les consulter hors ligne.
 
-Un document regroupant les rencontres 6 à 12 pourra être assemblé après la révision des six fiches. Il n'est pas encore disponible au téléchargement.
+Les six fiches sont désormais réunies dans un [aide-mémoire complet R6 à R12](./08-complet-r6-r12.md), disponible sous forme d'un seul fichier HTML pour une consultation hors ligne.
 
 Ces fiches sont des ressources de révision. L’enseignant précise séparément quels documents sont expressément permis à l’examen; leur présence ici ne constitue pas une autorisation.
