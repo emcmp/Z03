@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Aide-mémoire JavaScript — Rencontre 10</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#edf2f8;color:#1e293b;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}header{background:linear-gradient(120deg,#101e39,#244d7c);color:white;padding:44px max(24px,calc((100% - 960px)/2)) 64px}header p{color:#d6e6ff;margin:0}h1{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.25;margin:12px 0}main{max-width:1040px;margin:-28px auto 40px;background:white;border-radius:18px;padding:32px 40px;box-shadow:0 12px 36px #152e4914}nav{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 28px}a{color:#174f89}nav a,.download{border:1px solid #cbd9ea;border-radius:8px;padding:6px 12px;text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:3px solid #df9b18;outline-offset:3px}section{scroll-margin-top:20px;margin:32px 0}h2{color:#183b63;font-size:1.4rem;border-bottom:2px solid #e5edf6;padding-bottom:8px}table{border-collapse:collapse;width:100%;font-size:.92rem;margin:16px 0}th{text-align:left;background:#eaf1f9;color:#183b63}th,td{padding:10px 12px;border-bottom:1px solid #dce5ef;vertical-align:top}td:first-child{width:30%}code{font-family:Consolas,"Liberation Mono",monospace;font-size:.9em;overflow-wrap:anywhere}td code{white-space:pre-wrap}pre{background:#f1f5fa;border:1px solid #dce5ef;border-radius:8px;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5}.memo{background:#edf5ff;border-left:4px solid #3473b7;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.memo p{margin:4px 0}footer{border-top:1px solid #dce5ef;padding-top:18px;font-size:.88rem;color:#526579}@media(max-width:650px){header{padding:28px 18px 48px}main{margin:-24px 10px 24px;padding:22px 14px}th,td{padding:8px}td:first-child{width:32%}}@media print{body{background:white;font-size:10pt}header{background:white;color:#183b63;padding:0}header p{color:#526579}main{box-shadow:none;margin:0;padding:0;max-width:none}nav,.download{display:none}h2{break-after:avoid}tr,.memo,pre{break-inside:avoid}a{color:inherit;text-decoration:none}section{margin:18px 0}@page{margin:15mm}}</style></head><body><header><p>Z03 · Référence de programmation</p><h1>Aide-mémoire JavaScript — Rencontre 10</h1></header><main><a class="download" href="aide-memoire-rencontre10.html" download>Télécharger cette fiche HTML</a><nav aria-label="Liens rapides"><a href="#parametres">1 · Paramètres et arguments</a><a href="#plusieurs">2 · Plusieurs paramètres</a><a href="#reutilisation">3 · Éviter de répéter des fonctions</a><a href="#arguments">4 · Envoyer une valeur ou une variable</a><a href="#retour">5 · Retourner une valeur avec return</a><a href="#hasard">6 · Math.random() et hasard</a><a href="#arret">7 · return arrête la fonction</a><a href="#recapitulatif">8 · Récapitulatif</a></nav><section id="parametres"><h2>1 · Paramètres et arguments</h2><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Déclarer une fonction avec un paramètre</td><td><code>function alerteEtConsole(message) { /* instructions */ }</code></td></tr><tr><td>Appeler la fonction avec un argument</td><td><code>alerteEtConsole(&quot;Allo&quot;);</code></td></tr><tr><td>Utiliser le paramètre dans la fonction</td><td><code>alert(message);</code></td></tr><tr><td>Réutiliser le paramètre</td><td><code>console.log(message);</code></td></tr></tbody></table><pre><code>function alerteEtConsole(message) {
+    alert(message);
+    console.log(message);
+}
+
+alerteEtConsole(&quot;Allo&quot;);</code></pre><aside class="memo"><strong>À retenir</strong><p>À la déclaration, message est un paramètre. À l'appel, « Allo » est un argument. Le paramètre est un contrat : fournir une valeur attendue pour que le code fonctionne.</p></aside></section><section id="plusieurs"><h2>2 · Plusieurs paramètres</h2><pre><code>function salutations(nom, heure) {
+    alert(`Bonjour ${nom}, il est actuellement ${heure} !`);
+}
+
+salutations(&quot;Mia&quot;, &quot;15 h&quot;);</code></pre><aside class="memo"><strong>À retenir</strong><p>Les paramètres nom et heure sont séparés par une virgule. À l'appel, les arguments suivent le même ordre.</p></aside></section><section id="reutilisation"><h2>3 · Éviter de répéter des fonctions</h2><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Choisir aussi l’élément HTML</td><td><code>function texteEtBordure(classe, couleurChoisie) { /* instructions */ }</code></td></tr><tr><td>Cibler une classe reçue en argument</td><td><code>document.querySelector(classe).style.color = couleurChoisie;</code></td></tr><tr><td>Appeler avec une classe et une couleur</td><td><code>texteEtBordure(&quot;.description&quot;, &quot;crimson&quot;);</code></td></tr></tbody></table><pre><code>function texteEtBordure(couleurChoisie) {
+    document.querySelector(&quot;.texte&quot;).style.color = couleurChoisie;
+    document.querySelector(&quot;.texte&quot;).style.borderColor = couleurChoisie;
+}
+
+texteEtBordure(&quot;pink&quot;);
+texteEtBordure(&quot;crimson&quot;);</code></pre><aside class="memo"><strong>À retenir</strong><p>Un paramètre permet de choisir une valeur à chaque appel sans recopier la même fonction.</p></aside></section><section id="arguments"><h2>4 · Envoyer une valeur ou une variable</h2><pre><code>function colorierTexte(couleur) {
+    document.querySelector(&quot;.paragraphe2&quot;).style.color = couleur;
+}
+
+colorierTexte(&quot;blue&quot;);
+
+let teinte = &quot;red&quot;;
+colorierTexte(teinte);</code></pre><aside class="memo"><strong>À retenir</strong><p>On peut transmettre directement une valeur (chaîne, nombre, booléen) ou la valeur d'une variable.</p></aside></section><section id="retour"><h2>5 · Retourner une valeur avec return</h2><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Retourner une valeur depuis la fonction</td><td><code>return pi;</code></td></tr><tr><td>Récupérer la valeur retournée</td><td><code>let resultat = valeurPi();</code></td></tr><tr><td>Utiliser directement le retour</td><td><code>alert(saluer(&quot;Simone&quot;));</code></td></tr></tbody></table><pre><code>function valeurPi() {
+    let pi = 3.14159265359;
+    return pi;
+}
+
+let resultat = valeurPi();</code></pre><aside class="memo"><strong>À retenir</strong><p>return renvoie une valeur à l'endroit de l'appel. Une fonction peut recevoir des paramètres, retourner une valeur, ou faire les deux.</p></aside></section><section id="hasard"><h2>6 · Math.random() et hasard</h2><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Obtenir un nombre aléatoire</td><td><code>Math.random()</code></td></tr><tr><td>Conserver le résultat</td><td><code>let nombreAleatoire = Math.random();</code></td></tr><tr><td>Tester un cas de 25 %</td><td><code>if (nombreAleatoire &lt; 0.25) { /* ... */ }</code></td></tr></tbody></table><pre><code>function jouer() {
+    let nombreAleatoire = Math.random();
+
+    if (nombreAleatoire &lt; 0.25) {
+        gArgent += 100;
+    }
+    else {
+        gArgent -= 50;
+    }
+}</code></pre><aside class="memo"><strong>À retenir</strong><p>Math.random() retourne un nombre entre 0 inclus et 1 exclu. Dans l'exemple du cours : 25 % de chances de gagner 100 $ et 75 % de perdre 50 $. gArgent est la variable globale utilisée dans cet exemple.</p></aside></section><section id="arret"><h2>7 · return arrête la fonction</h2><pre><code>function tousEgaux() {
+    if (gNombre1 == gNombre2 &amp;&amp; gNombre1 == gNombre3) {
+        return true;
+    }
+    return false;
+}
+
+function maximum(x, y) {
+    if (x &gt; y) {
+        return x;
+    }
+    return y;
+}
+
+let nombre = maximum(2, 4); // 4</code></pre><aside class="memo"><strong>À retenir</strong><p>Dès qu'un return est exécuté, la fonction se termine : on peut donc placer return false ou return y après le if, sans else.</p></aside></section><section id="recapitulatif"><h2>8 · Récapitulatif</h2><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Déclarer les paramètres</td><td><code>function nomDeFonction(parametre) { /* ... */ }</code></td></tr><tr><td>Fournir un argument à l’appel</td><td><code>nomDeFonction(&quot;valeur&quot;);</code></td></tr><tr><td>Retourner une valeur</td><td><code>return resultat;</code></td></tr><tr><td>Conserver le retour</td><td><code>let valeur = maFonction();</code></td></tr><tr><td>Produire un nombre aléatoire</td><td><code>Math.random()</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p>Paramètres dans la déclaration → arguments dans l'appel → utilisation des paramètres dans le corps → retour éventuel avec return. return met fin à l'exécution de la fonction.</p></aside></section><footer>Fiche autonome · Enregistrez le fichier HTML pour le consulter sans Internet. Impression : Ctrl+P (ou Cmd+P).</footer></main></body></html>
