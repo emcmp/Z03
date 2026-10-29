@@ -97,13 +97,10 @@ const navbarItems = [
     label: "Dans l'autobus",
   },
   {
+    type: "docSidebar",
+    sidebarId: "aideMemoires",
     label: "Aide-mémoire",
     position: "left",
-    items: [
-      { label: "Rencontres 6 et 7", to: "pathname:///files/rencontre6/aide-memoire-rencontres6-7.html", target: "_self" },
-      { label: "Rencontre 8", to: "pathname:///files/rencontre8/aide-memoire-rencontre8.html", target: "_self" },
-      { label: "Rencontre 9", to: "pathname:///files/rencontre9/aide-memoire-rencontre9.html", target: "_self" },
-    ],
   },
 ];
 
