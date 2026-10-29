@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Aide-mémoire JavaScript — Rencontre 11</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#edf2f8;color:#1e293b;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}header{background:linear-gradient(120deg,#101e39,#244d7c);color:white;padding:44px max(24px,calc((100% - 960px)/2)) 64px}header p{color:#d6e6ff;margin:0}h1{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.25;margin:12px 0}main{max-width:1040px;margin:-28px auto 40px;background:white;border-radius:18px;padding:32px 40px;box-shadow:0 12px 36px #152e4914}nav{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 28px}a{color:#174f89}nav a,.download{border:1px solid #cbd9ea;border-radius:8px;padding:6px 12px;text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:3px solid #df9b18;outline-offset:3px}section{scroll-margin-top:20px;margin:32px 0}h2{color:#183b63;font-size:1.4rem;border-bottom:2px solid #e5edf6;padding-bottom:8px}table{border-collapse:collapse;width:100%;font-size:.92rem;margin:16px 0}th{text-align:left;background:#eaf1f9;color:#183b63}th,td{padding:10px 12px;border-bottom:1px solid #dce5ef;vertical-align:top}td:first-child{width:30%}code{font-family:Consolas,"Liberation Mono",monospace;font-size:.9em;overflow-wrap:anywhere}td code{white-space:pre-wrap}pre{background:#f1f5fa;border:1px solid #dce5ef;border-radius:8px;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5}.memo{background:#edf5ff;border-left:4px solid #3473b7;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.memo p{margin:4px 0}footer{border-top:1px solid #dce5ef;padding-top:18px;font-size:.88rem;color:#526579}@media(max-width:650px){header{padding:28px 18px 48px}main{margin:-24px 10px 24px;padding:22px 14px}th,td{padding:8px}td:first-child{width:32%}}@media print{body{background:white;font-size:10pt}header{background:white;color:#183b63;padding:0}header p{color:#526579}main{box-shadow:none;margin:0;padding:0;max-width:none}nav,.download{display:none}h2{break-after:avoid}tr,.memo,pre{break-inside:avoid}a{color:inherit;text-decoration:none}section{margin:18px 0}@page{margin:15mm}}</style></head><body><header><p>Z03 · Référence de programmation</p><h1>Aide-mémoire JavaScript — Rencontre 11</h1></header><main><a class="download" href="aide-memoire-rencontre11.html" download>Télécharger cette fiche HTML</a><nav aria-label="Liens rapides"><a href="#while">1 · Répéter avec while</a><a href="#compteur">2 · Compteur et nombre d’itérations</a><a href="#somme">3 · Accumuler une valeur</a><a href="#dom">4 · Répéter une opération sur le DOM</a><a href="#infinie">5 · Éviter une boucle infinie</a><a href="#conditions">6 · Conditions dans une boucle</a><a href="#logique">7 · Plusieurs conditions avec &amp;&amp;</a><a href="#facultatif">8 · Pour aller plus loin (facultatif)</a><a href="#recap">9 · Récapitulatif</a></nav><section id="while"><h2>1 · Répéter avec while</h2><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Répéter tant que la condition est vraie</td><td><code>while (condition) { /* instructions */ }</code></td></tr><tr><td>Vérifier la condition avant chaque passage</td><td><code>while (i &lt; 4) { /* instructions */ }</code></td></tr></tbody></table><pre><code>let i = 1;
+
+while (i &lt; 4) {
+    console.log(i);
+    i += 1;
+}
+// Affiche 1, 2, 3</code></pre><aside class="memo"><strong>À retenir</strong><p>La boucle while vérifie sa condition avant chaque itération. Quand elle devient false, la boucle s'arrête. Si la condition est fausse dès le départ, les instructions ne s'exécutent pas.</p></aside></section><section id="compteur"><h2>2 · Compteur et nombre d’itérations</h2><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Commencer à 1</td><td><code>let i = 1;</code></td></tr><tr><td>Recommencer tant que i est plus petit que 4</td><td><code>while (i &lt; 4) { /* instructions */ }</code></td></tr><tr><td>Augmenter le compteur</td><td><code>i += 1;</code></td></tr><tr><td>Répéter 9 fois, de 1 à 9</td><td><code>while (i &lt; 10) { /* instructions */ }</code></td></tr></tbody></table><pre><code>let i = 1;
+let texte = &quot;&quot;;
+
+while (i &lt; 10) {
+    texte += i;
+    i += 1;
+}
+// 9 itérations : i vaut 1, 2, ..., 9</code></pre><aside class="memo"><strong>À retenir</strong><p>Pour construire une boucle, repérer ce qui change à chaque répétition : valeur initiale du compteur, condition d'arrêt et modification du compteur. Ici, i augmente de 1 à chaque itération.</p></aside></section><section id="somme"><h2>3 · Accumuler une valeur</h2><pre><code>let valeur = 10;
+let i = 1;
+
+while (i &lt; 5) {
+    valeur += i;
+    i += 1;
+}
+// valeur vaut 20 : 10 + 1 + 2 + 3 + 4</code></pre><aside class="memo"><strong>À retenir</strong><p>À chaque itération, += ajoute une valeur à celle qui est déjà conservée. Cette boucle effectue quatre itérations.</p></aside></section><section id="dom"><h2>4 · Répéter une opération sur le DOM</h2><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Construire un nom de classe avec le compteur</td><td><code>&quot;.bob&quot; + i</code></td></tr><tr><td>Retrouver l’élément qui correspond</td><td><code>document.querySelector(&quot;.bob&quot; + i)</code></td></tr><tr><td>Ajouter une classe à cet élément</td><td><code>document.querySelector(&quot;.bob&quot; + i).classList.add(&quot;image&quot;);</code></td></tr></tbody></table><pre><code>let i = 1;
+
+while (i &lt; 4) {
+    document.querySelector(&quot;.bob&quot; + i).classList.add(&quot;image&quot;);
+    i += 1;
+}</code></pre><aside class="memo"><strong>À retenir</strong><p>Le compteur sert à cibler successivement .bob1, .bob2 et .bob3. La classe image est ajoutée à chaque élément, sans recopier trois fois l'instruction.</p></aside></section><section id="infinie"><h2>5 · Éviter une boucle infinie</h2><pre><code>// Exemple à NE PAS exécuter tel quel :
+let i = 1;
+
+while (i &lt; 4) {
+    console.log(&quot;Oups ! Boucle infinie.&quot;);
+    // Il manque : i += 1;
+}</code></pre><aside class="memo"><strong>À retenir</strong><p>Si i ne change jamais, la condition i &lt; 4 reste toujours vraie : la boucle peut figer la page. Prévoir une condition qui pourra devenir fausse et mettre à jour les variables nécessaires.</p></aside></section><section id="conditions"><h2>6 · Conditions dans une boucle</h2><pre><code>let i = 1;
+
+while (i &lt; 4) {
+    if (i == 2) {
+        console.log(&quot;Deuxième passage&quot;);
+    }
+    i += 1;
+}</code></pre><aside class="memo"><strong>À retenir</strong><p>Un bloc if peut se trouver dans une boucle while. Sa condition est évaluée à chaque itération.</p></aside></section><section id="logique"><h2>7 · Plusieurs conditions avec &amp;&amp;</h2><pre><code>let x = 1;
+let y = 10;
+
+while (x &lt; 5 &amp;&amp; y &gt; 5) {
+    x += 1;
+    y -= 2;
+}
+// La boucle s'arrête avec x = 4 et y = 4.</code></pre><aside class="memo"><strong>À retenir</strong><p>Avec &amp;&amp; (ET), toutes les conditions doivent rester vraies. La boucle s'arrête dès que l'une devient fausse : ici, y atteint 4 alors que x est encore plus petit que 5.</p></aside></section><section id="facultatif"><h2>8 · Pour aller plus loin (facultatif)</h2><pre><code>do {
+    // Instructions
+} while (condition);</code></pre><aside class="memo"><strong>À retenir</strong><p>La boucle do...while vérifie sa condition APRÈS les instructions : elle s'exécute donc au moins une fois. Elle est facultative dans Z03 et n'est pas exigée aux évaluations. La section sur le débogueur est elle aussi entièrement optionnelle.</p></aside></section><section id="recap"><h2>9 · Récapitulatif</h2><table><thead><tr><th scope="col">Je veux…</th><th scope="col">Exemple</th></tr></thead><tbody><tr><td>Créer un compteur</td><td><code>let i = 1;</code></td></tr><tr><td>Répéter avec une condition</td><td><code>while (i &lt; 4) { /* instructions */ }</code></td></tr><tr><td>Faire évoluer le compteur</td><td><code>i += 1;</code></td></tr><tr><td>Ajouter une valeur</td><td><code>valeur += i;</code></td></tr><tr><td>Cibler des éléments numérotés</td><td><code>document.querySelector(&quot;.bob&quot; + i)</code></td></tr><tr><td>Exiger deux conditions</td><td><code>while (x &lt; 5 &amp;&amp; y &gt; 5) { /* instructions */ }</code></td></tr></tbody></table><aside class="memo"><strong>À retenir</strong><p>Initialiser le compteur → vérifier la condition → exécuter les instructions → faire évoluer le compteur. Éviter les boucles infinies. do...while et le débogueur sont facultatifs.</p></aside></section><footer>Fiche autonome · Enregistrez le fichier HTML pour le consulter sans Internet. Impression : Ctrl+P (ou Cmd+P).</footer></main></body></html>
