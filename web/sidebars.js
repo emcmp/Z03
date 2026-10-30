@@ -3,13 +3,6 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   aideMemoires: [
-    { type: "doc", id: "aide-memoire/accueil", label: "Présentation" },
-    { type: "doc", id: "aide-memoire/rencontres6-7", label: "Rencontres 6 et 7" },
-    { type: "doc", id: "aide-memoire/rencontre8", label: "Rencontre 8" },
-    { type: "doc", id: "aide-memoire/rencontre9", label: "Rencontre 9" },
-    { type: "doc", id: "aide-memoire/rencontre10", label: "Rencontre 10" },
-    { type: "doc", id: "aide-memoire/rencontre11", label: "Rencontre 11" },
-    { type: "doc", id: "aide-memoire/rencontre12", label: "Rencontre 12" },
     { type: "doc", id: "aide-memoire/complet-r6-r12", label: "R6 à R12 — complet" },
     { type: "doc", id: "aide-memoire/telechargements", label: "Téléchargements" },
   ],

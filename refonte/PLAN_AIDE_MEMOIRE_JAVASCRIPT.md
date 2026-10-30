@@ -68,10 +68,10 @@ Création d'un fichier HTML autonome de regroupement : `web/static/files/aide-me
 
 | Étape | État initial | Fichiers concernés | Critère de validation |
 | --- | --- | --- | --- |
-| Préserver les 12 fichiers individuels | En cours | 6 Markdown + 6 HTML vers `refonte/archives/aide-memoires-individuels/` | Contenus et blob SHA identiques aux sources; plus aucun original dans les chemins publiés |
-| Simplifier la navigation | À faire | `web/sidebars.js`, `web/docs/06-aide-memoire/00-accueil.md` | Sidebar 2 entrées : aide-mémoire complet et téléchargements; premier lien au document complet |
-| Éliminer la duplication visible | À faire | `web/docs/06-aide-memoire/08-complet-r6-r12.md`, `04-telechargements.md` | Plus aucun lien vers des pages/fichiers individuels; lien unique HTML complet |
-| Établir la source de vérité | À faire | `web/static/files/aide-memoire/aide-memoire-javascript-r6-r12.html`, documentation d'archive | Le HTML complet est le seul contenu destiné aux étudiants à mettre à jour; les archives restent historiques, non synchronisées |
-| Valider et publier sur EMCMP | À faire | GitHub Actions, routes et pages publiques personnelles | Build vert; page complète et téléchargements HTTP 200; anciennes pages/HTML ne sont plus publiés; production cégep intacte |
+| Préserver les 12 fichiers individuels | Terminé | 6 Markdown + 6 HTML vers `refonte/archives/aide-memoires-individuels/` | Contenus et blob SHA identiques aux sources; plus aucun original dans les chemins publiés |
+| Simplifier la navigation | Terminé | `web/sidebars.js`, `web/docs/06-aide-memoire/00-accueil.md` | Sidebar 2 entrées : aide-mémoire complet et téléchargements; premier lien au document complet |
+| Éliminer la duplication visible | Terminé | `web/docs/06-aide-memoire/08-complet-r6-r12.md`, `04-telechargements.md` | Plus aucun lien vers des pages/fichiers individuels; lien unique HTML complet |
+| Établir la source de vérité | Terminé | `web/static/files/aide-memoire/aide-memoire-javascript-r6-r12.html`, documentation d'archive | Le HTML complet est le seul contenu destiné aux étudiants à mettre à jour; les archives restent historiques, non synchronisées |
+| Valider et publier sur EMCMP | En cours | GitHub Actions, routes et pages publiques personnelles | Build vert; page complète et téléchargements HTTP 200; anciennes pages/HTML ne sont plus publiés; production cégep intacte |
 
 Ce chantier est une simplification de la documentation de référence, **sans modification des notions, exercices ou compétences évaluées**. Les sections historiques ci-dessus sont conservées comme trace et non comme état actuel. Les décisions sur la documentation autorisée à l'examen restent séparées.
