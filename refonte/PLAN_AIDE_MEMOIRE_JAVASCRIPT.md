@@ -60,3 +60,18 @@ Nouvelle fiche R12 issue de `web/docs/01-cours/12-rencontre12.md` : création de
 ## Aide-mémoire complet R6–R12 — Regroupement
 
 Création d'un fichier HTML autonome de regroupement : `web/static/files/aide-memoire/aide-memoire-javascript-r6-r12.html`, plus page de présentation intégrée `web/docs/06-aide-memoire/08-complet-r6-r12.md`. Les six fiches publiées (R6–R7, R8, R9, R10, R11, R12) ont été réunies dans l'ordre sans suppression de contenu ni réécriture pédagogique. Les 49 sections sont préservées; les identifiants HTML sont préfixés par rencontre pour éviter les collisions; le sommaire général contient 6 liens, les sommaires internes 49 liens, et les liens de retour 6. Aucune ressource externe ni JavaScript requis, CSS intégré et mode impression. La navigation Docusaurus, l'accueil et la page Téléchargements sont ajustés; les fichiers individuels ne changent pas. Cette version reste une ressource de révision; la permission pour un examen doit être décidée explicitement par l'enseignant. Publication limitée au dépôt personnel EMCMP et conditionnée au succès GitHub Actions; dépôt du cégep inchangé.
+
+
+## Simplification : une seule version publique R6–R12 — 30 octobre 2026
+
+**Décision de l'enseignant :** retirer de la navigation et des fichiers publiés les six fiches individuelles; conserver uniquement l'aide-mémoire complet R6–R12, déjà muni de sa navigation interne. Les versions précédentes doivent être conservées en archive interne dans le dépôt GitHub, hors de `web/docs/` et `web/static/`. La cible de déploiement est **emcmp/Z03 seulement**; aucune action sur le dépôt du cégep.
+
+| Étape | État initial | Fichiers concernés | Critère de validation |
+| --- | --- | --- | --- |
+| Préserver les 12 fichiers individuels | Terminé | 6 Markdown + 6 HTML vers `refonte/archives/aide-memoires-individuels/` | Contenus et blob SHA identiques aux sources; plus aucun original dans les chemins publiés |
+| Simplifier la navigation | Terminé | `web/sidebars.js`, `web/docs/06-aide-memoire/00-accueil.md` | Sidebar 2 entrées : aide-mémoire complet et téléchargements; premier lien au document complet |
+| Éliminer la duplication visible | Terminé | `web/docs/06-aide-memoire/08-complet-r6-r12.md`, `04-telechargements.md` | Plus aucun lien vers des pages/fichiers individuels; lien unique HTML complet |
+| Établir la source de vérité | Terminé | `web/static/files/aide-memoire/aide-memoire-javascript-r6-r12.html`, documentation d'archive | Le HTML complet est le seul contenu destiné aux étudiants à mettre à jour; les archives restent historiques, non synchronisées |
+| Valider et publier sur EMCMP | En cours | GitHub Actions, routes et pages publiques personnelles | Build vert; page complète et téléchargements HTTP 200; anciennes pages/HTML ne sont plus publiés; production cégep intacte |
+
+Ce chantier est une simplification de la documentation de référence, **sans modification des notions, exercices ou compétences évaluées**. Les sections historiques ci-dessus sont conservées comme trace et non comme état actuel. Les décisions sur la documentation autorisée à l'examen restent séparées.

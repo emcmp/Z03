@@ -4,29 +4,18 @@ title: Téléchargements
 slug: /aide-memoire/telechargements
 ---
 
-Les fiches HTML autonomes peuvent être consultées sans connexion Internet une fois enregistrées sur votre ordinateur.
-
-## Aide-mémoire complet — R6 à R12
-
-**[Télécharger le fichier HTML regroupé (R6–R12)](pathname:///files/aide-memoire/aide-memoire-javascript-r6-r12.html)**
-
-Ce document regroupe les six fiches ci-dessous dans **un seul fichier HTML**, avec un sommaire par rencontre et une mise en page imprimable. Il peut être consulté sans connexion Internet après enregistrement.
-
-## Fiches individuelles
-
 :::info 📥 Fichier à télécharger
 
-| Fiche | Matière | Fichier HTML |
-| --- | --- | --- |
-| Rencontres 6 et 7 | Variables, affectation, DOM et fonctions | [aide-memoire-rencontres6-7.html](pathname:///files/rencontre6/aide-memoire-rencontres6-7.html) |
-| Rencontre 8 | Événements, styles, classes et attributs | [aide-memoire-rencontre8.html](pathname:///files/rencontre8/aide-memoire-rencontre8.html) |
-| Rencontre 9 | Booléens, conditions et opérateurs logiques | [aide-memoire-rencontre9.html](pathname:///files/rencontre9/aide-memoire-rencontre9.html) |
-| Rencontre 10 | Paramètres, arguments, valeurs de retour et hasard | [aide-memoire-rencontre10.html](pathname:///files/rencontre10/aide-memoire-rencontre10.html) |
-| Rencontre 11 | Boucles `while`, compteurs, répétitions et DOM | [aide-memoire-rencontre11.html](pathname:///files/rencontre11/aide-memoire-rencontre11.html) |
-| Rencontre 12 | Tableaux, index, `length`, `push()`, `pop()`, `splice()` et parcours avec `while` | [aide-memoire-rencontre12.html](pathname:///files/rencontre12/aide-memoire-rencontre12.html) |
+**[Télécharger l'aide-mémoire JavaScript complet — R6 à R12](pathname:///files/aide-memoire/aide-memoire-javascript-r6-r12.html)**
 
-Ouvrez une fiche, puis utilisez la commande de votre navigateur pour enregistrer la page sur votre ordinateur. Vous pourrez ensuite ouvrir le fichier HTML enregistré dans votre navigateur pour le consulter hors ligne.
+Nom du fichier : `aide-memoire-javascript-r6-r12.html`
+
+Enregistrez ce fichier HTML sur votre ordinateur. Vous pourrez le consulter **sans connexion Internet**, directement dans votre navigateur.
 
 :::
 
-Ces ressources servent à la révision. L’enseignant détermine les documents expressément permis à l’examen.
+Ce document unique contient les **49 rubriques des rencontres 6 à 12**, avec un sommaire général, des liens internes et une présentation adaptée à l'impression.
+
+Les anciennes fiches individuelles ne sont plus distribuées séparément.
+
+Ces ressources servent à la révision. L’enseignant détermine quels documents sont expressément permis à l’examen.
