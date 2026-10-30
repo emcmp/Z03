@@ -31,6 +31,6 @@ Ils sont archivés **hors de `web/docs/` et `web/static/`** : Docusaurus ne les 
 
 La page `web/docs/06-aide-memoire/08-complet-r6-r12.md` et la page Téléchargements renvoient vers ce fichier unique. Elles ne répètent pas sa théorie.
 
-Ne pas synchroniser les modifications futures vers les anciens fichiers en archive. Les anciennes pages `web/docs/06-aide-memoire/00-accueil.md` et `01/02/03/05/06/07` ont été retirées des pages actives; l'ancienne page d'accueil reste également accessible dans l'historique Git, sans nouvelle copie archivée.
+Ne pas synchroniser les modifications futures vers les anciens fichiers en archive. Les pages individuelles `01/02/03/05/06/07` ont été retirées des pages actives. L'ancienne URL `/aide-memoire` reste accessible grâce à une page d'accueil réduite qui renvoie vers le document complet; elle ne figure pas comme entrée distincte dans la barre latérale.
 
 Cette simplification ne change pas la matière enseignée ni le statut de la documentation autorisée à l'examen. Le dépôt officiel du cégep n'est pas touché.
