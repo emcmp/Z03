@@ -64,6 +64,16 @@ Pour les exemples de code :
 - garder HTML sémantique et CSS simple lorsque le sujet principal est JavaScript;
 - montrer les erreurs fréquentes lorsqu'elles ont une valeur pédagogique.
 
+### Relecture finale : aucun commentaire interne dans le matériel étudiant
+
+Les pages de cours et de laboratoire, les README, les fichiers HTML/CSS/JavaScript et **tous les fichiers contenus dans les ZIP destinés aux étudiants** doivent s'adresser directement à eux.
+
+- Ne pas afficher les notes d'équipe, consignes destinées à l'enseignant ou à un LLM, justifications éditoriales, arbitrages de charge de travail, mentions d'anciens laboratoires, de migrations ou de matériel historique.
+- Conserver ces explications dans les documents internes de `refonte/` ou dans les WorkItems, et non dans les pages ou archives distribuées.
+- Les indications utiles aux étudiants restent permises : quoi faire, comment tester, quoi remettre et quelles activités sont obligatoires ou facultatives.
+- **Avant toute validation finale ou publication**, relire les textes visibles et ouvrir les archives ZIP pour vérifier leurs README, consignes, scripts et interfaces HTML. Retirer les phrases adressées à l'équipe plutôt qu'aux étudiants, même lorsqu'elles proviennent d'une génération par LLM.
+- Lorsque l'on adapte un ZIP, appliquer également les corrections pertinentes aux copies étudiantes et aux corrigés, sans modifier les archives historiques.
+
 ## Docusaurus et assets
 
 - conserver les métadonnées/front matter nécessaires aux documents existants;
