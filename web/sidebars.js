@@ -231,6 +231,7 @@ const sidebars = {
         { type: "ref", id: "labos/labo12", label: "Laboratoire — Tableaux" },
       ],
     },
+    { type: "doc", id: "cours/rencontre13", label: "Rencontre 13 — TP3" },
     { type: "doc", id: "cours/rencontre14", label: "Rencontre 14 — Rattrapage et révision" },
     { type: "doc", id: "cours/rencontre15", label: "Rencontre 15 — Évaluation sommative finale" },
   ],
