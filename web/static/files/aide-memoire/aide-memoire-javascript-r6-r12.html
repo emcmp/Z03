@@ -43,6 +43,26 @@ nav.chapters a{background:#eaf1f9;font-weight:650;padding:8px 13px;border-radius
  .notice{padding:8px 0;background:white;border:0}
  .page-footer{font-size:8pt}
 }
+
+/* Navigation rapide flottante : édition hors ligne, sans dépendance externe. */
+.topic-toc{position:fixed;z-index:40;top:74px;right:14px;width:226px;max-height:calc(100vh - 92px);overflow:auto;background:#fff;border:1px solid #cbd9ea;box-shadow:0 8px 24px #101e3926;border-radius:14px;padding:10px 12px}
+.topic-toc-title{margin:0 0 8px;color:#183b63;font-size:.9rem;font-weight:750}
+.topic-toc nav.topic-toc-links{display:block;margin:0}
+.topic-toc-group{margin:0 0 10px}
+.topic-toc-group-title{margin:0 0 3px;color:#566d84;font-size:.73rem;letter-spacing:.035em;font-weight:800}
+.topic-toc nav.topic-toc-links a{display:block;border:0;border-radius:6px;margin:0;padding:3px 7px;color:#174f89;text-decoration:none;font-size:.84rem;line-height:1.45}
+.topic-toc nav.topic-toc-links a:hover,.topic-toc nav.topic-toc-links a:focus-visible{background:#eaf1f9;text-decoration:underline}
+.topic-toc nav.topic-toc-links .topic-toc-top{border-top:1px solid #e5edf6;margin-top:5px;padding-top:9px}
+.topic-toc-desktop{display:none}
+.topic-toc-compact{top:80px;width:min(282px,calc(100vw - 24px));max-height:calc(100vh - 92px);overflow:visible;padding:0;border:0;background:transparent;box-shadow:none}
+.topic-toc-compact summary{cursor:pointer;list-style:none;display:block;width:max-content;margin-left:auto;padding:9px 14px;border-radius:999px;color:#174f89;background:#fff;border:1px solid #afc3da;box-shadow:0 5px 18px #101e3926;font-size:.9rem;font-weight:750}
+.topic-toc-compact summary::-webkit-details-marker{display:none}
+.topic-toc-compact[open]{overflow:auto;border:1px solid #afc3da;background:#fff;box-shadow:0 10px 28px #101e3926;border-radius:14px}
+.topic-toc-compact[open] summary{position:sticky;top:0;margin:0;width:100%;text-align:right;border:0;border-radius:0;box-shadow:none;border-bottom:1px solid #e5edf6}
+.topic-toc-compact nav.topic-toc-links{padding:12px;max-height:calc(100vh - 149px);overflow:auto}
+@media(min-width:1540px){.topic-toc-desktop{display:block}.topic-toc-compact{display:none}}
+@media print{.topic-toc{display:none!important}}
+
 </style>
 </head>
 <body>
@@ -51,6 +71,51 @@ nav.chapters a{background:#eaf1f9;font-weight:650;padding:8px 13px;border-radius
 <h1>Aide-mémoire JavaScript — Rencontres 6 à 12</h1>
 <p class="subtitle">Six fiches réunies dans un seul document, avec leurs syntaxes, exemples et rappels.</p>
 </header>
+<!-- Navigation rapide des rubriques principales. Les sommaires détaillés des fiches restent disponibles. -->
+<aside class="topic-toc topic-toc-desktop" aria-label="Navigation rapide de l'aide-mémoire">
+  <p class="topic-toc-title">Aller à un sujet</p>
+  <nav class="topic-toc-links" aria-label="Principaux sujets"><div class="topic-toc-group"><p class="topic-toc-group-title">R6–R7 · Bases</p><a href="#r67-variables">Variables</a>
+<a href="#r67-dom">DOM</a>
+<a href="#r67-fonctions">Fonctions</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R8 · Interactivité</p><a href="#r8-evenements">Événements</a>
+<a href="#r8-styles">Styles DOM</a>
+<a href="#r8-classes">Classes et attributs</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R9 · Conditions</p><a href="#r9-conditions">if / else if / else</a>
+<a href="#r9-logique">Opérateurs logiques</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R10 · Fonctions</p><a href="#r10-parametres">Paramètres</a>
+<a href="#r10-retour">return</a>
+<a href="#r10-hasard">Math.random()</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R11 · Boucles</p><a href="#r11-while">while et compteurs</a>
+<a href="#r11-somme">Accumulation</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R12 · Tableaux</p><a href="#r12-index">Indices</a>
+<a href="#r12-taille">length</a>
+<a href="#r12-ajouter">push / pop / splice</a>
+<a href="#r12-parcours">Parcours avec while</a></div>
+    <a class="topic-toc-top" href="#sommaire-general">↑ Retour au sommaire</a>
+  </nav>
+</aside>
+<details class="topic-toc topic-toc-compact">
+  <summary>☰ Sujets</summary>
+  <nav class="topic-toc-links" aria-label="Principaux sujets (menu compact)"><div class="topic-toc-group"><p class="topic-toc-group-title">R6–R7 · Bases</p><a href="#r67-variables">Variables</a>
+<a href="#r67-dom">DOM</a>
+<a href="#r67-fonctions">Fonctions</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R8 · Interactivité</p><a href="#r8-evenements">Événements</a>
+<a href="#r8-styles">Styles DOM</a>
+<a href="#r8-classes">Classes et attributs</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R9 · Conditions</p><a href="#r9-conditions">if / else if / else</a>
+<a href="#r9-logique">Opérateurs logiques</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R10 · Fonctions</p><a href="#r10-parametres">Paramètres</a>
+<a href="#r10-retour">return</a>
+<a href="#r10-hasard">Math.random()</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R11 · Boucles</p><a href="#r11-while">while et compteurs</a>
+<a href="#r11-somme">Accumulation</a></div>
+<div class="topic-toc-group"><p class="topic-toc-group-title">R12 · Tableaux</p><a href="#r12-index">Indices</a>
+<a href="#r12-taille">length</a>
+<a href="#r12-ajouter">push / pop / splice</a>
+<a href="#r12-parcours">Parcours avec while</a></div>
+    <a class="topic-toc-top" href="#sommaire-general">↑ Retour au sommaire</a>
+  </nav>
+</details>
 <main>
 <div id="sommaire-general">
 <p><a class="download" href="aide-memoire-javascript-r6-r12.html" download>Télécharger ce fichier HTML</a></p>
