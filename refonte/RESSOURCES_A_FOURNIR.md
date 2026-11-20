@@ -186,3 +186,15 @@ Pour toute nouvelle ressource, noter au minimum :
 | Rencontre | Page concernée | Ressource | Fichier prévu | Description exacte | État |
 |---|---|---|---|---|---|
 | — | — | — | — | — | — |
+
+
+## Examen formatif — Rencontre 14
+
+**État au 20 novembre 2026 :** structure de la page prête, documents en révision pédagogique. Ne rendre aucun lien actif avant validation et dépôt des ZIP correspondants.
+
+| Ressource | Emplacement prévu | Contenu | État |
+|---|---|---|---|
+| `examen-formatif-z03.zip` | `web/static/files/rencontre14/` | Archive étudiante de l'examen formatif final validé, sans solutions; accueil et navigation entre les modules | **À intégrer après validation** |
+| `examen-formatif-z03-corrige.zip` | `web/static/files/rencontre14/` | Corrigé destiné à l'autocorrection, conservé dans un ZIP distinct du matériel de départ | **À intégrer après validation** |
+
+Page : `web/docs/01-cours/14-rencontre14.md`. Lorsque les deux fichiers seront approuvés, les déposer à ces emplacements, vérifier leur contenu, leur intégrité et leur téléchargement, puis remplacer les mentions « à venir » par deux encadrés `📥 Fichier à télécharger` avec des liens `pathname:///files/rencontre14/...`.
