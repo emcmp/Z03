@@ -241,3 +241,11 @@ Les pages `04-labo5.md` et `05-labo6.md` restent dans le dépôt; seule la premi
 ## Convention de diffusion des laboratoires
 
 Les pages Docusaurus de laboratoire servent principalement au téléchargement du matériel. Les consignes détaillées restent dans les fichiers téléchargeables, sauf besoin pédagogique explicite de les publier aussi sur le site.
+
+
+## 2026-11-20 — Rencontre 14 : accueil du formatif
+
+- La rencontre 14 est intitulée **« Rencontre 14 — Examen formatif »** dans la page et la navigation. Elle conserve un temps possible de pratique, rattrapage et révision, sans nouvelle matière essentielle.
+- Deux emplacements distincts sont prévus : **ZIP étudiant** et **ZIP de corrigé pour autocorrection après réalisation**. Les documents restent en validation pédagogique, donc aucun ZIP n'est publié et aucun lien de téléchargement n'est actif.
+- La réservation de noms et d'emplacements des deux archives est décrite dans `refonte/RESSOURCES_A_FOURNIR.md`.
+- La rencontre 15 et l'examen sommatif ne sont pas modifiés.
